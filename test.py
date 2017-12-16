@@ -60,7 +60,7 @@ def print_annotations(annotations, get_class=True):
 
 text_to_annotate = "Melanoma is a malignant tumor of melanocytes which are found predominantly in skin but also in the bowel and the eye."
 
-for i in range(0,10):
+for i in range(1,10):
     print "processing file "+str(i)
     start=time()
     reader=open("E:/thesiswork/abs"+str(i)+".txt","r")
@@ -74,8 +74,8 @@ for i in range(0,10):
     print "writing text results"
     ss=open("E:/thesiswork/tupled_annotations_"+str(i)+".txt","w")
     ss.write("total: "+str(len(sample_result))+"\n\n")
-    for i in sample_result:
-        ss.write(str(i)+"\n\n")
+    for k in sample_result:
+        ss.write(str(k)+"\n\n")
     ss.close()
     print "writing pickle files"
     tt=open("E:/thesiswork/tupled_annotations_"+str(i)+".pickle","w")
@@ -91,11 +91,11 @@ for i in range(0,10):
 # Print out annotation details
 # print_annotations(annotations)
 
-ss=open("tupled_annotations.txt","w")
-ss.write("total: "+str(len(sample_result))+"\n\n")
-for i in sample_result:
-    ss.write(str(i)+"\n\n")
-ss.close()
+# ss=open("tupled_annotations.txt","w")
+# ss.write("total: "+str(len(sample_result))+"\n\n")
+# for i in sample_result:
+#     ss.write(str(i)+"\n\n")
+# ss.close()
 
 # # Annotate with hierarchy information
 # annotations = get_json(REST_URL + "/annotator?max_level=3&text=" + urllib2.quote(text_to_annotate))
