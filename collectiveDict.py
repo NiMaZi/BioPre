@@ -10,7 +10,9 @@ f.close()
 count=0
 
 for entry in article_dict_list:
-	print(entry)
+	print("abs: "+entry['abs'])
+	print("\n")
+	print("body: "+entry['body'])
 	print("\n\n")
 	e_abs=entry['abs']
 	for key in e_abs.keys():
@@ -28,5 +30,7 @@ for entry in article_dict_list:
 	if count>3:
 		break
 
-print(entity_dict)
+for key in entity_dict.keys():
+	print(entity_dict[key])
+	print("\n")
 
