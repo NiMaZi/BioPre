@@ -33,6 +33,7 @@ for entry in article_dict_list:
 		break
 
 for key in entity_dict.keys():
+	print(key)
 	print(entity_dict[key])
 	print("\n")
 
