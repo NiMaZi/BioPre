@@ -16,7 +16,7 @@ for entry in article_dict_list:
 		e_body=entry['body']
 		if key in entity_dict:
 			for bkey in e_body.keys():
-				if bkey in e_list:
+				if bkey in entity_dict[key]:
 					entity_dict[key][bkey]=entity_dict[key][bkey]+e_body[bkey]
 				else:
 					entity_dict[key][bkey]=e_body[bkey]
