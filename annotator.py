@@ -1,9 +1,7 @@
-from ner.annotator.annotator import Annotator
+from ..ner.ner.annotator.annotator import Annotator
 
-_annotator = Annotator("NobleJar/NobleCoder-1.0.jar","NobleJar/Annotator.java",searchMethod="best-match",terminology="HIVO004")
+_annotator = Annotator("~/ner/NobleJar/NobleCoder-1.0.jar","~/ner/NobleJar/Annotator.java",searchMethod="best-match",terminology="HIVO004")
 
-_filename = "data/body0.txt"
+_filename = "~/thesiswork/data/abs0.txt"
 
-output = _annotator.process(_filename)
-
-print(output)
+_annotator.process(_filename)
