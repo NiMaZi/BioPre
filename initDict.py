@@ -41,7 +41,7 @@ for i in range(0,10):
 
 
 f=open("/home/ubuntu/results/initDict.txt","w")
-f.write(entity_dict_list)
+f.write(str(entity_dict_list))
 f.close()
 
 g=open("/home/ubuntu/results/initDict.pickle","wb")
