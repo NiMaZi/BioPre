@@ -22,7 +22,7 @@ for i in range(0,2000):
 			else:
 				entity_dict_abs[item[2]]=1
 
-	with open("/home/ubuntu/thesiswork/data/body"+str(0)+".txt.mentions","r",newline='') as csvfile:
+	with open("/home/ubuntu/thesiswork/data/body"+str(i)+".txt.mentions","r",newline='') as csvfile:
 		reader = csv.reader(csvfile)
 		for item in reader:
 			if item[2]=="ConceptName":
