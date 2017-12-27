@@ -7,7 +7,7 @@ entity_dict={}
 entity_dict_abs={}
 entity_dict_body={}
 
-for i in range(0,10):
+for i in range(0,2000):
 	entity_dict={}
 	entity_dict_abs={}
 	entity_dict_body={}
@@ -47,4 +47,3 @@ f.close()
 g=open("/home/ubuntu/results/initDict.pickle","wb")
 pickle.dump(entity_dict_list,g)
 g.close()
-# print(entity_dict_list)
