@@ -1,9 +1,15 @@
+from time import time
 from ner.ner.annotator.annotator import Annotator
 
 _annotator = Annotator("ner/NobleJar/NobleCoder-1.0.jar","ner/NobleJar/Annotator.java",searchMethod="best-match",terminology="HIVO004")
 
-for i in range(0,5):
+start=time()
+for i in range(0,21772):
 	_filename = "thesiswork/data/abs"+str(i)+".txt"
 	_annotator.process(_filename)
 	_filename = "thesiswork/data/body"+str(i)+".txt"
 	_annotator.process(_filename)
+end=time()
+
+with open("log.txt","w") as log:
+	log.write("time used: "+str(end-start)+" seconds")
