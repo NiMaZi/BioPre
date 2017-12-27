@@ -12,4 +12,4 @@ with open("/home/ubuntu/thesiswork/data/abs0.txt.mentions","r",newline='') as cs
 		else:
 			entity_dict[item[2]]=1
 
-print(entity_dict)
+print(sorted(entity_dict.items(),key=lambda x:x[1]))
