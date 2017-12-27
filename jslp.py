@@ -35,6 +35,7 @@ with jsonlines.open("../pubmed_2017-05.jsonl") as reader:
 		# 	# print(str(body))
 		# 	break
 		count=count+1
-		if count>500:
-			break
+		# if count>500:
+		# 	break
+	print(count)
 	# print(count,keywords_count,keyterms_count)
