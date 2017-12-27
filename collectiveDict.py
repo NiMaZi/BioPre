@@ -10,9 +10,11 @@ f.close()
 count=0
 
 for entry in article_dict_list:
-	print("abs: "+entry['abs'])
+	print("abs:\n")
+	print(entry['abs'])
 	print("\n")
-	print("body: "+entry['body'])
+	print("body:\n")
+	print(entry['body'])
 	print("\n\n")
 	e_abs=entry['abs']
 	for key in e_abs.keys():
