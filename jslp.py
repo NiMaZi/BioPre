@@ -4,10 +4,10 @@ import jsonlines
 count=0
 keyterms_count=0
 keywords_count=0
-with jsonlines.open("~/pubmed_2017-05.jsonl") as reader:
+with jsonlines.open("../pubmed_2017-05.jsonl") as reader:
 	for item in reader:
-		f=open("~/thesiswork/data/body"+str(count)+".txt","w",encoding='utf-8')
-		g=open("~/thesiswork/data/abs"+str(count)+".txt","w",encoding='utf-8')
+		f=open("../thesiswork/data/body"+str(count)+".txt","w",encoding='utf-8')
+		g=open("../thesiswork/data/abs"+str(count)+".txt","w",encoding='utf-8')
 		# keylist=item.keys()
 		abstract=item["abstract"]
 		authors=item["authors"]
