@@ -1,4 +1,5 @@
 import csv
+import pickle
 
 entity_dict_list=[]
 
@@ -36,4 +37,14 @@ for i in range(0,10):
 
 	entity_dict_list.append(entity_dict)
 
-print(entity_dict_list)
+	print("finish building dictionary for article "+str(i)+".\n")
+
+
+f=open("/home/ubuntu/results/initDict.txt","w")
+f.write(entity_dict_list)
+f.close()
+
+g=open("/home/ubuntu/results/initDict.pickle","wb")
+pickle.dump(entity_dict_list,g)
+g.close()
+# print(entity_dict_list)
