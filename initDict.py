@@ -1,6 +1,15 @@
 import csv
 
+entity_dict={}
+
 with open("/home/ubuntu/thesiswork/data/abs0.txt.mentions","r",newline='') as csvfile:
 	reader = csv.reader(csvfile)
 	for item in reader:
-		print(item[2])
+		if item[2]=="ConceptName":
+			continue
+		if item[2] in entity_dict:
+			entity_dict[item[2]]=entity_dict[item[2]]+1
+		else:
+			entity_dict[item[2]]=1
+
+print(entity_dict)
