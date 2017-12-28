@@ -26,7 +26,7 @@ for i in range(2000,2000+test_volume):
 					if entity_dict[item[2]][key]>freq_threshold:
 						prediction.add(key)
 	if not prediction:
-		print("can't make prediction for article +"str(i)"+.\n")
+		print("can't make prediction for article "+str(i)+".\n")
 		continue
 	with open("/home/ubuntu/thesiswork/data/body"+str(i)+".txt.mentions","r",newline='') as csvfile:
 		reader=csv.reader(csvfile)
