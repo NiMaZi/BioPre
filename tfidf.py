@@ -32,6 +32,6 @@ for i in range(0,volume):
 				tmp_tf[item[2]]=1
 	tf.append(tmp_tf)
 
-for row in tf:
-	print(tf)
+for i in range(0,len(tf)):
+	print(tf[i])
 print(word_list)
