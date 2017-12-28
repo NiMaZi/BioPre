@@ -30,9 +30,11 @@ for entry in article_dict_list:
 				if bkey in entity_dict[key][1]:
 					print("\thit body mention")
 					entity_dict[key][1][bkey]=entity_dict[key][1][bkey]+e_body[bkey]
+					print(entity_dict["Protein"])
 				else:
 					print("\tadd body mention")
 					entity_dict[key][1][bkey]=e_body[bkey]
+					print(entity_dict["Protein"])
 		else:
 			print("add abs mention")
 			entity_dict[key]=[e_abs[key],e_body]
