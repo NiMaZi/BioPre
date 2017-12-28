@@ -10,12 +10,6 @@ f.close()
 count=0
 
 for entry in article_dict_list:
-	print("abs:\n")
-	print(entry['abs'])
-	print("\n")
-	print("body:\n")
-	print(entry['body'])
-	print("\n\n")
 	e_abs=entry['abs']
 	e_body=entry['body']
 	if not e_abs:
@@ -34,6 +28,9 @@ for entry in article_dict_list:
 		break
 
 for key in entity_dict.keys():
+	oDict=entity_dict[key][1]
+	_tmp={k:float(oDict[k]/entity_dict[key][0]) for k in oDict.keys()}
+	entity_dict[key]=_tmp
 	print(key)
 	print(entity_dict[key])
 	print("\n")
