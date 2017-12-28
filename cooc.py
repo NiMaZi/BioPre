@@ -12,6 +12,7 @@ f.close()
 
 total_hit_rate=0.0
 total_error_rate=0.0
+miss_count=0
 
 for i in range(2000,2000+test_volume):
 	prediction=set([])
@@ -27,6 +28,7 @@ for i in range(2000,2000+test_volume):
 						prediction.add(key)
 	if not prediction:
 		print("can't make prediction for article "+str(i)+".\n")
+		miss_count=miss_count+1
 		continue
 	with open("/home/ubuntu/thesiswork/data/body"+str(i)+".txt.mentions","r",newline='') as csvfile:
 		reader=csv.reader(csvfile)
@@ -41,5 +43,9 @@ for i in range(2000,2000+test_volume):
 	total_error_rate=total_error_rate+error_rate
 	print("hit rate in article "+str(i)+": "+str(hit_rate)+".\n")
 	print("error rate in article "+str(i)+": "+str(error_rate)+".\n")
+total_hit_rate=total_hit_rate/test_volume
+total_error_rate=total_error_rate/test_volume
+miss_count=miss_count/test_volume
 print("total hit rate: "+str(total_hit_rate)+".\n")
 print("total error rate: "+str(total_error_rate)+".\n")
+print("dictionary miss rate: "+str(miss_count)+".\n")
