@@ -22,14 +22,14 @@ for entry in article_dict_list:
 		if key in entity_dict:
 			entity_dict[key][0]=entity_dict[key][0]+e_abs[key]
 			for bkey in e_body.keys():
-				if bkey in entity_dict[key]:
+				if bkey in entity_dict[key][1]:
 					entity_dict[key][1][bkey]=entity_dict[key][1][bkey]+e_body[bkey]
 				else:
 					entity_dict[key][1][bkey]=e_body[bkey]
 		else:
 			entity_dict[key]=[e_abs[key],e_body]
 	count=count+1
-	if count>3:
+	if count>2:
 		break
 
 for key in entity_dict.keys():
