@@ -7,8 +7,6 @@ f=open("/home/ubuntu/results/initDict.pickle","rb")
 article_dict_list=pickle.load(f)
 f.close()
 
-count=0
-
 for entry in article_dict_list:
 	e_abs=entry['abs']
 	e_body=entry['body']
@@ -23,15 +21,16 @@ for entry in article_dict_list:
 			entity_dict[key][1]=_tmp
 		else:
 			entity_dict[key]=[1.0,n_body]
-	count=count+1
-	if count>5:
-		break
 
 for key in entity_dict.keys():
 	oDict=entity_dict[key][1]
 	_tmp={k:float(oDict[k]/entity_dict[key][0]) for k in oDict.keys()}
 	entity_dict[key]=_tmp
-	print(key)
-	print(entity_dict[key])
-	print("\n")
 
+g=open("/home/ubuntu/results/collectiveDict.pickle","wb")
+pickle.dump(entity_dict,g)
+g.close()
+
+h=open("/home/ubuntu/results/collectiveDict.txt","w")
+h.write(str(entity_dict))
+h.close()
