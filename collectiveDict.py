@@ -17,16 +17,24 @@ for entry in article_dict_list:
 	print(entry['body'])
 	print("\n\n")
 	e_abs=entry['abs']
+	e_body=entry['body']
 	for key in e_abs.keys():
-		e_body=entry['body']
+		print("entity name in abs:")
+		print(key)
 		if key in entity_dict:
+			print("hit abs mention")
 			entity_dict[key][0]=entity_dict[key][0]+e_abs[key]
 			for bkey in e_body.keys():
+				print("entity name in body:")
+				print(bkey)
 				if bkey in entity_dict[key][1]:
+					print("hit body mention")
 					entity_dict[key][1][bkey]=entity_dict[key][1][bkey]+e_body[bkey]
 				else:
+					print("add body mention")
 					entity_dict[key][1][bkey]=e_body[bkey]
 		else:
+			print("add abs mention")
 			entity_dict[key]=[e_abs[key],e_body]
 	count=count+1
 	if count>2:
