@@ -11,6 +11,7 @@ idf=[]
 word_list=set([])
 
 for i in range(0,volume):
+	print("processing article "+str(i)+".\n")
 	tmp_tf={}
 	word_count=0
 	with open("/home/ubuntu/thesiswork/data/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
@@ -39,6 +40,8 @@ for i in range(0,volume):
 
 sorted_word_list=sorted(word_list)
 
+print("calculating tf-idf.\n")
+
 for word in sorted_word_list:
 	_tmp=[]
 	d_count=0
@@ -58,4 +61,10 @@ for i in range(0,len(sorted_word_list)):
 	for j in range(0,volume):
 		tf_idf[i][j]=tf_word[i][j]*idf[i]
 
-print(tf_idf)
+f=open("/home/ubuntu/results/tfidf/tfidf"+str(volume)+".pickle","wb")
+pickle.dump(tf_idf,f)
+f.close()
+
+g=open("/home/ubuntu/results/tfidf/wordlist"+str(volume)+".pickle","wb")
+pickle.dump(sorted_word_list,g)
+g.close()
