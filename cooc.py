@@ -13,6 +13,7 @@ f.close()
 total_hit_rate=0.0
 total_error_rate=0.0
 miss_count=0
+invalid_count=0
 
 for i in range(2000,2000+test_volume):
 	prediction=set([])
@@ -37,15 +38,18 @@ for i in range(2000,2000+test_volume):
 				continue
 			if item[2] not in mention:
 				mention.add(item[2])
+	if not mention:
+		invalid_count=invalid_count+1
+		continue
 	hit_rate=float(len(prediction&mention))/float(len(mention))
 	error_rate=1-float(len(prediction&mention))/float(len(prediction))
 	total_hit_rate=total_hit_rate+hit_rate
 	total_error_rate=total_error_rate+error_rate
 	print("hit rate in article "+str(i)+": "+str(hit_rate)+".\n")
 	print("error rate in article "+str(i)+": "+str(error_rate)+".\n")
-total_hit_rate=total_hit_rate/test_volume
-total_error_rate=total_error_rate/test_volume
-miss_count=miss_count/test_volume
+total_hit_rate=total_hit_rate/(test_volume-miss_count-invalid_count)
+total_error_rate=total_error_rate/(test_volume-miss_count-invalid_count)
+miss_count=miss_count/(test_volume-invalid_count)
 print("total hit rate: "+str(total_hit_rate)+".\n")
 print("total error rate: "+str(total_error_rate)+".\n")
 print("dictionary miss rate: "+str(miss_count)+".\n")
