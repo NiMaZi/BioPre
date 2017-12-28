@@ -38,9 +38,9 @@ for entry in article_dict_list:
 			entity_dict[key]=[e_abs[key],e_body]
 	print("\n\n")
 	for key in entity_dict.keys():
-	print(key)
-	print(entity_dict[key])
-	print("\n")
+		print(key)
+		print(entity_dict[key])
+		print("\n")
 	count=count+1
 	if count>2:
 		break
