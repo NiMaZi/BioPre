@@ -18,7 +18,7 @@ invalid_count=0
 for i in range(2000,2000+test_volume):
 	prediction=set([])
 	mention=set([])
-	with open("/home/ubuntu/thesiswork/data/abs"+str(i)+".txt.mentions","r",newline='') as csvfile:
+	with open("/home/ubuntu/thesiswork/data/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
 		reader=csv.reader(csvfile)
 		for item in reader:
 			if item[2]=="ConceptName":
@@ -31,7 +31,7 @@ for i in range(2000,2000+test_volume):
 		print("can't make prediction for article "+str(i)+".\n")
 		miss_count=miss_count+1
 		continue
-	with open("/home/ubuntu/thesiswork/data/body"+str(i)+".txt.mentions","r",newline='') as csvfile:
+	with open("/home/ubuntu/thesiswork/data/body"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
 		reader=csv.reader(csvfile)
 		for item in reader:
 			if item[2]=="ConceptName":
