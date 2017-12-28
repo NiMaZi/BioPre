@@ -52,10 +52,10 @@ for word in sorted_word_list:
 	tf_word.append(_tmp)
 	idf.append(np.log(float(volume)/float(d_count)))
 
+tf_idf=np.zeros((len(sorted_word_list),volume))
 
-print(sorted_word_list)
+for i in range(0,len(sorted_word_list)):
+	for j in range(0,volume):
+		tf_idf[i][j]=tf_word[i][j]*idf[i]
 
-for row in tf_word:
-	print(row)
-
-print(idf)
+print(tf_idf)
