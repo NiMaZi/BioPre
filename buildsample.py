@@ -1,5 +1,6 @@
 import pickle
 import sys
+import numpy as np
 
 volume=int(sys.argv[1])
 
@@ -33,5 +34,5 @@ for i in range(0,volume):
 			cooc=cooc_dict[a][b]
 			samples.append([tf_idf_a,tf_idf_b,cooc])
 
-print(samples)
+print(np.array(samples))
 print(len(samples))
