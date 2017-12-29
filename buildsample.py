@@ -1,6 +1,7 @@
 import pickle
 import sys
 import numpy as np
+from sklearn import svm
 
 volume=int(sys.argv[1])
 
@@ -36,3 +37,9 @@ for i in range(0,volume):
 
 print(np.array(samples))
 print(len(samples))
+
+clf=svm.OneClassSVM(kernel="linear")
+clf.fit(np.array(samples))
+predy=clf.predict(np.array(samples))
+
+print(predy)
