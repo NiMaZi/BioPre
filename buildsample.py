@@ -1,7 +1,5 @@
 import pickle
 import sys
-import numpy as np
-from sklearn import svm
 
 volume=int(sys.argv[1])
 
@@ -35,12 +33,6 @@ for i in range(0,volume):
 			cooc=cooc_dict[a][b]
 			samples.append([tf_idf_a,tf_idf_b,cooc])
 
-print(np.array(samples))
-print(len(samples))
-
-clf=svm.OneClassSVM(nu=0.1,kernel="rbf",gamma=0.1)
-clf.fit(np.array(samples))
-predy=clf.predict(np.array(samples))
-
-print(predy)
-print(predy[predy==-1].size)
+f=open("/home/ubuntu/results/svm/samples.pickle","wb")
+pickle.dump(samples,f)
+f.close()
