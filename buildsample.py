@@ -38,8 +38,9 @@ for i in range(0,volume):
 print(np.array(samples))
 print(len(samples))
 
-clf=svm.OneClassSVM(kernel="linear")
+clf=svm.OneClassSVM(nu=0.1,kernel="rbf",gamma=0.1)
 clf.fit(np.array(samples))
 predy=clf.predict(np.array(samples))
 
 print(predy)
+print(predy[predy==-1].size)
