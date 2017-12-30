@@ -3,13 +3,17 @@ import sys
 
 volume=int(sys.argv[1])
 
-f=open("/home/ubuntu/results/tfidf/tfidf2700.pickle","rb")
-tf_idf=pickle.load(f)
+f=open("/home/ubuntu/results/tfidf/tfall.pickle","rb")
+freq=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/tfidf/wordlist2700.pickle","rb")
-word_list=pickle.load(f)
-f.close()
+# f=open("/home/ubuntu/results/tfidf/tfidf2700.pickle","rb")
+# tf_idf=pickle.load(f)
+# f.close()
+
+# f=open("/home/ubuntu/results/tfidf/wordlist2700.pickle","rb")
+# word_list=pickle.load(f)
+# f.close()
 
 f=open("/home/ubuntu/results/initDict.pickle","rb")
 article_list=pickle.load(f)
@@ -28,10 +32,12 @@ for i in range(0,volume):
 		for b in body_mention:
 			if a==b:
 				continue
-			tf_idf_a=tf_idf[word_list.index(a)][i]
-			tf_idf_b=tf_idf[word_list.index(b)][i]
+			tf_a=freq[a]
+			tf_b=freq[b]
+			# tf_idf_a=tf_idf[word_list.index(a)][i]
+			# tf_idf_b=tf_idf[word_list.index(b)][i]
 			cooc=cooc_dict[a][b]
-			samples.append([tf_idf_a,tf_idf_b,cooc])
+			samples.append([tf_a,tf_b,cooc])
 
 f=open("/home/ubuntu/results/svm/samples.pickle","wb")
 pickle.dump(samples,f)
