@@ -26,6 +26,7 @@ f.close()
 samples=[]
 
 for i in range(0,volume):
+	print("building samples in article "+str(i)+".\n")
 	abs_mention=article_list[i]['abs'].keys()
 	body_mention=article_list[i]['body'].keys()
 	for a in abs_mention:
