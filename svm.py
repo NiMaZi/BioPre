@@ -31,10 +31,10 @@ clf=svm.OneClassSVM(nu=0.1,kernel="rbf",gamma=0.1)
 clf.fit(train_set)
 
 pred_train=clf.predict(train_set)
-error_train=float(pred_train.size)/float(pred_train[pred_train==-1].size)
+error_train=float(pred_train[pred_train==-1].size)/float(pred_train.size)
 
 pred_test=clf.predict(test_set)
-error_test=float(pred_test.size)/float(pred_test[pred_test==-1].size)
+error_test=float(pred_test[pred_test==-1].size)/float(pred_test.size)
 
 print(error_train)
 print(error_test)
