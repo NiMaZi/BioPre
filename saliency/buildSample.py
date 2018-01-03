@@ -19,6 +19,8 @@ freq=pickle.load(f)
 f.close()
 
 sample_list=[]
+positive=0
+negative=0
 
 for i in range(0,volume):
 	words_body=set([])
@@ -40,12 +42,15 @@ for i in range(0,volume):
 			else:
 				tf_idf=tfidf[word_list.index(item[2])][i]
 				tfall=freq[item[2]]
-				first_position=item[4]
+				first_position=int(item[4])
 				if item[2] in words_body:
+					positive+=1
 					label=1
 				else:
+					negative+=1
 					label=0
 				sample_list.append([tf_idf,tfall,first_position,label])
 
 for sample in sample_list:
 	print(sample)
+print(positive,negative)
