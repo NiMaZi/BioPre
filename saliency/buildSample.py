@@ -53,16 +53,18 @@ for i in range(0,volume):
 				sample_list.append([tf_idf,tfall,first_position,label])
 
 pn_rate=int(positive/negative)
-n_sample_list=[]
+# n_sample_list=[]
 
-for sample in sample_list:
-	if sample[3]==0:
-		for i in range(0,pn_rate):
-			n_sample_list.append(sample)
+# for sample in sample_list:
+# 	if sample[3]==0:
+# 		for i in range(0,pn_rate):
+# 			n_sample_list.append(sample)
 
-sample_list.extend(n_sample_list)
+# sample_list.extend(n_sample_list)
 random.shuffle(sample_list)
 
 f=open("/home/ubuntu/results/svm/saliency_samples.pickle","wb")
 pickle.dump(sample_list,f)
 f.close()
+
+print(pn_rate)
