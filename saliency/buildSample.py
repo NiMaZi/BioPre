@@ -10,7 +10,7 @@ f=open("/home/ubuntu/results/tfidf/tfidf3500.pickle","rb")
 tfidf=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/tfidf/tfidf3500.pickle","rb")
+f=open("/home/ubuntu/results/tfidf/wordlist3500.pickle","rb")
 word_list=pickle.load(f)
 f.close()
 
