@@ -63,5 +63,6 @@ for sample in sample_list:
 sample_list.extend(n_sample_list)
 random.shuffle(sample_list)
 
-for sample in sample_list:
-	print(sample)
+f=open("/home/ubuntu/results/svm/saliency_samples.pickle","wb")
+pickle.dump(sample_list,f)
+f.close()
