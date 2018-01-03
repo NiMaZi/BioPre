@@ -64,4 +64,4 @@ sample_list.extend(n_sample_list)
 random.shuffle(sample_list)
 
 for sample in sample_list:
-	print(sample_list)
+	print(sample)
