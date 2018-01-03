@@ -10,10 +10,13 @@ def chunks(arr, m):
 	return [arr[i:i+n] for i in range(0,len(arr),n)]
 
 chunk_num=int(sys.argv[1])
+volume=int(sys.argv[2])
 
 f=open("/home/ubuntu/results/svm/saliency_samples.pickle","rb")
-samples=pickle.load(f)
+sample_all=pickle.load(f)
 f.close()
+
+samples=random.sample(sample_all,volume)
 
 sample_list=chunks(samples,chunk_num)
 
