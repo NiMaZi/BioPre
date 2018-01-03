@@ -1,6 +1,7 @@
 import sys
 import csv
 import pickle
+import random
 
 volume=int(sys.argv[1])
 
@@ -52,4 +53,15 @@ for i in range(0,volume):
 				sample_list.append([tf_idf,tfall,first_position,label])
 
 pn_rate=int(positive/negative)
-print(pn_rate)
+n_sample_list=[]
+
+for sample in sample_list:
+	if sample[3]==0:
+		for i in range(0,pn_rate):
+			n_sample_list.append(sample)
+
+sample_list.extend(n_sample_list)
+random.shuffle(sample_list)
+
+for sample in sample_list:
+	print(sample_list)
