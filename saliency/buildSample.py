@@ -68,3 +68,5 @@ pickle.dump(sample_list,f)
 f.close()
 
 print(pn_rate)
+
+# 3500 articles -> 10809 samples, p-n rate 31

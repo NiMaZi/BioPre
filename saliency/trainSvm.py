@@ -24,7 +24,7 @@ order=[i for i in range(0,chunk_num)]
 
 random.shuffle(order)
 
-linear_error_sum=0.0
+# linear_error_sum=0.0
 rbf_error_sum=0.0
 sigmoid_error_sum=0.0
 
@@ -62,7 +62,7 @@ for i in range(0,chunk_num):
 
 	print("training SVM with rbf kernel.\n")
 
-	clf_rbf=svm.SVC(kernel='rbf')
+	clf_rbf=svm.SVC(kernel='rbf',class_weight={1:1,0:31})
 	clf_rbf.fit(n_training_X,n_training_y)
 	n_predicted_y=list(clf_rbf.predict(n_validating_X))
 	error_count=0
@@ -73,7 +73,7 @@ for i in range(0,chunk_num):
 
 	print("training SVM with sigmoid kernel.\n")
 
-	clf_sigmoid=svm.SVC(kernel='sigmoid')
+	clf_sigmoid=svm.SVC(kernel='sigmoid',class_weight={1:1,0:31})
 	clf_sigmoid.fit(n_training_X,n_training_y)
 	n_predicted_y=list(clf_sigmoid.predict(n_validating_X))
 	error_count=0
@@ -82,8 +82,8 @@ for i in range(0,chunk_num):
 			error_count+=1
 	sigmoid_error_sum+=float(error_count)/float(len(n_validating_y))
 
-linear_error_sum/=float(chunk_num)
+# linear_error_sum/=float(chunk_num)
 rbf_error_sum/=float(chunk_num)
 sigmoid_error_sum/=float(chunk_num)
 
-print(linear_error_sum,rbf_error_sum,sigmoid_error_sum)
+print(rbf_error_sum,sigmoid_error_sum)
