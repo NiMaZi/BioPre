@@ -6,11 +6,11 @@ volume=int(sys.argv[1])
 
 # tf, tfall, idf, first-position, label.
 
-f=open("/home/ubuntu/results/tfidf/tfidf"+str(volume)+".pickle","rb")
+f=open("/home/ubuntu/results/tfidf/tfidf3500.pickle","rb")
 tfidf=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/tfidf/tfidf"+str(volume)+".pickle","rb")
+f=open("/home/ubuntu/results/tfidf/tfidf3500.pickle","rb")
 word_list=pickle.load(f)
 f.close()
 
