@@ -49,16 +49,16 @@ for i in range(0,chunk_num):
 	n_validating_X=n_validating[:,0:3]
 	n_validating_y=list(n_validating[:,3])
 
-	print("training SVM with linear kernel.\n")
+	# print("training SVM with linear kernel.\n")
 
-	clf_linear=svm.SVC(kernel='linear')
-	clf_linear.fit(n_training_X,n_training_y)
-	n_predicted_y=list(clf_linear.predict(n_validating_X))
-	error_count=0
-	for j in range(0,len(n_validating_y)):
-		if not n_validating_y[j]==n_predicted_y[j]:
-			error_count+=1
-	linear_error_sum+=float(error_count)/float(len(n_validating_y))
+	# clf_linear=svm.SVC(kernel='linear')
+	# clf_linear.fit(n_training_X,n_training_y)
+	# n_predicted_y=list(clf_linear.predict(n_validating_X))
+	# error_count=0
+	# for j in range(0,len(n_validating_y)):
+	# 	if not n_validating_y[j]==n_predicted_y[j]:
+	# 		error_count+=1
+	# linear_error_sum+=float(error_count)/float(len(n_validating_y))
 
 	print("training SVM with rbf kernel.\n")
 
