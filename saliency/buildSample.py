@@ -51,5 +51,5 @@ for i in range(0,volume):
 					label=0
 				sample_list.append([tf_idf,tfall,first_position,label])
 
-pn_rate=positive/negative
+pn_rate=int(positive/negative)
 print(pn_rate)
