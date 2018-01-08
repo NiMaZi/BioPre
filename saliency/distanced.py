@@ -2,16 +2,11 @@ import sys
 import csv
 import pickle
 
-start=int(sys.argv[1])
-end=int(sys.argv[2])
+volume=int(sys.argv[1])
 
-# distanced_list=[]
+distanced_list=[]
 
-dlf=open("/home/ubuntu/results/saliency/distanced.pkl","rb")
-distanced_list=pickle.load(dlf)
-dlf.close()
-
-for i in range(start,end):
+for i in range(0,volume):
 	
 	record={}
 
