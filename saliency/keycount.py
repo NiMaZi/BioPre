@@ -5,7 +5,7 @@ volume=int(sys.argv[1])
 
 count=0
 
-for i in range(0,volume)
+for i in range(0,volume):
 	f=open("/home/ubuntu/thesiswork/data/title"+str(i)+".txt.mentions","r",newline='',encoding='utf-8'):
 	reader = csv.reader(f)
 	c=0
