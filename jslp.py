@@ -22,8 +22,9 @@ with jsonlines.open("/home/ubuntu/pubmed_2017-05.jsonl") as reader:
 		# if str(keyterms)!="None":
 		# 	keyterms_count=keyterms_count+1
 		# 	# print(keyterms)
-		# if str(keywords)!="None":
-		# 	keywords_count=keywords_count+1
+		if str(keywords)=="None":
+			continue
+			# keywords_count=keywords_count+1
 			# print(keywords)
 		print("hey\n")
 		print(keywords)
