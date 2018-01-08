@@ -5,9 +5,10 @@ import pickle
 start=int(sys.argv[1])
 end=int(sys.argv[2])
 
-distanced_list=[]
-dlf=open("/home/ubuntu/results/saliency/distanced.pkl","wb")
-pickle.dump(distanced_list,dlf)
+# distanced_list=[]
+
+dlf=open("/home/ubuntu/results/saliency/distanced.pkl","rb")
+distanced_list=pickle.load(dlf)
 dlf.close()
 
 for i in range(start,end):
@@ -80,4 +81,6 @@ for i in range(start,end):
 
 	distanced_list.append(record)
 
-print(distanced_list)
+dlf=open("/home/ubuntu/results/saliency/distanced.pkl","wb")
+pickle.dump(distanced_list,dlf)
+dlf.close()
