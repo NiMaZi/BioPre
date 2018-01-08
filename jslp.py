@@ -6,8 +6,8 @@ keyterms_count=0
 keywords_count=0
 with jsonlines.open("/home/ubuntu/pubmed_2017-05.jsonl") as reader:
 	for item in reader:
-		# f=open("/home/ubuntu/thesiswork/data/body"+str(count)+".txt","w",encoding='utf-8')
-		# g=open("/home/ubuntu/thesiswork/data/abs"+str(count)+".txt","w",encoding='utf-8')
+		f=open("/home/ubuntu/thesiswork/kdata/keywords"+str(count)+".txt","w",encoding='utf-8')
+		g=open("/home/ubuntu/thesiswork/kdata/title"+str(count)+".txt","w",encoding='utf-8')
 		# keylist=item.keys()
 		abstract=item["abstract"]
 		authors=item["authors"]
@@ -26,14 +26,12 @@ with jsonlines.open("/home/ubuntu/pubmed_2017-05.jsonl") as reader:
 			continue
 			# keywords_count=keywords_count+1
 			# print(keywords)
-		print("hey\n")
-		print(keywords)
-		print("hey\n")
+		print(str(keywords))
 		print(title)
-		# f.write(str(body))
-		# f.close()
-		# g.write(abstract)
-		# g.close()
+		f.write(str(keywords))
+		f.close()
+		g.write(title)
+		g.close()
 		# if count==177:
 		# 	print(json.dumps(item,sort_keys=False,indent=2,separators=(',',':')))
 		# 	# print(str(body))
