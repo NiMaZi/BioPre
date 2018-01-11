@@ -26,6 +26,6 @@ for entry in dis_list:
 
 word_list=list(word_set)
 
-f=open("/home/ubuntu/results/saliency/wordlist.pkl","rb")
+f=open("/home/ubuntu/results/saliency/wordlist.pkl","wb")
 pickle.dump(word_list,f)
 f.close()
