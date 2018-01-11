@@ -42,4 +42,9 @@ while True:
 	if delta<threshold:
 		break
 
+word_centrality={}
+for i in range(0,len(word_list)):
+	word_centrality[word_list[i]]=VR[i]
+
+print word_centrality
 # print(epoch)
