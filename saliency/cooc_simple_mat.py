@@ -1,5 +1,5 @@
 import pickle
-import numpy as ny
+import numpy as np
 
 f=open("/home/ubuntu/results/saliency/distanced.pkl","rb")
 dis_list=pickle.load(f)
