@@ -7,8 +7,6 @@ f.close()
 
 featured_list=[]
 
-count=0
-
 for entry in dis_list:
 
 	abs_list=entry['abs']
@@ -23,11 +21,6 @@ for entry in dis_list:
 		else:
 			abs_dict[item[1]]=[item[2],item[2],1] #(float)min_pos, (float)max_pos, (int)count
 
-	if not abs_dict:
-		continue
-
-	print(abs_dict)
-
 	body_list=entry['body']
 	body_dict={}
 	for item in body_list:
@@ -40,10 +33,8 @@ for entry in dis_list:
 		else:
 			body_dict[item[1]]=[item[2],item[2],1]
 
-	print(body_dict)
-
 	featured_list.append({'abs':abs_dict,'body':body_dict})
-	count+=1
 
-	if count>10:
-		break
+f=open("/home/ubuntu/results/saliency/featured.pkl","wb")
+pickle.dump(featured_list,f)
+f.close()
