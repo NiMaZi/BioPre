@@ -23,6 +23,7 @@ epoch=0
 d=0.85
 
 while True:
+	print("epoch "+str(epoch)+"\n")
 	for i in range(0,len(VR)):
 		inw=0.0
 		for j in range(0,len(VR)):
@@ -37,7 +38,8 @@ while True:
 	epoch+=1
 	for i in range(0,len(VR)):
 		VR[i]=NVR[i]
+	print(delta)
 	if delta<threshold:
 		break
 
-print(epoch)
+# print(epoch)
