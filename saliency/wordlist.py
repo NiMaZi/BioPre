@@ -26,5 +26,6 @@ for entry in dis_list:
 
 word_list=list(word_set)
 
-print(word_list)
-print(len(word_list))
+f=open("/home/ubuntu/results/saliency/wordlist.pkl","rb")
+pickle.dump(word_list,f)
+f.close()
