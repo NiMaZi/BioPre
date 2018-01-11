@@ -31,6 +31,8 @@ for entry in dis_list:
 
 for i in range(0,len(word_list)):
 	for j in range(0,len(word_list)):
-		simple_mat[i][j]/=float(len(dis_list))
+		simple_mat[i][j]/=(2.0*float(len(dis_list)))
 
-print(simple_mat)
+f=open("/home/ubuntu/results/saliency/simplemat.pkl","wb")
+pickle.dump(simple_mat,f)
+f.close()
