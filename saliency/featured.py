@@ -23,6 +23,9 @@ for entry in dis_list:
 		else:
 			abs_dict[item[1]]=[item[2],item[2],1] #(float)min_pos, (float)max_pos, (int)count
 
+	if not abs_dict:
+		continue
+
 	print(abs_dict)
 
 	body_list=entry['body']
