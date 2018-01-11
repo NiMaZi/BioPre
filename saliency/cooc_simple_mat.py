@@ -1,6 +1,8 @@
 import pickle
 import numpy as np
 
+# after distanced & wordlist
+
 f=open("/home/ubuntu/results/saliency/distanced.pkl","rb")
 dis_list=pickle.load(f)
 f.close()

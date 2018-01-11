@@ -1,3 +1,5 @@
+# after distanced
+
 import pickle
 
 f=open("/home/ubuntu/results/saliency/distanced.pkl","rb")
