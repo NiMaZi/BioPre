@@ -1,5 +1,6 @@
 import sys
 import pickle
+import random
 
 split_ratio=float(sys.argv[1])
 
@@ -40,5 +41,7 @@ for i in range(0,len(dis_list)):
 			sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[word_list.index(key)],0])
 
 print(len(sample_prelist))
+
+random.shuffle(sample_prelist)
 
 key_phrase=[]
