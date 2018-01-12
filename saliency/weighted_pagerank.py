@@ -1,5 +1,6 @@
 import sys
 import pickle
+import math
 import numpy as np
 
 mode=int(sys.argv[1])
@@ -23,7 +24,6 @@ epoch=0
 d=0.85
 
 while True:
-	print("epoch "+str(epoch)+"\n")
 	for i in range(0,len(VR)):
 		inw=0.0
 		for j in range(0,len(VR)):
@@ -34,11 +34,12 @@ while True:
 		NVR[i]=(1.0-d)+d*inw
 	delta=0.0
 	for i in range(0,len(VR)):
-		delta+=abs(NVR[i]-VR[i])
+		delta+=(NVR[i]-VR[i])*(NVR[i]-VR[i])
+	delta=math.sqrt(delta)
+	print("epoch="+str(epoch)+" delta="+str(delta)+"\n")
 	epoch+=1
 	for i in range(0,len(VR)):
 		VR[i]=NVR[i]
-	print(delta)
 	if delta<threshold:
 		break
 
