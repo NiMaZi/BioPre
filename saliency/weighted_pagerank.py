@@ -30,8 +30,8 @@ while True:
 			outw=0.0
 			for k in range(0,len(VR)):
 				outw+=dev_mat[j][k]
-			# if outw==0.0:
-			# 	continue
+			if outw==0.0:
+				continue
 			inw+=(dev_mat[j][i]/outw)*VR[j]
 		NVR[i]=(1.0-d)+d*inw
 	delta=0.0
