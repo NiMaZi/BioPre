@@ -36,9 +36,9 @@ for i in range(0,len(dis_list)):
 		label_set.add(item[1])
 	for key in featured_list[i]['abs'].keys():
 		if key in label_set:
-			sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[word_list.index(key)],1]) #(str)entity, (float)distance, (float)spread, (float)idf, (float)centrality, label
+			sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[key],1]) #(str)entity, (float)distance, (float)spread, (float)idf, (float)centrality, label
 		else:
-			sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[word_list.index(key)],0])
+			sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[key],0])
 
 print(len(sample_prelist))
 
