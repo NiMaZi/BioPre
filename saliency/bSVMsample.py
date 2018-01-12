@@ -42,6 +42,9 @@ for i in range(0,len(dis_list)):
 
 print(len(sample_prelist))
 
+for i in range(0,10):
+	print(sample_prelist[i])
+
 random.shuffle(sample_prelist)
 
 key_phrase=[]
