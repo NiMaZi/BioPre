@@ -60,7 +60,7 @@ f.close()
 
 training_list=[]
 for i in range(0,split):
-	training_list.append([key_phrase[word_list.index(sample_prelist[i][0])],sample_prelist[i][1]],sample_prelist[i][2],sample_prelist[i][3],sample_prelist[i][4],sample_prelist[i][5],sample_prelist[i][6])
+	training_list.append([key_phrase[word_list.index(sample_prelist[i][0])],sample_prelist[i][1],sample_prelist[i][2],sample_prelist[i][3],sample_prelist[i][4],sample_prelist[i][5],sample_prelist[i][6]])
 
 f=open("/home/ubuntu/results/saliency/trainlist.pkl","wb")
 pickle.dump(training_list,f)
@@ -68,7 +68,7 @@ f.close()
 
 test_list=[]
 for i in range(split,len(sample_prelist)):
-	test_list.append([key_phrase[word_list.index(sample_prelist[i][0])],sample_prelist[i][1]],sample_prelist[i][2],sample_prelist[i][3],sample_prelist[i][4],sample_prelist[i][5],sample_prelist[i][6])
+	test_list.append([key_phrase[word_list.index(sample_prelist[i][0])],sample_prelist[i][1],sample_prelist[i][2],sample_prelist[i][3],sample_prelist[i][4],sample_prelist[i][5],sample_prelist[i][6]])
 
 f=open("/home/ubuntu/results/saliency/testlist.pkl","wb")
 pickle.dump(test_list,f)
