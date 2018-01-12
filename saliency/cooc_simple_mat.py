@@ -23,17 +23,20 @@ for entry in dis_list:
 		for b in list(_set):
 			simple_mat[word_list.index(a)][word_list.index(b)]+=1.0
 
-	_list=entry['body']
-	_set=set()
-	for item in _list:
-		_set.add(item[1])
-	for a in list(_set):
-		for b in list(_set):
-			simple_mat[word_list.index(a)][word_list.index(b)]+=1.0
+	# _list=entry['body']
+	# _set=set()
+	# for item in _list:
+	# 	_set.add(item[1])
+	# for a in list(_set):
+	# 	for b in list(_set):
+	# 		simple_mat[word_list.index(a)][word_list.index(b)]+=1.0
 
 for i in range(0,len(word_list)):
 	for j in range(0,len(word_list)):
-		simple_mat[i][j]/=(2.0*float(len(dis_list)))
+		simple_mat[i][j]/=(1.0*float(len(dis_list)))
+
+for i in range(0,len(word_list)):
+	simple_mat[i][i]=0.0
 
 f=open("/home/ubuntu/results/saliency/simplemat.pkl","wb")
 pickle.dump(simple_mat,f)
