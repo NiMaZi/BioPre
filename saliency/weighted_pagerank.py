@@ -53,5 +53,5 @@ for i in range(0,len(word_list)):
 # print(epoch)
 
 f=open("/home/ubuntu/results/saliency/centrality.pkl","wb")
-pickle.dump(centrality,f)
+pickle.dump(word_centrality,f)
 f.close()
