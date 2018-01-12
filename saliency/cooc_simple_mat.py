@@ -23,13 +23,13 @@ for entry in dis_list:
 		for b in list(_set):
 			simple_mat[word_list.index(a)][word_list.index(b)]+=1.0
 
-	# _list=entry['body']
-	# _set=set()
-	# for item in _list:
-	# 	_set.add(item[1])
-	# for a in list(_set):
-	# 	for b in list(_set):
-	# 		simple_mat[word_list.index(a)][word_list.index(b)]+=1.0
+	_list=entry['body']
+	_set=set()
+	for item in _list:
+		_set.add(item[1])
+	for a in list(_set):
+		for b in list(_set):
+			simple_mat[word_list.index(a)][word_list.index(b)]+=1.0
 
 for i in range(0,len(word_list)):
 	for j in range(0,len(word_list)):

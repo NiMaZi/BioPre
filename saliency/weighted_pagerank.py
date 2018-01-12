@@ -30,8 +30,8 @@ while True:
 			outw=0.0
 			for k in range(0,len(VR)):
 				outw+=dev_mat[j][k]
-			if outw==0.0:
-				continue
+			# if outw==0.0:
+			# 	continue
 			inw+=(dev_mat[j][i]/outw)*VR[j]
 		NVR[i]=(1.0-d)+d*inw
 	delta=0.0
@@ -49,5 +49,9 @@ word_centrality={}
 for i in range(0,len(word_list)):
 	word_centrality[word_list[i]]=VR[i]
 
-print(word_centrality)
+# print(word_centrality)
 # print(epoch)
+
+f=open("/home/ubuntu/results/saliency/centrality.pkl","wb")
+pickle.dump(centrality,f)
+f.close()
