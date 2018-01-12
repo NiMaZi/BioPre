@@ -38,6 +38,8 @@ for entry in dis_list:
 
 word_list=list(word_set)
 
+print(len(word_list))
+
 f=open("/home/ubuntu/results/saliency/wordlist.pkl","wb")
 pickle.dump(word_list,f)
 f.close()
