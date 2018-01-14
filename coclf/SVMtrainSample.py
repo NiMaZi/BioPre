@@ -50,3 +50,21 @@ for i in range(0,10):
 	print(sample_prelist[i])
 
 print(len(sample_prelist))
+
+split=int(split_ratio*len(sample_prelist))
+
+training_list=[]
+for i in range(0,split):
+	training_list.append(sample_prelist[i])
+
+f=open("/home/ubuntu/results/coclf/trainlist.pkl","wb")
+pickle.dump(training_list,f)
+f.close()
+
+test_list=[]
+for i in range(split,len(sample_prelist)):
+	test_list.append(sample_prelist[i])
+
+f=open("/home/ubuntu/results/coclf/testlist.pkl","wb")
+pickle.dump(test_list,f)
+f.close()
