@@ -13,11 +13,11 @@ for i in range(0,volume):
 	record={}
 
 	record['abs']=[]
-	f=open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".txt","r",encoding='utf-8')
+	f=open("/home/ubuntu/thesiswork/data2/abs"+str(i)+".txt","r",encoding='utf-8')
 	doc=f.read()
 	length=float(len(doc))
 	f.close()
-	with open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+	with open("/home/ubuntu/thesiswork/data2/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
 		reader=csv.reader(csvfile)
 		for item in reader:
 			if item[2]=="ConceptName":
@@ -29,11 +29,11 @@ for i in range(0,volume):
 			record['abs'].append([mention,entity,start_pos,end_pos])
 
 	record['body']=[]
-	f=open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".txt","r",encoding='utf-8')
+	f=open("/home/ubuntu/thesiswork/data2/body"+str(i)+".txt","r",encoding='utf-8')
 	doc=f.read()
 	length=float(len(doc))
 	f.close()
-	with open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+	with open("/home/ubuntu/thesiswork/data2/body"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
 		reader=csv.reader(csvfile)
 		for item in reader:
 			if item[2]=="ConceptName":
@@ -45,11 +45,11 @@ for i in range(0,volume):
 			record['body'].append([mention,entity,start_pos,end_pos])
 
 	record['title']=[]
-	f=open("/home/ubuntu/thesiswork/kdata/title"+str(i)+".txt","r",encoding='utf-8')
+	f=open("/home/ubuntu/thesiswork/data2/title"+str(i)+".txt","r",encoding='utf-8')
 	doc=f.read()
 	length=float(len(doc))
 	f.close()
-	with open("/home/ubuntu/thesiswork/kdata/title"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+	with open("/home/ubuntu/thesiswork/data2/title"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
 		reader=csv.reader(csvfile)
 		for item in reader:
 			if item[2]=="ConceptName":
@@ -61,11 +61,11 @@ for i in range(0,volume):
 			record['title'].append([mention,entity,start_pos,end_pos])
 
 	record['keywords']=[]
-	f=open("/home/ubuntu/thesiswork/kdata/keywords"+str(i)+".txt","r",encoding='utf-8')
+	f=open("/home/ubuntu/thesiswork/data2/keywords"+str(i)+".txt","r",encoding='utf-8')
 	doc=f.read()
 	length=float(len(doc))
 	f.close()
-	with open("/home/ubuntu/thesiswork/kdata/keywords"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+	with open("/home/ubuntu/thesiswork/data2/keywords"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
 		reader=csv.reader(csvfile)
 		for item in reader:
 			if item[2]=="ConceptName":
