@@ -75,7 +75,7 @@ for i in range(int(split_ratio*len(featured_list)),int(split_ratio*len(featured_
 			label=1
 		else:
 			label=-1
-		print(count,a_key,b_key,label)
+		print(count,abs_dict.keys(),b_key,label)
 		_feature=[idf[word_list.index(b_key)],centrality[b_key]]
 		_feature.extend(list(V.flatten()))
 		sample_input=np.array(_feature)
