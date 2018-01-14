@@ -39,10 +39,13 @@ for entry in featured_list:
 		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
 		pred_saliency=list(s_clf.predict(pred_input))[0]
 		a_mat.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],pred_saliency])
+	if not a_mat:
+		continue
 	U,S,V=np.linalg.svd(np.array(a_mat),full_matrices=True)
 	for b_key in body_dict.keys():
 		if b_key in abs_dict.keys():
 			continue
+		count+=1
 		print(count,abs_dict.keys(),b_key)
 		sample_prelist.append([idf[word_list.index(b_key)],centrality[b_key]].extend(list(V.flatten())))
 
