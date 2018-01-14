@@ -41,7 +41,7 @@ clf_rbf=pickle.load(f)
 f.close()
 
 # sample_prelist=[]
-# count=0
+count=0
 
 tp_linear=0.0
 # tn_linear=0.0
