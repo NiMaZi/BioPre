@@ -55,7 +55,7 @@ fp_rbf=0.0
 fn_rbf=0.0
 
 # for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
-for i in range(int(split_ratio*len(featured_list)),int(split_ratio*len(featured_list))+100):
+for i in range(int(split_ratio*len(featured_list)),int(split_ratio*len(featured_list))+10):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
 	a_mat=[]
