@@ -1,8 +1,11 @@
 import sys
 import pickle
+import random
 import numpy as np
 from time import time
 from sklearn import svm
+
+volume=int(sys.argv[1])
 
 f=open("/home/ubuntu/results/coclf/trainlist.pkl","rb")
 training_list=pickle.load(f)
@@ -14,10 +17,12 @@ f.close()
 
 training_list.extend(testing_list)
 
+sample=random.sample(training_list,volume)
+
 clf_linear=svm.OneClassSVM(kernel='linear')
 clf_rbf=svm.OneClassSVM(kernel='rbf')
 
-n_training=np.array(training_list)
+n_training=np.array(sample)
 
 start=time()
 
