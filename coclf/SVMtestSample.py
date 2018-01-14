@@ -60,8 +60,8 @@ for entry in featured_list:
 			if a_key==b_key:
 				continue
 			count+=1
-			if count>20000:
-				break
+			# if count>20000:
+			# 	break
 			label=0
 			if b_key in body_dict.keys():
 				label=1
