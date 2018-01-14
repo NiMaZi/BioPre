@@ -56,8 +56,8 @@ fn_rbf=0.0
 
 # for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 for i in range(int(split_ratio*len(featured_list)),int(split_ratio*len(featured_list))+100):
-	abs_dict=entry['abs']
-	body_dict=entry['body']
+	abs_dict=featured_list[i]['abs']
+	body_dict=featured_list[i]['body']
 	a_mat=[]
 	for a_key in abs_dict.keys():
 		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
