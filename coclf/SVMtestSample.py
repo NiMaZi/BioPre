@@ -44,9 +44,11 @@ sample_prelist=[]
 count=0
 
 tp_linear=0.0
+tn_linear=0.0
 fp_linear=0.0
 fn_linear=0.0
 tp_rbf=0.0
+tn_rbf=0.0
 fp_rbf=0.0
 fn_rbf=0.0
 
@@ -60,8 +62,8 @@ for entry in featured_list:
 			if a_key==b_key:
 				continue
 			count+=1
-			# if count>20000:
-			# 	break
+			if count>20000:
+				break
 			label=0
 			if b_key in body_dict.keys():
 				label=1
@@ -72,14 +74,20 @@ for entry in featured_list:
 			pred_label_linear=list(clf_linear.predict(sample_input))[0]
 			pred_label_rbf=list(clf_rbf.predict(sample_input))[0]
 			if pred_label_linear==label:
-				tp_linear+=1
+				if pred_label_linear==1:
+					tp_linear+=1
+				else:
+					tn_linear+=1
 			else:
 				if pred_label_linear==1:
 					fp_linear+=1
 				else:
 					fn_linear+=1
 			if pred_label_rbf==label:
-				tp_rbf+=1
+				if pred_label_rbf==1:
+					tp_rbf+=1
+				else:
+					tn_rbf+=1
 			else:
 				if pred_label_rbf==1:
 					fp_rbf+=1
@@ -90,12 +98,14 @@ for entry in featured_list:
 P=tp_linear/(tp_linear+fp_linear)
 R=tp_linear/(tp_linear+fn_linear)
 F1=2*P*R/(P+R)
+ACC=(tp_linear+tn_linear)/(tp_linear+tn_linear+fp_linear+fn_linear)
 
 print(P,R,F1)
 
 P=tp_rbf/(tp_rbf+fp_rbf)
 R=tp_rbf/(tp_rbf+fn_rbf)
 F1=2*P*R/(P+R)
+ACC=(tp_rbf+tn_rbf)/(tp_rbf+tn_rbf+fp_rbf+fn_rbf)
 
 print(P,R,F1)
 
