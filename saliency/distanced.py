@@ -10,6 +10,8 @@ dlf.close()
 
 print(len(distanced_list))
 
+dd=distanced_list[0:6000]
+
 # for i in range(0,volume):
 	
 # 	record={}
@@ -80,6 +82,6 @@ print(len(distanced_list))
 
 # 	distanced_list.append(record)
 
-# dlf=open("/home/ubuntu/results/saliency/distanced.pkl","wb")
-# pickle.dump(distanced_list,dlf)
-# dlf.close()
+dlf=open("/home/ubuntu/results/saliency/distanced.pkl","wb")
+pickle.dump(dd,dlf)
+dlf.close()
