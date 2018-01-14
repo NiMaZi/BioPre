@@ -43,7 +43,3 @@ for entry in featured_list:
 			# print(count,a_key,b_key)
 			# count+=1
 			sample_prelist.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],pred_saliency])
-
-f=open("/home/ubuntu/results/coclf/trainlist.pkl","wb")
-pickle.dump(sample_prelist,f)
-f.close()
