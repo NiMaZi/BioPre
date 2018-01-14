@@ -13,31 +13,33 @@ f.close()
 
 sample=random.sample(training_list,volume)
 
-clf_linear=svm.OneClassSVM(kernel='linear')
-clf_rbf=svm.OneClassSVM(kernel='rbf',gamma=1.0/38.0)
+print(sample)
 
-n_training=np.array(sample)
+# clf_linear=svm.OneClassSVM(kernel='linear')
+# clf_rbf=svm.OneClassSVM(kernel='rbf',gamma=1.0/38.0)
 
-start=time()
+# n_training=np.array(sample)
 
-clf_linear.fit(n_training)
+# start=time()
 
-end=time()
+# clf_linear.fit(n_training)
 
-print(end-start)
+# end=time()
 
-start=time()
+# print(end-start)
 
-clf_rbf.fit(n_training)
+# start=time()
 
-end=time()
+# clf_rbf.fit(n_training)
 
-print(end-start)
+# end=time()
 
-f=open("/home/ubuntu/results/coclf/svd_linear.pkl","wb")
-pickle.dump(clf_linear,f)
-f.close()
+# print(end-start)
 
-f=open("/home/ubuntu/results/coclf/svd_rbf_default.pkl","wb")
-pickle.dump(clf_rbf,f)
-f.close()
+# f=open("/home/ubuntu/results/coclf/svd_linear.pkl","wb")
+# pickle.dump(clf_linear,f)
+# f.close()
+
+# f=open("/home/ubuntu/results/coclf/svd_rbf_default.pkl","wb")
+# pickle.dump(clf_rbf,f)
+# f.close()
