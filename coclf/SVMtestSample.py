@@ -28,6 +28,10 @@ f=open("/home/ubuntu/results/saliency/svmclf.pkl","rb")
 s_clf=pickle.load(f)
 f.close()
 
+f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
+dev_mat=pickle.load(f)
+f.close()
+
 sample_prelist=[]
 count=0
 
@@ -38,7 +42,9 @@ for entry in featured_list:
 		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
 		pred_saliency=list(s_clf.predict(pred_input))[0]
 		for b_key in word_list:
-			if a_key==b_key:
+			# if a_key==b_key:
+			# 	continue
+			if dev_mat[word_list.index(a_key)][word_list.index(b_key)]==0.0:
 				continue
 			count+=1
 			label=0
