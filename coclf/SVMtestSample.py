@@ -55,6 +55,8 @@ fn_rbf=0.0
 for entry in featured_list:
 	abs_dict=entry['abs']
 	body_dict=entry['body']
+	if count>5000:
+		break
 	for a_key in abs_dict.keys():
 		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
 		pred_saliency=list(s_clf.predict(pred_input))[0]
@@ -72,14 +74,16 @@ for entry in featured_list:
 			pred_label_linear=list(clf_linear.predict(sample_input))[0]
 			pred_label_rbf=list(clf_rbf.predict(sample_input))[0]
 			if pred_label_linear==label:
-				tp_linear+=1
+				if pred_label_linear==1:
+					tp_linear+=1
 			else:
 				if pred_label_linear==1:
 					fp_linear+=1
 				else:
 					fn_linear+=1
 			if pred_label_rbf==label:
-				tp_rbf+=1
+				if pred_label_rbf==1:
+					tp_rbf+=1
 			else:
 				if pred_label_rbf==1:
 					fp_rbf+=1

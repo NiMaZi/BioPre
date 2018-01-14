@@ -82,14 +82,16 @@ for i in range(int(split_ratio*len(featured_list)),int(split_ratio*len(featured_
 		pred_label_linear=list(clf_linear.predict(sample_input))[0]
 		pred_label_rbf=list(clf_rbf.predict(sample_input))[0]
 		if pred_label_linear==label:
-			tp_linear+=1
+			if pred_label_linear==1:
+				tp_linear+=1
 		else:
 			if pred_label_linear==1:
 				fp_linear+=1
 			else:
 				fn_linear+=1
 		if pred_label_rbf==label:
-			tp_rbf+=1
+			if pred_label_rbf==1:
+				tp_rbf+=1
 		else:
 			if pred_label_rbf==1:
 				fp_rbf+=1
