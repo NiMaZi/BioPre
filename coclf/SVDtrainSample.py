@@ -33,7 +33,8 @@ f.close()
 sample_prelist=[]
 count=0
 
-for i in range(0,int(split_ratio*len(featured_list))):
+# for i in range(0,int(split_ratio*len(featured_list))):
+for i in range(0,10):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
 	a_mat=[]
@@ -50,6 +51,8 @@ for i in range(0,int(split_ratio*len(featured_list))):
 		count+=1
 		print(count,abs_dict.keys(),b_key)
 		sample_prelist.append([idf[word_list.index(b_key)],centrality[b_key]].extend(list(V.flatten())))
+
+print(sample_prelist)
 
 f=open("/home/ubuntu/results/coclf/svd_trainlist.pkl","wb")
 pickle.dump(sample_prelist,f)
