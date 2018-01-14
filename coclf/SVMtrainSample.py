@@ -31,6 +31,7 @@ s_clf=pickle.load(f)
 f.close()
 
 sample_prelist=[]
+count=0
 
 for entry in featured_list:
 	abs_dict=entry['abs']
@@ -39,7 +40,8 @@ for entry in featured_list:
 		for b_key in body_dict.keys():
 			if a_key==b_key:
 				continue
-			print(a_key,b_key)
+			print(count,a_key,b_key)
+			count+=1
 			pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
 			pred_saliency=list(s_clf.predict(pred_input))[0]
 			sample_prelist.append([a_key,b_key,abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],pred_saliency])
