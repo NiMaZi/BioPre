@@ -1,4 +1,5 @@
 import sys
+import pickle
 import numpy as np
 from time import time
 from sklearn import svm
