@@ -33,8 +33,7 @@ f.close()
 sample_prelist=[]
 count=0
 
-# for i in range(0,int(split_ratio*len(featured_list))):
-for i in range(0,10):
+for i in range(0,int(split_ratio*len(featured_list))):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
 	a_mat=[]
@@ -54,7 +53,7 @@ for i in range(0,10):
 		_feature.extend(list(V.flatten()))
 		sample_prelist.append(_feature)
 
-print(sample_prelist)
+# print(sample_prelist)
 
 f=open("/home/ubuntu/results/coclf/svd_trainlist.pkl","wb")
 pickle.dump(sample_prelist,f)
