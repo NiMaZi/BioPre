@@ -26,7 +26,7 @@ for entry in featured_list:
 	body_dict=entry['body']
 	for a_key in abs_dict.keys():
 		for b_key in body_dict.keys():
-			sample_prelist.append([a_key,b_key,abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2]],body_dict[a_key][0],body_dict[a_key][1]-body_dict[a_key][0],body_dict[a_key][2]])
+			sample_prelist.append([a_key,b_key,abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],body_dict[a_key][0],body_dict[a_key][1]-body_dict[a_key][0],body_dict[a_key][2]])
 
 for i in range(0,10):
 	print(sample_prelist[i])
