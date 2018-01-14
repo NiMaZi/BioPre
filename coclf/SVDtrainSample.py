@@ -50,7 +50,9 @@ for i in range(0,10):
 			continue
 		count+=1
 		print(count,abs_dict.keys(),b_key)
-		sample_prelist.append([idf[word_list.index(b_key)],centrality[b_key]].extend(list(V.flatten())))
+		_feature=[idf[word_list.index(b_key)],centrality[b_key]]
+		_feature.extend(list(V.flatten())
+		sample_prelist.append(_feature)
 
 print(sample_prelist)
 
