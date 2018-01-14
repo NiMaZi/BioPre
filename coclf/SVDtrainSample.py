@@ -4,6 +4,8 @@ import pickle
 import numpy as np
 from sklearn import svm
 
+split_ratio=float(sys.argv[1])
+
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
 featured_list=pickle.load(f)
 f.close()
@@ -31,9 +33,9 @@ f.close()
 sample_prelist=[]
 count=0
 
-for entry in featured_list:
-	abs_dict=entry['abs']
-	body_dict=entry['body']
+for i in range(0,int(split_ratio*len(featured_list))):
+	abs_dict=featured_list[i]['abs']
+	body_dict=featured_list[i]['body']
 	a_mat=[]
 	for a_key in abs_dict.keys():
 		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
