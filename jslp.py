@@ -10,18 +10,16 @@ with jsonlines.open("/home/ubuntu/pubmed_2017-05.jsonl") as reader:
 		title=item["title"]
 		body=item["body"]
 		keywords=item["keywords"]
-		if str(keywords)=="None":
-			continue
-		f=open("/home/ubuntu/thesiswork/kdata/abs"+str(count)+".txt","w",encoding='utf-8')
+		f=open("/home/ubuntu/thesiswork/data2/abs"+str(count)+".txt","w",encoding='utf-8')
 		f.write(abstract)
 		f.close()
-		f=open("/home/ubuntu/thesiswork/kdata/body"+str(count)+".txt","w",encoding='utf-8')
+		f=open("/home/ubuntu/thesiswork/data2/body"+str(count)+".txt","w",encoding='utf-8')
 		f.write(str(body))
 		f.close()
-		f=open("/home/ubuntu/thesiswork/kdata/title"+str(count)+".txt","w",encoding='utf-8')
+		f=open("/home/ubuntu/thesiswork/data2/title"+str(count)+".txt","w",encoding='utf-8')
 		f.write(title)
 		f.close()
-		f=open("/home/ubuntu/thesiswork/kdata/keywords"+str(count)+".txt","w",encoding='utf-8')
+		f=open("/home/ubuntu/thesiswork/data2/keywords"+str(count)+".txt","w",encoding='utf-8')
 		f.write(str(keywords))
 		f.close()
 		# g=open("/home/ubuntu/thesiswork/kdata/title"+str(count)+".txt","w",encoding='utf-8')
