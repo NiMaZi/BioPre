@@ -11,12 +11,6 @@ f=open("/home/ubuntu/results/coclf/trainlist.pkl","rb")
 training_list=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/testlist.pkl","rb")
-testing_list=pickle.load(f)
-f.close()
-
-training_list.extend(testing_list)
-
 sample=random.sample(training_list,volume)
 
 clf_linear=svm.OneClassSVM(kernel='linear')

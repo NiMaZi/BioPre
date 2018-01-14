@@ -37,9 +37,18 @@ for entry in featured_list:
 	for a_key in abs_dict.keys():
 		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
 		pred_saliency=list(s_clf.predict(pred_input))[0]
-		for b_key in body_dict.keys():
+		for b_key in word_list:
 			if a_key==b_key:
 				continue
-			# print(count,a_key,b_key)
-			# count+=1
-			sample_prelist.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],pred_saliency])
+			count+=1
+			label=0
+			if b_key in body_dict.keys():
+				label=1
+			else:
+				label=-1
+			print(count,a_key,b_key,label)
+			sample_prelist.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],pred_saliency],label)
+
+f=open("/home/ubuntu/results/coclf/testlist.pkl","wb")
+pickle.dump(sample_prelist,f)
+f.close()
