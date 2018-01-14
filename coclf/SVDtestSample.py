@@ -42,20 +42,16 @@ f=open("/home/ubuntu/results/coclf/svd_rbf_default.pkl","rb")
 clf_rbf=pickle.load(f)
 f.close()
 
-# sample_prelist=[]
 count=0
 
 tp_linear=0.0
-# tn_linear=0.0
 fp_linear=0.0
 fn_linear=0.0
 tp_rbf=0.0
-# tn_rbf=0.0
 fp_rbf=0.0
 fn_rbf=0.0
 
-# for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
-for i in range(int(split_ratio*len(featured_list)),int(split_ratio*len(featured_list))+10):
+for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
 	a_mat=[]
@@ -97,22 +93,15 @@ for i in range(int(split_ratio*len(featured_list)),int(split_ratio*len(featured_
 				fp_rbf+=1
 			else:
 				fn_rbf+=1
-			# sample_prelist.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],pred_saliency,label])
 
 P=tp_linear/(tp_linear+fp_linear)
 R=tp_linear/(tp_linear+fn_linear)
 F1=2*P*R/(P+R)
-# ACC=(tp_linear+tn_linear)/(tp_linear+tn_linear+fp_linear+fn_linear)
 
 print(P,R,F1)
 
 P=tp_rbf/(tp_rbf+fp_rbf)
 R=tp_rbf/(tp_rbf+fn_rbf)
 F1=2*P*R/(P+R)
-# ACC=(tp_rbf+tn_rbf)/(tp_rbf+tn_rbf+fp_rbf+fn_rbf)
 
 print(P,R,F1)
-
-# f=open("/home/ubuntu/results/coclf/testlist.pkl","wb")
-# pickle.dump(sample_prelist,f)
-# f.close()

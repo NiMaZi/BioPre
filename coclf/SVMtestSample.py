@@ -40,23 +40,18 @@ f=open("/home/ubuntu/results/coclf/rbf_default.pkl","rb")
 clf_rbf=pickle.load(f)
 f.close()
 
-# sample_prelist=[]
 count=0
 
 tp_linear=0.0
-# tn_linear=0.0
 fp_linear=0.0
 fn_linear=0.0
 tp_rbf=0.0
-# tn_rbf=0.0
 fp_rbf=0.0
 fn_rbf=0.0
 
 for entry in featured_list:
 	abs_dict=entry['abs']
 	body_dict=entry['body']
-	if count>5000:
-		break
 	for a_key in abs_dict.keys():
 		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
 		pred_saliency=list(s_clf.predict(pred_input))[0]
@@ -89,22 +84,15 @@ for entry in featured_list:
 					fp_rbf+=1
 				else:
 					fn_rbf+=1
-			# sample_prelist.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],pred_saliency,label])
 
 P=tp_linear/(tp_linear+fp_linear)
 R=tp_linear/(tp_linear+fn_linear)
 F1=2*P*R/(P+R)
-# ACC=(tp_linear+tn_linear)/(tp_linear+tn_linear+fp_linear+fn_linear)
 
 print(P,R,F1)
 
 P=tp_rbf/(tp_rbf+fp_rbf)
 R=tp_rbf/(tp_rbf+fn_rbf)
 F1=2*P*R/(P+R)
-# ACC=(tp_rbf+tn_rbf)/(tp_rbf+tn_rbf+fp_rbf+fn_rbf)
 
 print(P,R,F1)
-
-# f=open("/home/ubuntu/results/coclf/testlist.pkl","wb")
-# pickle.dump(sample_prelist,f)
-# f.close()
