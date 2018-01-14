@@ -78,7 +78,7 @@ for i in range(int(split_ratio*len(featured_list)),int(split_ratio*len(featured_
 		print(count,abs_dict.keys(),b_key,label)
 		_feature=[idf[word_list.index(b_key)],centrality[b_key]]
 		_feature.extend(list(V.flatten()))
-		sample_input=np.array(_feature)
+		sample_input=np.array([_feature])
 		pred_label_linear=list(clf_linear.predict(sample_input))[0]
 		pred_label_rbf=list(clf_rbf.predict(sample_input))[0]
 		if pred_label_linear==label:
