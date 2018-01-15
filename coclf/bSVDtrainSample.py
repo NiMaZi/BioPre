@@ -46,7 +46,7 @@ for i in range(0,int(split_ratio*len(featured_list))):
 	if not a_mat:
 		continue
 	U,S,V=np.linalg.svd(np.array(a_mat),full_matrices=True)
-	for b_key in word_list():
+	for b_key in word_list:
 		if b_key in abs_dict.keys():
 			continue
 		if b_key in body_dict.keys():
