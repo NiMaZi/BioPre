@@ -4,6 +4,8 @@ import pickle
 import numpy as np
 from sklearn import svm
 
+volume=int(sys.argv[1])
+
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
 featured_list=pickle.load(f)
 f.close()
@@ -52,6 +54,8 @@ fn_rbf=0.0
 for entry in featured_list:
 	abs_dict=entry['abs']
 	body_dict=entry['body']
+	if count>volume:
+		break
 	for a_key in abs_dict.keys():
 		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
 		pred_saliency=list(s_clf.predict(pred_input))[0]
