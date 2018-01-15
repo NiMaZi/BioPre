@@ -40,7 +40,7 @@ for i in range(0,int(split_ratio*len(featured_list))):
 	body_dict=featured_list[i]['body']
 	if not abs_dict:
 		continue
-	for b_key in word_list():
+	for b_key in word_list:
 		if b_key in abs_dict.keys():
 			continue
 		count+=1
