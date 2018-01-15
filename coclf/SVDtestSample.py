@@ -48,9 +48,9 @@ count=0
 # tp_linear=0.0
 # fp_linear=0.0
 # fn_linear=0.0
-tp_rbf=0.0
-fp_rbf=0.0
-fn_rbf=0.0
+tp_rbf=0.01
+fp_rbf=0.01
+fn_rbf=0.01
 
 for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 	abs_dict=featured_list[i]['abs']
