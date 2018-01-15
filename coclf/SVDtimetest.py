@@ -9,7 +9,7 @@ volume=int(sys.argv[1])
 g_ratio=float(sys.argv[2])
 nu=float(sys.argv[3])
 
-f=open("/home/ubuntu/results/coclf/svd_trainlist.pkl","rb")
+f=open("/home/ubuntu/results/coclf/svd_inverse_trainlist.pkl","rb")
 training_list=pickle.load(f)
 f.close()
 

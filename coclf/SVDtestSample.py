@@ -89,10 +89,10 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		# 	else:
 		# 		fn_linear+=1
 		if pred_label_rbf==label:
-			if pred_label_rbf==1:
+			if pred_label_rbf==-1:
 				tp_rbf+=1
 		else:
-			if pred_label_rbf==1:
+			if pred_label_rbf==-1:
 				fp_rbf+=1
 			else:
 				fn_rbf+=1
