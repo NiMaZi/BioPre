@@ -55,6 +55,7 @@ fn_rbf=0.0
 for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
+	pred_set=set()
 	if count>volume:
 		break
 	a_mat=[]
@@ -68,18 +69,31 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 	for b_key in word_list:
 		if b_key in abs_dict.keys():
 			continue
+		flag=0
+		for a_dec in abs_dict.keys():
+			if dev_mat[word_list.index(a_dec)][word_list.index(b_key)]>0.0:
+				flag=1
+				break
+		if not flag:
+			continue
 		count+=1
-		label=0
-		if b_key in body_dict.keys():
-			label=-1
-		else:
-			label=1
-		print(count,abs_dict.keys(),b_key,label)
+		# label=0
+		# if b_key in body_dict.keys():
+		# 	label=-1
+		# else:
+		# 	label=1
+		print(count,abs_dict.keys(),b_key)
 		_feature=[idf[word_list.index(b_key)],centrality[b_key]]
 		_feature.extend(list(V.flatten()))
 		sample_input=np.array([_feature])
 		# pred_label_linear=list(clf_linear.predict(sample_input))[0]
 		pred_label_rbf=list(clf_rbf.predict(sample_input))[0]
+		if pred_label_rbf==-1:
+			pred_set.add(b_key)
+	real_set=set(body_dict.keys())
+	tp_rbf+=len(pred_set&real_set)
+	fp_rbf+=len(pred_set-(pred_set&real_set))
+	fn_rbf+=len(real_set-(real_set&pred_set))
 		# if pred_label_linear==label:
 		# 	if pred_label_linear==1:
 		# 		tp_linear+=1
@@ -88,14 +102,14 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		# 		fp_linear+=1
 		# 	else:
 		# 		fn_linear+=1
-		if pred_label_rbf==label:
-			if pred_label_rbf==-1:
-				tp_rbf+=1
-		else:
-			if pred_label_rbf==-1:
-				fp_rbf+=1
-			else:
-				fn_rbf+=1
+		# if pred_label_rbf==label:
+		# 	if pred_label_rbf==-1:
+		# 		tp_rbf+=1
+		# else:
+		# 	if pred_label_rbf==-1:
+		# 		fp_rbf+=1
+		# 	else:
+		# 		fn_rbf+=1
 
 # P=tp_linear/(tp_linear+fp_linear)
 # R=tp_linear/(tp_linear+fn_linear)
