@@ -1,5 +1,6 @@
 import sys
 import math
+import random
 import pickle
 import numpy as np
 from sklearn import svm
@@ -65,6 +66,7 @@ for i in range(0,int(split_ratio*len(featured_list))):
 		_feature.append(label)
 		sample_prelist.append(_feature)
 	if count>chunk_size:
+		random.shuffle(sample_prelist)
 		f=open("/home/ubuntu/results/coclf/bsvd_trainlist"+str(chunk)+".pkl","wb")
 		pickle.dump(sample_prelist,f)
 		f.close()
