@@ -16,7 +16,7 @@ sample=random.sample(training_list,volume)
 # print(sample)
 
 clf_linear=svm.OneClassSVM(kernel='linear')
-clf_rbf=svm.OneClassSVM(kernel='rbf',gamma=1.0/38.0)
+clf_rbf=svm.OneClassSVM(kernel='rbf',gamma=(1.0/38.0)*10)
 
 n_training=np.array(sample)
 

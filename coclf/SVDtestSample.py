@@ -5,6 +5,7 @@ import numpy as np
 from sklearn import svm
 
 split_ratio=float(sys.argv[1])
+volume=int(sys.argv[2])
 
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
 featured_list=pickle.load(f)
@@ -54,6 +55,8 @@ fn_rbf=0.0
 for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
+	if count>volume:
+		break
 	a_mat=[]
 	for a_key in abs_dict.keys():
 		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])

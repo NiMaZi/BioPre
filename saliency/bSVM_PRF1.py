@@ -22,7 +22,7 @@ n_training_y=n_training[:,6]
 n_testing_X=n_testing[:,0:6]
 n_testing_y=list(n_testing[:,6])
 
-clf_rbfg1=svm.SVC(kernel='rbf',gamma=(1.0/6.0)*1.0)
+clf_rbfg1=svm.SVC(kernel='rbf',gamma=(1.0/6.0)*10000.0)
 clf_rbfg1.fit(n_training_X,n_training_y)
 n_predicted_y=list(clf_rbfg1.predict(n_testing_X))
 
@@ -31,7 +31,8 @@ fp=0.0
 fn=0.0
 for i in range(0,len(n_testing_y)):
 	if n_testing_y[i]==n_predicted_y[i]:
-		tp+=1
+		if n_predicted_y[i]==1:
+			tp+=1
 	else:
 		if n_predicted_y[i]==1:
 			fp+=1
@@ -40,6 +41,8 @@ for i in range(0,len(n_testing_y)):
 P=tp/(tp+fp)
 R=tp/(tp+fn)
 F1=2*P*R/(P+R)
+
+print(P,R,F1)
 
 f=open("/Users/yalunzheng/Documents/BioPre/saliency/local/svmclf.pkl","wb")
 pickle.dump(clf_rbfg1,f)
