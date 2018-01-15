@@ -71,9 +71,9 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		count+=1
 		label=0
 		if b_key in body_dict.keys():
-			label=1
-		else:
 			label=-1
+		else:
+			label=1
 		print(count,abs_dict.keys(),b_key,label)
 		_feature=[idf[word_list.index(b_key)],centrality[b_key]]
 		_feature.extend(list(V.flatten()))
