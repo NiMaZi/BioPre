@@ -7,6 +7,7 @@ from sklearn import svm
 
 volume=int(sys.argv[1])
 g_ratio=float(sys.argv[2])
+nu=float(sys.argv[3])
 
 f=open("/home/ubuntu/results/coclf/svd_trainlist.pkl","rb")
 training_list=pickle.load(f)
@@ -17,7 +18,7 @@ sample=random.sample(training_list,volume)
 # print(sample)
 
 # clf_linear=svm.OneClassSVM(kernel='linear')
-clf_rbf=svm.OneClassSVM(kernel='rbf',gamma=(1.0/38.0)*g_ratio)
+clf_rbf=svm.OneClassSVM(kernel='rbf',gamma=(1.0/38.0)*g_ratio,nu=nu)
 
 n_training=np.array(sample)
 
