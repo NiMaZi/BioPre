@@ -6,6 +6,9 @@ from sklearn import svm
 
 split_ratio=float(sys.argv[1])
 
+chunk=0
+chunk_size=20000
+
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
 featured_list=pickle.load(f)
 f.close()
@@ -61,9 +64,16 @@ for i in range(0,int(split_ratio*len(featured_list))):
 		_feature.extend(list(V.flatten()))
 		_feature.append(label)
 		sample_prelist.append(_feature)
+	if count>chunk_size:
+		f=open("/home/ubuntu/results/coclf/bsvd_trainlist"+str(chunk)+".pkl","wb")
+		pickle.dump(sample_prelist,f)
+		f.close()
+		chunk+=1
+		count=0
+		sample_prelist=[]
 
-print(pos_count,neg_count,count)
+print(pos_count,neg_count,pos_count+neg_count)
 
-f=open("/home/ubuntu/results/coclf/bsvd_trainlist.pkl","wb")
+f=open("/home/ubuntu/results/coclf/bsvd_trainlist"+str(chunk)+".pkl","wb")
 pickle.dump(sample_prelist,f)
 f.close()
