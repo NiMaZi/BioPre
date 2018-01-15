@@ -88,7 +88,7 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		sample_input=np.array([_feature])
 		# pred_label_linear=list(clf_linear.predict(sample_input))[0]
 		pred_label_rbf=list(clf_rbf.predict(sample_input))[0]
-		if pred_label_rbf==-1:
+		if pred_label_rbf==1:
 			pred_set.add(b_key)
 	real_set=set(body_dict.keys())
 	tp_rbf+=len(pred_set&real_set)
