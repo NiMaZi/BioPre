@@ -35,9 +35,9 @@ f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
 dev_mat=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/svd_linear.pkl","rb")
-clf_linear=pickle.load(f)
-f.close()
+# f=open("/home/ubuntu/results/coclf/svd_linear.pkl","rb")
+# clf_linear=pickle.load(f)
+# f.close()
 
 f=open("/home/ubuntu/results/coclf/svd_rbf_default.pkl","rb")
 clf_rbf=pickle.load(f)
@@ -45,9 +45,9 @@ f.close()
 
 count=0
 
-tp_linear=0.0
-fp_linear=0.0
-fn_linear=0.0
+# tp_linear=0.0
+# fp_linear=0.0
+# fn_linear=0.0
 tp_rbf=0.0
 fp_rbf=0.0
 fn_rbf=0.0
@@ -78,16 +78,16 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		_feature=[idf[word_list.index(b_key)],centrality[b_key]]
 		_feature.extend(list(V.flatten()))
 		sample_input=np.array([_feature])
-		pred_label_linear=list(clf_linear.predict(sample_input))[0]
+		# pred_label_linear=list(clf_linear.predict(sample_input))[0]
 		pred_label_rbf=list(clf_rbf.predict(sample_input))[0]
-		if pred_label_linear==label:
-			if pred_label_linear==1:
-				tp_linear+=1
-		else:
-			if pred_label_linear==1:
-				fp_linear+=1
-			else:
-				fn_linear+=1
+		# if pred_label_linear==label:
+		# 	if pred_label_linear==1:
+		# 		tp_linear+=1
+		# else:
+		# 	if pred_label_linear==1:
+		# 		fp_linear+=1
+		# 	else:
+		# 		fn_linear+=1
 		if pred_label_rbf==label:
 			if pred_label_rbf==1:
 				tp_rbf+=1
@@ -97,11 +97,11 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 			else:
 				fn_rbf+=1
 
-P=tp_linear/(tp_linear+fp_linear)
-R=tp_linear/(tp_linear+fn_linear)
-F1=2*P*R/(P+R)
+# P=tp_linear/(tp_linear+fp_linear)
+# R=tp_linear/(tp_linear+fn_linear)
+# F1=2*P*R/(P+R)
 
-print(P,R,F1)
+# print(P,R,F1)
 
 P=tp_rbf/(tp_rbf+fp_rbf)
 R=tp_rbf/(tp_rbf+fn_rbf)
