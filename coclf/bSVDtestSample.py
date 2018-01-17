@@ -79,12 +79,12 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		if b_key in abs_dict.keys():
 			continue
 		flag=0
-		# for a_dec in abs_dict.keys():
-		# 	if dev_mat[word_list.index(a_dec)][word_list.index(b_key)]>0.0:
-		# 		flag=1
-		# 		break
-		# if not flag:
-		# 	continue
+		for a_dec in abs_dict.keys():
+			if dev_mat[word_list.index(a_dec)][word_list.index(b_key)]>0.0:
+				flag=1
+				break
+		if not flag:
+			continue
 		count+=1
 		# label=0
 		# if b_key in body_dict.keys():
