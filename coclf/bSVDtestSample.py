@@ -60,6 +60,9 @@ tp_rbf=0.0
 fp_rbf=0.0
 fn_rbf=0.0
 
+pred_pos=0
+pred_neg=0
+
 for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
@@ -103,6 +106,9 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 			pred_set_linear.add(b_key)
 		if pred_label_rbf==1:
 			pred_set_rbf.add(b_key)
+			pred_pos+=1
+		else:
+			pred_neg+=1
 	real_set=set(body_dict.keys())
 	tp_linear+=len(pred_set_linear&real_set)
 	fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
@@ -126,6 +132,7 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		# 		fp_rbf+=1
 		# 	else:
 		# 		fn_rbf+=1
+print(pred_pos,pred_neg)
 
 P=tp_linear/(tp_linear+fp_linear)
 R=tp_linear/(tp_linear+fn_linear)
