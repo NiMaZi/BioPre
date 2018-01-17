@@ -5,6 +5,8 @@ import random
 import numpy as np
 from sklearn import svm
 
+g_ratio=float(sys.argv[1])
+
 f=open("/Users/yalunzheng/Documents/BioPre/saliency/local/trainlist.pkl","rb")
 train_list=pickle.load(f)
 f.close()
@@ -13,7 +15,7 @@ f=open("/Users/yalunzheng/Documents/BioPre/saliency/local/testlist.pkl","rb")
 test_list=pickle.load(f)
 f.close()
 
-train_list.extend(test_list)
+# print(len(train_list),len(test_list))
 
 n_training=np.array(train_list)
 n_testing=np.array(test_list)
@@ -22,7 +24,7 @@ n_training_y=n_training[:,6]
 n_testing_X=n_testing[:,0:6]
 n_testing_y=list(n_testing[:,6])
 
-clf_rbfg1=svm.SVC(kernel='rbf',gamma=(1.0/6.0)*10000.0)
+clf_rbfg1=svm.SVC(kernel='rbf',gamma=(1.0/6.0)*g_ratio)
 clf_rbfg1.fit(n_training_X,n_training_y)
 n_predicted_y=list(clf_rbfg1.predict(n_testing_X))
 
