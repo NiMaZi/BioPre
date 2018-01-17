@@ -43,6 +43,10 @@ f=open("/home/ubuntu/results/coclf/bsvd_rbf_default.pkl","rb")
 clf_rbf=pickle.load(f)
 f.close()
 
+f=open("/home/ubuntu/results/coclf/bsvd_rfc.pkl","rb")
+clf_rfc=pickle.load(f)
+f.close()
+
 count=0
 
 tp_linear=0.0
@@ -91,7 +95,7 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		pred_label_rbf=list(clf_rbf.predict(sample_input))[0]
 		if pred_label_linear==1 and pred_label_rbf==1:
 			pred_set_linear.add(b_key)
-		if pred_label_rbf==1 and pred_label_linear==1:
+		if pred_rfc==1:
 			pred_set_rbf.add(b_key)
 	real_set=set(body_dict.keys())
 	tp_linear+=len(pred_set_linear&real_set)

@@ -4,8 +4,10 @@ import random
 import pickle
 import numpy as np
 from sklearn import svm
+from sklearn.ensemble import RandomForestClassifier
 
 g_ratio=float(sys.argv[1])
+n_tree=int(sys.argv[2])
 
 pos_list=[]
 neg_prelist=[]
@@ -34,9 +36,11 @@ n_train_y=n_train[:,38]
 
 clf_linear=svm.LinearSVC()
 clf_rbf=svm.SVC(gamma=(1.0/38.0)*g_ratio)
+clf_rfc=RandomForestClassifier(n_estimators=n_tree)
 
 clf_linear.fit(n_train_X,n_train_y)
 clf_rbf.fit(n_train_X,n_train_y)
+clf_rfc.fit(n_train_X,n_train_y)
 
 f=open("/home/ubuntu/results/coclf/bsvd_linear.pkl","wb")
 pickle.dump(clf_linear,f)
@@ -44,4 +48,8 @@ f.close()
 
 f=open("/home/ubuntu/results/coclf/bsvd_rbf_default.pkl","wb")
 pickle.dump(clf_rbf,f)
+f.close()
+
+f=open("/home/ubuntu/results/coclf/bsvd_rfc.pkl","wb")
+pickle.dump(clf_rfc,f)
 f.close()
