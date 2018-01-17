@@ -5,8 +5,7 @@ import pickle
 import numpy as np
 from sklearn import svm
 
-g_ratio=float(sys.argv[2])
-nu=float(sys.argv[3])
+g_ratio=float(sys.argv[1])
 
 pos_list=[]
 neg_prelist=[]
@@ -34,7 +33,7 @@ n_train_X=n_train[:,0:38]
 n_train_y=n_train[:,38]
 
 clf_linear=svm.LinearSVC()
-clf_rbf=svm.SVC(gamma=(1.0/38.0)*g_ratio,nu=nu)
+clf_rbf=svm.SVC(gamma=(1.0/38.0)*g_ratio)
 
 clf_linear.fit(n_train_X,n_train_y)
 clf_rbf.fit(n_train_X,n_train_y)
