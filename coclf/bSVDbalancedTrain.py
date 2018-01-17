@@ -35,8 +35,8 @@ n_train=np.array(train_list)
 n_train_X=n_train[:,0:38]
 n_train_y=n_train[:,38]
 
-clf_linear=svm.LinearSVC(class_weight={1:5,0:1})
-clf_rbf=svm.SVC(gamma=(1.0/38.0)*g_ratio,class_weight={1:5,0:1})
+clf_linear=svm.LinearSVC(class_weight={1:1,0:5})
+clf_rbf=svm.SVC(gamma=(1.0/38.0)*g_ratio,class_weight={1:1,0:5})
 clf_rfc=RandomForestClassifier(n_estimators=n_tree)
 clf_abc=AdaBoostClassifier(n_estimators=n_tree)
 
