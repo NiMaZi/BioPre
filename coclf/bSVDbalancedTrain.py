@@ -18,6 +18,9 @@ for chunk in range(0,1):
 		else:
 			neg_prelist.append(item)
 
+print(pos_list)
+print(neg_list)
+
 neg_list=random.sample(neg_prelist,len(pos_list))
 
 train_list=list(pos_list.extend(neg_list))
