@@ -8,7 +8,7 @@ from sklearn import svm
 pos_list=[]
 neg_prelist=[]
 
-for chunk in range(0,1):
+for chunk in range(0,6):
 	f=open("/home/ubuntu/results/coclf/bsvd_trainlist"+str(chunk)+".pkl","rb")
 	_list=pickle.load(f)
 	f.close()
@@ -23,6 +23,8 @@ neg_list=random.sample(neg_prelist,len(pos_list))
 pos_list.extend(neg_list)
 train_list=list(pos_list)
 random.shuffle(train_list)
+
+print(len(train_list))
 
 n_train=np.array(train_list)
 n_train_X=n_train[:,0:38]
