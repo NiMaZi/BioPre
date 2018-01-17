@@ -9,7 +9,7 @@ pos_list=[]
 neg_prelist=[]
 
 for chunk in range(0,34):
-	with open("/home/ubuntu/results/coclf/bsvd_trainlist"+str(chunk)+".pkl","wb") as f:
+	with open("/home/ubuntu/results/coclf/bsvd_trainlist"+str(chunk)+".pkl","rb") as f:
 		_list=pickle.load(f)
 		for item in _list:
 			if item[38]==1:
