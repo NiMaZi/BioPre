@@ -9,9 +9,12 @@ pos_list=[]
 neg_prelist=[]
 
 for chunk in range(0,34):
-	f=open("/home/ubuntu/results/coclf/bsvd_trainlist"+str(chunk)+".pkl","rb")
-	_list=pickle.load(f)
-	f.close()
+	try:
+		f=open("/home/ubuntu/results/coclf/bsvd_trainlist"+str(chunk)+".pkl","rb")
+		_list=pickle.load(f)
+		f.close()
+	except:
+		pass
 	for item in _list:
 		if item[38]==1:
 			pos_list.append(item)
