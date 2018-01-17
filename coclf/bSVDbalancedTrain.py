@@ -20,7 +20,7 @@ for chunk in range(0,1):
 
 neg_list=random.sample(neg_prelist,len(pos_list))
 
-train_list=pos_list.extend(neg_list)
+train_list=list(pos_list.extend(neg_list))
 random.shuffle(train_list)
 
 print(len(train_list))
