@@ -98,9 +98,10 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		pred_label_linear=list(clf_linear.predict(sample_input))[0]
 		pred_label_rbf=list(clf_rbf.predict(sample_input))[0]
 		pred_label_rfc=list(clf_rfc.predict(sample_input))[0]
+		pred_label_abc=list(clf_abc.predict(sample_input))[0]
 		if pred_label_linear==1 and pred_label_rbf==1:
 			pred_set_linear.add(b_key)
-		if pred_label_rfc==1:
+		if pred_label_linear==1 and pred_label_rbf==1 and pred_label_rfc==1 and pred_label_abc==1:
 			pred_set_rbf.add(b_key)
 	real_set=set(body_dict.keys())
 	tp_linear+=len(pred_set_linear&real_set)
