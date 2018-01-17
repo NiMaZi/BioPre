@@ -5,6 +5,7 @@ import pickle
 import numpy as np
 from sklearn import svm
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
 
 g_ratio=float(sys.argv[1])
 n_tree=int(sys.argv[2])
@@ -37,10 +38,12 @@ n_train_y=n_train[:,38]
 clf_linear=svm.LinearSVC()
 clf_rbf=svm.SVC(gamma=(1.0/38.0)*g_ratio)
 clf_rfc=RandomForestClassifier(n_estimators=n_tree)
+clf_abc=AdaBoostClassifier(n_estimators=n_tree)
 
 clf_linear.fit(n_train_X,n_train_y)
 clf_rbf.fit(n_train_X,n_train_y)
 clf_rfc.fit(n_train_X,n_train_y)
+clf_abc.fit(n_train_X,n_train_y)
 
 f=open("/home/ubuntu/results/coclf/bsvd_linear.pkl","wb")
 pickle.dump(clf_linear,f)
@@ -52,4 +55,8 @@ f.close()
 
 f=open("/home/ubuntu/results/coclf/bsvd_rfc.pkl","wb")
 pickle.dump(clf_rfc,f)
+f.close()
+
+f=open("/home/ubuntu/results/coclf/bsvd_abc.pkl","wb")
+pickle.dump(clf_abc,f)
 f.close()

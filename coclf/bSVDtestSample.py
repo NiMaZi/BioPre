@@ -43,7 +43,7 @@ f=open("/home/ubuntu/results/coclf/bsvd_rbf_default.pkl","rb")
 clf_rbf=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/bsvd_rfc.pkl","rb")
+f=open("/home/ubuntu/results/coclf/bsvd_abc.pkl","rb")
 clf_rfc=pickle.load(f)
 f.close()
 
