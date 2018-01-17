@@ -68,7 +68,8 @@ for i in range(0,int(split_ratio*len(featured_list))):
 	if count>chunk_size:
 		random.shuffle(sample_prelist)
 		f=open("/home/ubuntu/results/coclf/bsvd_trainlist"+str(chunk)+".pkl","wb")
-		pickle.dump(sample_prelist,f)
+		dump_list=list(sample_prelist)
+		pickle.dump(dump_list,f)
 		f.close()
 		chunk+=1
 		count=0
