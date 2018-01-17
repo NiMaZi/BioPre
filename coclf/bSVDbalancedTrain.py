@@ -18,14 +18,10 @@ for chunk in range(0,1):
 		else:
 			neg_prelist.append(item)
 
-print(pos_list)
-
-
 neg_list=random.sample(neg_prelist,len(pos_list))
 
-print(neg_list)
-
-train_list=list(pos_list.extend(neg_list))
+pos_list.extend(neg_list)
+train_list=list(pos_list)
 random.shuffle(train_list)
 
 print(len(train_list))
