@@ -73,7 +73,7 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 				label=1
 			else:
 				label=-1
-			# print(count,a_key,b_key,label)
+			print(count,a_key,b_key,label)
 			sample_input=np.array([[centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency]])
 
 			pred_label_linear=list(clf_lr.predict(sample_input))[0]
