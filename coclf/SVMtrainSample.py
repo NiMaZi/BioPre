@@ -64,6 +64,9 @@ random.shuffle(sample_prelist)
 
 print(len(sample_prelist))
 
+clf_linear=svm.LinearSVC()
+clf_rbf=svm.SVC(gamma=0.25)
+
 clf_lr=lm.LogisticRegression()
 clf_sgd=lm.SGDClassifier()
 
@@ -71,8 +74,18 @@ nTrain=np.array(sample_prelist)
 nX=nTrain[:,0:4]
 ny=nTrain[:,4]
 
+clf_linear.fit(nX,ny)
+clf_rbf.fit(nX,ny)
 clf_lr.fit(nX,ny)
 clf_sgd.fit(nX,ny)
+
+f=open("/home/ubuntu/results/coclf/clf_linear.pkl","wb")
+pickle.dump(clf_linear,f)
+f.close()
+
+f=open("/home/ubuntu/results/coclf/clf_rbf.pkl","wb")
+pickle.dump(clf_rbf,f)
+f.close()
 
 f=open("/home/ubuntu/results/coclf/clf_lr.pkl","wb")
 pickle.dump(clf_lr,f)
