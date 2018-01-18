@@ -60,7 +60,7 @@ clf_sgd=lm.SGDClassifier()
 
 nTrain=np.array(sample_prelist)
 nX=nTrain[:,0:9]
-ny=nTrain[9]
+ny=nTrain[:,9]
 
 clf_lr.fit(nX,ny)
 clf_sgd.fit(nX,ny)
