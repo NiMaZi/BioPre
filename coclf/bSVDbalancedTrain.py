@@ -6,6 +6,7 @@ import numpy as np
 from sklearn import svm
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import AdaBoostClassifier
+from sklearn import linear_model as lm
 
 g_ratio=float(sys.argv[1])
 n_tree=int(sys.argv[2])
