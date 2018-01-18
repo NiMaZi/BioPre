@@ -35,11 +35,11 @@ f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
 dev_mat=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/clf_lr.pkl","rb")
+f=open("/home/ubuntu/results/coclf/clf_linear.pkl","rb")
 clf_lr=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/clf_sgd.pkl","rb")
+f=open("/home/ubuntu/results/coclf/clf_rbf.pkl","rb")
 clf_sgd=pickle.load(f)
 f.close()
 
