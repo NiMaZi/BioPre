@@ -35,11 +35,11 @@ f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
 dev_mat=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/clf_lr.pkl","rb")
+f=open("/home/ubuntu/results/coclf/clf_linear.pkl","rb")
 clf_lr=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/clf_sgd.pkl","rb")
+f=open("/home/ubuntu/results/coclf/clf_rbf.pkl","rb")
 clf_sgd=pickle.load(f)
 f.close()
 
@@ -115,7 +115,7 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		if pred_dict_rbf[key]>confidence:
 			pred_set_rbf.add(key)
 
-	pred_set_rbf=pred_set_rbf&pred_set_linear
+	# pred_set_rbf=pred_set_rbf&pred_set_linear
 
 	real_set=set(body_dict.keys())
 	tp_linear+=len(pred_set_linear&real_set)

@@ -74,8 +74,8 @@ nTrain=np.array(sample_prelist)
 nX=nTrain[:,0:4]
 ny=nTrain[:,4]
 
-# clf_linear.fit(nX,ny)
-# clf_rbf.fit(nX,ny)
+clf_linear.fit(nX,ny)
+clf_rbf.fit(nX,ny)
 clf_lr.fit(nX,ny)
 clf_sgd.fit(nX,ny)
 
