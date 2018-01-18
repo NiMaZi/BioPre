@@ -5,6 +5,7 @@ import numpy as np
 from sklearn import svm
 
 split_ratio=float(sys.argv[1])
+confidence=float(sys.argv[2])
 
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
 featured_list=pickle.load(f)
@@ -54,6 +55,10 @@ fn_rbf=0.0
 for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
+	max_conf_linear=0
+	max_conf_rbf=0
+	pred_dict_linear={}
+	pred_dict_rbf={}
 	# if count>20000:
 	# 	break
 	for a_key in abs_dict.keys():
@@ -70,24 +75,68 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 				label=-1
 			print(count,a_key,b_key,label)
 			sample_input=np.array([[centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency]])
+
 			pred_label_linear=list(clf_lr.predict(sample_input))[0]
+			if b_key in pred_label_linear.keys():
+				pred_dict_linear[b_key]+=1.0
+				if pred_dict_linear[b_key]>max_conf_linear:
+					max_conf_linear=pred_dict_linear[b_key]
+			else:
+				pred_dict_linear[b_key]=1.0
+				if pred_dict_linear[b_key]>max_conf_linear:
+					max_conf_linear=pred_dict_linear[b_key]
+
 			pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
-			if pred_label_linear==label:
-				if pred_label_linear==1:
-					tp_linear+=1
+			if b_key in pred_label_rbf.keys():
+				pred_dict_rbf[b_key]+=1.0
+				if pred_dict_rbf[b_key]>max_conf_rbf:
+					max_conf_rbf=pred_dict_rbf[b_key]
 			else:
-				if pred_label_linear==1:
-					fp_linear+=1
-				else:
-					fn_linear+=1
-			if pred_label_rbf==label:
-				if pred_label_rbf==1:
-					tp_rbf+=1
-			else:
-				if pred_label_rbf==1:
-					fp_rbf+=1
-				else:
-					fn_rbf+=1
+				pred_dict_rbf[b_key]=1.0
+				if pred_dict_rbf[b_key]>max_conf_rbf:
+					max_conf_rbf=pred_dict_rbf[b_key]
+
+	for key in pred_dict_linear.keys():
+		pred_dict_linear[key]/=max_conf_linear
+
+	for key in pred_dict_rbf.keys():
+		pred_dict_rbf[key]/=max_conf_rbf
+
+	pred_set_linear=set()
+	pred_set_rbf=set()
+
+	for key in pred_dict_linear.keys():
+		if pred_dict_linear[key]>confidence:
+			pred_set_linear.add(key)
+
+	for key in pred_dict_rbf.keys():
+		if pred_dict_rbf[key]>confidence:
+			pred_set_rbf.add(key)
+
+	real_set=set(body_dict.keys())
+	tp_linear+=len(pred_set_linear&real_set)
+	fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
+	fn_linear+=len(real_set-(real_set&pred_set_linear))
+	tp_rbf+=len(pred_set_rbf&real_set)
+	fp_rbf+=len(pred_set_rbf-(pred_set_rbf&real_set))
+	fn_rbf+=len(real_set-(real_set&pred_set_rbf))
+
+			# if pred_label_linear==label:
+			# 	if pred_label_linear==1:
+			# 		tp_linear+=1
+			# else:
+			# 	if pred_label_linear==1:
+			# 		fp_linear+=1
+			# 	else:
+			# 		fn_linear+=1
+			# if pred_label_rbf==label:
+			# 	if pred_label_rbf==1:
+			# 		tp_rbf+=1
+			# else:
+			# 	if pred_label_rbf==1:
+			# 		fp_rbf+=1
+			# 	else:
+			# 		fn_rbf+=1
 
 P=tp_linear/(tp_linear+fp_linear)
 R=tp_linear/(tp_linear+fn_linear)
