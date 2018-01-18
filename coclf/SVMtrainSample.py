@@ -1,6 +1,7 @@
 import sys
 import math
 import pickle
+import random
 import numpy as np
 from sklearn import svm
 from sklearn import linear_model as lm
@@ -35,7 +36,8 @@ f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
 dev_mat=pickle.load(f)
 f.close()
 
-sample_prelist=[]
+pos_list=[]
+neg_prelist=[]
 count=0
 
 for i in range(0,int(len(featured_list)*split_ratio)):
@@ -49,11 +51,18 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 				continue
 			if b_key in body_dict.keys():
 				label=1
+				pos_list.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
 			else:
 				label=0
+				neg_prelist.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
 			print(count,a_key,b_key,label)
 			count+=1
-			sample_prelist.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
+
+sample_prelist=random.sample(neg_prelist,len(pos_list))
+sample_prelist.extend(pos_list)
+random.shuffle(sample_prelist)
+
+print(len(sample_prelist))
 
 clf_lr=lm.LogisticRegression()
 clf_sgd=lm.SGDClassifier()
