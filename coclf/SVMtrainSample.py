@@ -3,6 +3,7 @@ import math
 import pickle
 import numpy as np
 from sklearn import svm
+from sklearn import linear_model as lm
 
 split_ratio=float(sys.argv[1])
 
@@ -54,6 +55,20 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 			count+=1
 			sample_prelist.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
 
-f=open("/home/ubuntu/results/coclf/trainlist.pkl","wb")
-pickle.dump(sample_prelist,f)
+clf_lr=lm.LogisticRegression()
+clf_sgd=lm.SGDclassifier()
+
+nTrain=np.array(sample_prelist)
+nX=nTrain[:,0:9]
+ny=nTrain[9]
+
+clf_lr.fit(nX,ny)
+clf_sgd.fit(nX,ny)
+
+f=open("/home/ubuntu/results/coclf/clf_lr.pkl","wb")
+pickle.dump(clf_lr,f)
+f.close()
+
+f=open("/home/ubuntu/results/coclf/clf_sgd.pkl","wb")
+pickle.dump(clf_sgd,f)
 f.close()
