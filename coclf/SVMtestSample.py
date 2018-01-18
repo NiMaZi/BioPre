@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 from sklearn import svm
 
-volume=int(sys.argv[1])
+split_ratio=float(sys.argv[1])
 
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
 featured_list=pickle.load(f)
@@ -34,12 +34,12 @@ f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
 dev_mat=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/linear.pkl","rb")
-clf_linear=pickle.load(f)
+f=open("/home/ubuntu/results/coclf/clf_lr.pkl","rb")
+clf_lr=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/rbf_default.pkl","rb")
-clf_rbf=pickle.load(f)
+f=open("/home/ubuntu/results/coclf/clf_sgd.pkl","rb")
+clf_sgd=pickle.load(f)
 f.close()
 
 count=0
@@ -51,10 +51,10 @@ tp_rbf=0.0
 fp_rbf=0.0
 fn_rbf=0.0
 
-for entry in featured_list:
-	abs_dict=entry['abs']
-	body_dict=entry['body']
-	if count>volume:
+for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
+	abs_dict=featured_list[i]['abs']
+	body_dict=featured_list[i]['body']
+	if count>20000:
 		break
 	for a_key in abs_dict.keys():
 		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
@@ -70,8 +70,8 @@ for entry in featured_list:
 				label=-1
 			print(count,a_key,b_key,label)
 			sample_input=np.array([[abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],pred_saliency]])
-			pred_label_linear=list(clf_linear.predict(sample_input))[0]
-			pred_label_rbf=list(clf_rbf.predict(sample_input))[0]
+			pred_label_linear=list(clf_lr.predict(sample_input))[0]
+			pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
 			if pred_label_linear==label:
 				if pred_label_linear==1:
 					tp_linear+=1
