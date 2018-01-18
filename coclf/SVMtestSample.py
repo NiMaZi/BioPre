@@ -115,7 +115,7 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 		if pred_dict_rbf[key]>confidence:
 			pred_set_rbf.add(key)
 
-	# pred_set_rbf=pred_set_rbf&pred_set_linear
+	pred_set_rbf=pred_set_rbf&pred_set_linear
 
 	real_set=set(body_dict.keys())
 	tp_linear+=len(pred_set_linear&real_set)
