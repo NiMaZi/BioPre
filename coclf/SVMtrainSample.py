@@ -51,10 +51,10 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 				continue
 			if b_key in body_dict.keys():
 				label=1
-				pos_list.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
+				pos_list.append([centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
 			else:
 				label=0
-				neg_prelist.append([abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key],idf[word_list.index(b_key)],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
+				neg_prelist.append([centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
 			print(count,a_key,b_key,label)
 			count+=1
 
@@ -68,8 +68,8 @@ clf_lr=lm.LogisticRegression()
 clf_sgd=lm.SGDClassifier()
 
 nTrain=np.array(sample_prelist)
-nX=nTrain[:,0:9]
-ny=nTrain[:,9]
+nX=nTrain[:,0:4]
+ny=nTrain[:,4]
 
 clf_lr.fit(nX,ny)
 clf_sgd.fit(nX,ny)
