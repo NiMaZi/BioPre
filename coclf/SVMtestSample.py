@@ -77,7 +77,7 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 			sample_input=np.array([[centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency]])
 
 			pred_label_linear=list(clf_lr.predict(sample_input))[0]
-			if b_key in pred_label_linear.keys():
+			if b_key in pred_dict_linear.keys():
 				pred_dict_linear[b_key]+=1.0
 				if pred_dict_linear[b_key]>max_conf_linear:
 					max_conf_linear=pred_dict_linear[b_key]
@@ -87,7 +87,7 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 					max_conf_linear=pred_dict_linear[b_key]
 
 			pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
-			if b_key in pred_label_rbf.keys():
+			if b_key in pred_dict_rbf.keys():
 				pred_dict_rbf[b_key]+=1.0
 				if pred_dict_rbf[b_key]>max_conf_rbf:
 					max_conf_rbf=pred_dict_rbf[b_key]
