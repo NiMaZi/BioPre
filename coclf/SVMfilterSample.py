@@ -54,6 +54,7 @@ clf_sgd_filter=pickle.load(f)
 f.close()
 
 count=0
+p_count=0.0
 
 tp_linear=0.0
 fp_linear=0.0
@@ -63,6 +64,7 @@ fp_rbf=0.0
 fn_rbf=0.0
 
 for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len(featured_list))):
+	p_count+=1
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
 	max_conf_linear=0
@@ -166,5 +168,7 @@ print(P,R,F1)
 P=tp_rbf/(tp_rbf+fp_rbf)
 R=tp_rbf/(tp_rbf+fn_rbf)
 F1=2*P*R/(P+R)
+
+hit_rate=(tp_rbf+fp_rbf)/p_count
 
 print(P,R,F1)
