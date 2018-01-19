@@ -37,11 +37,11 @@ f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
 dev_mat=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/clf_lr.pkl","rb")
+f=open("/home/ubuntu/results/coclf/b_clf_lr.pkl","rb")
 clf_lr=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/clf_sgd.pkl","rb")
+f=open("/home/ubuntu/results/coclf/b_clf_sgd.pkl","rb")
 clf_sgd=pickle.load(f)
 f.close()
 
@@ -54,9 +54,6 @@ tp_rbf=0.0
 fp_rbf=0.0
 fn_rbf=0.0
 
-wrong_samples=[]
-filter_samples=[]
-
 for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len(featured_list))):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
@@ -66,11 +63,15 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 	pred_dict_rbf={}
 	# if count>20000:
 	# 	break
-	for a_key in abs_dict.keys():
-		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
-		pred_saliency=list(s_clf.predict(pred_input))[0]
+	for a_key_1 in abs_dict.keys():
+		for a_key_2 in abs_dict.keys():
+			if a_key_1==a_key_2:
+				continue
+			pred_input=np.array([[key_phrase[word_list.index(a_key_1)],abs_dict[a_key_1][0],abs_dict[a_key_1][1]-abs_dict[a_key_1][0],abs_dict[a_key_1][2],idf[word_list.index(a_key_1)],centrality[a_key_1]],[key_phrase[word_list.index(a_key_2)],abs_dict[a_key_2][0],abs_dict[a_key_2][1]-abs_dict[a_key_2][0],abs_dict[a_key_2][2],idf[word_list.index(a_key_2)],centrality[a_key_2]]])
+			pred_saliency_1=list(s_clf.predict(pred_input))[0]
+			pred_saliency_2=list(s_clf.predict(pred_input))[1]
 		for b_key in word_list:
-			if a_key==b_key:
+			if a_key_1==b_key or a_key_2==b_key:
 				continue
 			count+=1
 			label=0

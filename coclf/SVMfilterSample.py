@@ -82,7 +82,7 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 			if b_key in body_dict.keys():
 				label=1
 			else:
-				label=-1
+				label=0
 			print(count,a_key,b_key,label)
 			sample_input=np.array([[centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency]])
 
