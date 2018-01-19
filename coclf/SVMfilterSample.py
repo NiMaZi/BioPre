@@ -55,6 +55,9 @@ f.close()
 
 count=0
 p_count=0.0
+pp_count=0.0
+pc_count=0.0
+pf_count=0.0
 
 tp_linear=0.0
 fp_linear=0.0
@@ -88,21 +91,26 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 			print(count,a_key,b_key,label)
 			sample_input=np.array([[centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency]])
 
-			pred_label_linear=list(clf_lr.predict(sample_input))[0]
-			if pred_label_linear==1:
-				if b_key in pred_dict_linear.keys():
-					pred_dict_linear[b_key]+=1.0
-					if pred_dict_linear[b_key]>max_conf_linear:
-						max_conf_linear=pred_dict_linear[b_key]
-				else:
-					pred_dict_linear[b_key]=1.0
-					if pred_dict_linear[b_key]>max_conf_linear:
-						max_conf_linear=pred_dict_linear[b_key]
+			# pred_label_linear=list(clf_lr.predict(sample_input))[0]
+			# if pred_label_linear==1:
+			# 	if b_key in pred_dict_linear.keys():
+			# 		pred_dict_linear[b_key]+=1.0
+			# 		if pred_dict_linear[b_key]>max_conf_linear:
+			# 			max_conf_linear=pred_dict_linear[b_key]
+			# 	else:
+			# 		pred_dict_linear[b_key]=1.0
+			# 		if pred_dict_linear[b_key]>max_conf_linear:
+			# 			max_conf_linear=pred_dict_linear[b_key]
 
 			pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
 			if pred_label_rbf==1:
+				pp_count+=1
 				pred_label_correction=list(clf_sgd_correction.predict(sample_input))[0]
+				if not pred_label_correction==pred_label_rbf:
+					pc_count+=1
 				pred_label_filter=list(clf_sgd_filter.predict(sample_input))[0]
+				if not pred_label_filter==pred_label_rbf:
+					pf_count+=1
 				pred_label_rbf=int(pred_label_correction)|int(pred_label_filter)
 
 			if pred_label_rbf==1:
@@ -135,9 +143,9 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 	pred_set_combine=pred_set_rbf&pred_set_linear
 
 	real_set=set(body_dict.keys())-set(abs_dict.keys())
-	tp_linear+=len(pred_set_linear&real_set)
-	fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
-	fn_linear+=len(real_set-(real_set&pred_set_linear))
+	# tp_linear+=len(pred_set_linear&real_set)
+	# fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
+	# fn_linear+=len(real_set-(real_set&pred_set_linear))
 	tp_rbf+=len(pred_set_combine&real_set)
 	fp_rbf+=len(pred_set_rbf-(pred_set_combine&real_set))
 	fn_rbf+=len(real_set-(real_set&pred_set_combine))
@@ -159,11 +167,11 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 			# 	else:
 			# 		fn_rbf+=1
 
-P=tp_linear/(tp_linear+fp_linear)
-R=tp_linear/(tp_linear+fn_linear)
-F1=2*P*R/(P+R)
+# P=tp_linear/(tp_linear+fp_linear)
+# R=tp_linear/(tp_linear+fn_linear)
+# F1=2*P*R/(P+R)
 
-print(P,R,F1)
+# print(P,R,F1)
 
 P=tp_rbf/(tp_rbf+fp_rbf)
 R=tp_rbf/(tp_rbf+fn_rbf)
@@ -172,3 +180,4 @@ F1=2*P*R/(P+R)
 hit_rate=(tp_rbf+fp_rbf)/p_count
 
 print(P,R,F1,hit_rate)
+print(pp_count,pc_count,pf_count)
