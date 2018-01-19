@@ -70,70 +70,66 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 			pred_input=np.array([[key_phrase[word_list.index(a_key_1)],abs_dict[a_key_1][0],abs_dict[a_key_1][1]-abs_dict[a_key_1][0],abs_dict[a_key_1][2],idf[word_list.index(a_key_1)],centrality[a_key_1]],[key_phrase[word_list.index(a_key_2)],abs_dict[a_key_2][0],abs_dict[a_key_2][1]-abs_dict[a_key_2][0],abs_dict[a_key_2][2],idf[word_list.index(a_key_2)],centrality[a_key_2]]])
 			pred_saliency_1=list(s_clf.predict(pred_input))[0]
 			pred_saliency_2=list(s_clf.predict(pred_input))[1]
-		for b_key in word_list:
-			if a_key_1==b_key or a_key_2==b_key:
-				continue
-			count+=1
-			label=0
-			if b_key in body_dict.keys():
-				label=1
-			else:
+			for b_key in word_list:
+				if a_key_1==b_key or a_key_2==b_key:
+					continue
+				count+=1
 				label=0
-			print(count,a_key,b_key,label)
-			sample_input=np.array([[centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency]])
+				if b_key in body_dict.keys():
+					label=1
+				else:
+					label=0
+				print(count,a_key_1,a_key_2,b_key,label)
+				sample_input=np.array([[centrality[a_key_1],centrality[a_key_2],centrality[b_key],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],pred_saliency_1,pred_saliency_2]])
 
-			pred_label_linear=list(clf_lr.predict(sample_input))[0]
-			# if pred_label_linear==1:
-			# 	if b_key in pred_dict_linear.keys():
-			# 		pred_dict_linear[b_key]+=1.0
-			# 		if pred_dict_linear[b_key]>max_conf_linear:
-			# 			max_conf_linear=pred_dict_linear[b_key]
-			# 	else:
-			# 		pred_dict_linear[b_key]=1.0
-			# 		if pred_dict_linear[b_key]>max_conf_linear:
-			# 			max_conf_linear=pred_dict_linear[b_key]
+				pred_label_linear=list(clf_lr.predict(sample_input))[0]
+				if pred_label_linear==1:
+					if b_key in pred_dict_linear.keys():
+						pred_dict_linear[b_key]+=1.0
+						if pred_dict_linear[b_key]>max_conf_linear:
+							max_conf_linear=pred_dict_linear[b_key]
+					else:
+						pred_dict_linear[b_key]=1.0
+						if pred_dict_linear[b_key]>max_conf_linear:
+							max_conf_linear=pred_dict_linear[b_key]
 
-			pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
-			if not pred_label_rbf==label:
-				wrong_samples.append([centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
-			if pred_label_rbf==1:
-				filter_samples.append([centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
-			# if pred_label_rbf==1:
-			# 	if b_key in pred_dict_rbf.keys():
-			# 		pred_dict_rbf[b_key]+=1.0
-			# 		if pred_dict_rbf[b_key]>max_conf_rbf:
-			# 			max_conf_rbf=pred_dict_rbf[b_key]
-			# 	else:
-			# 		pred_dict_rbf[b_key]=1.0
-			# 		if pred_dict_rbf[b_key]>max_conf_rbf:
-			# 			max_conf_rbf=pred_dict_rbf[b_key]
+				pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
+				if pred_label_rbf==1:
+					if b_key in pred_dict_rbf.keys():
+						pred_dict_rbf[b_key]+=1.0
+						if pred_dict_rbf[b_key]>max_conf_rbf:
+							max_conf_rbf=pred_dict_rbf[b_key]
+					else:
+						pred_dict_rbf[b_key]=1.0
+						if pred_dict_rbf[b_key]>max_conf_rbf:
+							max_conf_rbf=pred_dict_rbf[b_key]
 
-	# for key in pred_dict_linear.keys():
-	# 	pred_dict_linear[key]/=max_conf_linear
+	for key in pred_dict_linear.keys():
+		pred_dict_linear[key]/=max_conf_linear
 
-	# for key in pred_dict_rbf.keys():
-	# 	pred_dict_rbf[key]/=max_conf_rbf
+	for key in pred_dict_rbf.keys():
+		pred_dict_rbf[key]/=max_conf_rbf
 
-	# pred_set_linear=set()
-	# pred_set_rbf=set()
+	pred_set_linear=set(list(abs_dict.keys()))
+	pred_set_rbf=set(list(abs_dict.keys()))
 
-	# for key in pred_dict_linear.keys():
-	# 	if pred_dict_linear[key]>confidence:
-	# 		pred_set_linear.add(key)
+	for key in pred_dict_linear.keys():
+		if pred_dict_linear[key]>confidence:
+			pred_set_linear.add(key)
 
-	# for key in pred_dict_rbf.keys():
-	# 	if pred_dict_rbf[key]>confidence:
-	# 		pred_set_rbf.add(key)
+	for key in pred_dict_rbf.keys():
+		if pred_dict_rbf[key]>confidence:
+			pred_set_rbf.add(key)
 
 	# pred_set_combine=pred_set_rbf&pred_set_linear
 
-	# real_set=set(body_dict.keys())
-	# tp_linear+=len(pred_set_linear&real_set)
-	# fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
-	# fn_linear+=len(real_set-(real_set&pred_set_linear))
-	# tp_rbf+=len(pred_set_combine&real_set)
-	# fp_rbf+=len(pred_set_rbf-(pred_set_combine&real_set))
-	# fn_rbf+=len(real_set-(real_set&pred_set_combine))
+	real_set=set(body_dict.keys())
+	tp_linear+=len(pred_set_linear&real_set)
+	fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
+	fn_linear+=len(real_set-(real_set&pred_set_linear))
+	tp_rbf+=len(pred_set_rbf&real_set)
+	fp_rbf+=len(pred_set_rbf-(pred_set_rbf&real_set))
+	fn_rbf+=len(real_set-(real_set&pred_set_rbf))
 
 			# if pred_label_linear==label:
 			# 	if pred_label_linear==1:
@@ -152,39 +148,17 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 			# 	else:
 			# 		fn_rbf+=1
 
-print(len(wrong_samples),len(filter_samples))
+# print(len(wrong_samples),len(filter_samples))
 
-clf_sgd_correction=lm.SGDClassifier()
-clf_sgd_filter=lm.SGDClassifier()
 
-nTrain=np.array(wrong_samples)
-nX=nTrain[:,0:4]
-ny=nTrain[:,4]
+P=tp_linear/(tp_linear+fp_linear)
+R=tp_linear/(tp_linear+fn_linear)
+F1=2*P*R/(P+R)
 
-clf_sgd_correction.fit(nX,ny)
+print(P,R,F1)
 
-nTrain=np.array(filter_samples)
-nX=nTrain[:,0:4]
-ny=nTrain[:,4]
+P=tp_rbf/(tp_rbf+fp_rbf)
+R=tp_rbf/(tp_rbf+fn_rbf)
+F1=2*P*R/(P+R)
 
-clf_sgd_filter.fit(nX,ny)
-
-f=open("/home/ubuntu/results/coclf/clf_sgd_correction.pkl","wb")
-pickle.dump(clf_sgd_correction,f)
-f.close()
-
-f=open("/home/ubuntu/results/coclf/clf_sgd_filter.pkl","wb")
-pickle.dump(clf_sgd_filter,f)
-f.close()
-
-# P=tp_linear/(tp_linear+fp_linear)
-# R=tp_linear/(tp_linear+fn_linear)
-# F1=2*P*R/(P+R)
-
-# print(P,R,F1)
-
-# P=tp_rbf/(tp_rbf+fp_rbf)
-# R=tp_rbf/(tp_rbf+fn_rbf)
-# F1=2*P*R/(P+R)
-
-# print(P,R,F1)
+print(P,R,F1)
