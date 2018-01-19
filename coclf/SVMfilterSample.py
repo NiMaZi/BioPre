@@ -140,15 +140,15 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 		if pred_dict_rbf[key]>confidence:
 			pred_set_rbf.add(key)
 
-	pred_set_combine=pred_set_rbf&pred_set_linear
+	# pred_set_combine=pred_set_rbf&pred_set_linear
 
 	real_set=set(body_dict.keys())-set(abs_dict.keys())
 	# tp_linear+=len(pred_set_linear&real_set)
 	# fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
 	# fn_linear+=len(real_set-(real_set&pred_set_linear))
-	tp_rbf+=len(pred_set_combine&real_set)
-	fp_rbf+=len(pred_set_rbf-(pred_set_combine&real_set))
-	fn_rbf+=len(real_set-(real_set&pred_set_combine))
+	tp_rbf+=len(pred_set_rbf&real_set)
+	fp_rbf+=len(pred_set_rbf-(pred_set_rbf&real_set))
+	fn_rbf+=len(real_set-(real_set&pred_set_rbf))
 
 			# if pred_label_linear==label:
 			# 	if pred_label_linear==1:
