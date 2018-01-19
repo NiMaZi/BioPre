@@ -110,8 +110,8 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 	for key in pred_dict_rbf.keys():
 		pred_dict_rbf[key]/=max_conf_rbf
 
-	pred_set_linear=set(list(abs_dict.keys()))
-	pred_set_rbf=set(list(abs_dict.keys()))
+	pred_set_linear=set()
+	pred_set_rbf=set()
 
 	for key in pred_dict_linear.keys():
 		if pred_dict_linear[key]>confidence:
@@ -123,7 +123,7 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 
 	# pred_set_combine=pred_set_rbf&pred_set_linear
 
-	real_set=set(body_dict.keys())
+	real_set=set(body_dict.keys())-set(abs_dict.keys())
 	tp_linear+=len(pred_set_linear&real_set)
 	fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
 	fn_linear+=len(real_set-(real_set&pred_set_linear))
