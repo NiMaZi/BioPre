@@ -61,8 +61,6 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 	max_conf_rbf=0
 	pred_dict_linear={}
 	pred_dict_rbf={}
-	# if count>20000:
-	# 	break
 	for a_key_1 in abs_dict.keys():
 		for a_key_2 in abs_dict.keys():
 			if a_key_1==a_key_2:
@@ -121,8 +119,6 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 		if pred_dict_rbf[key]>confidence:
 			pred_set_rbf.add(key)
 
-	# pred_set_combine=pred_set_rbf&pred_set_linear
-
 	real_set=set(body_dict.keys())-set(abs_dict.keys())
 	tp_linear+=len(pred_set_linear&real_set)
 	fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
@@ -130,25 +126,6 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 	tp_rbf+=len(pred_set_rbf&real_set)
 	fp_rbf+=len(pred_set_rbf-(pred_set_rbf&real_set))
 	fn_rbf+=len(real_set-(real_set&pred_set_rbf))
-
-			# if pred_label_linear==label:
-			# 	if pred_label_linear==1:
-			# 		tp_linear+=1
-			# else:
-			# 	if pred_label_linear==1:
-			# 		fp_linear+=1
-			# 	else:
-			# 		fn_linear+=1
-			# if pred_label_rbf==label:
-			# 	if pred_label_rbf==1:
-			# 		tp_rbf+=1
-			# else:
-			# 	if pred_label_rbf==1:
-			# 		fp_rbf+=1
-			# 	else:
-			# 		fn_rbf+=1
-
-# print(len(wrong_samples),len(filter_samples))
 
 
 P=tp_linear/(tp_linear+fp_linear)
