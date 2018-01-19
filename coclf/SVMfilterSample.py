@@ -101,7 +101,7 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 			if pred_label_rbf==1:
 				pred_label_correction=list(clf_sgd_correction.predict(sample_input))[0]
 				pred_label_filter=list(clf_sgd_filter.predict(sample_input))[0]
-				pred_label_rbf=pred_label_correction&pred_label_filter
+				pred_label_rbf=int(pred_label_correction)&int(pred_label_filter)
 
 			if pred_label_rbf==1:
 				if b_key in pred_dict_rbf.keys():
