@@ -3,6 +3,7 @@ import math
 import pickle
 import numpy as np
 from sklearn import svm
+from sklearn import linear_model as lm
 
 front_split_ratio=float(sys.argv[1])
 end_split_ratio=float(sys.argv[2])
@@ -54,6 +55,7 @@ fp_rbf=0.0
 fn_rbf=0.0
 
 wrong_samples=[]
+filter_samples=[]
 
 for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len(featured_list))):
 	abs_dict=featured_list[i]['abs']
@@ -93,6 +95,8 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 			pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
 			if not pred_label_rbf==label:
 				wrong_samples.append([centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
+			if pred_label_rbf==1:
+				filter_samples.append([centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
 			# if pred_label_rbf==1:
 			# 	if b_key in pred_dict_rbf.keys():
 			# 		pred_dict_rbf[b_key]+=1.0
@@ -147,7 +151,30 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 			# 	else:
 			# 		fn_rbf+=1
 
-print(len(wrong_samples))
+print(len(wrong_samples),len(filter_samples))
+
+clf_sgd_correction=lm.SGDClassifier()
+clf_sgd_filter=lm.SGDClassifier()
+
+nTrain=np.array(wrong_samples)
+nX=nTrain[:,0:4]
+ny=nTrain[:,4]
+
+clf_sgd_correction.fit(nX,ny)
+
+nTrain=np.array(filter_samples)
+nX=nTrain[:,0:4]
+ny=nTrain[:,4]
+
+clf_sgd_filter.fit(nX,ny)
+
+f=open("/home/ubuntu/results/coclf/clf_sgd_correction.pkl","wb")
+pickle.dump(clf_sgd_correction,f)
+f.close()
+
+f=open("/home/ubuntu/results/coclf/clf_sgd_filter.pkl","wb")
+pickle.dump(clf_sgd_filter,f)
+f.close()
 
 # P=tp_linear/(tp_linear+fp_linear)
 # R=tp_linear/(tp_linear+fn_linear)
