@@ -7,6 +7,7 @@ from sklearn import linear_model as lm
 
 front_split_ratio=float(sys.argv[1])
 end_split_ratio=float(sys.argv[2])
+cor_rate=float(sys.argv[3])
 confidence=0.0
 
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
@@ -104,14 +105,13 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 
 			pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
 			if pred_label_rbf==1:
-				pp_count+=1
 				pred_label_correction=list(clf_sgd_correction.predict(sample_input))[0]
-				if not pred_label_correction==pred_label_rbf:
-					pc_count+=1
 				pred_label_filter=list(clf_sgd_filter.predict(sample_input))[0]
-				if not pred_label_filter==pred_label_rbf:
-					pf_count+=1
-				pred_label_rbf=int(pred_label_correction)|int(pred_label_filter)
+				pred_label_rbf=cor_rate*pred_label_correction+(1.0-cor_rate)*pred_label_filter
+				if pred_label_rbf>0.5:
+					pred_label_rbf=1
+				else:
+					pred_label_rbf=0
 
 			if pred_label_rbf==1:
 				if b_key in pred_dict_rbf.keys():
