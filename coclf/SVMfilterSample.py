@@ -180,4 +180,3 @@ F1=2*P*R/(P+R)
 hit_rate=(tp_rbf+fp_rbf)/p_count
 
 print(P,R,F1,hit_rate)
-print(pp_count,pc_count,pf_count)
