@@ -4,8 +4,9 @@ import pickle
 import numpy as np
 from sklearn import svm
 
-split_ratio=float(sys.argv[1])
-confidence=float(sys.argv[2])
+front_split_ratio=float(sys.argv[1])
+end_split_ratio=float(sys.argv[2])
+confidence=0.0
 
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
 featured_list=pickle.load(f)
@@ -35,11 +36,11 @@ f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
 dev_mat=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/clf_linear.pkl","rb")
+f=open("/home/ubuntu/results/coclf/clf_lr.pkl","rb")
 clf_lr=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/clf_rbf.pkl","rb")
+f=open("/home/ubuntu/results/coclf/clf_sgd.pkl","rb")
 clf_sgd=pickle.load(f)
 f.close()
 
@@ -52,7 +53,9 @@ tp_rbf=0.0
 fp_rbf=0.0
 fn_rbf=0.0
 
-for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
+wrong_samples=[]
+
+for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len(featured_list))):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
 	max_conf_linear=0
@@ -77,53 +80,55 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 			sample_input=np.array([[centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency]])
 
 			pred_label_linear=list(clf_lr.predict(sample_input))[0]
-			if pred_label_linear==1:
-				if b_key in pred_dict_linear.keys():
-					pred_dict_linear[b_key]+=1.0
-					if pred_dict_linear[b_key]>max_conf_linear:
-						max_conf_linear=pred_dict_linear[b_key]
-				else:
-					pred_dict_linear[b_key]=1.0
-					if pred_dict_linear[b_key]>max_conf_linear:
-						max_conf_linear=pred_dict_linear[b_key]
+			# if pred_label_linear==1:
+			# 	if b_key in pred_dict_linear.keys():
+			# 		pred_dict_linear[b_key]+=1.0
+			# 		if pred_dict_linear[b_key]>max_conf_linear:
+			# 			max_conf_linear=pred_dict_linear[b_key]
+			# 	else:
+			# 		pred_dict_linear[b_key]=1.0
+			# 		if pred_dict_linear[b_key]>max_conf_linear:
+			# 			max_conf_linear=pred_dict_linear[b_key]
 
 			pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
-			if pred_label_rbf==1:
-				if b_key in pred_dict_rbf.keys():
-					pred_dict_rbf[b_key]+=1.0
-					if pred_dict_rbf[b_key]>max_conf_rbf:
-						max_conf_rbf=pred_dict_rbf[b_key]
-				else:
-					pred_dict_rbf[b_key]=1.0
-					if pred_dict_rbf[b_key]>max_conf_rbf:
-						max_conf_rbf=pred_dict_rbf[b_key]
+			if not pred_label_rbf==label:
+				wrong_samples.append([centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
+			# if pred_label_rbf==1:
+			# 	if b_key in pred_dict_rbf.keys():
+			# 		pred_dict_rbf[b_key]+=1.0
+			# 		if pred_dict_rbf[b_key]>max_conf_rbf:
+			# 			max_conf_rbf=pred_dict_rbf[b_key]
+			# 	else:
+			# 		pred_dict_rbf[b_key]=1.0
+			# 		if pred_dict_rbf[b_key]>max_conf_rbf:
+			# 			max_conf_rbf=pred_dict_rbf[b_key]
 
-	for key in pred_dict_linear.keys():
-		pred_dict_linear[key]/=max_conf_linear
+	# for key in pred_dict_linear.keys():
+	# 	pred_dict_linear[key]/=max_conf_linear
 
-	for key in pred_dict_rbf.keys():
-		pred_dict_rbf[key]/=max_conf_rbf
+	# for key in pred_dict_rbf.keys():
+	# 	pred_dict_rbf[key]/=max_conf_rbf
 
-	pred_set_linear=set()
-	pred_set_rbf=set()
+	# pred_set_linear=set()
+	# pred_set_rbf=set()
 
-	for key in pred_dict_linear.keys():
-		if pred_dict_linear[key]>confidence:
-			pred_set_linear.add(key)
+	# for key in pred_dict_linear.keys():
+	# 	if pred_dict_linear[key]>confidence:
+	# 		pred_set_linear.add(key)
 
-	for key in pred_dict_rbf.keys():
-		if pred_dict_rbf[key]>confidence:
-			pred_set_rbf.add(key)
+	# for key in pred_dict_rbf.keys():
+	# 	if pred_dict_rbf[key]>confidence:
+	# 		pred_set_rbf.add(key)
 
-	pred_set_combine=pred_set_rbf&pred_set_linear
+	# pred_set_combine=pred_set_rbf&pred_set_linear
 
-	real_set=set(body_dict.keys())
-	tp_linear+=len(pred_set_linear&real_set)
-	fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
-	fn_linear+=len(real_set-(real_set&pred_set_linear))
-	tp_rbf+=len(pred_set_combine&real_set)
-	fp_rbf+=len(pred_set_rbf-(pred_set_combine&real_set))
-	fn_rbf+=len(real_set-(real_set&pred_set_combine))
+	# real_set=set(body_dict.keys())
+	# tp_linear+=len(pred_set_linear&real_set)
+	# fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
+	# fn_linear+=len(real_set-(real_set&pred_set_linear))
+	# tp_rbf+=len(pred_set_combine&real_set)
+	# fp_rbf+=len(pred_set_rbf-(pred_set_combine&real_set))
+	# fn_rbf+=len(real_set-(real_set&pred_set_combine))
 
 			# if pred_label_linear==label:
 			# 	if pred_label_linear==1:
@@ -142,14 +147,16 @@ for i in range(int(split_ratio*len(featured_list)),len(featured_list)):
 			# 	else:
 			# 		fn_rbf+=1
 
-P=tp_linear/(tp_linear+fp_linear)
-R=tp_linear/(tp_linear+fn_linear)
-F1=2*P*R/(P+R)
+print(len(wrong_samples))
 
-print(P,R,F1)
+# P=tp_linear/(tp_linear+fp_linear)
+# R=tp_linear/(tp_linear+fn_linear)
+# F1=2*P*R/(P+R)
 
-P=tp_rbf/(tp_rbf+fp_rbf)
-R=tp_rbf/(tp_rbf+fn_rbf)
-F1=2*P*R/(P+R)
+# print(P,R,F1)
 
-print(P,R,F1)
+# P=tp_rbf/(tp_rbf+fp_rbf)
+# R=tp_rbf/(tp_rbf+fn_rbf)
+# F1=2*P*R/(P+R)
+
+# print(P,R,F1)
