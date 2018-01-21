@@ -1,0 +1,55 @@
+import pickle
+import numpy as np
+
+max_depth=0
+max_leaf=[]
+
+def DFS(root,depth,max_depth):
+	max_depth=depth
+	print(depth,word_list[root])
+	for i in range(0,len(word_list)):
+		if tree[root][i]==1:
+			cur_depth=DFS(i,depth+1,max_depth)
+			if cur_depth>max_depth:
+				max_depth=cur_depth
+	return max_depth
+
+f=open("/Users/yalunzheng/Documents/BioPre/ontology_wordlist.pkl","rb")
+word_list=pickle.load(f)
+f.close()
+
+f=open("/Users/yalunzheng/Documents/BioPre/ontology_tree.pkl","rb")
+tree=pickle.load(f)
+f.close()
+
+tree[295][702]=0
+# print(word_list[295],word_list[702])
+
+# in_degree=[0 for i in range(0,len(word_list))]
+# vis=[1 for i in range(0,len(word_list))]
+# stack=[]
+
+# for i in range(0,len(word_list)):
+# 	for j in range(0,len(word_list)):
+# 		in_degree[j]+=tree[i][j]
+
+# for i in range(0,len(in_degree)):
+# 	if in_degree[i]==0:
+# 		stack.append(i)
+
+# while(stack):
+# 	i=stack.pop()
+# 	vis[i]=0
+# 	for j in range(0,len(word_list)):
+# 		if tree[i][j]==1:
+# 			tree[i][j]=0
+# 			in_degree[j]-=1
+# 			if in_degree[j]==0:
+# 				stack.append(j)
+
+# for i in range(0,len(vis)):
+# 	if vis[i]==1:
+# 		print("cyclic")
+# 		break
+
+print(DFS(79,0,0)) # max depth 16
