@@ -4,15 +4,17 @@ import numpy as np
 max_depth=0
 max_leaf=[]
 
-def DFS(root,depth,max_depth):
+def DFS(root,depth,max_depth,out_depth,name_set):
 	max_depth=depth
-	print(depth,word_list[root])
+	if depth==out_depth:
+		name_set.add(word_list[root])
+		print(word_list[root])
 	for i in range(0,len(word_list)):
 		if tree[root][i]==1:
-			cur_depth=DFS(i,depth+1,max_depth)
+			cur_depth,name_set=DFS(i,depth+1,max_depth,out_depth,name_set)
 			if cur_depth>max_depth:
 				max_depth=cur_depth
-	return max_depth
+	return max_depth,name_set
 
 f=open("/Users/yalunzheng/Documents/BioPre/ontology_wordlist.pkl","rb")
 word_list=pickle.load(f)
@@ -23,6 +25,13 @@ tree=pickle.load(f)
 f.close()
 
 tree[295][702]=0
+
+# c=0.0
+# for i in range(0,len(word_list)):
+# 	for j in range(0,len(word_list)):
+# 		c+=tree[i][j]
+
+# print(c/(len(word_list)*len(word_list)))
 # print(word_list[295],word_list[702])
 
 # in_degree=[0 for i in range(0,len(word_list))]
@@ -52,4 +61,31 @@ tree[295][702]=0
 # 		print("cyclic")
 # 		break
 
-print(DFS(79,0,0)) # max depth 16
+# print(DFS(79,0,0)) # max depth 16
+word2depth={}
+
+for i in range(0,17):
+	print("\ndepth="+str(i)+"\n")
+	max_depth,name_set=DFS(79,0,0,i,set())
+	for word in set(name_set):
+		if word in word2depth.keys():
+			if i<word2depth[word]:
+				word2depth[word]=i
+		else:
+			word2depth[word]=i
+depth2word={}
+for word in word2depth.keys():
+	if word2depth[word] in depth2word.keys():
+		depth2word[word2depth[word]].append(word)
+	else:
+		depth2word[word2depth[word]]=[word]
+
+f=open("/Users/yalunzheng/Documents/BioPre/ontology_word2depth.pkl","wb")
+pickle.dump(word2depth,f)
+f.close()
+
+f=open("/Users/yalunzheng/Documents/BioPre/ontology_depth2word.pkl","wb")
+pickle.dump(depth2word,f)
+f.close()
+
+# print(depth2word)
