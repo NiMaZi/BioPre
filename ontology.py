@@ -36,42 +36,42 @@ print(root)
 # 	ontology_nmat[word_list.index(id2name[item[2]])][word_list.index(item[1])]=1
 # 	ontology_nmat[word_list.index(item[1])][word_list.index(id2name[item[2]])]=1
 
-for i in range(0,len(prelist)):
-	if ontology_dmat[79][i]==1:
-		print(word_list[i])
+# for i in range(0,len(prelist)):
+# 	if ontology_dmat[79][i]==1:
+# 		print(word_list[i])
 
-dist=np.zeros((len(prelist),len(prelist)))
+# dist=np.zeros((len(prelist),len(prelist)))
 
-for i in range(0,len(prelist)):
-	for j in range(0,len(prelist)):
-		dist[i][j]=np.inf
+# for i in range(0,len(prelist)):
+# 	for j in range(0,len(prelist)):
+# 		dist[i][j]=np.inf
 
-for i in range(0,len(prelist)):
-	dist[i][i]=0.0
+# for i in range(0,len(prelist)):
+# 	dist[i][i]=0.0
 
-for i in range(0,len(prelist)):
-	for j in range(0,len(prelist)):
-		if ontology_nmat[i][j]==1:
-			dist[i][j]=1
+# for i in range(0,len(prelist)):
+# 	for j in range(0,len(prelist)):
+# 		if ontology_nmat[i][j]==1:
+# 			dist[i][j]=1
 
-for k in range(0,len(prelist)):
-	for i in range(0,len(prelist)):
-		for j in range(0,len(prelist)):
-			if dist[i][j]>(dist[i][k]+dist[k][j]):
-				dist[i][j]=dist[i][k]+dist[k][j]
+# for k in range(0,len(prelist)):
+# 	for i in range(0,len(prelist)):
+# 		for j in range(0,len(prelist)):
+# 			if dist[i][j]>(dist[i][k]+dist[k][j]):
+# 				dist[i][j]=dist[i][k]+dist[k][j]
 
 # f=open("/Users/yalunzheng/Documents/BioPre/ontology_wordlist.pkl","wb")
 # pickle.dump(word_list,f)
 # f.close()
 
-# f=open("/Users/yalunzheng/Documents/BioPre/ontology_tree.pkl","wb")
-# pickle.dump(ontology_dmat,f)
-# f.close()
-
-# f=open("/Users/yalunzheng/Documents/BioPre/ontology_map.pkl","wb")
-# pickle.dump(ontology_nmat,f)
-# f.close()
-
-f=open("/Users/yalunzheng/Documents/BioPre/ontology_path.pkl","wb")
-pickle.dump(dist,f)
+f=open("/Users/yalunzheng/Documents/BioPre/ontology_tree.pkl","wb")
+pickle.dump(ontology_dmat,f)
 f.close()
+
+f=open("/Users/yalunzheng/Documents/BioPre/ontology_map.pkl","wb")
+pickle.dump(ontology_nmat,f)
+f.close()
+
+# f=open("/Users/yalunzheng/Documents/BioPre/ontology_path.pkl","wb")
+# pickle.dump(dist,f)
+# f.close()
