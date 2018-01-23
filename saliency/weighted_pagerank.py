@@ -6,7 +6,7 @@ import numpy as np
 mode=int(sys.argv[1])
 threshold=float(sys.argv[2])
 
-f=open("/home/ubuntu/results/saliency/wordlist.pkl","rb")
+f=open("/home/ubuntu/results/ontology/ontology_wordlist.pkl","rb")
 word_list=pickle.load(f)
 f.close()
 
@@ -38,7 +38,7 @@ while True:
 	for i in range(0,len(VR)):
 		delta+=(NVR[i]-VR[i])*(NVR[i]-VR[i])
 	delta=math.sqrt(delta)
-	print("epoch="+str(epoch)+" delta="+str(delta)+"\n")
+	# print("epoch="+str(epoch)+" delta="+str(delta)+"\n")
 	epoch+=1
 	for i in range(0,len(VR)):
 		VR[i]=NVR[i]
@@ -49,8 +49,6 @@ word_centrality={}
 for i in range(0,len(word_list)):
 	word_centrality[word_list[i]]=VR[i]
 
-# print(word_centrality)
-# print(epoch)
 
 f=open("/home/ubuntu/results/saliency/centrality.pkl","wb")
 pickle.dump(word_centrality,f)

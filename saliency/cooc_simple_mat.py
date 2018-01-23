@@ -7,7 +7,7 @@ f=open("/home/ubuntu/results/saliency/distanced.pkl","rb")
 dis_list=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/saliency/wordlist.pkl","rb")
+f=open("/home/ubuntu/results/ontology/ontology_wordlist.pkl","rb")
 word_list=pickle.load(f)
 f.close()
 

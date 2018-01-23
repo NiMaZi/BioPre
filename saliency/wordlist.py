@@ -7,7 +7,10 @@ f=open("/home/ubuntu/results/saliency/distanced.pkl","rb")
 dis_list=pickle.load(f)
 f.close()
 
-word_set=set()
+f=open("/home/ubuntu/results/ontology/ontology_wordlist.pkl","rb")
+word_list=pickle.laod(f)
+f.close()
+
 listed_word_set=[]
 
 for entry in dis_list:
@@ -17,32 +20,22 @@ for entry in dis_list:
 	_list=entry['abs']
 	for item in _list:
 		entry_set.add(item[1])
-		word_set.add(item[1])
 
 	_list=entry['body']
 	for item in _list:
 		entry_set.add(item[1])
-		word_set.add(item[1])
 
 	_list=entry['title']
 	for item in _list:
 		entry_set.add(item[1])
-		word_set.add(item[1])
 
 	_list=entry['keywords']
 	for item in _list:
 		entry_set.add(item[1])
-		word_set.add(item[1])
 
 	listed_word_set.append(entry_set)
 
-word_list=list(word_set)
-
 print(len(word_list))
-
-f=open("/home/ubuntu/results/saliency/wordlist.pkl","wb")
-pickle.dump(word_list,f)
-f.close()
 
 idf=[]
 volume=len(dis_list)
