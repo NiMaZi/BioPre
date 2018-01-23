@@ -8,7 +8,7 @@ dis_list=pickle.load(f)
 f.close()
 
 f=open("/home/ubuntu/results/ontology/ontology_wordlist.pkl","rb")
-word_list=pickle.laod(f)
+word_list=pickle.load(f)
 f.close()
 
 listed_word_set=[]
