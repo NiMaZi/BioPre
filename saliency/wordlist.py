@@ -35,7 +35,7 @@ for entry in dis_list:
 
 	listed_word_set.append(entry_set)
 
-print(len(word_list))
+# print(len(word_list))
 
 idf=[]
 volume=len(dis_list)
