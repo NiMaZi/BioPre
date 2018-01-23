@@ -101,7 +101,7 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 # clf_linear.fit(nX,ny)
 # clf_rbf.fit(nX,ny)
 # clf_lr.fit(nX,ny)
-		clf_sgd.partial_fit(nX,ny)
+		clf_sgd.partial_fit(nX,ny,classes=[0,1])
 		pos_list=[]
 		neg_prelist=[]
 		count=0
