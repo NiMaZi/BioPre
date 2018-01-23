@@ -86,7 +86,7 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 				_list=[dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_2)][word_list.index(b_key)]]
 				_list.extend(word2tvec[a_key_1])
 				_list.extend(word2tvec[a_key_2])
-				_list.append(label)
+				# _list.append(label)
 				# print(count,a_key_1,a_key_2,b_key,label)
 				sample_input=np.array([_list])
 
