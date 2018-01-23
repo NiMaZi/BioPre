@@ -45,7 +45,7 @@ for word in word_list:
 	for doc in listed_word_set:
 		if word in doc:
 			d_count+=1
-	idf.append(np.log(float(volume)/float(d_count)))
+	idf.append(np.log(float(volume)/float(1.0+d_count)))
 
 f=open("/home/ubuntu/results/saliency/idf.pkl","wb")
 pickle.dump(idf,f)
