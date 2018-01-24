@@ -1,27 +1,33 @@
 import json
 import jsonlines
+import pickle
 
 count=0
 keyterms_count=0
 keywords_count=0
+keywords_list=[]
+
 with jsonlines.open("/home/ubuntu/pubmed_2017-05.jsonl") as reader:
 	for item in reader:
-		abstract=item["abstract"]
-		title=item["title"]
-		body=item["body"]
+		# abstract=item["abstract"]
+		# title=item["title"]
+		# body=item["body"]
 		keywords=item["keywords"]
-		f=open("/home/ubuntu/thesiswork/data2/abs"+str(count)+".txt","w",encoding='utf-8')
-		f.write(abstract)
-		f.close()
-		f=open("/home/ubuntu/thesiswork/data2/body"+str(count)+".txt","w",encoding='utf-8')
-		f.write(str(body))
-		f.close()
-		f=open("/home/ubuntu/thesiswork/data2/title"+str(count)+".txt","w",encoding='utf-8')
-		f.write(title)
-		f.close()
-		f=open("/home/ubuntu/thesiswork/data2/keywords"+str(count)+".txt","w",encoding='utf-8')
-		f.write(str(keywords))
-		f.close()
+		if not keywords:
+			continue
+		keywords_list.append(keywords)
+		# f=open("/home/ubuntu/thesiswork/data2/abs"+str(count)+".txt","w",encoding='utf-8')
+		# f.write(abstract)
+		# f.close()
+		# f=open("/home/ubuntu/thesiswork/data2/body"+str(count)+".txt","w",encoding='utf-8')
+		# f.write(str(body))
+		# f.close()
+		# f=open("/home/ubuntu/thesiswork/data2/title"+str(count)+".txt","w",encoding='utf-8')
+		# f.write(title)
+		# f.close()
+		# f=open("/home/ubuntu/thesiswork/data2/keywords"+str(count)+".txt","wb")
+		
+		# f.close()
 		# g=open("/home/ubuntu/thesiswork/kdata/title"+str(count)+".txt","w",encoding='utf-8')
 		# keylist=item.keys()
 		
@@ -54,3 +60,7 @@ with jsonlines.open("/home/ubuntu/pubmed_2017-05.jsonl") as reader:
 		# 	break
 	print(count)
 	# print(count,keywords_count,keyterms_count)
+
+f=open("/home/ubuntu/results/saliency/keywords_list","wb")
+pickle.dump(keywords_list,f)
+f.close()
