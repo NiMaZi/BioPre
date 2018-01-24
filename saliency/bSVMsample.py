@@ -2,6 +2,7 @@ import sys
 import pickle
 import random
 import numpy as np
+from difflib import SequenceMatcher as Sqm
 
 split_ratio=float(sys.argv[1])
 
@@ -36,8 +37,6 @@ f.close()
 sample_prelist=[]
 count=0
 p_count=0
-b_count=0
-u_count=0
 
 for i in range(0,len(dis_list)):
 	if not featured_list[i]['abs']:
@@ -54,17 +53,19 @@ for i in range(0,len(dis_list)):
 		body_set.add(item[1])
 	for key in featured_list[i]['abs'].keys():
 		count+=1
-		if key in label_set or key.lower() in keywords_list[i]:
-			p_count+=1
-		if key in body_set:
-			b_count+=1
-		# if key in union_set:
-			# u_count+=1
+		label=0
+		if key in label_set:
+			label=1
+		for kw in keywords_list[i]:
+			if Sqm(None,kw,key.lower()).ratio()>=0.5:
+				label=1
+				break
+		p_count+=label
 			# sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[key],1]) #(str)entity, (float)distance, (float)spread, (int)count, (float)idf, (float)centrality, label
 		# else:
 			# sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[key],0])
 
-print(count,p_count,b_count)
+print(count,p_count)
 # print(len(sample_prelist))
 
 # for i in range(0,10):
