@@ -13,6 +13,10 @@ f=open("/home/ubuntu/results/saliency/distanced.pkl","rb")
 dis_list=pickle.load(f)
 f.close()
 
+f=open("/home/ubuntu/results/saliency/keywords_list","rb")
+keywords_list=pickle.load(f)
+f.close()
+
 f=open("/home/ubuntu/results/ontology/ontology_wordlist.pkl","rb")
 word_list=pickle.load(f)
 f.close()
@@ -36,33 +40,28 @@ b_count=0
 u_count=0
 
 for i in range(0,len(dis_list)):
-	if not dis_list[i]['title'] and not dis_list[i]['keywords']:
-		p_count+=1
-		# continue
-print(p_count,len(dis_list))
+	label_set=set()
+	body_set=set()
+	for item in dis_list[i]['title']:
+		label_set.add(item[1])
+	for item in dis_list[i]['keywords']:
+		label_set.add(item[1])
+	for item in dis_list[i]['body']:
+		body_set.add(item[1])
+	union_set=(label_set|body_set)
+	for key in featured_list[i]['abs'].keys():
+		count+=1
+		if key in label_set or key.lower() in keywords_list[i]:
+			p_count+=1
+		if key in body_set:
+			b_count+=1
+		# if key in union_set:
+			# u_count+=1
+			# sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[key],1]) #(str)entity, (float)distance, (float)spread, (int)count, (float)idf, (float)centrality, label
+		# else:
+			# sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[key],0])
 
-	# label_set=set()
-	# body_set=set()
-	# for item in dis_list[i]['title']:
-	# 	label_set.add(item[1])
-	# for item in dis_list[i]['keywords']:
-	# 	label_set.add(item[1])
-	# for item in dis_list[i]['body']:
-	# 	body_set.add(item[1])
-	# union_set=(label_set|body_set)
-	# for key in featured_list[i]['abs'].keys():
-	# 	count+=1
-	# 	if key in label_set:
-	# 		# p_count+=1
-	# 	# if key in body_set:
-	# 		# b_count+=1
-	# 	# if key in union_set:
-	# 		# u_count+=1
-	# 		sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[key],1]) #(str)entity, (float)distance, (float)spread, (int)count, (float)idf, (float)centrality, label
-	# 	else:
-	# 		sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[key],0])
-
-# print(count,p_count,b_count,u_count)
+print(count,p_count,b_count)
 # print(len(sample_prelist))
 
 # for i in range(0,10):
