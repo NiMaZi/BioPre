@@ -49,7 +49,7 @@ print(P,R,F1)
 
 clf_sgd=lm.SGDClassifier()
 clf_sgd.fit(n_training_X,n_training_y)
-n_predicted_y=list(clf_rbfg1.predict(n_testing_X))
+n_predicted_y=list(clf_sgd.predict(n_testing_X))
 
 tp=0.0
 fp=0.0
