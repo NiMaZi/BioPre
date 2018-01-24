@@ -42,6 +42,8 @@ u_count=0
 for i in range(0,len(dis_list)):
 	if not featured_list[i]['abs']:
 		continue
+	if not dis_list[i]['title'] and not dis_list[i]['keywords']:
+		continue
 	label_set=set()
 	body_set=set()
 	for item in dis_list[i]['title']:
