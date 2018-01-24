@@ -52,7 +52,7 @@ for i in range(0,len(dis_list)):
 	for item in dis_list[i]['body']:
 		body_set.add(item[1])
 	for key in featured_list[i]['abs'].keys():
-		count+=1
+		# count+=1
 		label=0
 		if key in label_set:
 			label=1
@@ -60,41 +60,53 @@ for i in range(0,len(dis_list)):
 			if Sqm(None,kw,key.lower()).ratio()>=0.5:
 				label=1
 				break
-		p_count+=label
-			# sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[key],1]) #(str)entity, (float)distance, (float)spread, (int)count, (float)idf, (float)centrality, label
-		# else:
-			# sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],idf[word_list.index(key)],centrality[key],0])
+		# p_count+=label
+		if key in word_list:
+			k_idf=idf[word_list.index(key)]
+		else:
+			k_idf=0.0
+		sample_prelist.append([key,featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][1]-featured_list[i]['abs'][key][0],featured_list[i]['abs'][key][2],k_idf,centrality[key],label]) #(str)entity, (float)distance, (float)spread, (int)count, (float)idf, (float)centrality, label
 
-print(count,p_count)
-# print(len(sample_prelist))
+split=int(split_ratio*len(sample_prelist))
 
-# for i in range(0,10):
-# 	print(sample_prelist[i])
+key_phrase=[0 for i in range(0,len(word_list))]
 
-# random.shuffle(sample_prelist)
-# split=int(split_ratio*len(sample_prelist))
+for i in range(0,split):
+	try:
+		key_phrase[word_list.index(sample_prelist[i][0])]+=sample_prelist[i][6]
+	except:
+		pass
 
-# key_phrase=[0 for i in range(0,len(word_list))]
+f=open("/home/ubuntu/results/saliency/keyphrase.pkl","wb")
+pickle.dump(key_phrase,f)
+f.close()
 
-# for i in range(0,split):
-# 	key_phrase[word_list.index(sample_prelist[i][0])]+=sample_prelist[i][6]
+training_list=[]
+for i in range(0,split):
+	if sample_prelist[i][0] in word_list:
+		kpns=key_phrase[word_list.index(sample_prelist[i][0])]
+		_list=list(np.array(word2tvec[sample_prelist[i][0]])+1.0)
+	else:
+		kpns=0.0
+		_list=[0.0 for i in range(0,16)]
+	_list.extend([kpns,sample_prelist[i][1],sample_prelist[i][2],sample_prelist[i][3],sample_prelist[i][4],sample_prelist[i][5],sample_prelist[i][6]])
+	training_list.append(_list)
 
-# f=open("/home/ubuntu/results/saliency/keyphrase.pkl","wb")
-# pickle.dump(key_phrase,f)
-# f.close()
+f=open("/home/ubuntu/results/saliency/trainlist.pkl","wb")
+pickle.dump(training_list,f)
+f.close()
 
-# training_list=[]
-# for i in range(0,split):
-# 	training_list.append([key_phrase[word_list.index(sample_prelist[i][0])],sample_prelist[i][1],sample_prelist[i][2],sample_prelist[i][3],sample_prelist[i][4],sample_prelist[i][5],sample_prelist[i][6]])
+test_list=[]
+for i in range(split,len(sample_prelist)):
+	if sample_prelist[i][0] in word_list:
+		kpns=key_phrase[word_list.index(sample_prelist[i][0])]
+		_list=list(np.array(word2tvec[sample_prelist[i][0]])+1.0)
+	else:
+		kpns=0.0
+		_list=[0.0 for i in range(0,16)]
+	_list.extend([kpns,sample_prelist[i][1],sample_prelist[i][2],sample_prelist[i][3],sample_prelist[i][4],sample_prelist[i][5],sample_prelist[i][6]])
+	test_list.append(_list)
 
-# f=open("/home/ubuntu/results/saliency/trainlist.pkl","wb")
-# pickle.dump(training_list,f)
-# f.close()
-
-# test_list=[]
-# for i in range(split,len(sample_prelist)):
-# 	test_list.append([key_phrase[word_list.index(sample_prelist[i][0])],sample_prelist[i][1],sample_prelist[i][2],sample_prelist[i][3],sample_prelist[i][4],sample_prelist[i][5],sample_prelist[i][6]])
-
-# f=open("/home/ubuntu/results/saliency/testlist.pkl","wb")
-# pickle.dump(test_list,f)
-# f.close()
+f=open("/home/ubuntu/results/saliency/testlist.pkl","wb")
+pickle.dump(test_list,f)
+f.close()
