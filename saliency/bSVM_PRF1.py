@@ -27,17 +27,28 @@ n_testing_y=list(n_testing[:,22])
 
 clf_rbfg1=svm.SVC(kernel='rbf',gamma=(1.0/22.0)*g_ratio)
 clf_rbfg1.fit(n_training_X,n_training_y)
-n_predicted_y=list(clf_rbfg1.predict(n_testing_X))
+rbf_predicted_y=list(clf_rbfg1.predict(n_testing_X))
+
+clf_sgd=lm.SGDClassifier()
+clf_sgd.fit(n_training_X,n_training_y)
+sgd_predicted_y=list(clf_sgd.predict(n_testing_X))
+
+n_predicted_y_inter=[]
+n_predicted_y_union=[]
+
+for i in range(0,len(n_testing_y)):
+	n_predicted_y_inter.append(int(rbf_predicted_y[i])&int(sgd_predicted_y[i]))
+	n_predicted_y_union.append(int(rbf_predicted_y[i])|int(sgd_predicted_y[i]))
 
 tp=0.0
 fp=0.0
 fn=0.0
 for i in range(0,len(n_testing_y)):
-	if n_testing_y[i]==n_predicted_y[i]:
-		if n_predicted_y[i]==1:
+	if n_testing_y[i]==n_predicted_y_inter[i]:
+		if n_predicted_y_inter[i]==1:
 			tp+=1
 	else:
-		if n_predicted_y[i]==1:
+		if n_predicted_y_inter[i]==1:
 			fp+=1
 		else:
 			fn+=1
@@ -47,19 +58,17 @@ F1=2*P*R/(P+R)
 
 print(P,R,F1)
 
-clf_sgd=lm.SGDClassifier()
-clf_sgd.fit(n_training_X,n_training_y)
-n_predicted_y=list(clf_sgd.predict(n_testing_X))
+
 
 tp=0.0
 fp=0.0
 fn=0.0
 for i in range(0,len(n_testing_y)):
-	if n_testing_y[i]==n_predicted_y[i]:
-		if n_predicted_y[i]==1:
+	if n_testing_y[i]==n_predicted_y_union[i]:
+		if n_predicted_y_union[i]==1:
 			tp+=1
 	else:
-		if n_predicted_y[i]==1:
+		if n_predicted_y_union[i]==1:
 			fp+=1
 		else:
 			fn+=1
