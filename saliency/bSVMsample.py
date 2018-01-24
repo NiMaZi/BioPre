@@ -39,7 +39,9 @@ p_count=0
 b_count=0
 u_count=0
 
-for i in range(0,20):
+for i in range(0,len(dis_list)):
+	if not featured_list[i]['abs']:
+		continue
 	label_set=set()
 	body_set=set()
 	for item in dis_list[i]['title']:
@@ -48,10 +50,6 @@ for i in range(0,20):
 		label_set.add(item[1])
 	for item in dis_list[i]['body']:
 		body_set.add(item[1])
-	union_set=(label_set|body_set)
-	print(label_set)
-	print(keywords_list[i])
-	print(featured_list[i]['abs'].keys())
 	for key in featured_list[i]['abs'].keys():
 		count+=1
 		if key in label_set or key.lower() in keywords_list[i]:
