@@ -12,6 +12,7 @@ for file in os.listdir(term_dir):
 
 annotator_list=[]
 for term in term_list:
+	print("buidling annotator with term "+term+".\n")
 	_annotator = Annotator("ner/NobleJar/NobleCoder-1.0.jar","ner/NobleJar/Annotator.java",searchMethod="best-match",terminology=term)
 	annotator_list.append(_annotator)
 
