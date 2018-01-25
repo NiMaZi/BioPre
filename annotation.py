@@ -4,7 +4,7 @@ from ner.ner.annotator.annotator import Annotator
 term_dir="/home/ubuntu/.noble/terminologies/"
 
 term_list=[]
-for file in os.listdir(file_dir):
+for file in os.listdir(term_dir):
 	if file.split(".")[0]:
 		term_list.append(file.split(".")[0])
 
