@@ -76,5 +76,10 @@ for term in term_list:
 
 sorted_terms=sorted(term_dict.items(),key=lambda x:-x[1])
 
+of=open("/home/ubuntu/select_term_log.txt","w")
+
 for term in sorted_terms:
-	print(term)
+	of.write(str(term))
+	of.write("\n")
+
+of.close()
