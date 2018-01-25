@@ -14,12 +14,17 @@ for file in os.listdir(term_dir):
 
 # _annotator = Annotator("ner/NobleJar/NobleCoder-1.0.jar","ner/NobleJar/Annotator.java",searchMethod="best-match",terminology="GAMUTS")
 
+if term_num==-1:
+	term_num=len(term_list)
+
 annotator_list=[]
 for i in range(0,term_num):
 	print("buidling annotator with term "+term_list[i]+".\n")
 	_annotator = Annotator("ner/NobleJar/NobleCoder-1.0.jar","ner/NobleJar/Annotator.java",searchMethod="best-match",terminology=term_list[i])
 	annotator_list.append(_annotator)
 
+if volume==-1:
+	volume=12935
 
 for i in range(0,volume): # max 12935
 	cf_abs=open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".csv","a")
