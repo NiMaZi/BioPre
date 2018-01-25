@@ -44,10 +44,13 @@ for i in range(0,volume): # max 12935
 
 		f=open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8')
 		reader=csv.reader(f)
-		for item in reader:
-			if item[2]=="ConceptName":
-				continue
-			annotation_set.add(item[2])
+		try:
+			for item in reader:
+				if item[2]=="ConceptName":
+					continue
+				annotation_set.add(item[2])
+		except:
+			pass
 		f.close()
 
 		_filename = "thesiswork/kdata/body"+str(i)+".txt"
@@ -55,10 +58,13 @@ for i in range(0,volume): # max 12935
 
 		f=open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".txt.mentions","r",newline='',encoding='utf-8')
 		reader=csv.reader(f)
-		for item in reader:
-			if item[2]=="ConceptName":
-				continue
-			annotation_set.add(item[2])
+		try:
+			for item in reader:
+				if item[2]=="ConceptName":
+					continue
+				annotation_set.add(item[2])
+		except:
+			pass
 		f.close()
 
 		term_score=0.0
