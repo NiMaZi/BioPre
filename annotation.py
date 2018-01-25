@@ -1,5 +1,9 @@
+import sys
 import os
 from ner.ner.annotator.annotator import Annotator
+
+volume=int(sys.argv[1])
+term_num=int(sys.argv[2])
 
 term_dir="/home/ubuntu/.noble/terminologies/"
 
@@ -11,13 +15,13 @@ for file in os.listdir(term_dir):
 # _annotator = Annotator("ner/NobleJar/NobleCoder-1.0.jar","ner/NobleJar/Annotator.java",searchMethod="best-match",terminology="GAMUTS")
 
 annotator_list=[]
-for term in term_list:
-	print("buidling annotator with term "+term+".\n")
-	_annotator = Annotator("ner/NobleJar/NobleCoder-1.0.jar","ner/NobleJar/Annotator.java",searchMethod="best-match",terminology=term)
+for i in range(0,len(term_list)):
+	print("buidling annotator with term "+term_list[i]+".\n")
+	_annotator = Annotator("ner/NobleJar/NobleCoder-1.0.jar","ner/NobleJar/Annotator.java",searchMethod="best-match",terminology=term_list[i])
 	annotator_list.append(_annotator)
 
 
-for i in range(0,2000): # max 12935
+for i in range(0,volume): # max 12935
 	cf_abs=open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".csv","a")
 	cf_body=open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".csv","a")
 	cf_title=open("/home/ubuntu/thesiswork/kdata/title"+str(i)+".csv","a")
