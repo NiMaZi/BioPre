@@ -1,5 +1,6 @@
 import sys
 import math
+import random
 import pickle
 import numpy as np
 from sklearn import svm
@@ -57,7 +58,7 @@ count=0
 tp_rbf=0.0
 fp_rbf=0.0
 fn_rbf=0.0
-
+log_list=[]
 
 for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len(featured_list))):
 	abs_dict=featured_list[i]['abs']
@@ -66,8 +67,6 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 	max_conf_rbf=0
 	# pred_dict_linear={}
 	pred_dict_rbf={}
-	if count>200:
-		sys.exit(0)
 	for a_key_1 in abs_dict.keys():
 		for a_key_2 in abs_dict.keys():
 			if a_key_1==a_key_2:
@@ -81,6 +80,11 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 				if a_key_1==b_key or a_key_2==b_key:
 					continue
 				count+=1
+				if count>20000:
+					outlog=random.sample(log_list,100)
+					for l in outlog:
+						print(l[0],l[1],l[2],l[3],l[4])
+					sys.exit(0)
 				label=0
 				if b_key in body_dict.keys():
 					label=1
@@ -105,7 +109,7 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 				# 			max_conf_linear=pred_dict_linear[b_key]
 
 				pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
-				print(pred_label_rbf,label,a_key_1,a_key_2,b_key)
+				log_list.append([pred_label_rbf,label,a_key_1,a_key_2,b_key])
 				if pred_label_rbf==1:
 					if b_key in pred_dict_rbf.keys():
 						pred_dict_rbf[b_key]+=1.0
