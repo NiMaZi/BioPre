@@ -68,6 +68,7 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 					_list.extend(word2tvec[a_key_1])
 					_list.extend(word2tvec[a_key_2])
 					_list.append(label)
+					_list.extend([a_key_1,a_key_2,b_key])
 					pos_list.append(_list)
 					# pos_list.append([centrality[a_key_1],centrality[a_key_2],centrality[b_key],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],pred_saliency_1,pred_saliency_2,label])
 				else:
@@ -76,6 +77,7 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 					_list.extend(word2tvec[a_key_1])
 					_list.extend(word2tvec[a_key_2])
 					_list.append(label)
+					_list.extend([a_key_1,a_key_2,b_key])
 					neg_prelist.append(_list)
 					# neg_prelist.append([centrality[a_key_1],centrality[a_key_2],centrality[b_key],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],pred_saliency_1,pred_saliency_2,label])
 				# print(count,a_key_1,a_key_2,b_key,label)
@@ -83,8 +85,12 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 	if count>partial_volume:
 		sample_prelist=random.sample(neg_prelist,len(pos_list))
 		sample_prelist.extend(pos_list)
-		random.shuffle(sample_prelist)
+		# random.shuffle(sample_prelist)
+		outlog=random.sample(sample_prelist,100)
 		tlen=len(sample_prelist[0])
+		for l in outlog:
+			print(l[tlen-4],l[tlen-3],l[tlen-2],l[tlen-1])
+		sys.exit(0)
 
 # print(len(sample_prelist))
 

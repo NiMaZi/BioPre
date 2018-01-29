@@ -80,7 +80,9 @@ for term in term_list:
 	term[1]/=volume
 	term_dict[term[0]]=[term[1]]
 
-sorted_terms=sorted(term_dict.items(),key=lambda x:-x[1])
+print(term_dict)
+
+sorted_terms=sorted(term_dict.items(),key=lambda x:x[1])
 
 of=open("/home/ubuntu/select_term_log.txt","w")
 

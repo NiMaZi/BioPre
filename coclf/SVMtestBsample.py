@@ -58,6 +58,7 @@ tp_rbf=0.0
 fp_rbf=0.0
 fn_rbf=0.0
 
+
 for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len(featured_list))):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
@@ -65,6 +66,8 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 	max_conf_rbf=0
 	# pred_dict_linear={}
 	pred_dict_rbf={}
+	if count>200:
+		sys.exit(0)
 	for a_key_1 in abs_dict.keys():
 		for a_key_2 in abs_dict.keys():
 			if a_key_1==a_key_2:
@@ -102,6 +105,7 @@ for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len
 				# 			max_conf_linear=pred_dict_linear[b_key]
 
 				pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
+				print(pred_label_rbf,label,a_key_1,a_key_2,b_key)
 				if pred_label_rbf==1:
 					if b_key in pred_dict_rbf.keys():
 						pred_dict_rbf[b_key]+=1.0
