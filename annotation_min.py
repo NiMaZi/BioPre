@@ -8,10 +8,10 @@ for i in range(0,12935): # max 12935
 	_annotator.process(_filename)
 
 	_filename = "thesiswork/kdata/body"+str(i)+".txt"
-	annotator_list[j].process(_filename)
+	_annotator.process(_filename)
 
 	_filename = "thesiswork/kdata/title"+str(i)+".txt"
-	annotator_list[j].process(_filename)
+	_annotator.process(_filename)
 
 	_filename = "thesiswork/kdata/keywords"+str(i)+".txt"
-	annotator_list[j].process(_filename)
+	_annotator.process(_filename)
