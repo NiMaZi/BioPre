@@ -157,5 +157,5 @@ R=tp_rbf/(tp_rbf+fn_rbf)
 F1=2*P*R/(P+R)
 
 f=open("/home/ubuntu/results/coclf/sgd_test_log.txt","a")
-f.write(str(confidence)+","+str(P)+","+str(R)+","+str(F1))
+f.write(str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
 f.close()
