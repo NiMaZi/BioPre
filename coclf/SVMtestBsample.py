@@ -81,11 +81,11 @@ for i in range(int(front_split_ratio*len(featured_list)),int(front_split_ratio*l
 				if a_key_1==b_key or a_key_2==b_key:
 					continue
 				count+=1
-				if count>20000:
-					outlog=random.sample(log_list,100)
-					for l in outlog:
-						print(l[0],l[1],l[2],l[3],l[4])
-					sys.exit(0)
+				# if count>20000:
+				# 	outlog=random.sample(log_list,100)
+				# 	for l in outlog:
+				# 		print(l[0],l[1],l[2],l[3],l[4])
+				# 	sys.exit(0)
 				label=0
 				if b_key in body_dict.keys():
 					label=1
@@ -156,6 +156,7 @@ for i in range(int(front_split_ratio*len(featured_list)),int(front_split_ratio*l
 P=tp_rbf/(tp_rbf+fp_rbf)
 R=tp_rbf/(tp_rbf+fn_rbf)
 F1=2*P*R/(P+R)
+print(count)
 
 f=open("/home/ubuntu/results/coclf/sgd_test_log.txt","a")
 f.write(str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
