@@ -60,7 +60,8 @@ fp_rbf=0.0
 fn_rbf=0.0
 log_list=[]
 
-for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len(featured_list))):
+# for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len(featured_list))):
+for i in range(int(front_split_ratio*len(featured_list)),int(front_split_ratio*len(featured_list))+100):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
 	# max_conf_linear=0
