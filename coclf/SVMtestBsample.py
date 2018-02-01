@@ -95,7 +95,7 @@ for i in range(int(front_split_ratio*len(featured_list)),int(front_split_ratio*l
 				_list.extend(word2tvec[a_key_1])
 				_list.extend(word2tvec[a_key_2])
 				# _list.append(label)
-				# print(count,a_key_1,a_key_2,b_key,label)
+				print(count,a_key_1,a_key_2,b_key,label)
 				sample_input=np.array([_list])
 
 				# pred_label_linear=list(clf_lr.predict(sample_input))[0]
