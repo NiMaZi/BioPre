@@ -70,68 +70,70 @@ f=open("/home/ubuntu/results/coclf/clf_sgd_filter.pkl","rb")
 clf_sgd_filter=pickle.load(f)
 f.close()
 
-pred_dict_rbf={}
-max_conf_rbf=0
-for a_key in abs_dict.keys():
-	if a_key in word_list:
-		a_key_phrase=key_phrase[word_list.index(a_key)]
-		a_idf=word_list.index(a_key)
-	else:
-		a_key_phrase=0.0
-		a_idf=0.0
-	if a_key in centrality.keys():
-		a_centrality=centrality[a_key]
-	else:
-		a_centrality=0.0
-	pred_input=np.array([[a_key_phrase,abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],a_idf,a_centrality]])
-	pred_saliency=list(s_clf.predict(pred_input))[0]
-	for b_key in word_list:
-		if a_key==b_key:
-			continue
-		if b_key in centrality.keys():
-			b_centrality=centrality[b_key]
+if test_mode==1:
+	pred_dict_rbf={}
+	max_conf_rbf=0
+	for a_key in abs_dict.keys():
+		if a_key in word_list:
+			a_key_phrase=key_phrase[word_list.index(a_key)]
+			a_idf=word_list.index(a_key)
 		else:
-			b_centrality=0.0
-		if a_key in word_list and b_key in word_list:
-			dev_cor=dev_mat[word_list.index(a_key)][word_list.index(b_key)]
+			a_key_phrase=0.0
+			a_idf=0.0
+		if a_key in centrality.keys():
+			a_centrality=centrality[a_key]
 		else:
-			dev_cor=0.0
-		sample_input=np.array([[a_centrality,b_centrality,dev_cor,pred_saliency]])
-		pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
-		if pred_label_rbf==1:
-			pred_label_correction=list(clf_sgd_correction.predict(sample_input))[0]
-			pred_label_filter=list(clf_sgd_filter.predict(sample_input))[0]
-			if cor_rate==-1:
-				pred_label_rbf=1
+			a_centrality=0.0
+		pred_input=np.array([[a_key_phrase,abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],a_idf,a_centrality]])
+		pred_saliency=list(s_clf.predict(pred_input))[0]
+		for b_key in word_list:
+			if a_key==b_key:
+				continue
+			if b_key in centrality.keys():
+				b_centrality=centrality[b_key]
 			else:
-				pred_label_rbf=cor_rate*pred_label_correction+(1.0-cor_rate)*pred_label_filter
-				if pred_label_rbf>0.5:
+				b_centrality=0.0
+			if a_key in word_list and b_key in word_list:
+				dev_cor=dev_mat[word_list.index(a_key)][word_list.index(b_key)]
+			else:
+				dev_cor=0.0
+			sample_input=np.array([[a_centrality,b_centrality,dev_cor,pred_saliency]])
+			pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
+			if pred_label_rbf==1:
+				pred_label_correction=list(clf_sgd_correction.predict(sample_input))[0]
+				pred_label_filter=list(clf_sgd_filter.predict(sample_input))[0]
+				if cor_rate==-1:
 					pred_label_rbf=1
 				else:
-					pred_label_rbf=0
-		if pred_label_rbf==1:
-			if b_key in pred_dict_rbf.keys():
-				pred_dict_rbf[b_key]+=1.0
-				if pred_dict_rbf[b_key]>max_conf_rbf:
-					max_conf_rbf=pred_dict_rbf[b_key]
-			else:
-				pred_dict_rbf[b_key]=1.0
-				if pred_dict_rbf[b_key]>max_conf_rbf:
-					max_conf_rbf=pred_dict_rbf[b_key]
-for key in pred_dict_rbf.keys():
-	pred_dict_rbf[key]/=max_conf_rbf
-pred_set_rbf=set()
-for key in pred_dict_rbf.keys():
-	if pred_dict_rbf[key]>confidence:
-		pred_set_rbf.add(key)
-real_set=set(body_dict.keys())
-tp=len(pred_set_rbf&real_set)
-fp=len(pred_set_rbf-(pred_set_rbf&real_set))
-fn=len(real_set-(real_set&pred_set_rbf))
-P=tp/(tp+fp)
-R=tp/(tp+fn)
+					pred_label_rbf=cor_rate*pred_label_correction+(1.0-cor_rate)*pred_label_filter
+					if pred_label_rbf>0.5:
+						pred_label_rbf=1
+					else:
+						pred_label_rbf=0
+			if pred_label_rbf==1:
+				if b_key in pred_dict_rbf.keys():
+					pred_dict_rbf[b_key]+=1.0
+					if pred_dict_rbf[b_key]>max_conf_rbf:
+						max_conf_rbf=pred_dict_rbf[b_key]
+				else:
+					pred_dict_rbf[b_key]=1.0
+					if pred_dict_rbf[b_key]>max_conf_rbf:
+						max_conf_rbf=pred_dict_rbf[b_key]
+	for key in pred_dict_rbf.keys():
+		pred_dict_rbf[key]/=max_conf_rbf
+	pred_set_rbf=set()
+	for key in pred_dict_rbf.keys():
+		if pred_dict_rbf[key]>confidence:
+			pred_set_rbf.add(key)
+	real_set=set(body_dict.keys())
+	tp=len(pred_set_rbf&real_set)
+	fp=len(pred_set_rbf-(pred_set_rbf&real_set))
+	fn=len(real_set-(real_set&pred_set_rbf))
+	P=tp/(tp+fp)
+	R=tp/(tp+fn)
 
-for entity in pred_set_rbf:
-	print(entity)
+	for entity in pred_set_rbf:
+		print(entity)
 
-print("precision=%f,recall=%f.\n"%(P,R))
+	print("\nprecision=%.2f,recall=%.2f."%(P,R))
+else:
