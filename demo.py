@@ -98,14 +98,14 @@ for a_key in abs_dict.keys():
 			dev_cor=0.0
 		sample_input=np.array([[a_centrality,b_centrality,dev_cor,pred_saliency]])
 		pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
-		if pred_label_rbf==1:
-			pred_label_correction=list(clf_sgd_correction.predict(sample_input))[0]
-			pred_label_filter=list(clf_sgd_filter.predict(sample_input))[0]
-			pred_label_rbf=cor_rate*pred_label_correction+(1.0-cor_rate)*pred_label_filter
-			if pred_label_rbf>0.5:
-				pred_label_rbf=1
-			else:
-				pred_label_rbf=0
+		# if pred_label_rbf==1:
+		# 	pred_label_correction=list(clf_sgd_correction.predict(sample_input))[0]
+		# 	pred_label_filter=list(clf_sgd_filter.predict(sample_input))[0]
+		# 	pred_label_rbf=cor_rate*pred_label_correction+(1.0-cor_rate)*pred_label_filter
+		# 	if pred_label_rbf>0.5:
+		# 		pred_label_rbf=1
+		# 	else:
+		# 		pred_label_rbf=0
 		if pred_label_rbf==1:
 			if b_key in pred_dict_rbf.keys():
 				pred_dict_rbf[b_key]+=1.0
