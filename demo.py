@@ -116,7 +116,7 @@ if test_mode==1:
 						max_conf_rbf=pred_dict_rbf[b_key]
 	for key in pred_dict_rbf.keys():
 		pred_dict_rbf[key]/=max_conf_rbf
-	pred_set_rbf=set()
+	pred_set_rbf=set(abs_dict.keys())
 	for key in pred_dict_rbf.keys():
 		if pred_dict_rbf[key]>confidence:
 			pred_set_rbf.add(key)
