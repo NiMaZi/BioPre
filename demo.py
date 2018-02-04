@@ -159,8 +159,10 @@ else:
 				continue
 			if not a_key_1 in b_word_list or not a_key_2 in b_word_list:
 				continue
-			for b_key in b_word_list:
+			for b_key in word_list:
 				if a_key_1==b_key or a_key_2==b_key:
+					continue
+				if not b_key in b_word_list:
 					continue
 				_list=[dev_mat[b_word_list.index(a_key_1)][b_word_list.index(b_key)],dev_mat[b_word_list.index(a_key_2)][b_word_list.index(b_key)]]
 				_list.extend(b_word2tvec[a_key_1])
