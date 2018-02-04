@@ -70,7 +70,6 @@ f=open("/home/ubuntu/results/coclf/clf_sgd_filter.pkl","rb")
 clf_sgd_filter=pickle.load(f)
 f.close()
 
-sample_input=[]
 pred_dict_rbf={}
 max_conf_rbf=0
 for a_key in abs_dict.keys():
@@ -84,7 +83,7 @@ for a_key in abs_dict.keys():
 		a_centrality=centrality[a_key]
 	else:
 		a_centrality=0.0
-	pred_input=np.array([[a_key_phrase,abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],a_idf,a_centrality])
+	pred_input=np.array([[a_key_phrase,abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],a_idf,a_centrality]])
 	pred_saliency=list(s_clf.predict(pred_input))[0]
 	for b_key in word_list:
 		if a_key==b_key:
