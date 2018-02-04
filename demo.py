@@ -133,8 +133,11 @@ if test_mode==1:
 	R=tp/(tp+fn)
 
 	for entity in pred_set_rbf:
-		print("\033[1;31;47m"+entity)
+		if entity in body_dict.keys():
+			print("\033[1;31m"+entity)
+		else:
+			print("\033[0m"+entity)
 
-	print("\nprecision=%.2f,recall=%.2f."%(P,R))
+	print("\033[0m\nprecision=%.2f,recall=%.2f."%(P,R))
 else:
 	pass
