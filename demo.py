@@ -157,9 +157,9 @@ else:
 		for a_key_2 in abs_dict.keys():
 			if a_key_1==a_key_2:
 				continue
-			if not a_key_1 in word_list or not a_key_2 in word_list:
+			if not a_key_1 in b_word_list or not a_key_2 in b_word_list:
 				continue
-			for b_key in word_list:
+			for b_key in b_word_list:
 				if a_key_1==b_key or a_key_2==b_key:
 					continue
 				_list=[dev_mat[b_word_list.index(a_key_1)][b_word_list.index(b_key)],dev_mat[b_word_list.index(a_key_2)][b_word_list.index(b_key)]]
@@ -186,9 +186,15 @@ else:
 	tp=len(pred_set_rbf&real_set)
 	fp=len(pred_set_rbf-(pred_set_rbf&real_set))
 	fn=len(real_set-(real_set&pred_set_rbf))
-	P=tp/(tp+fp)
-	R=tp/(tp+fn)
-	
+	try:
+		P=tp/(tp+fp)
+	except:
+		P=0.0
+	try:
+		R=tp/(tp+fn)
+	except:
+		R=0.0
+
 	for entity in pred_set_rbf:
 		if entity in body_dict.keys():
 			print("\033[1;31m"+entity)
