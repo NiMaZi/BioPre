@@ -23,12 +23,12 @@ print("entities mentioned in the abstract:\n")
 for key in abs_dict.keys():
 	print(key+" ")
 
-print("entities mentioned in the body:\n")
+print("\nentities mentioned in the body:\n")
 
 for key in body_dict.keys():
 	print(key+" ")
 
-print("entities predicted:\n")
+print("\nentities predicted:\n")
 
 f=open("/home/ubuntu/results/saliency/wordlist.pkl","rb")
 word_list=pickle.load(f)
