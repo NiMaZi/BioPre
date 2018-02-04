@@ -23,14 +23,10 @@ print("entities mentioned in the abstract:\n")
 for key in abs_dict.keys():
 	print(key+" ")
 
-print("\n")
-
 print("entities mentioned in the body:\n")
 
 for key in body_dict.keys():
 	print(key+" ")
-
-print("\n")
 
 print("entities predicted:\n")
 
