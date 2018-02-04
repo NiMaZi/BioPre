@@ -79,12 +79,6 @@ for a_key in abs_dict.keys():
 	for b_key in word_list:
 		if a_key==b_key:
 			continue
-		label=0
-		if b_key in body_dict.keys():
-			label=1
-		else:
-			label=0
-		print(count,a_key,b_key,label)
 		sample_input=np.array([[centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency]])
 		pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
 		if pred_label_rbf==1:
