@@ -74,12 +74,30 @@ sample_input=[]
 pred_dict_rbf={}
 max_conf_rbf=0
 for a_key in abs_dict.keys():
-	pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
+	if a_key in word_list:
+		a_key_phrase=key_phrase[word_list.index(a_key)]
+		a_idf=word_list.index(a_key)
+	else:
+		a_key_phrase=0.0
+		a_idf=0.0
+	if a_key in centrality.keys():
+		a_centrality=centrality[a_key]
+	else:
+		a_centrality=0.0
+	pred_input=np.array([[a_key_phrase,abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],a_idf,a_centrality])
 	pred_saliency=list(s_clf.predict(pred_input))[0]
 	for b_key in word_list:
 		if a_key==b_key:
 			continue
-		sample_input=np.array([[centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency]])
+		if b_key in centrality.keys():
+			b_centrality=centrality[b_key]
+		else:
+			b_centrality=0.0
+		if a_key in word_list and b_key in word_list:
+			dev_cor=dev_mat[word_list.index(a_key)][word_list.index(b_key)]
+		else:
+			dev_cor=0.0
+		sample_input=np.array([[a_centrality,b_centrality,dev_cor,pred_saliency]])
 		pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
 		if pred_label_rbf==1:
 			pred_label_correction=list(clf_sgd_correction.predict(sample_input))[0]
