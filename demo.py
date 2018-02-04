@@ -33,6 +33,14 @@ for key in body_dict.keys():
 
 print("\nentities predicted:\n")
 
+f=open("/home/ubuntu/results/ontology/ontology_wordlist.pkl","rb")
+b_word_list=pickle.load(f)
+f.close()
+
+f=open("/home/ubuntu/results/ontology/ontology_word2taxonomy.pkl","rb")
+b_word2tvec=pickle.load(f)
+f.close()
+
 f=open("/home/ubuntu/results/saliency/wordlist.pkl","rb")
 word_list=pickle.load(f)
 f.close()
@@ -59,6 +67,10 @@ f.close()
 
 f=open("/home/ubuntu/results/coclf/clf_sgd.pkl","rb")
 clf_sgd=pickle.load(f)
+f.close()
+
+f=open("/home/ubuntu/results/coclf/b_clf_sgd_test.pkl","rb")
+b_clf_sgd=pickle.load(f)
 f.close()
 
 # f=open("/home/ubuntu/results/coclf/clf_sgd_correction.pkl","rb")
@@ -139,4 +151,48 @@ if test_mode==1:
 
 	print("\033[0m\nprecision=%.2f,recall=%.2f."%(P,R))
 else:
-	pass
+	max_conf_rbf=0
+	pred_dict_rbf={}
+	for a_key_1 in abs_dict.keys():
+		for a_key_2 in abs_dict.keys():
+			if a_key_1==a_key_2:
+				continue
+			if not a_key_1 in word_list or not a_key_2 in word_list:
+				continue
+			for b_key in word_list:
+				if a_key_1==b_key or a_key_2==b_key:
+					continue
+				_list=[dev_mat[b_word_list.index(a_key_1)][b_word_list.index(b_key)],dev_mat[b_word_list.index(a_key_2)][b_word_list.index(b_key)]]
+				_list.extend(b_word2tvec[a_key_1])
+				_list.extend(b_word2tvec[a_key_2])
+				sample_input=np.array([_list])
+				pred_label_rbf=list(b_clf_sgd.predict(sample_input))[0]
+				if pred_label_rbf==1:
+					if b_key in pred_dict_rbf.keys():
+						pred_dict_rbf[b_key]+=1.0
+						if pred_dict_rbf[b_key]>max_conf_rbf:
+							max_conf_rbf=pred_dict_rbf[b_key]
+					else:
+						pred_dict_rbf[b_key]=1.0
+						if pred_dict_rbf[b_key]>max_conf_rbf:
+							max_conf_rbf=pred_dict_rbf[b_key]
+	for key in pred_dict_rbf.keys():
+		pred_dict_rbf[key]/=max_conf_rbf
+	pred_set_rbf=set(abs_dict.keys())
+	for key in pred_dict_rbf.keys():
+		if pred_dict_rbf[key]>confidence:
+			pred_set_rbf.add(key)
+	real_set=set(body_dict.keys())
+	tp=len(pred_set_rbf&real_set)
+	fp=len(pred_set_rbf-(pred_set_rbf&real_set))
+	fn=len(real_set-(real_set&pred_set_rbf))
+	P=tp/(tp+fp)
+	R=tp/(tp+fn)
+	
+	for entity in pred_set_rbf:
+		if entity in body_dict.keys():
+			print("\033[1;31m"+entity)
+		else:
+			print("\033[0m"+entity)
+
+	print("\033[0m\nprecision=%.2f,recall=%.2f."%(P,R))
