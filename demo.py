@@ -133,7 +133,7 @@ if test_mode==1:
 	R=tp/(tp+fn)
 
 	for entity in pred_set_rbf:
-		print("\033[1;31;40m"+entity+"\033[1;31;40m")
+		print("\033[1;31;47m"+entity)
 
 	print("\nprecision=%.2f,recall=%.2f."%(P,R))
 else:
