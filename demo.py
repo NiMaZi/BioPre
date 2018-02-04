@@ -137,3 +137,4 @@ if test_mode==1:
 
 	print("\nprecision=%.2f,recall=%.2f."%(P,R))
 else:
+	pass
