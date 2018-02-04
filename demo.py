@@ -124,6 +124,14 @@ pred_set_rbf=set()
 for key in pred_dict_rbf.keys():
 	if pred_dict_rbf[key]>confidence:
 		pred_set_rbf.add(key)
+real_set=set(body_dict.keys())
+tp=len(pred_set_rbf&real_set)
+fp=len(pred_set_rbf-(pred_set_rbf&real_set))
+fn=len(real_set-(real_set&pred_set_rbf))
+P=tp/(tp+fp)
+R=tp/(tp+fn)
 
 for entity in pred_set_rbf:
 	print(entity)
+
+print("precision=%f,recall=%f.\n"%(P,R))
