@@ -17,6 +17,10 @@ f.close()
 abs_dict=featured_list[article_id]['abs']
 body_dict=featured_list[article_id]['body']
 
+if not abs_dict:
+	print("cannot find entity mentions in abstract.\n")
+	sys.exit(0)
+
 print("entities mentioned in the abstract:\n")
 
 for key in abs_dict.keys():
