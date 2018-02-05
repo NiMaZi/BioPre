@@ -7,7 +7,7 @@ import subprocess
 
 # Document	Matched Term	Code	Concept Name	Semantic Type	Annotations	Certainty	ContextualAspect	ContextualModality	Degree	Experiencer	Permanence	Polarity	Temporality
 
-for i in range(0,1):
+for i in range(1,2):
 	subprocess.call(['java','-jar','/home/ubuntu/ner/NobleJar/NobleCoder-1.0.jar','-terminology','NCI_Thesaurus','-input','/home/ubuntu/thesiswork/kdata/abs'+str(i)+'.txt','-output','/home/ubuntu/thesiswork/kdata/disambiguation','-search','best-match','-selectBestCandidates'])
 	f=open('/home/ubuntu/thesiswork/kdata/disambiguation/RESULTS.tsv','r',encoding='utf-8')
 	unamb=f.read()
