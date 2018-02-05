@@ -17,46 +17,59 @@ record_sal=0.0
 record_cover=0.0
 
 for i in range(0,volume):
+	print("counting on article "+str(i)+".")
 	record_list_abs=[]
-	with open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
-		reader=csv.reader(csvfile)
-		for item in reader:
-			if item[2]=="ConceptName":
-				continue
-			mention=item[0]
-			entity=item[2]
-			record_list_abs.append([mention,entity])
-			record_abs+=1
+	try:
+		with open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+			reader=csv.reader(csvfile)
+			for item in reader:
+				if item[2]=="ConceptName":
+					continue
+				mention=item[0]
+				entity=item[2]
+				record_list_abs.append([mention,entity])
+				record_abs+=1
+	except:
+		continue
 	record_list_body=[]
-	with open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
-		reader=csv.reader(csvfile)
-		for item in reader:
-			if item[2]=="ConceptName":
-				continue
-			mention=item[0]
-			entity=item[2]
-			record_list_body.append([mention,entity])
-			record_body+=1
+	try:
+		with open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+			reader=csv.reader(csvfile)
+			for item in reader:
+				if item[2]=="ConceptName":
+					continue
+				mention=item[0]
+				entity=item[2]
+				record_list_body.append([mention,entity])
+				record_body+=1
+	except:
+		continue
 	record_list_title=[]
-	with open("/home/ubuntu/thesiswork/kdata/title"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
-		reader=csv.reader(csvfile)
-		for item in reader:
-			if item[2]=="ConceptName":
-				continue
-			mention=item[0]
-			entity=item[2]
-			record_list_title.append([mention,entity])
-			record_title+=1
+	try:
+		with open("/home/ubuntu/thesiswork/kdata/title"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+			reader=csv.reader(csvfile)
+			for item in reader:
+				if item[2]=="ConceptName":
+					continue
+				mention=item[0]
+				entity=item[2]
+				record_list_title.append([mention,entity])
+				record_title+=1
+	except:
+		continue
 	record_list_kw=[]
-	with open("/home/ubuntu/thesiswork/kdata/keywords"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
-		reader=csv.reader(csvfile)
-		for item in reader:
-			if item[2]=="ConceptName":
-				continue
-			mention=item[0]
-			entity=item[2]
-			record_list_kw.append([mention,entity])
-			record_kw+=1
+	try:
+		with open("/home/ubuntu/thesiswork/kdata/keywords"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+			reader=csv.reader(csvfile)
+			for item in reader:
+				if item[2]=="ConceptName":
+					continue
+				mention=item[0]
+				entity=item[2]
+				record_list_kw.append([mention,entity])
+				record_kw+=1
+	except:
+		continue
 	for record in record_list_abs:
 		if record[1] in record_list_body:
 			record_cover+=1
