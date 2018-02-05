@@ -15,7 +15,7 @@ for i in range(0,10):
 	tmp_list=unamb.split('\n')
 	unamb_list=[]
 	for item in tmp_list:
-		unamb.append(item.split('\t'))
+		unamb_list.append(item.split('\t'))
 	f=open('/home/ubuntu/thesiswork/kdata/abs'+str(i)+'.txt.mentions','r',encoding='utf-8')
 	rd=csv.reader(f)
 	j=0
