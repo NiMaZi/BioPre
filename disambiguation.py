@@ -7,7 +7,7 @@ import subprocess
 
 # Document	Matched Term	Code	Concept Name	Semantic Type	Annotations	Certainty	ContextualAspect	ContextualModality	Degree	Experiencer	Permanence	Polarity	Temporality
 
-for i in range(0,10):
+for i in range(0,1):
 	subprocess.call(['java','-jar','/home/ubuntu/ner/NobleJar/NobleCoder-1.0.jar','-terminology','NCI_Thesaurus','-input','/home/ubuntu/thesiswork/kdata/abs'+str(i)+'.txt','-output','/home/ubuntu/thesiswork/kdata/disambiguation','-search','best-match','-selectBestCandidates'])
 	f=open('/home/ubuntu/thesiswork/kdata/disambiguation/RESULTS.tsv','r',encoding='utf-8')
 	unamb=f.read()
@@ -20,8 +20,9 @@ for i in range(0,10):
 	rd=csv.reader(f)
 	j=0
 	result_list=[]
-	result_list.append(['Mention','ConceptCode','ConceptName','Synonyms','Semantic Type','Start','End'])
+	result_list.append(['Mention','ConceptCode','ConceptName','Synonyms','SemanticType','Start','End'])
 	for item in rd:
+		print(item[1],unamb_list[j][2])
 		if item[1]==unamb_list[j][2]:
 			result_list.append([item[0],item[1],item[2],item[3],unamb_list[j][4],item[4],item[5]])
 			j+=1
