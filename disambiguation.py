@@ -18,7 +18,7 @@ for i in range(0,1):
 		unamb_list.append(item.split('\t'))
 	f=open('/home/ubuntu/thesiswork/kdata/abs'+str(i)+'.txt.mentions','r',encoding='utf-8')
 	rd=csv.reader(f)
-	j=0
+	j=1
 	result_list=[]
 	result_list.append(['Mention','ConceptCode','ConceptName','Synonyms','SemanticType','Start','End'])
 	for item in rd:
