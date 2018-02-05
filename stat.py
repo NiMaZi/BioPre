@@ -93,4 +93,4 @@ record_kw/=real_volume
 record_sal/=real_volume
 record_cover/=real_volume
 
-print(record_abs,record_body,record_title,record_title,record_sal,record_sal/record_abs,record_cover/record_abs)
+print(record_abs,record_body,record_title,record_kw,record_sal,record_sal/record_abs,record_cover/record_abs)
