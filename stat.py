@@ -42,7 +42,7 @@ for i in range(0,volume):
 					continue
 				mention=item[0]
 				entity=item[2]
-				record_list_body.append([mention,entity])
+				record_list_body.append(entity)
 				record_body+=1
 	except:
 		real_volume-=1
@@ -56,7 +56,7 @@ for i in range(0,volume):
 					continue
 				mention=item[0]
 				entity=item[2]
-				record_list_title.append([mention,entity])
+				record_list_title.append(entity)
 				record_title+=1
 	except:
 		real_volume-=1
@@ -70,7 +70,7 @@ for i in range(0,volume):
 					continue
 				mention=item[0]
 				entity=item[2]
-				record_list_kw.append([mention,entity])
+				record_list_kw.append(entity)
 				record_kw+=1
 	except:
 		real_volume-=1
@@ -86,11 +86,11 @@ for i in range(0,volume):
 				record_sal+=1
 				break
 
-record_abs/=volume
-record_body/=volume
-record_title/=volume
-record_kw/=volume
-record_sal/=volume
-record_cover/=volume
+record_abs/=real_volume
+record_body/=real_volume
+record_title/=real_volume
+record_kw/=real_volume
+record_sal/=real_volume
+record_cover/=real_volume
 
 print(record_abs,record_body,record_title,record_title,record_sal,record_sal/record_abs,record_cover/record_abs)
