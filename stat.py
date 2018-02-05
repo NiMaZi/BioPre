@@ -20,6 +20,7 @@ record_cover=0.0
 for i in range(0,volume):
 	print("counting on article "+str(i)+".")
 	record_list_abs=[]
+	record_set_abs_entity=set()
 	try:
 		with open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
 			reader=csv.reader(csvfile)
@@ -29,62 +30,71 @@ for i in range(0,volume):
 				mention=item[0]
 				entity=item[2]
 				record_list_abs.append([mention,entity])
-				record_abs+=1
+				record_set_abs_entity.add(entity)
+				# record_abs+=1
 	except:
 		real_volume-=1
 		continue
-	record_list_body=[]
+	record_set_body=set()
 	try:
 		with open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
 			reader=csv.reader(csvfile)
 			for item in reader:
 				if item[2]=="ConceptName":
 					continue
-				mention=item[0]
 				entity=item[2]
-				record_list_body.append(entity)
-				record_body+=1
+				record_set_body.add(entity)
+				# record_body+=1
 	except:
 		real_volume-=1
 		continue
-	record_list_title=[]
+	record_set_title=set()
 	try:
 		with open("/home/ubuntu/thesiswork/kdata/title"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
 			reader=csv.reader(csvfile)
 			for item in reader:
 				if item[2]=="ConceptName":
 					continue
-				mention=item[0]
 				entity=item[2]
-				record_list_title.append(entity)
-				record_title+=1
+				record_set_title.add(entity)
+				# record_title+=1
 	except:
 		real_volume-=1
 		continue
-	record_list_kw=[]
+	record_set_kw=set()
 	try:
 		with open("/home/ubuntu/thesiswork/kdata/keywords"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
 			reader=csv.reader(csvfile)
 			for item in reader:
 				if item[2]=="ConceptName":
 					continue
-				mention=item[0]
 				entity=item[2]
-				record_list_kw.append(entity)
-				record_kw+=1
+				record_set_kw.add(entity)
+				# record_kw+=1
 	except:
 		real_volume-=1
 		continue
+	cover_set=set()
+	saliency_set=set()
 	for record in record_list_abs:
-		if record[1] in record_list_body:
-			record_cover+=1
-		if record[1] in record_list_kw or record[1] in record_list_title:
-			record_sal+=1
+		if record[1] in record_set_body:
+			# record_cover+=1
+			cover_set.add(record[1])
+		if record[1] in record_set_kw or record[1] in record_set_title:
+			saliency_set.add(record[1])
+			# record_sal+=1
 			continue
 		for kw in keywords_list[i]:
 			if Sqm(None,kw,record[0].lower()).ratio()>=0.5:
-				record_sal+=1
+				saliency_set.add(record[1])
+				# record_sal+=1
 				break
+	record_abs+=len(record_set_abs_entity)
+	record_body+=len(record_set_body)
+	record_title+=len(record_set_title)
+	record_kw+=len(record_set_kw)
+	record_sal+=len(saliency_set)
+	record_cover+=len(cover_set)
 
 record_abs/=real_volume
 record_body/=real_volume
