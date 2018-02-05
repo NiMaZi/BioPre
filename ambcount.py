@@ -17,11 +17,12 @@ for i in range(0,volume):
 				if item[2]=="ConceptName":
 					continue
 				entity=item[2]
+				pos=item[4]
 				record_abs+=1
-			if item[2] in record_dict_abs.keys():
-				record_dict_abs[item[2]]+=1
+			if pos in record_dict_abs.keys():
+				record_dict_abs[pos]+=1
 			else:
-				record_dict_abs[item[2]]=1
+				record_dict_abs[pos]=1
 		for key in record_dict_abs.keys():
 			if record_dict_abs[key]>1:
 				amb_count+=record_dict_abs[key]
