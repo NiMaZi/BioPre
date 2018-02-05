@@ -17,7 +17,7 @@ for i in range(0,volume):
 				if item[2]=="ConceptName":
 					continue
 				entity=item[2]
-
+				record_abs+=1
 			if item[2] in record_dict_abs.keys():
 				record_dict_abs[item[2]]+=1
 			else:
