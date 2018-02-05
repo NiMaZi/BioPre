@@ -4,6 +4,7 @@ import pickle
 from difflib import SequenceMatcher as Sqm
 
 volume=int(sys.argv[1])
+real_volume=volume
 
 f=open("/home/ubuntu/results/saliency/keywords_list","rb")
 keywords_list=pickle.load(f)
@@ -30,6 +31,7 @@ for i in range(0,volume):
 				record_list_abs.append([mention,entity])
 				record_abs+=1
 	except:
+		real_volume-=1
 		continue
 	record_list_body=[]
 	try:
@@ -43,6 +45,7 @@ for i in range(0,volume):
 				record_list_body.append([mention,entity])
 				record_body+=1
 	except:
+		real_volume-=1
 		continue
 	record_list_title=[]
 	try:
@@ -56,6 +59,7 @@ for i in range(0,volume):
 				record_list_title.append([mention,entity])
 				record_title+=1
 	except:
+		real_volume-=1
 		continue
 	record_list_kw=[]
 	try:
@@ -69,6 +73,7 @@ for i in range(0,volume):
 				record_list_kw.append([mention,entity])
 				record_kw+=1
 	except:
+		real_volume-=1
 		continue
 	for record in record_list_abs:
 		if record[1] in record_list_body:
