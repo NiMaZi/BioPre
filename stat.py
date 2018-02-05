@@ -64,7 +64,7 @@ for i in range(0,volume):
 			record_sal+=1
 			continue
 		for kw in keywords_list[i]:
-			if Sqm(None,kw,record.lower()).ratio()>=0.5:
+			if Sqm(None,kw,record[0].lower()).ratio()>=0.5:
 				record_sal+=1
 				break
 
