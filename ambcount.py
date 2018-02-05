@@ -23,6 +23,7 @@ for i in range(0,volume):
 				record_dict_abs[pos]+=1
 			else:
 				record_dict_abs[pos]=1
+		print(record_dict_abs)
 		for key in record_dict_abs.keys():
 			if record_dict_abs[key]>1:
 				amb_count+=record_dict_abs[key]
