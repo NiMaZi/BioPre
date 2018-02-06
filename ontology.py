@@ -11,11 +11,16 @@ with open("/Users/yalunzheng/Downloads/NCIT.csv","r",newline='',encoding='utf-8'
 	count=0.0
 	c_count=[0.0 for i in range(0,209)]
 	semantic_types=set()
+	cids=[]
 	for item in reader:
 		if item[0]=="Class ID":
 			# c_names=item
 			continue
-		semantic_types.add(item[188])
+		if item[7]==item[0]:
+			print(item)
+			break
+		# semantic_types.add(item[188])
+		cids.append(int(item[38].split('C')[1]))
 		# for c in range (0,len(item)):
 			# if str(item[c]):
 				# c_count[c]+=1
@@ -25,14 +30,21 @@ with open("/Users/yalunzheng/Downloads/NCIT.csv","r",newline='',encoding='utf-8'
 	# print(len(semantic_types))
 	# print(semantic_types)
 
-	debined=set()
-	for st in semantic_types:
-		dst=st.split('|')
-		for d in dst:
-			debined.add(d)
+	# scids=sorted(cids)
+	# print(len(scids))
+	# print(scids[0]) 191
+	# for i in range(0,133609):
+		# if not scids[i]==(i+191):
+			# print(i,scids[i])
 
-	print(len(debined))
-	print(debined)
+	# debined=set()
+	# for st in semantic_types:
+	# 	dst=st.split('|')
+	# 	for d in dst:
+	# 		debined.add(d)
+
+	# print(len(debined))
+	# print(debined)
 	# for n in range(0,len(c_names)):
 		# if c_count[n]:
 			# print(n,c_names[n],c_count[n],c_count[n]/count)
