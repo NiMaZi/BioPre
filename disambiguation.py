@@ -9,7 +9,7 @@ import subprocess
 
 fname=['abs','body','title','keywords']
 
-for i in range(0,1):
+for i in range(0,12935):
 	for j in range(0,4):
 		subprocess.call(['java','-jar','/home/ubuntu/ner/NobleJar/NobleCoder-1.0.jar','-terminology','NCI_Thesaurus','-input','/home/ubuntu/thesiswork/kdata/'+fname[j]+str(i)+'.txt','-output','/home/ubuntu/thesiswork/kdata/disambiguation','-search','best-match','-selectBestCandidates'])
 		f=open('/home/ubuntu/thesiswork/kdata/disambiguation/RESULTS.tsv','r',encoding='utf-8')
