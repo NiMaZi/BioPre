@@ -21,8 +21,8 @@ for i in range(0,12935):
 			unamb_list.append(item.split('\t'))
 		result_list=[]
 		result_list.append(['Mention','ConceptCode','ConceptName','SemanticType','Start'])
+		unamb_list.pop(0)
 		for item in unamb_list:
-			print(item[5])
 			result_list.append([item[1],item[2],item[3],item[4],item[5].split('/')[1]])
 		f=open('/home/ubuntu/thesiswork/kdata/'+fname[j]+str(i)+'.csv','w',encoding='utf-8')
 		wr=csv.writer(f)
