@@ -83,6 +83,6 @@ for i in range(0,volume):
 print(distanced_list)
 print(sys.getsizeof(distanced_list))
 
-# dlf=open("/home/ubuntu/results/saliency/distanced.pkl","wb")
-# pickle.dump(dd,dlf)
-# dlf.close()
+dlf=open("/home/ubuntu/results_new/saliency/distanced.pkl","wb")
+pickle.dump(distanced_list,dlf)
+dlf.close()
