@@ -1,5 +1,6 @@
 import sys
 import csv
+import json
 import pickle
 
 volume=int(sys.argv[1])
@@ -83,6 +84,12 @@ for i in range(0,volume):
 print(distanced_list)
 print(sys.getsizeof(distanced_list))
 
-dlf=open("/home/ubuntu/results_new/saliency/distanced.pkl","wb")
-pickle.dump(distanced_list,dlf)
-dlf.close()
+ds=json.dumps(distanced_list)
+
+slf=open("/home/ubuntu/results_new/saliency/distanced.json","w")
+slf.write(ds)
+slf.close()
+
+# dlf=open("/home/ubuntu/results_new/saliency/distanced.pkl","wb")
+# pickle.dump(distanced_list,dlf)
+# dlf.close()
