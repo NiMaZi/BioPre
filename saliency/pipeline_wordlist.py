@@ -21,7 +21,7 @@ for item in reader:
 f.close()
 
 f=open("/home/ubuntu/results_new/ontology/word_list.json","w")
-s=json.dumps(word_list)
+s=json.dumps(list(word_list))
 f.write(s)
 f.close()
 
