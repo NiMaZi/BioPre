@@ -11,7 +11,7 @@ for i in range(0,volume):
 	print("counting on article "+str(i)+".")
 	record_dict_abs={}
 	try:
-		with open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+		with open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".csv","r",newline='',encoding='utf-8') as csvfile:
 			reader=csv.reader(csvfile)
 			for item in reader:
 				if item[2]=="ConceptName":
