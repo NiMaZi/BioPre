@@ -6,7 +6,6 @@ word_dict={}
 
 f=open("/home/ubuntu/NCIT.csv",'r',encoding='utf-8')
 reader=csv.reader(f)
-count=0
 for item in reader:
 	if item[0]=="Class ID":
 		continue
@@ -15,17 +14,12 @@ for item in reader:
 	s_type=item[188].split('|')
 	word_list.add(CID)
 	word_dict[CID]={"entity_name":entity,"semantic_type":s_type}
-	count+=1
-	if count>=10:
-		break
 f.close()
 
 f=open("/home/ubuntu/results_new/ontology/word_list.json","w")
-s=json.dumps(list(word_list))
-f.write(s)
+json.dump(list(word_list),f)
 f.close()
 
 f=open("/home/ubuntu/results_new/ontology/word_dict.json","w")
-s=json.dumps(word_dict)
-f.write(s)
+json.dump(word_dict,f)
 f.close()
