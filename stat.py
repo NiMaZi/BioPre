@@ -22,7 +22,7 @@ for i in range(0,volume):
 	record_list_abs=[]
 	record_set_abs_entity=set()
 	try:
-		with open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+		with open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".csv","r",newline='',encoding='utf-8') as csvfile:
 			reader=csv.reader(csvfile)
 			for item in reader:
 				if item[2]=="ConceptName":
@@ -37,7 +37,7 @@ for i in range(0,volume):
 		continue
 	record_set_body=set()
 	try:
-		with open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+		with open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".csv","r",newline='',encoding='utf-8') as csvfile:
 			reader=csv.reader(csvfile)
 			for item in reader:
 				if item[2]=="ConceptName":
@@ -50,7 +50,7 @@ for i in range(0,volume):
 		continue
 	record_set_title=set()
 	try:
-		with open("/home/ubuntu/thesiswork/kdata/title"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+		with open("/home/ubuntu/thesiswork/kdata/title"+str(i)+".csv","r",newline='',encoding='utf-8') as csvfile:
 			reader=csv.reader(csvfile)
 			for item in reader:
 				if item[2]=="ConceptName":
@@ -63,7 +63,7 @@ for i in range(0,volume):
 		continue
 	record_set_kw=set()
 	try:
-		with open("/home/ubuntu/thesiswork/kdata/keywords"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
+		with open("/home/ubuntu/thesiswork/kdata/keywords"+str(i)+".csv","r",newline='',encoding='utf-8') as csvfile:
 			reader=csv.reader(csvfile)
 			for item in reader:
 				if item[2]=="ConceptName":
