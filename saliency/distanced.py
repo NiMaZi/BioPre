@@ -81,6 +81,7 @@ for i in range(0,volume):
 	distanced_list.append(record)
 
 print(distanced_list)
+print(sys.getsizeof(distanced_list))
 
 # dlf=open("/home/ubuntu/results/saliency/distanced.pkl","wb")
 # pickle.dump(dd,dlf)
