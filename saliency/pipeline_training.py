@@ -106,11 +106,11 @@ fp=0.0
 fn=0.0
 
 for i in range(0,len(n_testing_y)):
-	if n_testing_y[i]==n_predicted_y_inter[i]:
-		if n_predicted_y_inter[i]==1:
+	if n_testing_y[i]==n_predicted_y[i]:
+		if n_predicted_y[i]==1:
 			tp+=1
 	else:
-		if n_predicted_y_inter[i]==1:
+		if n_predicted_y[i]==1:
 			fp+=1
 		else:
 			fn+=1
