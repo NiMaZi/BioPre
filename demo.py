@@ -82,6 +82,21 @@ f.close()
 # clf_sgd_filter=pickle.load(f)
 # f.close()
 
+def tree_distance(vec_1,vec_2):
+	distance=0.0
+	for i in range(0,len(vec_1)):
+		if not vec_1[i]==vec_2[i]:
+			for j in range(i,len(vec_1)):
+				if vec_1[j]==-1.0:
+					break
+				distance+=1.0
+			for j in range(i,len(vec_2)):
+				if vec_2[j]==-1.0:
+					break
+				distance+=1.0
+	return distance
+
+
 if test_mode==1:
 	pred_dict_rbf={}
 	max_conf_rbf=0
@@ -168,10 +183,10 @@ else:
 					continue
 				if not b_key in b_word_list:
 					continue
-				a1_tvec=np.array(b_word2tvec[a_key_1])
-				a2_tvec=np.array(b_word2tvec[a_key_2])
-				b_tvec=np.array(b_word2tvec[b_key])
-				dis_sum=np.linalg.norm(a1_tvec-b_tvec)+np.linalg.norm(a2_tvec-b_tvec)
+				a1_tvec=b_word2tvec[a_key_1]
+				a2_tvec=b_word2tvec[a_key_2]
+				b_tvec=b_word2tvec[b_key]
+				dis_sum=tree_distance(a1_tvec,b_tvec)+tree_distance(a2_tvec,b_tvec)
 				if dis_sum>taxonomy_distance:
 					continue
 				_list=[dev_mat[b_word_list.index(a_key_1)][b_word_list.index(b_key)],dev_mat[b_word_list.index(a_key_2)][b_word_list.index(b_key)]]
