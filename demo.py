@@ -9,6 +9,7 @@ from sklearn import linear_model as lm
 test_mode=int(sys.argv[1])
 article_id=int(sys.argv[2])
 confidence=float(sys.argv[3])
+taxonomy_distance=float(sys.argv[4])
 
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
 featured_list=pickle.load(f)
@@ -166,6 +167,12 @@ else:
 				if a_key_1==b_key or a_key_2==b_key:
 					continue
 				if not b_key in b_word_list:
+					continue
+				a1_tvec=np.array(b_word2tvec[a_key_1])
+				a2_tvec=np.array(b_word2tvec[a_key_2])
+				b_tvec=np.array(b_word2tvec[b_key])
+				dis_sum=np.linalg.norm(a1_tvec-b_tvec)+np.linalg.norm(a2_tvec-b_tvec)
+				if dis_sum>taxonomy_distance:
 					continue
 				_list=[dev_mat[b_word_list.index(a_key_1)][b_word_list.index(b_key)],dev_mat[b_word_list.index(a_key_2)][b_word_list.index(b_key)]]
 				_list.extend(b_word2tvec[a_key_1])
