@@ -28,7 +28,7 @@ for w in word_list:
 
 for i in range(0,volume):
 
-	f=open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".txt",'r')
+	f=open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".txt",'r',encoding='utf-8')
 	doc=f.read()
 	abs_length=len(doc)
 	f.close()
