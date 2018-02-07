@@ -99,7 +99,7 @@ n_testing_y=list(n_testing[:,5])
 
 clf_rbf=svm.SVC(kernel='rbf',gamma=(1.0/5.0),class_weight={1:(1/0.187),0:(1/0.813)})
 clf_rbf.fit(n_training_X,n_training_y)
-rbf_predicted_y=list(clf_rbf.predict(n_testing_X))
+n_predicted_y=list(clf_rbf.predict(n_testing_X))
 
 tp=0.0
 fp=0.0
