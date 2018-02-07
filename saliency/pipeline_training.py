@@ -3,8 +3,7 @@ import sys
 import json
 import math
 import pickle
-# import random
-# import numpy as np
+import numpy as np
 # from sklearn import svm
 from difflib import SequenceMatcher as Sqm
 
@@ -81,8 +80,19 @@ for i in range(0,volume):
 		samples.append([key,abs_dict[key][0],abs_dict[key][1],abs_dict[key][2]-abs_dict[key][1],abs_dict[key][3],abs_dict[key][4]])
 		key_phrase[key]+=abs_dict[key][4]
 
-training_set=[]
+sample_set=[]
 for sample in samples:
-	training_set.append([key_phrase[sample[0]]]+sample[1:])
+	sample_set.append([key_phrase[sample[0]]]+sample[1:])
 
-print(training_set)
+training_set=sample_set[0:int(len(sample_set)*0.5)]
+testing_set=sample_set[int(len(sample_set)*0.5):len(sample_set)]
+
+n_training=np.array(training_set)
+n_testing=np.array(testing_set)
+n_training_X=n_training[:,0:5]
+n_training_y=n_training[:,5]
+n_testing_X=n_testing[:,0:5]
+n_testing_y=list(n_testing[:,5])
+
+print(n_training_X)
+print(n_training_y)
