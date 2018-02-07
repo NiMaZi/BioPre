@@ -4,7 +4,7 @@ import json
 import math
 import pickle
 import numpy as np
-# from sklearn import svm
+from sklearn import svm
 from difflib import SequenceMatcher as Sqm
 
 from semantic_type import isolated_num
@@ -97,5 +97,26 @@ n_training_y=n_training[:,5]
 n_testing_X=n_testing[:,0:5]
 n_testing_y=list(n_testing[:,5])
 
-print(n_training_X)
-print(n_training_y)
+clf_rbf=svm.SVC(kernel='rbf',gamma=(1.0/5.0),class_weight={1:(1/0.187),0:(1/0.813)})
+clf_rbf.fit(n_training_X,n_training_y)
+rbf_predicted_y=list(clf_rbf.predict(n_testing_X))
+
+tp=0.0
+fp=0.0
+fn=0.0
+
+for i in range(0,len(n_testing_y)):
+	if n_testing_y[i]==n_predicted_y_inter[i]:
+		if n_predicted_y_inter[i]==1:
+			tp+=1
+	else:
+		if n_predicted_y_inter[i]==1:
+			fp+=1
+		else:
+			fn+=1
+
+P=tp/(tp+fp)
+R=tp/(tp+fn)
+F1=2*P*R/(P+R)
+
+print(P,R,F1)
