@@ -64,7 +64,10 @@ for i in range(0,volume):
 			if new_dis>abs_dict[item[1]][2]:
 				abs_dict[item[1]][2]=new_dis
 		else:
-			s_type=isolated_list.index(item[3].split('|')[0])
+			try:
+				s_type=isolated_list.index(item[3].split('|')[0])
+			except:
+				s_type=0
 			dis=float(item[4])/float(abs_length)
 			label=0
 			if item[1] in salient_mentions:
