@@ -81,7 +81,8 @@ for i in range(0,volume):
 		samples.append([key,abs_dict[key][0],abs_dict[key][1],abs_dict[key][2]-abs_dict[key][1],abs_dict[key][3],abs_dict[key][4]])
 		key_phrase[key]+=abs_dict[key][4]
 
+training_set=[]
 for sample in samples:
-	sample=[key_phrase[sample[0]]]+sample[1:]
+	training_set.append([key_phrase[sample[0]]]+sample[1:])
 
-print(samples)
+print(training_set)
