@@ -1,14 +1,14 @@
-import csv
+# import csv
 import sys
-import json
-import math
-import random
-import numpy as np
-from sklearn import svm
-from difflib import SequenceMatcher as Sqm
+# import json
+# import math
+# import random
+# import numpy as np
+# from sklearn import svm
+# from difflib import SequenceMatcher as Sqm
 
-from .semantic_type import isolated_num
-from .semantic_type import isolated_list
+from semantic_type import isolated_num
+from semantic_type import isolated_list
 
 volume=int(sys.argv[1])
 samples=[]
