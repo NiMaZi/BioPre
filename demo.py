@@ -153,8 +153,11 @@ if test_mode==1:
 else:
 	max_conf_rbf=0
 	pred_dict_rbf={}
-	for a_key_1 in abs_dict.keys():
-		for a_key_2 in abs_dict.keys():
+	abs_key_list=list(abs_dict.keys())
+	for i1 in range(0,len(abs_key_list)):
+		for i2 in range(i1,len(abs_key_list)):
+			a_key_1=abs_key_list[i1]
+			a_key_2=abs_key_list[i2]
 			if a_key_1==a_key_2:
 				continue
 			if not a_key_1 in b_word_list or not a_key_2 in b_word_list:
