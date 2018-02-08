@@ -3,7 +3,7 @@ import math
 import pickle
 import random
 import numpy as np
-from sklearn import svm
+# from sklearn import svm
 from sklearn import linear_model as lm
 
 split_ratio=float(sys.argv[1])
@@ -14,6 +14,14 @@ f.close()
 
 f=open("/home/ubuntu/results/saliency/wordlist.pkl","rb")
 word_list=pickle.load(f)
+f.close()
+
+f=open("/home/ubuntu/results/ontology/ontology_wordlist.pkl","rb")
+b_word_list=pickle.load(f)
+f.close()
+
+f=open("/home/ubuntu/results/ontology/ontology_word2taxonomy.pkl","rb")
+b_word2tvec=pickle.load(f)
 f.close()
 
 f=open("/home/ubuntu/results/saliency/idf.pkl","rb")
@@ -64,8 +72,8 @@ random.shuffle(sample_prelist)
 
 print(len(sample_prelist))
 
-clf_linear=svm.LinearSVC()
-clf_rbf=svm.SVC(gamma=0.25)
+# clf_linear=svm.LinearSVC()
+# clf_rbf=svm.SVC(gamma=0.25)
 
 clf_lr=lm.LogisticRegression()
 clf_sgd=lm.SGDClassifier()

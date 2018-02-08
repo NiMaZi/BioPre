@@ -3,8 +3,22 @@ import math
 import pickle
 import random
 import numpy as np
-from sklearn import svm
+# from sklearn import svm
 from sklearn import linear_model as lm
+
+def tree_distance(vec_1,vec_2):
+	distance=0.0
+	for i in range(0,len(vec_1)):
+		if not vec_1[i]==vec_2[i]:
+			for j in range(i,len(vec_1)):
+				if vec_1[j]==-1.0:
+					break
+				distance+=1.0
+			for j in range(i,len(vec_2)):
+				if vec_2[j]==-1.0:
+					break
+				distance+=1.0
+	return distance
 
 split_ratio=float(sys.argv[1])
 
@@ -45,13 +59,17 @@ f.close()
 pos_list=[]
 neg_prelist=[]
 count=0
+t_count=0
 clf_sgd=lm.SGDClassifier()
 
 for i in range(0,int(len(featured_list)*split_ratio)):
 	abs_dict=featured_list[i]['abs']
 	body_dict=featured_list[i]['body']
-	for a_key_1 in abs_dict.keys():
-		for a_key_2 in abs_dict.keys():
+	abs_elist=list(abs_dict.keys())
+	for i1 in range(0,len(abs_elist)):
+		for i2 in range(i1,len(abs_elist)):
+			a_key_1=abs_elist[i1]
+			a_key_2=abs_elist[i2]
 			if a_key_1==a_key_2:
 				continue
 			if not a_key_1 in word_list or not a_key_2 in word_list:
@@ -62,35 +80,50 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 			for b_key in word_list:
 				if a_key_1==b_key or a_key_2==b_key:
 					continue
+				disa1a2=tree_distance(word2tvec[a_key_1],word2tvec[a_key_2])
+				disa1b=tree_distance(word2tvec[a_key_1],word2tvec[b_key])
+				disa2b=tree_distance(word2tvec[a_key_2],word2tvec[b_key])
+				try:
+					_list=[dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_2)][word_list.index(b_key)]]
+				except:
+					_list=[0.0,0.0]
+				_list.extend([disa1a2,disa1b,disa2b])
+				_list.extend(word2tvec[a_key_1])
+				_list.extend(word2tvec[a_key_2])
+				_list.extend(word2tvec[b_key])
 				if b_key in body_dict.keys():
 					label=1
-					_list=[dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_2)][word_list.index(b_key)]]
-					_list.extend(word2tvec[a_key_1])
-					_list.extend(word2tvec[a_key_2])
 					_list.append(label)
-					_list.extend([a_key_1,a_key_2,b_key])
 					pos_list.append(_list)
-					# pos_list.append([centrality[a_key_1],centrality[a_key_2],centrality[b_key],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],pred_saliency_1,pred_saliency_2,label])
 				else:
 					label=0
-					_list=[dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_2)][word_list.index(b_key)]]
-					_list.extend(word2tvec[a_key_1])
-					_list.extend(word2tvec[a_key_2])
+					# _list=[dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_2)][word_list.index(b_key)]]
+					# _list.extend(word2tvec[a_key_1])
+					# _list.extend(word2tvec[a_key_2])
+					# _list.extend(word2tvec[b_key])
 					_list.append(label)
-					_list.extend([a_key_1,a_key_2,b_key])
+					# _list.extend([a_key_1,a_key_2,b_key])
+					# pos_list.append(_list)
+					# pos_list.append([centrality[a_key_1],centrality[a_key_2],centrality[b_key],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],pred_saliency_1,pred_saliency_2,label])
+				# else:
+				# 	label=0
+					# _list=[dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_2)][word_list.index(b_key)]]
+					# _list.extend(word2tvec[a_key_1])
+					# _list.extend(word2tvec[a_key_2])
+					# _list.append(label)
+					# _list.extend([a_key_1,a_key_2,b_key])
 					neg_prelist.append(_list)
 					# neg_prelist.append([centrality[a_key_1],centrality[a_key_2],centrality[b_key],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],pred_saliency_1,pred_saliency_2,label])
 				# print(count,a_key_1,a_key_2,b_key,label)
 				count+=1
+				t_count+=1
 	if count>partial_volume:
+		# sample_prelist=pos_list+neg_prelist
 		sample_prelist=random.sample(neg_prelist,len(pos_list))
 		sample_prelist.extend(pos_list)
 		# random.shuffle(sample_prelist)
-		outlog=random.sample(sample_prelist,100)
+		# outlog=random.sample(sample_prelist,100)
 		tlen=len(sample_prelist[0])
-		for l in outlog:
-			print(l[tlen-4],l[tlen-3],l[tlen-2],l[tlen-1])
-		sys.exit(0)
 
 # print(len(sample_prelist))
 
@@ -124,6 +157,7 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 # pickle.dump(clf_lr,f)
 # f.close()
 
-f=open("/home/ubuntu/results/coclf/b_clf_sgd_test.pkl","wb")
-pickle.dump(clf_sgd,f)
-f.close()
+print(t_count)
+# f=open("/home/ubuntu/results/coclf/b_clf_sgd_test_dis.pkl","wb")
+# pickle.dump(clf_sgd,f)
+# f.close()
