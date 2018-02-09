@@ -87,9 +87,6 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 				except:
 					_list=[0.0,0.0]
 				_list.extend([disa1a2,disa1b,disa2b])
-				_list.extend(word2tvec[a_key_1])
-				_list.extend(word2tvec[a_key_2])
-				_list.extend(word2tvec[b_key])
 				if b_key in body_dict.keys():
 					label=1
 					_list.append(label)
@@ -115,7 +112,7 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 		neg_prelist=[]
 		count=0
 
-f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis.pkl","wb")
+f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis_minusvec.pkl","wb")
 pickle.dump(clf_sgd,f)
 f.close()
 print(sys.argv[0])
