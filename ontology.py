@@ -2,10 +2,32 @@ import csv
 import sys
 import pickle
 import numpy as np
+from scipy.sparse import lil_matrix
 
+pre_dict={}
 prelist=[]
 word_list=[]
 id2name={}
+word_list=["http://www.w3.org/2002/07/owl#Thing"]
+
+def walk(index,length):
+	# global max_length
+	if index=="http://www.w3.org/2002/07/owl#Thing":
+		if length>17:
+			# global max_length
+			# max_length=length
+			print(length)
+		return
+	if not index in pre_dict.keys():
+		# print("out of ontology.\n")
+		# print(index)
+		return
+	# print(length,pre_dict[index][0])
+	p_index_list=pre_dict[index][1].split('|')
+	for p_index in p_index_list:
+		walk(p_index,length+1)
+
+
 
 with open("/Users/yalunzheng/Downloads/NCIT.csv","r",newline='',encoding='utf-8') as csvfile:
 	reader=csv.reader(csvfile)
@@ -15,71 +37,30 @@ with open("/Users/yalunzheng/Downloads/NCIT.csv","r",newline='',encoding='utf-8'
 	semantic_types=set()
 	cids=[]
 	for item in reader:
-		if item[38]=="C50362":
-			print(item)
-			sys.exit(0)
 		if item[0]=="Class ID":
-			c_names=item
 			continue
-		# if item[7]==item[0]:
-		# 	print(item)
-		# 	break
-		# semantic_types.add(item[188])
-		# cids.append(int(item[38].split('C')[1]))
-		for c in range (0,len(item)):
-			if str(item[c]):
-				c_types[c]=item[c]
-				c_count[c]+=1
-			# print(c_name,item.index(c_name))
-		count+=1
-	# print(count)
-	# print(len(semantic_types))
-	# print(semantic_types)
+		word_list.append(item[0])
+		prelist.append([item[0],item[1],item[7]])
+		pre_dict[item[0]]=[item[1],item[7]]
 
-	# scids=sorted(cids)
-	# print(len(scids))
-	# print(scids[0]) 191
-	# for i in range(0,133609):
-		# if not scids[i]==(i+191):
-			# print(i,scids[i])
-
-	# debined=set()
-	# for st in semantic_types:
-	# 	dst=st.split('|')
-	# 	for d in dst:
-	# 		debined.add(d)
-
-	# print(len(debined))
-	# print(debined)
-	ff=open("/Users/yalunzheng/Downloads/NCITsample.csv",'w',encoding='utf-8')
-	wr=csv.writer(ff)
-	for n in range(0,len(c_names)):
-		if c_count[n]:
-			print(n,c_names[n],c_count[n],c_count[n]/count,c_types[n])
-			wr.writerow([n,c_names[n],c_count[n],c_count[n]/count,c_types[n]])
-	ff.close()
-		# if count>0:
-			# break
-		# if item[0]=='Class ID':
-		# 	continue
-		# id2name[item[0]]=item[1]
-		# word_list.append(item[1])
-		# prelist.append([item[0],item[1],item[7]])
+ontology_dmat=lil_matrix((133610,133610))
+print(type(ontology_dmat))
 
 # ontology_dmat=np.zeros((len(prelist),len(prelist))) # directed
 # ontology_nmat=np.zeros((len(prelist),len(prelist))) # non-directed
 
 # miss_count=0
 # root=0
-# for i in range(0,len(prelist)):
-# 	if not prelist[i][2]:
-# 		root=i
-# 		continue
-# 	_list=prelist[i][2].split('|')
-# 	for item in _list:
-# 		ontology_dmat[word_list.index(id2name[item])][word_list.index(prelist[i][1])]=1
-# 		ontology_nmat[word_list.index(id2name[item])][word_list.index(prelist[i][1])]=1
-# 		ontology_nmat[word_list.index(prelist[i][1])][word_list.index(id2name[item])]=1
+for i in range(0,len(prelist)):
+	print(i)
+	_list=prelist[i][2].split('|')
+	for item in _list:
+		# print(word_list.index(item),word_list.index(prelist[i][0]))
+		ontology_dmat[word_list.index(item),word_list.index(prelist[i][0])]=1
+		# ontology_nmat[word_list.index(id2name[item])][word_list.index(prelist[i][1])]=1
+		# ontology_nmat[word_list.index(prelist[i][1])][word_list.index(id2name[item])]=1
+
+print(sys.getsizeof(ontology_dmat))
 
 # print(root)
 

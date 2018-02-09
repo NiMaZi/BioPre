@@ -230,7 +230,7 @@ elif test_mode==2:
 
 	print("\033[0m\nprecision=%.2f,recall=%.2f."%(P,R))
 else:
-	f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis.pkl","rb")
+	f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis_minusvec.pkl","rb")
 	b_clf_sgd=pickle.load(f)
 	f.close()
 	max_conf_rbf=0
@@ -263,9 +263,9 @@ else:
 				except:
 					_list=[0.0,0.0]
 				_list.extend([disa1a2,disa1b,disa2b])
-				_list.extend(a1_tvec)
-				_list.extend(a2_tvec)
-				_list.extend(b_tvec)
+				# _list.extend(a1_tvec)
+				# _list.extend(a2_tvec)
+				# _list.extend(b_tvec)
 				sample_input=np.array([_list])
 				pred_label_rbf=list(b_clf_sgd.predict(sample_input))[0]
 				if pred_label_rbf==1:
