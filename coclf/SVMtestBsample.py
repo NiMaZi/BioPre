@@ -80,9 +80,9 @@ while confidence<1.0:
 				for b_key in word_list:
 					if a_key_1==b_key or a_key_2==b_key:
 						continue
-					a1_tvec=b_word2tvec[a_key_1]
-					a2_tvec=b_word2tvec[a_key_2]
-					b_tvec=b_word2tvec[b_key]
+					a1_tvec=word2tvec[a_key_1]
+					a2_tvec=word2tvec[a_key_2]
+					b_tvec=word2tvec[b_key]
 					disa1a2=tree_distance(a1_tvec,a2_tvec)
 					disa1b=tree_distance(a1_tvec,b_tvec)
 					disa2b=tree_distance(a2_tvec,b_tvec)
