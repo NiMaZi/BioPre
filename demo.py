@@ -166,7 +166,7 @@ if test_mode==1:
 			print("\033[0m"+entity)
 
 	print("\033[0m\nprecision=%.2f,recall=%.2f."%(P,R))
-else:
+else if test_mode==2:
 	max_conf_rbf=0
 	pred_dict_rbf={}
 	abs_key_list=list(abs_dict.keys())
@@ -192,6 +192,80 @@ else:
 				_list=[dev_mat[b_word_list.index(a_key_1)][b_word_list.index(b_key)],dev_mat[b_word_list.index(a_key_2)][b_word_list.index(b_key)]]
 				_list.extend(b_word2tvec[a_key_1])
 				_list.extend(b_word2tvec[a_key_2])
+				sample_input=np.array([_list])
+				pred_label_rbf=list(b_clf_sgd.predict(sample_input))[0]
+				if pred_label_rbf==1:
+					if b_key in pred_dict_rbf.keys():
+						pred_dict_rbf[b_key]+=1.0
+						if pred_dict_rbf[b_key]>max_conf_rbf:
+							max_conf_rbf=pred_dict_rbf[b_key]
+					else:
+						pred_dict_rbf[b_key]=1.0
+						if pred_dict_rbf[b_key]>max_conf_rbf:
+							max_conf_rbf=pred_dict_rbf[b_key]
+	for key in pred_dict_rbf.keys():
+		pred_dict_rbf[key]/=max_conf_rbf
+	pred_set_rbf=set(abs_dict.keys())
+	for key in pred_dict_rbf.keys():
+		if pred_dict_rbf[key]>confidence:
+			pred_set_rbf.add(key)
+	real_set=set(body_dict.keys())
+	tp=len(pred_set_rbf&real_set)
+	fp=len(pred_set_rbf-(pred_set_rbf&real_set))
+	fn=len(real_set-(real_set&pred_set_rbf))
+	try:
+		P=tp/(tp+fp)
+	except:
+		P=0.0
+	try:
+		R=tp/(tp+fn)
+	except:
+		R=0.0
+
+	for entity in pred_set_rbf:
+		if entity in body_dict.keys():
+			print("\033[1;31m"+entity)
+		else:
+			print("\033[0m"+entity)
+
+	print("\033[0m\nprecision=%.2f,recall=%.2f."%(P,R))
+else:
+	f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis.pkl","rb")
+	b_clf_sgd=pickle.load(f)
+	f.close()
+	max_conf_rbf=0
+	pred_dict_rbf={}
+	abs_key_list=list(abs_dict.keys())
+	for i1 in range(0,len(abs_key_list)):
+		for i2 in range(i1,len(abs_key_list)):
+			a_key_1=abs_key_list[i1]
+			a_key_2=abs_key_list[i2]
+			if a_key_1==a_key_2:
+				continue
+			if not a_key_1 in b_word_list or not a_key_2 in b_word_list:
+				continue
+			for b_key in word_list:
+				if a_key_1==b_key or a_key_2==b_key:
+					continue
+				if not b_key in b_word_list:
+					continue
+				a1_tvec=b_word2tvec[a_key_1]
+				a2_tvec=b_word2tvec[a_key_2]
+				b_tvec=b_word2tvec[b_key]
+				disa1a2=tree_distance(a1_tvec,a2_tvec)
+				disa1b=tree_distance(a1_tvec,b_tvec)
+				disa2b=tree_distance(a2_tvec,b_tvec)
+				# dis_sum=tree_distance(a1_tvec,b_tvec)+tree_distance(a2_tvec,b_tvec)
+				# if dis_sum>taxonomy_distance:
+				# 	continue
+				try:
+					_list=[dev_mat[b_word_list.index(a_key_1)][b_word_list.index(b_key)],dev_mat[b_word_list.index(a_key_2)][b_word_list.index(b_key)]]
+				except:
+					_list=[0.0,0.0]
+				_list.extend([disa1a2,disa1b,disa2b])
+				_list.extend(a1_tvec)
+				_list.extend(a2_tvec)
+				_list.extend(b_tvec)
 				sample_input=np.array([_list])
 				pred_label_rbf=list(b_clf_sgd.predict(sample_input))[0]
 				if pred_label_rbf==1:

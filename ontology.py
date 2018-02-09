@@ -1,4 +1,5 @@
 import csv
+import sys
 import pickle
 import numpy as np
 
@@ -10,22 +11,27 @@ with open("/Users/yalunzheng/Downloads/NCIT.csv","r",newline='',encoding='utf-8'
 	reader=csv.reader(csvfile)
 	count=0.0
 	c_count=[0.0 for i in range(0,209)]
+	c_types=['none' for i in range(0,209)]
 	semantic_types=set()
 	cids=[]
 	for item in reader:
-		if item[0]=="Class ID":
-			# c_names=item
-			continue
-		if item[7]==item[0]:
+		if item[38]=="C50362":
 			print(item)
-			break
+			sys.exit(0)
+		if item[0]=="Class ID":
+			c_names=item
+			continue
+		# if item[7]==item[0]:
+		# 	print(item)
+		# 	break
 		# semantic_types.add(item[188])
-		cids.append(int(item[38].split('C')[1]))
-		# for c in range (0,len(item)):
-			# if str(item[c]):
-				# c_count[c]+=1
+		# cids.append(int(item[38].split('C')[1]))
+		for c in range (0,len(item)):
+			if str(item[c]):
+				c_types[c]=item[c]
+				c_count[c]+=1
 			# print(c_name,item.index(c_name))
-		# count+=1
+		count+=1
 	# print(count)
 	# print(len(semantic_types))
 	# print(semantic_types)
@@ -45,9 +51,13 @@ with open("/Users/yalunzheng/Downloads/NCIT.csv","r",newline='',encoding='utf-8'
 
 	# print(len(debined))
 	# print(debined)
-	# for n in range(0,len(c_names)):
-		# if c_count[n]:
-			# print(n,c_names[n],c_count[n],c_count[n]/count)
+	ff=open("/Users/yalunzheng/Downloads/NCITsample.csv",'w',encoding='utf-8')
+	wr=csv.writer(ff)
+	for n in range(0,len(c_names)):
+		if c_count[n]:
+			print(n,c_names[n],c_count[n],c_count[n]/count,c_types[n])
+			wr.writerow([n,c_names[n],c_count[n],c_count[n]/count,c_types[n]])
+	ff.close()
 		# if count>0:
 			# break
 		# if item[0]=='Class ID':
