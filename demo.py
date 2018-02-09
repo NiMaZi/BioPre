@@ -166,7 +166,7 @@ if test_mode==1:
 			print("\033[0m"+entity)
 
 	print("\033[0m\nprecision=%.2f,recall=%.2f."%(P,R))
-else if test_mode==2:
+elif test_mode==2:
 	max_conf_rbf=0
 	pred_dict_rbf={}
 	abs_key_list=list(abs_dict.keys())
