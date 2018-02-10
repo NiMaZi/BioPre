@@ -30,6 +30,10 @@ f=open("/home/ubuntu/results/ontology/ontology_wordlist.pkl","rb")
 word_list=pickle.load(f)
 f.close()
 
+f=open("/home/ubuntu/results/saliency/wordlist.pkl","rb")
+t_word_list=pickle.load(f)
+f.close()
+
 f=open("/home/ubuntu/results/ontology/ontology_word2taxonomy.pkl","rb")
 word2tvec=pickle.load(f)
 f.close()
@@ -77,8 +81,10 @@ while confidence<1.0:
 					continue
 				if not a_key_1 in word_list or not a_key_2 in word_list:
 					continue
-				for b_key in word_list:
+				for b_key in t_word_list:
 					if a_key_1==b_key or a_key_2==b_key:
+						continue
+					if not b_key in word_list:
 						continue
 					a1_tvec=word2tvec[a_key_1]
 					a2_tvec=word2tvec[a_key_2]
