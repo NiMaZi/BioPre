@@ -82,3 +82,11 @@ for i in range(0,volume):
 					continue
 	except:
 		continue
+
+f=open("/home/ubuntu/results_new/ontology/word_count.json",'w',encoding='utf-8')
+json.dump(word_count,f)
+f.close()
+
+f=open("/home/ubuntu/results_new/ontology/semantic_count.json",'w',encoding='utf-8')
+json.dump(semantic_count,f)
+f.close()
