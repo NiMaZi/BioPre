@@ -27,8 +27,8 @@ for i in range(0,volume):
 			mention_set.add(item[1])
 	for j1 in range(0,len(mention_set)):
 		for j2 in range(j1,len(mention_set)):
-			mention1=list(mention_set[j1])
-			mention2=list(mention_set[j2])
+			mention1=list(mention_set)[j1]
+			mention2=list(mention_set)[j2]
 			if mention1==mention2:
 				continue
 			m_index1=wlid.index("http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"+mention1)
