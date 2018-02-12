@@ -31,6 +31,7 @@ for i in range(0,volume):
 			mention2=list(mention_set)[j2]
 			if mention1==mention2:
 				continue
+			print(mention1,mention2)
 			m_index1=wlid.index("http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"+mention1)
 			m_index2=wlid.index("http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"+mention2)
 			if m_index1<m_index2:
