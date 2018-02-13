@@ -1,6 +1,7 @@
 import csv
 import sys
 import json
+import numpy as np
 from keras.models import Sequential
 from keras.layers import LSTM, SimpleRNN, Dense
 
