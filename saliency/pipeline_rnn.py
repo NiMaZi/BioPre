@@ -30,14 +30,12 @@ def build_data(_volume,_chunk):
 			if len(time_steps)>=_chunk:
 				seq_list.append(time_steps)
 				time_steps=[]
-		seq_list.append(time_steps)
-	# print(seq_list)
-	# for seq in seq_list:
-	# 	if len(seq)==0:
-	# 		del seq
-	# 	if len(seq)<_chunk:
-	# 		seq.append([[-1.0 for i in range(0,len(seq[0]))] for i in range(0,_chunk-len(seq))])
-	# print(seq_list)
+		if time_steps:
+			seq_list.append(time_steps)
+	for seq in seq_list:
+		if len(seq)<_chunk:
+			for i in range(0,_chunk-len(seq)):
+				seq.append([-1.0 for i in range(0,len(seq[0]))])
 	print(len(seq_list),len(seq_list[0]),len(seq_list[0][0]))
 	N_train=np.array(seq_list)
 	print(N_train.shape)
