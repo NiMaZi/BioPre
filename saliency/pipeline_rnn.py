@@ -31,6 +31,7 @@ def build_data(_volume,_chunk):
 				seq_list.append(time_steps)
 				time_steps=[]
 		seq_list.append(time_steps)
+	print(seq_list)
 	for seq in seq_list:
 		if len(seq)==0:
 			del seq
@@ -40,8 +41,8 @@ def build_data(_volume,_chunk):
 	print(N_train.shape)
 	X_train=N_train[:,:_chunk-1,:]
 	y_train=N_train[:,_chunk-1,:]
-	input_dim=len(seq[0][0])
-	input_length=len(seq[0])
+	input_dim=len(seq_list[0][0])
+	input_length=len(seq_list[0])
 	return X_train,y_train,input_dim,input_length
 
 if __name__=="__main__":
