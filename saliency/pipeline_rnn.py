@@ -9,7 +9,7 @@ def build_model(_input_dim,_input_length):
 	model.compile(optimizer='rmsprop',loss='binary_crossentropy')
 	return model
 
-def build_data(_volume,_chunk)
+def build_data(_volume,_chunk):
 	fp=open("/home/ubuntu/results_new/ontology/word2tvec.json",'r',encoding='utf-8')
 	word2tvec=json.load(fp)
 	fp.close()
