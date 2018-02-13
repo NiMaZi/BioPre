@@ -48,14 +48,16 @@ def build_data(_volume,_chunk,_split):
 	return X_train,y_train,X_test,y_test,input_dim,input_length
 
 if __name__=="__main__":
-	if len(sys.argv)<4:
-		print("Usage: -volume -chunk-size -split-rate.\n")
+	if len(sys.argv)<6:
+		print("Usage: -volume -chunk-size -split-rate -batch-size -epoch.\n")
 		sys.exit(0)
 	volume=int(sys.argv[1])
 	chunk=int(sys.argv[2])
 	split=float(sys.argv[3])
+	batch=int(sys.argv[4])
+	epoch=int(sys.argv[5])
 	X_train,y_train,X_test,y_test,input_dim,input_length=build_data(volume,chunk,split)
 	model=build_model(input_dim,input_length)
-	model.fit(X_train,y_train)
-	score=model.evaluate(X_test,y_test)
+	model.fit(X_train,y_train,batch_size=batch,epochs=epoch)
+	score=model.evaluate(X_test,y_test,batch_size=batch)
 	print(score)
