@@ -11,7 +11,7 @@ def build_model(_input_dim,_input_length):
 	model.compile(optimizer='rmsprop',loss='binary_crossentropy')
 	return model
 
-def build_data(_volume,_chunk):
+def build_data(_volume,_chunk,_split):
 	fp=open("/home/ubuntu/results_new/ontology/word2tvec.json",'r',encoding='utf-8')
 	word2tvec=json.load(fp)
 	fp.close()
@@ -36,22 +36,26 @@ def build_data(_volume,_chunk):
 		if len(seq)<_chunk:
 			for i in range(0,_chunk-len(seq)):
 				seq.append([-1.0 for i in range(0,len(seq[0]))])
-	print(len(seq_list),len(seq_list[0]),len(seq_list[0][0]))
-	N_train=np.array(seq_list)
-	print(N_train.shape)
+	N_all=np.array(seq_list)
+	N_train=N_all[:int(_split*len(seq_list)),:,:]
+	N_test=N_all[int(_split*len(seq_list)):,:,:]
 	X_train=N_train[:,:_chunk-1,:]
 	y_train=N_train[:,_chunk-1,:]
+	X_test=N_test[:,:_chunk-1,:]
+	y_test=N_test[:,_chunk-1,:]
 	input_dim=len(seq_list[0][0])
 	input_length=len(seq_list[0])
-	return X_train,y_train,input_dim,input_length
+	return X_train,y_train,X_test,y_test,input_dim,input_length
 
 if __name__=="__main__":
-	if len(sys.argv)<3:
-		print("Usage: -volume -chunk-size.\n")
+	if len(sys.argv)<4:
+		print("Usage: -volume -chunk-size -split-rate.\n")
 		sys.exit(0)
 	volume=int(sys.argv[1])
 	chunk=int(sys.argv[2])
-	X_train,y_train,input_dim,input_length=build_data(volume,chunk)
-	print(X_train.shape,y_train.shape,input_dim,input_length)
-	# model=build_model(input_dim,input_length)
-	# model.fit(X_train,y_train)
+	split=float(sys.argv[3])
+	X_train,y_train,X_test,y_test,input_dim,input_length=build_data(volume,chunk,split)
+	model=build_model(input_dim,input_length)
+	model.fit(X_train,y_train)
+	score=model.evaluate(X_test,y_test)
+	print(score)
