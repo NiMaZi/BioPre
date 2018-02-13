@@ -38,6 +38,7 @@ def build_data(_volume,_chunk):
 	# 	if len(seq)<_chunk:
 	# 		seq.append([[-1.0 for i in range(0,len(seq[0]))] for i in range(0,_chunk-len(seq))])
 	# print(seq_list)
+	print(len(seq_list,seq_list[0],seq_list[0][0]))
 	N_train=np.array(seq_list)
 	print(N_train.shape)
 	X_train=N_train[:,:_chunk-1,:]
