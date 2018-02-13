@@ -43,8 +43,8 @@ def build_data(_volume,_chunk,_split):
 	y_train=N_train[:,_chunk-1,:]
 	X_test=N_test[:,:_chunk-1,:]
 	y_test=N_test[:,_chunk-1,:]
-	input_dim=len(seq_list[0][0])
-	input_length=len(seq_list[0])
+	input_dim=X_train.shape[2]
+	input_length=X_train.shape[1]
 	return X_train,y_train,X_test,y_test,input_dim,input_length
 
 if __name__=="__main__":
