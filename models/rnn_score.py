@@ -49,6 +49,8 @@ def test_corpus(_offset,_volume,_chunk,_model):
 		X_in=N_all[:,:_chunk-1,:]
 		y_out=_model.predict(X_in)
 		print(y_out.shape)
+		for pvec in y_out:
+			print(decode(pvec))
 
 if __name__ == '__main__':
 	offset=int(sys.argv[1])
