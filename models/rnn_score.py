@@ -25,7 +25,7 @@ def test_corpus(_offset,_volume,_chunk,_model):
 	fp=open("/home/ubuntu/results_new/ontology/word_dict.json",'r',encoding='utf-8')
 	word_dict=json.load(fp)
 	fp.close()
-	for i in range(_offset,_volume):
+	for i in range(_offset,_offset+_volume):
 		seq_list=[]
 		wseq_list=[]
 		time_steps=[]
