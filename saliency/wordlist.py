@@ -13,7 +13,7 @@ f.close()
 
 word_count={}
 
-listed_word_set=[]
+# listed_word_set=[]
 
 for entry in dis_list:
 
@@ -21,37 +21,37 @@ for entry in dis_list:
 
 	_list=entry['abs']
 	for item in _list:
-		if item in word_count.keys():
-			word_count[item]+=1.0
+		if item[1] in word_count.keys():
+			word_count[item[1]]+=1.0
 		else:
-			word_count[item]=1.0
+			word_count[item[1]]=1.0
 		# entry_set.add(item[1])
 
 	_list=entry['body']
 	for item in _list:
-		if item in word_count.keys():
-			word_count[item]+=1.0
+		if item[1] in word_count.keys():
+			word_count[item[1]]+=1.0
 		else:
-			word_count[item]=1.0
+			word_count[item[1]]=1.0
 		# entry_set.add(item[1])
 
 	_list=entry['title']
 	for item in _list:
-		if item in word_count.keys():
-			word_count[item]+=1.0
+		if item[1] in word_count.keys():
+			word_count[item[1]]+=1.0
 		else:
-			word_count[item]=1.0
+			word_count[item[1]]=1.0
 		# entry_set.add(item[1])
 
 	_list=entry['keywords']
 	for item in _list:
-		if item in word_count.keys():
-			word_count[item]+=1.0
+		if item[1] in word_count.keys():
+			word_count[item[1]]+=1.0
 		else:
-			word_count[item]=1.0
+			word_count[item[1]]=1.0
 		# entry_set.add(item[1])
 
-	listed_word_set.append(entry_set)
+	# listed_word_set.append(entry_set)
 
 # print(len(word_list))
 
