@@ -12,6 +12,8 @@ def decode(_vec,_dict):
 	min_dist=np.inf
 	target_word=''
 	for w in _dict.keys():
+		print(_vec)
+		print(np.array(_dict[w]))
 		dist=np.linalg.norm(_vec,np.array(_dict[w]))
 		if dist<min_dist:
 			min_dist=dist
