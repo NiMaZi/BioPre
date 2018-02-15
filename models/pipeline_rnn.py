@@ -68,5 +68,5 @@ if __name__=="__main__":
 	model.fit(X_train,y_train,batch_size=batch,epochs=epoch)
 	score=model.evaluate(X_test,y_test,batch_size=batch)
 	print(score)
-	path="/home/ubuntu/results_new/models/SimpleRNN.h5"
+	path="/home/ubuntu/results_new/models/LSTM.h5"
 	save_model(model,path)
