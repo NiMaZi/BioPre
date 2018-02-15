@@ -16,7 +16,7 @@ def decode(_vec,_dict):
 		if dist<min_dist:
 			min_dist=dist
 			target_word=w
-	return w
+	return target_word
 
 def test_corpus(_offset,_volume,_chunk,_model):
 	fp=open("/home/ubuntu/results_new/ontology/word2tvec.json",'r',encoding='utf-8')
