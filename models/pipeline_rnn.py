@@ -47,8 +47,8 @@ def build_data(_volume,_chunk,_split):
 	input_length=X_train.shape[1]
 	return X_train,y_train,X_test,y_test,input_dim,input_length
 
-def save_model(model,path):
-	model.save(path)
+def save_model(_model,_path):
+	_model.save(_path)
 
 if __name__=="__main__":
 	if len(sys.argv)<6:
