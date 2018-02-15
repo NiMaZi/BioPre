@@ -8,13 +8,15 @@ def load_trained_model(_path):
 	model=load_model(_path)
 	return model
 
-def test_corpus(_volume,_chunk,_model):
+def test_corpus(_offset,_volume,_chunk,_model):
 	fp=open("/home/ubuntu/results_new/ontology/word2tvec.json",'r',encoding='utf-8')
 	word2tvec=json.load(fp)
 	fp.close()
-	for i in range(0,_volume):
+	for i in range(_offset,_volume):
 		seq_list=[]
+		wseq_list=[]
 		time_steps=[]
+		wtime_steps=[]
 		f=open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".csv",'r',encoding='utf-8')
 		rd=csv.reader(f)
 		for item in rd:
@@ -39,6 +41,8 @@ def test_corpus(_volume,_chunk,_model):
 		print(y_out)
 
 if __name__ == '__main__':
+	offset=int(sys.argv[1])
+	volume=int(sys.argv[2])
 	path="/home/ubuntu/results_new/models/SimpleRNN.h5"
 	model=load_trained_model(path)
-	test_corpus(1,10,model)
+	test_corpus(offset,volume,10,model)
