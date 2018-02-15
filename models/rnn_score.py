@@ -57,7 +57,7 @@ def test_corpus(_offset,_volume,_chunk,_model):
 		y_out=_model.predict(X_in)
 		print(y_out.shape)
 		for p in range(0,y_out.shape[0]):
-			print(word_dict[p])
+			print(wseq_list[p])
 			print(word_dict[decode(y_out[p],word2tvec)]['entity_name'])
 
 if __name__ == '__main__':
