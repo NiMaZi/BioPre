@@ -3,11 +3,15 @@ import sys
 import json
 import numpy as np
 from keras.models import Sequential
-from keras.layers import LSTM, SimpleRNN, Dense
+from keras.layers import LSTM, Dense, Reshape
 
 def build_model(_input_dim,_input_length):
 	model=Sequential()
-	model.add(SimpleRNN(_input_dim,input_dim=_input_dim,input_length=_input_length,return_sequences=False,activation="relu"))
+	model.add(LSTM(_input_dim,input_dim=_input_dim,input_length=_input_length,return_sequences=True,activation="relu"))
+	model.add(Reshape((_input_length*_input_dim,), input_shape=(_input_length,_input_dim)))
+	model.add(Dense(_input_dim*_input_length,input_dim=_input_dim*_input_length))
+	model.add(Reshape((_input_length,_input_dim), input_shape=(_input_dim*_input_length,)))
+	model.add(LSTM(_input_dim,input_dim=_input_dim,input_length=_input_length,return_sequences=False,activation="relu"))
 	model.compile(optimizer='rmsprop',loss='binary_crossentropy')
 	return model
 
