@@ -63,7 +63,7 @@ def test_corpus(_offset,_volume,_chunk,_model):
 if __name__ == '__main__':
 	offset=int(sys.argv[1])
 	volume=int(sys.argv[2])
-	path="/home/ubuntu/results_new/models/SimpleRNN.h5"
+	path="/home/ubuntu/results_new/models/LSTM.h5"
 	model=load_trained_model(path)
 	chunk=model.layers[0].get_config()['batch_input_shape'][1]
 	test_corpus(offset,volume,chunk,model)
