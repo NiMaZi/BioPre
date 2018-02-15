@@ -53,6 +53,8 @@ for entry in dis_list:
 
 	# listed_word_set.append(entry_set)
 
+
+
 # print(len(word_list))
 
 # idf=[]
@@ -64,6 +66,13 @@ for entry in dis_list:
 # 		if word in doc:
 # 			d_count+=1
 # 	idf.append(np.log(float(volume)/float(1.0+d_count)))
+
+f=open("/home/ubuntu/results/saliency/w_count.pkl","wb")
+pickle.dump(word_count,f)
+f.close()
+
+for key in word_count.keys():
+	word_count[key]/=len(dis_list)
 
 f=open("/home/ubuntu/results/saliency/wf_count.pkl","wb")
 pickle.dump(word_count,f)
