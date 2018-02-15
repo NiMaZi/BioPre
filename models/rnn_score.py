@@ -53,7 +53,7 @@ def test_corpus(_offset,_volume,_chunk,_model):
 				for i in range(0,_chunk-len(seq)):
 					seq.append([-1.0 for i in range(0,len(seq[0]))])
 		N_all=np.array(seq_list)
-		X_in=N_all[:,:_chunk-1,:]
+		X_in=N_all[:,:_chunk,:]
 		y_out=_model.predict(X_in)
 		print(y_out.shape)
 		for p in range(0,y_out.shape[0]):
@@ -65,4 +65,5 @@ if __name__ == '__main__':
 	volume=int(sys.argv[2])
 	path="/home/ubuntu/results_new/models/SimpleRNN.h5"
 	model=load_trained_model(path)
-	test_corpus(offset,volume,11,model)
+	chunk=model.layers[0].get_config()['batch_input_shape'][1]
+	test_corpus(offset,volume,chunk,model)
