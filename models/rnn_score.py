@@ -65,4 +65,4 @@ if __name__ == '__main__':
 	volume=int(sys.argv[2])
 	path="/home/ubuntu/results_new/models/SimpleRNN.h5"
 	model=load_trained_model(path)
-	test_corpus(offset,volume,10,model)
+	test_corpus(offset,volume,11,model)
