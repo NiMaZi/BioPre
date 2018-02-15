@@ -8,6 +8,16 @@ def load_trained_model(_path):
 	model=load_model(_path)
 	return model
 
+def decode(_vec):
+	min_dist=np.inf
+	target_word=''
+	for w in word2tvec.keys():
+		dist=np.linalg.norm(_vec,np.array(word2tvec[w]))
+		if dist<min_dist:
+			min_dist=dist
+			target_word=w
+	return w
+
 def test_corpus(_offset,_volume,_chunk,_model):
 	fp=open("/home/ubuntu/results_new/ontology/word2tvec.json",'r',encoding='utf-8')
 	word2tvec=json.load(fp)
@@ -38,7 +48,7 @@ def test_corpus(_offset,_volume,_chunk,_model):
 		N_all=np.array(seq_list)
 		X_in=N_all[:,:_chunk-1,:]
 		y_out=_model.predict(X_in)
-		print(y_out)
+		print(y_out.shape)
 
 if __name__ == '__main__':
 	offset=int(sys.argv[1])
