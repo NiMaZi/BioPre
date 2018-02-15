@@ -22,6 +22,9 @@ def test_corpus(_offset,_volume,_chunk,_model):
 	fp=open("/home/ubuntu/results_new/ontology/word2tvec.json",'r',encoding='utf-8')
 	word2tvec=json.load(fp)
 	fp.close()
+	fp=open("/home/ubuntu/results_new/ontology/word_dict.json",'r',encoding='utf-8')
+	word_dict=json.load(fp)
+	fp.close()
 	for i in range(_offset,_volume):
 		seq_list=[]
 		wseq_list=[]
@@ -34,13 +37,17 @@ def test_corpus(_offset,_volume,_chunk,_model):
 				continue
 			try:
 				time_steps.append(word2tvec[item[1]])
+				wtime_steps.append(item[2])
 			except:
 				pass
 			if len(time_steps)>=_chunk:
 				seq_list.append(time_steps)
+				wseq_list.append(wtime_steps)
+				wtime_steps=[]
 				time_steps=[]
 		if time_steps:
 			seq_list.append(time_steps)
+			wseq_list.append(wtime_steps)
 		for seq in seq_list:
 			if len(seq)<_chunk:
 				for i in range(0,_chunk-len(seq)):
@@ -49,8 +56,9 @@ def test_corpus(_offset,_volume,_chunk,_model):
 		X_in=N_all[:,:_chunk-1,:]
 		y_out=_model.predict(X_in)
 		print(y_out.shape)
-		for pvec in y_out:
-			print(decode(pvec,word2tvec))
+		for p in range(0,y_out.shape[0]):
+			print(word_dict[p])
+			print(word_dict[decode(y_out[p],word2tvec)]['entity_name'])
 
 if __name__ == '__main__':
 	offset=int(sys.argv[1])
