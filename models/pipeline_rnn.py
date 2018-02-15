@@ -66,7 +66,7 @@ if __name__=="__main__":
 	epoch=int(sys.argv[5])
 	X_train,y_train,X_test,y_test,input_dim,input_length=build_data(volume,chunk,split)
 	model=build_model(input_dim,input_length)
-	early_stopping=EarlyStopping(monitor='val_loss',patience=2)
+	early_stopping=EarlyStopping(monitor='val_loss',patience=10)
 	model.fit(X_train,y_train,batch_size=batch,epochs=epoch,callbacks=[early_stopping])
 	score=model.evaluate(X_test,y_test,batch_size=batch)
 	print(score)
