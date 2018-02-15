@@ -11,7 +11,7 @@ def load_trained_model(_path):
 def decode(_vec,_dict):
 	min_dist=np.inf
 	target_word=''
-	for w in word2tvec.keys():
+	for w in _dict.keys():
 		dist=np.linalg.norm(_vec,np.array(_dict[w]))
 		if dist<min_dist:
 			min_dist=dist
