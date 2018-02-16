@@ -40,7 +40,7 @@ def test_corpus(_offset,_volume,_chunk,_model):
 			if item[2]=="ConceptName":
 				continue
 			try:
-				abs_set.add(item[2])
+				abs_set.add(item[1])
 				time_steps.append(word2tvec[item[1]])
 				wtime_steps.append(item[2])
 			except:
@@ -73,11 +73,21 @@ def test_corpus(_offset,_volume,_chunk,_model):
 			if item[2]=="ConceptName":
 				continue
 			try:
-				body_set.add(item[2])
+				body_set.add(item[1])
 			except:
 				pass
 		real_set=body_set-abs_set
 		print(real_set)
+		tp=0.0
+		fp=0.0
+		fn=0.0
+		for key in res_list.keys():
+			if key in real_set:
+				tp+=1.0
+			else:
+				fp+=1.0
+		P=tp/(tp+fp)
+		print(P)
 		# for p in range(0,y_out.shape[0]):
 			# print(wseq_list[p])
 			# print(word_dict[decode(y_out[p],word2tvec)]['entity_name'])
