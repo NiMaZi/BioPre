@@ -114,7 +114,7 @@ while confidence<1.0:
 		for key in pred_dict_rbf.keys():
 			if pred_dict_rbf[key]>confidence:
 				pred_set_rbf.add(key)
-		real_set=set(body_dict.keys())-set(abs_dict.keys())
+		real_set=(set(body_dict.keys())-set(abs_dict.keys()))&set(t_word_list)
 		tp_rbf+=len(pred_set_rbf&real_set)
 		fp_rbf+=len(pred_set_rbf-(pred_set_rbf&real_set))
 		fn_rbf+=len(real_set-(real_set&pred_set_rbf))
@@ -130,7 +130,7 @@ while confidence<1.0:
 		F1=2*P*R/(P+R)
 	except:
 		F1=0.0
-	f=open("/home/ubuntu/results/coclf/sgd_test_log_plusdis_minusvec.txt","a")
+	f=open("/home/ubuntu/results/coclf/sgd_test_log_plusdis_minusvec_twl.txt","a")
 	f.write(str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
 	f.close()
 	confidence+=0.1
