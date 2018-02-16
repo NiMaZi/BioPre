@@ -73,6 +73,8 @@ while confidence<1.0:
 		max_conf_rbf=0
 		pred_dict_rbf={}
 		abs_key_list=list(abs_dict.keys())
+		if len(abs_key_list)<2:
+			continue
 		for i1 in range(0,len(abs_key_list)):
 			for i2 in range(i1,len(abs_key_list)):
 				a_key_1=abs_key_list[i1]
