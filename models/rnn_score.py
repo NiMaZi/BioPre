@@ -66,7 +66,7 @@ def test_corpus(_offset,_volume,_chunk,_model):
 		for p in y_out:
 			word,dist=decode(p,word2tvec)
 			res_list[word]=dist
-		print(res_list)
+		# print(res_list)
 		body_set=set()
 		f=open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".csv",'r',encoding='utf-8')
 		rd=csv.reader(f)
@@ -78,7 +78,7 @@ def test_corpus(_offset,_volume,_chunk,_model):
 			except:
 				pass
 		real_set=body_set-abs_set
-		print(real_set)
+		# print(real_set)
 		tp=0.0
 		fp=0.0
 		fn=0.0
@@ -88,8 +88,9 @@ def test_corpus(_offset,_volume,_chunk,_model):
 			else:
 				fp+=1.0
 		P=tp/(tp+fp)
-		print(P)
-		p_all+=P
+		# print(P)
+		P_all+=P
+	P_all/=_volume
 	return P_all
 		# for p in range(0,y_out.shape[0]):
 			# print(wseq_list[p])
@@ -102,3 +103,4 @@ if __name__ == '__main__':
 	model=load_trained_model(path)
 	chunk=model.layers[0].get_config()['batch_input_shape'][1]
 	score=test_corpus(offset,volume,chunk,model)
+	print(score)
