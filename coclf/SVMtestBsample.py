@@ -22,6 +22,9 @@ def tree_distance(vec_1,vec_2):
 				distance+=1.0
 	return distance
 
+pwf_count={}
+p_sum=0.0
+
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
 featured_list=pickle.load(f)
 f.close()
@@ -114,6 +117,11 @@ while confidence<1.0:
 			pred_dict_rbf[key]/=max_conf_rbf
 		pred_set_rbf=set()
 		for key in pred_dict_rbf.keys():
+			if key in pwf_count.keys():
+				pwf_count[key]+=pred_dict_rbf[key]
+			else:
+				pwf_count[key]=pred_dict_rbf[key]
+			p_sum+=pred_dict_rbf[key]
 			if pred_dict_rbf[key]>confidence:
 				pred_set_rbf.add(key)
 		real_set=(set(body_dict.keys())-set(abs_dict.keys()))&set(t_word_list)
@@ -136,3 +144,8 @@ while confidence<1.0:
 	f.write(str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
 	f.close()
 	confidence+=0.1
+for pk in pwf_count.keys():
+	pwf_count[pk]/=p_sum
+f=open("/home/ubuntu/results/saliency/pwf_count.pkl","wb")
+pickle.dump(pwf_count,f)
+f.close()
