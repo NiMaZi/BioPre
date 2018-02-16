@@ -18,6 +18,9 @@ def decode(_vec,_dict):
 			target_word=w
 	return target_word,min_dist
 
+def sliding_window(_array,_size):
+	return
+
 def test_corpus(_offset,_volume,_chunk,_model):
 	fp=open("/home/ubuntu/results_new/ontology/word2tvec.json",'r',encoding='utf-8')
 	word2tvec=json.load(fp)
@@ -30,12 +33,14 @@ def test_corpus(_offset,_volume,_chunk,_model):
 		wseq_list=[]
 		time_steps=[]
 		wtime_steps=[]
+		abs_set=set()
 		f=open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".csv",'r',encoding='utf-8')
 		rd=csv.reader(f)
 		for item in rd:
 			if item[2]=="ConceptName":
 				continue
 			try:
+				abs_set.add(item[2])
 				time_steps.append(word2tvec[item[1]])
 				wtime_steps.append(item[2])
 			except:
@@ -52,12 +57,27 @@ def test_corpus(_offset,_volume,_chunk,_model):
 			if len(seq)<_chunk:
 				for i in range(0,_chunk-len(seq)):
 					seq.append([-1.0 for i in range(0,len(seq[0]))])
+		f.close()
 		N_all=np.array(seq_list)
-		print(N_all.shape)
 		X_in=N_all[:,:_chunk,:]
-		print(X_in.shape)
 		y_out=_model.predict(X_in)
-		print(y_out.shape)
+		res_list={}
+		for p in y_out:
+			word,dist=decode(p,word2tvec)
+			res_list[word]=dist
+		print(res_list)
+		body_set=set()
+		f=open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".csv",'r',encoding='utf-8')
+		rd=csv.reader(f)
+		for item in rd:
+			if item[2]=="ConceptName":
+				continue
+			try:
+				body_set.add(item[2])
+			except:
+				pass
+		real_set=body_set-abs_set
+		print(real_set)
 		# for p in range(0,y_out.shape[0]):
 			# print(wseq_list[p])
 			# print(word_dict[decode(y_out[p],word2tvec)]['entity_name'])
