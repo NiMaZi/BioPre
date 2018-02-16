@@ -72,7 +72,7 @@ if __name__=="__main__":
 	epoch=int(sys.argv[6])
 	path="/home/ubuntu/results_new/models/LSTM.h5"
 	X_train,y_train,X_test,y_test,input_dim,input_length=build_data(volume,chunk,split)
-	if model==0:
+	if mode==0:
 		model=build_model(input_dim,input_length)
 	else:
 		model=load_trained_model(path)
