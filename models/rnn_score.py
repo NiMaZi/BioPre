@@ -4,6 +4,8 @@ import json
 import numpy as np
 from keras.models import load_model
 
+ratio_body2abs=496.27/59.5
+
 def load_trained_model(_path):
 	model=load_model(_path)
 	return model
@@ -18,8 +20,20 @@ def decode(_vec,_dict):
 			target_word=w
 	return target_word,min_dist
 
-def sliding_window(_array,_size):
-	return
+def sliding_prediction(_array,_size,_model,_dict):
+	res_list={}
+	vec_dim=len(_array[0])
+	incre=int(len(_array)*ratio_body2abs/(len(_array)-_size))
+	for i in range(0,len(_array)-_size):
+		seq=_array[i:i+_size]
+		for j in range(0,incre):
+			X_in=np.array(seq).rashape(1,_size,vec_dim)
+			y_out=_model.predict(X_in)
+			w,d=decode(y_out[0],_dict)
+			res_list[w]=d
+			v_inc=_dict[w]
+			seq=seq[1:]+[v_inc]
+	return res_list
 
 def test_corpus(_offset,_volume,_chunk,_model,_verbose):
 	fp=open("/home/ubuntu/results_new/ontology/word2tvec.json",'r',encoding='utf-8')
@@ -31,9 +45,6 @@ def test_corpus(_offset,_volume,_chunk,_model,_verbose):
 	P_all=0.0
 	for i in range(_offset,_offset+_volume):
 		seq_list=[]
-		wseq_list=[]
-		time_steps=[]
-		wtime_steps=[]
 		abs_set=set()
 		f=open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".csv",'r',encoding='utf-8')
 		rd=csv.reader(f)
@@ -42,30 +53,18 @@ def test_corpus(_offset,_volume,_chunk,_model,_verbose):
 				continue
 			try:
 				abs_set.add(item[1])
-				time_steps.append(word2tvec[item[1]])
-				wtime_steps.append(item[2])
+				seq_list.append(word2tvec[item[1]])
 			except:
 				pass
-			if len(time_steps)>=_chunk:
-				seq_list.append(time_steps)
-				wseq_list.append(wtime_steps)
-				wtime_steps=[]
-				time_steps=[]
-		if time_steps:
-			seq_list.append(time_steps)
-			wseq_list.append(wtime_steps)
-		for seq in seq_list:
-			if len(seq)<_chunk:
-				for i in range(0,_chunk-len(seq)):
-					seq.append([-1.0 for i in range(0,len(seq[0]))])
 		f.close()
-		N_all=np.array(seq_list)
-		X_in=N_all[:,:_chunk,:]
-		y_out=_model.predict(X_in)
-		res_list={}
-		for p in y_out:
-			word,dist=decode(p,word2tvec)
-			res_list[word]=dist
+		res_list=sliding_prediction(seq_list,_chunk,_model,word2tvec)
+		# N_all=np.array(seq_list)
+		# X_in=N_all[:,:_chunk,:]
+		# y_out=_model.predict(X_in)
+		# res_list={}
+		# for p in y_out:
+		# 	word,dist=decode(p,word2tvec)
+		# 	res_list[word]=dist
 		body_set=set()
 		f=open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".csv",'r',encoding='utf-8')
 		rd=csv.reader(f)
