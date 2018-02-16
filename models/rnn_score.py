@@ -43,6 +43,7 @@ def test_corpus(_offset,_volume,_chunk,_model,_verbose):
 	word_dict=json.load(fp)
 	fp.close()
 	P_all=0.0
+	R_all=0.0
 	for i in range(_offset,_offset+_volume):
 		seq_list=[]
 		abs_set=set()
@@ -76,22 +77,31 @@ def test_corpus(_offset,_volume,_chunk,_model,_verbose):
 			except:
 				pass
 		real_set=body_set-abs_set
-		tp=0.0
-		fp=0.0
-		fn=0.0
-		for key in res_list.keys():
-			if key in real_set:
-				tp+=1.0
-			else:
-				fp+=1.0
+		# tp=0.0
+		# fp=0.0
+		# fn=0.0
+		pred_set=set(list(res_list.keys()))
+		tp=len(real_set&pred_set)
+		fp=len(pred_set-(real_set&pred_set))
+		fn=len(real_set-(real_set&pred_set))
+		# for key in res_list.keys():
+		# 	if key in real_set:
+		# 		tp+=1.0
+		# 	else:
+		# 		fp+=1.0
 		P=tp/(tp+fp)
+		R=tp/(tp+fn)
 		P_all+=P
+		R_all+=R
 		if _verbose>=1:
 			print(res_list)
 			print(real_set)
-			print(P)
+		if _verbose>=0
+			print(P,R)
 	P_all/=_volume
-	return P_all
+	R_all/=_volume
+	F1=2*P_all*R_all/(P_all+R_all)
+	return P_all,R_all,F1
 
 if __name__ == '__main__':
 	if len(sys.argv)<4:
@@ -103,5 +113,5 @@ if __name__ == '__main__':
 	path="/home/ubuntu/results_new/models/LSTM.h5"
 	model=load_trained_model(path)
 	chunk=model.layers[0].get_config()['batch_input_shape'][1]
-	score=test_corpus(offset,volume,chunk,model,verbose)
-	print(score)
+	P,R,F1=test_corpus(offset,volume,chunk,model,verbose)
+	print(P,R,F1)
