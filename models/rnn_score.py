@@ -21,7 +21,7 @@ def decode(_vec,_dict):
 def sliding_window(_array,_size):
 	return
 
-def test_corpus(_offset,_volume,_chunk,_model):
+def test_corpus(_offset,_volume,_chunk,_model,_verbose):
 	fp=open("/home/ubuntu/results_new/ontology/word2tvec.json",'r',encoding='utf-8')
 	word2tvec=json.load(fp)
 	fp.close()
@@ -66,7 +66,6 @@ def test_corpus(_offset,_volume,_chunk,_model):
 		for p in y_out:
 			word,dist=decode(p,word2tvec)
 			res_list[word]=dist
-		# print(res_list)
 		body_set=set()
 		f=open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".csv",'r',encoding='utf-8')
 		rd=csv.reader(f)
@@ -78,7 +77,6 @@ def test_corpus(_offset,_volume,_chunk,_model):
 			except:
 				pass
 		real_set=body_set-abs_set
-		# print(real_set)
 		tp=0.0
 		fp=0.0
 		fn=0.0
@@ -88,19 +86,23 @@ def test_corpus(_offset,_volume,_chunk,_model):
 			else:
 				fp+=1.0
 		P=tp/(tp+fp)
-		# print(P)
 		P_all+=P
+		if _verbose>=1:
+			print(res_list)
+			print(real_set)
+			print(P)
 	P_all/=_volume
 	return P_all
-		# for p in range(0,y_out.shape[0]):
-			# print(wseq_list[p])
-			# print(word_dict[decode(y_out[p],word2tvec)]['entity_name'])
 
 if __name__ == '__main__':
+	if len(sys.argv)<4:
+		print("Usage: -offset -volume -verbose.\n")
+		sys.exit(0)
 	offset=int(sys.argv[1])
 	volume=int(sys.argv[2])
+	verbose=int(sys.argv[3])
 	path="/home/ubuntu/results_new/models/LSTM.h5"
 	model=load_trained_model(path)
 	chunk=model.layers[0].get_config()['batch_input_shape'][1]
-	score=test_corpus(offset,volume,chunk,model)
+	score=test_corpus(offset,volume,chunk,model,verbose)
 	print(score)
