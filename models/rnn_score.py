@@ -27,7 +27,7 @@ def sliding_prediction(_array,_size,_model,_dict):
 	for i in range(0,len(_array)-_size):
 		seq=_array[i:i+_size]
 		for j in range(0,incre):
-			X_in=np.array(seq).rashape(1,_size,vec_dim)
+			X_in=np.array(seq).reshape(1,_size,vec_dim)
 			y_out=_model.predict(X_in)
 			w,d=decode(y_out[0],_dict)
 			res_list[w]=d
