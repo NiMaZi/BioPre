@@ -16,7 +16,7 @@ def decode(_vec,_dict):
 		if dist<min_dist:
 			min_dist=dist
 			target_word=w
-	return target_word
+	return target_word,min_dist
 
 def test_corpus(_offset,_volume,_chunk,_model):
 	fp=open("/home/ubuntu/results_new/ontology/word2tvec.json",'r',encoding='utf-8')
@@ -53,12 +53,14 @@ def test_corpus(_offset,_volume,_chunk,_model):
 				for i in range(0,_chunk-len(seq)):
 					seq.append([-1.0 for i in range(0,len(seq[0]))])
 		N_all=np.array(seq_list)
+		print(N_all.shape)
 		X_in=N_all[:,:_chunk,:]
+		print(X_in.shape)
 		y_out=_model.predict(X_in)
 		print(y_out.shape)
-		for p in range(0,y_out.shape[0]):
-			print(wseq_list[p])
-			print(word_dict[decode(y_out[p],word2tvec)]['entity_name'])
+		# for p in range(0,y_out.shape[0]):
+			# print(wseq_list[p])
+			# print(word_dict[decode(y_out[p],word2tvec)]['entity_name'])
 
 if __name__ == '__main__':
 	offset=int(sys.argv[1])
