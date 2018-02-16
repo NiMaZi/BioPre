@@ -31,6 +31,10 @@ f=open("/home/ubuntu/results/ontology/ontology_wordlist.pkl","rb")
 word_list=pickle.load(f)
 f.close()
 
+f=open("/home/ubuntu/results/saliency/wordlist.pkl","rb")
+t_word_list=pickle.load(f)
+f.close()
+
 f=open("/home/ubuntu/results/ontology/ontology_word2taxonomy.pkl","rb")
 word2tvec=pickle.load(f)
 f.close()
@@ -76,7 +80,9 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 			# pred_input=np.array([[key_phrase[word_list.index(a_key_1)],abs_dict[a_key_1][0],abs_dict[a_key_1][1]-abs_dict[a_key_1][0],abs_dict[a_key_1][2],idf[word_list.index(a_key_1)],centrality[a_key_1]],[key_phrase[word_list.index(a_key_2)],abs_dict[a_key_2][0],abs_dict[a_key_2][1]-abs_dict[a_key_2][0],abs_dict[a_key_2][2],idf[word_list.index(a_key_2)],centrality[a_key_2]]])
 			# pred_saliency_1=list(s_clf.predict(pred_input))[0]
 			# pred_saliency_2=list(s_clf.predict(pred_input))[1]
-			for b_key in word_list:
+			for b_key in t_word_list:
+				if not b_key in word_list:
+					continue
 				if a_key_1==b_key or a_key_2==b_key:
 					continue
 				disa1a2=tree_distance(word2tvec[a_key_1],word2tvec[a_key_2])
@@ -112,7 +118,7 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 		neg_prelist=[]
 		count=0
 
-f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis_minusvec.pkl","wb")
+f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis_minusvec_tar.pkl","wb")
 pickle.dump(clf_sgd,f)
 f.close()
 print(sys.argv[0])
