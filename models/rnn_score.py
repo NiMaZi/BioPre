@@ -28,6 +28,7 @@ def test_corpus(_offset,_volume,_chunk,_model):
 	fp=open("/home/ubuntu/results_new/ontology/word_dict.json",'r',encoding='utf-8')
 	word_dict=json.load(fp)
 	fp.close()
+	P_all=0.0
 	for i in range(_offset,_offset+_volume):
 		seq_list=[]
 		wseq_list=[]
@@ -88,6 +89,8 @@ def test_corpus(_offset,_volume,_chunk,_model):
 				fp+=1.0
 		P=tp/(tp+fp)
 		print(P)
+		p_all+=P
+	return P_all
 		# for p in range(0,y_out.shape[0]):
 			# print(wseq_list[p])
 			# print(word_dict[decode(y_out[p],word2tvec)]['entity_name'])
@@ -98,4 +101,4 @@ if __name__ == '__main__':
 	path="/home/ubuntu/results_new/models/LSTM.h5"
 	model=load_trained_model(path)
 	chunk=model.layers[0].get_config()['batch_input_shape'][1]
-	test_corpus(offset,volume,chunk,model)
+	score=test_corpus(offset,volume,chunk,model)

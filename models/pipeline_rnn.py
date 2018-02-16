@@ -2,9 +2,13 @@ import csv
 import sys
 import json
 import numpy as np
-from keras.models import Sequential
+from keras.models import Sequential, load_model
 from keras.layers import LSTM, Dense, Reshape
 from keras.callbacks import EarlyStopping
+
+def load_trained_model(_path):
+	model=load_model(_path)
+	return model
 
 def build_model(_input_dim,_input_length):
 	model=Sequential()
@@ -57,19 +61,23 @@ def save_model(_model,_path):
 	_model.save(_path)
 
 if __name__=="__main__":
-	if len(sys.argv)<6:
-		print("Usage: -volume -chunk-size -split-rate -batch-size -epoch.\n")
+	if len(sys.argv)<7:
+		print("Usage: -mode -volume -chunk-size -split-rate -batch-size -epoch.\n")
 		sys.exit(0)
-	volume=int(sys.argv[1])
-	chunk=int(sys.argv[2])
-	split=float(sys.argv[3])
-	batch=int(sys.argv[4])
-	epoch=int(sys.argv[5])
+	mode=int(sys.argv[1])
+	volume=int(sys.argv[2])
+	chunk=int(sys.argv[3])
+	split=float(sys.argv[4])
+	batch=int(sys.argv[5])
+	epoch=int(sys.argv[6])
+	path="/home/ubuntu/results_new/models/LSTM.h5"
 	X_train,y_train,X_test,y_test,input_dim,input_length=build_data(volume,chunk,split)
-	model=build_model(input_dim,input_length)
+	if model=0:
+		model=build_model(input_dim,input_length)
+	else:
+		model=load_trained_model(path)
 	early_stopping=EarlyStopping(monitor='loss',patience=10)
 	model.fit(X_train,y_train,batch_size=batch,epochs=epoch,callbacks=[early_stopping])
 	score=model.evaluate(X_test,y_test,batch_size=batch)
 	print(score)
-	path="/home/ubuntu/results_new/models/LSTM.h5"
 	save_model(model,path)
