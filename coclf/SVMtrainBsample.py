@@ -85,14 +85,14 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 					continue
 				if a_key_1==b_key or a_key_2==b_key:
 					continue
-				disa1a2=tree_distance(word2tvec[a_key_1],word2tvec[a_key_2])
-				disa1b=tree_distance(word2tvec[a_key_1],word2tvec[b_key])
-				disa2b=tree_distance(word2tvec[a_key_2],word2tvec[b_key])
+				# disa1a2=tree_distance(word2tvec[a_key_1],word2tvec[a_key_2])
+				# disa1b=tree_distance(word2tvec[a_key_1],word2tvec[b_key])
+				# disa2b=tree_distance(word2tvec[a_key_2],word2tvec[b_key])
 				try:
 					_list=[dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_2)][word_list.index(b_key)]]
 				except:
 					_list=[0.0,0.0]
-				_list.extend([disa1a2,disa1b,disa2b])
+				# _list.extend([disa1a2,disa1b,disa2b])
 				if b_key in body_dict.keys():
 					label=1
 					_list.append(label)
@@ -118,7 +118,7 @@ for i in range(0,int(len(featured_list)*split_ratio)):
 		neg_prelist=[]
 		count=0
 
-f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis_minusvec_tar.pkl","wb")
+f=open("/home/ubuntu/results/coclf/b_clf_sgd_without_onto.pkl","wb")
 pickle.dump(clf_sgd,f)
 f.close()
 print(sys.argv[0])
