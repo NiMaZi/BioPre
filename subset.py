@@ -1,7 +1,7 @@
 import csv
 import json
 
-volume=1200
+volume=12
 
 word_set=set()
 for i in range(0,volume):
@@ -37,5 +37,7 @@ for i in range(0,volume):
 		word_set.add(item[1])
 	f.close()
 
-# print(word_set)
-print(len(word_set))
+word_list=list(word_set)
+f=open("/home/ubuntu/results_new/ontology/sub_word_list.json",'w',encoding='utf-8')
+json.dump(word_list,f)
+f.close()
