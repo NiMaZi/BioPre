@@ -64,7 +64,7 @@ f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
 dev_mat=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis_minusvec_tar.pkl","rb")
+f=open("/home/ubuntu/results/coclf/b_clf_sgd_without_onto.pkl","rb")
 clf_sgd=pickle.load(f)
 f.close()
 
@@ -156,7 +156,7 @@ while confidence<1.0:
 		F1=2*P*R/(P+R)
 	except:
 		F1=0.0
-	f=open("/home/ubuntu/results/coclf/sgd_test_log_plusdis_minusvec_tar.txt","a")
+	f=open("/home/ubuntu/results/coclf/sgd_test_log_without_onto.txt","a")
 	f.write(str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
 	f.close()
 	confidence+=0.1
