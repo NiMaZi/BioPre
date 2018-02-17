@@ -94,17 +94,17 @@ while confidence<1.0:
 						continue
 					if not b_key in word_list:
 						continue
-					a1_tvec=word2tvec[a_key_1]
-					a2_tvec=word2tvec[a_key_2]
-					b_tvec=word2tvec[b_key]
-					disa1a2=tree_distance(a1_tvec,a2_tvec)
-					disa1b=tree_distance(a1_tvec,b_tvec)
-					disa2b=tree_distance(a2_tvec,b_tvec)
+					# a1_tvec=word2tvec[a_key_1]
+					# a2_tvec=word2tvec[a_key_2]
+					# b_tvec=word2tvec[b_key]
+					# disa1a2=tree_distance(a1_tvec,a2_tvec)
+					# disa1b=tree_distance(a1_tvec,b_tvec)
+					# disa2b=tree_distance(a2_tvec,b_tvec)
 					try:
 						_list=[dev_mat[word_list.index(a_key_1)][word_list.index(b_key)],dev_mat[word_list.index(a_key_2)][word_list.index(b_key)]]
 					except:
 						_list=[0.0,0.0]
-					_list.extend([disa1a2,disa1b,disa2b])
+					# _list.extend([disa1a2,disa1b,disa2b])
 					sample_input=np.array([_list])
 					pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
 					if pred_label_rbf==1:
