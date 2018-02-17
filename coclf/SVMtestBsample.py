@@ -132,14 +132,14 @@ while confidence<1.0:
 		for key in pred_dict_rbf.keys():
 			if key in pred_set_rbf and key in real_set:
 				if key in tpwf_count.keys():
-					tpwf_count[key]+=pred_set_rbf[key]
+					tpwf_count[key]+=pred_dict_rbf[key]
 				else:
-					tpwf_count[key]=pred_set_rbf[key]
+					tpwf_count[key]=pred_dict_rbf[key]
 			if key in pred_set_rbf and not key in real_set:
 				if key in fpwf_count.keys():
-					fpwf_count[key]+=pred_set_rbf[key]
+					fpwf_count[key]+=pred_dict_rbf[key]
 				else:
-					fpwf_count[key]=pred_set_rbf[key]
+					fpwf_count[key]=pred_dict_rbf[key]
 		fp_rbf+=len(pred_set_rbf-(pred_set_rbf&real_set))
 		fn_rbf+=len(real_set-(real_set&pred_set_rbf))
 		tp_sum+=tp_rbf
