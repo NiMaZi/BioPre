@@ -22,8 +22,11 @@ def tree_distance(vec_1,vec_2):
 				distance+=1.0
 	return distance
 
-pwf_count={}
-p_sum=0.0
+tpwf_count={}
+fpwf_count={}
+# pwf_count={}
+tp_sum=0.0
+fp_sum=0.0
 
 f=open("/home/ubuntu/results/saliency/featured.pkl","rb")
 featured_list=pickle.load(f)
@@ -117,17 +120,30 @@ while confidence<1.0:
 			pred_dict_rbf[key]/=max_conf_rbf
 		pred_set_rbf=set()
 		for key in pred_dict_rbf.keys():
-			if key in pwf_count.keys():
-				pwf_count[key]+=pred_dict_rbf[key]
-			else:
-				pwf_count[key]=pred_dict_rbf[key]
-			p_sum+=pred_dict_rbf[key]
+			# if key in pwf_count.keys():
+			# 	pwf_count[key]+=pred_dict_rbf[key]
+			# else:
+			# 	pwf_count[key]=pred_dict_rbf[key]
+			# p_sum+=pred_dict_rbf[key]
 			if pred_dict_rbf[key]>confidence:
 				pred_set_rbf.add(key)
 		real_set=(set(body_dict.keys())-set(abs_dict.keys()))&set(t_word_list)
 		tp_rbf+=len(pred_set_rbf&real_set)
+		for key in pred_dict_rbf.keys():
+			if key in pred_set_rbf and key in real_set:
+				if key in tpwf_count.keys():
+					tpwf_count[key]+=pred_set_rbf[key]
+				else:
+					tpwf_count[key]=pred_set_rbf[key]
+			if key in pred_set_rbf and not key in real_set:
+				if key in fpwf_count.keys():
+					fpwf_count[key]+=pred_set_rbf[key]
+				else:
+					fpwf_count[key]=pred_set_rbf[key]
 		fp_rbf+=len(pred_set_rbf-(pred_set_rbf&real_set))
 		fn_rbf+=len(real_set-(real_set&pred_set_rbf))
+		tp_sum+=tp_rbf
+		fp_sum+=fp_rbf
 	try:
 		P=tp_rbf/(tp_rbf+fp_rbf)
 	except:
@@ -144,8 +160,13 @@ while confidence<1.0:
 	f.write(str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
 	f.close()
 	confidence+=0.1
-for pk in pwf_count.keys():
-	pwf_count[pk]/=p_sum
-f=open("/home/ubuntu/results/saliency/pwf_count.pkl","wb")
-pickle.dump(pwf_count,f)
+for tpk in tpwf_count.keys():
+	tpwf_count[tpk]/=tp_sum
+for fpk in fpwf_count.keys():
+	fpwf_count[tpk]/=fp_sum
+f=open("/home/ubuntu/results/saliency/tpwf_count.pkl","wb")
+pickle.dump(tpwf_count,f)
+f.close()
+f=open("/home/ubuntu/results/saliency/fpwf_count.pkl","wb")
+pickle.dump(fpwf_count,f)
 f.close()
