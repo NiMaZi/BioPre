@@ -1,7 +1,7 @@
 import csv
 import json
 
-volume=12
+volume=1200
 
 word_set=set()
 for i in range(0,volume):
@@ -37,4 +37,5 @@ for i in range(0,volume):
 		word_set.add(item[1])
 	f.close()
 
-print(word_set)
+# print(word_set)
+print(len(word_set))
