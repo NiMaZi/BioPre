@@ -26,7 +26,16 @@ sw=list(w.keys())
 estat={}
 
 for k in sw:
-	if k in pwf.keys():
-		print(k,w[k],wf[k],pwf[k],tpwf[k],fpwf[k])
-	else:
-		print(k,w[k],wf[k],0.0,0.0,0.0)
+	try:
+		p=pwf[k]
+	except:
+		p=0.0
+	try:
+		tp=tpwf[k]
+	except:
+		tp=0.0
+	try:
+		fp=fpwf[k]
+	except:
+		fp=0.0
+	print(k,w[k],wf[k],p,tp,fp)
