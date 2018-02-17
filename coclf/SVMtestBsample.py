@@ -64,7 +64,7 @@ f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
 dev_mat=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis_minusvec.pkl","rb")
+f=open("/home/ubuntu/results/coclf/b_clf_sgd_plusdis_minusvec_tar.pkl","rb")
 clf_sgd=pickle.load(f)
 f.close()
 
@@ -129,21 +129,21 @@ while confidence<1.0:
 				pred_set_rbf.add(key)
 		real_set=(set(body_dict.keys())-set(abs_dict.keys()))&set(t_word_list)
 		tp_rbf+=len(pred_set_rbf&real_set)
-		for key in pred_dict_rbf.keys():
-			if key in pred_set_rbf and key in real_set:
-				if key in tpwf_count.keys():
-					tpwf_count[key]+=pred_dict_rbf[key]
-				else:
-					tpwf_count[key]=pred_dict_rbf[key]
-			if key in pred_set_rbf and not key in real_set:
-				if key in fpwf_count.keys():
-					fpwf_count[key]+=pred_dict_rbf[key]
-				else:
-					fpwf_count[key]=pred_dict_rbf[key]
+		# for key in pred_dict_rbf.keys():
+		# 	if key in pred_set_rbf and key in real_set:
+		# 		if key in tpwf_count.keys():
+		# 			tpwf_count[key]+=pred_dict_rbf[key]
+		# 		else:
+		# 			tpwf_count[key]=pred_dict_rbf[key]
+		# 	if key in pred_set_rbf and not key in real_set:
+		# 		if key in fpwf_count.keys():
+		# 			fpwf_count[key]+=pred_dict_rbf[key]
+		# 		else:
+		# 			fpwf_count[key]=pred_dict_rbf[key]
 		fp_rbf+=len(pred_set_rbf-(pred_set_rbf&real_set))
 		fn_rbf+=len(real_set-(real_set&pred_set_rbf))
-		tp_sum+=tp_rbf
-		fp_sum+=fp_rbf
+		# tp_sum+=tp_rbf
+		# fp_sum+=fp_rbf
 	try:
 		P=tp_rbf/(tp_rbf+fp_rbf)
 	except:
@@ -156,17 +156,17 @@ while confidence<1.0:
 		F1=2*P*R/(P+R)
 	except:
 		F1=0.0
-	f=open("/home/ubuntu/results/coclf/sgd_test_log_plusdis_minusvec_twl.txt","a")
+	f=open("/home/ubuntu/results/coclf/sgd_test_log_plusdis_minusvec_tar.txt","a")
 	f.write(str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
 	f.close()
 	confidence+=0.1
-for tpk in tpwf_count.keys():
-	tpwf_count[tpk]/=tp_sum
-for fpk in fpwf_count.keys():
-	fpwf_count[tpk]/=fp_sum
-f=open("/home/ubuntu/results/saliency/tpwf_count.pkl","wb")
-pickle.dump(tpwf_count,f)
-f.close()
-f=open("/home/ubuntu/results/saliency/fpwf_count.pkl","wb")
-pickle.dump(fpwf_count,f)
-f.close()
+# for tpk in tpwf_count.keys():
+# 	tpwf_count[tpk]/=tp_sum
+# for fpk in fpwf_count.keys():
+# 	fpwf_count[tpk]/=fp_sum
+# f=open("/home/ubuntu/results/saliency/tpwf_count.pkl","wb")
+# pickle.dump(tpwf_count,f)
+# f.close()
+# f=open("/home/ubuntu/results/saliency/fpwf_count.pkl","wb")
+# pickle.dump(fpwf_count,f)
+# f.close()
