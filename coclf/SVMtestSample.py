@@ -2,7 +2,7 @@ import sys
 import math
 import pickle
 import numpy as np
-from sklearn import svm
+# from sklearn import svm
 from sklearn import linear_model as lm
 
 front_split_ratio=float(sys.argv[1])
@@ -37,9 +37,9 @@ f=open("/home/ubuntu/results/saliency/simplemat.pkl","rb")
 dev_mat=pickle.load(f)
 f.close()
 
-f=open("/home/ubuntu/results/coclf/clf_lr.pkl","rb")
-clf_lr=pickle.load(f)
-f.close()
+# f=open("/home/ubuntu/results/coclf/clf_lr.pkl","rb")
+# clf_lr=pickle.load(f)
+# f.close()
 
 f=open("/home/ubuntu/results/coclf/clf_sgd.pkl","rb")
 clf_sgd=pickle.load(f)
@@ -47,143 +47,112 @@ f.close()
 
 count=0
 
-tp_linear=0.0
-fp_linear=0.0
-fn_linear=0.0
-tp_rbf=0.0
-fp_rbf=0.0
-fn_rbf=0.0
-
-wrong_samples=[]
-filter_samples=[]
-
-for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len(featured_list))):
-	abs_dict=featured_list[i]['abs']
-	body_dict=featured_list[i]['body']
-	max_conf_linear=0
-	max_conf_rbf=0
-	pred_dict_linear={}
-	pred_dict_rbf={}
-	# if count>20000:
-	# 	break
-	for a_key in abs_dict.keys():
-		pred_input=np.array([[key_phrase[word_list.index(a_key)],abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],idf[word_list.index(a_key)],centrality[a_key]]])
-		pred_saliency=list(s_clf.predict(pred_input))[0]
-		for b_key in word_list:
-			if a_key==b_key:
-				continue
-			count+=1
-			label=0
-			if b_key in body_dict.keys():
-				label=1
+while confidence<1.0:
+	tp=0.0
+	fp=0.0
+	fn=0.0
+	for i in range(int(front_split_ratio*len(featured_list)),int(end_split_ratio*len(featured_list))):
+		abs_dict=featured_list[i]['abs']
+		body_dict=featured_list[i]['body']
+		max_conf_linear=0
+		max_conf_rbf=0
+		pred_dict_linear={}
+		pred_dict_rbf={}
+		for a_key in abs_dict.keys():
+			if a_key in word_list:
+				a_key_phrase=key_phrase[word_list.index(a_key)]
+				a_idf=word_list.index(a_key)
 			else:
-				label=0
-			print(count,a_key,b_key,label)
-			sample_input=np.array([[centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency]])
+				a_key_phrase=0.0
+				a_idf=0.0
+			if a_key in centrality.keys():
+				a_centrality=centrality[a_key]
+			else:
+				a_centrality=0.0
+			pred_input=np.array([[a_key_phrase,abs_dict[a_key][0],abs_dict[a_key][1]-abs_dict[a_key][0],abs_dict[a_key][2],a_idf,a_centrality]])
+			pred_saliency=list(s_clf.predict(pred_input))[0]
+			for b_key in word_list:
+				if a_key==b_key:
+					continue
+				if b_key in centrality.keys():
+					b_centrality=centrality[b_key]
+				else:
+					b_centrality=0.0
+				if a_key in word_list and b_key in word_list:
+					dev_cor=dev_mat[word_list.index(a_key)][word_list.index(b_key)]
+				else:
+					dev_cor=0.0
+				sample_input=np.array([[a_centrality,b_centrality,dev_cor,pred_saliency]])
+				pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
+				if pred_label_rbf==1:
+					if b_key in pred_dict_rbf.keys():
+						pred_dict_rbf[b_key]+=1.0
+						if pred_dict_rbf[b_key]>max_conf_rbf:
+							max_conf_rbf=pred_dict_rbf[b_key]
+					else:
+						pred_dict_rbf[b_key]=1.0
+						if pred_dict_rbf[b_key]>max_conf_rbf:
+							max_conf_rbf=pred_dict_rbf[b_key]
+		for key in pred_dict_rbf.keys():
+			pred_dict_rbf[key]/=max_conf_rbf
+		pred_set_rbf=set(abs_dict.keys())
+		for key in pred_dict_rbf.keys():
+			if pred_dict_rbf[key]>confidence:
+				pred_set_rbf.add(key)
+		real_set=set(body_dict.keys())
+		tp+=len(pred_set_rbf&real_set)
+		fp+=len(pred_set_rbf-(pred_set_rbf&real_set))
+		fn+=len(real_set-(real_set&pred_set_rbf))
+	try:
+		P=tp/(tp+fp)
+	except:
+		P=0.0
+	try:
+		R=tp/(tp+fn)
+	except:
+		R=0.0
+	try:
+		F1=2*P*R/(P+R)
+	except:
+		F1=0.0
+	f=open("/home/ubuntu/results/coclf/sgd_test_log_single.txt","a")
+	f.write(str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
+	f.close()
+	confidence+=0.1
 
-			pred_label_linear=list(clf_lr.predict(sample_input))[0]
-			# if pred_label_linear==1:
-			# 	if b_key in pred_dict_linear.keys():
-			# 		pred_dict_linear[b_key]+=1.0
-			# 		if pred_dict_linear[b_key]>max_conf_linear:
-			# 			max_conf_linear=pred_dict_linear[b_key]
-			# 	else:
-			# 		pred_dict_linear[b_key]=1.0
-			# 		if pred_dict_linear[b_key]>max_conf_linear:
-			# 			max_conf_linear=pred_dict_linear[b_key]
+# print(len(wrong_samples),len(filter_samples))
 
-			pred_label_rbf=list(clf_sgd.predict(sample_input))[0]
-			if not pred_label_rbf==label:
-				wrong_samples.append([centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
-			if pred_label_rbf==1:
-				filter_samples.append([centrality[a_key],centrality[b_key],dev_mat[word_list.index(a_key)][word_list.index(b_key)],pred_saliency,label])
-			# if pred_label_rbf==1:
-			# 	if b_key in pred_dict_rbf.keys():
-			# 		pred_dict_rbf[b_key]+=1.0
-			# 		if pred_dict_rbf[b_key]>max_conf_rbf:
-			# 			max_conf_rbf=pred_dict_rbf[b_key]
-			# 	else:
-			# 		pred_dict_rbf[b_key]=1.0
-			# 		if pred_dict_rbf[b_key]>max_conf_rbf:
-			# 			max_conf_rbf=pred_dict_rbf[b_key]
+# clf_sgd_correction=lm.SGDClassifier()
+# clf_sgd_filter=lm.SGDClassifier()
 
-	# for key in pred_dict_linear.keys():
-	# 	pred_dict_linear[key]/=max_conf_linear
+# nTrain=np.array(wrong_samples)
+# nX=nTrain[:,0:4]
+# ny=nTrain[:,4]
 
-	# for key in pred_dict_rbf.keys():
-	# 	pred_dict_rbf[key]/=max_conf_rbf
+# clf_sgd_correction.fit(nX,ny)
 
-	# pred_set_linear=set()
-	# pred_set_rbf=set()
+# nTrain=np.array(filter_samples)
+# nX=nTrain[:,0:4]
+# ny=nTrain[:,4]
 
-	# for key in pred_dict_linear.keys():
-	# 	if pred_dict_linear[key]>confidence:
-	# 		pred_set_linear.add(key)
+# clf_sgd_filter.fit(nX,ny)
 
-	# for key in pred_dict_rbf.keys():
-	# 	if pred_dict_rbf[key]>confidence:
-	# 		pred_set_rbf.add(key)
+# f=open("/home/ubuntu/results/coclf/clf_sgd_correction.pkl","wb")
+# pickle.dump(clf_sgd_correction,f)
+# f.close()
 
-	# pred_set_combine=pred_set_rbf&pred_set_linear
+# f=open("/home/ubuntu/results/coclf/clf_sgd_filter.pkl","wb")
+# pickle.dump(clf_sgd_filter,f)
+# f.close()
 
-	# real_set=set(body_dict.keys())
-	# tp_linear+=len(pred_set_linear&real_set)
-	# fp_linear+=len(pred_set_linear-(pred_set_linear&real_set))
-	# fn_linear+=len(real_set-(real_set&pred_set_linear))
-	# tp_rbf+=len(pred_set_combine&real_set)
-	# fp_rbf+=len(pred_set_rbf-(pred_set_combine&real_set))
-	# fn_rbf+=len(real_set-(real_set&pred_set_combine))
+# # P=tp_linear/(tp_linear+fp_linear)
+# # R=tp_linear/(tp_linear+fn_linear)
+# # F1=2*P*R/(P+R)
 
-			# if pred_label_linear==label:
-			# 	if pred_label_linear==1:
-			# 		tp_linear+=1
-			# else:
-			# 	if pred_label_linear==1:
-			# 		fp_linear+=1
-			# 	else:
-			# 		fn_linear+=1
-			# if pred_label_rbf==label:
-			# 	if pred_label_rbf==1:
-			# 		tp_rbf+=1
-			# else:
-			# 	if pred_label_rbf==1:
-			# 		fp_rbf+=1
-			# 	else:
-			# 		fn_rbf+=1
+# # print(P,R,F1)
 
-print(len(wrong_samples),len(filter_samples))
+# # P=tp_rbf/(tp_rbf+fp_rbf)
+# # R=tp_rbf/(tp_rbf+fn_rbf)
+# # F1=2*P*R/(P+R)
 
-clf_sgd_correction=lm.SGDClassifier()
-clf_sgd_filter=lm.SGDClassifier()
-
-nTrain=np.array(wrong_samples)
-nX=nTrain[:,0:4]
-ny=nTrain[:,4]
-
-clf_sgd_correction.fit(nX,ny)
-
-nTrain=np.array(filter_samples)
-nX=nTrain[:,0:4]
-ny=nTrain[:,4]
-
-clf_sgd_filter.fit(nX,ny)
-
-f=open("/home/ubuntu/results/coclf/clf_sgd_correction.pkl","wb")
-pickle.dump(clf_sgd_correction,f)
-f.close()
-
-f=open("/home/ubuntu/results/coclf/clf_sgd_filter.pkl","wb")
-pickle.dump(clf_sgd_filter,f)
-f.close()
-
-# P=tp_linear/(tp_linear+fp_linear)
-# R=tp_linear/(tp_linear+fn_linear)
-# F1=2*P*R/(P+R)
-
-# print(P,R,F1)
-
-# P=tp_rbf/(tp_rbf+fp_rbf)
-# R=tp_rbf/(tp_rbf+fn_rbf)
-# F1=2*P*R/(P+R)
-
-# print(P,R,F1)
+# # print(P,R,F1)
