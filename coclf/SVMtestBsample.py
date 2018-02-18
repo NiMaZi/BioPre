@@ -69,7 +69,7 @@ clf_sgd=pickle.load(f)
 f.close()
 
 taxonomy_distance=5.0
-while taxonomy_distance<35:
+while taxonomy_distance<=35:
 	confidence=0.0
 	while confidence<1.0:
 		tp_rbf=0.0
