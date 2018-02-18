@@ -323,6 +323,15 @@ else:
 					continue
 				if not b_key in b_word_list:
 					continue
+				a1_tvec=b_word2tvec[a_key_1]
+				a2_tvec=b_word2tvec[a_key_2]
+				b_tvec=b_word2tvec[b_key]
+				disa1a2=tree_distance(a1_tvec,a2_tvec)
+				disa1b=tree_distance(a1_tvec,b_tvec)
+				disa2b=tree_distance(a2_tvec,b_tvec)
+				dis_sum=tree_distance(a1_tvec,b_tvec)+tree_distance(a2_tvec,b_tvec)
+				if dis_sum>taxonomy_distance:
+					continue
 				try:
 					_list=[dev_mat[b_word_list.index(a_key_1)][b_word_list.index(b_key)],dev_mat[b_word_list.index(a_key_2)][b_word_list.index(b_key)]]
 				except:
