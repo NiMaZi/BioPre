@@ -161,7 +161,7 @@ while taxonomy_distance<35:
 			F1=2*P*R/(P+R)
 		except:
 			F1=0.0
-		f=open("/home/ubuntu/results/coclf/sgd_test_log_without_onto.txt","a")
+		f=open("/home/ubuntu/results/coclf/sgd_test_log_with_onto.txt","a")
 		f.write(str(taxonomy_distance)+","+str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
 		f.close()
 		confidence+=0.1
