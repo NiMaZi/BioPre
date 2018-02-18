@@ -96,7 +96,7 @@ def test_corpus(_offset,_volume,_chunk,_model,_verbose):
 		if _verbose>=1:
 			print(res_list)
 			print(real_set)
-		if _verbose>=0
+		if _verbose>=0:
 			print(P,R)
 	P_all/=_volume
 	R_all/=_volume
