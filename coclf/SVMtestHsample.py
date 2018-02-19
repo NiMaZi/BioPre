@@ -122,7 +122,7 @@ def do():
 		except:
 			F1=0.0
 		f=open("/home/ubuntu/results/coclf/sgd_test_log_onto_harm.txt","a")
-		f.write(str(taxonomy_distance)+","+str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
+		f.write(str(confidence)+","+str(P)+","+str(R)+","+str(F1)+"\n")
 		f.close()
 		confidence+=0.1
 
