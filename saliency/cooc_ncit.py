@@ -21,13 +21,13 @@ for i in range(0,volume):
 		for item in reader:
 			if item[2]=="ConceptName":
 				continue
-			mention_set.add(item[1])
+			mention_set.add("http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"+item[1])
 	with open("/home/ubuntu/thesiswork/kdata/body"+str(i)+".csv","r",encoding='utf-8') as csvfile:
 		reader=csv.reader(csvfile)
 		for item in reader:
 			if item[2]=="ConceptName":
 				continue
-			mention_set.add(item[1])
+			mention_set.add("http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"+item[1])
 	mention_list=list(mention_set)
 	check_point_2=time.time()
 	node_list={}
@@ -37,8 +37,8 @@ for i in range(0,volume):
 			mention2=mention_list[j2]
 			if mention1==mention2:
 				continue
-			m_index1=wlid.index("http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"+mention1)
-			m_index2=wlid.index("http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"+mention2)
+			m_index1=wlid.index(mention1)
+			m_index2=wlid.index(mention2)
 			if (m_index1,m_index2) in node_list.keys():
 				node_list[(m_index1,m_index2)]+=1.0
 				node_list[(m_index2,m_index1)]+=1.0
