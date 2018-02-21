@@ -56,5 +56,5 @@ for i in range(0,volume):
 avg_time/=volume
 print(avg_time)
 
-path="/home/ubuntu/results_new/statistics/cooc_mat.npz"
+path="/home/ubuntu/results_new/statistics/cooc_mat_simple.npz"
 save_npz(path,dev_mat.tocsc())
