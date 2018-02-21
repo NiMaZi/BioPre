@@ -15,7 +15,7 @@ avg_time=0.0
 
 for i in range(0,volume):
 	mention_set=set()
-	start=time.time()
+	check_point_1=time.time()
 	with open("/home/ubuntu/thesiswork/kdata/abs"+str(i)+".csv","r",encoding='utf-8') as csvfile:
 		reader=csv.reader(csvfile)
 		for item in reader:
@@ -29,6 +29,7 @@ for i in range(0,volume):
 				continue
 			mention_set.add(item[1])
 	mention_list=list(mention_set)
+	check_point_2=time.time()
 	node_list={}
 	for j1 in range(0,len(mention_list)):
 		for j2 in range(j1,len(mention_list)):
@@ -44,10 +45,11 @@ for i in range(0,volume):
 			else:
 				node_list[(m_index1,m_index2)]=1.0
 				node_list[(m_index2,m_index1)]=1.0
+	check_point_3=time.time()
 	for (m,n) in node_list.keys():
 		dev_mat[m,n]+=node_list[(m,n)]/float(volume)
-	end=time.time()
-	print(end-start)
-	avg_time+=end-start
+	check_point_4=time.time()
+	print(check_point_2-check_point_1,check_point_3-check_point_2,check_point_4-check_point_3)
+	avg_time+=check_point_4-check_point_1
 avg_time/=volume
 print(avg_time)
