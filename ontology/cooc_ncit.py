@@ -4,7 +4,7 @@ import json
 import time
 from scipy.sparse import lil_matrix, csc_matrix, save_npz, load_npz
 
-f=open("/home/ubuntu/results_new/ontology/c2id.json",'r',encoding='utf-8')
+f=open("/home/ubuntu/results/ontology/c2id.json",'r',encoding='utf-8')
 c2id=json.load(f)
 f.close()
 
@@ -30,7 +30,6 @@ for i in range(0,volume):
 			mention_set.add("http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"+item[1])
 	mention_list=list(mention_set)
 	check_point_2=time.time()
-	# node_list={}
 	for j1 in range(0,len(mention_list)):
 		for j2 in range(j1,len(mention_list)):
 			mention1=mention_list[j1]
@@ -41,20 +40,11 @@ for i in range(0,volume):
 			m_index2=c2id[mention2]
 			dev_mat[m_index1,m_index2]+=1.0/float(volume)
 			dev_mat[m_index2,m_index1]+=1.0/float(volume)
-	# 		if (m_index1,m_index2) in node_list.keys():
-	# 			node_list[(m_index1,m_index2)]+=1.0
-	# 			node_list[(m_index2,m_index1)]+=1.0
-	# 		else:
-	# 			node_list[(m_index1,m_index2)]=1.0
-	# 			node_list[(m_index2,m_index1)]=1.0
-	# check_point_3=time.time()
-	# for (m,n) in node_list.keys():
-	# 	dev_mat[m,n]+=node_list[(m,n)]/float(volume)
 	check_point_4=time.time()
-	print(check_point_2-check_point_1,check_point_4-check_point_2)
+	print(i,check_point_2-check_point_1,check_point_4-check_point_2)
 	avg_time+=check_point_4-check_point_1
 avg_time/=volume
 print(avg_time)
 
-path="/home/ubuntu/results_new/statistics/cooc_mat_simple.npz"
+path="/home/ubuntu/results/statistics/cooc_mat_simple.npz"
 save_npz(path,dev_mat.tocsc())
