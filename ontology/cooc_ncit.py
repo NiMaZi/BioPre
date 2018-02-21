@@ -30,7 +30,7 @@ for i in range(0,volume):
 			mention_set.add("http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"+item[1])
 	mention_list=list(mention_set)
 	check_point_2=time.time()
-	node_list={}
+	# node_list={}
 	for j1 in range(0,len(mention_list)):
 		for j2 in range(j1,len(mention_list)):
 			mention1=mention_list[j1]
@@ -39,17 +39,19 @@ for i in range(0,volume):
 				continue
 			m_index1=c2id[mention1]
 			m_index2=c2id[mention2]
-			if (m_index1,m_index2) in node_list.keys():
-				node_list[(m_index1,m_index2)]+=1.0
-				node_list[(m_index2,m_index1)]+=1.0
-			else:
-				node_list[(m_index1,m_index2)]=1.0
-				node_list[(m_index2,m_index1)]=1.0
-	check_point_3=time.time()
-	for (m,n) in node_list.keys():
-		dev_mat[m,n]+=node_list[(m,n)]/float(volume)
+			dev_mat[m_index1,m_index2]+=1.0/float(volume)
+			dev_mat[m_index2,m_index1]+=1.0/float(volume)
+	# 		if (m_index1,m_index2) in node_list.keys():
+	# 			node_list[(m_index1,m_index2)]+=1.0
+	# 			node_list[(m_index2,m_index1)]+=1.0
+	# 		else:
+	# 			node_list[(m_index1,m_index2)]=1.0
+	# 			node_list[(m_index2,m_index1)]=1.0
+	# check_point_3=time.time()
+	# for (m,n) in node_list.keys():
+	# 	dev_mat[m,n]+=node_list[(m,n)]/float(volume)
 	check_point_4=time.time()
-	print(check_point_2-check_point_1,check_point_3-check_point_2,check_point_4-check_point_3)
+	print(check_point_2-check_point_1,check_point_4-check_point_2)
 	avg_time+=check_point_4-check_point_1
 avg_time/=volume
 print(avg_time)
