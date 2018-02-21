@@ -9,6 +9,6 @@ c2id={}
 for i in range(0,len(wlid)):
 	c2id[wlid[i]]=i
 
-f=open("/home/ubuntu/results_new/ontology/c2id.json",'r',encoding='utf-8')
+f=open("/home/ubuntu/results_new/ontology/c2id.json",'w',encoding='utf-8')
 json.dump(c2id,f)
 f.close()
