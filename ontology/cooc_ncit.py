@@ -8,7 +8,7 @@ f=open("/home/ubuntu/results_new/ontology/c2id.json",'r',encoding='utf-8')
 c2id=json.load(f)
 f.close()
 
-dev_mat=lil_matrix((len(wlid),len(wlid)))
+dev_mat=lil_matrix((len(c2id),len(c2id)))
 
 volume=int(sys.argv[1])
 avg_time=0.0
