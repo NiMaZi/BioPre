@@ -53,3 +53,6 @@ for i in range(0,volume):
 	avg_time+=check_point_4-check_point_1
 avg_time/=volume
 print(avg_time)
+
+path="/home/ubuntu/results_new/statistics/cooc_mat.npz"
+save_npz(path,dev_mat.tocsc())
