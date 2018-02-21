@@ -4,8 +4,8 @@ import json
 import time
 from scipy.sparse import lil_matrix, csc_matrix, save_npz, load_npz
 
-f=open("/home/ubuntu/results_new/ontology/wordlist_id.json",'r',encoding='utf-8')
-wlid=json.load(f)
+f=open("/home/ubuntu/results_new/ontology/c2id.json",'r',encoding='utf-8')
+c2id=json.load(f)
 f.close()
 
 dev_mat=lil_matrix((len(wlid),len(wlid)))
@@ -37,8 +37,8 @@ for i in range(0,volume):
 			mention2=mention_list[j2]
 			if mention1==mention2:
 				continue
-			m_index1=wlid.index(mention1)
-			m_index2=wlid.index(mention2)
+			m_index1=c2id[mention1]
+			m_index2=c2id[mention2]
 			if (m_index1,m_index2) in node_list.keys():
 				node_list[(m_index1,m_index2)]+=1.0
 				node_list[(m_index2,m_index1)]+=1.0
