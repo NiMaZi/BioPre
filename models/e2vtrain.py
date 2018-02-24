@@ -10,7 +10,7 @@ f.close()
 tf_all_com={}
 for k in tf_all.keys():
 	_k=k.split('#')[1]
-    tf_all_com[_k]=tf_all[k]+1e-10
+	tf_all_com[_k]=tf_all[k]+1e-10
 
 model=word2vec.Word2Vec(sg=0,size=200,window=10,min_count=0,sample=1e-3,hs=0,negative=1,sorted_vocab=1)
 model.build_vocab_from_freq(tf_all_com)
