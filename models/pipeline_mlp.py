@@ -27,6 +27,10 @@ MLP_model.compile(optimizer='sgd',loss='binary_crossentropy')
 
 early_stopping=EarlyStopping(monitor='loss',patience=es_patience)
 
+f=open("/home/ubuntu/results/saliency/featured_list_com.json",'r')
+featured_list_com=json.load(f)
+f.close()
+
 f=open("/home/ubuntu/results/ontology/word_list.json",'r')
 word_list=json.load(f)
 f.close()
