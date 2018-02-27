@@ -60,6 +60,8 @@ cooc_simple=np.load("/home/ubuntu/results/statistics/cooc_simple.npy")
 
 batched_list=[]
 for i,record in enumerate(featured_list_com):
+    if i>=4000:
+        break
     if len(batched_list)>batch_size:
         X_train=np.array(batched_list)[:,1:]
         y_train=np.array(batched_list)[:,0]
@@ -92,7 +94,7 @@ for i,record in enumerate(featured_list_com):
             term_embedding=nodevec_a+nodevec_b+wordvec_a+wordvec_b
             term_all=term_feature+term_embedding
             batched_list.append(term_all)
-            ct=3
+            ct=4
             while(ct):
                 w=word_list[np.random.randint(len(word_list))]
                 if not w in _body.keys():
@@ -122,5 +124,5 @@ if batched_list:
     y_train=np.array(batched_list)[:,0]
     MLP_model.fit(X_train,y_train,batch_size=batch_size,epochs=epochs,callbacks=[early_stopping])
 
-path="/home/ubuntu/results_new/models/MLP.h5"
+path="/home/ubuntu/results_new/models/MLP_r.h5"
 MLP_model.save(path)
