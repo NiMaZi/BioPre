@@ -1,3 +1,6 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
+
 import json
 import numpy as np
 from keras.models import Sequential, load_model
