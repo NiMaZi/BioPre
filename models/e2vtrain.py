@@ -26,10 +26,17 @@ path="/home/ubuntu/results/models/e2v_sg_5000_e100_d64.model"
 # path="/home/ubuntu/results/e2v_sg_e100.model"
 model.save(path)
 
+model=word2vec.Word2Vec(sg=0,size=32,window=10,min_count=0,sample=1e-3,hs=0,negative=1,sorted_vocab=1)
+model.build_vocab_from_freq(tf_all_com)
+model.train(sentences,total_examples=10000,epochs=100)
+path="/home/ubuntu/results/models/e2v_sg_5000_e100_d32.model"
+# path="/home/ubuntu/results/e2v_sg_e100.model"
+model.save(path)
+
 model=word2vec.Word2Vec(sg=1,size=128,window=10,min_count=0,sample=1e-3,hs=0,negative=1,sorted_vocab=1)
 model.build_vocab_from_freq(tf_all_com)
 model.train(sentences,total_examples=10000,epochs=100)
-path="/home/ubuntu/results/models/e2v_cbow_5000_e100_d64.model"
+path="/home/ubuntu/results/models/e2v_cbow_5000_e100_d128.model"
 # path="/home/ubuntu/results/e2v_cbow_e100.model"
 model.save(path)
 
@@ -37,5 +44,12 @@ model=word2vec.Word2Vec(sg=1,size=64,window=10,min_count=0,sample=1e-3,hs=0,nega
 model.build_vocab_from_freq(tf_all_com)
 model.train(sentences,total_examples=10000,epochs=100)
 path="/home/ubuntu/results/models/e2v_cbow_5000_e100_d64.model"
+# path="/home/ubuntu/results/e2v_cbow_e100.model"
+model.save(path)
+
+model=word2vec.Word2Vec(sg=1,size=32,window=10,min_count=0,sample=1e-3,hs=0,negative=1,sorted_vocab=1)
+model.build_vocab_from_freq(tf_all_com)
+model.train(sentences,total_examples=10000,epochs=100)
+path="/home/ubuntu/results/models/e2v_cbow_5000_e100_d32.model"
 # path="/home/ubuntu/results/e2v_cbow_e100.model"
 model.save(path)
