@@ -43,7 +43,7 @@ def load_corpus(_path):
         corpus.append(_p)
     return corpus,m_len
 
-path="/home/ubuntu/thesiswork/source/corpus/fullcorpus100"
+path="/home/ubuntu/thesiswork/source/corpus/fullcorpus100.txt"
 corpus,maxlen=load_corpus(path)
 
 def build_model(_input_dim,_input_length):
