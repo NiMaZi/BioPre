@@ -61,7 +61,7 @@ def build_data(_corpus,_maxlen):
     ndata=[]
     i=0
     comp_vec=[0.0 for i in range(0,400)]
-    while(i<len(_corpus)):
+    while(i<len(_corpus)-1):
         _abs=_corpus[i]
         a_emb=[]
         for w in _abs:
