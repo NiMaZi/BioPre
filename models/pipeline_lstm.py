@@ -72,6 +72,7 @@ def build_data(_corpus,_maxlen):
         _body=_corpus[i]
         for w in _body:
             ndata.append(a_emb+[get_emb(w)])
+    print("pre-processed.")
     N_all=np.array(ndata)
     X_train=N_all[:,:-1,:]
     y_train=N_all[:,-1,:]
@@ -81,6 +82,8 @@ def build_data(_corpus,_maxlen):
 
 X_train,y_train,input_dim,input_length=build_data(corpus,maxlen)
 
+print("got data.")
 model=build_model(input_dim,input_length)
 
+print("model built.")
 print(input_dim,input_length)
