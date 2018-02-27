@@ -64,6 +64,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
     i=0
     comp_vec=[0.0 for i in range(0,400)]
     while(i<len(_corpus)-1):
+        print("training on doc "+str(i))
         ndata=[]
         _abs=_corpus[i]
         a_emb=[]
