@@ -61,7 +61,7 @@ def build_data(_corpus,_maxlen):
     ndata=[]
     i=0
     comp_vec=[0.0 for i in range(0,400)]
-    while(i<5):
+    while(i<1):
     # while(i<len(_corpus)-1):
         _abs=_corpus[i]
         a_emb=[]
@@ -74,6 +74,7 @@ def build_data(_corpus,_maxlen):
         for w in _body:
             ndata.append(a_emb+[get_emb(w)])
     print("pre-processed.")
+    print(len(ndata))
     N_all=np.array(ndata)
     X_train=N_all[:,:-1,:]
     y_train=N_all[:,-1,:]
