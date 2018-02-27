@@ -81,7 +81,6 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
         X_train=N_all[:,:-1,:]
         y_train=N_all[:,-1,:]
         _model.fit(X_train,y_train,batch_size=batch,epochs=_epochs,callbacks=[early_stopping])
-    return _model
+    _model.save("/home/ubuntu/results/models/LSTM100.h5")
 
-trained_model=train_on_data(corpus,maxlen,model,20)
-trained_model.save("/home/ubuntu/results/models/LSTM100.h5")
+train_on_data(corpus,maxlen,model,20)
