@@ -45,6 +45,7 @@ def load_corpus(_path):
 
 path="/home/ubuntu/thesiswork/source/corpus/fullcorpus100.txt"
 corpus,maxlen=load_corpus(path)
+print(maxlen)
 
 def build_model(_input_dim,_input_length):
     model=Sequential()
@@ -80,12 +81,13 @@ def build_data(_corpus,_maxlen):
     y_train=N_all[:,-1,:]
     input_dim=X_train.shape[2]
     input_length=X_train.shape[1]
+    print(X_train.shape)
     return X_train,y_train,input_dim,input_length
 
 X_train,y_train,input_dim,input_length=build_data(corpus,maxlen)
 
-print("got data.")
+# print("got data.")
 model=build_model(input_dim,input_length)
 
-print("model built.")
-print(input_dim,input_length)
+# print("model built.")
+# print(input_dim,input_length)
