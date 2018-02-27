@@ -45,7 +45,6 @@ def load_corpus(_path):
 
 path="/home/ubuntu/thesiswork/source/corpus/fullcorpus100.txt"
 corpus,maxlen=load_corpus(path)
-print(maxlen)
 
 def build_model(_input_dim,_input_length):
     model=Sequential()
@@ -58,12 +57,14 @@ def build_model(_input_dim,_input_length):
     model.compile(optimizer='rmsprop',loss='binary_crossentropy')
     return model
 
-def build_data(_corpus,_maxlen):
-    ndata=[]
+model=build_model(400,maxlen)
+
+def train_on_data(_corpus,_maxlen,_model,_epochs):
+    early_stopping=EarlyStopping(monitor='loss',patience=10)
     i=0
     comp_vec=[0.0 for i in range(0,400)]
-    while(i<1):
-    # while(i<len(_corpus)-1):
+    while(i<len(_corpus)-1):
+        ndata=[]
         _abs=_corpus[i]
         a_emb=[]
         for w in _abs:
@@ -74,20 +75,12 @@ def build_data(_corpus,_maxlen):
         _body=_corpus[i]
         for w in _body:
             ndata.append(a_emb+[get_emb(w)])
-            if len(ndata)>100:
-                break
-    N_all=np.array(ndata)
-    X_train=N_all[:,:-1,:]
-    y_train=N_all[:,-1,:]
-    input_dim=X_train.shape[2]
-    input_length=X_train.shape[1]
-    print(X_train.shape)
-    return X_train,y_train,input_dim,input_length
+        batch=len(ndata)
+        N_all=np.array(ndata)
+        X_train=N_all[:,:-1,:]
+        y_train=N_all[:,-1,:]
+        model.fit(X_train,y_train,batch_size=batch,epochs=_epochs,callbacks=[early_stopping])
+    return _model
 
-X_train,y_train,input_dim,input_length=build_data(corpus,maxlen)
-
-# print("got data.")
-model=build_model(input_dim,input_length)
-
-# print("model built.")
-# print(input_dim,input_length)
+trained_model=train_on_data(corpus,maxlen,model,20)
+trained_model.save("/home/ubuntu/results/models/LSTM100.h5")
