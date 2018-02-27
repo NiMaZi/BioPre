@@ -36,9 +36,9 @@ def load_corpus(_path):
     pre_list=pre_corpus.split("\n")[:-1]
     corpus=[]
     m_len=0
-    for p in pre_list:
+    for i,p in enumerate(pre_list):
         _p=p.split(" ")[:-1]
-        if len(_p)>m_len:
+        if i%2==0 and len(_p)>m_len:
             m_len=len(_p)
         corpus.append(_p)
     return corpus,m_len
