@@ -16,14 +16,13 @@ def load_models():
 e2v_model,n2v_model=load_models()
 
 def load_sups():
-    f=open("/home/ubuntu/results")
     f=open("/home/ubuntu/results/ontology/c2id.json",'r')
     c2id=json.load(f)
     f.close()
     prefix='http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#'
     return c2id,prefix
 
-word_list,c2id,prefix=load_sups()
+c2id,prefix=load_sups()
 
 def get_emb(_code):
     e_vec=list(e2v_model.wv[_code])
