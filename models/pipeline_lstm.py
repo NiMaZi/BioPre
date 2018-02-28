@@ -29,7 +29,7 @@ c2id,prefix=load_sups()
 
 def get_emb(_code):
     e_vec=list(e2v_model.wv[_code])
-    n_vec=n2v_model[c2id[prefix+_code]]
+    n_vec=n2v_model[str(c2id[prefix+_code])]
     return e_vec+n_vec
 
 def load_corpus(_path):
@@ -38,11 +38,8 @@ def load_corpus(_path):
     f.close()
     pre_list=pre_corpus.split("\n")[:-1]
     corpus=[]
-    m_len=0
     for i,p in enumerate(pre_list):
         _p=p.split(" ")[:-1]
-        if i%2==0 and len(_p)>m_len:
-            m_len=len(_p)
         corpus.append(_p)
     return corpus
 
