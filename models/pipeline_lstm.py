@@ -5,6 +5,9 @@ from keras.layers import LSTM, Dense, Reshape, Bidirectional
 from keras.callbacks import EarlyStopping
 from gensim.models import word2vec as w2v
 
+dim=128
+maxlen=290
+
 def load_models():
     path="/home/ubuntu/results/models/e2v_sg_5000_e100.model"
     e2v_model=w2v.Word2Vec.load(path)
@@ -41,23 +44,19 @@ def load_corpus(_path):
         if i%2==0 and len(_p)>m_len:
             m_len=len(_p)
         corpus.append(_p)
-    return corpus,m_len
+    return corpus
 
 path="/home/ubuntu/thesiswork/source/corpus/fullcorpus100.txt"
-corpus,maxlen=load_corpus(path)
+corpus=load_corpus(path)
 
 def build_model(_input_dim,_input_length):
     model=Sequential()
-    model.add(LSTM(_input_dim,input_dim=_input_dim,input_length=_input_length,return_sequences=True,activation="linear"))
-    model.add(Reshape((_input_length*_input_dim,), input_shape=(_input_length,_input_dim)))
-    model.add(Dense(int(_input_dim*_input_length*1.5),input_dim=_input_dim*_input_length,activation="sigmoid"))
-    model.add(Dense(_input_dim*_input_length,input_dim=int(_input_dim*_input_length*1.5),activation="linear"))
-    model.add(Reshape((_input_length,_input_dim), input_shape=(_input_dim*_input_length,)))
-    model.add(Bidirectional(LSTM(_input_dim,input_dim=_input_dim,input_length=_input_length,return_sequences=False,activation="relu"),merge_mode='ave'))
-    model.compile(optimizer='rmsprop',loss='binary_crossentropy')
+    model.add(Masking(mask_value=0.0,input_shape=(_input_length,_input_dim)))
+    model.add(Bidirectional(LSTM(_input_dim,return_sequences=False,activation="tanh"),merge_mode='ave'))
+    model.compile(optimizer='adam',loss='binary_crossentropy')
     return model
 
-model=build_model(400,maxlen)
+model=build_model(dim,maxlen)
 
 def train_on_data(_corpus,_maxlen,_model,_epochs):
     early_stopping=EarlyStopping(monitor='loss',patience=10)
@@ -83,4 +82,4 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
         _model.fit(X_train,y_train,batch_size=batch,epochs=_epochs,callbacks=[early_stopping])
     _model.save("/home/ubuntu/results/models/LSTM100.h5")
 
-train_on_data(corpus,maxlen,model,20)
+train_on_data(corpus,maxlen,model,50)
