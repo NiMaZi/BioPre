@@ -49,14 +49,14 @@ corpus=load_corpus(path)
 def build_model(_input_dim,_input_length):
     model=Sequential()
     model.add(Masking(mask_value=0.0,input_shape=(_input_length,_input_dim)))
-    model.add(Bidirectional(LSTM(_input_dim,return_sequences=False,activation="tanh"),merge_mode='ave'))
-    model.compile(optimizer='adam',loss='binary_crossentropy')
+    model.add(Bidirectional(LSTM(_input_dim,return_sequences=False,activation="relu"),merge_mode='ave'))
+    model.compile(optimizer='adagrad',loss='binary_crossentropy')
     return model
 
 model=build_model(dim,maxlen)
 
 def train_on_data(_corpus,_maxlen,_model,_epochs):
-    early_stopping=EarlyStopping(monitor='loss',patience=10)
+    early_stopping=EarlyStopping(monitor='loss',patience=4)
     i=0
     comp_vec=[0.0 for i in range(0,128)]
     while(i<len(_corpus)-1):
@@ -75,7 +75,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
         N_all=np.array(ndata)
         X_train=N_all[:,:-1,:]
         y_train=N_all[:,-1,:]
-        _model.fit(X_train,y_train,batch_size=128,epochs=_epochs,verbose=0,callbacks=[early_stopping])
-    _model.save("/home/ubuntu/results/models/LSTM100.h5")
+        _model.fit(X_train,y_train,batch_size=128,epochs=_epochs,verbose=2,callbacks=[early_stopping])
+        _model.save("/home/ubuntu/results/models/LSTM100"+str(i)+".h5")
 
-train_on_data(corpus,maxlen,model,50)
+train_on_data(corpus,maxlen,model,20)
