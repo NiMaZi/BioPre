@@ -72,11 +72,10 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
         _body=_corpus[i]
         for w in _body:
             ndata.append(a_emb+[get_emb(w)])
-        batch=len(ndata)
         N_all=np.array(ndata)
         X_train=N_all[:,:-1,:]
         y_train=N_all[:,-1,:]
-        _model.fit(X_train,y_train,batch_size=batch,epochs=_epochs,callbacks=[early_stopping])
+        _model.fit(X_train,y_train,batch_size=128,epochs=_epochs,verbose=0,callbacks=[early_stopping])
     _model.save("/home/ubuntu/results/models/LSTM100.h5")
 
 train_on_data(corpus,maxlen,model,50)
