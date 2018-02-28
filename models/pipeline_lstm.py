@@ -1,7 +1,7 @@
 import json
 import numpy as np
 from keras.models import Sequential, load_model
-from keras.layers import LSTM, Dense, Reshape, Bidirectional
+from keras.layers import LSTM, Bidirectional, Masking
 from keras.callbacks import EarlyStopping
 from gensim.models import word2vec as w2v
 
