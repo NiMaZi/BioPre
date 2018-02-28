@@ -9,9 +9,9 @@ dim=128
 maxlen=290
 
 def load_models():
-    path="/home/ubuntu/results/models/e2v_sg_5000_e100.model"
+    path="/home/ubuntu/results/models/e2v_sg_10000_e100_d64.model"
     e2v_model=w2v.Word2Vec.load(path)
-    f=open("/home/ubuntu/results/ontology/KG_n2v.json",'r')
+    f=open("/home/ubuntu/results/ontology/KG_n2v_d64.json",'r')
     n2v_model=json.load(f)
     f.close()
     return e2v_model,n2v_model
@@ -29,7 +29,7 @@ c2id,prefix=load_sups()
 
 def get_emb(_code):
     e_vec=list(e2v_model.wv[_code])
-    n_vec=n2v_model[str(c2id[prefix+_code])]
+    n_vec=n2v_model[c2id[prefix+_code]]
     return e_vec+n_vec
 
 def load_corpus(_path):
@@ -61,7 +61,7 @@ model=build_model(dim,maxlen)
 def train_on_data(_corpus,_maxlen,_model,_epochs):
     early_stopping=EarlyStopping(monitor='loss',patience=10)
     i=0
-    comp_vec=[0.0 for i in range(0,400)]
+    comp_vec=[0.0 for i in range(0,128)]
     while(i<len(_corpus)-1):
         print("training on doc "+str(i))
         ndata=[]
