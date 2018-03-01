@@ -91,9 +91,11 @@ for i,syn in enumerate(coded_syns):
         dist_syn1=cosine(emb_syn1,emb_w)
         res_dict_syn0[_w]=dist_syn0
         res_dict_syn1[_w]=dist_syn1
-        f.write("%s,%d,%s,%d\n"%(syn[0],cur_pos_syn0,syn[1],cur_pos_syn1))
-    avg_pos_syn0+=sorted(res_dict_syn0,key=res_dict_syn0.get).index(syn[1])
-    avg_pos_syn1+=sorted(res_dict_syn1,key=res_dict_syn1.get).index(syn[0])
+    cur_pos_syn0=sorted(res_dict_syn0,key=res_dict_syn0.get).index(syn[1])
+    cur_pos_syn1=sorted(res_dict_syn1,key=res_dict_syn1.get).index(syn[0])
+    f.write("%s,%d,%s,%d\n"%(syn[0],cur_pos_syn0,syn[1],cur_pos_syn1))
+    avg_pos_syn0+=cur_pos_syn0
+    avg_pos_syn1+=cur_pos_syn1
 avg_pos_syn0/=len(coded_syns)
 avg_pos_syn1/=len(coded_syns)
 
@@ -115,9 +117,11 @@ for i,syn in enumerate(coded_syns):
         dist_syn1=cosine(emb_syn1,emb_w)
         res_dict_syn0[_w]=dist_syn0
         res_dict_syn1[_w]=dist_syn1
-        f.write("%s,%d,%s,%d\n"%(syn[0],cur_pos_syn0,syn[1],cur_pos_syn1))
-    avg_pos_syn0+=sorted(res_dict_syn0,key=res_dict_syn0.get).index(syn[1])
-    avg_pos_syn1+=sorted(res_dict_syn1,key=res_dict_syn1.get).index(syn[0])
+    cur_pos_syn0=sorted(res_dict_syn0,key=res_dict_syn0.get).index(syn[1])
+    cur_pos_syn1=sorted(res_dict_syn1,key=res_dict_syn1.get).index(syn[0])
+    f.write("%s,%d,%s,%d\n"%(syn[0],cur_pos_syn0,syn[1],cur_pos_syn1))
+    avg_pos_syn0+=cur_pos_syn0
+    avg_pos_syn1+=cur_pos_syn1
 avg_pos_syn0/=len(coded_syns)
 avg_pos_syn1/=len(coded_syns)
 
@@ -139,9 +143,11 @@ for i,syn in enumerate(coded_syns):
         dist_syn1=cosine(emb_syn1,emb_w)
         res_dict_syn0[_w]=dist_syn0
         res_dict_syn1[_w]=dist_syn1
-        f.write("%s,%d,%s,%d\n"%(syn[0],cur_pos_syn0,syn[1],cur_pos_syn1))
-    avg_pos_syn0+=sorted(res_dict_syn0,key=res_dict_syn0.get).index(syn[1])
-    avg_pos_syn1+=sorted(res_dict_syn1,key=res_dict_syn1.get).index(syn[0])
+    cur_pos_syn0=sorted(res_dict_syn0,key=res_dict_syn0.get).index(syn[1])
+    cur_pos_syn1=sorted(res_dict_syn1,key=res_dict_syn1.get).index(syn[0])
+    f.write("%s,%d,%s,%d\n"%(syn[0],cur_pos_syn0,syn[1],cur_pos_syn1))
+    avg_pos_syn0+=cur_pos_syn0
+    avg_pos_syn1+=cur_pos_syn1
 avg_pos_syn0/=len(coded_syns)
 avg_pos_syn1/=len(coded_syns)
 
