@@ -65,7 +65,6 @@ def test_on_data(_corpus,_maxlen,_model):
     P_all=0.0
     R_all=0.0
     while(i<len(_corpus)-1):
-        print("testing on doc "+str(100+int(i/2)))
         ndata=[]
         _abs=_corpus[i]
         a_emb=[]
@@ -102,8 +101,11 @@ def test_on_data(_corpus,_maxlen,_model):
     f.write("%.3f,%.3f,%.3f\n"%(P_all,R_all,F1))
     f.close()
 
+# model=load_model("/home/ubuntu/results/models/LSTM100198.h5")
+# test_on_data(corpus,maxlen,model)
+    
 rec=2
-while(rec<30):        
+while(rec<=198):        
     model=load_model("/home/ubuntu/results/models/LSTM100"+str(rec)+".h5")
     test_on_data(corpus,maxlen,model)
     rec+=2
