@@ -72,6 +72,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
         _body=_corpus[i]
         for w in _body:
             ndata.append(a_emb+[get_emb(w)])
+        i+=1
         N_all=np.array(ndata)
         X_train=N_all[:,:-1,:]
         y_train=N_all[:,-1,:]
