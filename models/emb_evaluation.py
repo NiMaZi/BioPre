@@ -56,6 +56,16 @@ def get_emb(_code):
     n_vec=n2v_model[str(c2id[prefix+_code])]
     return e_vec+n_vec
 
+def get_embe(_code):
+    e_vec=list(e2v_model.wv[_code])
+    # n_vec=n2v_model[str(c2id[prefix+_code])]
+    return e_vec
+
+def get_embn(_code):
+    # e_vec=list(e2v_model.wv[_code])
+    n_vec=n2v_model[str(c2id[prefix+_code])]
+    return n_vec
+
 
 # In[28]:
 
@@ -64,6 +74,55 @@ from scipy.spatial.distance import cosine
 
 
 # In[ ]:
+
+f=open("/home/ubuntu/results/logs/emb_evaluation.txt","w")
+
+avg_pos_syn0=0.0
+avg_pos_syn1=0.0
+for i,syn in enumerate(coded_syns):
+    res_dict_syn0={}
+    res_dict_syn1={}
+    emb_syn0=np.array(get_embe(syn[0]))
+    emb_syn1=np.array(get_embe(syn[1]))
+    for w in word_list:
+        _w=w.split('#')[1]
+        emb_w=np.array(get_embe(_w))
+        dist_syn0=cosine(emb_syn0,emb_w)
+        dist_syn1=cosine(emb_syn1,emb_w)
+        res_dict_syn0[_w]=dist_syn0
+        res_dict_syn1[_w]=dist_syn1
+        f.write("%s,%d,%s,%d\n"%(syn[0],cur_pos_syn0,syn[1],cur_pos_syn1))
+    avg_pos_syn0+=sorted(res_dict_syn0,key=res_dict_syn0.get).index(syn[1])
+    avg_pos_syn1+=sorted(res_dict_syn1,key=res_dict_syn1.get).index(syn[0])
+avg_pos_syn0/=len(coded_syns)
+avg_pos_syn1/=len(coded_syns)
+
+
+f.write("%f,%f\n"%(avg_pos_syn0,avg_pos_syn1))
+
+
+avg_pos_syn0=0.0
+avg_pos_syn1=0.0
+for i,syn in enumerate(coded_syns):
+    res_dict_syn0={}
+    res_dict_syn1={}
+    emb_syn0=np.array(get_embn(syn[0]))
+    emb_syn1=np.array(get_embn(syn[1]))
+    for w in word_list:
+        _w=w.split('#')[1]
+        emb_w=np.array(get_embn(_w))
+        dist_syn0=cosine(emb_syn0,emb_w)
+        dist_syn1=cosine(emb_syn1,emb_w)
+        res_dict_syn0[_w]=dist_syn0
+        res_dict_syn1[_w]=dist_syn1
+        f.write("%s,%d,%s,%d\n"%(syn[0],cur_pos_syn0,syn[1],cur_pos_syn1))
+    avg_pos_syn0+=sorted(res_dict_syn0,key=res_dict_syn0.get).index(syn[1])
+    avg_pos_syn1+=sorted(res_dict_syn1,key=res_dict_syn1.get).index(syn[0])
+avg_pos_syn0/=len(coded_syns)
+avg_pos_syn1/=len(coded_syns)
+
+
+f.write("%f,%f\n"%(avg_pos_syn0,avg_pos_syn1))
 
 
 avg_pos_syn0=0.0
@@ -80,12 +139,13 @@ for i,syn in enumerate(coded_syns):
         dist_syn1=cosine(emb_syn1,emb_w)
         res_dict_syn0[_w]=dist_syn0
         res_dict_syn1[_w]=dist_syn1
+        f.write("%s,%d,%s,%d\n"%(syn[0],cur_pos_syn0,syn[1],cur_pos_syn1))
     avg_pos_syn0+=sorted(res_dict_syn0,key=res_dict_syn0.get).index(syn[1])
     avg_pos_syn1+=sorted(res_dict_syn1,key=res_dict_syn1.get).index(syn[0])
 avg_pos_syn0/=len(coded_syns)
 avg_pos_syn1/=len(coded_syns)
 
-f=open("/home/ubuntu/results/logs/emb_evaluation.txt","w")
-f.write("%f,%f"%(avg_pos_syn0,avg_pos_syn1))
+
+f.write("%f,%f\n"%(avg_pos_syn0,avg_pos_syn1))
 f.close()
 
