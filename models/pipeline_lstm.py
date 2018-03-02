@@ -43,7 +43,7 @@ def load_corpus(_path):
         corpus.append(_p)
     return corpus
 
-path="/home/ubuntu/thesiswork/source/corpus/fullcorpus100.txt"
+path="/home/ubuntu/thesiswork/source/corpus/fullcorpus5000.txt"
 corpus=load_corpus(path)
 
 def build_model(_input_dim,_input_length):
@@ -53,10 +53,11 @@ def build_model(_input_dim,_input_length):
     model.compile(optimizer='adagrad',loss='binary_crossentropy')
     return model
 
-model=build_model(dim,maxlen)
+model=load_model("/home/ubuntu/results/models/LSTM1001.h5")
+# model=build_model(dim,maxlen)
 
 def train_on_data(_corpus,_maxlen,_model,_epochs):
-    early_stopping=EarlyStopping(monitor='loss',patience=4)
+    early_stopping=EarlyStopping(monitor='loss',patience=20)
     i=0
     comp_vec=[0.0 for i in range(0,128)]
     while(i<len(_corpus)-1):
@@ -73,10 +74,10 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
         for w in _body:
             ndata.append(a_emb+[get_emb(w)])
         i+=1
-        N_all=np.array(ndata)
+        N_all=np.array(ndata)/17.0
         X_train=N_all[:,:-1,:]
         y_train=N_all[:,-1,:]
-        _model.fit(X_train,y_train,batch_size=128,epochs=_epochs,verbose=2,callbacks=[early_stopping])
-        _model.save("/home/ubuntu/results/models/LSTM100"+str(i)+".h5")
+        _model.fit(X_train,y_train,batch_size=128,epochs=_epochs,verbose=0,callbacks=[early_stopping])
+        _model.save("/home/ubuntu/results/models/LSTM100_doc"+str(i)+".h5")
 
-train_on_data(corpus,maxlen,model,20)
+train_on_data(corpus,maxlen,model,100)
