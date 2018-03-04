@@ -3,12 +3,101 @@ import csv
 import json
 import numpy as np
 from gensim.models import word2vec
-from keras.models import Sequential, load_model
-from keras.layers import Dense
-from keras.callbacks import EarlyStopping
-from keras.layers import Activation
-from keras.layers import Dropout
+from keras.models import load_model
 
-path="/home/ubuntu/results_new/models/MLP.h5"
+path="/home/ubuntu/results_new/models/MLP_r.h5"
 model=load_model(path)
 
+f=open("/home/ubuntu/results/saliency/featured_list_com.json",'r')
+featured_list_com=json.load(f)
+f.close()
+
+f=open("/home/ubuntu/results/ontology/word_list.json",'r')
+word_list=json.load(f)
+f.close()
+
+jaccard=np.load("/home/ubuntu/results/ontology/jaccard.npy")
+milne_witten=np.load("/home/ubuntu/results/ontology/milne_witten.npy")
+adamic_adar=np.load("/home/ubuntu/results/ontology/adamic_adar.npy")
+dice=np.load("/home/ubuntu/results/ontology/dice.npy")
+
+f=open("/home/ubuntu/results/ontology/n2id.json",'r')
+n2id=json.load(f)
+f.close()
+f=open("/home/ubuntu/results/statistics/idf.json",'r')
+idf=json.load(f)
+f.close()
+f=open("/home/ubuntu/results/statistics/tf_all.json",'r')
+tf_all=json.load(f)
+f.close()
+
+f=open("/home/ubuntu/results/ontology/KG_n2v.json",'r')
+KG_n2v=json.load(f)
+f.close()
+
+KG_e2v=word2vec.Word2Vec.load("/home/ubuntu/results/e2v_sg_e100.model")
+
+cooc_simple=np.load("/home/ubuntu/results/statistics/cooc_simple.npy")
+
+
+threshold=0.0
+while(threshold<1.0):
+	volume=662
+	P_all=0.0
+	R_all=0.0
+	P_volume=volume
+	R_volume=volume
+	for i in range(4000,4000+volume):
+		_abs=featured_list_com[i]['abs']
+		_body=set(featured_list_com[i]['body'].keys())-set(featured_list_com[i]['abs'].keys())
+		predictions=set()
+		for w in word_list:
+			score=0.0
+			for a in _abs:
+				if a==w:
+					continue
+				jacc=jaccard[n2id[a]][n2id[w]]
+				mlwt=milne_witten[n2id[a]][n2id[w]]
+				aa=adamic_adar[n2id[a]][n2id[w]]
+				di=dice[n2id[a]][n2id[w]]
+				cocs=cooc_simple[n2id[a]][n2id[w]]
+				idf_a=idf[a]
+				idf_b=idf[w]
+				tf_all_a=tf_all[a]
+				tf_all_b=tf_all[w]
+				tfidf_a=tf_all_a*idf_a
+				tfidf_b=tf_all_b*idf_b
+				nodevec_a=KG_n2v[str(n2id[a])]
+				nodevec_b=KG_n2v[str(n2id[w])]
+				wordvec_a=list(KG_e2v.wv[a])
+				wordvec_b=list(KG_e2v.wv[w])
+				term_feature=[_abs[a][0],_abs[a][1],_abs[a][2],jacc,mlwt,aa,di,cocs,idf_a,idf_b,tf_all_a,tf_all_b,tfidf_a,tfidf_b]
+				term_embedding=nodevec_a+nodevec_b+wordvec_a+wordvec_b
+				term_all=term_feature+term_embedding
+				pred=model.predict(np.array([term_all]))
+				score+=pred[0][0]
+			score/=len(_abs)
+			if score>threshold:
+				predictions.add(w)
+		tp=len(predictions&_body)
+		fp=len(predictions-_body)
+		fn=len(_body-predictions)
+		try:
+			P=tp/(tp+fp)
+		except:
+			P=0.0
+			P_volume-=1
+		try:
+			R=tp/(tp+fn)
+		except:
+			R=0.0
+			R_volume-=1
+		P_all+=P
+		R_all+=R
+	P_all/=P_volume
+	R_all/=R_volume
+	F1=2*P_all*R_all/(P_all+R_all)
+	f=open("/home/ubuntu/results_new/mpl_log.txt",'a')
+	f.write("%.3f,%.3f,%.3f,%.3f\n"%(threshold,P_all,R_all,F1))
+	f.close()
+	threshold+=0.1
