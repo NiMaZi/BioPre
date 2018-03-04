@@ -38,7 +38,7 @@ def load_corpus(_path):
     f=open(_path,'r')
     pre_corpus=f.read()
     f.close()
-    pre_list=pre_corpus.split("\n")[100:150]
+    pre_list=pre_corpus.split("\n")[100:200]
     corpus=[]
     for i,p in enumerate(pre_list):
         _p=p.split(" ")[:-1]
@@ -58,7 +58,7 @@ def find_match(vec,n):
     res=sorted(m_dict,key=m_dict.get)
     return set(res[:n])
 
-def test_on_data(_corpus,_maxlen,_model):
+def test_on_data(_corpus,_maxlen,_model,_doc):
     ratio_body2abs=496.27/59.5
     i=0
     comp_vec=[0.0 for i in range(0,128)]
@@ -87,25 +87,21 @@ def test_on_data(_corpus,_maxlen,_model):
         R=tp/(tp+fn)
         P_all+=P
         R_all+=R
-        try:
-            F1=2*P*R/(P+R)
-        except:
-            F1=0.0
     P_all/=(len(_corpus)/2)
     R_all/=(len(_corpus)/2)
     try:
         F1=2*P_all*R_all/(P_all+R_all)
     except:
         F1=0.0
-    f=open("/home/ubuntu/results/logs/BiLSTM100.txt",'a')
-    f.write("%.3f,%.3f,%.3f\n"%(P_all,R_all,F1))
+    f=open("/home/ubuntu/results/logs/BiLSTM5000.txt",'a')
+    f.write("%d,%.3f,%.3f,%.3f\n"%(_doc,P_all,R_all,F1))
     f.close()
 
 # model=load_model("/home/ubuntu/results/models/LSTM100198.h5")
 # test_on_data(corpus,maxlen,model)
     
 rec=2
-while(rec<=198):        
-    model=load_model("/home/ubuntu/results/models/LSTM100"+str(rec)+".h5")
-    test_on_data(corpus,maxlen,model)
+while(rec<=100):        
+    model=load_model("/home/ubuntu/results/models/LSTM100_doc"+str(rec)+".h5")
+    test_on_data(corpus,maxlen,model,int(rec/2))
     rec+=2
