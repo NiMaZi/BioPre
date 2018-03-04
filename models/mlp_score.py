@@ -56,6 +56,8 @@ while(threshold<1.0):
 			for a in _abs:
 				if a==w:
 					continue
+				if not a in word_list:
+            		continue
 				jacc=jaccard[n2id[a]][n2id[w]]
 				mlwt=milne_witten[n2id[a]][n2id[w]]
 				aa=adamic_adar[n2id[a]][n2id[w]]
