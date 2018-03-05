@@ -15,15 +15,6 @@ hidden_expansion=float(sys.argv[3])
 dropout_rate=float(sys.argv[4])
 es_patience=float(sys.argv[5])
 
-input_dimension=542
-
-MLP_model=Sequential()
-MLP_model.add(Dense(int(hidden_expansion*input_dimension),input_dim=input_dimension,activation='linear'))
-MLP_model.add(Dropout(dropout_rate))
-MLP_model.add(Dense(input_dimension,activation='sigmoid'))
-MLP_model.add(Dropout(dropout_rate))
-MLP_model.add(Dense(1,activation='sigmoid'))
-MLP_model.compile(optimizer='sgd',loss='binary_crossentropy')
 
 early_stopping=EarlyStopping(monitor='loss',patience=es_patience)
 
@@ -61,13 +52,22 @@ cooc_simple=np.load("/home/ubuntu/results/statistics/cooc_simple.npy")
 abbl_order=[9,13,7,11,4,6,5,3,10,2,0,12,8,1]
 
 for aoi in range(0,len(abbl_order)):
+    input_dimension=(aoi+1)
+
+    MLP_model=Sequential()
+    MLP_model.add(Dense(int(hidden_expansion*input_dimension),input_dim=input_dimension,activation='linear'))
+    MLP_model.add(Dropout(dropout_rate))
+    MLP_model.add(Dense(input_dimension,activation='sigmoid'))
+    MLP_model.add(Dropout(dropout_rate))
+    MLP_model.add(Dense(1,activation='sigmoid'))
+    MLP_model.compile(optimizer='sgd',loss='binary_crossentropy')
     batched_list=[]
     for i,record in enumerate(featured_list_com):
-        if i>=1000:
+        if i>=4000:
             break
         if len(batched_list)>batch_size:
             X_pretrain=np.array(batched_list)[:,1:]
-            X_train=X_pretrain[:,abbl_order[:aoi]]
+            X_train=X_pretrain[:,abbl_order[:(aoi+1)]]
             y_train=np.array(batched_list)[:,0]
             MLP_model.fit(X_train,y_train,batch_size=batch_size,epochs=epochs,callbacks=[early_stopping])
             batched_list=[]
@@ -125,9 +125,9 @@ for aoi in range(0,len(abbl_order)):
 
     if batched_list:
         X_pretrain=np.array(batched_list)[:,1:]
-        X_train=X_pretrain[:,abbl_order[:aoi]]
+        X_train=X_pretrain[:,abbl_order[:(aoi+1)]]
         y_train=np.array(batched_list)[:,0]
         MLP_model.fit(X_train,y_train,batch_size=batch_size,epochs=epochs,callbacks=[early_stopping])
 
-    path="/home/ubuntu/results_new/models/MLP_abblation_"+str(aoi)+".h5"
+    path="/home/ubuntu/results_new/models/MLP_abblation_"+str(aoi+1)+".h5"
     MLP_model.save(path)
