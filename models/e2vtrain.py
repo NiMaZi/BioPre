@@ -20,7 +20,7 @@ for k in tf_all.keys():
 # # path="/home/ubuntu/results/e2v_sg_e100.model"
 # model.save(path)
 
-model=word2vec.Word2Vec(sg=0,size=64,window=10,min_count=0,sample=1e-3,hs=0,negative=1,workers=4,sorted_vocab=1)
+model=word2vec.Word2Vec(sg=0,size=64,window=10,min_count=0,sample=1e-3,hs=0,negative=5,workers=4,sorted_vocab=1,compute_loss=True)
 model.build_vocab_from_freq(tf_all_com)
 model.train(sentences,total_examples=20000,epochs=200)
 path="/home/ubuntu/results/models/e2v_sg_10000_e200_d64.model"
@@ -41,7 +41,7 @@ model.save(path)
 # # path="/home/ubuntu/results/e2v_cbow_e100.model"
 # model.save(path)
 
-model=word2vec.Word2Vec(sg=1,size=64,window=10,min_count=0,sample=1e-3,hs=0,negative=1,workers=4,sorted_vocab=1)
+model=word2vec.Word2Vec(sg=1,size=64,window=10,min_count=0,sample=1e-3,hs=0,negative=5,workers=4,sorted_vocab=1,compute_loss=True)
 model.build_vocab_from_freq(tf_all_com)
 model.train(sentences,total_examples=20000,epochs=200)
 path="/home/ubuntu/results/models/e2v_cbow_10000_e200_d64.model"
