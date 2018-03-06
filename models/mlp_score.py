@@ -37,6 +37,8 @@ KG_e2v=word2vec.Word2Vec.load("/home/ubuntu/results/e2v_sg_e100.model")
 
 cooc_simple=np.load("/home/ubuntu/results/statistics/cooc_simple.npy")
 
+abbl_order=[9,13,7,11,4,6,5,3,10,2,0,12,8,1]
+
 def score_do(model_n):
 	path="/home/ubuntu/results_new/models/MLP_abblation_"+str(model_n)+".h5"
 	model=load_model(path)
@@ -75,7 +77,7 @@ def score_do(model_n):
 				term_feature=[_abs[a][0],_abs[a][1],_abs[a][2],jacc,mlwt,aa,di,cocs,idf_a,idf_b,tf_all_a,tf_all_b,tfidf_a,tfidf_b]
 				term_embedding=nodevec_a+nodevec_b+wordvec_a+wordvec_b
 				term_all=term_feature+term_embedding
-				pred=model.predict(np.array([term_all]))
+				pred=model.predict(np.array([term_all])[:,abbl_order[:(model_n+1)]])
 				score+=pred[0][0]
 			score/=len(_abs)
 			if score>threshold:
@@ -102,5 +104,5 @@ def score_do(model_n):
 	f.write("%d,%.3f,%.3f,%.3f\n"%(model_n,P_all,R_all,F1))
 	f.close()
 
-for mn in range(1,15):
+for mn in range(1,len(abbl_order)+1):
 	score_do(mn)
