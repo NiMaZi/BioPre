@@ -5,8 +5,6 @@ import numpy as np
 from gensim.models import word2vec
 from keras.models import load_model
 
-path="/home/ubuntu/results_new/models/MLP_r.h5"
-model=load_model(path)
 
 f=open("/home/ubuntu/results/saliency/featured_list_com.json",'r')
 featured_list_com=json.load(f)
@@ -39,9 +37,10 @@ KG_e2v=word2vec.Word2Vec.load("/home/ubuntu/results/e2v_sg_e100.model")
 
 cooc_simple=np.load("/home/ubuntu/results/statistics/cooc_simple.npy")
 
-
-threshold=0.0
-while(threshold<1.0):
+def score_do(model_n):
+	path="/home/ubuntu/results_new/models/MLP_abblation_"+str(model_n)+".h5"
+	model=load_model(path)
+	threshold=0.9
 	volume=662
 	P_all=0.0
 	R_all=0.0
@@ -99,7 +98,9 @@ while(threshold<1.0):
 	P_all/=P_volume
 	R_all/=R_volume
 	F1=2*P_all*R_all/(P_all+R_all)
-	f=open("/home/ubuntu/results_new/mpl_log.txt",'a')
-	f.write("%.3f,%.3f,%.3f,%.3f\n"%(threshold,P_all,R_all,F1))
+	f=open("/home/ubuntu/results_new/mpl_abblation_log.txt",'a')
+	f.write("%d,%.3f,%.3f,%.3f\n"%(model_n,P_all,R_all,F1))
 	f.close()
-	threshold+=0.1
+
+for mn in range(1,15):
+	score_do(mn)
