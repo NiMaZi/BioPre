@@ -100,8 +100,8 @@ def test_on_data(_corpus,_maxlen,_model,_doc):
 # model=load_model("/home/ubuntu/results/models/LSTM100198.h5")
 # test_on_data(corpus,maxlen,model)
     
-rec=2
-while(rec<=100):        
+rec=102
+while(rec<=290):        
     model=load_model("/home/ubuntu/results/models/LSTM100_doc"+str(rec)+".h5")
     test_on_data(corpus,maxlen,model,int(rec/2))
     rec+=2
