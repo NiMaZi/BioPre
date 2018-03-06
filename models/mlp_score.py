@@ -77,7 +77,7 @@ def score_do(model_n):
 				term_feature=[_abs[a][0],_abs[a][1],_abs[a][2],jacc,mlwt,aa,di,cocs,idf_a,idf_b,tf_all_a,tf_all_b,tfidf_a,tfidf_b]
 				term_embedding=nodevec_a+nodevec_b+wordvec_a+wordvec_b
 				term_all=term_feature+term_embedding
-				pred=model.predict(np.array([term_all])[:,abbl_order[:(model_n+1)]])
+				pred=model.predict(np.array([term_all])[:,abbl_order[:model_n]])
 				score+=pred[0][0]
 			score/=len(_abs)
 			if score>threshold:
