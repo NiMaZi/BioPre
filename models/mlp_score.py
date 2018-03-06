@@ -42,7 +42,7 @@ abbl_order=[9,13,7,11,4,6,5,3,10,2,0,12,8,1]
 def score_do(model_n):
 	path="/home/ubuntu/results_new/models/MLP_abblation_"+str(model_n)+".h5"
 	model=load_model(path)
-	threshold=0.9
+	threshold=0.0
 	volume=662
 	P_all=0.0
 	R_all=0.0
@@ -89,12 +89,10 @@ def score_do(model_n):
 			P=tp/(tp+fp)
 		except:
 			P=0.0
-			P_volume-=1
 		try:
 			R=tp/(tp+fn)
 		except:
 			R=0.0
-			R_volume-=1
 		P_all+=P
 		R_all+=R
 	P_all/=P_volume
