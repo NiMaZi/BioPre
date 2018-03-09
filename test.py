@@ -23,7 +23,7 @@ from keras.models import Sequential,load_model
 from keras.layers import Dense,Dropout,BatchNormalization
 from keras.callbacks import EarlyStopping
 
-dim=16384
+dim=8192
 hrate=1.5
 drate=0.5
 
