@@ -1,9 +1,16 @@
-from ner.annotator.annotator import Annotator
+import numpy as np
+from keras.models import Sequential
+from keras.layers import Dense
 
-_annotator = Annotator("NobleJar/NobleCoder-1.0.jar","NobleJar/Annotator.java",searchMethod="best-match",terminology="HIVO004")
+length=4096
+dim=1024
 
-_filename = "data/body0.txt"
+model=Sequential()
+model.add(Dense(int(2*dim),input_dim=dim,activation='relu'))
+model.add(Dense(dim,activation='relu'))
+model.compile(optimizer='nadam',loss='binary_crossentropy')
 
-output = _annotator.process(_filename)
+X=np.random.rand(length,dim)
+y=np.random.rand(length,dim)
 
-print(output)
+model.fit(X,y,batch_size=256,epochs=10)
