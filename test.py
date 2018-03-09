@@ -1,16 +1,17 @@
 import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense
+from keras.models import Sequential, load_model
+from keras.layers import LSTM, Bidirectional, Masking
 
-length=4096
-dim=1024
+sample=1024
+length=290
+dim=128
 
 model=Sequential()
-model.add(Dense(int(2*dim),input_dim=dim,activation='relu'))
-model.add(Dense(dim,activation='relu'))
+model.add(Masking(mask_value=0.0,input_shape=(length,dim)))
+model.add(Bidirectional(LSTM(dim,return_sequences=False,activation="relu"),merge_mode='ave'))
 model.compile(optimizer='nadam',loss='binary_crossentropy')
 
-X=np.random.rand(length,dim)
-y=np.random.rand(length,dim)
+X=np.random.rand(sample,length,dim)
+y=np.random.rand(sample,dim)
 
 model.fit(X,y,batch_size=256,epochs=10)
