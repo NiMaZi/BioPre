@@ -4,7 +4,7 @@ from keras.layers import LSTM, Bidirectional, Masking
 
 sample=1024
 length=290
-dim=128
+dim=256
 
 model=Sequential()
 model.add(Masking(mask_value=0.0,input_shape=(length,dim)))
