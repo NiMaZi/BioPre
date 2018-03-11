@@ -2,10 +2,11 @@ import boto3
 
 s3 = boto3.resource("s3")
 myBucket=s3.Bucket('workspace.scitodate.com')
-volume=12935
+volume=5000
+# volume=12935
 
 for i in range(0,volume):
-	myBucket.download_file("yalun/kdata/abs"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/abs"+str(i)+".csv")
-	myBucket.download_file("yalun/kdata/body"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/body"+str(i)+".csv")
-	myBucket.download_file("yalun/kdata/title"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/title"+str(i)+".csv")
-	myBucket.download_file("yalun/kdata/keywords"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/keywords"+str(i)+".csv")
+	myBucket.download_file("yalun/annotated_papers/abs"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/updated/abs"+str(i)+".csv")
+	myBucket.download_file("yalun/annotated_papers/body"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/updated/body"+str(i)+".csv")
+	myBucket.download_file("yalun/annotated_papers/title"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/updated/title"+str(i)+".csv")
+	# myBucket.download_file("yalun/kdata/keywords"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/keywords"+str(i)+".csv")
