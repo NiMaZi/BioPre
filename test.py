@@ -3,6 +3,7 @@ import numpy as np
 from keras.models import Sequential,load_model
 from keras.layers import Dense,LSTM,Bidirectional,Masking,BatchNormalization
 from keras.callbacks import EarlyStopping
+from keras import backend as K
 
 dim=128
 maxlen=int(sys.argv[1])
