@@ -89,6 +89,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
                 ndata.append(b_emb)
         i+=2
         if len(ndata)>4096:
+            print(len(ndata),len(ndata[0]),len(ndata[0][0]))
             N_all=np.array(ndata)
             print(N_all.shape)
             X_train=N_all[:,:-1,:]
