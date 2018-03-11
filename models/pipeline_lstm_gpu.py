@@ -82,6 +82,8 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
             ndata.append(b_emb)
             if len(ndata)>=1024:
                 N_all=np.array(ndata)
+                N_all=N_all.reshape(1024,_maxlen,128)
+                print(N_all.shape)
                 X_train=N_all[:,:-1,:]
                 y_train=N_all[:,-1,:]
                 _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
@@ -98,6 +100,8 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
                 ndata.append(b_emb)
                 if len(ndata)>=1024:
                     N_all=np.array(ndata)
+                    N_all=N_all.reshape(1024,_maxlen,128)
+                    print(N_all.shape)
                     X_train=N_all[:,:-1,:]
                     y_train=N_all[:,-1,:]
                     _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
