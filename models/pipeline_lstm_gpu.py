@@ -80,6 +80,15 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
             for j in range(len(b_emb),_maxlen-1):
                 b_emb.append(comp_vec)
             ndata.append(b_emb)
+            if len(ndata)>=1024:
+                N_all=np.array(ndata)
+                X_train=N_all[:,:-1,:]
+                y_train=N_all[:,-1,:]
+                _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
+                if count%10==0:
+                    _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
+                count+=1
+                ndata=[]
         else:
             for j in range(0,len(_body)-_maxlen+1):
                 b_emb=[]
@@ -87,17 +96,24 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
                     w=_body[j+wj]
                     b_emb.append(get_emb(w))
                 ndata.append(b_emb)
+                if len(ndata)>=1024:
+                    N_all=np.array(ndata)
+                    X_train=N_all[:,:-1,:]
+                    y_train=N_all[:,-1,:]
+                    _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
+                    if count%10==0:
+                        _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
+                    count+=1
+                    ndata=[]
         i+=2
-        if len(ndata)>1024:
-            print(len(ndata),len(ndata[0]),len(ndata[0][0]))
-            N_all=np.array(ndata)
-            print(N_all.shape)
-            X_train=N_all[:,:-1,:]
-            y_train=N_all[:,-1,:]
-            _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
-            if count%10==0:
-                _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
-            count+=1
-            ndata=[]
+    if ndata:
+        N_all=np.array(ndata)
+        X_train=N_all[:,:-1,:]
+        y_train=N_all[:,-1,:]
+        _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
+        if count%10==0:
+            _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
+        count+=1
+        ndata=[]
 
 train_on_data(corpus,maxlen+1,model,10)
