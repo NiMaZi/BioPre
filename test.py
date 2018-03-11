@@ -22,7 +22,7 @@ X[1,5,:]=0.0
 
 early_stopping=EarlyStopping(monitor='loss',patience=10)
 early_stopping_val=EarlyStopping(monitor='val_loss',patience=10)
-model.fit(X,y,batch_size=32,epochs=10,shuffle=True,validation_split=0.1,callbacks=[early_stopping,early_stopping_val])
+model.fit(X,y,batch_size=128,epochs=10,shuffle=True,validation_split=0.1,callbacks=[early_stopping,early_stopping_val])
 
 
 # import numpy as np
