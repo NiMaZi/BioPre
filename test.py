@@ -3,7 +3,6 @@ import numpy as np
 from keras.models import Sequential,load_model
 from keras.layers import Dense,LSTM,Bidirectional,Masking,BatchNormalization
 from keras.callbacks import EarlyStopping
-from keras import backend as K
 
 dim=128
 maxlen=int(sys.argv[1])
@@ -15,7 +14,7 @@ model.add(BatchNormalization())
 model.add(Bidirectional(LSTM(dim,return_sequences=False,dropout=0.5,activation="relu"),merge_mode='ave'))
 model.compile(optimizer='nadam',loss='binary_crossentropy')
 
-sample=1000
+sample=1024
 X=np.random.rand(sample,maxlen,dim)
 y=np.random.rand(sample,dim)
 X[:,3,:]=0.0
@@ -26,6 +25,9 @@ X[1,5,:]=0.0
 early_stopping=EarlyStopping(monitor='loss',patience=10)
 early_stopping_val=EarlyStopping(monitor='val_loss',patience=10)
 model.fit(X,y,batch_size=batch_size,epochs=10,shuffle=True,validation_split=0.1,callbacks=[early_stopping,early_stopping_val])
+
+path="/home/yzg550/temp.h5"
+model.save(path)
 
 
 # import numpy as np
