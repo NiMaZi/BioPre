@@ -64,7 +64,7 @@ def build_model(_input_dim,_input_length):
 model=build_model(dim,maxlen)
 
 def train_on_data(_corpus,_maxlen,_model,_epochs):
-    eearly_stopping=EarlyStopping(monitor='loss',patience=5)
+    early_stopping=EarlyStopping(monitor='loss',patience=5)
     early_stopping_val=EarlyStopping(monitor='val_loss',patience=5)
     count=0
     i=1
