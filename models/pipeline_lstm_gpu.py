@@ -92,7 +92,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
             N_all=np.array(ndata)
             X_train=N_all[:,:-1,:]
             y_train=N_all[:,-1,:]
-            _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=0.1,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
+            _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
             if count%10==0:
                 _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
             count+=1
