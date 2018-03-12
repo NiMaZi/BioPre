@@ -79,5 +79,5 @@ def test_on_data(_corpus,_maxlen,_model):
         print(len(y_out[0]),y_out[0])
 
 
-model=load_model(homedir+"/results/models/BiLSTMGPU0.h5")
+model=load_model(homedir+"/results/models/BiLSTM0.h5")
 test_on_data(corpus,maxlen,model)
