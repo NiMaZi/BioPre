@@ -4,6 +4,7 @@ import numpy as np
 from keras.models import Sequential, load_model
 from keras.layers import LSTM,Bidirectional,Masking,BatchNormalization
 from keras.callbacks import EarlyStopping
+from keras import backend as K
 from gensim.models import word2vec as w2v
 
 inner_batch_size=256
@@ -58,7 +59,7 @@ def build_model(_input_dim,_input_length):
     model=Sequential()
     model.add(Masking(mask_value=0.0,input_shape=(_input_length,_input_dim)))
     model.add(BatchNormalization())
-    model.add(Bidirectional(LSTM(_input_dim,return_sequences=False,dropout=0.5,activation="sigmoid"),merge_mode='ave'))
+    model.add(Bidirectional(LSTM(_input_dim,return_sequences=False,dropout=0.4,activation="relu"),merge_mode='ave'))
     # model.add(BatchNormalization())
     model.compile(optimizer='nadam',loss='cosine_proximity')
     return model
