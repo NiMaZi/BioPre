@@ -55,11 +55,16 @@ def load_corpus(_path):
 path=homedir+"/thesiswork/corpus/fullcorpusall.txt"
 corpus=load_corpus(path)
 
+def my_cos_loss(y_true,y_pred):
+    ny_true=K.l2_normalize(y_true,axis=-1)
+    ny_pred=K.l2_normalize(y_pred,axis=-1)
+
+
 def build_model(_input_dim,_input_length):
     model=Sequential()
     model.add(Masking(mask_value=0.0,input_shape=(_input_length,_input_dim)))
     model.add(BatchNormalization())
-    model.add(Bidirectional(LSTM(_input_dim,return_sequences=False,dropout=0.4,activation="relu"),merge_mode='ave'))
+    model.add(Bidirectional(LSTM(_input_dim,return_sequences=False,dropout=0.4,activation="tanh"),merge_mode='ave'))
     # model.add(BatchNormalization())
     model.compile(optimizer='nadam',loss='cosine_proximity')
     return model
