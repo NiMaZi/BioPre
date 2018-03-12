@@ -59,7 +59,7 @@ def build_model(_input_dim,_input_length):
     model.add(Masking(mask_value=0.0,input_shape=(_input_length,_input_dim)))
     model.add(BatchNormalization())
     model.add(Bidirectional(LSTM(_input_dim,return_sequences=False,dropout=0.5,activation="relu"),merge_mode='ave'))
-    model.compile(optimizer='nadam',loss='binary_crossentropy')
+    model.compile(optimizer='rmsprop',loss='binary_crossentropy')
     return model
 
 # model=load_model(homedir+"/results/models/BiLSTM40.h5")
