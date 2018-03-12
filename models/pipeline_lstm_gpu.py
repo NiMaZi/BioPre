@@ -60,7 +60,7 @@ def build_model(_input_dim,_input_length):
     model.add(BatchNormalization())
     model.add(Bidirectional(LSTM(_input_dim,return_sequences=False,dropout=0.5,activation="sigmoid"),merge_mode='ave'))
     # model.add(BatchNormalization())
-    model.compile(optimizer='nadam',loss='binary_crossentropy')
+    model.compile(optimizer='nadam',loss='cosine_proximity')
     return model
 
 # model=load_model(homedir+"/results/models/BiLSTM40.h5")
