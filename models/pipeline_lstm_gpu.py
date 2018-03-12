@@ -6,7 +6,7 @@ from keras.layers import LSTM,Bidirectional,Masking,BatchNormalization
 from keras.callbacks import EarlyStopping
 from gensim.models import word2vec as w2v
 
-inner_batch_size=256
+inner_batch_size=512
 outer_batch_size=2048
 dim=128
 maxlen=512
