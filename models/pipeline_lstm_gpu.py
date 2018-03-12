@@ -62,8 +62,8 @@ def build_model(_input_dim,_input_length):
     model.compile(optimizer='nadam',loss='binary_crossentropy')
     return model
 
-model=load_model(homedir+"/results/models/BiLSTM40.h5")
-# model=build_model(dim,maxlen)
+# model=load_model(homedir+"/results/models/BiLSTM40.h5")
+model=build_model(dim,maxlen)
 
 def train_on_data(_corpus,_maxlen,_model,_epochs):
     early_stopping=EarlyStopping(monitor='loss',patience=5)
