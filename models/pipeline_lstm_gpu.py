@@ -6,7 +6,7 @@ from keras.layers import LSTM,Bidirectional,Masking,BatchNormalization
 from keras.callbacks import EarlyStopping
 from gensim.models import word2vec as w2v
 
-inner_batch_size=512
+inner_batch_size=1024
 outer_batch_size=2048
 dim=128
 maxlen=512
@@ -59,7 +59,7 @@ def build_model(_input_dim,_input_length):
     model.add(Masking(mask_value=0.0,input_shape=(_input_length,_input_dim)))
     model.add(BatchNormalization())
     model.add(Bidirectional(LSTM(_input_dim,return_sequences=False,dropout=0.5,activation="relu"),merge_mode='ave'))
-    model.compile(optimizer='rmsprop',loss='binary_crossentropy')
+    model.compile(optimizer='nadam',loss='binary_crossentropy')
     return model
 
 # model=load_model(homedir+"/results/models/BiLSTM40.h5")
