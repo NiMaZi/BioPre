@@ -6,6 +6,7 @@ from keras.layers import LSTM,Bidirectional,Masking,BatchNormalization
 from keras.callbacks import EarlyStopping
 from gensim.models import word2vec as w2v
 
+batch_size=128
 dim=128
 maxlen=1024
 volume=1000
@@ -66,8 +67,8 @@ model=load_model(homedir+"/results/models/BiLSTM40.h5")
 def train_on_data(_corpus,_maxlen,_model,_epochs):
     early_stopping=EarlyStopping(monitor='loss',patience=5)
     early_stopping_val=EarlyStopping(monitor='val_loss',patience=5)
-    count=53
-    i=261
+    count=0
+    i=1
     comp_vec=[0.0 for i in range(0,128)]
     ndata=[]
     while(i<len(_corpus)-1):
@@ -75,6 +76,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
         _body=_corpus[i]
         b_emb=[]
         if len(_body)<_maxlen:
+            print("short body.")
             for w in _body:
                 b_emb.append(get_emb(w))
             for j in range(len(b_emb),_maxlen):
@@ -88,12 +90,13 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
                 # print(N_all.shape)
                 X_train=N_all[:,:-1,:]
                 y_train=N_all[:,-1,:]
-                _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
+                _model.fit(X_train,y_train,batch_size=batch_size,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
                 if count%10==0:
                     _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
                 count+=1
                 ndata=[]
         else:
+            print("long body.")
             for j in range(0,len(_body)-_maxlen+1):
                 b_emb=[]
                 for wj in range(0,_maxlen):
@@ -107,7 +110,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
                     # print(N_all.shape)
                     X_train=N_all[:,:-1,:]
                     y_train=N_all[:,-1,:]
-                    _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=1.0/16.0,verbose=1,shuffle=True,callbacks=[early_stopping,early_stopping_val])
+                    _model.fit(X_train,y_train,batch_size=batch_size,epochs=_epochs,validation_split=1.0/16.0,verbose=1,shuffle=True,callbacks=[early_stopping,early_stopping_val])
                     if count%10==0:
                         _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
                     count+=1
@@ -118,7 +121,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
         N_all=np.array(ndata)
         X_train=N_all[:,:-1,:]
         y_train=N_all[:,-1,:]
-        _model.fit(X_train,y_train,batch_size=256,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
+        _model.fit(X_train,y_train,batch_size=batch_size,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
         if count%10==0:
             _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
         count+=1
