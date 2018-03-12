@@ -1,11 +1,12 @@
 import json
 import numpy as np
-from scipy.spatial.distance import cosine
-from keras.models import load_model
+from keras.models import Sequential, load_model
+from keras.layers import LSTM, Bidirectional, Masking, BatchNormalization
+from keras.callbacks import EarlyStopping
 from gensim.models import word2vec as w2v
 
 dim=128
-maxlen=290
+maxlen=300
 
 def load_models():
     path="/home/ubuntu/results/models/e2v_sg_10000_e100_d64.model"
@@ -22,10 +23,10 @@ def load_sups():
     c2id=json.load(f)
     f.close()
     f=open("/home/ubuntu/results/ontology/full_word_list.json",'r')
-    word_list=json.load(f)[1:]
+    word_list=json.load(f)
     f.close()
     prefix='http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#'
-    return c2id,prefix,word_list
+    return c2id,prefix,word_list[1:]
 
 c2id,prefix,word_list=load_sups()
 
@@ -38,70 +39,74 @@ def load_corpus(_path):
     f=open(_path,'r')
     pre_corpus=f.read()
     f.close()
-    pre_list=pre_corpus.split("\n")[100:200]
+    pre_list=pre_corpus.split("\n")[:-1]
     corpus=[]
     for i,p in enumerate(pre_list):
         _p=p.split(" ")[:-1]
         corpus.append(_p)
-    return corpus
+    return corpus[10000:10200]
 
-path="/home/ubuntu/thesiswork/source/corpus/fullcorpus5000.txt"
+path="/home/ubuntu/thesiswork/source/corpus/fullcorpus10000.txt"
 corpus=load_corpus(path)
 
-
-def find_match(vec,n):
-    m_dict={}
-    for w in word_list:
-        w_vec=np.array(get_emb(w.split('#')[1]))
-        dis=cosine(w_vec,vec)
-        m_dict[w.split('#')[1]]=dis
-    res=sorted(m_dict,key=m_dict.get)
-    return set(res[:n])
-
-def test_on_data(_corpus,_maxlen,_model,_doc):
-    ratio_body2abs=496.27/59.5
+def test_on_data(_corpus,_maxlen,_model):
     i=0
+    P1=0.0
+    P5=0.0
+    P1k=0.0
+    R1=0.0
+    R5=0.0
+    R1k=0.0
     comp_vec=[0.0 for i in range(0,128)]
-    P_all=0.0
-    R_all=0.0
     while(i<len(_corpus)-1):
         ndata=[]
+        nlabel=[]
         _abs=_corpus[i]
         a_emb=[]
         for w in _abs:
             a_emb.append(get_emb(w))
-        for j in range(len(a_emb),_maxlen):
+        for j in range(len(a_emb),_maxlen-1):
             a_emb.append(comp_vec)
         i+=1
         _body=set(_corpus[i])
+        pred=[]
+        for j,w in enumerate(word_list):
+            ndata=[a_emb+[get_emb(w.split('#')[1])]]
+            y_out=_model.predict(np.array(ndata))
+            if y_out[0][0]:
+                pred.append((w.split('#')[1],y_out[0][0]))
+        result=sorted(pred,key=lambda x:-x[1])[:1000]
         i+=1
-        ndata.append(a_emb)
-        N_all=np.array(ndata)
-        y_pred=_model.predict(N_all)
-        top_n=int(len(set(_abs))*ratio_body2abs)
-        match=find_match(y_pred[0],top_n)
-        tp=float(len(match&_body))
-        fp=len(match-_body)
-        fn=len(_body-match)
-        P=tp/(tp+fp)
-        R=tp/(tp+fn)
-        P_all+=P
-        R_all+=R
-    P_all/=(len(_corpus)/2)
-    R_all/=(len(_corpus)/2)
-    try:
-        F1=2*P_all*R_all/(P_all+R_all)
-    except:
-        F1=0.0
-    f=open("/home/ubuntu/results/logs/BiLSTM5000.txt",'a')
-    f.write("%d,%.3f,%.3f,%.3f\n"%(_doc,P_all,R_all,F1))
-    f.close()
-
-# model=load_model("/home/ubuntu/results/models/LSTM100198.h5")
-# test_on_data(corpus,maxlen,model)
-    
-rec=102
-while(rec<=290):        
-    model=load_model("/home/ubuntu/results/models/LSTM100_doc"+str(rec)+".h5")
-    test_on_data(corpus,maxlen,model,int(rec/2))
-    rec+=2
+        H1=0.0
+        H5=0.0
+        H1k=0.0
+        for j,wt in enumerate(result):
+            if wt[0] in _body:
+                if j<=100:
+                    H1+=1
+                if j<=500:
+                    H5+=1
+                if j<=1000:
+                    H1k+=1
+        P1+=H1/100
+        P5+=H1/500
+        P1k+=H1/1000
+        R1+=H1/len(_body)
+        R5+=H5/len(_body)
+        R1k+=H1k/len(_body)
+    P1/=len(_corpus)/2
+    P5/=len(_corpus)/2
+    P1k/=len(_corpus)/2
+    R1/=len(_corpus)/2
+    R5/=len(_corpus)/2
+    R1k/=len(_corpus)/2
+    return P1,R1,P5,R5,P1k,R1k
+            
+doc=100
+logf=open("/home/ubuntu/results/logs/BiLSTM_cls_log.txt",'a')
+while(doc<=2500):
+    model=load_model("/home/ubuntu/results/models/BiLSTM_cls_doc"+str(doc)+".h5")
+    P1,R1,P5,R5,P1k,R1k=test_on_data(corpus,maxlen,model)
+    logf.write("%d,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f"%(doc,P1,R1,P5,R5,P1k,R1k))
+    doc+=100
+logf.close()
