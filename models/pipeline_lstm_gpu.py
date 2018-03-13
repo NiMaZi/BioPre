@@ -85,10 +85,11 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
         b_emb=[]
         if len(_body)<_maxlen:
             print("short body.")
-            for w in _body:
-                b_emb.append(get_emb(w))
-            for j in range(len(b_emb),_maxlen):
+            for j in range(0,len(_body)-1):
+                b_emb.append(get_emb(_body[j]))
+            for j in range(len(b_emb)-1,_maxlen-1):
                 b_emb.append(comp_vec)
+            b_emb.append(get_emb(_body[len(_body)-1]))
             ndata.append(b_emb)
             if len(ndata)>=outer_batch_size:
                 print("training on batch "+str(count))
