@@ -1,5 +1,6 @@
 import os
 import json
+import boto3
 import numpy as np
 from keras.models import Sequential, load_model
 from keras.layers import LSTM,Bidirectional,Masking,BatchNormalization
@@ -13,6 +14,9 @@ dim=128
 maxlen=512
 volume=1000
 homedir=os.environ['HOME']
+
+s3 = boto3.resource("s3")
+myBucket=s3.Bucket('workspace.scitodate.com')
 
 def load_models():
     path=homedir+"/results/models/e2v_sg_10000_e100_d64.model"
@@ -54,6 +58,13 @@ def load_corpus(_path):
 
 path=homedir+"/thesiswork/corpus/fullcorpusall.txt"
 corpus=load_corpus(path)
+
+def upload_model(_model_path,_model_name):
+    f=open(_model_path,'rb')
+    d=f.read()
+    f.close
+    myBucket.put_object(Body=d,Key="yalun/results/models/"+_model_name)
+
 
 def my_cos_loss(y_true,y_pred):
     ny_true=K.l2_normalize(y_true,axis=-1)
@@ -102,6 +113,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
                 _model.fit(X_train,y_train,batch_size=inner_batch_size,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
                 if count%10==0:
                     _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
+                    upload_model(homedir+"/results/models/BiLSTM"+str(count)+".h5","BiLSTMGPU"+str(count)+".h5")
                 count+=1
                 ndata=[]
         else:
@@ -122,6 +134,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
                     _model.fit(X_train,y_train,batch_size=inner_batch_size,epochs=_epochs,validation_split=1.0/16.0,verbose=1,shuffle=True,callbacks=[early_stopping,early_stopping_val])
                     if count%10==0:
                         _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
+                        upload_model(homedir+"/results/models/BiLSTM"+str(count)+".h5","BiLSTMGPU"+str(count)+".h5")
                     count+=1
                     ndata=[]
         i+=2
@@ -133,6 +146,7 @@ def train_on_data(_corpus,_maxlen,_model,_epochs):
         _model.fit(X_train,y_train,batch_size=inner_batch_size,epochs=_epochs,validation_split=1.0/16.0,verbose=0,shuffle=True,callbacks=[early_stopping,early_stopping_val])
         if count%10==0:
             _model.save(homedir+"/results/models/BiLSTM"+str(count)+".h5")
+            upload_model(homedir+"/results/models/BiLSTM"+str(count)+".h5","BiLSTMGPU"+str(count)+".h5")
         count+=1
         ndata=[]
 
