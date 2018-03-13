@@ -106,6 +106,6 @@ logf=open(homedir+"/results/logs/BiLSTMGPU_log.txt",'a')
 while mod_no<=90:
     model=load_model(homedir+"/results/models/BiLSTMGPU"+str(mod_no)+".h5")
     hit=test_on_data(corpus,maxlen,model)
-    logf.write("%d,%.3f"%(mod_no,hit))
+    logf.write("%d,%.3f\n"%(mod_no,hit))
     mod_no+=10
 logf.close()
