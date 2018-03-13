@@ -49,6 +49,14 @@ def load_corpus(_path):
 path="/home/ubuntu/thesiswork/source/corpus/fullcorpus10000.txt"
 corpus=load_corpus(path)
 
+def topn(l,n):
+    r=[]
+    for i in l:
+        r.append(i)
+        if len(r)>n:
+            r.remove(min(r,key=lambda x:x[1]))
+    return sorted(r,key=lambda x:-x[1])
+
 def test_on_data(_corpus,_maxlen,_model):
     i=0
     P1=0.0
@@ -75,7 +83,7 @@ def test_on_data(_corpus,_maxlen,_model):
             y_out=_model.predict(np.array(ndata))
             if y_out[0][0]:
                 pred.append((w.split('#')[1],y_out[0][0]))
-        result=sorted(pred,key=lambda x:-x[1])[:1000]
+        result=topn(pred,1000)
         i+=1
         H1=0.0
         H5=0.0
@@ -88,9 +96,10 @@ def test_on_data(_corpus,_maxlen,_model):
                     H5+=1
                 if j<=1000:
                     H1k+=1
+        print("hit @ 100: %.3f, hit @ 500: %.3f, hit @ 1k: %.3f."%(H1/100,H5/500,H1k/1000))
         P1+=H1/100
-        P5+=H1/500
-        P1k+=H1/1000
+        P5+=H5/500
+        P1k+=H1k/1000
         R1+=H1/len(_body)
         R5+=H5/len(_body)
         R1k+=H1k/len(_body)
