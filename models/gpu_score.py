@@ -101,10 +101,9 @@ def test_on_data(_corpus,_maxlen,_model):
     hit/=len(_corpus)/2.0
     return hit
 
-mod_no=100
+mod_no=140
 logf=open(homedir+"/results/logs/BiLSTMGPU_log.txt",'a')
-logf.write("\n")
-while mod_no<=130:
+while mod_no<=170:
     model=load_model(homedir+"/results/models/BiLSTMGPU"+str(mod_no)+".h5")
     hit=test_on_data(corpus,maxlen,model)
     logf.write("%d,%.3f\n"%(mod_no,hit))
