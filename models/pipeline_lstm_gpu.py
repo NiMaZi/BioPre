@@ -86,8 +86,8 @@ model=build_model(dim,maxlen)
 def train_on_data(_corpus,_maxlen,_model,_epochs):
     early_stopping=EarlyStopping(monitor='loss',patience=5)
     early_stopping_val=EarlyStopping(monitor='val_loss',patience=5)
-    count=109
-    i=443
+    count=167
+    i=619
     comp_vec=[0.0 for i in range(0,128)]
     ndata=[]
     while(i<len(_corpus)-1):

@@ -116,6 +116,6 @@ logf=open("/home/ubuntu/results/logs/BiLSTM_cls_log.txt",'a')
 while(doc<=2500):
     model=load_model("/home/ubuntu/results/models/BiLSTM_cls_doc"+str(doc)+".h5")
     P1,R1,P5,R5,P1k,R1k=test_on_data(corpus,maxlen,model)
-    logf.write("%d,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f"%(doc,P1,R1,P5,R5,P1k,R1k))
+    logf.write("%d,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f\n"%(doc,P1,R1,P5,R5,P1k,R1k))
     doc+=100
 logf.close()
