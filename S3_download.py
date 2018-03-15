@@ -2,10 +2,10 @@ import boto3
 
 s3 = boto3.resource("s3")
 myBucket=s3.Bucket('workspace.scitodate.com')
-volume=5000
+volume=10000
 # volume=12935
 
-for i in range(0,volume):
+for i in range(5000,5000+volume):
 	myBucket.download_file("yalun/annotated_papers/abs"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/updated/abs"+str(i)+".csv")
 	myBucket.download_file("yalun/annotated_papers/body"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/updated/body"+str(i)+".csv")
 	myBucket.download_file("yalun/annotated_papers/title"+str(i)+".csv","/home/ubuntu/thesiswork/kdata/updated/title"+str(i)+".csv")
