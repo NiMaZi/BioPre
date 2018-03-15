@@ -47,10 +47,11 @@ for i,item in enumerate(sourceBucket.objects.all()):
     sourceBucket.download_file(item.key,homedir+"/thesiswork/source/papers/"+item.key)
     with jsonlines.open(homedir+"/thesiswork/source/papers/"+item.key) as reader:
         for record in reader:
-            print("article "+str(counter))
             txt_path=homedir+"/thesiswork/tempdoc.txt"
 
             output=record['abstract']
+            if not output:
+                continue
             f=open(txt_path,"w",encoding='utf-8')
             f.write(output)
             f.close()
@@ -59,6 +60,8 @@ for i,item in enumerate(sourceBucket.objects.all()):
             upload_to_S3(path,"abs",counter,"csv")
             
             output=record['body']
+            if not output:
+                continue
             f=open(txt_path,"w",encoding='utf-8')
             f.write(output)
             f.close()
