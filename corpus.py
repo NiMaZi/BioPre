@@ -5,13 +5,14 @@ import jsonlines
 import csv
 import subprocess
 
+homedir=os.environ['HOME']
 s3 = boto3.resource("s3")
 sourceBucket=s3.Bucket('papers.scitodate.com')
 targetBucket=s3.Bucket('workspace.scitodate.com')
 
 def get_annotation(_inpath):
-    subprocess.call(['java','-jar','/home/ubuntu/ner/NobleJar/NobleCoder-1.0.jar','-terminology','NCI_Thesaurus','-input',_inpath,'-output','/home/ubuntu/thesiswork/kdata/disambiguation','-search','best-match','-selectBestCandidates'])
-    f=open('/home/ubuntu/thesiswork/kdata/disambiguation/RESULTS.tsv','r',encoding='utf-8')
+    subprocess.call(['java','-jar',homedir+'/ner/NobleJar/NobleCoder-1.0.jar','-terminology','NCI_Thesaurus','-input',_inpath,'-output',homedir+'/thesiswork/disambiguation','-search','best-match','-selectBestCandidates'])
+    f=open(homedir+'/thesiswork/disambiguation/RESULTS.tsv','r',encoding='utf-8')
     unamb=f.read()
     f.close()
     tmp_list=unamb.split('\n')
@@ -23,46 +24,53 @@ def get_annotation(_inpath):
     unamb_list=unamb_list[1:len(unamb_list)-1]
     for item in unamb_list:
         result_list.append([item[1],item[2],item[3],item[4],item[5].split(',')[0].split('/')[1]])
-    f=open('/home/ubuntu/thesiswork/kdata/annotation.csv','w',encoding='utf-8')
+    f=open(homedir+'/thesiswork/annotation.csv','w',encoding='utf-8')
     wr=csv.writer(f)
     for row in result_list:
         wr.writerow(row)
     f.close()
-    _outpath='/home/ubuntu/thesiswork/kdata/annotation.csv'
+    _outpath=homedir+'/thesiswork/annotation.csv'
     return _outpath
 
-def upload_to_S3(_inpath,_fname,_counter):
+def upload_to_S3(_inpath,_fname,_counter,_format):
     f=open(_inpath,"r",encoding='utf-8')
     data=f.read()
     f.close()
-    targetBucket.put_object(Body=data,Key="yalun/annotated_papers/"+_fname+str(_counter)+".csv")
+    targetBucket.put_object(Body=data,Key="yalun/annotated_papers_with_txt/"+_fname+str(_counter)+"."+_format)
 
 counter=0
+logf=open(homedir+"/results/logs/annotator_log.txt",'a')
 for i,item in enumerate(sourceBucket.objects.all()):
-    print("source file "+str(i))
-    sourceBucket.download_file(item.key,"/home/ubuntu/thesiswork/source/papers/"+item.key)
-    with jsonlines.open("/home/ubuntu/thesiswork/source/papers/"+item.key) as reader:
+    logf.write("source file "+str(i)+"\n")
+    sourceBucket.download_file(item.key,homedir+"/thesiswork/source/papers/"+item.key)
+    with jsonlines.open(homedir+"/thesiswork/source/papers/"+item.key) as reader:
         for record in reader:
             print("article "+str(counter))
+            txt_path=homedir+"/thesiswork/tempdoc.txt"
+
             output=record['abstract']
-            f=open("/home/ubuntu/thesiswork/kdata/tempdoc.txt","w",encoding='utf-8')
+            f=open(txt_path,"w",encoding='utf-8')
             f.write(output)
             f.close()
-            path=get_annotation("/home/ubuntu/thesiswork/kdata/tempdoc.txt")
-            upload_to_S3(path,"abs",counter)
+            upload_to_S3(txt_path,"abs",counter,"txt")
+            path=get_annotation(txt_path)
+            upload_to_S3(path,"abs",counter,"csv")
             
             output=record['body']
-            f=open("/home/ubuntu/thesiswork/kdata/tempdoc.txt","w",encoding='utf-8')
+            f=open(txt_path,"w",encoding='utf-8')
             f.write(output)
             f.close()
-            path=get_annotation("/home/ubuntu/thesiswork/kdata/tempdoc.txt")
-            upload_to_S3(path,"body",counter)
+            upload_to_S3(txt_path,"body",counter,"txt")
+            path=get_annotation(txt_path)
+            upload_to_S3(path,"body",counter,"csv")
             
             output=record['title']
-            f=open("/home/ubuntu/thesiswork/kdata/tempdoc.txt","w",encoding='utf-8')
+            f=open(txt_path,"w",encoding='utf-8')
             f.write(output)
             f.close()
-            path=get_annotation("/home/ubuntu/thesiswork/kdata/tempdoc.txt")
-            upload_to_S3(path,"title",counter)
+            upload_to_S3(txt_path,"title",counter,"txt")
+            path=get_annotation(txt_path)
+            upload_to_S3(path,"title",counter,"csv")
             
             counter+=1
+logf.close()
