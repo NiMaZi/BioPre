@@ -39,9 +39,10 @@ def upload_to_S3(_inpath,_fname,_counter,_format):
     targetBucket.put_object(Body=data,Key="yalun/annotated_papers_with_txt/"+_fname+str(_counter)+"."+_format)
 
 counter=0
+i=0
 logf=open(homedir+"/results/logs/annotator_log.txt",'a')
-for i,item in enumerate(sourceBucket.objects.all()):
-    if i<71:
+for item in sourceBucket.objects.all():
+    if i<141:
         continue
     logf.write("source file "+str(i)+"\n")
     sourceBucket.download_file(item.key,homedir+"/thesiswork/source/papers/"+item.key)
@@ -78,4 +79,5 @@ for i,item in enumerate(sourceBucket.objects.all()):
             upload_to_S3(path,"title",counter,"csv")
             
             counter+=1
+    i+=1
 logf.close()
