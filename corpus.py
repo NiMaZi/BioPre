@@ -42,7 +42,8 @@ counter=0
 i=0
 logf=open(homedir+"/results/logs/annotator_log.txt",'a')
 for item in sourceBucket.objects.all():
-    if i<141:
+    i+=1
+    if i<145:
         continue
     logf.write("source file "+str(i)+"\n")
     sourceBucket.download_file(item.key,homedir+"/thesiswork/source/papers/"+item.key)
@@ -79,5 +80,4 @@ for item in sourceBucket.objects.all():
             upload_to_S3(path,"title",counter,"csv")
             
             counter+=1
-    i+=1
 logf.close()
