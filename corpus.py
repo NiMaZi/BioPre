@@ -49,7 +49,7 @@ for i,item in enumerate(key_list):
     if i<145:
         continue
     logf.write("source file "+str(i)+"\n")
-    sourceBucket.download_file(item.key,homedir+"/thesiswork/source/papers/"+item)
+    sourceBucket.download_file(item,homedir+"/thesiswork/source/papers/"+item)
     with jsonlines.open(homedir+"/thesiswork/source/papers/"+item) as reader:
         for record in reader:
             txt_path=homedir+"/thesiswork/tempdoc.txt"
