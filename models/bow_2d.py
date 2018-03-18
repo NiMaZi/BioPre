@@ -84,4 +84,4 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=1):
 
 if __name__=="__main__":
 	model=build_model()
-	total=train_on_batch_S3(model,10000,256,64)
+	total=train_on_batch_S3(model,10000,128,64)
