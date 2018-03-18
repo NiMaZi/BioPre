@@ -3,6 +3,7 @@ import sys
 import csv
 import json
 import boto3
+import numpy as np
 from keras.models import Sequential,load_model
 from keras.layers import Dense,Dropout,BatchNormalization
 from keras.callbacks import EarlyStopping
