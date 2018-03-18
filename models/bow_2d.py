@@ -70,7 +70,11 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=1):
 			X_train=N_all[:,:len(word_list)]
 			Y_train=np.ceil(N_all[:,len(word_list):])
 			_model.fit(X_train,Y_train,shuffle=False,batch_size=_batch,verbose=0,epochs=_epochs,validation_split=1.0/16.0,callbacks=[early_stopping,early_stopping_val])
-			_model.save(homedir+"/results/models/MLPsparse_2hidden_"+str(batch_count)+".h5")
+			myBucket.put_object(Body=_model,Key="yalun/results/models/MLPsparse_2hidden_"+str(batch_count)+".h5")
+			try:
+				_model.save(homedir+"/results/models/MLPsparse_2hidden_"+str(batch_count)+".h5")
+			except:
+				pass
 			batch_count+=1
 			sample_list=[]
 	if len(sample_list):
@@ -78,10 +82,14 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=1):
 		X_train=N_all[:,:len(word_list)]
 		Y_train=np.ceil(N_all[:,len(word_list):])
 		_model.fit(X_train,Y_train,shuffle=False,batch_size=_batch,verbose=0,epochs=_epochs,validation_split=1.0/16.0,callbacks=[early_stopping,early_stopping_val])
-		_model.save(homedir+"/results/models/MLPsparse_2hidden_"+str(batch_count)+".h5")
+		myBucket.put_object(Body=_model,Key="yalun/results/models/MLPsparse_2hidden_"+str(batch_count)+".h5")
+		try:
+			_model.save(homedir+"/results/models/MLPsparse_2hidden_"+str(batch_count)+".h5")
+		except:
+			pass
 		batch_count+=1
 	return batch_count
 
 if __name__=="__main__":
 	model=build_model()
-	total=train_on_batch_S3(model,10000,128,64)
+	total=train_on_batch_S3(model,10000,136,64)
