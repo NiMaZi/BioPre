@@ -36,17 +36,16 @@ def upload_to_S3(_inpath,_fname,_counter,_format):
     f=open(_inpath,"r",encoding='utf-8')
     data=f.read()
     f.close()
-    targetBucket.put_object(Body=data,Key="yalun/annotated_papers_with_txt_new/"+_fname+str(_counter)+"."+_format)
+    targetBucket.put_object(Body=data,Key="yalun/annotated_papers_with_txt_new2/"+_fname+str(_counter)+"."+_format)
 
 f=open(homedir+"/key_list.json",'r')
 key_list=json.load(f)
 f.close()
 
 counter=0
-i=0
 logf=open(homedir+"/results/logs/annotator_log.txt",'a')
 for i,item in enumerate(key_list):
-    if i<145:
+    if i<253:
         continue
     logf.write("source file "+str(i)+"\n")
     sourceBucket.download_file(item,homedir+"/thesiswork/source/papers/"+item)
@@ -83,4 +82,6 @@ for i,item in enumerate(key_list):
             upload_to_S3(path,"title",counter,"csv")
             
             counter+=1
+
+            logf.write("output record "+str(counter)+"\n")
 logf.close()
