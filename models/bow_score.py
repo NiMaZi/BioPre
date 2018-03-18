@@ -108,7 +108,7 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 
 if __name__=="__main__":
 	homedir=os.environ['HOME']
-	model=get_model_S3("MLPsparse_2hidden_0")
+	# model=get_model_S3("MLPsparse_2hidden_0")
 	model=get_model_local(homedir+"/results/models/MLPsparse_2hidden_0.h5")
 	threshold=0.0
 	while threshold<1.0:
