@@ -42,14 +42,14 @@ f=open(homedir+"/key_list.json",'r')
 key_list=json.load(f)
 f.close()
 
-counter=0
+counter=1223
 logf=open(homedir+"/results/logs/annotator_log.txt",'a')
 for i,item in enumerate(key_list):
-    if i<253:
+    if i<261:
         continue
     logf.write("source file "+str(i)+"\n")
-    sourceBucket.download_file(item,homedir+"/thesiswork/source/papers/"+item)
-    with jsonlines.open(homedir+"/thesiswork/source/papers/"+item) as reader:
+    sourceBucket.download_file(item,homedir+"/thesiswork/source/papers/tmp.jsonl")
+    with jsonlines.open(homedir+"/thesiswork/source/papers/tmp.jsonl") as reader:
         for record in reader:
             txt_path=homedir+"/thesiswork/tempdoc.txt"
 
