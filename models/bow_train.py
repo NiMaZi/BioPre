@@ -74,7 +74,7 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 			_model.save(homedir+"/results/models/temp_model_1hidden.h5")
 			s3f=open(homedir+"/results/models/temp_model_1hidden.h5",'rb')
 			updata=s3f.read()
-			myBucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_"+str(batch_count)+".h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_"+str(batch_count)+".h5")
 			s3f.close()
 			batch_count+=1
 			sample_list=[]
@@ -86,7 +86,7 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 		_model.save(homedir+"/results/models/temp_model_1hidden.h5")
 		s3f=open(homedir+"/results/models/temp_model_1hidden.h5",'rb')
 		updata=s3f.read()
-		myBucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_"+str(batch_count)+".h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_"+str(batch_count)+".h5")
 		s3f.close()
 		batch_count+=1
 	return batch_count
