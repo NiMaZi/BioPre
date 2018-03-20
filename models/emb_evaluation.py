@@ -21,7 +21,7 @@ f.close()
 
 
 def load_models():
-    path="/home/ubuntu/results/models/e2v_sg_140k_e200_d64.model"
+    path="/home/ubuntu/results/models/e2v_cbow_140k_e200_d64.model"
     e2v_model=w2v.Word2Vec.load(path)
     f=open("/home/ubuntu/results/ontology/KG_n2v_d64.json",'r')
     n2v_model=json.load(f)
