@@ -108,8 +108,8 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 
 if __name__=="__main__":
 	homedir=os.environ['HOME']
-	logf=open(homedir+"/results/logs/bow_score.txt",'a')
 	for i in range(3,8):
+		logf=open(homedir+"/results/logs/bow_score.txt",'a')
 		model_name="MLPsparse_1hidden_"+str(i)
 		volume=100
 		logf.write("%s,%d\n"%(model_name,volume))
@@ -121,4 +121,4 @@ if __name__=="__main__":
 			logf.write("%.3f,%.3f,%.3f,%.3f\n"%(threshold,P,R,F1))
 			print("%.3f,%.3f,%.3f,%.3f"%(threshold,P,R,F1))
 			threshold+=0.01
-	logf.close()
+		logf.close()
