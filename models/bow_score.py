@@ -107,18 +107,18 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 	return P_all,R_all,F1
 
 if __name__=="__main__":
-	for i in range(4,9):
+	for i in range(0,50):
 		homedir=os.environ['HOME']
 		logf=open(homedir+"/results/logs/bow_score.txt",'a')
-		model_name="MLPsparse_1hidden_"+str(i)
+		model_name="MLPsparse_2hidden_"+str(i)
 		volume=100
 		logf.write("%s,%d\n"%(model_name,volume))
 		model=get_model_S3(model_name)
 		# model=get_model_local(homedir+"/results/models/"+model_name+".h5")
 		threshold=0.0
-		while threshold<0.15:
+		while threshold<1.0:
 			P,R,F1=test_on_doc_S3(model,volume,threshold)
 			logf.write("%.3f,%.3f,%.3f,%.3f\n"%(threshold,P,R,F1))
 			print("%.3f,%.3f,%.3f,%.3f"%(threshold,P,R,F1))
-			threshold+=0.01
+			threshold+=0.1
 		logf.close()
