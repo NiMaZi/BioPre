@@ -109,7 +109,7 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 if __name__=="__main__":
 	homedir=os.environ['HOME']
 	logf=open(homedir+"/results/logs/bow_score.txt",'a')
-	model_name="MLPsparse_1hidden_1"
+	model_name="MLPsparse_1hidden_2"
 	volume=100
 	logf.write("%s,%d\n"%(model_name,volume))
 	model=get_model_S3(model_name)
