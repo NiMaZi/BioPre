@@ -82,7 +82,7 @@ for i,item in enumerate(key_list):
             upload_to_S3(path,"title",counter,"csv")
 
             output=record['authors']
-            f=open(homedir+"/thesiswork/tempjson.json")
+            f=open(homedir+"/thesiswork/tempjson.json",'w')
             json.dump(output,f)
             f.close()
             upload_to_S3(homedir+"/thesiswork/tempjson.json","authors",counter,"json")
