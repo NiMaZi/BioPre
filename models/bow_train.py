@@ -71,8 +71,12 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 			X_train=N_all[:,:len(word_list)]
 			Y_train=np.ceil(N_all[:,len(word_list):])
 			_model.fit(X_train,Y_train,shuffle=True,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/16.0,callbacks=[early_stopping,early_stopping_val])
-			_model.save(homedir+"/results/models/temp_model_1hidden.h5")
-			s3f=open(homedir+"/results/models/temp_model_1hidden.h5",'rb')
+			try:
+				os.remove(homedir+"/temp/tmp_model.h5")
+			except:
+				pass
+			_model.save(homedir+"/temp/tmp_model.h5")
+			s3f=open(homedir+"/temp/tmp_model.h5",'rb')
 			updata=s3f.read()
 			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_"+str(batch_count)+".h5")
 			s3f.close()
@@ -83,8 +87,12 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 		X_train=N_all[:,:len(word_list)]
 		Y_train=np.ceil(N_all[:,len(word_list):])
 		_model.fit(X_train,Y_train,shuffle=True,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/16.0,callbacks=[early_stopping,early_stopping_val])
-		_model.save(homedir+"/results/models/temp_model_1hidden.h5")
-		s3f=open(homedir+"/results/models/temp_model_1hidden.h5",'rb')
+		try:
+			os.remove(homedir+"/temp/tmp_model.h5")
+		except:
+			pass
+		_model.save(homedir+"/temp/tmp_model.h5")
+		s3f=open(homedir+"/temp/tmp_model.h5",'rb')
 		updata=s3f.read()
 		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_"+str(batch_count)+".h5")
 		s3f.close()
