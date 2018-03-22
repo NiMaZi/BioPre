@@ -83,7 +83,7 @@ for i,item in enumerate(key_list):
 
             try:
                 output=record['authors']
-            else:
+            except:
                 output=[]
             f=open(homedir+"/thesiswork/tempjson.json",'w')
             json.dump(output,f)
