@@ -101,4 +101,4 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 
 if __name__=="__main__":
 	model=build_model()
-	total=train_on_batch_S3(model,10000,1088,1024)
+	total=train_on_batch_S3(model,10000,136,128)
