@@ -42,10 +42,10 @@ f=open(homedir+"/key_list.json",'r')
 key_list=json.load(f)
 f.close()
 
-counter=0
+counter=1241
 logf=open(homedir+"/results/logs/annotator_log_meta.txt",'a')
 for i,item in enumerate(key_list):
-    if i<944:
+    if i<951:
         continue
     logf.write("source file "+str(i)+"\n")
     sourceBucket.download_file(item,homedir+"/thesiswork/source/papers/tmp.jsonl")
@@ -81,7 +81,10 @@ for i,item in enumerate(key_list):
             path=get_annotation(txt_path)
             upload_to_S3(path,"title",counter,"csv")
 
-            output=record['authors']
+            try:
+                output=record['authors']
+            else:
+                output=[]
             f=open(homedir+"/thesiswork/tempjson.json",'w')
             json.dump(output,f)
             f.close()
