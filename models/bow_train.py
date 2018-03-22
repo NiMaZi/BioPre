@@ -19,9 +19,9 @@ def load_sups():
 	word_list=json.load(f)
 	f.close()
 	prefix='http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#'
-	return prefix,word_list[1:]
+	return prefix,word_list[1:int(len(word_list)*0.5)+1]
 
-def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
+def build_model(_input_dim=int(133609*0.5),_hidden_dim=512,_drate=0.5):
 	model=Sequential()
 	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
 	model.add(Dropout(_drate))
@@ -47,8 +47,11 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 			for item in rd:
 				if item[0]=="Mention":
 					continue
-				abs_count+=1.0
-				abs_vec[word_list.index(prefix+item[1])]+=1.0
+				try:
+					abs_count+=1.0
+					abs_vec[word_list.index(prefix+item[1])]+=1.0
+				except:
+					pass
 		if not abs_count:
 			continue
 		abs_vec=list(np.array(abs_vec)/abs_count)
@@ -60,8 +63,11 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 			for item in rd:
 				if item[0]=="Mention":
 					continue
-				body_count+=1.0
-				body_vec[word_list.index(prefix+item[1])]+=1.0
+				try:
+					body_count+=1.0
+					body_vec[word_list.index(prefix+item[1])]+=1.0
+				except:
+					pass
 		if not body_count:
 			continue
 		body_vec=list(np.array(abs_vec)/body_count)
@@ -101,4 +107,4 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 
 if __name__=="__main__":
 	model=build_model()
-	total=train_on_batch_S3(model,10000,136,128)
+	total=train_on_batch_S3(model,10000,272,256)
