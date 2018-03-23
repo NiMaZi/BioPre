@@ -2,6 +2,7 @@ import os
 import sys
 import csv
 import json
+import time
 import boto3
 import numpy as np
 from keras.models import Sequential,load_model
@@ -31,6 +32,7 @@ def build_model(_input_dim=int(133609*0.5),_hidden_dim=512,_drate=0.5):
 	return model
 
 def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
+	t1=time.time()
 	early_stopping=EarlyStopping(monitor='loss',patience=2)
 	early_stopping_val=EarlyStopping(monitor='val_loss',patience=2)
 	homedir=os.environ['HOME']
@@ -38,6 +40,9 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 	prefix,word_list=load_sups()
 	sample_list=[]
 	batch_count=0
+	t2=time.time()
+	print("preproc: %fs."%((t2-t1)))
+	pt1=time.time()
 	for i in range(0,_volume):
 		abs_vec=[0.0 for i in range(0,len(word_list))]
 		abs_count=0.0
@@ -73,10 +78,14 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 		body_vec=list(np.array(abs_vec)/body_count)
 		sample_list.append(abs_vec+body_vec)
 		if len(sample_list)>=_batch:
+			pt2=time.time()
+			print("prepare doc: %fs."%((pt2-pt1)))
 			N_all=np.array(sample_list)
 			X_train=N_all[:,:len(word_list)]
 			Y_train=np.ceil(N_all[:,len(word_list):])
 			_model.fit(X_train,Y_train,shuffle=True,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/16.0,callbacks=[early_stopping,early_stopping_val])
+			pt3=time.time()
+			print("training model: %fs."%((pt3-pt2)))
 			try:
 				os.remove(homedir+"/temp/tmp_model.h5")
 			except:
@@ -86,8 +95,11 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 			updata=s3f.read()
 			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_"+str(batch_count)+".h5")
 			s3f.close()
+			pt4=time.time()
+			print("save and upload: %fs."%((pt4-pt3)))
 			batch_count+=1
 			sample_list=[]
+			pt1=time.time()
 	if len(sample_list):
 		N_all=np.array(sample_list)
 		X_train=N_all[:,:len(word_list)]
