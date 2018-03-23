@@ -41,7 +41,8 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 	sample_list=[]
 	batch_count=0
 	t2=time.time()
-	print("preproc: %fs."%((t2-t1)))
+	logf=open(homedir+"/results/logs/time_log.txt",'a')
+	logf.write("preproc: %fs.\n"%((t2-t1)))
 	pt1=time.time()
 	for i in range(0,_volume):
 		abs_vec=[0.0 for i in range(0,len(word_list))]
@@ -79,13 +80,13 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 		sample_list.append(abs_vec+body_vec)
 		if len(sample_list)>=_batch:
 			pt2=time.time()
-			print("prepare doc: %fs."%((pt2-pt1)))
+			logf.write("prepare doc: %fs.\n"%((pt2-pt1)))
 			N_all=np.array(sample_list)
 			X_train=N_all[:,:len(word_list)]
 			Y_train=np.ceil(N_all[:,len(word_list):])
 			_model.fit(X_train,Y_train,shuffle=True,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/16.0,callbacks=[early_stopping,early_stopping_val])
 			pt3=time.time()
-			print("training model: %fs."%((pt3-pt2)))
+			logf.write("training model: %fs.\n"%((pt3-pt2)))
 			try:
 				os.remove(homedir+"/temp/tmp_model.h5")
 			except:
@@ -96,7 +97,7 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_"+str(batch_count)+".h5")
 			s3f.close()
 			pt4=time.time()
-			print("save and upload: %fs."%((pt4-pt3)))
+			logf.write("save and upload: %fs.\n"%((pt4-pt3)))
 			batch_count+=1
 			sample_list=[]
 			pt1=time.time()
