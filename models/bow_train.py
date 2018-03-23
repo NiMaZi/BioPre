@@ -20,9 +20,11 @@ def load_sups():
 	word_list=json.load(f)
 	f.close()
 	prefix='http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#'
-	return prefix,word_list[1:int(len(word_list)*0.5)]
+	# return prefix,word_list[1:int(len(word_list)*0.5)]
+	return prefix,word_list[1:]
 
-def build_model(_input_dim=int(133609*0.5),_hidden_dim=512,_drate=0.5):
+# def build_model(_input_dim=int(133609*0.5),_hidden_dim=512,_drate=0.5):
+def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
 	model=Sequential()
 	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
 	model.add(Dropout(_drate))
