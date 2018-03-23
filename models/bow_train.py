@@ -93,7 +93,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_"+str(batch_count)+".h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log.txt",'a')
-			logf.write("%s,%d\n"%(_source,_bcount))
+			logf.write("%s,%d\n"%(_source,batch_count))
 			logf.close()
 			batch_count+=1
 			sample_list=[]
@@ -112,7 +112,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_"+str(batch_count)+".h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log.txt",'a')
-		logf.write("%s,%d\n"%(_source,_bcount))
+		logf.write("%s,%d\n"%(_source,batch_count))
 		logf.close()
 		batch_count+=1
 	return _model,batch_count
