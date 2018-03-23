@@ -16,12 +16,12 @@ def get_bucket():
 
 def load_sups():
 	homedir=os.environ['HOME']
-	f=open(homedir+"/results/ontology/full_word_list.json",'r')
-	word_list=json.load(f)
+	f=open(homedir+"/results/ontology/ConCode2Vid.json",'r')
+	cc2vid=json.load(f)
 	f.close()
-	prefix='http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#'
+	# prefix='http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#'
 	# return prefix,word_list[1:int(len(word_list)*0.5)]
-	return prefix,word_list[1:]
+	return cc2vid
 
 # def build_model(_input_dim=int(133609*0.5),_hidden_dim=512,_drate=0.5):
 def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
@@ -39,16 +39,17 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 	early_stopping_val=EarlyStopping(monitor='val_loss',patience=2)
 	homedir=os.environ['HOME']
 	bucket=get_bucket()
-	prefix,word_list=load_sups()
+	cc2vid=load_sups()
 	sample_list=[]
 	batch_count=0
 	t2=time.time()
 	logf=open(homedir+"/results/logs/time_log.txt",'a')
+	logf.write("====\n")
 	logf.write("preproc: %fs.\n"%((t2-t1)))
 	logf.close()
 	pt1=time.time()
 	for i in range(0,_volume):
-		abs_vec=[0.0 for i in range(0,len(word_list))]
+		abs_vec=[0.0 for i in range(0,len(cc2vid))]
 		abs_count=0.0
 		bucket.download_file("yalun/annotated_papers_with_txt/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -58,13 +59,13 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 					continue
 				try:
 					abs_count+=1.0
-					abs_vec[word_list.index(prefix+item[1])]+=1.0
+					abs_vec[cc2vid[item[1]]]+=1.0
 				except:
 					pass
 		if not abs_count:
 			continue
 		abs_vec=list(np.array(abs_vec)/abs_count)
-		body_vec=[0.0 for i in range(0,len(word_list))]
+		body_vec=[0.0 for i in range(0,len(cc2vid))]
 		body_count=0.0
 		bucket.download_file("yalun/annotated_papers_with_txt/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -74,7 +75,7 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 					continue
 				try:
 					body_count+=1.0
-					body_vec[word_list.index(prefix+item[1])]+=1.0
+					body_vec[cc2vid[item[1]]]+=1.0
 				except:
 					pass
 		if not body_count:
@@ -87,8 +88,8 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 			logf.write("prepare doc: %fs.\n"%((pt2-pt1)))
 			logf.close()
 			N_all=np.array(sample_list)
-			X_train=N_all[:,:len(word_list)]
-			Y_train=np.ceil(N_all[:,len(word_list):])
+			X_train=N_all[:,:len(cc2vid)]
+			Y_train=np.ceil(N_all[:,len(cc2vid):])
 			_model.fit(X_train,Y_train,shuffle=True,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/16.0,callbacks=[early_stopping,early_stopping_val])
 			pt3=time.time()
 			logf=open(homedir+"/results/logs/time_log.txt",'a')
@@ -112,8 +113,8 @@ def train_on_batch_S3(_model,_volume,_batch,_mbatch,_epochs=5):
 			pt1=time.time()
 	if len(sample_list):
 		N_all=np.array(sample_list)
-		X_train=N_all[:,:len(word_list)]
-		Y_train=np.ceil(N_all[:,len(word_list):])
+		X_train=N_all[:,:len(cc2vid)]
+		Y_train=np.ceil(N_all[:,len(cc2vid):])
 		_model.fit(X_train,Y_train,shuffle=True,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/16.0,callbacks=[early_stopping,early_stopping_val])
 		try:
 			os.remove(homedir+"/temp/tmp_model.h5")
