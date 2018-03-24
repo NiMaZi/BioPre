@@ -79,13 +79,13 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 					pass
 		if not body_count:
 			continue
-		body_vec=list(np.array(abs_vec)/body_count)
+		body_vec=list(np.array(body_vec)/body_count)
 		sample_list.append(abs_vec+body_vec)
 		if len(sample_list)>=_batch:
 			N_all=np.array(sample_list)
 			X_train=N_all[:,:len(cc2vid)]
 			Y_train=np.clip(np.ceil(N_all[:,len(cc2vid):])-np.ceil(X_train),0.0,1.0)
-			_model.fit(X_train,Y_train,shuffle=True,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/16.0,callbacks=[early_stopping,early_stopping_val])
+			_model.fit(X_train,Y_train,shuffle=True,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 			try:
 				os.remove(homedir+"/temp/tmpsem_model.h5")
 			except:
@@ -104,7 +104,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		N_all=np.array(sample_list)
 		X_train=N_all[:,:len(cc2vid)]
 		Y_train=np.clip(np.ceil(N_all[:,len(cc2vid):])-np.ceil(X_train),0.0,1.0)
-		_model.fit(X_train,Y_train,shuffle=True,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/16.0,callbacks=[early_stopping,early_stopping_val])
+		_model.fit(X_train,Y_train,shuffle=True,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 		try:
 			os.remove(homedir+"/temp/tmpsem_model.h5")
 		except:
