@@ -46,7 +46,7 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 	for i in range(0,_volume):
 		abs_vec=[0.0 for i in range(0,len(word_list))]
 		abs_count=0.0
-		bucket.download_file("yalun/annotated_papers_with_txt_new/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+		bucket.download_file("yalun/annotated_papers_meta/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
@@ -59,7 +59,7 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 		abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0 for i in range(0,len(word_list))]
 		body_count=0.0
-		bucket.download_file("yalun/annotated_papers_with_txt_new/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
+		bucket.download_file("yalun/annotated_papers_meta/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
