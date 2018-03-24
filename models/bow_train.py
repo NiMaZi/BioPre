@@ -13,7 +13,7 @@ def get_bucket():
 	s3 = boto3.resource("s3")
 	myBucket=s3.Bucket('workspace.scitodate.com')
 	return myBucket
-	
+
 def load_sups():
 	homedir=os.environ['HOME']
 	f=open(homedir+"/results/ontology/ConCode2Vid.json",'r')
@@ -23,11 +23,11 @@ def load_sups():
 
 def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
 	model=Sequential()
-	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
+	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='tanh'))
 	model.add(Dropout(_drate))
 	model.add(BatchNormalization())
-	model.add(Dense(_input_dim,activation='relu'))
-	model.compile(optimizer='nadam',loss='cosine_proximity')
+	model.add(Dense(_input_dim,activation='tanh'))
+	model.compile(optimizer='nadam',loss='binary_crossentropy')
 	return model
 
 def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
