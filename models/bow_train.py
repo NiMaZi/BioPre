@@ -122,7 +122,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 if __name__=="__main__":
 	model=build_model()
 	source_key="kdata"
-	model,bcount=train_on_batch_S3(model,source_key,12000,0,544,512)
+	model,bcount=train_on_batch_S3(model,source_key,12000,0,544,64)
 	source_key="annotated_papers"
 	model,bcount=train_on_batch_S3(model,source_key,14000,bcount,544,512)
 	source_key="annotated_papers_with_txt"
