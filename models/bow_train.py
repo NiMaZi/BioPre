@@ -23,10 +23,10 @@ def load_sups():
 
 def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
 	model=Sequential()
-	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='tanh'))
+	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
 	model.add(Dropout(_drate))
 	model.add(BatchNormalization())
-	model.add(Dense(_input_dim,activation='tanh'))
+	model.add(Dense(_input_dim,activation='relu'))
 	model.compile(optimizer='nadam',loss='binary_crossentropy')
 	return model
 
