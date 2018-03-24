@@ -13,7 +13,7 @@ def get_bucket():
 	s3 = boto3.resource("s3")
 	myBucket=s3.Bucket('workspace.scitodate.com')
 	return myBucket
-
+	
 def load_sups():
 	homedir=os.environ['HOME']
 	f=open(homedir+"/results/ontology/ConCode2Vid.json",'r')
@@ -27,7 +27,7 @@ def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
 	model.add(Dropout(_drate))
 	model.add(BatchNormalization())
 	model.add(Dense(_input_dim,activation='relu'))
-	model.compile(optimizer='nadam',loss='binary_crossentropy')
+	model.compile(optimizer='nadam',loss='cosine_proximity')
 	return model
 
 def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
@@ -82,7 +82,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			N_all=np.array(sample_list)
 			X_train=N_all[:,:len(cc2vid)]
 			Y_train=np.ceil(N_all[:,len(cc2vid):])
-			Y_strain=Y_train-np.ceil(X_train)
+			Y_strain=np.clip(Y_train-np.ceil(X_train),0.0,1.0)
 			_model.fit(X_train,Y_strain,batch_size=_mbatch,verbose=1,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 			try:
 				os.remove(homedir+"/temp/tmp_model.h5")
