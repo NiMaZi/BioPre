@@ -83,6 +83,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			X_train=N_all[:,:len(cc2vid)]
 			Y_train=np.ceil(N_all[:,len(cc2vid):])
 			Y_strain=np.clip(Y_train-np.ceil(X_train),1e-5,1.0)
+			print(np.sum(X_train),np.sum(Y_strain))
 			_model.fit(X_train,Y_strain,batch_size=_mbatch,verbose=1,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 			try:
 				os.remove(homedir+"/temp/tmp_model.h5")
@@ -103,6 +104,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		X_train=N_all[:,:len(cc2vid)]
 		Y_train=np.ceil(N_all[:,len(cc2vid):])
 		Y_strain=np.clip(Y_train-np.ceil(X_train),1e-5,1.0)
+		print(np.sum(X_train),np.sum(Y_strain))
 		_model.fit(X_train,Y_strain,batch_size=_mbatch,verbose=1,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 		try:
 			os.remove(homedir+"/temp/tmp_model.h5")
@@ -122,7 +124,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 if __name__=="__main__":
 	model=build_model()
 	source_key="kdata"
-	model,bcount=train_on_batch_S3(model,source_key,12000,0,544,64)
+	model,bcount=train_on_batch_S3(model,source_key,12000,0,544,512)
 	source_key="annotated_papers"
 	model,bcount=train_on_batch_S3(model,source_key,14000,bcount,544,512)
 	source_key="annotated_papers_with_txt"
