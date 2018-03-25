@@ -83,9 +83,9 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 		Y_pred/=np.linalg.norm(Y_pred)
 		Y_pred[Y_pred<threshold]=0.0
 		Y_pred=np.ceil(Y_pred).astype(int)
-		tp=np.sum(Y_pred&Y_test)
-		fp=np.sum(Y_pred-(Y_pred&Y_test))
-		fn=np.sum(Y_test-(Y_pred&Y_test))
+		tp=float(np.sum(Y_pred&Y_test))
+		fp=float(np.sum(Y_pred-(Y_pred&Y_test)))
+		fn=float(np.sum(Y_test-(Y_pred&Y_test)))
 		try:
 			P=tp/(tp+fp)
 		except:
