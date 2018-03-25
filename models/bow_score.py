@@ -72,20 +72,14 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 		sample_list=[abs_vec+body_vec]
 		N_test=np.array(sample_list)
 		X_test=N_test[:,:len(cc2vid)]
-		Y_test=np.clip(np.ceil(N_test[:,len(cc2vid):])-np.ceil(X_test),0.0,1.0)
+		Y_test=np.clip(np.ceil(N_test[:,len(cc2vid):])-np.ceil(X_test),0.0,1.0)[0]
 		Y_pred=_model.predict(X_test)[0]
 		Y_pred/=np.linalg.norm(Y_pred)
-		bset=set()
-		for i,d in enumerate(list(Y_test)):
-			if d>0:
-				bset.add(i)
-		pset=set()
-		for i,d in enumerate(list(Y_pred)):
-			if d>=threshold:
-				pset.add(i)
-		tp=float(len(bset&pset))
-		fp=len(pset-bset)
-		fn=len(bset-pset)
+		Y_predf=np.ceil(Y_pred[Y_pred<threshold]=0.0)
+        Y_ints=np.bitwise_and(Y_predf,Y_test)
+        tp=np.sum(Y_ints)
+        fp=np.sum(Y_predf-Y_ints)
+        fn=np.sum(Y_test-Y_ints)
 		try:
 			P=tp/(tp+fp)
 		except:
