@@ -107,7 +107,7 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 
 if __name__=="__main__":
 	i=0
-	while i<=0:
+	while i<=10:
 		homedir=os.environ['HOME']
 		logf=open(homedir+"/results/logs/bow_score_sem.txt",'a')
 		model_name="MLPsparse_1hidden_sem_"+str(i)
