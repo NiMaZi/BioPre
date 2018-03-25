@@ -113,8 +113,8 @@ if __name__=="__main__":
 		model_name="MLPsparse_1hidden_"+str(i)
 		volume=100
 		logf.write("%s,%d\n"%(model_name,volume))
-		# model=get_model_S3(model_name)
-		model=get_model_local(homedir+"/temp/tmp_model.h5")
+		model=get_model_S3(model_name)
+		# model=get_model_local(homedir+"/temp/tmp_model.h5")
 		threshold=0.0
 		while threshold<0.1:
 			P,R,F1=test_on_doc_S3(model,volume,threshold)
