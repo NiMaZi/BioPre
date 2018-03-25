@@ -100,7 +100,7 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 	return P_all,R_all,F1
 
 if __name__=="__main__":
-	i=0
+	i=50
 	while i<=130:
 		homedir=os.environ['HOME']
 		logf=open(homedir+"/results/logs/bow_score.txt",'a')
