@@ -75,10 +75,11 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 		Y_test=np.clip(np.ceil(N_test[:,len(cc2vid):])-np.ceil(X_test),0.0,1.0)[0]
 		Y_pred=_model.predict(X_test)[0]
 		Y_pred/=np.linalg.norm(Y_pred)
-		Y_predf=np.ceil(Y_pred[Y_pred<threshold]=0.0)
-		tp=np.sum(Y_predf&Y_test)
-		fp=np.sum(Y_predf-(Y_predf&Y_test))
-		fn=np.sum(Y_test-(Y_predf&Y_test))
+		Y_pred[Y_pred<threshold]=0.0
+		Y_pred=np.ceil(Y_pred)
+		tp=np.sum(Y_pred&Y_test)
+		fp=np.sum(Y_pred-(Y_pred&Y_test))
+		fn=np.sum(Y_test-(Y_pred&Y_test))
 		try:
 			P=tp/(tp+fp)
 		except:
