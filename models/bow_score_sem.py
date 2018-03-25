@@ -67,8 +67,11 @@ def test_on_doc_S3(_model,_volume,_threshold=0.0):
 			for item in rd:
 				if item[0]=="Mention":
 					continue
-				body_count+=1.0
-				body_vec[cc2vid_d[item[1]]]+=1.0
+				try:
+					body_count+=1.0
+					body_vec[cc2vid_d[item[1]]]+=1.0
+				except:
+					pass
 		if not body_count:
 			continue
 		body_vec=list(np.array(body_vec)/body_count)
