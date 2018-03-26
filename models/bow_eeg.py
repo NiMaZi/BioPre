@@ -38,10 +38,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 	sample_list=[]
 	batch_count=_bcount
 	for i in range(0,_volume):
-		abs_vec=[0.0 for i in range(0,len(cc2vid))]
+		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source+"/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source[0]+"/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -59,7 +59,40 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0]
 		try:
-			bucket.download_file("yalun/"+_source+"/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source[0]+"/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
+		except:
+			continue
+		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+			rd=csv.reader(cf)
+			for item in rd:
+				if item[0]=="Mention":
+					continue
+				if item[1]=='C38054':
+					body_vec[0]=1.0
+					break
+		sample_list.append(abs_vec+body_vec)
+		abs_vec=[0.0 for k in range(0,len(cc2vid))]
+		abs_count=0.0
+		try:
+			bucket.download_file("yalun/"+_source[1]+"/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+		except:
+			continue
+		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+			rd=csv.reader(cf)
+			for item in rd:
+				if item[0]=="Mention":
+					continue
+				try:
+					abs_count+=1.0
+					abs_vec[cc2vid[item[1]]]+=1.0
+				except:
+					pass
+		if not abs_count:
+			continue
+		abs_vec=list(np.array(abs_vec)/abs_count)
+		body_vec=[0.0]
+		try:
+			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -86,7 +119,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_"+str(batch_count)+".h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
-			logf.write("%s,%d\n"%(_source,batch_count))
+			logf.write("%s,%d\n"%(str(_source),batch_count))
 			logf.close()
 			batch_count+=1
 			sample_list=[]
@@ -105,14 +138,12 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_"+str(batch_count)+".h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
-		logf.write("%s,%d\n"%(_source,batch_count))
+		logf.write("%s,%d\n"%(str(_source),batch_count))
 		logf.close()
 		batch_count+=1
 	return _model,batch_count
 
 if __name__=="__main__":
 	model=build_model()
-	source_key="EEG_raw"
+	source_key=["EEG_raw","annotated_papers_with_txt_new2"]
 	model,bcount=train_on_batch_S3(model,source_key,30000,0,1088,1024)
-	source_key="annotated_papers_with_txt_new2"
-	model,bcount=train_on_batch_S3(model,source_key,30000,bcount,1088,1024)
