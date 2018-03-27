@@ -39,19 +39,19 @@ def upload_to_S3(_inpath,_fname,_counter,_format):
     targetBucket.put_object(Body=data,Key="yalun/EEG_raw/"+_fname+str(_counter)+"."+_format)
 
 logf=open(homedir+"/results/logs/annotator_log_eeg.txt",'a')
-for i in range (0,54534):
+for i in range (0,7400):
     logf.write("source file "+str(i)+"\n")
-    sourceBucket.download_file("yalun/EEG_raw/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
+    sourceBucket.download_file("yalun/EEG_filter/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
     txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
     path=get_annotation(txt_path)
     upload_to_S3(path,"abs",i,"csv")
 
-    sourceBucket.download_file("yalun/EEG_raw/body"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
+    sourceBucket.download_file("yalun/EEG_filter/body"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
     txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
     path=get_annotation(txt_path)
     upload_to_S3(path,"body",i,"csv")
 
-    sourceBucket.download_file("yalun/EEG_raw/title"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
+    sourceBucket.download_file("yalun/EEG_filter/title"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
     txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
     path=get_annotation(txt_path)
     upload_to_S3(path,"title",i,"csv")
