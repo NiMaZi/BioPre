@@ -36,7 +36,7 @@ def upload_to_S3(_inpath,_fname,_counter,_format):
     f=open(_inpath,"r",encoding='utf-8')
     data=f.read()
     f.close()
-    targetBucket.put_object(Body=data,Key="yalun/EEG_raw/"+_fname+str(_counter)+"."+_format)
+    targetBucket.put_object(Body=data,Key="yalun/EEG_filter/"+_fname+str(_counter)+"."+_format)
 
 logf=open(homedir+"/results/logs/annotator_log_eeg.txt",'a')
 for i in range (0,7400):
