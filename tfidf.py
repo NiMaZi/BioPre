@@ -1,70 +1,123 @@
-import sys
-import csv
-import pickle
-import numpy as np
 
-volume=int(sys.argv[1])
+# coding: utf-8
 
-tf=[]
-tf_word=[]
-idf=[]
-word_list=set([])
+# In[98]:
 
-for i in range(0,volume):
-	print("processing article "+str(i)+".\n")
-	tmp_tf={}
-	word_count=0
-	with open("/home/ubuntu/thesiswork/data/abs"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
-		reader=csv.reader(csvfile)
-		for item in reader:
-			if item[2]=="ConceptName":
-				continue
-			word_count+=1
-			word_list.add(item[2])
-			if item[2] in tmp_tf:
-				tmp_tf[item[2]]+=1
-			else:
-				tmp_tf[item[2]]=1
-	with open("/home/ubuntu/thesiswork/data/body"+str(i)+".txt.mentions","r",newline='',encoding='utf-8') as csvfile:
-		reader=csv.reader(csvfile)
-		for item in reader:
-			if item[2]=="ConceptName":
-				continue
-			word_count+=1
-			word_list.add(item[2])
-			if item[2] in tmp_tf:
-				tmp_tf[item[2]]+=1
-			else:
-				tmp_tf[item[2]]=1
-	tf.append([tmp_tf,word_count])
 
-sorted_word_list=sorted(word_list)
+import boto3
+s3=boto3.resource("s3")
+myBucket=s3.Bucket('workspace.scitodate.com')
 
-print("calculating tf-idf.\n")
 
-for word in sorted_word_list:
-	_tmp=[]
-	d_count=0
-	for i in range(0,volume):
-		if word in tf[i][0]:
-			freq=float(tf[i][0][word])/float(tf[i][1])
-			d_count+=1
-		else:
-			freq=0.0
-		_tmp.append(freq)
-	tf_word.append(_tmp)
-	idf.append(np.log(float(volume)/float(d_count)))
+# In[99]:
 
-tf_idf=np.zeros((len(sorted_word_list),volume))
 
-for i in range(0,len(sorted_word_list)):
-	for j in range(0,volume):
-		tf_idf[i][j]=tf_word[i][j]*idf[i]
+import os
+homedir=os.environ['HOME']
 
-f=open("/home/ubuntu/results/tfidf/tfidf"+str(volume)+".pickle","wb")
-pickle.dump(tf_idf,f)
+
+# In[100]:
+
+
+import json
+f=open(homedir+"/results/ontology/full_word_list.json",'r',encoding='utf-8')
+word_list=json.load(f)[1:]
 f.close()
 
-g=open("/home/ubuntu/results/tfidf/wordlist"+str(volume)+".pickle","wb")
-pickle.dump(sorted_word_list,g)
-g.close()
+
+# In[101]:
+
+
+i_index={}
+for w in word_list:
+    i_index[w.split('#')[1]]=[]
+t_freq={}
+for w in word_list:
+    t_freq[w.split('#')[1]]=0.0
+t_count=0.0
+d_count=0.0
+
+
+# In[102]:
+
+
+import csv
+def calc(source,volume,i_index,t_freq,t_count,d_count):
+    for i in range(0,volume):
+        myBucket.download_file("yalun/"+source+"/abs"+str(i)+".csv",homedir+"/temp/tmpcsv.csv")
+        with open(homedir+"/temp/tmpcsv.csv",'r',encoding='utf-8') as cf:
+            rd=csv.reader(cf)
+            for item in rd:
+                if item[0]=='Mention':
+                    continue
+                i_index[item[1]].append(d_count)
+                t_freq[item[1]]+=1.0
+                t_count+=1.0
+        d_count+=1.0
+        myBucket.download_file("yalun/"+source+"/body"+str(i)+".csv",homedir+"/temp/tmpcsv.csv")
+        with open(homedir+"/temp/tmpcsv.csv",'r',encoding='utf-8') as cf:
+            rd=csv.reader(cf)
+            for item in rd:
+                if item[0]=='Mention':
+                    continue
+                i_index[item[1]].append(d_count)
+                t_freq[item[1]]+=1.0
+                t_count+=1.0
+        d_count+=1.0
+    return i_index,t_freq,t_count,d_count
+
+
+# In[104]:
+
+
+i_index,t_freq,t_count,d_count=calc("kdata",10000,i_index,t_freq,t_count,d_count)
+i_index,t_freq,t_count,d_count=calc("annotated_papers",10000,i_index,t_freq,t_count,d_count)
+i_index,t_freq,t_count,d_count=calc("annotated_papers_with_txt",10000,i_index,t_freq,t_count,d_count)
+i_index,t_freq,t_count,d_count=calc("annotated_papers_with_txt_new",10000,i_index,t_freq,t_count,d_count)
+i_index,t_freq,t_count,d_count=calc("annotated_papers_with_txt_new2",10000,i_index,t_freq,t_count,d_count)
+
+
+# In[105]:
+
+
+for k in t_freq.keys():
+    t_freq[k]/=t_count
+
+
+# In[106]:
+
+
+import numpy as np
+
+
+# In[107]:
+
+
+idf={}
+for k in i_index.keys():
+    idf[k]=np.log(d_count/(1.0+len(set(i_index[k]))))
+
+
+# In[108]:
+
+
+f=open(homedir+"/results/statistics/tf_all.json",'w')
+json.dump(t_freq,f)
+f.close()
+f=open(homedir+"/results/statistics/idf.json",'w')
+json.dump(idf,f)
+f.close()
+
+
+# In[109]:
+
+
+f=open(homedir+"/results/statistics/tf_all.json",'r')
+d=f.read()
+f.close()
+myBucket.put_object(Body=d,Key="yalun/results/statistics/tf_all.json")
+f=open(homedir+"/results/statistics/idf.json",'r')
+d=f.read()
+f.close()
+myBucket.put_object(Body=d,Key="yalun/results/statistics/idf.json")
+
