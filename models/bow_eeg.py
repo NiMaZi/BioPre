@@ -74,7 +74,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source[1]+"/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source[1]+"/abs"+str(3*i)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -92,7 +92,73 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0]
 		try:
-			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source[1]+"/body"+str(3*i)+".csv",homedir+"/temp/tmp.csv")
+		except:
+			continue
+		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+			rd=csv.reader(cf)
+			for item in rd:
+				if item[0]=="Mention":
+					continue
+				if item[1]=='C38054':
+					body_vec[0]=1.0
+					break
+		sample_list.append(abs_vec+body_vec)
+		abs_vec=[0.0 for k in range(0,len(cc2vid))]
+		abs_count=0.0
+		try:
+			bucket.download_file("yalun/"+_source[1]+"/abs"+str(3*i+1)+".csv",homedir+"/temp/tmp.csv")
+		except:
+			continue
+		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+			rd=csv.reader(cf)
+			for item in rd:
+				if item[0]=="Mention":
+					continue
+				try:
+					abs_count+=1.0
+					abs_vec[cc2vid[item[1]]]+=1.0
+				except:
+					pass
+		if not abs_count:
+			continue
+		abs_vec=list(np.array(abs_vec)/abs_count)
+		body_vec=[0.0]
+		try:
+			bucket.download_file("yalun/"+_source[1]+"/body"+str(3*i+1)+".csv",homedir+"/temp/tmp.csv")
+		except:
+			continue
+		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+			rd=csv.reader(cf)
+			for item in rd:
+				if item[0]=="Mention":
+					continue
+				if item[1]=='C38054':
+					body_vec[0]=1.0
+					break
+		sample_list.append(abs_vec+body_vec)
+		abs_vec=[0.0 for k in range(0,len(cc2vid))]
+		abs_count=0.0
+		try:
+			bucket.download_file("yalun/"+_source[1]+"/abs"+str(3*i+2)+".csv",homedir+"/temp/tmp.csv")
+		except:
+			continue
+		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+			rd=csv.reader(cf)
+			for item in rd:
+				if item[0]=="Mention":
+					continue
+				try:
+					abs_count+=1.0
+					abs_vec[cc2vid[item[1]]]+=1.0
+				except:
+					pass
+		if not abs_count:
+			continue
+		abs_vec=list(np.array(abs_vec)/abs_count)
+		body_vec=[0.0]
+		try:
+			bucket.download_file("yalun/"+_source[1]+"/body"+str(3*i+2)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -116,7 +182,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			_model.save(homedir+"/temp/tmp_model.h5")
 			s3f=open(homedir+"/temp/tmp_model.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_"+str(batch_count)+".h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_neg.h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
 			logf.write("%s,%d\n"%(str(_source),batch_count))
@@ -135,7 +201,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		_model.save(homedir+"/temp/tmp_model.h5")
 		s3f=open(homedir+"/temp/tmp_model.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_"+str(batch_count)+".h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_neg.h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
 		logf.write("%s,%d\n"%(str(_source),batch_count))

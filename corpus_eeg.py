@@ -39,7 +39,7 @@ def upload_to_S3(_inpath,_fname,_counter,_format):
     targetBucket.put_object(Body=data,Key="yalun/EEG_filter/"+_fname+str(_counter)+"."+_format)
 
 logf=open(homedir+"/results/logs/annotator_log_eeg.txt",'a')
-for i in range (0,7400):
+for i in range (7400,28500):
     logf.write("source file "+str(i)+"\n")
     sourceBucket.download_file("yalun/EEG_filter/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
     txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
