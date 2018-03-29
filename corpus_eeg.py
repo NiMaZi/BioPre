@@ -36,22 +36,22 @@ def upload_to_S3(_inpath,_fname,_counter,_format):
     f=open(_inpath,"r",encoding='utf-8')
     data=f.read()
     f.close()
-    targetBucket.put_object(Body=data,Key="yalun/EEG_filter/"+_fname+str(_counter)+"."+_format)
+    targetBucket.put_object(Body=data,Key="yalun/annotated_papers_authors/"+_fname+str(_counter)+"."+_format)
 
-logf=open(homedir+"/results/logs/annotator_log_eeg.txt",'a')
+logf=open(homedir+"/results/logs/annotator_log_authors.txt",'a')
 for i in range (7400,28500):
     logf.write("source file "+str(i)+"\n")
-    sourceBucket.download_file("yalun/EEG_filter/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
+    sourceBucket.download_file("yalun/annotated_papers_authors/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
     txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
     path=get_annotation(txt_path)
     upload_to_S3(path,"abs",i,"csv")
 
-    sourceBucket.download_file("yalun/EEG_filter/body"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
+    sourceBucket.download_file("yalun/annotated_papers_authors/body"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
     txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
     path=get_annotation(txt_path)
     upload_to_S3(path,"body",i,"csv")
 
-    sourceBucket.download_file("yalun/EEG_filter/title"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
+    sourceBucket.download_file("yalun/annotated_papers_authors/title"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
     txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
     path=get_annotation(txt_path)
     upload_to_S3(path,"title",i,"csv")
