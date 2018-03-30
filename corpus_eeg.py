@@ -39,7 +39,7 @@ def upload_to_S3(_inpath,_fname,_counter,_format):
     targetBucket.put_object(Body=data,Key="yalun/annotated_papers_authors/"+_fname+str(_counter)+"."+_format)
 
 logf=open(homedir+"/results/logs/annotator_log_authors.txt",'a')
-for i in range (30000,70000):
+for i in range (10632,70000):
     logf.write("source file "+str(i)+"\n")
     sourceBucket.download_file("yalun/annotated_papers_authors/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
     txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
