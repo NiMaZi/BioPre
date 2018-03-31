@@ -74,7 +74,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source[1]+"/abs"+str(3*i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source[1]+"/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
