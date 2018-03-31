@@ -40,19 +40,22 @@ def upload_to_S3(_inpath,_fname,_counter,_format):
 
 logf=open(homedir+"/results/logs/annotator_log_authors.txt",'a')
 for i in range (57380,200000):
-    logf.write("source file "+str(i)+"\n")
-    sourceBucket.download_file("yalun/annotated_papers_authors/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
-    txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
-    path=get_annotation(txt_path)
-    upload_to_S3(path,"abs",i,"csv")
+    try:
+        sourceBucket.download_file("yalun/annotated_papers_authors/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
+        txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
+        path=get_annotation(txt_path)
+        upload_to_S3(path,"abs",i,"csv")
 
-    sourceBucket.download_file("yalun/annotated_papers_authors/body"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
-    txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
-    path=get_annotation(txt_path)
-    upload_to_S3(path,"body",i,"csv")
+        sourceBucket.download_file("yalun/annotated_papers_authors/body"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
+        txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
+        path=get_annotation(txt_path)
+        upload_to_S3(path,"body",i,"csv")
 
-    sourceBucket.download_file("yalun/annotated_papers_authors/title"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
-    txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
-    path=get_annotation(txt_path)
-    upload_to_S3(path,"title",i,"csv")
+        sourceBucket.download_file("yalun/annotated_papers_authors/title"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp.txt")
+        txt_path=homedir+"/thesiswork/source/papers/tmp.txt"
+        path=get_annotation(txt_path)
+        upload_to_S3(path,"title",i,"csv")
+        logf.write("source file "+str(i)+"\n")
+    except:
+        pass
 logf.close()
