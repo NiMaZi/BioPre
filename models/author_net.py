@@ -145,4 +145,4 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 if __name__=="__main__":
 	model=build_model()
 	source_key="annotated_papers_authors"
-	model,bcount=train_on_batch_S3(model,source_key,100000,0,1088,1024)
+	model,bcount=train_on_batch_S3(model,source_key,100000,0,136,128)
