@@ -93,13 +93,13 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		except:
 			continue
 		tmpf=open(homedir+"/temp/tmpjson.json",'r',encoding='utf-8')
-        authors=json.load(tmpf)
-        tmpf.close()
-        for author in authors:
-        	try:
-        		author_vec[fa2vid[author]]=1.0
-        	except:
-        		pass
+		authors=json.load(tmpf)
+		tmpf.close()
+		for author in authors:
+			try:
+				author_vec[fa2vid[author]]=1.0
+			except:
+				pass
 		sample_list.append(abs_vec+author_vec+body_vec)
 		if len(sample_list)>=_batch:
 			N_all=np.array(sample_list)
