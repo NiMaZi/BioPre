@@ -52,10 +52,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		abs_vec=[0.0 for i in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source+"/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source+"/abs"+str(i)+".csv",homedir+"/temp/tmp1.csv")
 		except:
 			continue
-		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+		with open(homedir+"/temp/tmp1.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
 				if item[0]=="Mention":
@@ -71,10 +71,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		body_vec=[0.0 for i in range(0,len(cc2vid))]
 		body_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source+"/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source+"/body"+str(i)+".csv",homedir+"/temp/tmp1.csv")
 		except:
 			continue
-		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+		with open(homedir+"/temp/tmp1.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
 				if item[0]=="Mention":
@@ -89,10 +89,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		body_vec=list(np.array(body_vec)/body_count)
 		author_vec=[0.0 for i in range(0,len(fa2vid))]
 		try:
-			bucket.download_file("yalun/"+_source+"/authors"+str(i)+".json",homedir+"/temp/tmpjson.json")
+			bucket.download_file("yalun/"+_source+"/authors"+str(i)+".json",homedir+"/temp/tmpjson1.json")
 		except:
 			continue
-		tmpf=open(homedir+"/temp/tmpjson.json",'r',encoding='utf-8')
+		tmpf=open(homedir+"/temp/tmpjson1.json",'r',encoding='utf-8')
 		authors=json.load(tmpf)
 		tmpf.close()
 		for author in authors:
@@ -108,11 +108,11 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			Y_train=np.clip(np.ceil(N_all[:,len(cc2vid)+len(fa2vid):])-np.ceil(X_train_1),0.0,1.0)
 			_model.fit([X_train_1,X_train_2],[Y_train],batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 			try:
-				os.remove(homedir+"/temp/tmp_model.h5")
+				os.remove(homedir+"/temp/tmp_model1.h5")
 			except:
 				pass
-			_model.save(homedir+"/temp/tmp_model.h5")
-			s3f=open(homedir+"/temp/tmp_model.h5",'rb')
+			_model.save(homedir+"/temp/tmp_model1.h5")
+			s3f=open(homedir+"/temp/tmp_model1.h5",'rb')
 			updata=s3f.read()
 			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_authornet.h5")
 			s3f.close()
@@ -128,11 +128,11 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		Y_train=np.clip(np.ceil(N_all[:,len(cc2vid)+len(fa2vid):])-np.ceil(X_train_1),0.0,1.0)
 		_model.fit([X_train_1,X_train_2],[Y_train],batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 		try:
-			os.remove(homedir+"/temp/tmp_model.h5")
+			os.remove(homedir+"/temp/tmp_model1.h5")
 		except:
 			pass
-		_model.save(homedir+"/temp/tmp_model.h5")
-		s3f=open(homedir+"/temp/tmp_model.h5",'rb')
+		_model.save(homedir+"/temp/tmp_model1.h5")
+		s3f=open(homedir+"/temp/tmp_model1.h5",'rb')
 		updata=s3f.read()
 		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_authornet.h5")
 		s3f.close()

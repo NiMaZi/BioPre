@@ -21,7 +21,7 @@ def load_sups():
 	f.close()
 	return cc2vid
 
-def build_model(_input_dim=90179,_hidden_dim=512,_drate=0.5):
+def build_model(_input_dim=133056,_hidden_dim=512,_drate=0.5):
 	model=Sequential()
 	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
 	model.add(Dropout(_drate))
@@ -42,10 +42,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		abs_vec=[0.0 for i in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source+"/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source+"/abs"+str(i)+".csv",homedir+"/temp/tmp2.csv")
 		except:
 			continue
-		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+		with open(homedir+"/temp/tmp2.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
 				if item[0]=="Mention":
@@ -61,10 +61,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		body_vec=[0.0 for i in range(0,len(cc2vid))]
 		body_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source+"/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source+"/body"+str(i)+".csv",homedir+"/temp/tmp2.csv")
 		except:
 			continue
-		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+		with open(homedir+"/temp/tmp2.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
 				if item[0]=="Mention":
@@ -84,11 +84,11 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			Y_train=np.clip(np.ceil(N_all[:,len(cc2vid):])-np.ceil(X_train),0.0,1.0)
 			_model.fit(X_train,Y_train,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 			try:
-				os.remove(homedir+"/temp/tmp_model.h5")
+				os.remove(homedir+"/temp/tmp_model2.h5")
 			except:
 				pass
-			_model.save(homedir+"/temp/tmp_model.h5")
-			s3f=open(homedir+"/temp/tmp_model.h5",'rb')
+			_model.save(homedir+"/temp/tmp_model2.h5")
+			s3f=open(homedir+"/temp/tmp_model2.h5",'rb')
 			updata=s3f.read()
 			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_cut.h5")
 			s3f.close()
@@ -103,11 +103,11 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		Y_train=np.clip(np.ceil(N_all[:,len(cc2vid):])-np.ceil(X_train),0.0,1.0)
 		_model.fit(X_train,Y_train,batch_size=_mbatch,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 		try:
-			os.remove(homedir+"/temp/tmp_model.h5")
+			os.remove(homedir+"/temp/tmp_model2.h5")
 		except:
 			pass
-		_model.save(homedir+"/temp/tmp_model.h5")
-		s3f=open(homedir+"/temp/tmp_model.h5",'rb')
+		_model.save(homedir+"/temp/tmp_model2.h5")
+		s3f=open(homedir+"/temp/tmp_model2.h5",'rb')
 		updata=s3f.read()
 		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_cut.h5")
 		s3f.close()
