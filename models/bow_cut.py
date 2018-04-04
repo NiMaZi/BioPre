@@ -51,8 +51,8 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 				if item[0]=="Mention":
 					continue
 				try:
-					abs_count+=1.0
 					abs_vec[cc2vid[item[1]]]+=1.0
+					abs_count+=1.0
 				except:
 					pass
 		if not abs_count:
@@ -70,8 +70,8 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 				if item[0]=="Mention":
 					continue
 				try:
-					body_count+=1.0
 					body_vec[cc2vid[item[1]]]+=1.0
+					body_count+=1.0
 				except:
 					pass
 		if not body_count:
