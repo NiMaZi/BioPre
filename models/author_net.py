@@ -8,6 +8,7 @@ import numpy as np
 from keras.models import Model,load_model
 from keras.layers import Dense,Concatenate,Input,Dropout,BatchNormalization
 from keras.callbacks import EarlyStopping
+from keras import backend as K
 
 def get_bucket():
 	s3 = boto3.resource("s3")
@@ -31,8 +32,8 @@ def build_model(_input_dim_entity=133609,_input_dim_author=7858,_hidden_dim=512,
 	b2=BatchNormalization()(in_2)
 	d1=Dropout(_drate)(b1)
 	d2=Dropout(_drate)(b2)
-	x1=Dense(int(_hidden_dim*0.5),activation='relu')(d1)
-	x2=Dense(int(_hidden_dim*0.5),activation='relu')(d2)
+	x1=Dense(_hidden_dim,activation='relu')(d1)
+	x2=Dense(_hidden_dim,activation='relu')(d2)
 	concat=Concatenate()([x1,x2])
 	hidden=Dense(_hidden_dim,activation='relu')(concat)
 	out1=Dense(_input_dim_entity,activation='relu')(hidden)
@@ -114,7 +115,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			_model.save(homedir+"/temp/tmp_model.h5")
 			s3f=open(homedir+"/temp/tmp_model.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_authornet.h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_authornet2.h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_authornet.txt",'a')
 			logf.write("%s,%d\n"%(_source,batch_count))
@@ -134,7 +135,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		_model.save(homedir+"/temp/tmp_model.h5")
 		s3f=open(homedir+"/temp/tmp_model.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_authornet.h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_authornet2.h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_authornet.txt",'a')
 		logf.write("%s,%d\n"%(_source,batch_count))
