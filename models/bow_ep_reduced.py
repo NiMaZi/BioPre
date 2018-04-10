@@ -96,9 +96,8 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 					abs_count+=1.0
 				except:
 					pass
-		if not abs_count:
-			continue
-		abs_vec=list(np.array(abs_vec)/abs_count)
+		if not abs_count==0.0:
+			abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0 for k in range(0,6)]
 		try:
 			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp1.csv")
