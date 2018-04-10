@@ -133,7 +133,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			_model.save(homedir+"/temp/tmp_model1.h5")
 			s3f=open(homedir+"/temp/tmp_model1.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eprdc.h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eprdc2.h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_eprdc.txt",'a')
 			logf.write("%s,%d\n"%(str(_source),batch_count))
@@ -152,7 +152,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		_model.save(homedir+"/temp/tmp_model1.h5")
 		s3f=open(homedir+"/temp/tmp_model1.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eprdc.h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eprdc2.h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_eprdc.txt",'a')
 		logf.write("%s,%d\n"%(str(_source),batch_count))
@@ -163,4 +163,4 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 if __name__=="__main__":
 	model=build_model()
 	source_key=["EEG_expansion","annotated_papers_with_txt_new2"]
-	model,bcount=train_on_batch_S3(model,source_key,20000,0,1088,1024)
+	model,bcount=train_on_batch_S3(model,source_key,50000,0,1088,1024)
