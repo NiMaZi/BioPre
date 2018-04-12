@@ -15,12 +15,12 @@ def get_bucket():
 
 def load_sups():
 	homedir=os.environ['HOME']
-	f=open(homedir+"/results/ontology/cc2vid_eegrdc.json",'r')
+	f=open(homedir+"/results/ontology/cc2vid_eprdc.json",'r')
 	cc2vid=json.load(f)
 	f.close()
 	return cc2vid
 
-def build_model(_input_dim=18470,_hidden_dim=512,_drate=0.5):
+def build_model(_input_dim=18639,_hidden_dim=512,_drate=0.5):
 	model=Sequential()
 	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
 	model.add(Dropout(_drate))
