@@ -2,11 +2,13 @@ import os
 import sys
 import csv
 import json
+import time
 import boto3
 import numpy as np
-from keras.models import Sequential,load_model
-from keras.layers import Dense,Dropout,BatchNormalization
+from keras.models import Model,load_model
+from keras.layers import Dense,Concatenate,Input,Dropout,BatchNormalization
 from keras.callbacks import EarlyStopping
+from keras import backend as K
 
 def get_bucket():
 	s3 = boto3.resource("s3")
