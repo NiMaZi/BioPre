@@ -164,7 +164,6 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			X_train_1=N_all[:,:len(cc2vid)]
 			X_train_2=N_all[:,len(cc2vid):len(cc2vid)+len(fa2vid)]
 			Y_train=N_all[:,len(cc2vid)+len(fa2vid):]
-			print(X_train_1.shape,X_train_2.shape,Y_train.shape)
 			_model.fit([X_train_1,X_train_2],[Y_train],batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 			try:
 				os.remove(homedir+"/temp/tmp_model1.h5")
@@ -203,4 +202,4 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 if __name__=="__main__":
 	model=build_model()
 	source_key=["EEG_expansion","annotated_papers_meta"]
-	model,bcount=train_on_batch_S3(model,source_key,20000,0,17,16)
+	model,bcount=train_on_batch_S3(model,source_key,20000,0,1088,1024)
