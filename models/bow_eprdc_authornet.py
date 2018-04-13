@@ -104,7 +104,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 					body_vec[4]=1.0
 				if item[1]=='C16811':	#MEG
 					body_vec[5]=1.0
-		sample_list.append(abs_vec+body_vec)
+		sample_list.append(abs_vec+author_vec+body_vec)
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
@@ -158,12 +158,13 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 					body_vec[4]=1.0
 				if item[1]=='C16811':	#MEG
 					body_vec[5]=1.0
-		sample_list.append(abs_vec+body_vec)
+		sample_list.append(abs_vec+author_vec+body_vec)
 		if len(sample_list)>=_batch:
 			N_all=np.array(sample_list)
-			X_train=N_all[:,:len(cc2vid)]
-			Y_train=N_all[:,len(cc2vid):]
-			_model.fit(X_train,Y_train,batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
+			X_train_1=N_all[:,:len(cc2vid)]
+			X_train_2=N_all[:,len(cc2vid):len(cc2vid)+len(fa2vid)]
+			Y_train=N_all[:,len(cc2vid)+len(fa2vid):]
+			_model.fit([X_train_1,X_train_2],[Y_train],batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 			try:
 				os.remove(homedir+"/temp/tmp_model1.h5")
 			except:
@@ -173,16 +174,16 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			updata=s3f.read()
 			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eprdc_authornet.h5")
 			s3f.close()
-			logf=open(homedir+"/results/logs/bow_training_log_eprdc.txt",'a')
+			logf=open(homedir+"/results/logs/bow_training_log_eprdc_authornet.txt",'a')
 			logf.write("%s,%d\n"%(str(_source),batch_count))
 			logf.close()
 			batch_count+=1
 			sample_list=[]
 	if len(sample_list):
-		N_all=np.array(sample_list)
-		X_train=N_all[:,:len(cc2vid)]
-		Y_train=N_all[:,len(cc2vid):]
-		_model.fit(X_train,Y_train,batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
+		X_train_1=N_all[:,:len(cc2vid)]
+		X_train_2=N_all[:,len(cc2vid):len(cc2vid)+len(fa2vid)]
+		Y_train=N_all[:,len(cc2vid)+len(fa2vid):]
+		_model.fit([X_train_1,X_train_2],[Y_train],batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 		try:
 			os.remove(homedir+"/temp/tmp_model1.h5")
 		except:
@@ -192,7 +193,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		updata=s3f.read()
 		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eprdc_authornet.h5")
 		s3f.close()
-		logf=open(homedir+"/results/logs/bow_training_log_eprdc.txt",'a')
+		logf=open(homedir+"/results/logs/bow_training_log_eprdc_authornet.txt",'a')
 		logf.write("%s,%d\n"%(str(_source),batch_count))
 		logf.close()
 		batch_count+=1
