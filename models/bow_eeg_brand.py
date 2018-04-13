@@ -41,10 +41,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source[0]+"/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source[0]+"/abs"+str(i)+".csv",homedir+"/temp/tmp0.csv")
 		except:
 			continue
-		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+		with open(homedir+"/temp/tmp0.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
 				if item[0]=="Mention":
@@ -60,10 +60,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		body_vec=[0.0 for k in range(0,4)]
 		body_flag=0
 		try:
-			bucket.download_file("yalun/"+_source[0]+"/body"+str(i)+".txt",homedir+"/temp/tmp.txt")
+			bucket.download_file("yalun/"+_source[0]+"/body"+str(i)+".txt",homedir+"/temp/tmp0.txt")
 		except:
 			continue
-		bdf=open(homedir+"/temp/tmp.txt",'r',encoding='utf-8')
+		bdf=open(homedir+"/temp/tmp0.txt",'r',encoding='utf-8')
 		body=bdf.read()
 		bdf.close()
 		if "Neuroscan" in body or "NeuroScan" in body:
@@ -87,11 +87,11 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			Y_train=N_all[:,len(cc2vid):]
 			_model.fit(X_train,Y_train,batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 			try:
-				os.remove(homedir+"/temp/tmp_model.h5")
+				os.remove(homedir+"/temp/tmp_model0.h5")
 			except:
 				pass
-			_model.save(homedir+"/temp/tmp_model.h5")
-			s3f=open(homedir+"/temp/tmp_model.h5",'rb')
+			_model.save(homedir+"/temp/tmp_model0.h5")
+			s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 			updata=s3f.read()
 			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_brand.h5")
 			s3f.close()
@@ -106,11 +106,11 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		Y_train=N_all[:,len(cc2vid):]
 		_model.fit(X_train,Y_train,batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 		try:
-			os.remove(homedir+"/temp/tmp_model.h5")
+			os.remove(homedir+"/temp/tmp_model0.h5")
 		except:
 			pass
-		_model.save(homedir+"/temp/tmp_model.h5")
-		s3f=open(homedir+"/temp/tmp_model.h5",'rb')
+		_model.save(homedir+"/temp/tmp_model0.h5")
+		s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 		updata=s3f.read()
 		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_brand.h5")
 		s3f.close()
