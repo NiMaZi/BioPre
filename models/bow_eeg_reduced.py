@@ -37,7 +37,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 	cc2vid=load_sups()
 	sample_list=[]
 	batch_count=_bcount
-	for i in range(0,_volume):
+	for i in range(12500,_volume):
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
