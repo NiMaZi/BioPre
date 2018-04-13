@@ -41,7 +41,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source[0]+"/abs"+str(i)+".csv",homedir+"/temp/tmp1.csv")
+			bucket.download_file("yalun/"+_source[0]+"/abs"+str(7*i)+".csv",homedir+"/temp/tmp1.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp1.csv",'r',encoding='utf-8') as cf:
@@ -50,16 +50,15 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 				if item[0]=="Mention":
 					continue
 				try:
-					abs_vec[cc2vid[item[1]]]+=1.0
+					abs_vec[cc2vid[item[1]]]=1.0
 					abs_count+=1.0
 				except:
 					pass
 		if not abs_count:
 			continue
-		abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0 for k in range(0,6)]
 		try:
-			bucket.download_file("yalun/"+_source[0]+"/body"+str(i)+".csv",homedir+"/temp/tmp1.csv")
+			bucket.download_file("yalun/"+_source[0]+"/body"+str(7*i)+".csv",homedir+"/temp/tmp1.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp1.csv",'r',encoding='utf-8') as cf:
@@ -92,12 +91,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 				if item[0]=="Mention":
 					continue
 				try:
-					abs_vec[cc2vid[item[1]]]+=1.0
+					abs_vec[cc2vid[item[1]]]=1.0
 					abs_count+=1.0
 				except:
 					pass
-		if not abs_count==0.0:
-			abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0 for k in range(0,6)]
 		try:
 			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp1.csv")
