@@ -50,7 +50,6 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 	sample_list=[]
 	batch_count=_bcount
 	for i in range(0,_volume):
-		print(i)
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
@@ -202,5 +201,5 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 
 if __name__=="__main__":
 	model=build_model()
-	source_key=["EEG_expansion","annotated_papers_with_txt_new2"]
+	source_key=["EEG_expansion","annotated_papers_meta"]
 	model,bcount=train_on_batch_S3(model,source_key,20000,0,17,16)
