@@ -20,10 +20,10 @@ def load_sups():
 	f=open(homedir+"/results/ontology/cc2vid_eprdc.json",'r')
 	cc2vid=json.load(f)
 	f.close()
-	f=open(homedir+"/results/statistics/fa2vid_eprdc.json",'r')
-	fa2vid=json.load(f)
+	f=open(homedir+"/results/statistics/author_emb.json",'r')
+	fa2v=json.load(f)
 	f.close()
-	return cc2vid,fa2vid
+	return cc2vid,fa2v
 
 def build_model(_input_dim_entity=18639,_input_dim_author=512,_hidden_dim=512,_drate=0.5):
 	in_1=Input(shape=(_input_dim_entity,))
@@ -46,7 +46,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 	early_stopping_val=EarlyStopping(monitor='val_loss',patience=2)
 	homedir=os.environ['HOME']
 	bucket=get_bucket()
-	cc2vid,fa2vid=load_sups()
+	cc2vid,fa2v=load_sups()
 	sample_list=[]
 	batch_count=_bcount
 	for i in range(0,_volume):
@@ -69,7 +69,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		if not abs_count:
 			continue
 		abs_vec=list(np.array(abs_vec)/abs_count)
-		author_vec=[0.0 for i in range(0,len(fa2vid))]
+		author_vec=np.array([0.0 for i in range(0,512)])
 		try:
 			bucket.download_file("yalun/"+_source[0]+"/authors"+str(7*i)+".json",homedir+"/temp/tmpjson1.json")
 		except:
@@ -79,9 +79,13 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		tmpf.close()
 		for author in authors:
 			try:
-				author_vec[fa2vid[author]]=1.0
+				author_vec+=fa2v[author]
 			except:
 				pass
+		try:
+			author_vec=list(author_vec/len(authors))
+		except:
+			pass
 		body_vec=[0.0 for k in range(0,6)]
 		try:
 			bucket.download_file("yalun/"+_source[0]+"/body"+str(7*i)+".csv",homedir+"/temp/tmp1.csv")
@@ -123,7 +127,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 					pass
 		if not abs_count==0.0:
 			abs_vec=list(np.array(abs_vec)/abs_count)
-		author_vec=[0.0 for i in range(0,len(fa2vid))]
+		author_vec=np.array([0.0 for i in range(0,512)])
 		try:
 			bucket.download_file("yalun/"+_source[1]+"/authors"+str(i)+".json",homedir+"/temp/tmpjson1.json")
 		except:
@@ -133,9 +137,13 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		tmpf.close()
 		for author in authors:
 			try:
-				author_vec[fa2vid[author]]=1.0
+				author_vec+=fa2v[author]
 			except:
 				pass
+		try:
+			author_vec=list(author_vec/len(authors))
+		except:
+			pass
 		body_vec=[0.0 for k in range(0,6)]
 		try:
 			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp1.csv")
@@ -172,7 +180,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			_model.save(homedir+"/temp/tmp_model1.h5")
 			s3f=open(homedir+"/temp/tmp_model1.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eprdc_authornet.h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eprdc_authornet2.h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_eprdc_authornet.txt",'a')
 			logf.write("%s,%d\n"%(str(_source),batch_count))
@@ -191,7 +199,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		_model.save(homedir+"/temp/tmp_model1.h5")
 		s3f=open(homedir+"/temp/tmp_model1.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eprdc_authornet.h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eprdc_authornet2.h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_eprdc_authornet.txt",'a')
 		logf.write("%s,%d\n"%(str(_source),batch_count))
