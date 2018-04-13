@@ -36,7 +36,7 @@ def build_model(_input_dim_entity=18639,_input_dim_author=512,_hidden_dim=512,_d
 	x2=Dense(_hidden_dim,activation='relu')(d2)
 	concat=Concatenate()([x1,x2])
 	hidden=Dense(_hidden_dim,activation='relu')(concat)
-	out1=Dense(_input_dim_entity,activation='relu')(hidden)
+	out1=Dense(6,activation='relu')(hidden)
 	model=Model(inputs=[in_1,in_2], outputs=[out1])
 	model.compile(optimizer='Nadam',loss='binary_crossentropy')
 	return model
