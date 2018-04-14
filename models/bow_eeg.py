@@ -25,7 +25,7 @@ def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
 	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
 	model.add(Dropout(_drate))
 	model.add(BatchNormalization())
-	model.add(Dense(6,activation='relu'))
+	model.add(Dense(1,activation='relu'))
 	model.compile(optimizer='nadam',loss='binary_crossentropy')
 	return model
 
@@ -41,10 +41,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source[0]+"/abs"+str(7*i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source[0]+"/abs"+str(i)+".csv",homedir+"/temp/tmp0.csv")
 		except:
 			continue
-		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+		with open(homedir+"/temp/tmp0.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
 				if item[0]=="Mention":
@@ -57,36 +57,27 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		if not abs_count:
 			continue
 		abs_vec=list(np.array(abs_vec)/abs_count)
-		body_vec=[0.0 for k in range(0,6)]
+		body_vec=[0.0]
 		try:
-			bucket.download_file("yalun/"+_source[0]+"/body"+str(7*i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source[0]+"/body"+str(i)+".csv",homedir+"/temp/tmp0.csv")
 		except:
 			continue
-		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+		with open(homedir+"/temp/tmp0.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
 				if item[0]=="Mention":
 					continue
 				if item[1]=='C38054':	#EEG
 					body_vec[0]=1.0
-				if item[1]=='C16809':	#MRI
-					body_vec[1]=1.0
-				if item[1]=='C116454':	#fMRI
-					body_vec[2]=1.0
-				if item[1]=='C116655':	#TMS
-					body_vec[3]=1.0
-				if item[1]=='C129862':	#tDCS
-					body_vec[4]=1.0
-				if item[1]=='C16811':	#MEG
-					body_vec[5]=1.0
+					break
 		sample_list.append(abs_vec+body_vec)
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source[1]+"/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source[1]+"/abs"+str(i)+".csv",homedir+"/temp/tmp0.csv")
 		except:
 			continue
-		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+		with open(homedir+"/temp/tmp0.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
 				if item[0]=="Mention":
@@ -99,28 +90,19 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		if not abs_count:
 			continue
 		abs_vec=list(np.array(abs_vec)/abs_count)
-		body_vec=[0.0 for k in range(0,6)]
+		body_vec=[0.0]
 		try:
-			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp0.csv")
 		except:
 			continue
-		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
+		with open(homedir+"/temp/tmp0.csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
 				if item[0]=="Mention":
 					continue
 				if item[1]=='C38054':	#EEG
 					body_vec[0]=1.0
-				if item[1]=='C16809':	#MRI
-					body_vec[1]=1.0
-				if item[1]=='C116454':	#fMRI
-					body_vec[2]=1.0
-				if item[1]=='C116655':	#TMS
-					body_vec[3]=1.0
-				if item[1]=='C129862':	#tDCS
-					body_vec[4]=1.0
-				if item[1]=='C16811':	#MEG
-					body_vec[5]=1.0
+					break
 		sample_list.append(abs_vec+body_vec)
 		if len(sample_list)>=_batch:
 			N_all=np.array(sample_list)
@@ -128,16 +110,16 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			Y_train=N_all[:,len(cc2vid):]
 			_model.fit(X_train,Y_train,batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 			try:
-				os.remove(homedir+"/temp/tmp_model.h5")
+				os.remove(homedir+"/temp/tmp_model0.h5")
 			except:
 				pass
-			_model.save(homedir+"/temp/tmp_model.h5")
-			s3f=open(homedir+"/temp/tmp_model.h5",'rb')
+			_model.save(homedir+"/temp/tmp_model0.h5")
+			s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_list.h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_"+str(i)+".h5")
 			s3f.close()
-			logf=open(homedir+"/results/logs/bow_training_log_eeg_list.txt",'a')
-			logf.write("%s,%d\n"%(str(_source),batch_count))
+			logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
+			logf.write("eeg_abblation,%s,%d\n"%(str(_source),batch_count))
 			logf.close()
 			batch_count+=1
 			sample_list=[]
@@ -147,21 +129,21 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		Y_train=N_all[:,len(cc2vid):]
 		_model.fit(X_train,Y_train,batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 		try:
-			os.remove(homedir+"/temp/tmp_model.h5")
+			os.remove(homedir+"/temp/tmp_model0.h5")
 		except:
 			pass
-		_model.save(homedir+"/temp/tmp_model.h5")
-		s3f=open(homedir+"/temp/tmp_model.h5",'rb')
+		_model.save(homedir+"/temp/tmp_model0.h5")
+		s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_list.h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_"+str(i)+".h5")
 		s3f.close()
-		logf=open(homedir+"/results/logs/bow_training_log_eeg_list.txt",'a')
-		logf.write("%s,%d\n"%(str(_source),batch_count))
+		logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
+		logf.write("eeg_abblation,%s,%d\n"%(str(_source),batch_count))
 		logf.close()
 		batch_count+=1
 	return _model,batch_count
 
 if __name__=="__main__":
 	model=build_model()
-	source_key=["EEG_expansion","annotated_papers_with_txt_new2"]
-	model,bcount=train_on_batch_S3(model,source_key,20000,0,1088,1024)
+	source_key=["EEG_raw","annotated_papers_with_txt_new2"]
+	model,bcount=train_on_batch_S3(model,source_key,30000,0,1088,1024)
