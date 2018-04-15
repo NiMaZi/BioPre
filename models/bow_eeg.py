@@ -116,10 +116,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			_model.save(homedir+"/temp/tmp_model0.h5")
 			s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_"+str(i)+".h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeggputest.h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
-			logf.write("eeg_abblation,%s,%d\n"%(str(_source),batch_count))
+			logf.write("eeg_gpu_test,%s,%d\n"%(str(_source),batch_count))
 			logf.close()
 			batch_count+=1
 			sample_list=[]
@@ -135,10 +135,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		_model.save(homedir+"/temp/tmp_model0.h5")
 		s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_"+str(i)+".h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeggputest.h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
-		logf.write("eeg_abblation,%s,%d\n"%(str(_source),batch_count))
+		logf.write("eeg_gpu_test,%s,%d\n"%(str(_source),batch_count))
 		logf.close()
 		batch_count+=1
 	return _model,batch_count
@@ -146,4 +146,4 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 if __name__=="__main__":
 	model=build_model()
 	source_key=["EEG_raw","annotated_papers_with_txt_new2"]
-	model,bcount=train_on_batch_S3(model,source_key,30000,0,1088,1024)
+	model,bcount=train_on_batch_S3(model,source_key,1000,0,17,16)
