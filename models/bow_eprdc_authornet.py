@@ -82,10 +82,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 				author_vec+=fa2v[author]
 			except:
 				pass
-		try:
+		if len(authors):
 			author_vec=list(author_vec/len(authors))
-		except:
-			pass
+		else:
+			author_vec=list(author_vec)
 		body_vec=[0.0 for k in range(0,6)]
 		try:
 			bucket.download_file("yalun/"+_source[0]+"/body"+str(7*i)+".csv",homedir+"/temp/tmp1.csv")
@@ -140,10 +140,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 				author_vec+=fa2v[author]
 			except:
 				pass
-		try:
+		if len(authors):
 			author_vec=list(author_vec/len(authors))
-		except:
-			pass
+		else:
+			author_vec=list(author_vec)
 		body_vec=[0.0 for k in range(0,6)]
 		try:
 			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp1.csv")
