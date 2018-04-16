@@ -41,22 +41,22 @@ def upload_to_S3(_inpath,_fname,_counter,_format):
     f=open(_inpath,"r",encoding='utf-8')
     data=f.read()
     f.close()
-    targetBucket.put_object(Body=data,Key="yalun/Dependence/"+_fname+str(_counter)+"."+_format)
+    targetBucket.put_object(Body=data,Key="yalun/EEG_test/"+_fname+str(_counter)+"."+_format)
 
-logf=open(homedir+"/results/logs/annotator_log_cluster.txt",'a')
+logf=open(homedir+"/results/logs/annotator_log_etest.txt",'a')
 for i in range (start,end):
     try:
-        sourceBucket.download_file("yalun/Dependence/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt")
+        sourceBucket.download_file("yalun/EEG_test/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt")
         txt_path=homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt"
         path=get_annotation(txt_path)
         upload_to_S3(path,"abs",i,"csv")
 
-        sourceBucket.download_file("yalun/Dependence/body"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt")
+        sourceBucket.download_file("yalun/EEG_test/body"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt")
         txt_path=homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt"
         path=get_annotation(txt_path)
         upload_to_S3(path,"body",i,"csv")
 
-        sourceBucket.download_file("yalun/Dependence/title"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt")
+        sourceBucket.download_file("yalun/EEG_test/title"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt")
         txt_path=homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt"
         path=get_annotation(txt_path)
         upload_to_S3(path,"title",i,"csv")
