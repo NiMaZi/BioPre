@@ -41,68 +41,6 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/"+_source[0]+"/abs"+str(7*i)+".csv",homedir+"/temp/tmp1.csv")
-		except:
-			continue
-		with open(homedir+"/temp/tmp1.csv",'r',encoding='utf-8') as cf:
-			rd=csv.reader(cf)
-			for item in rd:
-				if item[0]=="Mention":
-					continue
-				try:
-					abs_vec[cc2vid[item[1]]]+=1.0
-					abs_count+=1.0
-				except:
-					pass
-		if not abs_count:
-			continue
-		abs_vec=list(np.array(abs_vec)/abs_count)
-		body_vec=[0.0 for k in range(0,16)]
-		try:
-			bucket.download_file("yalun/"+_source[0]+"/body"+str(7*i)+".csv",homedir+"/temp/tmp1.csv")
-		except:
-			continue
-		with open(homedir+"/temp/tmp1.csv",'r',encoding='utf-8') as cf:
-			rd=csv.reader(cf)
-			for item in rd:
-				if item[0]=="Mention":
-					continue
-				if item[1]=='C38054':	#EEG
-					body_vec[0]=1.0
-				if item[1]=='C16809':	#MRI
-					body_vec[1]=1.0
-				if item[1]=='C116454':	#fMRI
-					body_vec[2]=1.0
-				if item[1]=='C116655':	#TMS
-					body_vec[3]=1.0
-				if item[1]=='C129862':	#tDCS
-					body_vec[4]=1.0
-				if item[1]=='C16811':	#MEG
-					body_vec[5]=1.0
-				if item[1]=='C78814' or item[1]=='C78815':	#SEM
-					body_vec[6]=1.0
-				if item[1]=='C78860' or item[1]=='C78813':	#TEM
-					body_vec[7]=1.0
-				if item[1]=='C17374':	#STM
-					body_vec[8]=1.0
-				if item[1]=='C78804':	#AFM
-					body_vec[9]=1.0
-				if item[1]=='C17753' or item[1]=='C122390' or item[1]=='C116477' or item[1]=='C116481':	#Confocal
-					body_vec[10]=1.0
-				if item[1]=='C93040':	#Alcohol
-					body_vec[11]=1.0
-				if item[1]=='C35386' or item[1]=='C35387' or item[1]=='C34445':	#Cannabis
-					body_vec[12]=1.0
-				if item[1]=='C34492' or item[1]=='C35389' or item[1]=='C35388':	#Cocaine
-					body_vec[13]=1.0
-				if item[1]=='C34694':	#Heroin
-					body_vec[14]=1.0
-				if item[1]=='C70989' or item[1]=='C54203' or item[1]=='C15985':	#Nicotine
-					body_vec[15]=1.0
-		sample_list.append(abs_vec+body_vec)
-		abs_vec=[0.0 for k in range(0,len(cc2vid))]
-		abs_count=0.0
-		try:
 			bucket.download_file("yalun/"+_source[1]+"/abs"+str(i)+".csv",homedir+"/temp/tmp1.csv")
 		except:
 			continue
@@ -298,7 +236,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			_model.save(homedir+"/temp/tmp_model1.h5")
 			s3f=open(homedir+"/temp/tmp_model1.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_cluster.h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_cluster2.h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_cluster.txt",'a')
 			logf.write("%s,%d\n"%(str(_source),batch_count))
@@ -317,7 +255,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		_model.save(homedir+"/temp/tmp_model1.h5")
 		s3f=open(homedir+"/temp/tmp_model1.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_cluster.h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_cluster2.h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_cluster.txt",'a')
 		logf.write("%s,%d\n"%(str(_source),batch_count))
@@ -328,4 +266,4 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 if __name__=="__main__":
 	model=build_model()
 	source_key=["EEG_expansion","Dependence","Microscopy","annotated_papers_with_txt_new2"]
-	model,bcount=train_on_batch_S3(model,source_key,20000,0,1088,1024)
+	model,bcount=train_on_batch_S3(model,source_key,30000,0,1088,1024)
