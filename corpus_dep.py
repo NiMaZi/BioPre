@@ -46,10 +46,14 @@ def upload_to_S3(_inpath,_fname,_counter,_format):
 logf=open(homedir+"/results/logs/annotator_log_cluster.txt",'a')
 for i in range (start,end):
     try:
+        print("1")
         sourceBucket.download_file("yalun/Dependence/abs"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt")
+        print("2")
         txt_path=homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt"
         path=get_annotation(txt_path)
+        print("3")
         upload_to_S3(path,"abs",i,"csv")
+        print("4")
 
         sourceBucket.download_file("yalun/Dependence/body"+str(i)+".txt",homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt")
         txt_path=homedir+"/thesiswork/source/papers/tmp"+str(pid)+".txt"
