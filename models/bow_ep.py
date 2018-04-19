@@ -28,7 +28,7 @@ def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
 	model.add(Dense(16,activation='relu'))
 	model.compile(optimizer='nadam',loss='binary_crossentropy')
 	return model
-	
+
 def get_model_local(path):
 	return load_model(path)
 
@@ -267,8 +267,9 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 	return _model,batch_count
 
 if __name__=="__main__":
-	model=build_model()
+	# model=build_model()
+	model=get_model_local("/home/yzg550/temp/tmp_model1.h5")
 	source_key=["EEG_expansion","Dependence","Microscopy","annotated_papers_with_txt_new2"]
-	model,bcount=train_on_batch_S3(model,source_key,5000,0,272,256)
+	# model,bcount=train_on_batch_S3(model,source_key,5000,0,272,256)
 	model,bcount=train_on_batch_S3(model,source_key,5000,0,1088,256)
 	model,bcount=train_on_batch_S3(model,source_key,5000,0,1088,1024)
