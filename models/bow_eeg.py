@@ -20,6 +20,9 @@ def load_sups():
 	f.close()
 	return cc2vid
 
+def get_model_local(path):
+	return load_model(path)
+
 def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
 	model=Sequential()
 	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
@@ -144,7 +147,8 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 	return _model,batch_count
 
 if __name__=="__main__":
-	model=build_model()
+	# model=build_model()
+	model=get_model_local("/home/ubuntu/temp/tmp_model0.h5")
 	source_key=["EEG_raw","annotated_papers_with_txt_new2"]
-	model,bcount=train_on_batch_S3(model,source_key,5000,0,272,256)
+	# model,bcount=train_on_batch_S3(model,source_key,5000,0,272,256)
 	model,bcount=train_on_batch_S3(model,source_key,5000,0,1088,1024)
