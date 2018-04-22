@@ -46,7 +46,7 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 	logf.write("feature abblation on "+str(_abbl)+".\n")
 	logf.close()
 	for i in range(0,_volume):
-		abs_vec=[0.0 for k in range(0,len(cc2vid))]
+		abs_vec=[0.0 for k in range(0,len(cc2vid_o))]
 		abs_count=0.0
 		try:
 			bucket.download_file("yalun/"+_source[0]+"/abs"+str(i)+".csv",homedir+"/temp/tmp0.csv")
@@ -78,7 +78,7 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 					body_vec[0]=1.0
 					break
 		sample_list.append(abs_vec+body_vec)
-		abs_vec=[0.0 for k in range(0,len(cc2vid))]
+		abs_vec=[0.0 for k in range(0,len(cc2vid_o))]
 		abs_count=0.0
 		try:
 			bucket.download_file("yalun/"+_source[1]+"/abs"+str(i)+".csv",homedir+"/temp/tmp0.csv")
@@ -112,8 +112,8 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 		sample_list.append(abs_vec+body_vec)
 		if len(sample_list)>=_batch:
 			N_all=np.array(sample_list)
-			X_train=N_all[:,:len(cc2vid)]
-			Y_train=N_all[:,len(cc2vid):]
+			X_train=N_all[:,:len(cc2vid_o)]
+			Y_train=N_all[:,len(cc2vid_o):]
 			_model.fit(X_train,Y_train,batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 			try:
 				os.remove(homedir+"/temp/tmp_model0.h5")
@@ -131,8 +131,8 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 			sample_list=[]
 	if len(sample_list):
 		N_all=np.array(sample_list)
-		X_train=N_all[:,:len(cc2vid)]
-		Y_train=N_all[:,len(cc2vid):]
+		X_train=N_all[:,:len(cc2vid_o)]
+		Y_train=N_all[:,len(cc2vid_o):]
 		_model.fit(X_train,Y_train,batch_size=_mbatch,shuffle=True,verbose=0,epochs=_epochs,validation_split=1.0/17.0,callbacks=[early_stopping,early_stopping_val])
 		try:
 			os.remove(homedir+"/temp/tmp_model0.h5")
