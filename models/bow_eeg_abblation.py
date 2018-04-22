@@ -150,9 +150,9 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 	return _model,batch_count
 
 if __name__=="__main__":
-	abbl=0.0
+	abbl=0.9
 	while abbl<1.0:
 		model=build_model()
 		source_key=["EEG_raw","annotated_papers_with_txt_new2"]
 		model,bcount=train_on_batch_S3(abbl,model,source_key,5000,0,1088,1024)
-		abbl+=0.1
+		abbl+=1.0
