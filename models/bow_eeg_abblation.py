@@ -125,7 +125,7 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_abbl2"+str(_abbl)+".h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_eeg_abblation.txt",'a')
-			logf.write("eeg_gpu_opt_min,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
+			logf.write("eeg_abbl2,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
 			logf.close()
 			batch_count+=1
 			sample_list=[]
@@ -144,7 +144,7 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_abbl2"+str(_abbl)+".h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_eeg_abblation.txt",'a')
-		logf.write("eeg_gpu_opt_min,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
+		logf.write("eeg_abbl2,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
 		logf.close()
 		batch_count+=1
 	return _model,batch_count
