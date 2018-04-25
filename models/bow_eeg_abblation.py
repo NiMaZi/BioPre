@@ -38,7 +38,7 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 	homedir=os.environ['HOME']
 	bucket=get_bucket()
 	cc2vid_o=load_sups()
-	rkeys=list(cc2vid_o.keys())[int(_abbl*len(list(cc2vid_o.keys()))):int((_abbl+0.1)*len(list(cc2vid_o.keys())))]
+	rkeys=list(cc2vid_o.keys())[int(_abbl*len(list(cc2vid_o.keys()))):int((_abbl+0.2)*len(list(cc2vid_o.keys())))]
 	cc2vid=dict(filter(lambda i:i[0] not in rkeys,cc2vid_o.items()))
 	sample_list=[]
 	batch_count=_bcount
@@ -122,7 +122,7 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 			_model.save(homedir+"/temp/tmp_model0.h5")
 			s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_abbl"+str(_abbl)+".h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_abbl2"+str(_abbl)+".h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_eeg_abblation.txt",'a')
 			logf.write("eeg_gpu_opt_min,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
@@ -141,7 +141,7 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 		_model.save(homedir+"/temp/tmp_model0.h5")
 		s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_abbl"+str(_abbl)+".h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_abbl2"+str(_abbl)+".h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_eeg_abblation.txt",'a')
 		logf.write("eeg_gpu_opt_min,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
@@ -150,9 +150,9 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 	return _model,batch_count
 
 if __name__=="__main__":
-	abbl=0.9
-	while abbl<1.0:
+	abbl=0.0
+	while abbl<0.9:
 		model=build_model()
 		source_key=["EEG_raw","annotated_papers_with_txt_new2"]
 		model,bcount=train_on_batch_S3(abbl,model,source_key,5000,0,1088,1024)
-		abbl+=1.0
+		abbl+=0.1
