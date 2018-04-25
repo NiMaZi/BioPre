@@ -38,7 +38,7 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 	homedir=os.environ['HOME']
 	bucket=get_bucket()
 	cc2vid_o=load_sups()
-	rkeys=list(cc2vid_o.keys())[int(_abbl*len(list(cc2vid_o.keys()))):int((_abbl+0.2)*len(list(cc2vid_o.keys())))]
+	rkeys=list(cc2vid_o.keys())[int(_abbl*len(list(cc2vid_o.keys()))):int((_abbl+0.5)*len(list(cc2vid_o.keys())))]
 	cc2vid=dict(filter(lambda i:i[0] not in rkeys,cc2vid_o.items()))
 	sample_list=[]
 	batch_count=_bcount
@@ -151,8 +151,8 @@ def train_on_batch_S3(_abbl,_model,_source,_volume,_bcount,_batch,_mbatch,_epoch
 
 if __name__=="__main__":
 	abbl=0.0
-	while abbl<0.9:
+	while abbl<0.6:
 		model=build_model()
 		source_key=["EEG_raw","annotated_papers_with_txt_new2"]
 		model,bcount=train_on_batch_S3(abbl,model,source_key,5000,0,1088,1024)
-		abbl+=0.1
+		abbl+=0.5
