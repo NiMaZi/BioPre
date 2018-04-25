@@ -197,6 +197,6 @@ if __name__=="__main__":
 	model=build_model()
 	# model=get_model_local("/home/yzg550/temp/tmp_model1.h5")
 	source_key=["Dependence","Microscopy","port/bird","port/computer","port/endoscope","port/spectroscopy","annotated_papers_with_txt_new2"]
-	# model,bcount=train_on_batch_S3(model,source_key,5000,0,272,256)
-	# model,bcount=train_on_batch_S3(model,source_key,5000,0,1088,256)
+	model,bcount=train_on_batch_S3(model,source_key,5000,0,272,256)
+	model,bcount=train_on_batch_S3(model,source_key,5000,0,1088,256)
 	model,bcount=train_on_batch_S3(model,source_key,5000,0,1088,1024)
