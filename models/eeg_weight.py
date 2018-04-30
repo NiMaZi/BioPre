@@ -42,10 +42,10 @@ def sorted_weight(_model):
 	cc2vid,c2n,prefix=load_sups()
 	for i,k in enumerate(list(cc2vid.keys())):
 		in_vec=[0.0 for i in range(0,len(cc2vid))]
-    	in_vec[cc2vid[k]]=1.0
-    	in_vec=np.array([in_vec])
-    	print(i,c2n[prefix+k],model.predict(in_vec)[0][0])
-    return res
+		in_vec[cc2vid[k]]=1.0
+		in_vec=np.array([in_vec])
+		print(i,c2n[prefix+k],model.predict(in_vec)[0][0])
+	return res
 
 if __name__=="__main__":
 	homedir=os.environ['HOME']
