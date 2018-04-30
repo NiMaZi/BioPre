@@ -41,14 +41,21 @@ def get_weight(_model):
 	bucket=get_bucket()
 	cc2vid,c2n,prefix=load_sups()
 	for i,k in enumerate(list(cc2vid.keys())):
+		if i>20:
+			break
 		in_vec=[0.0 for i in range(0,len(cc2vid))]
 		in_vec[cc2vid[k]]=1.0
 		in_vec=np.array([in_vec])
-		print(i,c2n[prefix+k],model.predict(in_vec)[0][0])
-	return res
+		res.append((i,c2n[prefix+k],model.predict(in_vec)[0][0]))
+	l=sorted(res,key=lambda x:-x[2])
+	return l
 
 if __name__=="__main__":
 	homedir=os.environ['HOME']
 	model_name="MLPsparse_1hidden_eeg_gpuopt"
 	model=get_model_S3(model_name)
 	sorted_weight=get_weight(model)
+	with open(homedir+"/results/statistics/eeg_weight_gpuopt.csv",'w',encoding='utf-8') as cf:
+		wt=csv.writer(cf)
+		for d in sorted_weight:
+			wt.writerow(d)
