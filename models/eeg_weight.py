@@ -35,7 +35,7 @@ def get_model_S3(_name):
 	model=load_model(homedir+"/temp/tmp_model.h5")
 	return model
 
-def sorted_weight(_model):
+def get_weight(_model):
 	res=[]
 	homedir=os.environ['HOME']
 	bucket=get_bucket()
