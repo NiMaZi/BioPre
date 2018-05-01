@@ -41,8 +41,6 @@ def get_weight(_model):
 	bucket=get_bucket()
 	cc2vid,c2n,prefix=load_sups()
 	for i,k in enumerate(list(cc2vid.keys())):
-		if i>20:
-			break
 		in_vec=[0.0 for i in range(0,len(cc2vid))]
 		in_vec[cc2vid[k]]=1.0
 		in_vec=np.array([in_vec])
