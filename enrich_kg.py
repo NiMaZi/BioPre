@@ -40,8 +40,6 @@ with open(homedir+"/thesiswork/source/NCIT.csv",'r',encoding='utf-8') as csvfile
     reader=csv.reader(csvfile)
     total_enrichment=0
     for idx,item in enumerate(reader):
-        if idx>20:
-            break
         if item[0]=='Class ID':
             continue
         if item[3] or item[15]:
