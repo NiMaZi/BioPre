@@ -44,7 +44,7 @@ with open(homedir+"/thesiswork/source/NCIT.csv",'r',encoding='utf-8') as csvfile
             continue
         if item[3] or item[15]:
             self_code=item[38]
-            f=open(homedir+"/temp/enrich.txt",'w')
+            f=open(homedir+"/temp/enrich.txt",'w',encoding='utf-8')
             f.write(item[3]+"\n"+item[15])
             f.close()
             subprocess.call([
