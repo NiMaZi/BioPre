@@ -15,12 +15,12 @@ def get_bucket():
 
 def load_sups():
 	homedir=os.environ['HOME']
-	f=open(homedir+"/results/ontology/cc2vid_eegrdc2nd.json",'r')
+	f=open(homedir+"/results/ontology/cc2vid_leaf.json",'r')
 	cc2vid=json.load(f)
 	f.close()
 	return cc2vid
 
-def build_model(_input_dim=48412,_hidden_dim=512,_drate=0.5):
+def build_model(_input_dim=110184,_hidden_dim=512,_drate=0.5):
 	model=Sequential()
 	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
 	model.add(Dropout(_drate))
@@ -37,7 +37,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 	cc2vid=load_sups()
 	sample_list=[]
 	batch_count=_bcount
-	for i in range(12500,_volume):
+	for i in range(0,_volume):
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
@@ -54,9 +54,8 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 					abs_count+=1.0
 				except:
 					pass
-		if not abs_count:
-			continue
-		abs_vec=list(np.array(abs_vec)/abs_count)
+		if not abs_count==0.0:
+			abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0]
 		try:
 			bucket.download_file("yalun/"+_source[0]+"/body"+str(i)+".csv",homedir+"/temp/tmp0.csv")
@@ -115,9 +114,9 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			_model.save(homedir+"/temp/tmp_model0.h5")
 			s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eegrdc2nd.h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eegrdc_leaf.h5")
 			s3f.close()
-			logf=open(homedir+"/results/logs/bow_training_log_eegrdc.txt",'a')
+			logf=open(homedir+"/results/logs/bow_training_log_eegrdc_leaf.txt",'a')
 			logf.write("%s,%d\n"%(str(_source),batch_count))
 			logf.close()
 			batch_count+=1
@@ -134,9 +133,9 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		_model.save(homedir+"/temp/tmp_model0.h5")
 		s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eegrdc2nd.h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eegrdc_leaf.h5")
 		s3f.close()
-		logf=open(homedir+"/results/logs/bow_training_log_eegrdc.txt",'a')
+		logf=open(homedir+"/results/logs/bow_training_log_eegrdc_leaf.txt",'a')
 		logf.write("%s,%d\n"%(str(_source),batch_count))
 		logf.close()
 		batch_count+=1
