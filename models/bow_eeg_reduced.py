@@ -15,6 +15,8 @@ def get_bucket():
 
 def load_sups():
 	homedir=os.environ['HOME']
+	bucket=get_bucket()
+	bucket.download_file("yalun/results/ontology/cc2vid_leaf.json",homedir+"/results/ontology/cc2vid_leaf.json")
 	f=open(homedir+"/results/ontology/cc2vid_leaf.json",'r')
 	cc2vid=json.load(f)
 	f.close()
