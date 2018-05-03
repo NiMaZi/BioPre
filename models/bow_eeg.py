@@ -25,10 +25,10 @@ def get_model_local(path):
 
 def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
 	model=Sequential()
-	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
+	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='sigmoid'))
 	model.add(Dropout(_drate))
 	model.add(BatchNormalization())
-	model.add(Dense(1,activation='relu'))
+	model.add(Dense(1,activation='sigmoid'))
 	model.compile(optimizer='nadam',loss='binary_crossentropy')
 	return model
 
@@ -53,13 +53,13 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 				if item[0]=="Mention":
 					continue
 				try:
-					# abs_count+=1.0
-					abs_vec[cc2vid[item[1]]]=1.0
+					abs_count+=1.0
+					abs_vec[cc2vid[item[1]]]+=1.0
 				except:
 					pass
-		# if not abs_count:
-			# continue
-		# abs_vec=list(np.array(abs_vec)/abs_count)
+		if not abs_count:
+			continue
+		abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0]
 		try:
 			bucket.download_file("yalun/"+_source[0]+"/body"+str(i)+".csv",homedir+"/temp/tmp0.csv")
@@ -86,13 +86,13 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 				if item[0]=="Mention":
 					continue
 				try:
-					# abs_count+=1.0
-					abs_vec[cc2vid[item[1]]]=1.0
+					abs_count+=1.0
+					abs_vec[cc2vid[item[1]]]+=1.0
 				except:
 					pass
-		# if not abs_count:
-			# continue
-		# abs_vec=list(np.array(abs_vec)/abs_count)
+		if not abs_count:
+			continue
+		abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0]
 		try:
 			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp0.csv")
@@ -119,10 +119,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			_model.save(homedir+"/temp/tmp_model0.h5")
 			s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_binary.h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_sigmoid.h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
-			logf.write("eeg_binary,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
+			logf.write("eeg_sigmoid,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
 			logf.close()
 			batch_count+=1
 			sample_list=[]
@@ -138,10 +138,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		_model.save(homedir+"/temp/tmp_model0.h5")
 		s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_binary.h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_sigmoid.h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
-		logf.write("eeg_binary,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
+		logf.write("eeg_sigmoid,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
 		logf.close()
 		batch_count+=1
 	return _model,batch_count
