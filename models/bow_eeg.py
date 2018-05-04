@@ -25,10 +25,13 @@ def get_model_local(path):
 
 def build_model(_input_dim=133609,_hidden_dim=512,_drate=0.5):
 	model=Sequential()
-	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='tanh'))
+	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
 	model.add(Dropout(_drate))
 	model.add(BatchNormalization())
-	model.add(Dense(1,activation='tanh'))
+	model.add(Dense(_hidden_dim,input_shape=(_input_dim,),activation='relu'))
+	model.add(Dropout(_drate))
+	model.add(BatchNormalization())
+	model.add(Dense(1,activation='relu'))
 	model.compile(optimizer='nadam',loss='binary_crossentropy')
 	return model
 
@@ -119,10 +122,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 			_model.save(homedir+"/temp/tmp_model0.h5")
 			s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 			updata=s3f.read()
-			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_tanh.h5")
+			bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_2d.h5")
 			s3f.close()
 			logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
-			logf.write("eeg_tanh,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
+			logf.write("eeg_2d,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
 			logf.close()
 			batch_count+=1
 			sample_list=[]
@@ -138,10 +141,10 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		_model.save(homedir+"/temp/tmp_model0.h5")
 		s3f=open(homedir+"/temp/tmp_model0.h5",'rb')
 		updata=s3f.read()
-		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_tanh.h5")
+		bucket.put_object(Body=updata,Key="yalun/results/models/MLPsparse_1hidden_eeg_2d.h5")
 		s3f.close()
 		logf=open(homedir+"/results/logs/bow_training_log_eeg.txt",'a')
-		logf.write("eeg_tanh,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
+		logf.write("eeg_2d,%s,%d,%d,%d\n"%(str(_source),_epochs,_mbatch,batch_count))
 		logf.close()
 		batch_count+=1
 	return _model,batch_count
