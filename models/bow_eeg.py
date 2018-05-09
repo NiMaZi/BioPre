@@ -40,7 +40,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 	cc2vid=load_sups()
 	sample_list=[]
 	batch_count=_bcount
-	for i in range(3800,_volume):
+	for i in range(0,_volume):
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
@@ -147,8 +147,8 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 	return _model,batch_count
 
 if __name__=="__main__":
-	model=build_model()
-	# model=get_model_local("/home/ubuntu/temp/tmp_model0.h5")
+	# model=build_model()
+	model=get_model_local("/home/ubuntu/temp/tmp_model0.h5")
 	source_key=["EEG_raw","annotated_papers_with_txt_new2"]
 	# model,bcount=train_on_batch_S3(model,source_key,30000,0,272,256)
-	model,bcount=train_on_batch_S3(model,source_key,30000,0,1088,1024)
+	model,bcount=train_on_batch_S3(model,source_key,3800,49,1088,1024)
