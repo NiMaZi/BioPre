@@ -64,7 +64,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		for tf in abs_vec:
 			if tf>max_tf:
 				max_tf=tf
-		aug_abs_vec=[(0.5+0.5*(tf/max_tf)) for tf in abs_vec]
+		abs_vec=[(0.5+0.5*(tf/max_tf)) for tf in abs_vec]
 		body_vec=[0.0]
 		try:
 			bucket.download_file("yalun/"+_source[0]+"/body"+str(i)+".csv",homedir+"/temp/tmp0.csv")
@@ -101,7 +101,7 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 		for tf in abs_vec:
 			if tf>max_tf:
 				max_tf=tf
-		aug_abs_vec=[(0.5+0.5*(tf/max_tf)) for tf in abs_vec]
+		abs_vec=[(0.5+0.5*(tf/max_tf)) for tf in abs_vec]
 		body_vec=[0.0]
 		try:
 			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp0.csv")
@@ -160,4 +160,4 @@ if __name__=="__main__":
 	# model=get_model_local("/home/ubuntu/temp/tmp_model0.h5")
 	source_key=["EEG_raw","annotated_papers_with_txt_new2"]
 	# model,bcount=train_on_batch_S3(model,source_key,30000,0,272,256)
-	model,bcount=train_on_batch_S3(model,source_key,30000,49,1088,1024)
+	model,bcount=train_on_batch_S3(model,source_key,30000,0,1088,1024)
