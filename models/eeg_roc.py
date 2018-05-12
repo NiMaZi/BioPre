@@ -224,3 +224,21 @@ if __name__=="__main__":
 	f=open(homedir+"/results/eeg_gpuopt_roc.json",'w')
 	json.dump(res,f)
 	f.close()
+	l=sorted(res,key=lambda x:x[0])
+	res=[]
+	m=0.0
+	for r in l:
+		if r[1]>=m:
+			m=r[1]
+			res.append(r)
+	fpr=[0.0]
+	tpr=[0.0]
+	for rec in res:
+		fpr.append(rec[0])
+		tpr.append(rec[1])
+	AUC=0.0
+	for i in range(0,len(tpr)-1):
+		AUC+=(tpr[i]+tpr[i+1])*(fpr[i+1]-fpr[i])*0.5
+	f=open(homedir+"/results/AUC.txt",'a')
+	f.write("%s,%f"%(model_name,AUC))
+	f.close()
