@@ -44,7 +44,6 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 	sample_list=[]
 	batch_count=_bcount
 	for i in range(0,_volume):
-		max_tf=0.0
 		abs_vec=[0.0 for k in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
@@ -63,8 +62,9 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 					pass
 		if not abs_count:
 			continue
-		abs_vec=list(np.array(abs_vec)/abs_count)
-		abs_vec=[tf/np.linalg.norm(abs_vec) for tf in abs_vec]
+		abs_vec=np.array(abs_vec)/abs_count
+		norm=np.linalg.norm(abs_vec)
+		abs_vec=[tf/norm for tf in abs_vec]
 		body_vec=[0.0]
 		try:
 			bucket.download_file("yalun/"+_source[0]+"/body"+str(i)+".csv",homedir+"/temp/tmp0.csv")
@@ -97,8 +97,9 @@ def train_on_batch_S3(_model,_source,_volume,_bcount,_batch,_mbatch,_epochs=5):
 					pass
 		if not abs_count:
 			continue
-		abs_vec=list(np.array(abs_vec)/abs_count)
-		abs_vec=[tf/np.linalg.norm(abs_vec) for tf in abs_vec]
+		abs_vec=np.array(abs_vec)/abs_count
+		norm=np.linalg.norm(abs_vec)
+		abs_vec=[tf/norm for tf in abs_vec]
 		body_vec=[0.0]
 		try:
 			bucket.download_file("yalun/"+_source[1]+"/body"+str(i)+".csv",homedir+"/temp/tmp0.csv")
