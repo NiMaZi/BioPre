@@ -52,7 +52,7 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 		abs_vec=[0.0 for i in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/EEG_expansion/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/Microscopy/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -70,7 +70,7 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 			abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0 for k in range(0,41)]
 		try:
-			bucket.download_file("yalun/EEG_expansion/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/Microscopy/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
