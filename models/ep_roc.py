@@ -36,7 +36,7 @@ def get_model_S3(_name):
 def get_model_local(path):
 	return load_model(path)
 
-def test_on_doc_S3_all(_model,_volume,_threshold=0.0):
+def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 	homedir=os.environ['HOME']
 	bucket=get_bucket()
 	cc2vid=load_sups()
@@ -82,7 +82,7 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0):
 					body_res=1.0
 					break
 		X_test=np.array([abs_vec])
-		Y_pred=_model.predict(X_test)[0][1]
+		Y_pred=_model.predict(X_test)[0][_idx]
 		if Y_pred>=_threshold:
 			Y_res=1.0
 		else:
@@ -106,6 +106,8 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0):
 	return acc,tpr,fpr
 
 if __name__=="__main__":
+	term=sys.argv[1]
+	idx=int(sys.argv[2])
 	model_name="MLPsparse_1hidden_eeg_list"
 	model=get_model_S3(model_name)
 	res=[]
@@ -113,14 +115,14 @@ if __name__=="__main__":
 	volume=1000
 	m_acc=0.0
 	while threshold<=0.44:
-		acc,tpr,fpr=test_on_doc_S3_all(model,volume,threshold)
+		acc,tpr,fpr=test_on_doc_S3_all(model,volume,threshold,idx)
 		if acc>m_acc:
 			m_acc=acc
 		res.append((fpr,tpr))
 		threshold+=0.001
 	res=list(set(res))
 	homedir=os.environ['HOME']
-	f=open(homedir+"/results/eeglist_MRI_roc.json",'w')
+	f=open(homedir+"/results/eeglist_"+term+"_roc.json",'w')
 	json.dump(res,f)
 	f.close()
 	l=sorted(res,key=lambda x:x[0])
@@ -139,5 +141,5 @@ if __name__=="__main__":
 	for i in range(0,len(tpr)-1):
 		AUC+=(tpr[i]+tpr[i+1])*(fpr[i+1]-fpr[i])*0.5
 	f=open(homedir+"/results/AUC.txt",'a')
-	f.write("%s,%s,%f,%f"%(model_name,"MRI",AUC,m_acc))
+	f.write("%s,%s,%f,%f"%(model_name,term,AUC,m_acc))
 	f.close()
