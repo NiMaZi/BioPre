@@ -143,7 +143,8 @@ if __name__=="__main__":
 	p0=float(sys.argv[3])
 	p1=float(sys.argv[4])
 	model_name="MLPsparse_1hidden_cluster_opt"
-	model=get_model_S3(model_name)
+	# model=get_model_S3(model_name)
+	model=get_model_local("/home/ubuntu/temp/tmp_model2.h5")
 	res=[]
 	threshold=p0
 	volume=1000
