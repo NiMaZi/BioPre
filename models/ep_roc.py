@@ -48,7 +48,7 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 	fn=0.0
 	error_count=0.0
 	all_count=0.0   
-	for i in range(5000,5000+_volume):
+	for i in range(15000,15000+_volume):
 		abs_vec=[0.0 for i in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
@@ -68,7 +68,7 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 					pass
 		if not abs_count==0.0:
 			abs_vec=list(np.array(abs_vec)/abs_count)
-		body_res=0.0
+		body_vec=[0.0 for k in range(0,41)]
 		try:
 			bucket.download_file("yalun/EEG_expansion/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		except:
@@ -78,10 +78,42 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 			for item in rd:
 				if item[0]=="Mention":
 					continue
-				if item[1]=="C16809":
-					body_res=1.0
-					break
-		X_test=np.array([abs_vec])
+				if item[1]=='C38054':	#EEG
+					body_vec[0]=1.0
+				if item[1]=='C16809':	#MRI
+					body_vec[1]=1.0
+				if item[1]=='C116454':	#fMRI
+					body_vec[2]=1.0
+				if item[1]=='C116655':	#TMS
+					body_vec[3]=1.0
+				if item[1]=='C129862':	#tDCS
+					body_vec[4]=1.0
+				if item[1]=='C16811':	#MEG
+					body_vec[5]=1.0
+				if item[1]=='C78814' or item[1]=='C78815':	#SEM
+					body_vec[6]=1.0
+				if item[1]=='C78860' or item[1]=='C78813':	#TEM
+					body_vec[7]=1.0
+				if item[1]=='C17374':	#STM
+					body_vec[8]=1.0
+				if item[1]=='C78804':	#AFM
+					body_vec[9]=1.0
+				if item[1]=='C17753' or item[1]=='C122390' or item[1]=='C116477' or item[1]=='C116481':	#Confocal
+					body_vec[10]=1.0
+				if item[1]=='C93040':	#Alcohol
+					body_vec[11]=1.0
+				if item[1]=='C35386' or item[1]=='C35387' or item[1]=='C34445':	#Cannabis
+					body_vec[12]=1.0
+				if item[1]=='C34492' or item[1]=='C35389' or item[1]=='C35388':	#Cocaine
+					body_vec[13]=1.0
+				if item[1]=='C34694':	#Heroin
+					body_vec[14]=1.0
+				if item[1]=='C70989' or item[1]=='C54203' or item[1]=='C15985':	#Nicotine
+					body_vec[15]=1.0
+		sample_list=[abs_vec+body_vec]
+		N_test=np.array(sample_list)
+		X_test=N_test[:,:len(cc2vid)]
+		body_res=N_test[:,len(cc2vid):][0][_idx]
 		Y_pred=_model.predict(X_test)[0][_idx]
 		if Y_pred>=_threshold:
 			Y_res=1.0
@@ -108,13 +140,15 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 if __name__=="__main__":
 	term=sys.argv[1]
 	idx=int(sys.argv[2])
-	model_name="MLPsparse_1hidden_eeg_list"
+	p0=float(sys.argv[3])
+	p1=float(sys.argv[4])
+	model_name="MLPsparse_1hidden_cluster_opt"
 	model=get_model_S3(model_name)
 	res=[]
-	threshold=0.41
+	threshold=p0
 	volume=1000
 	m_acc=0.0
-	while threshold<=0.44:
+	while threshold<=p1:
 		acc,tpr,fpr=test_on_doc_S3_all(model,volume,threshold,idx)
 		if acc>m_acc:
 			m_acc=acc
@@ -122,7 +156,7 @@ if __name__=="__main__":
 		threshold+=0.001
 	res=list(set(res))
 	homedir=os.environ['HOME']
-	f=open(homedir+"/results/eeglist_"+term+"_roc.json",'w')
+	f=open(homedir+"/results/Microscopy_"+term+"_roc.json",'w')
 	json.dump(res,f)
 	f.close()
 	l=sorted(res,key=lambda x:x[0])
