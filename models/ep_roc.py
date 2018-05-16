@@ -48,11 +48,11 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 	fn=0.0
 	error_count=0.0
 	all_count=0.0   
-	for i in range(15000,15000+_volume):
+	for i in range(5000,5000+_volume):
 		abs_vec=[0.0 for i in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/Dependence/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/port/bird/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -70,7 +70,7 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 			abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0 for k in range(0,41)]
 		try:
-			bucket.download_file("yalun/Dependence/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/port/bird/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -110,6 +110,56 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 					body_vec[14]=1.0
 				if item[1]=='C70989' or item[1]=='C54203' or item[1]=='C15985':	#Nicotine
 					body_vec[15]=1.0
+				if item[1]=='C73850':	#duck
+					body_vec[16]=1.0
+				if item[1]=='C91813':	#quail
+					body_vec[17]=1.0
+				if item[1]=='C91812':	#pigeon
+					body_vec[18]=1.0
+				if item[1]=='C77098':	#leghorn chicken
+					body_vec[19]=1.0
+				if item[1]=='C76362':	#broiler chicken
+					body_vec[20]=1.0
+				if item[1]=='C17611':	#Bronchoscope
+					body_vec[21]=1.0
+				if item[1]=='C17613':	#Colonoscope
+					body_vec[22]=1.0
+				if item[1]=='C17614':	#Colposcope
+					body_vec[23]=1.0
+				if item[1]=='C17616':	#Cystoscope
+					body_vec[24]=1.0
+				if item[1]=='C17620':	#Gastroscope
+					body_vec[25]=1.0
+				if item[1]=='C28167':	#Laparoscope
+					body_vec[26]=1.0
+				if item[1]=='C17618':	#Laryngoscope
+					body_vec[27]=1.0
+				if item[1]=='C85574':	#Atomic Absorption Spectroscopy
+					body_vec[28]=1.0
+				if item[1]=='C94374':	#Optical Spectroscopy
+					body_vec[29]=1.0
+				if item[1]=='C17157':	#Raman Spectroscopy
+					body_vec[30]=1.0
+				if item[1]=='C78869':	#Energy Dispersive Spectroscopy
+					body_vec[31]=1.0
+				if item[1]=='C16810':	#Magnetic Resonance Spectroscopy
+					body_vec[32]=1.0
+				if item[1]=='C62329':	#Photon Correlation Spectroscopy
+					body_vec[33]=1.0
+				if item[1]=='C78871':	#X-Ray Photoelectron Spectroscopy
+					body_vec[34]=1.0
+				if item[1]=='C142750':	#web server
+					body_vec[35]=1.0
+				if item[1]=='C47907':	#compiler
+					body_vec[36]=1.0
+				if item[1]=='C142380' or item[1]=='C80012':	#HTML
+					body_vec[37]=1.0
+				if item[1]=='C69302':	#R programming
+					body_vec[38]=1.0
+				if item[1]=='C75940' or item[1]=='C81018':	#Hidden Markov
+					body_vec[39]=1.0
+				if item[1]=='C142403' or item[1]=='C142404':	#Bayesian
+					body_vec[40]=1.0
 		sample_list=[abs_vec+body_vec]
 		N_test=np.array(sample_list)
 		X_test=N_test[:,:len(cc2vid)]
@@ -142,12 +192,12 @@ if __name__=="__main__":
 	idx=int(sys.argv[2])
 	p0=float(sys.argv[3])
 	p1=float(sys.argv[4])
-	model_name="MLPsparse_1hidden_cluster_opt"
+	model_name="MLPsparse_1hidden_port"
 	# model=get_model_S3(model_name)
 	model=get_model_local("/home/ubuntu/temp/tmp_model2.h5")
 	res=[]
 	threshold=p0
-	volume=1000
+	volume=100
 	m_acc=0.0
 	while threshold<=p1:
 		acc,tpr,fpr=test_on_doc_S3_all(model,volume,threshold,idx)
@@ -157,7 +207,7 @@ if __name__=="__main__":
 		threshold+=0.001
 	res=list(set(res))
 	homedir=os.environ['HOME']
-	f=open(homedir+"/results/Dependence_"+term+"_roc.json",'w')
+	f=open(homedir+"/results/bird_"+term+"_roc.json",'w')
 	json.dump(res,f)
 	f.close()
 	l=sorted(res,key=lambda x:x[0])
