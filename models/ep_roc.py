@@ -52,7 +52,7 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 		abs_vec=[0.0 for i in range(0,len(cc2vid))]
 		abs_count=0.0
 		try:
-			bucket.download_file("yalun/port/bird/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/port/spectroscopy/abs"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -70,7 +70,7 @@ def test_on_doc_S3_all(_model,_volume,_threshold=0.0,_idx=0):
 			abs_vec=list(np.array(abs_vec)/abs_count)
 		body_vec=[0.0 for k in range(0,41)]
 		try:
-			bucket.download_file("yalun/port/bird/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
+			bucket.download_file("yalun/port/spectroscopy/body"+str(i)+".csv",homedir+"/temp/tmp.csv")
 		except:
 			continue
 		with open(homedir+"/temp/tmp.csv",'r',encoding='utf-8') as cf:
@@ -207,7 +207,7 @@ if __name__=="__main__":
 		threshold+=0.001
 	res=list(set(res))
 	homedir=os.environ['HOME']
-	f=open(homedir+"/results/bird_"+term+"_roc.json",'w')
+	f=open(homedir+"/results/spec_"+term+"_roc.json",'w')
 	json.dump(res,f)
 	f.close()
 	l=sorted(res,key=lambda x:x[0])
