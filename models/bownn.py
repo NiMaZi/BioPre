@@ -12,7 +12,7 @@ class BOWNN:
 
 	def build_model(self):
 		model=Sequential()
-		model.add(Dense(self.hidden_size,input_shape=(self.input_shape,),activation='relu'))
+		model.add(Dense(self.hidden_size,input_shape=(self.input_size,),activation='relu'))
 		model.add(Dropout(self.droprate))
 		model.add(BatchNormalization())
 		model.add(Dense(self.output_size,activation='relu'))
