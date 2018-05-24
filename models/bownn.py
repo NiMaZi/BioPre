@@ -47,4 +47,4 @@ class BOWNN_author(BOWNN):
 		out1=Dense(self.output_size,activation='relu')(hidden)
 		model=Model(inputs=[in_1,in_2], outputs=[out1])
 		model.compile(optimizer='Nadam',loss='binary_crossentropy')
-		return model
+		self.model=model
