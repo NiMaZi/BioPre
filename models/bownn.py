@@ -1,7 +1,5 @@
 from keras.models import Sequential,Model,load_model
 from keras.layers import Dense,Concatenate,Input,Dropout,BatchNormalization
-from keras.callbacks import EarlyStopping
-from keras import backend as K
 
 class BOWNN:
 	def __init__(self,input_size,hidden_size,output_size):
