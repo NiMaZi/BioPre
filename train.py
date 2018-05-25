@@ -22,8 +22,8 @@ parser.add_argument('-path',default='model.h5',type=str,help="path for saving th
 opt=parser.parse_args()
 
 def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
-	cc2vid_input=util.load_sups(in_dict)
-	cc2vid_output=util.load_sups(out_dict)
+	cc2vid_input=in_dict
+	cc2vid_output=out_dict
 	sample_list=[]
 
 	for i in range(0,volume):
@@ -36,7 +36,7 @@ def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
 				if item[0]=="Mention":
 					continue
 				try:
-					abs_vec[cc2vid[item[1]]]+=1.0
+					abs_vec[cc2vid_input[item[1]]]+=1.0
 					abs_count+=1.0
 				except:
 					pass
@@ -54,7 +54,7 @@ def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
 				if item[0]=="Mention":
 					continue
 				try:
-					body_vec[cc2vid[item[1]]]+=1.0
+					body_vec[cc2vid_output[item[1]]]+=1.0
 					body_count+=1.0
 				except:
 					pass
