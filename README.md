@@ -18,6 +18,8 @@ type "predict.py -h" to check the usage.
 
 All the articles should be annotated to entity lists in *.csv format, and all the vocabularies should be in *.json format.
 
+Failed attemps are under failed_attempts folder consisting of a binary classifier, a LSTM model and some data making-up scripts.
+
 Have problems? Look into the code by yourself!
 
 More problems or want the training data/optimized models? Contact me through zhengyl940425@gmail.com!
