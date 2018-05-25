@@ -72,7 +72,7 @@ def eval_prediction(prediction,body_path,out_dict,threshold=0.0):
 			if item[0]=="Mention":
 				continue
 			try:
-				body_vec[cc2vid_input[item[1]]]=1.0
+				body_vec[cc2vid_output[item[1]]]=1.0
 			except:
 				pass
 
