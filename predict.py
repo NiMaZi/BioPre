@@ -44,7 +44,10 @@ def get_prediction(model,abs_path,in_dict):
 	if not abs_count==0.0:
 		abs_vec=list(np.array(abs_vec)/abs_count)
 
-	return abs_vec,list(model.model.predict(np.array([abs_vec]))[0])
+	pred=model.model.predict(np.array([abs_vec]))[0]
+	pred/=np.linalg.norm(pred)
+
+	return abs_vec,list(pred)
 
 
 def get_prediction_author(model,abs_path,in_dict,author_dict):
@@ -83,7 +86,7 @@ def main():
 	print_vec(abs_vec,entity_dict)
 	print("\n")
 	print("Entity mentions predicted:")
-	print_vec(prediction,entity_dict)
+	print_vec(prediction,entity_dict,0.5)
 
 	if evaluate:
 		body_path=opt.body
