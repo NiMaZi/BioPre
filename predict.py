@@ -55,7 +55,7 @@ def get_prediction_author(model,abs_path,in_dict,author_dict):
 
 def print_vec(prediction,entity_dict,threshold=0.0):
 	for i,v in enumerate(prediction):
-		if v>=threshold:
+		if v>threshold:
 			print(entity_dict[i])
 
 def eval_prediction(prediction,body_path,out_dict):
