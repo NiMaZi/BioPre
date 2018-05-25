@@ -86,7 +86,8 @@ def main():
 	print_vec(abs_vec,entity_dict)
 	print("\n")
 	print("Entity mentions predicted:")
-	print_vec(prediction,entity_dict)
+	print_vec(prediction,entity_dict,0.2)
+	print("\n")
 
 	if evaluate:
 		body_path=opt.body
