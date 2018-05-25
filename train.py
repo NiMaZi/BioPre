@@ -16,7 +16,7 @@ sys.stderr=stderr
 parser=argparse.ArgumentParser(description='train.py')
 parser.add_argument('-input',default='cc2vid.json',type=str,help="input dictionary")
 parser.add_argument('-output',default='cc2vid.json',type=str,help="output dictionary")
-parser.add_argument('-data',default='data',type=str,help="training data folder")
+parser.add_argument('-data',default='data',type=str,help="training data directory")
 parser.add_argument('-volume',default=1024,type=int,help="training data size")
 opt=parser.parse_args()
 
