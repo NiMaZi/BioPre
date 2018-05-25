@@ -12,6 +12,7 @@ import numpy as np
 from utils import util
 from models.bownn import BOWNN
 sys.stderr=stderr
+os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
 
 parser=argparse.ArgumentParser(description='train.py')
 parser.add_argument('-input',default='data_sample/ConCode2Vid.json',type=str,help="input dictionary")
@@ -29,7 +30,7 @@ def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
 	for i in range(0,volume):
 		abs_vec=[0.0 for i in range(0,len(cc2vid_input))]
 		abs_count=0.0
-		
+
 		with open(folder+"/abs"+str(i)+".csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
@@ -68,14 +69,14 @@ def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
 			N_all=np.array(sample_list)
 			X_train=N_all[:,:len(cc2vid_input)]
 			Y_train=np.clip(np.ceil(N_all[:,len(cc2vid_input):])-np.ceil(X_train),0.0,1.0)
-			model.model.fit(X_train,Y_train,batch_size=batch_size,verbose=1,epochs=epochs)
+			model.model.fit(X_train,Y_train,batch_size=batch_size,verbose=0,epochs=epochs)
 			sample_list=[]
 	
 	if len(sample_list):
 		N_all=np.array(sample_list)
 		X_train=N_all[:,:len(cc2vid_input)]
 		Y_train=np.clip(np.ceil(N_all[:,len(cc2vid_input):])-np.ceil(X_train),0.0,1.0)
-		model.model.fit(X_train,Y_train,batch_size=batch_size,verbose=1,epochs=epochs)
+		model.model.fit(X_train,Y_train,batch_size=batch_size,verbose=0,epochs=epochs)
 
 def main():
 
