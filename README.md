@@ -14,7 +14,7 @@ predict.py
 
 to predict entity mentions in body with the model trained using train.py;
 
-type "predict.py" to check the usage.
+type "predict.py -h" to check the usage.
 
 All the articles should be annotated to entity lists in *.csv format, and all the vocabularies should be in *.json format.
 
