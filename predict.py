@@ -18,6 +18,7 @@ parser=argparse.ArgumentParser(description='predict.py')
 parser.add_argument('-input',default='data_sample/vocab/ConCode2Vid.json',type=str,help="input dictionary")
 parser.add_argument('-output',default='data_sample/vocab/ConCode2Vid.json',type=str,help="output dictionary")
 parser.add_argument('-author',default='data_sample/vocab/FAuthor2Vid.json',type=str,help="author dictionary")
+parser.add_argument('-vocab',default='data_sample/vocab/Vid2Name.json',type=str,help="entity dictionary")
 parser.add_argument('-A',default=False,type=bool,help="train with author info")
 parser.add_argument('-E',default=False,type=bool,help="evaluate with real body")
 parser.add_argument('-abstract',default='data_sample/sample/abs0.csv',type=str,help="abstract to predict")
@@ -43,14 +44,16 @@ def get_prediction(model,abs_path,in_dict):
 	if not abs_count==0.0:
 		abs_vec=list(np.array(abs_vec)/abs_count)
 
-	return model.model.predict(np.array([abs_vec]))[0]
+	return abs_vec,list(model.model.predict(np.array([abs_vec]))[0])
 
 
 def get_prediction_author(model,abs_path,in_dict,author_dict):
 	pass
 
-def print_prediction(prediction):
-	print(prediction)
+def print_vec(prediction,entity_dict,threshold=0.0):
+	for i,v in enumerate(prediction):
+		if v>=threshold:
+			print(entity_dict[i])
 
 def eval_prediction(prediction,body_path,out_dict):
 	pass
@@ -58,10 +61,13 @@ def eval_prediction(prediction,body_path,out_dict):
 def main():
 	in_path=opt.input
 	out_path=opt.output
+	entity_path=opt.vocab
 	in_dict=util.load_sups(in_path)
 	out_dict=util.load_sups(out_path)
+	entity_dict=util.load_sups(entity_path)
 	abs_path=opt.abstract
 	load_path=opt.path
+
 
 	author=opt.A
 	evaluate=opt.E
@@ -72,8 +78,12 @@ def main():
 		bownn_model=BOWNN_author()
 
 	bownn_model.load_model(load_path)
-	prediction=get_prediction(bownn_model,abs_path,in_dict)
-	print_prediction(prediction)
+	abs_vec,prediction=get_prediction(bownn_model,abs_path,in_dict)
+	print("Entity mentions in this abstract:")
+	print_vec(abs_vec,entity_dict)
+	print("\n")
+	print("Entity mentions predicted:")
+	print_vec(prediction,entity_dict)
 
 	if evaluate:
 		body_path=opt.body
