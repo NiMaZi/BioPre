@@ -65,7 +65,7 @@ def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
 		model.model.fit(X_train,Y_train,batch_size=batch_size,verbose=0,epochs=epochs)
 
 def main():
-	print(opt)
+	print(opt.config)
 	"""get arguments"""
 	"""intialize model"""
 	# train()
