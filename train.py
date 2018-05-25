@@ -18,6 +18,7 @@ parser.add_argument('-input',default='cc2vid.json',type=str,help="input dictiona
 parser.add_argument('-output',default='cc2vid.json',type=str,help="output dictionary")
 parser.add_argument('-data',default='data',type=str,help="training data directory")
 parser.add_argument('-volume',default=1024,type=int,help="training data size")
+parser.add_argument('-path',default='model.h5',type=str,help="path for saving the model")
 opt=parser.parse_args()
 
 def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
@@ -67,23 +68,31 @@ def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
 			N_all=np.array(sample_list)
 			X_train=N_all[:,:len(cc2vid_input)]
 			Y_train=np.clip(np.ceil(N_all[:,len(cc2vid_input):])-np.ceil(X_train),0.0,1.0)
-			model.model.fit(X_train,Y_train,batch_size=batch_size,verbose=0,epochs=epochs)
+			model.model.fit(X_train,Y_train,batch_size=batch_size,verbose=1,epochs=epochs)
 			sample_list=[]
 	
 	if len(sample_list):
 		N_all=np.array(sample_list)
 		X_train=N_all[:,:len(cc2vid_input)]
 		Y_train=np.clip(np.ceil(N_all[:,len(cc2vid_input):])-np.ceil(X_train),0.0,1.0)
-		model.model.fit(X_train,Y_train,batch_size=batch_size,verbose=0,epochs=epochs)
+		model.model.fit(X_train,Y_train,batch_size=batch_size,verbose=1,epochs=epochs)
 
 def main():
-	print(opt.input)
-	print(opt.output)
-	print(opt.data)
-	print(opt.volume)
-	"""get arguments"""
-	"""intialize model"""
-	# train()
+
+
+	in_path=opt.input
+	out_path=opt.output
+	in_dict=util.load_sups(in_path)
+	out_dict=util.load_sups(out_path)
+	folder=opt.data
+	volume=opt.volume
+	
+	bownn_model=BOWNN(len(in_dict),512,len(out_dict))
+	bownn_model.build_model()
+
+	train(bownn_model,folder,in_dict,out_dict,volume)
+
+	bownn_model.save_model()
 
 if __name__=='__main__':
 	main()

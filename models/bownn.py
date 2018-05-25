@@ -1,4 +1,5 @@
-from keras.models import Sequential,Model,load_model
+from keras.models import Sequential,Model
+from keras.models import load_model as kload
 from keras.layers import Dense,Concatenate,Input,Dropout,BatchNormalization
 
 class BOWNN:
@@ -18,7 +19,7 @@ class BOWNN:
 		self.model=model
 
 	def load_model(self,path):
-		self.model=load_model(path)
+		self.model=kload(path)
 
 	def save_model(self,path):
 		self.model.save(path)
