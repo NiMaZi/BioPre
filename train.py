@@ -5,7 +5,7 @@ import os
 import sys
 
 stderr=sys.stderr
-sys.stderr=open(os.devnull, 'w')
+sys.stderr=open(os.devnull,'w')
 import csv
 import argparse
 import numpy as np
