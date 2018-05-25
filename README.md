@@ -18,3 +18,6 @@ type "predict.py" to check the usage.
 
 All the articles should be annotated to entity lists in *.csv format, and all the vocabularies should be in *.json format.
 
+Have problems? Look into the code by yourself!
+
+More problems or want the training data/optimized models? Contact me througt zhengyl940425@gmail.com!
