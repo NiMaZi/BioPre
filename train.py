@@ -29,7 +29,7 @@ def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
 	for i in range(0,volume):
 		abs_vec=[0.0 for i in range(0,len(cc2vid_input))]
 		abs_count=0.0
-
+		
 		with open(folder+"/abs"+str(i)+".csv",'r',encoding='utf-8') as cf:
 			rd=csv.reader(cf)
 			for item in rd:
@@ -86,13 +86,14 @@ def main():
 	out_dict=util.load_sups(out_path)
 	folder=opt.data
 	volume=opt.volume
+	save_path=opt.path
 	
 	bownn_model=BOWNN(len(in_dict),512,len(out_dict))
 	bownn_model.build_model()
 
 	train(bownn_model,folder,in_dict,out_dict,volume)
 
-	bownn_model.save_model()
+	bownn_model.save_model(save_path)
 
 if __name__=='__main__':
 	main()
