@@ -14,9 +14,9 @@ from models.bownn import BOWNN
 sys.stderr=stderr
 
 parser=argparse.ArgumentParser(description='train.py')
-parser.add_argument('-input',default='cc2vid.json',type=str,help="input dictionary")
-parser.add_argument('-output',default='cc2vid.json',type=str,help="output dictionary")
-parser.add_argument('-data',default='data',type=str,help="training data directory")
+parser.add_argument('-input',default='data_sample/ConCode2Vid.json',type=str,help="input dictionary")
+parser.add_argument('-output',default='data_sample/ConCode2Vid.json',type=str,help="output dictionary")
+parser.add_argument('-data',default='data_sample/sample',type=str,help="training data directory")
 parser.add_argument('-volume',default=1024,type=int,help="training data size")
 parser.add_argument('-path',default='model.h5',type=str,help="path for saving the model")
 opt=parser.parse_args()
