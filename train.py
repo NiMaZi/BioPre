@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore")
+
 import csv
 import argparse
 import numpy as np
