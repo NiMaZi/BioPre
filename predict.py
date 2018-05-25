@@ -56,7 +56,7 @@ def get_prediction_author(model,abs_path,in_dict,author_dict):
 def print_vec(prediction,entity_dict,threshold=0.0):
 	for i,v in enumerate(prediction):
 		if v>threshold:
-			print(entity_dict[i])
+			print(entity_dict[i],end=',')
 
 def eval_prediction(prediction,body_path,out_dict):
 	pass
@@ -86,7 +86,7 @@ def main():
 	print_vec(abs_vec,entity_dict)
 	print("\n")
 	print("Entity mentions predicted:")
-	print_vec(prediction,entity_dict,0.5)
+	print_vec(prediction,entity_dict)
 
 	if evaluate:
 		body_path=opt.body
