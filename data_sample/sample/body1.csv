@@ -1,0 +1,775 @@
+Mention,ConceptCode,ConceptName,SemanticType,Start
+cardiopulmonary,C13362,Cardiopulmonary,"Body Part, Organ, or Organ Component",75
+interactions,C54708,Drug Interaction,Phenomenon or Process,91
+pathophysiology,C20632,Pathophysiology,Biomedical Occupation or Discipline,111
+treatment,C15368,Treatment,Health Care Activity,131
+acute,C14140,Acute,Qualitative Concept,144
+chronic,C14141,Chronic,Qualitative Concept,154
+heart failure,C50577,Heart Failure,Disease or Syndrome,162
+heart failure,C50577,Heart Failure,Disease or Syndrome,162
+subjects,C41189,Study Subject,Functional Concept,201
+normal,C14165,Normal,Conceptual Entity,215
+cardiopulmonary,C13362,Cardiopulmonary,"Body Part, Organ, or Organ Component",233
+function,C25518,Function,Conceptual Entity,249
+interactions,C54708,Drug Interaction,Phenomenon or Process,264
+present,C25626,Present,Qualitative Concept,281
+patients,C53691,Veterinary Patient,Organism,322
+significant,C41130,Significant,Functional Concept,336
+pulmonary disease pulmonary disease,C3198,Lung Disorder,Disease or Syndrome,359
+cardiovascular disease,C2931,Cardiovascular Disorder,Disease or Syndrome,376
+cardiovascular cardiovascular systems cardiovascular,C35552,Cardiovascular System Finding,Finding,376
+interactions,C54708,Drug Interaction,Phenomenon or Process,405
+between,C94545,Between,Qualitative Concept,418
+role,C48835,Role,Conceptual Entity,484
+evolution,C16565,Evolution,Phenomenon or Process,496
+treatment,C15368,Treatment,Health Care Activity,510
+acute,C14140,Acute,Qualitative Concept,523
+chronic,C14141,Chronic,Qualitative Concept,533
+review,C42729,Review,Activity,573
+discuss,C71323,Discussion,Organism Function,588
+physiologic,C17650,Physiologic,Qualitative Concept,600
+interactions,C54708,Drug Interaction,Phenomenon or Process,635
+impact,C122929,Impact,Phenomenon or Process,665
+respiration,C17091,Respiration,Organism Function,675
+cardiovascular cardiovascular systems,C35552,Cardiovascular System Finding,Finding,690
+function,C25518,Function,Conceptual Entity,705
+review,C42729,Review,Activity,719
+evidence,C43583,Evidence,Idea or Concept,730
+respiratory,C25656,Respiratory,Body System,743
+interventions,C98388,Interventional Study,Research Activity,755
+management,C61372,Management,Activity,776
+acute,C14140,Acute,Qualitative Concept,790
+chronic,C14141,Chronic,Qualitative Concept,800
+heart failure.',C50577,Heart Failure,Disease or Syndrome,808
+heart failure.',C50577,Heart Failure,Disease or Syndrome,808
+PRESSURE,C25195,Pressure,Natural Phenomenon or Process,847
+PRESSURE,C25195,Pressure,Natural Phenomenon or Process,860
+volume,C25335,Volume,Quantitative Concept,918
+movement,C37994,Movement,Conceptual Entity,983
+fluid,C25278,Fluid,Substance,995
+structure,C41186,Structure,Functional Concept,1023
+provide,C80514,Provide,Activity,1033
+much,C126287,Much,Intellectual Product,1041
+physiologic,C17650,Physiologic,Qualitative Concept,1053
+understanding,C86022,Comprehension,Mental Process,1083
+between,C94545,Between,Qualitative Concept,1111
+pulmonary,C13304,Pulmonary,Qualitative Concept,1142
+numerous,C80490,Numerator,Conceptual Entity,1171
+elastic,C119332,Organ Elasticity,Clinical Attribute,1180
+structures body,C32221,Body Part,"Body Part, Organ, or Organ Component",1188
+response,C25755,Response,Phenomenon or Process,1239
+force,C48161,Force,Natural Phenomenon or Process,1253
+extent,C25332,Extent,Quantitative Concept,1264
+elastic,C119332,Organ Elasticity,Clinical Attribute,1283
+structure,C41186,Structure,Functional Concept,1291
+change,C25446,Change,Qualitative Concept,1313
+volume,C25335,Volume,Quantitative Concept,1323
+transmural,C86929,Transmural,Functional Concept,1351
+pressure,C25195,Pressure,Natural Phenomenon or Process,1362
+compliance,C25194,Compliance,Individual Behavior,1381
+difference,C46003,Difference,Qualitative Concept,1408
+between,C94545,Between,Qualitative Concept,1419
+surrounding,C52247,Surrounding,Spatial Concept,1438
+pressures,C25195,Pressure,Natural Phenomenon or Process,1450
+positive,C25246,Positive,Qualitative Concept,1463
+causes,C16390,Etiology,Conceptual Entity,1476
+negative,C25247,Negative,Conceptual Entity,1514
+causes,C16390,Etiology,Conceptual Entity,1527
+volume,C25335,Volume,Quantitative Concept,1559
+example,C48175,Example,Conceptual Entity,1571
+given,C64974,Give,Activity,1586
+internal,C25234,Internal,Spatial Concept,1592
+surrounding,C52247,Surrounding,Spatial Concept,1617
+pressure increases,C63080,Increase in Pressure Medical Device Problem,Event,1629
+pressure increases,C63080,Increase in Pressure Medical Device Problem,Event,1629
+decreases,C25640,Reduced,Qualitative Concept,1656
+result,C20200,Outcome,Finding,1675
+volume,C25335,Volume,Quantitative Concept,1690
+decreases,C25640,Reduced,Qualitative Concept,1697
+internal,C25234,Internal,Spatial Concept,1732
+increase pressure,C63080,Increase in Pressure Medical Device Problem,Event,1765
+increase pressure,C63080,Increase in Pressure Medical Device Problem,Event,1765
+internal,C25234,Internal,Spatial Concept,1777
+drives,C121232,Ability to Drive,Intellectual Product,1795
+fluid,C25278,Fluid,Substance,1802
+out,C25650,Removed,Qualitative Concept,1808
+compartment,C94873,Compartmental Model Region,Spatial Concept,1820
+extent,C25332,Extent,Quantitative Concept,1837
+response,C25755,Response,Phenomenon or Process,1888
+depends,C45996,Dependency,Qualitative Concept,1911
+compliance,C25194,Compliance,Individual Behavior,1926
+given,C64974,Give,Activity,1944
+more,C128667,More,Qualitative Concept,1959
+compliant,C39490,Patient Compliance,Individual Behavior,1964
+experiences,C42790,Experiment,Research Activity,1982
+greater,C61421,Greater,Qualitative Concept,1996
+change,C25446,Change,Qualitative Concept,2004
+volume,C25335,Volume,Quantitative Concept,2014
+than less,C61585,Less Than,Functional Concept,2021
+compliant,C39490,Patient Compliance,Individual Behavior,2033
+SYSTEMIC VENOUS,C33858,Venous System,Anatomical Structure,2089
+discussion,C71323,Discussion,Organism Function,2133
+any,C81168,Any,Conceptual Entity,2205
+discussion,C71323,Discussion,Organism Function,2209
+respiration,C17091,Respiration,Organism Function,2227
+impacts,C122929,Impact,Phenomenon or Process,2239
+cardiovascular,C25292,Cardiovascular,Body System,2247
+function,C25518,Function,Conceptual Entity,2262
+patients,C53691,Veterinary Patient,Organism,2288
+heart failure,C50577,Heart Failure,Disease or Syndrome,2302
+heart failure,C50577,Heart Failure,Disease or Syndrome,2302
+determinants,C25506,Factor,Functional Concept,2321
+systemic venous,C33858,Venous System,Anatomical Structure,2337
+return,C71900,Return,Activity,2353
+difference,C46003,Difference,Qualitative Concept,2368
+pressure,C25195,Pressure,Natural Phenomenon or Process,2382
+between,C94545,Between,Qualitative Concept,2391
+systemic venous,C33858,Venous System,Anatomical Structure,2403
+reservoirs,C50140,Reservoir Device Component,Manufactured Object,2419
+right atrium,C12868,Right Atrium,"Body Part, Organ, or Organ Component",2434
+resistance,C19391,Resistance,Molecular Function,2455
+return,C71900,Return,Activity,2476
+resistance,C19391,Resistance,Molecular Function,2492
+venous,C25291,Venous,Qualitative Concept,2506
+return,C71900,Return,Activity,2513
+changes,C25572,Modification,Qualitative Concept,2520
+little,C76350,Little,Qualitative Concept,2528
+even,C64936,Evening,Temporal Concept,2535
+face,C13071,Face,Body Location or Region,2547
+large,C49508,Large,Qualitative Concept,2555
+activation,C64382,Activation,Activity,2572
+pressure,C25195,Pressure,Natural Phenomenon or Process,2592
+reservoirs,C50140,Reservoir Device Component,Manufactured Object,2619
+mean,C53319,Mean,Quantitative Concept,2637
+pressure,C25195,Pressure,Natural Phenomenon or Process,2651
+function,C25518,Function,Conceptual Entity,2672
+intravascular,C38273,Intravascular Route of Administration,Functional Concept,2684
+volume,C25335,Volume,Quantitative Concept,2698
+vascular,C13311,Vascular,Qualitative Concept,2709
+reside,C89279,Reside,Activity,2758
+systemic venous,C33858,Venous System,Anatomical Structure,2785
+reservoirs,C50140,Reservoir Device Component,Manufactured Object,2801
+most,C25258,Most,Qualitative Concept,2821
+important,C115916,Important,Qualitative Concept,2826
+venous,C25291,Venous,Qualitative Concept,2836
+reservoirs,C50140,Reservoir Device Component,Manufactured Object,2843
+abdominal,C25342,Abdominal,Spatial Concept,2877
+compartment,C94873,Compartmental Model Region,Spatial Concept,2887
+include,C74521,Include,Activity,2903
+liver,C12392,Liver,"Body Part, Organ, or Organ Component",2915
+spleen,C12432,Spleen,"Body Part, Organ, or Organ Component",2922
+increase,C25533,Increase,Qualitative Concept,2951
+intravascular,C38273,Intravascular Route of Administration,Functional Concept,2963
+volume,C25335,Volume,Quantitative Concept,2977
+decrease,C25640,Reduced,Qualitative Concept,2987
+venous,C25291,Venous,Qualitative Concept,2999
+mean,C53319,Mean,Quantitative Concept,3032
+systemic,C13310,Systemic,Conceptual Entity,3037
+pressure,C25195,Pressure,Natural Phenomenon or Process,3046
+agents,C41161,Protocol Agent,Conceptual Entity,3073
+dopamine,C62025,Dopamine,Biologically Active Substance,3088
+epinephrine,C2292,Epinephrine,"Biologically Active Substance, Hormone",3098
+norepinephrine,C2321,l-Norepinephrine,Hormone,3115
+decrease,C25640,Reduced,Qualitative Concept,3130
+volume,C25335,Volume,Quantitative Concept,3176
+reservoirs,C50140,Reservoir Device Component,Manufactured Object,3192
+result,C20200,Outcome,Finding,3209
+pressure,C25195,Pressure,Natural Phenomenon or Process,3220
+driving,C95548,Driving,Daily or Recreational Activity,3242
+systemic venous,C33858,Venous System,Anatomical Structure,3250
+return,C71900,Return,Activity,3266
+right atrium,C12868,Right Atrium,"Body Part, Organ, or Organ Component",3299
+decrease,C25640,Reduced,Qualitative Concept,3315
+intravascular,C38273,Intravascular Route of Administration,Functional Concept,3327
+volume,C25335,Volume,Quantitative Concept,3341
+increase,C25533,Increase,Qualitative Concept,3351
+occurs,C54069,Occur,Conceptual Entity,3389
+nitric oxide,C695,Nitric Oxide,"Inorganic Chemical, Biologically Active Substance",3426
+donors,C48284,Donor,Qualitative Concept,3439
+nitroglycerin,C29294,Nitroglycerin,Pharmacologic Substance,3446
+nitroprusside,C77153,Nitroprusside,"Inorganic Chemical, Pharmacologic Substance, Indicator, Reagent, or Diagnostic Aid",3464
+furosemide,C515,Furosemide,"Organic Chemical, Pharmacologic Substance",3482
+combined,C25454,Combined,Conceptual Entity,3501
+dobutamine,C61733,Dobutamine,Pharmacologic Substance,3522
+milrinone,C61848,Milrinone,Pharmacologic Substance,3537
+decrease,C25640,Reduced,Qualitative Concept,3548
+systemic venous,C33858,Venous System,Anatomical Structure,3557
+Changes,C25572,Modification,Qualitative Concept,3585
+intrathoracic,C105579,Intrathoracic,Spatial Concept,3596
+pressure,C25195,Pressure,Natural Phenomenon or Process,3610
+impact,C122929,Impact,Phenomenon or Process,3624
+gradient,C70693,Gradient,Phenomenon or Process,3635
+right,C25228,Right,Spatial Concept,3674
+atrial,C37914,Atrial,Spatial Concept,3680
+intrathoracic,C105579,Intrathoracic,Spatial Concept,3700
+pressure,C25195,Pressure,Natural Phenomenon or Process,3714
+negative,C25247,Negative,Conceptual Entity,3731
+during,C25490,During,Temporal Concept,3740
+spontaneous,C48307,Spontaneous,Qualitative Concept,3747
+respiration,C17091,Respiration,Organism Function,3759
+right atrium,C12868,Right Atrium,"Body Part, Organ, or Organ Component",3788
+increases,C25533,Increase,Qualitative Concept,3801
+result,C20200,Outcome,Finding,3817
+right,C25228,Right,Spatial Concept,3825
+atrial,C37914,Atrial,Spatial Concept,3831
+volume,C25335,Volume,Quantitative Concept,3838
+increases pressure,C63080,Increase in Pressure Medical Device Problem,Event,3845
+increases pressure,C63080,Increase in Pressure Medical Device Problem,Event,3845
+falls,C50558,Fall,Phenomenon or Process,3879
+promoting,C61391,Promotion,Activity,3886
+systemic venous,C33858,Venous System,Anatomical Structure,3896
+return,C71900,Return,Activity,3912
+occurs,C54069,Occur,Conceptual Entity,3933
+positive,C25246,Positive,Qualitative Concept,3945
+pressure,C25195,Pressure,Natural Phenomenon or Process,3954
+ventilation,C88203,Ventilation,Activity,3963
+extent,C25332,Extent,Quantitative Concept,3980
+positive,C25246,Positive,Qualitative Concept,3996
+pressure decreases,C63255,Decrease in Pressure Medical Device Problem,Event,4005
+pressure decreases,C63255,Decrease in Pressure Medical Device Problem,Event,4005
+ventilation,C88203,Ventilation,Activity,4014
+systemic venous,C33858,Venous System,Anatomical Structure,4036
+return,C71900,Return,Activity,4052
+depends,C45996,Dependency,Qualitative Concept,4059
+circulatory,C16353,Blood Circulation,Organ or Tissue Function,4099
+reflexes,C78342,Reflex,Finding,4111
+effect,C25492,Effect,Phenomenon or Process,4130
+intravascular,C38273,Intravascular Route of Administration,Functional Concept,4140
+volume,C25335,Volume,Quantitative Concept,4154
+activation,C64382,Activation,Activity,4208
+induces,C61367,Induction,Activity,4219
+increase,C25533,Increase,Qualitative Concept,4263
+mean,C53319,Mean,Quantitative Concept,4279
+systemic,C13310,Systemic,Conceptual Entity,4284
+pressure,C25195,Pressure,Natural Phenomenon or Process,4293
+Over,C65018,Over,Qualitative Concept,4303
+time,C25207,Time,Temporal Concept,4308
+activation,C64382,Activation,Activity,4328
+leads,C50282,Lead Device Component,Manufactured Object,4339
+fluid,C25278,Fluid,Substance,4348
+retention,C38016,Retention,Conceptual Entity,4354
+increase increase,C25533,Increase,Qualitative Concept,4371
+intravascular,C38273,Intravascular Route of Administration,Functional Concept,4383
+contributing,C61412,Contribution,Activity,4405
+mean,C53319,Mean,Quantitative Concept,4452
+pressure.' decreases decreases,C63255,Decrease in Pressure Medical Device Problem,Event,4466
+pressure.' decreases decreases,C63255,Decrease in Pressure Medical Device Problem,Event,4466
+Any,C81168,Any,Conceptual Entity,4480
+mean,C53319,Mean,Quantitative Concept,4512
+state,C25687,State,Conceptual Entity,4559
+systemic venous,C33858,Venous System,Anatomical Structure,4577
+return,C71900,Return,Activity,4593
+pulmonary,C13304,Pulmonary,Qualitative Concept,4604
+venous stroke,C116715,Venous Stroke,Disease or Syndrome,4614
+stroke volume,C94989,Stroke Volume,Quantitative Concept,4631
+cardiac output,C119246,Cardiac Output,Finding,4649
+do,C86066,Do,Activity,4664
+not,C25594,Negation,Functional Concept,4667
+change,C25446,Change,Qualitative Concept,4671
+point,C70656,Point,Spatial Concept,4699
+ventricle,C23291,"Murine Ventricles, Brain",Body Space or Junction,4713
+shifts,C73943,Physical Shift,Phenomenon or Process,4723
+portion,C45313,Part,Physical Object,4747
+ascending,C61465,Ascend,Activity,4762
+portion,C45313,Part,Physical Object,4772
+stroke volume,C94989,Stroke Volume,Quantitative Concept,4797
+volume curve,C95016,Volume Curve,Quantitative Concept,4804
+point,C70656,Point,Spatial Concept,4826
+stroke volume,C94989,Stroke Volume,Quantitative Concept,4832
+begins,C25431,Begin,Temporal Concept,4846
+IMPACT,C122929,Impact,Phenomenon or Process,4890
+RESPIRATION,C17091,Respiration,Organism Function,4900
+LEFT,C25229,Left,Spatial Concept,4915
+VENTRICULAR,C38055,Ventricular,Qualitative Concept,4920
+Changes,C25572,Modification,Qualitative Concept,4961
+cardiovascular altering,C41473,Cardiovascular Alteration,Phenomenon or Process,4991
+function,C25518,Function,Conceptual Entity,5006
+intrathoracic,C105579,Intrathoracic,Spatial Concept,5027
+pressure,C25195,Pressure,Natural Phenomenon or Process,5041
+thoracic,C13360,Thoracic,Spatial Concept,5079
+systemic,C13310,Systemic,Conceptual Entity,5088
+arterial,C12372,Artery,"Body Part, Organ, or Organ Component",5097
+vessels,C32213,Blood Vessel Tissue,Tissue,5106
+relative,C21480,Relative,Human,5114
+arterial,C12372,Artery,"Body Part, Organ, or Organ Component",5144
+vessels,C32213,Blood Vessel Tissue,Tissue,5153
+pulmonary,C13304,Pulmonary,Qualitative Concept,5178
+circulation,C41510,Circulatory Process,Phenomenon or Process,5188
+contained,C79873,Contain,Activity,5203
+chest,C25389,Chest,Body Location or Region,5233
+changes,C25572,Modification,Qualitative Concept,5239
+intrathoracic,C105579,Intrathoracic,Spatial Concept,5250
+pressure,C25195,Pressure,Natural Phenomenon or Process,5264
+do,C86066,Do,Activity,5273
+not,C25594,Negation,Functional Concept,5276
+create,C42620,Creation,Activity,5280
+pressure,C25195,Pressure,Natural Phenomenon or Process,5289
+gradient,C70693,Gradient,Phenomenon or Process,5298
+do,C86066,Do,Activity,5321
+not,C25594,Negation,Functional Concept,5324
+impact,C122929,Impact,Phenomenon or Process,5328
+right,C25228,Right,Spatial Concept,5335
+ventricular,C38055,Ventricular,Qualitative Concept,5341
+negative,C25247,Negative,Conceptual Entity,5381
+pressure,C25195,Pressure,Natural Phenomenon or Process,5390
+breathing,C124203,Breathing Distress,Intellectual Product,5399
+occurs,C54069,Occur,Conceptual Entity,5413
+pulmonary edema,C26868,Pulmonary Edema,Disease or Syndrome,5425
+pulmonary edema,C26868,Pulmonary Edema,Disease or Syndrome,5425
+example,C48175,Example,Conceptual Entity,5445
+intrathoracic,C105579,Intrathoracic,Spatial Concept,5454
+pressure,C25195,Pressure,Natural Phenomenon or Process,5468
+falls,C50558,Fall,Phenomenon or Process,5477
+thoracic,C13360,Thoracic,Spatial Concept,5524
+arterial,C12372,Artery,"Body Part, Organ, or Organ Component",5533
+vessels,C32213,Blood Vessel Tissue,Tissue,5542
+result,C20200,Outcome,Finding,5556
+volume,C25335,Volume,Quantitative Concept,5567
+structures,C41186,Structure,Functional Concept,5583
+increase pressure,C63080,Increase in Pressure Medical Device Problem,Event,5594
+increase pressure,C63080,Increase in Pressure Medical Device Problem,Event,5594
+falls,C50558,Fall,Phenomenon or Process,5625
+gradient,C70693,Gradient,Phenomenon or Process,5651
+between,C94545,Between,Qualitative Concept,5660
+thoracic,C13360,Thoracic,Spatial Concept,5668
+arterial,C12372,Artery,"Body Part, Organ, or Organ Component",5695
+vessels,C32213,Blood Vessel Tissue,Tissue,5704
+positive,C25246,Positive,Qualitative Concept,5718
+pressure,C25195,Pressure,Natural Phenomenon or Process,5727
+ventilation,C88203,Ventilation,Activity,5736
+opposite,C25602,Opposite,Spatial Concept,5752
+occurs,C54069,Occur,Conceptual Entity,5761
+thoracic,C13360,Thoracic,Spatial Concept,5785
+arterial,C12372,Artery,"Body Part, Organ, or Organ Component",5794
+vessels,C32213,Blood Vessel Tissue,Tissue,5803
+decreases decreases pressure,C63255,Decrease in Pressure Medical Device Problem,Event,5811
+decreases decreases pressure,C63255,Decrease in Pressure Medical Device Problem,Event,5811
+volume,C25335,Volume,Quantitative Concept,5826
+result,C20200,Outcome,Finding,5860
+effect,C25492,Effect,Phenomenon or Process,5920
+between,C94545,Between,Qualitative Concept,5927
+thoracic,C13360,Thoracic,Spatial Concept,5935
+arterial,C12372,Artery,"Body Part, Organ, or Organ Component",5962
+same,C64637,Same,Qualitative Concept,5992
+phenomenon,C61380,Phenomenon,Conceptual Entity,5997
+may,C106184,May,Qualitative Concept,6008
+impact,C122929,Impact,Phenomenon or Process,6045
+changes,C25572,Modification,Qualitative Concept,6055
+left,C25229,Left,Spatial Concept,6070
+ventricular,C38055,Ventricular,Qualitative Concept,6075
+systolic,C62110,Systole,Organ or Tissue Function,6087
+manipulation,C48310,Manipulation,Activity,6105
+aortic,C12669,Aorta,"Body Part, Organ, or Organ Component",6121
+intrathoracic,C105579,Intrathoracic,Spatial Concept,6132
+Take,C65105,Take,Activity,6157
+example,C48175,Example,Conceptual Entity,6166
+patient,C16960,Patient,Patient or Disabled Group,6176
+systolic,C62110,Systole,Organ or Tissue Function,6189
+heart failure,C50577,Heart Failure,Disease or Syndrome,6198
+heart failure,C50577,Heart Failure,Disease or Syndrome,6198
+pulmonary edema,C26868,Pulmonary Edema,Disease or Syndrome,6228
+pulmonary edema,C26868,Pulmonary Edema,Disease or Syndrome,6228
+reasons,C86584,Reasoning,Mental Process,6295
+systolic blood pressure,C25298,Systolic Blood Pressure,Quantitative Concept,6308
+90,C105786,Ninety,Quantitative Concept,6347
+mmHg,C49670,Millimeter of Mercury,Quantitative Concept,6357
+pressure,C25195,Pressure,Natural Phenomenon or Process,6387
+during,C25490,During,Temporal Concept,6396
+inspiration,C25735,Inspiration,Organism Function,6403
+decreases,C25640,Reduced,Qualitative Concept,6415
+30,C105797,Thirty,Quantitative Concept,6429
+mmHg,C49670,Millimeter of Mercury,Quantitative Concept,6432
+intrathoracic,C105579,Intrathoracic,Spatial Concept,6438
+pressure,C25195,Pressure,Natural Phenomenon or Process,6452
+during,C25490,During,Temporal Concept,6461
+normal ranges,C71474,Reference Range,Intellectual Product,6468
+inspiration,C25735,Inspiration,Organism Function,6475
+5 10,C124829,PSA Level Five to Ten,Conceptual Entity,6500
+mmHg,C49670,Millimeter of Mercury,Quantitative Concept,6509
+due,C45263,Due,Qualitative Concept,6515
+lung,C12468,Lung,"Body Part, Organ, or Organ Component",6536
+compliance,C25194,Compliance,Individual Behavior,6541
+result,C20200,Outcome,Finding,6558
+all,C64916,All,Qualitative Concept,6568
+factors,C84380,Mathematical Factor,Conceptual Entity,6581
+90,C105786,Ninety,Quantitative Concept,6617
+during,C25490,During,Temporal Concept,6626
+breathing,C124203,Breathing Distress,Intellectual Product,6639
+140,C16409,Central African Republic,Geographic Area,6652
+during,C25490,During,Temporal Concept,6656
+negative,C25247,Negative,Conceptual Entity,6675
+pressure,C25195,Pressure,Natural Phenomenon or Process,6684
+breathing,C124203,Breathing Distress,Intellectual Product,6693
+30,C105797,Thirty,Quantitative Concept,6711
+nearly,C107222,Nearly,Qualitative Concept,6721
+increase,C25533,Increase,Qualitative Concept,6732
+ventricle,C23291,"Murine Ventricles, Brain",Body Space or Junction,6760
+sensitive,C3114,Hypersensitivity,Disease or Syndrome,6778
+changes,C25572,Modification,Qualitative Concept,6791
+implementation,C47899,Implementation,Activity,6822
+continuous positive airway pressure,C124040,Continuous Positive Airway Pressure,Therapeutic or Preventive Procedure,6840
+mmHg,C49670,Millimeter of Mercury,Quantitative Concept,6881
+decreases,C25640,Reduced,Qualitative Concept,6894
+140,C16409,Central African Republic,Geographic Area,6923
+mmHg,C49670,Millimeter of Mercury,Quantitative Concept,6934
+improved,C125459,Improved,Intellectual Product,6956
+respiratory,C25656,Respiratory,Body System,6981
+mechanics,C25343,Mechanism,Functional Concept,6993
+discharge,C26416,Mouse Discharge,Tissue,7015
+withdrawn,C41341,Withdrawal,Mental or Behavioral Dysfunction,7038
+causing,C86056,Causing,Conceptual Entity,7048
+systolic blood pressure,C25298,Systolic Blood Pressure,Quantitative Concept,7060
+return,C71900,Return,Activity,7087
+baseline,C25213,Baseline,Conceptual Entity,7097
+levels,C25554,Level,Quantitative Concept,7106
+fall,C50558,Fall,Phenomenon or Process,7128
+even,C64936,Evening,Temporal Concept,7133
+further,C25519,Further,Qualitative Concept,7138
+90,C105786,Ninety,Quantitative Concept,7153
+LIMITED,C121422,Limited Lifting Ability,Intellectual Product,7197
+CARDIAC OUTPUT',C119246,Cardiac Output,Finding,7205
+important,C115916,Important,Qualitative Concept,7247
+cardiopulmonary,C13362,Cardiopulmonary,"Body Part, Organ, or Organ Component",7267
+interaction,C54216,Interaction,Conceptual Entity,7283
+present,C25626,Present,Qualitative Concept,7303
+patients,C53691,Veterinary Patient,Organism,7314
+heart failure,C50577,Heart Failure,Disease or Syndrome,7328
+heart failure,C50577,Heart Failure,Disease or Syndrome,7328
+occurs,C54069,Occur,Conceptual Entity,7342
+viscera,C28287,Viscera,"Body Part, Organ, or Organ Component",7385
+some,C65099,Some,Activity,7446
+patients,C53691,Veterinary Patient,Organism,7451
+chronic,C14141,Chronic,Qualitative Concept,7465
+heart failure,C50577,Heart Failure,Disease or Syndrome,7473
+heart failure,C50577,Heart Failure,Disease or Syndrome,7473
+marked,C48662,Marked,Qualitative Concept,7505
+increase,C25533,Increase,Qualitative Concept,7512
+cerebral cerebral blood flow,C94869,Cerebral Blood Flow,Organ or Tissue Function,7528
+oxygen,C722,Oxygen,"Pharmacologic Substance, Element, Ion, or Isotope",7537
+extraction,C61575,Extraction,Activity,7544
+ratio,C44256,Ratio,Quantitative Concept,7555
+rest,C28185,Resting,Daily or Recreational Activity,7564
+limited,C121422,Limited Lifting Ability,Intellectual Product,7584
+more,C128667,More,Qualitative Concept,7637
+load,C71584,Load,Activity,7660
+respiratory muscles,C32824,Intercostal Muscle,Anatomical Structure,7680
+increases,C25533,Increase,Qualitative Concept,7700
+pulmonary edema,C26868,Pulmonary Edema,Disease or Syndrome,7731
+pulmonary edema,C26868,Pulmonary Edema,Disease or Syndrome,7731
+perfusion,C15295,Chemotherapeutic Perfusion,Therapeutic or Preventive Procedure,7813
+maintain,C53297,Maintenance,Activity,7826
+normal,C14165,Normal,Conceptual Entity,7867
+conditions,C47953,Logical Condition,Conceptual Entity,7874
+diaphragm,C12702,Diaphragm,"Body Part, Organ, or Organ Component",7890
+consumes,C53568,Consumer,Human,7900
+less than,C61585,Less Than,Functional Concept,7909
+global,C68846,Global,Qualitative Concept,7925
+oxygen consumption,C123570,Oxygen Consumption,Diagnostic Procedure,7932
+receives,C25639,Receive,Functional Concept,7955
+less than,C61585,Less Than,Functional Concept,7964
+cardiac output,C119246,Cardiac Output,Finding,7980
+load,C71584,Load,Activity,8026
+elevated,C25493,Elevated,Qualitative Concept,8034
+metabolic,C28240,Metabolic,Functional Concept,8057
+increases,C25533,Increase,Qualitative Concept,8074
+respiratory muscle,C32824,Intercostal Muscle,Anatomical Structure,8088
+oxygen consumption,C123570,Oxygen Consumption,Diagnostic Procedure,8107
+may,C106184,May,Qualitative Concept,8126
+values,C25712,Value,Conceptual Entity,8142
+over,C65018,Over,Qualitative Concept,8149
+total,C25304,Total,Qualitative Concept,8165
+oxygen consumption,C123570,Oxygen Consumption,Diagnostic Procedure,8171
+meet,C87531,Fulfill,Activity,8198
+cardiac output,C119246,Cardiac Output,Finding,8224
+increase,C25533,Increase,Qualitative Concept,8244
+if,C64955,If,Qualitative Concept,8256
+cardiac output,C119246,Cardiac Output,Finding,8259
+limited,C121422,Limited Lifting Ability,Intellectual Product,8277
+blood flow,C16353,Blood Circulation,Organ or Tissue Function,8285
+pump,C17625,Pump,Medical Device,8337
+other,C17649,Other,Qualitative Concept,8347
+vital,C18003,Vital,Qualitative Concept,8353
+organs,C93874,Organization Name,Intellectual Product,8359
+meet,C87531,Fulfill,Activity,8369
+oxygen,C722,Oxygen,"Pharmacologic Substance, Element, Ion, or Isotope",8390
+respiratory failure,C26872,Respiratory Failure,Disease or Syndrome,8414
+respiratory failure,C26872,Respiratory Failure,Disease or Syndrome,8414
+animal,C14182,Animal,Animal,8476
+cardiogenic shock,C50482,Cardiogenic Shock,Finding,8486
+cardiogenic shock,C50482,Cardiogenic Shock,Finding,8486
+significant,C41130,Significant,Functional Concept,8523
+increase,C25533,Increase,Qualitative Concept,8535
+respiratory muscle,C32824,Intercostal Muscle,Anatomical Structure,8547
+perfusion,C15295,Chemotherapeutic Perfusion,Therapeutic or Preventive Procedure,8566
+breathing,C124203,Breathing Distress,Intellectual Product,8593
+compared,C49156,Comparison,Activity,8611
+receiving,C25639,Receive,Functional Concept,8637
+mechanical ventilation,C70909,Mechanical Ventilation,Therapeutic or Preventive Procedure,8647
+respiratory muscles,C32824,Intercostal Muscle,Anatomical Structure,8697
+mechanical ventilation,C70909,Mechanical Ventilation,Therapeutic or Preventive Procedure,8722
+blood flow,C16353,Blood Circulation,Organ or Tissue Function,8745
+other,C17649,Other,Qualitative Concept,8759
+vital,C18003,Vital,Qualitative Concept,8765
+organs,C93874,Organization Name,Intellectual Product,8771
+greater,C61421,Greater,Qualitative Concept,8796
+brain,C12439,Brain,"Body Part, Organ, or Organ Component",8819
+clear,C48621,Negative Surgical Margin,Finding,8836
+several,C107221,Several,Qualitative Concept,8847
+lines,C71221,Line Unit of Length,Quantitative Concept,8855
+investigation,C41198,Investigation,Activity,8864
+cerebral,C12351,Cerebral Hemisphere,"Body Part, Organ, or Organ Component",8883
+perfusion,C15295,Chemotherapeutic Perfusion,Therapeutic or Preventive Procedure,8892
+does,C86066,Do,Activity,8902
+not,C25594,Negation,Functional Concept,8907
+occur,C54069,Occur,Conceptual Entity,8911
+other,C17649,Other,Qualitative Concept,8935
+organs,C93874,Organization Name,Intellectual Product,8941
+brain,C12439,Brain,"Body Part, Organ, or Organ Component",8963
+blood flow,C16353,Blood Circulation,Organ or Tissue Function,8991
+other,C17649,Other,Qualitative Concept,9007
+viscera,C28287,Viscera,"Body Part, Organ, or Organ Component",9013
+cardiac output,C119246,Cardiac Output,Finding,9026
+limited,C121422,Limited Lifting Ability,Intellectual Product,9044
+Further,C25519,Further,Qualitative Concept,9053
+above,C75329,Above,Qualitative Concept,9075
+use,C25340,Use,Functional Concept,9086
+positive,C25246,Positive,Qualitative Concept,9093
+pressure,C25195,Pressure,Natural Phenomenon or Process,9102
+ventilation,C88203,Ventilation,Activity,9111
+eliminates,C25650,Removed,Qualitative Concept,9123
+negative,C25247,Negative,Conceptual Entity,9146
+pressure,C25195,Pressure,Natural Phenomenon or Process,9155
+breathing,C124203,Breathing Distress,Intellectual Product,9164
+reduces,C25640,Reduced,Qualitative Concept,9199
+left,C25229,Left,Spatial Concept,9207
+ventricular,C38055,Ventricular,Qualitative Concept,9212
+stroke volume,C94989,Stroke Volume,Quantitative Concept,9258
+cardiac output.',C119246,Cardiac Output,Finding,9276
+HEART FAILURE',C50577,Heart Failure,Disease or Syndrome,9316
+HEART FAILURE',C50577,Heart Failure,Disease or Syndrome,9316
+patients,C53691,Veterinary Patient,Organism,9352
+systolic,C62110,Systole,Organ or Tissue Function,9366
+ventricular,C38055,Ventricular,Qualitative Concept,9389
+elevated,C25493,Elevated,Qualitative Concept,9445
+cycle,C25472,Cycle,Temporal Concept,9477
+diastolic,C62109,Diastole,Organ or Tissue Function,9499
+systolic,C62110,Systole,Organ or Tissue Function,9513
+load,C71584,Load,Activity,9522
+metabolic,C28240,Metabolic,Functional Concept,9531
+myocardium,C12371,Myocardium,Tissue,9555
+Positive,C25246,Positive,Qualitative Concept,9567
+pressure,C25195,Pressure,Natural Phenomenon or Process,9576
+ventilation,C88203,Ventilation,Activity,9585
+limits,C121422,Limited Lifting Ability,Intellectual Product,9597
+systemic venous,C33858,Venous System,Anatomical Structure,9604
+return,C71900,Return,Activity,9620
+ventricular,C38055,Ventricular,Qualitative Concept,9631
+stroke volume,C94989,Stroke Volume,Quantitative Concept,9688
+output,C47906,Output,Conceptual Entity,9706
+10,C69122,Ten,Quantitative Concept,9717
+above,C75329,Above,Qualitative Concept,9740
+respiratory,C25656,Respiratory,Body System,9764
+pump,C17625,Pump,Medical Device,9776
+allows,C41192,Authorization,Governmental or Regulatory Activity,9781
+limited,C121422,Limited Lifting Ability,Intellectual Product,9814
+cardiac output,C119246,Cardiac Output,Finding,9822
+other,C17649,Other,Qualitative Concept,9840
+vital,C18003,Vital,Qualitative Concept,9846
+organs,C93874,Organization Name,Intellectual Product,9852
+myocardium,C12371,Myocardium,Tissue,9874
+net,C70842,Net,Qualitative Concept,9890
+effect,C25492,Effect,Phenomenon or Process,9894
+all,C64916,All,Qualitative Concept,9904
+changes,C25572,Modification,Qualitative Concept,9914
+marked,C48662,Marked,Qualitative Concept,9927
+improvement,C94226,Improvement,Conceptual Entity,9934
+oxygen,C722,Oxygen,"Pharmacologic Substance, Element, Ion, or Isotope",9953
+supply,C80514,Provide,Activity,9960
+relationship,C71472,Relationship,Conceptual Entity,9978
+global,C68846,Global,Qualitative Concept,9996
+scale,C25664,Scale,Intellectual Product,10003
+well,C70592,Well,Spatial Concept,10012
+myocardium,C12371,Myocardium,Tissue,10025
+11,C113425,Eleven,Quantitative Concept,10037
+benefits,C25387,Benefits,Idea or Concept,10046
+myocardium,C12371,Myocardium,Tissue,10085
+contrast,C70754,Contrast,Conceptual Entity,10109
+impact,C122929,Impact,Phenomenon or Process,10125
+agents,C41161,Protocol Agent,Conceptual Entity,10145
+global,C68846,Global,Qualitative Concept,10155
+myocardial,C25578,Myocardial,Qualitative Concept,10166
+Several,C107221,Several,Qualitative Concept,10193
+clinical studies,C15206,Clinical Study,Research Activity,10201
+have,C101282,Have,Classification,10218
+impact,C122929,Impact,Phenomenon or Process,10262
+invasive,C14159,Invasive,Qualitative Concept,10272
+non,C25594,Negation,Functional Concept,10285
+invasive,C14159,Invasive,Qualitative Concept,10289
+continuous positive airway pressure positive pressure,C124040,Continuous Positive Airway Pressure,Therapeutic or Preventive Procedure,10298
+ventilation,C88203,Ventilation,Activity,10356
+acute,C14140,Acute,Qualitative Concept,10371
+chronic,C14141,Chronic,Qualitative Concept,10381
+cardiovascular,C25292,Cardiovascular,Body System,10389
+function,C25518,Function,Conceptual Entity,10404
+adults,C52678,Legal Adult,Group Attribute,10431
+heart failure,C50577,Heart Failure,Disease or Syndrome,10457
+heart failure,C50577,Heart Failure,Disease or Syndrome,10457
+cardiogenic pulmonary edema non,C124947,Noncardiogenic Pulmonary Edema,Disease or Syndrome,10475
+have,C101282,Have,Classification,10503
+found,C25626,Present,Qualitative Concept,10508
+invasive,C14159,Invasive,Qualitative Concept,10523
+continuous airway,C124040,Continuous Positive Airway Pressure,Therapeutic or Preventive Procedure,10532
+invasive,C14159,Invasive,Qualitative Concept,10567
+ventilation,C88203,Ventilation,Activity,10594
+decrease,C25640,Reduced,Qualitative Concept,10620
+need,C41204,Need,Conceptual Entity,10633
+intubation,C37981,Intubation Procedure,Health Care Activity,10642
+mortality,C16880,Mortality,Quantitative Concept,10657
+12,C113426,Twelve,Quantitative Concept,10668
+13,C113427,Thirteen,Quantitative Concept,10672
+benefits,C25387,Benefits,Idea or Concept,10685
+continuous positive airway pressure positive pressure,C124040,Continuous Positive Airway Pressure,Therapeutic or Preventive Procedure,10697
+ventilation,C88203,Ventilation,Activity,10755
+have,C101282,Have,Classification,10767
+adults,C52678,Legal Adult,Group Attribute,10798
+chronic,C14141,Chronic,Qualitative Concept,10810
+evaluated,C25214,Evaluation,Activity,10855
+impact,C122929,Impact,Phenomenon or Process,10869
+chronic,C14141,Chronic,Qualitative Concept,10879
+non,C25594,Negation,Functional Concept,10887
+invasive,C14159,Invasive,Qualitative Concept,10891
+positive,C25246,Positive,Qualitative Concept,10900
+pressure,C25195,Pressure,Natural Phenomenon or Process,10909
+ventilation,C88203,Ventilation,Activity,10918
+ventricular,C38055,Ventricular,Qualitative Concept,10933
+function,C25518,Function,Conceptual Entity,10945
+adults,C52678,Legal Adult,Group Attribute,10957
+chronic,C14141,Chronic,Qualitative Concept,10969
+heart failure,C50577,Heart Failure,Disease or Syndrome,10977
+heart failure,C50577,Heart Failure,Disease or Syndrome,10977
+14,C113428,Fourteen,Quantitative Concept,10992
+Patients,C53691,Veterinary Patient,Organism,10997
+therapy,C49236,Therapeutic Procedure,Therapeutic or Preventive Procedure,11016
+four,C66835,Four,Quantitative Concept,11037
+hours,C25529,Hour,Temporal Concept,11042
+day,C25301,Day,Temporal Concept,11052
+Chronic,C14141,Chronic,Qualitative Concept,11057
+positive,C25246,Positive,Qualitative Concept,11065
+pressure,C25195,Pressure,Natural Phenomenon or Process,11074
+ventilation,C88203,Ventilation,Activity,11083
+reduced,C25640,Reduced,Qualitative Concept,11109
+left,C25229,Left,Spatial Concept,11117
+ventricular,C38055,Ventricular,Qualitative Concept,11122
+left,C25229,Left,Spatial Concept,11138
+atrial,C37914,Atrial,Spatial Concept,11143
+volumes,C25335,Volume,Quantitative Concept,11150
+mitral regurgitation,C50852,Mitral Valve Regurgitation,Disease or Syndrome,11159
+mitral regurgitation,C50852,Mitral Valve Regurgitation,Disease or Syndrome,11159
+improved,C125459,Improved,Intellectual Product,11198
+left,C25229,Left,Spatial Concept,11207
+ventricular,C38055,Ventricular,Qualitative Concept,11212
+systolic,C62110,Systole,Organ or Tissue Function,11224
+function,C25518,Function,Conceptual Entity,11233
+regression analysis,C53237,Regression Method,Quantitative Concept,11256
+chronic,C14141,Chronic,Qualitative Concept,11288
+positive,C25246,Positive,Qualitative Concept,11296
+airway,C89842,Airway,"Body Part, Organ, or Organ Component",11305
+pressure,C25195,Pressure,Natural Phenomenon or Process,11312
+ventilation,C88203,Ventilation,Activity,11321
+independent,C61366,Independence,Qualitative Concept,11340
+predictor,C75944,Predictor,Clinical Attribute,11352
+left,C25229,Left,Spatial Concept,11366
+ventricular,C38055,Ventricular,Qualitative Concept,11371
+Sleep disordered,C3376,Sleep Disorder,Mental or Behavioral Dysfunction,11399
+breathing,C124203,Breathing Distress,Intellectual Product,11416
+chronic,C14141,Chronic,Qualitative Concept,11442
+heart failure,C50577,Heart Failure,Disease or Syndrome,11450
+heart failure,C50577,Heart Failure,Disease or Syndrome,11450
+impacts,C122929,Impact,Phenomenon or Process,11478
+outcomes,C20200,Outcome,Finding,11486
+breathing,C124203,Breathing Distress,Intellectual Product,11508
+leads,C50282,Lead Device Component,Manufactured Object,11518
+negative,C25247,Negative,Conceptual Entity,11539
+pressure,C25195,Pressure,Natural Phenomenon or Process,11548
+ventilation,C88203,Ventilation,Activity,11557
+above,C75329,Above,Qualitative Concept,11589
+increases,C25533,Increase,Qualitative Concept,11595
+systemic venous,C33858,Venous System,Anatomical Structure,11605
+return,C71900,Return,Activity,11621
+left,C25229,Left,Spatial Concept,11632
+ventricular,C38055,Ventricular,Qualitative Concept,11637
+well,C70592,Well,Spatial Concept,11660
+left,C25229,Left,Spatial Concept,11668
+ventricular,C38055,Ventricular,Qualitative Concept,11673
+leads,C50282,Lead Device Component,Manufactured Object,11701
+increase,C25533,Increase,Qualitative Concept,11713
+myocardial,C25578,Myocardial,Qualitative Concept,11725
+oxygen,C722,Oxygen,"Pharmacologic Substance, Element, Ion, or Isotope",11736
+time,C25207,Time,Temporal Concept,11755
+cardiac output,C119246,Cardiac Output,Finding,11765
+depressed,C117199,Depressed Mood,Sign or Symptom,11798
+baseline,C25213,Baseline,Conceptual Entity,11808
+presence,C25626,Present,Qualitative Concept,11822
+central apnea,C116335,Central Apnea,Sign or Symptom,11834
+decreases,C25640,Reduced,Qualitative Concept,11852
+oxygen content,C111284,Oxygen Measurement,Laboratory Procedure,11865
+further,C25519,Further,Qualitative Concept,11880
+myocardial,C25578,Myocardial,Qualitative Concept,11903
+supply,C80514,Provide,Activity,11921
+relationship,C71472,Relationship,Conceptual Entity,11935
+example,C48175,Example,Conceptual Entity,11960
+impact,C122929,Impact,Phenomenon or Process,11983
+sleep disordered,C3376,Sleep Disorder,Mental or Behavioral Dysfunction,11993
+disordered cardiovascular disordered,C2931,Cardiovascular Disorder,Disease or Syndrome,11999
+breathing,C124203,Breathing Distress,Intellectual Product,12010
+function,C25518,Function,Conceptual Entity,12038
+provided,C80514,Provide,Activity,12051
+found,C25626,Present,Qualitative Concept,12092
+onset,C25279,Onset,Temporal Concept,12117
+myocardial infarction,C27996,Myocardial Infarction,Disease or Syndrome,12126
+associated,C25281,Associated,Qualitative Concept,12166
+presence,C25626,Present,Qualitative Concept,12186
+sleep disordered,C3376,Sleep Disorder,Mental or Behavioral Dysfunction,12198
+breathing,C124203,Breathing Distress,Intellectual Product,12215
+15,C113429,Fifteen,Quantitative Concept,12226
+Several,C107221,Several,Qualitative Concept,12231
+studies,C15206,Clinical Study,Research Activity,12239
+have,C101282,Have,Classification,12247
+not,C25594,Negation,Functional Concept,12270
+only,C65011,Only,Qualitative Concept,12274
+does,C86066,Do,Activity,12279
+sleep disordered,C3376,Sleep Disorder,Mental or Behavioral Dysfunction,12284
+breathing,C124203,Breathing Distress,Intellectual Product,12301
+contribute,C61412,Contribution,Activity,12311
+evolution,C16565,Evolution,Phenomenon or Process,12329
+heart failure,C50577,Heart Failure,Disease or Syndrome,12342
+heart failure,C50577,Heart Failure,Disease or Syndrome,12342
+intervention,C16197,Intervention,"Health Care Activity, Therapeutic or Preventive Procedure",12365
+non,C25594,Negation,Functional Concept,12383
+invasive,C14159,Invasive,Qualitative Concept,12387
+continuous positive airway pressure positive pressure,C124040,Continuous Positive Airway Pressure,Therapeutic or Preventive Procedure,12396
+ventilation,C88203,Ventilation,Activity,12454
+reverses,C125005,Reversal,Activity,12466
+ventricular leads,C80463,Ventricular Lead,Medical Device,12475
+improved,C125459,Improved,Intellectual Product,12511
+cardiac,C13306,Cardiac,Qualitative Concept,12520
+function,C25518,Function,Conceptual Entity,12528
+16,C113430,Sixteen,Quantitative Concept,12538
+17,C113431,Seventeen,Quantitative Concept,12542
+interaction,C54216,Interaction,Conceptual Entity,12596
+between,C94545,Between,Qualitative Concept,12608
+cardiovascular systems,C35552,Cardiovascular System Finding,Finding,12620
+respiratory systems,C12779,Respiratory System,Body System,12639
+important,C115916,Important,Qualitative Concept,12668
+role,C48835,Role,Conceptual Entity,12678
+evolution,C16565,Evolution,Phenomenon or Process,12690
+treatment,C15368,Treatment,Health Care Activity,12704
+acute,C14140,Acute,Qualitative Concept,12717
+chronic,C14141,Chronic,Qualitative Concept,12727
+understanding,C86022,Comprehension,Mental Process,12761
+interactions,C54708,Drug Interaction,Phenomenon or Process,12784
+essential,C71578,Essential,Finding,12800
+care patients,C15239,Patient Care,Health Care Activity,12829
+both,C49636,Both,Qualitative Concept,12863
+acute,C14140,Acute,Qualitative Concept,12872
+chronic phases,C28262,Chronic Phase,Temporal Concept,12882

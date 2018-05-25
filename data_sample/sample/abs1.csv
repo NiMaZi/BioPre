@@ -1,0 +1,23 @@
+Mention,ConceptCode,ConceptName,SemanticType,Start
+Cardiopulmonary,C13362,Cardiopulmonary,"Body Part, Organ, or Organ Component",0
+interactions,C54708,Drug Interaction,Phenomenon or Process,16
+present,C25626,Present,Qualitative Concept,33
+humans,C14225,Human,Human,64
+normal,C14165,Normal,Conceptual Entity,76
+cardiac,C13306,Cardiac,Qualitative Concept,83
+respiratory,C25656,Respiratory,Body System,95
+function,C25518,Function,Conceptual Entity,107
+presence,C25626,Present,Qualitative Concept,133
+significant,C41130,Significant,Functional Concept,145
+impairment,C21055,Impairment,Idea or Concept,157
+system cardiovascular,C35552,Cardiovascular System Finding,Finding,178
+between,C94545,Between,Qualitative Concept,218
+pulmonary,C13304,Pulmonary,Qualitative Concept,245
+review,C42729,Review,Activity,290
+discuss,C71323,Discussion,Organism Function,302
+physiologic,C17650,Physiologic,Qualitative Concept,314
+consequences,C74555,Consequence,Phenomenon or Process,344
+interactions,C54708,Drug Interaction,Phenomenon or Process,366
+patients,C53691,Veterinary Patient,Organism,382
+heart failure,C50577,Heart Failure,Disease or Syndrome,396
+heart failure,C50577,Heart Failure,Disease or Syndrome,396

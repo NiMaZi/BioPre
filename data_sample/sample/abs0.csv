@@ -1,0 +1,100 @@
+Mention,ConceptCode,ConceptName,SemanticType,Start
+Tumors,C98275,Tumor Mass,Finding,0
+exhibit,C96979,Exhibit,Intellectual Product,7
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,23
+immunohistochemistry,C16722,Immunohistochemistry,Laboratory Procedure,55
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,77
+staining,C50753,Staining,Finding,82
+patterns,C25336,Pattern,Spatial Concept,91
+Current,C25471,Current,Temporal Concept,101
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,109
+quantification,C48937,Quantitation,Activity,113
+methods,C71460,Method,Conceptual Entity,128
+information,C48191,Information,Conceptual Entity,141
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,170
+each,C64933,Each,Qualitative Concept,187
+whole,C25326,Whole,Qualitative Concept,192
+slide,C25325,Slide,Manufactured Object,198
+image,C48179,Image,Entity,204
+fields view,C74298,Field of View,Spatial Concept,232
+single,C48440,Single,Qualitative Concept,252
+staining,C50753,Staining,Finding,259
+index,C25390,Index,Intellectual Product,268
+aim,C60761,Aim,Conceptual Entity,279
+study,C63536,Study,Research Activity,291
+sensitivity,C25201,Sensitivity,Quantitative Concept,320
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,338
+quantification,C48937,Quantitation,Activity,342
+method,C71460,Method,Conceptual Entity,357
+uses,C107498,Useful,Qualitative Concept,369
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,379
+compare,C49156,Comparison,Activity,405
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,413
+staining,C50753,Staining,Finding,417
+patterns,C25336,Pattern,Spatial Concept,426
+grid,C70846,Grid,Manufactured Object,471
+square,C48350,Square Shape,Qualitative Concept,479
+computed,C61298,Computation,Activity,497
+staining,C50753,Staining,Finding,510
+index,C25390,Index,Intellectual Product,519
+distributions,C45273,Distribution,Activity,525
+quantify,C48937,Quantitation,Activity,542
+heterogeneities,C28359,Heterogeneity,Qualitative Concept,551
+samples,C70699,Biospecimen,Body Substance,576
+distributions,C45273,Distribution,Activity,595
+inputs,C47905,Input,Conceptual Entity,612
+non,C25594,Negation,Functional Concept,622
+statistical,C17167,Statistics,Occupation or Discipline,637
+comparisons,C49156,Comparison,Activity,649
+applied,C113519,Apply,Activity,665
+grid,C70846,Grid,Manufactured Object,677
+method,C71460,Method,Conceptual Entity,682
+fixed,C84514,Fixed Specimen,Body Substance,692
+tumor samples,C18009,Tumor Tissue,Tissue,698
+26,C126886,Twenty Six,Quantitative Concept,717
+obtained,C52349,Obtain,Activity,727
+double blind study,C15228,Double Blind Study,Research Activity,743
+preclinical study,C48678,Nonclinical Study,Research Activity,756
+patient derived xenograft model,C122936,Patient Derived Xenograft,Experimental Model of Disease,779
+orthotopic,C94384,Orthotopic,Qualitative Concept,795
+pediatric,C14154,Pediatric,Temporal Concept,825
+neuroblastoma,C3270,Neuroblastoma,Neoplastic Process,835
+CD1,C114988,CD1 Glycoprotein,Classification,852
+nude,C14239,Nude Mouse,Mammal,856
+mice,C14238,Mouse,Mammal,861
+compared,C49156,Comparison,Activity,870
+results,C20200,Outcome,Finding,883
+grid,C70846,Grid,Manufactured Object,898
+method,C71460,Method,Conceptual Entity,903
+results,C20200,Outcome,Finding,917
+based,C48055,Base,Qualitative Concept,925
+whole,C25326,Whole,Qualitative Concept,934
+slide,C25325,Slide,Manufactured Object,940
+indices,C50001,Indicator Device Component,Manufactured Object,946
+current,C25471,Current,Temporal Concept,959
+grid,C70846,Grid,Manufactured Object,994
+method,C71460,Method,Conceptual Entity,999
+detects,C111567,Detectable,Clinical Attribute,1015
+alterations,C28344,Alteration,Conceptual Entity,1034
+other,C17649,Other,Qualitative Concept,1051
+tests,C47891,Test,Activity,1057
+based,C48055,Base,Qualitative Concept,1063
+whole,C25326,Whole,Qualitative Concept,1072
+slide,C25325,Slide,Manufactured Object,1078
+indices,C50001,Indicator Device Component,Manufactured Object,1084
+Based,C48055,Base,Qualitative Concept,1108
+robustness,C94972,Robust,Qualitative Concept,1117
+increased sensitivity,C63078,Increased Device Sensitivity,Event,1132
+increased sensitivity,C73503,Increased Sensitivity,Phenomenon or Process,1132
+statistical,C17167,Statistics,Occupation or Discipline,1157
+inference,C75591,Inference,Activity,1169
+method,C71460,Method,Conceptual Entity,1201
+whole,C25326,Whole,Qualitative Concept,1211
+slide,C25325,Slide,Manufactured Object,1217
+grid,C70846,Grid,Manufactured Object,1223
+quantification,C48937,Quantitation,Activity,1228
+superior,C25235,Superior,Spatial Concept,1246
+whole,C25326,Whole,Qualitative Concept,1267
+slide,C25325,Slide,Manufactured Object,1273
+quantification,C48937,Quantitation,Activity,1279
+techniques,C16847,Technique,Activity,1294

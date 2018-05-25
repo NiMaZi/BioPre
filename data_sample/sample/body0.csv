@@ -1,0 +1,2188 @@
+Mention,ConceptCode,ConceptName,SemanticType,Start
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,77
+markers,C16342,Biomarker,Functional Concept,82
+integral,C94928,Mathematical Integral,Quantitative Concept,94
+computational,C19233,Computational Technique,Activity,106
+pathology,C18189,Pathology,Biomedical Occupation or Discipline,120
+discipline,C17716,Discipline,Activity,143
+al,C111127,Aluminum Measurement,Laboratory Procedure,164
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,175
+markers,C16342,Biomarker,Functional Concept,179
+key,C46002,Key,Conceptual Entity,191
+tools,C84337,Scientific Equipment,Manufactured Object,195
+clinical research,C15206,Clinical Study,Research Activity,204
+research research basic cancer research,C16085,Basic Cancer Research,Research Activity,213
+research research basic science research,C15714,Basic Research,Research Activity,213
+decision,C53285,Decision,Activity,236
+al,C111127,Aluminum Measurement,Laboratory Procedure,262
+diagnostic,C25482,Diagnostic,Qualitative Concept,312
+treatment,C15368,Treatment,Health Care Activity,327
+evaluation,C25214,Evaluation,Activity,337
+prognosis,C17013,Prognosis,Idea or Concept,352
+al,C111127,Aluminum Measurement,Laboratory Procedure,374
+al,C111127,Aluminum Measurement,Laboratory Procedure,395
+al,C111127,Aluminum Measurement,Laboratory Procedure,419
+translational research,C15862,Translational Research,Research Activity,431
+drug discovery,C15802,Drug Discovery,Research Activity,455
+drug development,C15760,Drug Development,Research Activity,455
+al,C111127,Aluminum Measurement,Laboratory Procedure,496
+al,C111127,Aluminum Measurement,Laboratory Procedure,626
+al,C111127,Aluminum Measurement,Laboratory Procedure,722
+individualized,C60729,Individualized,Qualitative Concept,787
+cancer therapy,C16212,Cancer Therapeutic Procedure,Therapeutic or Preventive Procedure,802
+targeted therapy,C93352,Targeted Therapy,Therapeutic or Preventive Procedure,824
+characterization,C62606,Characterization,Activity,843
+individual,C17719,Individual,Human,863
+tumors,C98275,Tumor Mass,Finding,874
+alterations,C28344,Alteration,Conceptual Entity,891
+response,C25755,Response,Phenomenon or Process,906
+essential,C71578,Essential,Finding,931
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,956
+staining,C50753,Staining,Finding,960
+indices,C50001,Indicator Device Component,Manufactured Object,969
+often,C91247,Often,Intellectual Product,978
+defined,C42777,Definition,Intellectual Product,984
+percentage,C25613,Percentage,Conceptual Entity,999
+total,C25304,Total,Qualitative Concept,1044
+counted cells,C48938,Cell Count,Laboratory Procedure,1050
+field view,C74298,Field of View,Spatial Concept,1071
+prognostic factors,C18959,Prognostic Factor,Clinical Attribute,1108
+clinical,C25398,Clinical,Qualitative Concept,1130
+al,C111127,Aluminum Measurement,Laboratory Procedure,1164
+al,C111127,Aluminum Measurement,Laboratory Procedure,1209
+al,C111127,Aluminum Measurement,Laboratory Procedure,1222
+studies,C15206,Clinical Study,Research Activity,1250
+have,C101282,Have,Classification,1258
+potential,C62230,Potential,Idea or Concept,1269
+new,C25586,New,Qualitative Concept,1279
+applications,C50341,Applicator Device Component,Manufactured Object,1283
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,1309
+tissue,C33177,Tissue,Tissue,1313
+staining,C50753,Staining,Finding,1320
+indices,C50001,Indicator Device Component,Manufactured Object,1329
+before,C25629,Prior,Temporal Concept,1337
+after,C49639,Status Post,Temporal Concept,1348
+therapy,C49236,Therapeutic Procedure,Therapeutic or Preventive Procedure,1354
+retrospective study,C53312,Retrospective Study,Research Activity,1365
+ovarian cancer,C7431,Malignant Ovarian Neoplasm,Neoplastic Process,1388
+cancer patients,C19700,Cancer Patient,Patient or Disabled Group,1396
+changes,C25572,Modification,Qualitative Concept,1422
+tissue,C33177,Tissue,Tissue,1433
+staining,C50753,Staining,Finding,1440
+induced,C61367,Induction,Activity,1457
+treatment,C15368,Treatment,Health Care Activity,1468
+predictors,C75944,Predictor,Clinical Attribute,1493
+clinical,C25398,Clinical,Qualitative Concept,1507
+outcomes,C20200,Outcome,Finding,1516
+baseline indices,C93514,Baseline Indicator,Finding,1530
+alone,C48440,Single,Qualitative Concept,1547
+al,C111127,Aluminum Measurement,Laboratory Procedure,1565
+randomized clinical trial,C15417,Randomized Clinical Trial,Research Activity,1605
+phase II clinical trial,C15601,Phase II Trial,Research Activity,1616
+phase II clinical trial,C15601,Phase II Trial,Research Activity,1616
+breast cancer,C4872,Breast Carcinoma,Neoplastic Process,1644
+breast cancer,C4872,Breast Carcinoma,Neoplastic Process,1644
+changes,C25572,Modification,Qualitative Concept,1659
+Ki67,C123557,Ki67 Measurement,Laboratory Procedure,1674
+index,C25390,Index,Intellectual Product,1679
+evaluated,C25214,Evaluation,Activity,1685
+biopsied specimens,C18202,Biopsy Specimen,Tissue,1700
+after,C49639,Status Post,Temporal Concept,1719
+preoperative chemotherapy,C68770,Preoperative Chemotherapy,Therapeutic or Preventive Procedure,1736
+guide,C49974,Guide Device Component,Manufactured Object,1779
+selection,C48912,Choose,Activity,1789
+subsequent,C53286,Next,Temporal Concept,1804
+chemotherapy regimen,C62634,Chemotherapy Regimen,Therapeutic or Preventive Procedure,1815
+new,C25586,New,Qualitative Concept,1870
+applications,C50341,Applicator Device Component,Manufactured Object,1874
+may,C106184,May,Qualitative Concept,1887
+benefit,C25387,Benefits,Idea or Concept,1891
+accurate,C49145,Accuracy,Qualitative Concept,1904
+quantification,C48937,Quantitation,Activity,1913
+comparison,C49156,Comparison,Activity,1932
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,1946
+patterns,C25336,Pattern,Spatial Concept,1950
+before,C25629,Prior,Temporal Concept,1959
+after,C49639,Status Post,Temporal Concept,1970
+treatment,C15368,Treatment,Health Care Activity,1976
+comparison,C49156,Comparison,Activity,2005
+two,C66833,Two,Quantitative Concept,2019
+indices,C50001,Indicator Device Component,Manufactured Object,2023
+average,C37917,Average,Quantitative Concept,2036
+over,C65018,Over,Qualitative Concept,2044
+tumor,C98275,Tumor Mass,Finding,2066
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,2083
+al,C111127,Aluminum Measurement,Laboratory Procedure,2109
+One,C66832,One,Quantitative Concept,2123
+greatest,C25258,Most,Qualitative Concept,2134
+challenges,C78166,Challenge,Activity,2143
+quantification,C48937,Quantitation,Activity,2161
+staining,C50753,Staining,Finding,2179
+indices,C50001,Indicator Device Component,Manufactured Object,2188
+selection,C48912,Choose,Activity,2203
+fields,C25507,Data Field,Conceptual Entity,2216
+presence,C25626,Present,Qualitative Concept,2230
+tumor,C98275,Tumor Mass,Finding,2248
+number,C25337,Number,Quantitative Concept,2271
+methods,C71460,Method,Conceptual Entity,2281
+have,C101282,Have,Classification,2289
+fields view,C74298,Field of View,Spatial Concept,2318
+quantification,C48937,Quantitation,Activity,2337
+al,C111127,Aluminum Measurement,Laboratory Procedure,2362
+methods,C71460,Method,Conceptual Entity,2411
+often,C91247,Often,Intellectual Product,2419
+highly,C25227,High,Qualitative Concept,2445
+active,C45329,Active,Qualitative Concept,2452
+regions,C41129,Region,Spatial Concept,2459
+spots',C19744,Hot Spot,Conceptual Entity,2480
+multiple,C17648,Multiple,Qualitative Concept,2502
+fields,C25507,Data Field,Conceptual Entity,2511
+regions,C41129,Region,Spatial Concept,2531
+leading,C25629,Prior,Temporal Concept,2540
+measurements,C37894,Measurable,Idea or Concept,2567
+makes,C25392,Manufacturer,Intellectual Product,2586
+inferences,C75591,Inference,Activity,2592
+biased,C28232,Bias,Idea or Concept,2603
+Whole,C25326,Whole,Qualitative Concept,2636
+slide,C25325,Slide,Manufactured Object,2642
+imaging,C49591,Imaging Domain,Idea or Concept,2648
+entire,C25497,Entire,Qualitative Concept,2672
+glass,C45301,Glass,Substance,2679
+slide,C25325,Slide,Manufactured Object,2685
+slide,C25325,Slide,Manufactured Object,2702
+quantification,C48937,Quantitation,Activity,2708
+all tissue,C90476,Total Tissue,Body Substance,2734
+relevant,C70664,Relevance,Qualitative Concept,2738
+slide,C25325,Slide,Manufactured Object,2761
+potential,C62230,Potential,Idea or Concept,2784
+solutions,C75906,Resolution,Conceptual Entity,2794
+entire,C25497,Entire,Qualitative Concept,2847
+histological,C25526,Histologic,Qualitative Concept,2854
+sections,C48956,Section,Geographic Area,2867
+reviewed,C45314,Reviewed,Conceptual Entity,2880
+al,C111127,Aluminum Measurement,Laboratory Procedure,2904
+number,C25337,Number,Quantitative Concept,2954
+commercial source,C19287,Commercial Sources,Classification,2964
+open,C49069,Open,Qualitative Concept,2979
+solutions,C75906,Resolution,Conceptual Entity,2991
+provide,C80514,Provide,Activity,3006
+whole,C25326,Whole,Qualitative Concept,3016
+slide,C25325,Slide,Manufactured Object,3022
+staining,C50753,Staining,Finding,3028
+index,C25390,Index,Intellectual Product,3037
+percentage,C25613,Percentage,Conceptual Entity,3048
+total,C25304,Total,Qualitative Concept,3093
+counted cells,C48938,Cell Count,Laboratory Procedure,3099
+tissue,C33177,Tissue,Tissue,3118
+interest,C60730,Interest,Conceptual Entity,3128
+Region interest,C85402,Imaging Region of Interest,Spatial Concept,3139
+ROI,C85402,Imaging Region of Interest,Spatial Concept,3162
+selected,C48912,Choose,Activity,3171
+over,C65018,Over,Qualitative Concept,3213
+entire,C25497,Entire,Qualitative Concept,3222
+slide,C25325,Slide,Manufactured Object,3229
+pattern recognition,C16961,Pattern Recognition,Mental Process,3241
+algorithms,C16275,Algorithm,Intellectual Product,3261
+most,C25258,Most,Qualitative Concept,3277
+common,C43461,Common,Qualitative Concept,3282
+analysis Image,C17606,Image Processing,Activity,3289
+packages,C43233,Drug Package,Manufactured Object,3298
+levels,C25554,Level,Quantitative Concept,3320
+Technologies inForm,C16733,Information Sciences,Occupation or Discipline,3387
+MA,C71364,Master of Arts,Intellectual Product,3432
+Tissue,C33177,Tissue,Tissue,3437
+CA,C16380,Canada,Geographic Area,3497
+Denmark,C16496,Denmark,Geographic Area,3525
+MA,C71364,Master of Arts,Intellectual Product,3562
+NIH,C16895,National Institutes of Health,Health Care Related Organization,3578
+ROIs,C85402,Imaging Region of Interest,Spatial Concept,3591
+whole,C25326,Whole,Qualitative Concept,3605
+slide,C25325,Slide,Manufactured Object,3611
+quantification,C48937,Quantitation,Activity,3617
+often,C91247,Often,Intellectual Product,3632
+include,C74521,Include,Activity,3638
+regions,C41129,Region,Spatial Concept,3646
+heterogeneous,C28359,Heterogeneity,Qualitative Concept,3659
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,3673
+patterns,C25336,Pattern,Spatial Concept,3677
+histological,C25526,Histologic,Qualitative Concept,3690
+properties,C62498,Object Property,Conceptual Entity,3703
+heterogeneities,C28359,Heterogeneity,Qualitative Concept,3721
+may,C106184,May,Qualitative Concept,3737
+contain,C79873,Contain,Activity,3741
+useful,C107498,Useful,Qualitative Concept,3749
+information,C48191,Information,Conceptual Entity,3756
+al,C111127,Aluminum Measurement,Laboratory Procedure,3778
+information,C48191,Information,Conceptual Entity,3794
+lost,C25560,Lost,Qualitative Concept,3809
+calculate,C54125,Calculation,Activity,3822
+indices,C50001,Indicator Device Component,Manufactured Object,3841
+over,C65018,Over,Qualitative Concept,3849
+ROIs,C85402,Imaging Region of Interest,Spatial Concept,3859
+indices,C50001,Indicator Device Component,Manufactured Object,3874
+descriptors,C25364,Identifier,Intellectual Product,3898
+only,C65011,Only,Qualitative Concept,3910
+if,C64955,If,Qualitative Concept,3915
+patterns,C25336,Pattern,Spatial Concept,3933
+homogeneous,C61365,Homogeneity,Qualitative Concept,3946
+random,C60702,Random,Qualitative Concept,3985
+pattern,C25336,Pattern,Spatial Concept,3992
+uniform,C73944,Uniform,Qualitative Concept,4013
+pattern,C25336,Pattern,Spatial Concept,4021
+ROIs,C85402,Imaging Region of Interest,Spatial Concept,4059
+provides,C80514,Provide,Activity,4064
+local,C67263,Local,Spatial Concept,4073
+quantification,C48937,Quantitation,Activity,4079
+better,C71685,Better,Qualitative Concept,4108
+represents,C67045,Representation,Activity,4115
+heterogeneities,C28359,Heterogeneity,Qualitative Concept,4141
+instance,C48364,Instance,Conceptual Entity,4162
+al,C111127,Aluminum Measurement,Laboratory Procedure,4181
+patients based,C52644,Patient Base,Functional Concept,4203
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,4229
+immune,C17997,Immune,Organism Attribute,4246
+cells receptor,C13156,Receptor Cell,"Body Part, Organ, or Organ Component",4253
+estrogen receptor negative,C15493,Estrogen Receptor Negative,Laboratory or Test Result,4262
+estrogen receptor negative,C15493,Estrogen Receptor Negative,Laboratory or Test Result,4262
+breast cancer,C4872,Breast Carcinoma,Neoplastic Process,4289
+breast cancer,C4872,Breast Carcinoma,Neoplastic Process,4289
+automated,C70669,Automatic,Qualitative Concept,4331
+tools,C84337,Scientific Equipment,Manufactured Object,4341
+manual,C62612,Manual,Intellectual Product,4348
+efforts,C74530,Effort,Conceptual Entity,4355
+large,C49508,Large,Qualitative Concept,4399
+numbers,C25337,Number,Quantitative Concept,4405
+ROIs,C85402,Imaging Region of Interest,Spatial Concept,4421
+required,C25652,Requirement,Functional Concept,4426
+statistical,C17167,Statistics,Occupation or Discipline,4448
+patterns,C25336,Pattern,Spatial Concept,4530
+biological,C28226,Biological,Conceptual Entity,4542
+images,C49997,Imager Device Component,Manufactured Object,4553
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,4561
+images,C49997,Imager Device Component,Manufactured Object,4587
+al,C111127,Aluminum Measurement,Laboratory Procedure,4625
+class,C45280,Class,Conceptual Entity,4666
+analysis,C25391,Analysis,Activity,4675
+involves,C25547,Involved,Qualitative Concept,4684
+certain,C107561,Certain,Qualitative Concept,4700
+biological,C28226,Biological,Conceptual Entity,4741
+patterns,C25336,Pattern,Spatial Concept,4752
+homogeneity,C61365,Homogeneity,Qualitative Concept,4762
+aggregation,C62344,Aggregation,Phenomenon or Process,4777
+limited,C121422,Limited Lifting Ability,Intellectual Product,4804
+number,C25337,Number,Quantitative Concept,4812
+known,C80137,Known,Conceptual Entity,4822
+patterns,C25336,Pattern,Spatial Concept,4836
+estimate,C25498,Estimate,Activity,4848
+model,C16866,Model,Intellectual Product,4857
+parameters,C44175,Parameter,Conceptual Entity,4863
+confidence intervals,C53324,Confidence Interval,Quantitative Concept,4884
+most,C25258,Most,Qualitative Concept,4910
+common,C43461,Common,Qualitative Concept,4915
+model,C16866,Model,Intellectual Product,4930
+uniform distribution,C53214,Uniform Distribution,Quantitative Concept,4939
+random,C60702,Random,Qualitative Concept,4947
+distribution Poisson,C53212,Poisson Distribution,Quantitative Concept,4954
+process,C29862,Process,Functional Concept,4984
+one,C66832,One,Quantitative Concept,4998
+parameter,C44175,Parameter,Conceptual Entity,5002
+corresponds,C115639,Centralized Testing Communication Document,Intellectual Product,5017
+staining,C50753,Staining,Finding,5036
+index,C25390,Index,Intellectual Product,5045
+al,C111127,Aluminum Measurement,Laboratory Procedure,5065
+have,C101282,Have,Classification,5076
+analyzed,C25420,Analyzed,Qualitative Concept,5081
+processes,C48177,Processing,Research Activity,5098
+using techniques,C43813,Technique_Is_Used_In_Technique,Conceptual Entity,5108
+bootstrapping,C78547,Bootstrapping,Quantitative Concept,5114
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,5157
+staining,C50753,Staining,Finding,5161
+index,C25390,Index,Intellectual Product,5170
+patterns,C25336,Pattern,Spatial Concept,5187
+confidence intervals,C53324,Confidence Interval,Quantitative Concept,5206
+method,C71460,Method,Conceptual Entity,5236
+patterns,C25336,Pattern,Spatial Concept,5252
+different,C46003,Difference,Qualitative Concept,5266
+intensities,C25539,Intensity,Quantitative Concept,5276
+non,C25594,Negation,Functional Concept,5292
+overlapping,C54669,Overlap,Conceptual Entity,5296
+confidence intervals,C53324,Confidence Interval,Quantitative Concept,5308
+NCIs,C19202,National Cancer Institute,Health Care Related Organization,5330
+statistically,C17167,Statistics,Occupation or Discipline,5340
+non,C25594,Negation,Functional Concept,5391
+homogeneous,C61365,Homogeneity,Qualitative Concept,5395
+models observed,C126064,Observational Model,Research Activity,5415
+fit,C70826,Fit,Activity,5425
+patterns,C25336,Pattern,Spatial Concept,5438
+statistical,C17167,Statistics,Occupation or Discipline,5451
+comparison,C49156,Comparison,Activity,5463
+not,C25594,Negation,Functional Concept,5477
+Mechanisms,C25343,Mechanism,Functional Concept,5490
+pattern formation,C19970,Pattern Formation,Organ or Tissue Function,5504
+models,C16866,Model,Intellectual Product,5576
+complicating,C25455,Complicating,Qualitative Concept,5592
+factor,C25506,Factor,Functional Concept,5605
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,5620
+patterns,C25336,Pattern,Spatial Concept,5624
+contain,C79873,Contain,Activity,5633
+different,C46003,Difference,Qualitative Concept,5641
+classes,C45280,Class,Conceptual Entity,5651
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,5670
+same,C64637,Same,Qualitative Concept,5695
+slide,C25325,Slide,Manufactured Object,5700
+tissue,C33177,Tissue,Tissue,5707
+section,C48956,Section,Geographic Area,5714
+cohort,C61512,Cohort,Population Group,5736
+analysis,C25391,Analysis,Activity,5744
+patterns,C25336,Pattern,Spatial Concept,5767
+makes,C25392,Manufacturer,Intellectual Product,5784
+even,C64936,Evening,Temporal Concept,5793
+more,C128667,More,Qualitative Concept,5798
+difficult,C62189,Difficulty,Conceptual Entity,5803
+fit,C70826,Fit,Activity,5816
+single,C48440,Single,Qualitative Concept,5822
+model,C16866,Model,Intellectual Product,5837
+analysis,C25391,Analysis,Activity,5852
+often,C91247,Often,Intellectual Product,5861
+requires,C38015,Requirement,Conceptual Entity,5867
+simple,C47880,Simple,Qualitative Concept,5890
+contiguous,C28019,Contiguous,Qualitative Concept,5898
+regions,C41129,Region,Spatial Concept,5909
+applies,C113519,Apply,Activity,5921
+complex,C47881,Complex,Qualitative Concept,5929
+schemes,C25665,Scheme,Intellectual Product,5937
+correct,C68815,Correct,Conceptual Entity,5948
+edge,C75923,Graph Edge,Conceptual Entity,5960
+effects,C25492,Effect,Phenomenon or Process,5965
+requirements,C38015,Requirement,Conceptual Entity,5980
+usually,C114711,Usually,Intellectual Product,5997
+not,C25594,Negation,Functional Concept,6005
+met,C87531,Fulfill,Activity,6009
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,6016
+patterns,C25336,Pattern,Spatial Concept,6020
+see,C64647,See,Activity,6030
+viable,C25324,Viable,Qualitative Concept,6034
+tumor,C98275,Tumor Mass,Finding,6041
+regions,C41129,Region,Spatial Concept,6047
+separated,C51777,Separated,Organism Attribute,6055
+necrotic,C25286,Necrotic,Qualitative Concept,6068
+regions,C41129,Region,Spatial Concept,6077
+Fig,C71971,Fig,"Plant, Food",6086
+pattern formation,C19970,Pattern Formation,Organ or Tissue Function,6120
+mechanisms,C25343,Mechanism,Functional Concept,6138
+multi,C17648,Multiple,Qualitative Concept,6161
+model,C16866,Model,Intellectual Product,6178
+automated,C70669,Automatic,Qualitative Concept,6227
+al,C111127,Aluminum Measurement,Laboratory Procedure,6258
+provide,C80514,Provide,Activity,6268
+number,C25337,Number,Quantitative Concept,6278
+unbiased estimate,C53329,Unbiased Estimation,Research Activity,6288
+techniques histological,C16680,Histological Procedure,Laboratory Procedure,6297
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,6337
+properties,C62498,Object Property,Conceptual Entity,6341
+2D,C94949,PET Scanner 2D Mode,Functional Concept,6355
+3D,C94950,PET Scanner 3D Mode,Functional Concept,6362
+well,C70592,Well,Spatial Concept,6372
+established,C71155,Established,Qualitative Concept,6377
+techniques,C16847,Technique,Activity,6389
+work,C74299,Work,Activity,6416
+heterogeneous,C28359,Heterogeneity,Qualitative Concept,6426
+patterns,C25336,Pattern,Spatial Concept,6440
+provide,C80514,Provide,Activity,6453
+information,C48191,Information,Conceptual Entity,6472
+structure cells,C14135,Cell Structure,Cell Component,6494
+function cells,C20480,Cellular Process,Cell Function,6508
+tissues,C33177,Tissue,Tissue,6527
+organs,C93874,Organization Name,Intellectual Product,6539
+class,C45280,Class,Conceptual Entity,6549
+techniques,C16847,Technique,Activity,6572
+provides,C80514,Provide,Activity,6583
+tools,C84337,Scientific Equipment,Manufactured Object,6592
+estimate,C25498,Estimate,Activity,6601
+count,C25463,Count,Quantitative Concept,6614
+objects,C45974,Computer Programming Object,Conceptual Entity,6623
+3D,C94950,PET Scanner 3D Mode,Functional Concept,6636
+volume,C25335,Volume,Quantitative Concept,6639
+number,C25337,Number,Quantitative Concept,6653
+brain,C12439,Brain,"Body Part, Organ, or Organ Component",6663
+cells,C48694,Cell,Spatial Concept,6669
+brain,C12439,Brain,"Body Part, Organ, or Organ Component",6684
+region,C41129,Region,Spatial Concept,6690
+estimates,C53327,Statistical Estimation,Research Activity,6705
+based,C48055,Base,Qualitative Concept,6719
+sum,C25697,Sum,Quantitative Concept,6730
+objects,C45974,Computer Programming Object,Conceptual Entity,6737
+frames,C80261,Frame,Classification,6769
+distributed,C45273,Distribution,Activity,6795
+sampling,C25662,Sampling,Activity,6822
+grid,C70846,Grid,Manufactured Object,6831
+over,C65018,Over,Qualitative Concept,6836
+tissue,C33177,Tissue,Tissue,6845
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,6865
+individual,C17719,Individual,Human,6897
+counts,C48485,Count Dosing Unit,Quantitative Concept,6908
+frames,C80261,Frame,Classification,6928
+lost,C25560,Lost,Qualitative Concept,6938
+single,C48440,Single,Qualitative Concept,6969
+number,C25337,Number,Quantitative Concept,6976
+each,C64933,Each,Qualitative Concept,6987
+tissue sample.',C19697,Tissue Sample,Tissue,6992
+summary,C42581,Summary,Intellectual Product,7013
+methods,C71460,Method,Conceptual Entity,7051
+reliability,C73622,Reliability,Quantitative Concept,7077
+robustness,C94972,Robust,Qualitative Concept,7104
+loss,C25559,Loss,Quantitative Concept,7122
+information,C48191,Information,Conceptual Entity,7130
+development,C18732,Development,Organism Function,7162
+model,C16866,Model,Intellectual Product,7189
+free,C63628,Empty,Qualitative Concept,7195
+technique,C16847,Technique,Activity,7200
+compares,C49882,Comparator Device Component,Manufactured Object,7230
+properties,C62498,Object Property,Conceptual Entity,7250
+tissue,C33177,Tissue,Tissue,7264
+accounts,C88186,Financial Account,Classification,7278
+present,C25626,Present,Qualitative Concept,7325
+robust,C94972,Robust,Qualitative Concept,7335
+method,C71460,Method,Conceptual Entity,7342
+quantify,C48937,Quantitation,Activity,7352
+tissue,C33177,Tissue,Tissue,7384
+properties,C62498,Object Property,Conceptual Entity,7391
+measured,C44473,Measured,Qualitative Concept,7405
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,7417
+staining,C50753,Staining,Finding,7421
+indices,C50001,Indicator Device Component,Manufactured Object,7430
+whole,C25326,Whole,Qualitative Concept,7468
+slide,C25325,Slide,Manufactured Object,7474
+images,C49997,Imager Device Component,Manufactured Object,7480
+into,C25544,Into,Spatial Concept,7494
+set,C47894,Set,Conceptual Entity,7501
+small,C25376,Small,Qualitative Concept,7508
+square,C48350,Square Shape,Qualitative Concept,7514
+computed,C61298,Computation,Activity,7531
+distributions,C45273,Distribution,Activity,7544
+staining,C50753,Staining,Finding,7561
+indices,C50001,Indicator Device Component,Manufactured Object,7570
+represent,C67045,Representation,Activity,7581
+tissue,C33177,Tissue,Tissue,7591
+heterogeneities,C28359,Heterogeneity,Qualitative Concept,7598
+samples,C70699,Biospecimen,Body Substance,7623
+distributions,C45273,Distribution,Activity,7642
+inputs,C47905,Input,Conceptual Entity,7659
+non,C25594,Negation,Functional Concept,7669
+statistical,C17167,Statistics,Occupation or Discipline,7684
+comparisons,C49156,Comparison,Activity,7696
+applied,C113519,Apply,Activity,7712
+quantification,C48937,Quantitation,Activity,7724
+methods statistically,C19044,Statistical Technique,Quantitative Concept,7739
+detect,C117041,Dosing Days to Detection,Quantitative Concept,7750
+statistically significant,C28110,Statistically Significant,Quantitative Concept,7757
+alterations,C28344,Alteration,Conceptual Entity,7794
+Standard Care,C94396,Best Practice,Health Care Activity,7821
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,7839
+chemotherapy,C15632,Chemotherapy,Therapeutic or Preventive Procedure,7844
+double blinded study,C15228,Double Blind Study,Research Activity,7862
+preclinical study,C48678,Nonclinical Study,Research Activity,7877
+patient derived xenograft model,C122936,Patient Derived Xenograft,Experimental Model of Disease,7900
+orthotopic,C94384,Orthotopic,Qualitative Concept,7916
+pediatric,C14154,Pediatric,Temporal Concept,7946
+neuroblastoma,C3270,Neuroblastoma,Neoplastic Process,7956
+Stewart,C44194,Stewart,Population Group,7971
+al,C111127,Aluminum Measurement,Laboratory Procedure,7982
+statistical tests,C53228,Statistical Test,Quantitative Concept,8006
+based,C48055,Base,Qualitative Concept,8024
+grid,C70846,Grid,Manufactured Object,8037
+quantification,C48937,Quantitation,Activity,8042
+method,C71460,Method,Conceptual Entity,8057
+able,C78209,Ability,Functional Concept,8068
+detect,C117041,Dosing Days to Detection,Quantitative Concept,8076
+alterations,C28344,Alteration,Conceptual Entity,8083
+other,C17649,Other,Qualitative Concept,8100
+based,C48055,Base,Qualitative Concept,8112
+whole,C25326,Whole,Qualitative Concept,8121
+slide,C25325,Slide,Manufactured Object,8127
+indices,C50001,Indicator Device Component,Manufactured Object,8133
+Study',C93130,Animal Study,Research Activity,8193
+Study' double blind,C15228,Double Blind Study,Research Activity,8193
+tissue samples,C19697,Tissue Sample,Tissue,8225
+26,C126886,Twenty Six,Quantitative Concept,8245
+CD1,C114988,CD1 Glycoprotein,Classification,8248
+nude,C14239,Nude Mouse,Mammal,8252
+mice,C14238,Mouse,Mammal,8257
+randomized,C28295,Randomized,Functional Concept,8285
+Stewart,C44194,Stewart,Population Group,8316
+al,C111127,Aluminum Measurement,Laboratory Procedure,8327
+two,C66833,Two,Quantitative Concept,8342
+treatment arms,C15538,Protocol Treatment Arm,Research Activity,8346
+placebo,C753,Placebo,Conceptual Entity,8362
+standard care,C94396,Best Practice,Health Care Activity,8374
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,8392
+All,C64916,All,Qualitative Concept,8398
+animal,C14182,Animal,Animal,8406
+procedures performed,C93431,Performed Procedure,Research Activity,8413
+IACUC,C19487,Institutional Animal Care and Use Committee,Professional or Occupational Group,8456
+approved protocol,C70745,Approved Protocol,Functional Concept,8462
+ultrasound,C64384,Ultrasound,Natural Phenomenon or Process,8489
+injection,C122632,Injection Dosing Unit,Quantitative Concept,8507
+implant,C41075,Implant,Medical Device,8520
+patient,C16960,Patient,Patient or Disabled Group,8536
+derived,C81197,Derived Flag,Conceptual Entity,8544
+neuroblastoma,C3270,Neuroblastoma,Neoplastic Process,8552
+cells,C48694,Cell,Spatial Concept,8566
+suspended,C126839,Study Site Temporarily Closed to Accrual and Intervention,Qualitative Concept,8573
+para,C16955,Parity,Organism Attribute,8618
+adrenal,C473,Therapeutic Epinephrine,"Organic Chemical, Pharmacologic Substance",8623
+space,C63629,Space,Spatial Concept,8631
+al,C111127,Aluminum Measurement,Laboratory Procedure,8647
+Mice,C14238,Mouse,Mammal,8658
+study,C63536,Study,Research Activity,8684
+tumors,C98275,Tumor Mass,Finding,8695
+first,C25509,First,Qualitative Concept,8707
+detected,C25481,Detected,Conceptual Entity,8713
+regular,C25647,Regular,Qualitative Concept,8725
+ultrasound imaging,C17230,Ultrasonography,Health Care Activity,8733
+every three weeks,C64535,Every Three Weeks,Temporal Concept,8752
+Mice,C14238,Mouse,Mammal,8771
+study,C63536,Study,Research Activity,8792
+if,C64955,If,Qualitative Concept,8798
+tumor burden,C28384,Tumor Burden,Idea or Concept,8805
+body weight,C81328,Body Weight,Conceptual Entity,8837
+if,C64955,If,Qualitative Concept,8852
+weight loss,C3445,Weight Loss,Finding,8882
+lethargy,C78416,Lethargy,Finding,8895
+persistent,C43623,Persistent,Qualitative Concept,8909
+dehydration,C26740,Dehydration,Finding,8920
+died,C28554,Death,Finding,8936
+Tumors,C98275,Tumor Mass,Finding,8942
+ultrasound,C64384,Ultrasound,Natural Phenomenon or Process,8990
+every three weeks,C64535,Every Three Weeks,Temporal Concept,9001
+enrollment,C37948,Enrollment,Health Care Activity,9028
+date,C25164,Date,Temporal Concept,9039
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,9045
+regimen,C15697,Treatment Regimen,Functional Concept,9049
+two,C66833,Two,Quantitative Concept,9066
+week,C29844,Week,Temporal Concept,9072
+courses,C25379,Course,Clinical Attribute,9077
+first,C25509,First,Qualitative Concept,9090
+after,C49639,Status Post,Temporal Concept,9107
+enrollment,C37948,Enrollment,Health Care Activity,9113
+Mice,C14238,Mouse,Mammal,9126
+only,C65011,Only,Qualitative Concept,9131
+received,C25639,Receive,Functional Concept,9136
+drugs,C459,Medication,Pharmacologic Substance,9145
+during,C25490,During,Temporal Concept,9151
+first,C25509,First,Qualitative Concept,9162
+week,C29844,Week,Temporal Concept,9168
+each,C64933,Each,Qualitative Concept,9176
+course,C25379,Course,Clinical Attribute,9181
+no,C49487,No,Classification,9189
+drugs,C459,Medication,Pharmacologic Substance,9192
+each,C64933,Each,Qualitative Concept,9219
+Mice,C14238,Mouse,Mammal,9233
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,9245
+arm,C32141,Arm,Anatomical Structure,9249
+received,C25639,Receive,Functional Concept,9253
+cyclophosphamide,C405,Cyclophosphamide,"Organic Chemical, Pharmacologic Substance",9262
+mg kg days,C66976,Milligram per Kilogram per Day,Quantitative Concept,9284
+days 1 2,C126448,One or Two Days,Intellectual Product,9291
+Adriamycin,C1326,Doxorubicin Hydrochloride,Pharmacologic Substance,9306
+etoposide,C491,Etoposide,"Organic Chemical, Pharmacologic Substance",9340
+courses,C25379,Course,Clinical Attribute,9378
+cisplatin,C376,Cisplatin,"Inorganic Chemical, Pharmacologic Substance",9392
+2 mg,C68265,Magnesium Cation,"Element, Ion, or Isotope",9403
+mg kg days,C66976,Milligram per Kilogram per Day,Quantitative Concept,9405
+mg kg days,C66976,Milligram per Kilogram per Day,Quantitative Concept,9444
+courses,C25379,Course,Clinical Attribute,9470
+tumor mass,C98275,Tumor Mass,Finding,9552
+fixed,C84514,Fixed Specimen,Body Substance,9567
+formalin,C29744,Formaldehyde,"Organic Chemical, Indicator, Reagent, or Diagnostic Aid, Hazardous or Poisonous Substance",9580
+processed tissue,C113056,Tissue Processing,Laboratory Procedure,9593
+processed tissue,C113056,Tissue Processing,Laboratory Procedure,9593
+embedded tissue paraffin,C19597,Paraffin Embedded Tissue,Tissue,9607
+slices,C25682,Slice,Manufactured Object,9627
+prepared,C25625,Preparation,Activity,9650
+three,C66834,Three,Quantitative Concept,9659
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,9665
+thick,C81186,Thick,Conceptual Entity,9681
+serial,C73518,Serial Number,Intellectual Product,9687
+sections,C48956,Section,Geographic Area,9694
+each,C64933,Each,Qualitative Concept,9708
+block,C61286,Block,Activity,9713
+serial,C73518,Serial Number,Intellectual Product,9724
+section,C48956,Section,Geographic Area,9731
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,9739
+each,C64933,Each,Qualitative Concept,9773
+serial,C73518,Serial Number,Intellectual Product,9778
+section,C48956,Section,Geographic Area,9785
+set,C47894,Set,Conceptual Entity,9793
+one,C66832,One,Quantitative Concept,9818
+section,C48956,Section,Geographic Area,9822
+stain,C841,Stain,"Indicator, Reagent, or Diagnostic Aid",9834
+cellular,C111153,Cellularity Measurement,Laboratory Procedure,9857
+apoptosis,C17557,Apoptosis,Phenomenon or Process,9866
+activated caspase 3,C128277,Activated Caspase-3,"Amino Acid, Peptide, or Protein, Enzyme",9893
+CASP3,C26574,CASP3 Gene,Gene or Genome,9914
+mitosis,C16864,Mitosis,Phenomenon or Process,9925
+histone,C16685,Histone H3,"Amino Acid, Peptide, or Protein",9959
+proliferation,C28378,Proliferation,Conceptual Entity,9979
+Ki67,C123557,Ki67 Measurement,Laboratory Procedure,10010
+blood vessels,C23610,Murine Blood Vessel,"Body Part, Organ, or Organ Component",10019
+blood vessels,C32213,Blood Vessel Tissue,Tissue,10019
+CD34,C17280,Hematopoietic Progenitor Cell Antigen CD34,"Amino Acid, Peptide, or Protein, Immunologic Factor",10050
+slides,C50178,Slide Device Component,Manufactured Object,10078
+hematoxylin eosin,C23011,Hematoxylin and Eosin Staining Method,Laboratory Procedure,10090
+cellular,C111153,Cellularity Measurement,Laboratory Procedure,10126
+tissue,C33177,Tissue,Tissue,10139
+structures,C41186,Structure,Functional Concept,10146
+list,C43432,List,Intellectual Product,10162
+antibodies,C16295,Antibody,"Amino Acid, Peptide, or Protein, Immunologic Factor",10170
+staining,C50753,Staining,Finding,10182
+instrumentation,C16742,Instrumentation,Manufactured Object,10191
+protocols,C70817,Study Protocol,Intellectual Product,10211
+provided,C80514,Provide,Activity,10233
+Supplemental,C68641,Supplement,Functional Concept,10245
+Table,C48441,Table,Manufactured Object,10258
+S2.',C68671,Inch per Second Squared,Quantitative Concept,10264
+Image Processing,C17606,Image Processing,Activity,10295
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,10316
+method,C71460,Method,Conceptual Entity,10374
+includes,C74521,Include,Activity,10381
+three,C66834,Three,Quantitative Concept,10390
+main,C25562,Main,Qualitative Concept,10396
+steps,C16154,Treatment Step,Health Care Activity,10401
+1 scanning,C97376,CANT1 wt Allele,Gene or Genome,10408
+slide,C25325,Slide,Manufactured Object,10411
+tissue,C33177,Tissue,Tissue,10448
+classification,C25161,Classification,Intellectual Product,10455
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,10474
+marker,C16342,Biomarker,Functional Concept,10478
+detection,C16210,Detection,Diagnostic Procedure,10485
+discuss,C71323,Discussion,Organism Function,10507
+image processing,C17606,Image Processing,Activity,10519
+steps,C16154,Treatment Step,Health Care Activity,10536
+following,C53286,Next,Temporal Concept,10549
+sections,C48956,Section,Geographic Area,10559
+provide,C80514,Provide,Activity,10572
+more,C128667,More,Qualitative Concept,10582
+detailed,C25480,Details,Idea or Concept,10587
+description material,C93859,Material Description,Intellectual Product,10596
+supplemental,C68641,Supplement,Functional Concept,10615
+quantify,C48937,Quantitation,Activity,10641
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,10650
+tissue,C33177,Tissue,Tissue,10660
+section,C48956,Section,Geographic Area,10667
+classified,C25373,Classified,Qualitative Concept,10703
+grids,C70846,Grid,Manufactured Object,10724
+Fig,C71971,Fig,"Plant, Food",10731
+into,C25544,Into,Spatial Concept,10739
+many,C78728,Many,Qualitative Concept,10744
+calculated,C54125,Calculation,Activity,10759
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,10773
+staining,C50753,Staining,Finding,10777
+index,C25390,Index,Intellectual Product,10786
+each,C64933,Each,Qualitative Concept,10796
+distribution distribution statistical,C53206,Statistical Distribution,Quantitative Concept,10824
+grid,C70846,Grid,Manufactured Object,10842
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,10852
+indices,C50001,Indicator Device Component,Manufactured Object,10856
+run,C47911,Run,Activity,10901
+statistical tests.',C53228,Statistical Test,Quantitative Concept,10905
+scale,C25664,Scale,Intellectual Product,10933
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,10952
+Tumor tissue,C18009,Tumor Tissue,Tissue,10967
+Tumor sampled,C18009,Tumor Tissue,Tissue,10967
+tissue sampled,C19697,Tissue Sample,Tissue,10973
+make,C64661,Make,Activity,10991
+multiple,C17648,Multiple,Qualitative Concept,10998
+block,C61286,Block,Activity,11014
+Serial,C73518,Serial Number,Intellectual Product,11021
+sections,C48956,Section,Geographic Area,11028
+each,C64933,Each,Qualitative Concept,11052
+block,C61286,Block,Activity,11057
+stained H&E,C23011,Hematoxylin and Eosin Staining Method,Laboratory Procedure,11075
+DAB,C28954,DAB,Pharmacologic Substance,11088
+Whole,C25326,Whole,Qualitative Concept,11121
+slide,C25325,Slide,Manufactured Object,11127
+sections,C48956,Section,Geographic Area,11133
+classified,C25373,Classified,Qualitative Concept,11147
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,11163
+index,C25390,Index,Intellectual Product,11167
+distributions,C45273,Distribution,Activity,11173
+three,C66834,Three,Quantitative Concept,11209
+grid,C70846,Grid,Manufactured Object,11215
+sizes,C25681,Size,Quantitative Concept,11225
+Heterogeneity,C28359,Heterogeneity,Qualitative Concept,11232
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,11249
+index,C25390,Index,Intellectual Product,11253
+decreases,C25640,Reduced,Qualitative Concept,11259
+size,C25681,Size,Quantitative Concept,11277
+Scanning,C47852,Radionuclide Scanning,Diagnostic Procedure,11314
+all,C64916,All,Qualitative Concept,11380
+slides,C50178,Slide Device Component,Manufactured Object,11388
+objective,C88181,Objective,Conceptual Entity,11407
+lens,C12743,Lens,"Body Part, Organ, or Organ Component",11417
+scanner,C50158,Scanner Device Component,Manufactured Object,11463
+pixel,C48367,Pixel,Conceptual Entity,11497
+images,C49997,Imager Device Component,Manufactured Object,11543
+all,C64916,All,Qualitative Concept,11579
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,11583
+quantifications,C48937,Quantitation,Activity,11587
+applied,C113519,Apply,Activity,11607
+color,C37927,Color,Qualitative Concept,11617
+deconvolution,C47929,Deconvolution,Activity,11623
+technique,C16847,Technique,Activity,11637
+each,C64933,Each,Qualitative Concept,11678
+image,C48179,Image,Entity,11683
+custom,C65167,Customize,Activity,11699
+color,C37927,Color,Qualitative Concept,11706
+vectors,C54169,Vector,Conceptual Entity,11712
+into,C25544,Into,Spatial Concept,11720
+three,C66834,Three,Quantitative Concept,11725
+color,C37927,Color,Qualitative Concept,11731
+channels,C44170,Channel,Conceptual Entity,11737
+pink,C48328,Pink,Qualitative Concept,11754
+orange,C48331,Orange,Qualitative Concept,11759
+hematoxylin,C75425,Hematoxylin,"Organic Chemical, Indicator, Reagent, or Diagnostic Aid",11768
+blue,C48333,Blue,Qualitative Concept,11781
+purple,C48327,Purple,Qualitative Concept,11786
+DAB,C28954,DAB,Pharmacologic Substance,11821
+brown,C48332,Brown,Qualitative Concept,11826
+computed,C61298,Computation,Activity,11837
+custom,C65167,Customize,Activity,11850
+color,C37927,Color,Qualitative Concept,11857
+three,C66834,Three,Quantitative Concept,11875
+slides,C50178,Slide Device Component,Manufactured Object,11881
+each,C64933,Each,Qualitative Concept,11889
+stained H E,C23011,Hematoxylin and Eosin Staining Method,Laboratory Procedure,11894
+one,C66832,One,Quantitative Concept,11907
+DAB,C28954,DAB,Pharmacologic Substance,11914
+three,C66834,Three,Quantitative Concept,11940
+color,C37927,Color,Qualitative Concept,11946
+channels,C44170,Channel,Conceptual Entity,11952
+tissue,C33177,Tissue,Tissue,11965
+classification,C25161,Classification,Intellectual Product,11972
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,11991
+quantification,C48937,Quantitation,Activity,11995
+Fiji,C16582,Fiji,Geographic Area,12019
+al,C111127,Aluminum Measurement,Laboratory Procedure,12039
+entire,C25497,Entire,Qualitative Concept,12057
+image processing,C17606,Image Processing,Activity,12064
+image study study,C63859,Image Study,Diagnostic Procedure,12064
+study study,C95108,Nonclinical Study Title,Research Activity,12088
+indices,C50001,Indicator Device Component,Manufactured Object,12154
+calculated,C54125,Calculation,Activity,12181
+over,C65018,Over,Qualitative Concept,12192
+viable,C25324,Viable,Qualitative Concept,12197
+tumor,C98275,Tumor Mass,Finding,12204
+regions,C41129,Region,Spatial Concept,12210
+learning,C19369,Learning,Mental Process,12242
+based,C48055,Base,Qualitative Concept,12251
+tissue,C33177,Tissue,Tissue,12257
+Fiji,C16582,Fiji,Geographic Area,12281
+al,C111127,Aluminum Measurement,Laboratory Procedure,12301
+identify tumor,C106577,Tumor Identifier Domain,Idea or Concept,12314
+viable,C25324,Viable,Qualitative Concept,12323
+regions,C41129,Region,Spatial Concept,12336
+Fig,C71971,Fig,"Plant, Food",12345
+staining H&E,C23011,Hematoxylin and Eosin Staining Method,Laboratory Procedure,12366
+texture,C41144,Texture,Quantitative Concept,12379
+features,C70838,Image Feature,Qualitative Concept,12387
+slides,C50178,Slide Device Component,Manufactured Object,12403
+Ki67,C123557,Ki67 Measurement,Laboratory Procedure,12423
+each,C64933,Each,Qualitative Concept,12461
+set,C47894,Set,Conceptual Entity,12466
+into,C25544,Into,Spatial Concept,12493
+one,C66832,One,Quantitative Concept,12498
+three,C66834,Three,Quantitative Concept,12505
+types 2,C125395,Bristol Stool Type 2,Intellectual Product,12511
+Fig,C71971,Fig,"Plant, Food",12518
+viable,C25324,Viable,Qualitative Concept,12527
+tumor,C18009,Tumor Tissue,Tissue,12534
+necrotic,C25286,Necrotic,Qualitative Concept,12548
+background,C45782,Background,Conceptual Entity,12569
+stroma,C67387,Stroma,Tissue,12581
+fat tissue,C12472,Adipose Tissue,Tissue,12589
+tissue liver,C32735,Hepatic Tissue,Tissue,12594
+folds,C63134,Fold in Medical Device Material,Event,12601
+kidney,C12415,Kidney,"Body Part, Organ, or Organ Component",12615
+glass,C45301,Glass,Substance,12623
+spleen,C12432,Spleen,"Body Part, Organ, or Organ Component",12630
+muscle,C13056,Muscle,"Body Part, Organ, or Organ Component",12641
+images,C49997,Imager Device Component,Manufactured Object,12679
+pixel,C48367,Pixel,Conceptual Entity,12689
+training,C17705,Training,Educational Activity,12723
+set,C47894,Set,Conceptual Entity,12732
+tissue,C33177,Tissue,Tissue,12748
+classifiers,C25161,Classification,Intellectual Product,12755
+final,C25508,Final,Conceptual Entity,12779
+application,C70867,Application,Intellectual Product,12785
+target,C25702,Target,Conceptual Entity,12828
+images,C49997,Imager Device Component,Manufactured Object,12835
+details,C25480,Details,Idea or Concept,12847
+see,C64647,See,Activity,12855
+Supplemental,C68641,Supplement,Functional Concept,12859
+Material,C48187,Material,Substance,12872
+final,C25508,Final,Conceptual Entity,12887
+version,C25714,Version,Conceptual Entity,12893
+accuracy,C49145,Accuracy,Qualitative Concept,12932
+region,C41129,Region,Spatial Concept,12945
+10,C69122,Ten,Quantitative Concept,12957
+fold,C63134,Fold in Medical Device Material,Event,12960
+cross validation,C78545,Cross Validation,Quantitative Concept,12965
+test,C47891,Test,Activity,12982
+al,C111127,Aluminum Measurement,Laboratory Procedure,13004
+Based,C48055,Base,Qualitative Concept,13015
+results,C20200,Outcome,Finding,13024
+mean,C53319,Mean,Quantitative Concept,13062
+viable,C25324,Viable,Qualitative Concept,13067
+tumor tissue,C18009,Tumor Tissue,Tissue,13074
+areas,C16632,Geographic Area,Geographic Area,13087
+placebo,C753,Placebo,Conceptual Entity,13109
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,13121
+arms,C15538,Protocol Treatment Arm,Research Activity,13125
+29,C105800,Twenty Nine,Quantitative Concept,13135
+13,C113427,Thirteen,Quantitative Concept,13143
+mm2,C122199,per Square Millimeter,Quantitative Concept,13146
+15,C113429,Fifteen,Quantitative Concept,13162
+mm2,C122199,per Square Millimeter,Quantitative Concept,13165
+mean,C53319,Mean,Quantitative Concept,13188
+necrotic,C25286,Necrotic,Qualitative Concept,13193
+tissue,C33177,Tissue,Tissue,13202
+areas,C16632,Geographic Area,Geographic Area,13209
+placebo,C753,Placebo,Conceptual Entity,13231
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,13243
+arms,C15538,Protocol Treatment Arm,Research Activity,13247
+20,C105799,Twenty,Quantitative Concept,13257
+16,C113430,Sixteen,Quantitative Concept,13265
+mm2,C122199,per Square Millimeter,Quantitative Concept,13268
+mm2,C122199,per Square Millimeter,Quantitative Concept,13285
+slide,C25325,Slide,Manufactured Object,13313
+tissue,C33177,Tissue,Tissue,13319
+segmentation,C80146,Image Segmentation,Activity,13326
+output,C47906,Output,Conceptual Entity,13339
+Tissue,C33177,Tissue,Tissue,13347
+section,C48956,Section,Geographic Area,13354
+stained H&E,C23011,Hematoxylin and Eosin Staining Method,Laboratory Procedure,13362
+Ki67,C123557,Ki67 Measurement,Laboratory Procedure,13374
+cells,C48694,Cell,Spatial Concept,13420
+have,C101282,Have,Classification,13431
+necrotic,C25286,Necrotic,Qualitative Concept,13441
+longest,C25558,Longest,Qualitative Concept,13458
+time,C25207,Time,Temporal Concept,13466
+only,C65011,Only,Qualitative Concept,13471
+lightly,C64650,Light,Qualitative Concept,13476
+stain,C841,Stain,"Indicator, Reagent, or Diagnostic Aid",13484
+hematoxylin,C75425,Hematoxylin,"Organic Chemical, Indicator, Reagent, or Diagnostic Aid",13508
+negative,C25247,Negative,Conceptual Entity,13520
+necrotic,C25286,Necrotic,Qualitative Concept,13529
+regions,C41129,Region,Spatial Concept,13544
+Cells small,C23422,Murine Small Cells,,13554
+DNA,C449,DNA,"Nucleic Acid, Nucleoside, or Nucleotide",13595
+dead,C28554,Death,Finding,13627
+advanced,C25411,Advanced,Qualitative Concept,13635
+process,C29862,Process,Functional Concept,13651
+hematoxylin,C75425,Hematoxylin,"Organic Chemical, Indicator, Reagent, or Diagnostic Aid",13669
+positive,C25246,Positive,Qualitative Concept,13681
+necrotic,C25286,Necrotic,Qualitative Concept,13690
+HPN,C101718,HPN Gene,Gene or Genome,13700
+regions,C41129,Region,Spatial Concept,13705
+Red,C48326,Red,Qualitative Concept,13715
+live,C89279,Reside,Activity,13720
+tumor,C98275,Tumor Mass,Finding,13725
+yellow,C48330,Yellow,Qualitative Concept,13732
+negative,C25247,Negative,Conceptual Entity,13742
+necrotic,C25286,Necrotic,Qualitative Concept,13751
+long,C25248,Long,Qualitative Concept,13761
+standing,C62166,Standing,Spatial Concept,13766
+necrotic,C25286,Necrotic,Qualitative Concept,13775
+orange,C48331,Orange,Qualitative Concept,13786
+positive,C25246,Positive,Qualitative Concept,13796
+necrotic,C25286,Necrotic,Qualitative Concept,13805
+HPN,C101718,HPN Gene,Gene or Genome,13815
+forming,C25513,Formation,Conceptual Entity,13820
+necrotic,C25286,Necrotic,Qualitative Concept,13828
+blue,C48333,Blue,Qualitative Concept,13839
+background,C45782,Background,Conceptual Entity,13845
+Scale,C25664,Scale,Intellectual Product,13863
+Marker,C16342,Biomarker,Functional Concept,13900
+automated,C70669,Automatic,Qualitative Concept,13945
+intensity,C25539,Intensity,Quantitative Concept,13955
+threshold,C48228,Threshold,Conceptual Entity,13965
+constant,C64638,Constant,Qualitative Concept,13980
+often,C91247,Often,Intellectual Product,13992
+DAB,C28954,DAB,Pharmacologic Substance,14013
+positive,C25246,Positive,Qualitative Concept,14017
+pixels,C48367,Pixel,Conceptual Entity,14026
+image,C48179,Image,Entity,14039
+method,C71460,Method,Conceptual Entity,14051
+prone,C62165,Prone Position,Spatial Concept,14061
+error,C43369,Error,Conceptual Entity,14070
+presence,C25626,Present,Qualitative Concept,14083
+nonspecific,C50404,Nonspecific,Qualitative Concept,14095
+DAB,C28954,DAB,Pharmacologic Substance,14107
+staining,C50753,Staining,Finding,14111
+detect,C117041,Dosing Days to Detection,Quantitative Concept,14145
+DAB,C28954,DAB,Pharmacologic Substance,14152
+positive,C25246,Positive,Qualitative Concept,14156
+pixels,C48367,Pixel,Conceptual Entity,14165
+background,C45782,Background,Conceptual Entity,14185
+noise,C45783,Noise,Phenomenon or Process,14196
+due,C45263,Due,Qualitative Concept,14202
+nonspecific,C50404,Nonspecific,Qualitative Concept,14209
+DAB,C28954,DAB,Pharmacologic Substance,14221
+staining,C50753,Staining,Finding,14225
+training,C17705,Training,Educational Activity,14245
+set,C47894,Set,Conceptual Entity,14254
+sampling range,C71565,Sample Range,Quantitative Concept,14286
+wide,C124593,Wide,Qualitative Concept,14302
+DAB,C28954,DAB,Pharmacologic Substance,14316
+intensities,C25539,Intensity,Quantitative Concept,14320
+presence,C25626,Present,Qualitative Concept,14351
+nonspecific,C50404,Nonspecific,Qualitative Concept,14363
+staining,C50753,Staining,Finding,14375
+usually,C114711,Usually,Intellectual Product,14391
+occurs,C54069,Occur,Conceptual Entity,14399
+tissue,C33177,Tissue,Tissue,14409
+folds,C63134,Fold in Medical Device Material,Event,14416
+edges,C75923,Graph Edge,Conceptual Entity,14426
+final,C25508,Final,Conceptual Entity,14437
+version,C25714,Version,Conceptual Entity,14443
+DAB,C28954,DAB,Pharmacologic Substance,14458
+signal,C43382,Signal,Conceptual Entity,14462
+detection,C16210,Detection,Diagnostic Procedure,14469
+accuracy,C49145,Accuracy,Qualitative Concept,14503
+10,C69122,Ten,Quantitative Concept,14517
+fold,C63134,Fold in Medical Device Material,Event,14520
+cross validation,C78545,Cross Validation,Quantitative Concept,14525
+test,C47891,Test,Activity,14542
+segmented image,C80146,Image Segmentation,Activity,14560
+mask,C86570,Mask,Manufactured Object,14581
+applied,C113519,Apply,Activity,14590
+DAB,C28954,DAB,Pharmacologic Substance,14619
+channel,C44170,Channel,Conceptual Entity,14623
+out,C25650,Removed,Qualitative Concept,14641
+deconvolution,C47929,Deconvolution,Activity,14648
+scale,C25664,Scale,Intellectual Product,14704
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,14710
+Quantification,C48937,Quantitation,Activity,14714
+Statistical Tests',C53228,Statistical Test,Quantitative Concept,14733
+Statistical distributions,C53206,Statistical Distribution,Quantitative Concept,14733
+effect,C25492,Effect,Phenomenon or Process,14789
+ROI,C85402,Imaging Region of Interest,Spatial Concept,14799
+sizes,C25681,Size,Quantitative Concept,14803
+staining,C50753,Staining,Finding,14826
+index,C25390,Index,Intellectual Product,14835
+multiple,C17648,Multiple,Qualitative Concept,14920
+non,C25594,Negation,Functional Concept,14929
+overlapping,C54669,Overlap,Conceptual Entity,14933
+square,C48350,Square Shape,Qualitative Concept,14945
+grids,C70846,Grid,Manufactured Object,14952
+sizes,C25681,Size,Quantitative Concept,14982
+50,C105785,Fifty,Quantitative Concept,15001
+1000,C67234,Thousand,Quantitative Concept,15013
+each,C64933,Each,Qualitative Concept,15029
+grid,C70846,Grid,Manufactured Object,15034
+calculated,C54125,Calculation,Activity,15048
+staining,C50753,Staining,Finding,15059
+indices,C50001,Indicator Device Component,Manufactured Object,15068
+ratios,C44256,Ratio,Quantitative Concept,15083
+total,C25304,Total,Qualitative Concept,15093
+DAB,C28954,DAB,Pharmacologic Substance,15099
+positive,C25246,Positive,Qualitative Concept,15103
+pixels,C48367,Pixel,Conceptual Entity,15112
+viable,C25324,Viable,Qualitative Concept,15122
+tumor tissue,C18009,Tumor Tissue,Tissue,15129
+regions,C41129,Region,Spatial Concept,15142
+count,C25463,Count,Quantitative Concept,15157
+all,C64916,All,Qualitative Concept,15166
+pixels,C48367,Pixel,Conceptual Entity,15170
+viable,C25324,Viable,Qualitative Concept,15180
+obtain,C52349,Obtain,Activity,15205
+viable,C25324,Viable,Qualitative Concept,15212
+tumor,C98275,Tumor Mass,Finding,15219
+regions,C41129,Region,Spatial Concept,15225
+did,C86066,Do,Activity,15237
+based,C48055,Base,Qualitative Concept,15248
+elastic,C119332,Organ Elasticity,Clinical Attribute,15254
+registration,C25646,Registration,Activity,15262
+al,C111127,Aluminum Measurement,Laboratory Procedure,15296
+map,C43433,Map,Manufactured Object,15309
+viable,C25324,Viable,Qualitative Concept,15327
+tumor,C98275,Tumor Mass,Finding,15334
+regions,C41129,Region,Spatial Concept,15340
+Ki67,C123557,Ki67 Measurement,Laboratory Procedure,15357
+slide,C25325,Slide,Manufactured Object,15362
+rest,C28185,Resting,Daily or Recreational Activity,15375
+set,C47894,Set,Conceptual Entity,15424
+then,C65106,Then,Qualitative Concept,15432
+viable,C25324,Viable,Qualitative Concept,15456
+regions,C41129,Region,Spatial Concept,15469
+masks,C86570,Mask,Manufactured Object,15480
+registered,C25644,Registered,Functional Concept,15493
+images,C49997,Imager Device Component,Manufactured Object,15504
+separate,C63803,Separate,Qualitative Concept,15514
+contribution,C61412,Contribution,Activity,15527
+DAB,C28954,DAB,Pharmacologic Substance,15543
+staining,C50753,Staining,Finding,15547
+viable,C25324,Viable,Qualitative Concept,15561
+tumor tissue,C18009,Tumor Tissue,Tissue,15568
+registered,C25644,Registered,Functional Concept,15588
+images,C49997,Imager Device Component,Manufactured Object,15599
+same,C64637,Same,Qualitative Concept,15613
+set,C47894,Set,Conceptual Entity,15618
+grid,C70846,Grid,Manufactured Object,15627
+quantification,C48937,Quantitation,Activity,15632
+random samples,C53194,Random Sampling,Activity,15666
+samples sizes,C53190,Sample Size,Quantitative Concept,15673
+replacement,C53610,Replacement,Governmental or Regulatory Activity,15686
+1000,C67234,Thousand,Quantitative Concept,15725
+each,C64933,Each,Qualitative Concept,15734
+each,C64933,Each,Qualitative Concept,15754
+image,C48179,Image,Entity,15759
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,15793
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,15810
+patterns,C25336,Pattern,Spatial Concept,15814
+uniform,C73944,Uniform,Qualitative Concept,15826
+random sampling,C53194,Random Sampling,Activity,15834
+grid,C70846,Grid,Manufactured Object,15853
+given,C64974,Give,Activity,15869
+size,C25681,Size,Quantitative Concept,15875
+procedure,C79751,Procedure,Activity,15898
+100,C105814,One Hundred,Quantitative Concept,15908
+times,C113779,Timely,Qualitative Concept,15912
+used indices,C41184,Indication,Functional Concept,15922
+vector,C54169,Vector,Conceptual Entity,15931
+each,C64933,Each,Qualitative Concept,15954
+inputs,C47905,Input,Conceptual Entity,15978
+statistical tests,C53228,Statistical Test,Quantitative Concept,15988
+sampling,C25662,Sampling,Activity,16024
+process,C29862,Process,Functional Concept,16033
+tested statistical,C53228,Statistical Test,Quantitative Concept,16045
+robustness,C94972,Robust,Qualitative Concept,16056
+outcome,C20200,Outcome,Finding,16086
+whole,C25326,Whole,Qualitative Concept,16099
+image,C48179,Image,Entity,16105
+scale,C25664,Scale,Intellectual Product,16111
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,16117
+quantification,C48937,Quantitation,Activity,16121
+calculated,C54125,Calculation,Activity,16140
+staining,C50753,Staining,Finding,16153
+index,C25390,Index,Intellectual Product,16162
+each,C64933,Each,Qualitative Concept,16172
+viable,C25324,Viable,Qualitative Concept,16185
+tumor tissue,C18009,Tumor Tissue,Tissue,16192
+regions,C41129,Region,Spatial Concept,16205
+ratio,C44256,Ratio,Quantitative Concept,16218
+total,C25304,Total,Qualitative Concept,16227
+DAB,C28954,DAB,Pharmacologic Substance,16233
+positive,C25246,Positive,Qualitative Concept,16237
+pixel,C48367,Pixel,Conceptual Entity,16246
+count,C25463,Count,Quantitative Concept,16252
+count,C25463,Count,Quantitative Concept,16265
+all,C64916,All,Qualitative Concept,16274
+tumor tissue,C18009,Tumor Tissue,Tissue,16292
+Tests' statistical,C53228,Statistical Test,Quantitative Concept,16341
+Tests' Mann Whitney Wilcoxon U,C53247,Mann-Whitney Test,Quantitative Concept,16341
+performed,C38000,Performed,Qualitative Concept,16368
+two,C66833,Two,Quantitative Concept,16378
+compare,C49156,Comparison,Activity,16403
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,16415
+indices,C50001,Indicator Device Component,Manufactured Object,16419
+without,C25718,Without,Qualitative Concept,16436
+therapy,C49236,Therapeutic Procedure,Therapeutic or Preventive Procedure,16444
+non,C25594,Negation,Functional Concept,16469
+non,C25594,Negation,Functional Concept,16530
+overlapping,C54669,Overlap,Conceptual Entity,16534
+confidence interval,C53324,Confidence Interval,Quantitative Concept,16546
+NCI,C19202,National Cancer Institute,Health Care Related Organization,16567
+method,C71460,Method,Conceptual Entity,16572
+chose,C48912,Choose,Activity,16583
+two,C66833,Two,Quantitative Concept,16595
+methods,C71460,Method,Conceptual Entity,16599
+do,C86066,Do,Activity,16620
+not,C25594,Negation,Functional Concept,16623
+make,C64661,Make,Activity,16627
+any,C81168,Any,Conceptual Entity,16632
+distribution,C45273,Distribution,Activity,16668
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,16688
+patterns,C25336,Pattern,Spatial Concept,16692
+addition,C64911,Add,Activity,16705
+end,C25496,End,Qualitative Concept,16721
+study,C63536,Study,Research Activity,16728
+statistical,C17167,Statistics,Occupation or Discipline,16734
+comparisons,C49156,Comparison,Activity,16746
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,16761
+indices,C50001,Indicator Device Component,Manufactured Object,16765
+two,C66833,Two,Quantitative Concept,16780
+arms repeated,C14101,Armadillo Repeat,Amino Acid Sequence,16784
+tests,C47891,Test,Activity,16806
+each,C64933,Each,Qualitative Concept,16815
+event,C25499,Event,Event,16825
+all,C64916,All,Qualitative Concept,16844
+mice,C14238,Mouse,Mammal,16855
+study,C63536,Study,Research Activity,16876
+prior,C25629,Prior,Temporal Concept,16882
+temporal,C73990,Temporal,Temporal Concept,16908
+analysis,C25391,Analysis,Activity,16917
+staining,C50753,Staining,Finding,16941
+indices,C50001,Indicator Device Component,Manufactured Object,16950
+study,C63536,Study,Research Activity,16965
+arms,C15538,Protocol Treatment Arm,Research Activity,16971
+changed,C25572,Modification,Qualitative Concept,16976
+over,C65018,Over,Qualitative Concept,16984
+course,C25379,Course,Clinical Attribute,16993
+performed,C38000,Performed,Qualitative Concept,17020
+two,C66833,Two,Quantitative Concept,17030
+one,C66832,One,Quantitative Concept,17034
+tests,C47891,Test,Activity,17059
+less than,C61585,Less Than,Functional Concept,17071
+greater than,C61584,Greater Than,Quantitative Concept,17087
+alternatives,C25415,Alternative,Qualitative Concept,17101
+subsets,C25693,Subgroup,Conceptual Entity,17117
+random samples,C53194,Random Sampling,Activity,17138
+replacement,C53610,Replacement,Governmental or Regulatory Activity,17164
+non,C25594,Negation,Functional Concept,17185
+overlapping,C54669,Overlap,Conceptual Entity,17189
+grids,C70846,Grid,Manufactured Object,17201
+each,C64933,Each,Qualitative Concept,17210
+size,C25681,Size,Quantitative Concept,17220
+each,C64933,Each,Qualitative Concept,17230
+test,C47891,Test,Activity,17275
+indices random,C70939,Randomization Indicator,Conceptual Entity,17299
+subsets,C25693,Subgroup,Conceptual Entity,17321
+percentage,C25613,Percentage,Conceptual Entity,17349
+viable,C25324,Viable,Qualitative Concept,17360
+tumor tissue,C18009,Tumor Tissue,Tissue,17367
+content,C95494,Content,Mental Process,17380
+then,C65106,Then,Qualitative Concept,17392
+tests,C47891,Test,Activity,17469
+100,C105814,One Hundred,Quantitative Concept,17478
+random,C60702,Random,Qualitative Concept,17492
+subsets,C25693,Subgroup,Conceptual Entity,17499
+calculated,C54125,Calculation,Activity,17511
+probability,C54154,Probability,Quantitative Concept,17526
+significance,C41130,Significant,Functional Concept,17541
+proportion,C49159,Proportion,Quantitative Concept,17561
+tests,C47891,Test,Activity,17575
+p values,C44185,P-Value,Qualitative Concept,17586
+less than,C61585,Less Than,Functional Concept,17595
+time point,C68568,Timepoint,Temporal Concept,17614
+time point,C68568,Timepoint,Temporal Concept,17614
+performed,C38000,Performed,Qualitative Concept,17634
+two,C66833,Two,Quantitative Concept,17644
+one,C66832,One,Quantitative Concept,17648
+tests,C47891,Test,Activity,17664
+whole,C25326,Whole,Qualitative Concept,17673
+slide,C25325,Slide,Manufactured Object,17679
+averages,C37917,Average,Quantitative Concept,17685
+whole,C25326,Whole,Qualitative Concept,17698
+grid,C70846,Grid,Manufactured Object,17704
+values,C25712,Value,Conceptual Entity,17709
+without,C25718,Without,Qualitative Concept,17716
+sampling,C25662,Sampling,Activity,17724
+repetitions time,C82330,Repetition Time,Conceptual Entity,17736
+time points.',C68568,Timepoint,Temporal Concept,17769
+time points.',C68568,Timepoint,Temporal Concept,17769
+general,C115727,Safety Reporting Documentation,Intellectual Product,17788
+shapes,C25677,Shape,Spatial Concept,17801
+staining,C50753,Staining,Finding,17815
+index,C25390,Index,Intellectual Product,17824
+distributions,C45273,Distribution,Activity,17830
+not,C25594,Negation,Functional Concept,17848
+same,C64637,Same,Qualitative Concept,17873
+between,C94545,Between,Qualitative Concept,17878
+two,C66833,Two,Quantitative Concept,17890
+groups,C42684,User Group,Population Group,17894
+arms,C15538,Protocol Treatment Arm,Research Activity,17901
+test test statistically,C53228,Statistical Test,Quantitative Concept,17919
+checks,C86058,Check,Activity,17924
+between,C94545,Between,Qualitative Concept,17956
+two,C66833,Two,Quantitative Concept,17964
+variables,C54166,Variable,Qualitative Concept,17968
+not test,C101887,Not Tested,Qualitative Concept,17988
+shift,C73943,Physical Shift,Phenomenon or Process,18004
+location,C25341,Location,Spatial Concept,18013
+mean,C53319,Mean,Quantitative Concept,18023
+median,C28007,Median,Qualitative Concept,18031
+statistically significant,C28110,Statistically Significant,Quantitative Concept,18057
+differences,C46003,Difference,Qualitative Concept,18083
+between,C94545,Between,Qualitative Concept,18095
+staining,C50753,Staining,Finding,18116
+indices,C50001,Indicator Device Component,Manufactured Object,18125
+area,C25244,Area,Spatial Concept,18149
+live,C89279,Reside,Activity,18157
+region,C41129,Region,Spatial Concept,18162
+each,C64933,Each,Qualitative Concept,18172
+eq,C67273,Equivalent Weight,Quantitative Concept,18183
+two,C66833,Two,Quantitative Concept,18197
+treatment arms,C15538,Protocol Treatment Arm,Research Activity,18201
+method,C71460,Method,Conceptual Entity,18226
+NCIs,C19202,National Cancer Institute,Health Care Related Organization,18236
+random samples random,C53194,Random Sampling,Activity,18250
+subset,C25693,Subgroup,Conceptual Entity,18257
+each,C64933,Each,Qualitative Concept,18280
+calculated,C54125,Calculation,Activity,18300
+staining,C50753,Staining,Finding,18324
+index,C25390,Index,Intellectual Product,18333
+subset,C25693,Subgroup,Conceptual Entity,18353
+unbiased estimator,C53329,Unbiased Estimation,Research Activity,18409
+staining,C50753,Staining,Finding,18435
+index,C25390,Index,Intellectual Product,18444
+subset,C25693,Subgroup,Conceptual Entity,18458
+total number,C127787,Total Number,Quantitative Concept,18475
+total total tissue total tissue,C90476,Total Tissue,Body Substance,18475
+number number positive,C93628,Position Number,Quantitative Concept,18481
+ni,C68275,Dietary Nickel,"Element, Ion, or Isotope",18506
+total number,C127787,Total Number,Quantitative Concept,18516
+DAB,C28954,DAB,Pharmacologic Substance,18533
+pixels,C48367,Pixel,Conceptual Entity,18547
+tissue type,C22164,Mouse Anatomy Concepts,Classification,18561
+interest interest,C60730,Interest,Conceptual Entity,18576
+area,C25244,Area,Spatial Concept,18622
+tissue type,C22164,Mouse Anatomy Concepts,Classification,18634
+Then,C65106,Then,Qualitative Concept,18675
+calculated,C54125,Calculation,Activity,18683
+confidence intervals,C53324,Confidence Interval,Quantitative Concept,18702
+means,C47955,Means,Conceptual Entity,18739
+staining,C50753,Staining,Finding,18752
+indices random random,C70939,Randomization Indicator,Conceptual Entity,18761
+all,C64916,All,Qualitative Concept,18774
+subsets,C25693,Subgroup,Conceptual Entity,18792
+all,C64916,All,Qualitative Concept,18805
+repetitions,C120398,Perseverations,Classification,18809
+100,C105814,One Hundred,Quantitative Concept,18822
+subsets,C25693,Subgroup,Conceptual Entity,18833
+each,C64933,Each,Qualitative Concept,18846
+treatment arm,C15538,Protocol Treatment Arm,Research Activity,18851
+al,C111127,Aluminum Measurement,Laboratory Procedure,18879
+then,C65106,Then,Qualitative Concept,18893
+checked,C86058,Check,Activity,18898
+overlaps,C54669,Overlap,Conceptual Entity,18910
+confidence intervals,C53324,Confidence Interval,Quantitative Concept,18926
+Non,C25594,Negation,Functional Concept,18948
+overlapping,C54669,Overlap,Conceptual Entity,18952
+confidence intervals,C53324,Confidence Interval,Quantitative Concept,18968
+statistically significant,C28110,Statistically Significant,Quantitative Concept,18996
+significant level,C41265,Significance Level,Quantitative Concept,19010
+differences,C46003,Difference,Qualitative Concept,19022
+between,C94545,Between,Qualitative Concept,19034
+means,C47955,Means,Conceptual Entity,19046
+two,C66833,Two,Quantitative Concept,19059
+groups,C42684,User Group,Population Group,19063
+performed,C38000,Performed,Qualitative Concept,19141
+local,C67263,Local,Spatial Concept,19151
+regression,C18243,Regression,Finding,19163
+smoothing,C64202,Smoothing,Occupational Activity,19185
+parameter,C44175,Parameter,Conceptual Entity,19195
+span,C77536,Span,Quantitative Concept,19206
+set,C47894,Set,Conceptual Entity,19212
+second,C49463,Second,Qualitative Concept,19233
+degree polynomials,C48924,Polynomial Degree,Qualitative Concept,19240
+significance level,C41265,Significance Level,Quantitative Concept,19270
+all,C64916,All,Qualitative Concept,19301
+Sensitivity,C63078,Increased Device Sensitivity,Event,19385
+Sensitivity,C63078,Increased Device Sensitivity,Event,19385
+compared,C49156,Comparison,Activity,19431
+statistical,C17167,Statistics,Occupation or Discipline,19459
+inference,C75591,Inference,Activity,19471
+both,C49636,Both,Qualitative Concept,19484
+NCI,C19202,National Cancer Institute,Health Care Related Organization,19501
+deriving,C45673,Deriving,Qualitative Concept,19511
+inputs,C47905,Input,Conceptual Entity,19520
+grid,C70846,Grid,Manufactured Object,19539
+quantification,C48937,Quantitation,Activity,19544
+against,C64937,Against,Qualitative Concept,19566
+whole,C25326,Whole,Qualitative Concept,19574
+slide,C25325,Slide,Manufactured Object,19580
+indices,C50001,Indicator Device Component,Manufactured Object,19586
+Fig,C71971,Fig,"Plant, Food",19595
+test,C47891,Test,Activity,19612
+based,C48055,Base,Qualitative Concept,19618
+whole,C25326,Whole,Qualitative Concept,19627
+slide,C25325,Slide,Manufactured Object,19633
+indices,C50001,Indicator Device Component,Manufactured Object,19639
+detected,C25481,Detected,Conceptual Entity,19648
+higher,C25227,High,Qualitative Concept,19671
+levels,C25554,Level,Quantitative Concept,19678
+CD34,C17280,Hematopoietic Progenitor Cell Antigen CD34,"Amino Acid, Peptide, or Protein, Immunologic Factor",19692
+index,C25390,Index,Intellectual Product,19697
+placebo,C753,Placebo,Conceptual Entity,19707
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,19720
+end,C25496,End,Qualitative Concept,19731
+study,C63536,Study,Research Activity,19742
+difference,C46003,Difference,Qualitative Concept,19763
+CD34,C17280,Hematopoietic Progenitor Cell Antigen CD34,"Amino Acid, Peptide, or Protein, Immunologic Factor",19777
+indices,C50001,Indicator Device Component,Manufactured Object,19782
+consistent,C85901,Consistent,Conceptual Entity,19793
+known,C80137,Known,Conceptual Entity,19813
+antiangiogenic,C1742,Angiogenesis Inhibitor,Chemical Viewed Functionally,19819
+effects,C25492,Effect,Phenomenon or Process,19834
+cyclophosphamide doxorubicin etoposide,C9684,Cyclophosphamide/Doxorubicin/Etoposide,Therapeutic or Preventive Procedure,19845
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,19898
+al,C111127,Aluminum Measurement,Laboratory Procedure,19916
+al,C111127,Aluminum Measurement,Laboratory Procedure,19942
+al,C111127,Aluminum Measurement,Laboratory Procedure,19967
+al,C111127,Aluminum Measurement,Laboratory Procedure,19988
+al,C111127,Aluminum Measurement,Laboratory Procedure,20010
+tests,C47891,Test,Activity,20029
+based,C48055,Base,Qualitative Concept,20035
+whole,C25326,Whole,Qualitative Concept,20044
+slide,C25325,Slide,Manufactured Object,20050
+indices,C50001,Indicator Device Component,Manufactured Object,20056
+do,C86066,Do,Activity,20064
+not,C25594,Negation,Functional Concept,20067
+detect,C117041,Dosing Days to Detection,Quantitative Concept,20071
+any,C81168,Any,Conceptual Entity,20078
+significant other,C119265,Significant Other,Human,20082
+difference,C46003,Difference,Qualitative Concept,20094
+indices,C50001,Indicator Device Component,Manufactured Object,20114
+CASP3,C26574,CASP3 Gene,Gene or Genome,20123
+KI67,C123557,Ki67 Measurement,Laboratory Procedure,20137
+between,C94545,Between,Qualitative Concept,20143
+two,C66833,Two,Quantitative Concept,20155
+arms,C15538,Protocol Treatment Arm,Research Activity,20159
+end,C25496,End,Qualitative Concept,20171
+study,C63536,Study,Research Activity,20178
+difference,C46003,Difference,Qualitative Concept,20198
+between,C94545,Between,Qualitative Concept,20209
+two,C66833,Two,Quantitative Concept,20221
+arms,C15538,Protocol Treatment Arm,Research Activity,20225
+consistent,C85901,Consistent,Conceptual Entity,20233
+cytotoxic,C37893,Cytotoxic,Conceptual Entity,20260
+effect,C25492,Effect,Phenomenon or Process,20270
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,20284
+drugs,C459,Medication,Pharmacologic Substance,20288
+reduced,C25640,Reduced,Qualitative Concept,20305
+levels,C25554,Level,Quantitative Concept,20316
+not,C25594,Negation,Functional Concept,20323
+detectable,C111567,Detectable,Clinical Attribute,20327
+tests,C47891,Test,Activity,20345
+based,C48055,Base,Qualitative Concept,20351
+whole,C25326,Whole,Qualitative Concept,20360
+slide,C25325,Slide,Manufactured Object,20366
+indices,C50001,Indicator Device Component,Manufactured Object,20372
+end,C25496,End,Qualitative Concept,20387
+study section,C19781,Study Section,Professional or Occupational Group,20398
+see,C64647,See,Activity,20405
+alterations,C28344,Alteration,Conceptual Entity,20432
+detailed,C25480,Details,Idea or Concept,20450
+analysis,C25391,Analysis,Activity,20459
+contrast,C70754,Contrast,Conceptual Entity,20473
+both,C49636,Both,Qualitative Concept,20483
+NCI,C19202,National Cancer Institute,Health Care Related Organization,20500
+tests,C47891,Test,Activity,20504
+deriving,C45673,Deriving,Qualitative Concept,20510
+inputs,C47905,Input,Conceptual Entity,20519
+grid,C70846,Grid,Manufactured Object,20531
+quantification,C48937,Quantitation,Activity,20536
+detected,C25481,Detected,Conceptual Entity,20551
+statistically significant,C28110,Statistically Significant,Quantitative Concept,20560
+differences,C46003,Difference,Qualitative Concept,20586
+all,C64916,All,Qualitative Concept,20601
+four,C66835,Four,Quantitative Concept,20605
+staining,C50753,Staining,Finding,20610
+indices,C50001,Indicator Device Component,Manufactured Object,20619
+between,C94545,Between,Qualitative Concept,20627
+two,C66833,Two,Quantitative Concept,20639
+arms,C15538,Protocol Treatment Arm,Research Activity,20643
+end,C25496,End,Qualitative Concept,20655
+study,C63536,Study,Research Activity,20666
+observation,C25598,Observation,Activity,20678
+holds,C62290,Hold,Activity,20690
+true,C68850,True,Conceptual Entity,20696
+sizes samples,C53190,Sample Size,Quantitative Concept,20717
+draw,C54353,Draw,Activity,20739
+grid,C70846,Grid,Manufactured Object,20755
+quantification,C48937,Quantitation,Activity,20760
+provides,C80514,Provide,Activity,20775
+higher,C25227,High,Qualitative Concept,20786
+sensitivity,C25201,Sensitivity,Quantitative Concept,20793
+detection,C16210,Detection,Diagnostic Procedure,20808
+test,C47891,Test,Activity,20829
+compared,C49156,Comparison,Activity,20834
+whole,C25326,Whole,Qualitative Concept,20846
+slide,C25325,Slide,Manufactured Object,20852
+indices,C50001,Indicator Device Component,Manufactured Object,20858
+general,C115727,Safety Reporting Documentation,Intellectual Product,20870
+test Mann Whitney,C53247,Mann-Whitney Test,Quantitative Concept,20887
+test Wilcoxon,C53246,Wilcoxon Signed Rank Test,Quantitative Concept,20887
+higher,C25227,High,Qualitative Concept,20898
+sensitivity,C25201,Sensitivity,Quantitative Concept,20905
+inference,C75591,Inference,Activity,20932
+samples,C70699,Biospecimen,Body Substance,20959
+any,C81168,Any,Conceptual Entity,20979
+given,C64974,Give,Activity,20983
+size,C25681,Size,Quantitative Concept,20994
+compared,C49156,Comparison,Activity,21002
+NCI,C19202,National Cancer Institute,Health Care Related Organization,21020
+Comparison,C49156,Comparison,Activity,21033
+probability,C54154,Probability,Quantitative Concept,21047
+significance statistical,C61040,Statistical Significance,Qualitative Concept,21062
+statistical power,C53191,Statistical Power,Quantitative Concept,21076
+between,C94545,Between,Qualitative Concept,21095
+non,C25594,Negation,Functional Concept,21141
+overlapping,C54669,Overlap,Conceptual Entity,21145
+confidence intervals,C53324,Confidence Interval,Quantitative Concept,21157
+end,C25496,End,Qualitative Concept,21192
+study Day,C82437,Study Day,Temporal Concept,21203
+Probability sampled,C71517,Equal Probability Sampling Method,Activity,21220
+significance,C41130,Significant,Functional Concept,21235
+data,C25474,Data,Idea or Concept,21260
+calculated,C54125,Calculation,Activity,21265
+portion,C45313,Part,Physical Object,21279
+tests,C47891,Test,Activity,21294
+out,C25650,Removed,Qualitative Concept,21301
+100,C105814,One Hundred,Quantitative Concept,21308
+repeats,C47942,Repeat Pattern,Spatial Concept,21312
+p values,C44185,P-Value,Qualitative Concept,21326
+less than,C61585,Less Than,Functional Concept,21335
+Difference,C46003,Difference,Qualitative Concept,21351
+staining,C50753,Staining,Finding,21365
+index,C25390,Index,Intellectual Product,21374
+between,C94545,Between,Qualitative Concept,21380
+standard care,C94396,Best Practice,Health Care Activity,21388
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,21406
+placebo,C753,Placebo,Conceptual Entity,21415
+significant level,C41265,Significance Level,Quantitative Concept,21427
+CIs,C112239,Coagulation Index Measurement,Laboratory Procedure,21461
+do,C86066,Do,Activity,21465
+not,C25594,Negation,Functional Concept,21468
+overlap,C54669,Overlap,Conceptual Entity,21472
+use,C25340,Use,Functional Concept,21484
+combination,C61517,Combination,Conceptual Entity,21490
+fill,C54093,Fill,Activity,21505
+colors,C64546,Color Assessment,Laboratory Procedure,21510
+symbols,C54191,Symbol,Functional Concept,21521
+statistical significance,C61040,Statistical Significance,Qualitative Concept,21541
+Solid,C45300,Solid,Substance,21567
+white,C48325,White,Qualitative Concept,21573
+patches,C18605,Protein Patched Homolog 1,"Receptor, Amino Acid, Peptide, or Protein",21579
+gray,C48324,Gray,Qualitative Concept,21592
+border,C80507,Border,Classification,21597
+indicates,C50001,Indicator Device Component,Manufactured Object,21604
+no,C49487,No,Classification,21614
+statistically significant,C28110,Statistically Significant,Quantitative Concept,21617
+difference,C46003,Difference,Qualitative Concept,21643
+detected,C25481,Detected,Conceptual Entity,21657
+NCI,C19202,National Cancer Institute,Health Care Related Organization,21677
+tests,C47891,Test,Activity,21681
+All,C64916,All,Qualitative Concept,21688
+combinations,C61517,Combination,Conceptual Entity,21696
+fill,C54093,Fill,Activity,21712
+colors,C64546,Color Assessment,Laboratory Procedure,21717
+symbols,C54191,Symbol,Functional Concept,21728
+have,C101282,Have,Classification,21750
+additive,C63495,Additive,Chemical Viewed Functionally,21755
+interpretations,C86557,Interpreter,Occupation or Discipline,21764
+light,C68808,Light,Qualitative Concept,21787
+blue,C48333,Blue,Qualitative Concept,21793
+fill,C54093,Fill,Activity,21798
+means,C47955,Means,Conceptual Entity,21812
+placebo,C753,Placebo,Conceptual Entity,21818
+staining,C50753,Staining,Finding,21826
+index,C25390,Index,Intellectual Product,21835
+statistically tests tests,C53228,Statistical Test,Quantitative Concept,21844
+greater than,C61584,Greater Than,Quantitative Concept,21858
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,21871
+both,C49636,Both,Qualitative Concept,21878
+NCI,C19202,National Cancer Institute,Health Care Related Organization,21891
+Heterogeneity,C28359,Heterogeneity,Qualitative Concept,21940
+tests using,C92020,Device Use Testing Evaluation Method,Functional Concept,21994
+samples,C70699,Biospecimen,Body Substance,22006
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,22019
+index,C25390,Index,Intellectual Product,22023
+distributions,C45273,Distribution,Activity,22029
+may,C106184,May,Qualitative Concept,22043
+lead,C25552,Lead,Qualitative Concept,22047
+conclusions,C54033,Conclusion,Finding,22066
+due,C45263,Due,Qualitative Concept,22078
+bias,C28232,Bias,Idea or Concept,22094
+measure sampling,C71559,Sample Statistic,Quantitative Concept,22103
+sampling mean variance,C71567,Sample Variance of Sample Mean,Quantitative Concept,22111
+bias,C28232,Bias,Idea or Concept,22120
+any,C81168,Any,Conceptual Entity,22128
+given,C64974,Give,Activity,22132
+size,C25681,Size,Quantitative Concept,22143
+calculated,C54125,Calculation,Activity,22152
+two,C66833,Two,Quantitative Concept,22163
+types,C25284,Type,Functional Concept,22167
+relative,C21480,Relative,Human,22176
+errors,C43369,Error,Conceptual Entity,22185
+Table,C48441,Table,Manufactured Object,22233
+represent,C67045,Representation,Activity,22261
+extent,C25332,Extent,Quantitative Concept,22275
+bias,C28232,Bias,Idea or Concept,22285
+sample means,C71567,Sample Variance of Sample Mean,Quantitative Concept,22293
+represent,C67045,Representation,Activity,22339
+extent,C25332,Extent,Quantitative Concept,22353
+deviation,C25713,Variation,Conceptual Entity,22363
+sample means variances,C71567,Sample Variance of Sample Mean,Quantitative Concept,22376
+whole,C25326,Whole,Qualitative Concept,22408
+slide,C25325,Slide,Manufactured Object,22414
+whole,C25326,Whole,Qualitative Concept,22430
+grid,C70846,Grid,Manufactured Object,22436
+distribution,C45273,Distribution,Activity,22485
+errors,C43369,Error,Conceptual Entity,22501
+sizes,C25681,Size,Quantitative Concept,22517
+50,C105785,Fifty,Quantitative Concept,22523
+500,C16876,Montserrat,Geographic Area,22530
+Parts,C48522,Part Dosing Unit,Quantitative Concept,22541
+Fig,C71971,Fig,"Plant, Food",22558
+both,C49636,Both,Qualitative Concept,22575
+symmetric,C75919,Symmetric Relationship,Conceptual Entity,22600
+zero,C70430,Zero,Quantitative Concept,22616
+any,C81168,Any,Conceptual Entity,22625
+given,C64974,Give,Activity,22629
+number,C25337,Number,Quantitative Concept,22635
+sample,C70699,Biospecimen,Body Substance,22645
+spreads,C65126,Smear,Activity,22676
+rapidly,C65069,Rapidly,Qualitative Concept,22691
+number,C25337,Number,Quantitative Concept,22718
+sample,C70699,Biospecimen,Body Substance,22728
+both,C49636,Both,Qualitative Concept,22767
+50,C105785,Fifty,Quantitative Concept,22772
+500,C16876,Montserrat,Geographic Area,22779
+sizes,C25681,Size,Quantitative Concept,22794
+used tests,C92020,Device Use Testing Evaluation Method,Functional Concept,22800
+statistical tests,C53228,Statistical Test,Quantitative Concept,22812
+tests not,C101887,Not Tested,Qualitative Concept,22824
+true,C68850,True,Conceptual Entity,22839
+all,C64916,All,Qualitative Concept,22848
+sizes,C25681,Size,Quantitative Concept,22857
+data,C25474,Data,Idea or Concept,22874
+parts,C48522,Part Dosing Unit,Quantitative Concept,22902
+Fig,C71971,Fig,"Plant, Food",22919
+spreads,C65126,Smear,Activity,22940
+both,C49636,Both,Qualitative Concept,22951
+rapidly,C65069,Rapidly,Qualitative Concept,22979
+zero,C70430,Zero,Quantitative Concept,23000
+number,C25337,Number,Quantitative Concept,23025
+sample,C70699,Biospecimen,Body Substance,23035
+observations,C25598,Observation,Activity,23063
+sampling means variances,C71567,Sample Variance of Sample Mean,Quantitative Concept,23090
+sampling weighted,C87555,Sample Weight,Research Activity,23090
+did,C86066,Do,Activity,23099
+not,C25594,Negation,Functional Concept,23103
+bias,C28232,Bias,Idea or Concept,23117
+range,C38013,Range,Quantitative Concept,23153
+sizes,C25681,Size,Quantitative Concept,23167
+index,C25390,Index,Intellectual Product,23257
+whole,C25326,Whole,Qualitative Concept,23285
+slide,C25325,Slide,Manufactured Object,23291
+index,C25390,Index,Intellectual Product,23297
+same,C64637,Same,Qualitative Concept,23311
+weighted sample,C87555,Sample Weight,Research Activity,23330
+sample variance variance,C71566,Sample Variance,Quantitative Concept,23339
+whole,C25326,Whole,Qualitative Concept,23374
+grid,C70846,Grid,Manufactured Object,23380
+same,C64637,Same,Qualitative Concept,23411
+all,C64916,All,Qualitative Concept,23438
+whole,C25326,Whole,Qualitative Concept,23442
+slide,C25325,Slide,Manufactured Object,23448
+indices,C50001,Indicator Device Component,Manufactured Object,23454
+staining,C50753,Staining,Finding,23466
+errors,C43369,Error,Conceptual Entity,23509
+sample mean sample variance,C71567,Sample Variance of Sample Mean,Quantitative Concept,23519
+mean sample variance,C71567,Sample Variance of Sample Mean,Quantitative Concept,23526
+size,C25681,Size,Quantitative Concept,23568
+50,C105785,Fifty,Quantitative Concept,23576
+500,C16876,Montserrat,Geographic Area,23589
+all,C64916,All,Qualitative Concept,23600
+four,C66835,Four,Quantitative Concept,23604
+staining,C50753,Staining,Finding,23609
+indices,C50001,Indicator Device Component,Manufactured Object,23618
+combined,C25454,Combined,Conceptual Entity,23626
+Mean sampled,C71560,Sample Mean,Quantitative Concept,23641
+sampled tumor,C18009,Tumor Tissue,Tissue,23646
+viable,C25324,Viable,Qualitative Concept,23654
+tumor tissue,C18009,Tumor Tissue,Tissue,23661
+percentage,C25613,Percentage,Conceptual Entity,23674
+coverage,C68811,Cover,Activity,23685
+Percentage,C25613,Percentage,Conceptual Entity,23695
+coverage,C68811,Cover,Activity,23706
+greater than,C61584,Greater Than,Quantitative Concept,23715
+one,C66832,One,Quantitative Concept,23728
+represents,C67045,Representation,Activity,23732
+Mean,C53319,Mean,Quantitative Concept,23761
+percent,C48570,Percent Unit,Quantitative Concept,23766
+viable,C25324,Viable,Qualitative Concept,23774
+tumor tissue,C18009,Tumor Tissue,Tissue,23781
+tissue sampled,C19697,Tissue Sample,Tissue,23787
+content,C95494,Content,Mental Process,23794
+Error,C43369,Error,Conceptual Entity,23820
+bars,C48475,Bar Dosing Unit,Quantitative Concept,23826
+box plots,C53326,Box Plot,Quantitative Concept,23838
+confidence interval,C53324,Confidence Interval,Quantitative Concept,23878
+two,C66833,Two,Quantitative Concept,23903
+hinges,C49988,Hinge Device Component,Manufactured Object,23907
+first,C25509,First,Qualitative Concept,23932
+third,C25260,Third,Qualitative Concept,23942
+quartiles,C87306,Quartile,Qualitative Concept,23948
+midline,C81170,Midline,Spatial Concept,23963
+corresponds,C115639,Centralized Testing Communication Document,Intellectual Product,23971
+properties,C62498,Object Property,Conceptual Entity,24080
+over,C65018,Over,Qualitative Concept,24091
+course,C25379,Course,Clinical Attribute,24100
+study,C63536,Study,Research Activity,24114
+see,C64647,See,Activity,24123
+if,C64955,If,Qualitative Concept,24127
+significant,C41130,Significant,Functional Concept,24130
+properties,C62498,Object Property,Conceptual Entity,24168
+correlated,C48834,Correlation,Conceptual Entity,24179
+timing,C80484,Timing,Conceptual Entity,24199
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,24209
+treatment,C15368,Treatment,Health Care Activity,24213
+alterations,C28344,Alteration,Conceptual Entity,24254
+measured,C44473,Measured,Qualitative Concept,24269
+four,C66835,Four,Quantitative Concept,24281
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,24286
+staining,C50753,Staining,Finding,24290
+indices,C50001,Indicator Device Component,Manufactured Object,24299
+over,C65018,Over,Qualitative Concept,24307
+course,C25379,Course,Clinical Attribute,24316
+study,C63536,Study,Research Activity,24330
+general,C115727,Safety Reporting Documentation,Intellectual Product,24340
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,24353
+treatment,C15368,Treatment,Health Care Activity,24357
+cytotoxicity,C27988,Cytotoxicity,Finding,24368
+ended,C25496,End,Qualitative Concept,24387
+day,C25301,Day,Temporal Concept,24396
+26,C126886,Twenty Six,Quantitative Concept,24400
+week,C29844,Week,Temporal Concept,24411
+course,C25379,Course,Clinical Attribute,24421
+affected,C64917,Affected,Qualitative Concept,24445
+properties,C62498,Object Property,Conceptual Entity,24469
+tumor tumor blood vessels,C7387,Blood Vessel Neoplasm,Neoplastic Process,24483
+cells tumor,C23852,Murine Tumor Cells,Cell,24489
+cells blood,C23453,Murine Blood Cells,Cell,24489
+both,C49636,Both,Qualitative Concept,24519
+during after,C49640,During or After,Temporal Concept,24524
+treatment,C15368,Treatment,Health Care Activity,24545
+period,C25616,Period,Temporal Concept,24555
+mice,C14238,Mouse,Mammal,24576
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,24590
+arm,C32141,Arm,Anatomical Structure,24594
+during course treatment,C127075,Smoked Cigarettes During the Course of Treatment,Intellectual Product,24598
+due,C45263,Due,Qualitative Concept,24634
+not,C25594,Negation,Functional Concept,24653
+tumor burden,C28384,Tumor Burden,Idea or Concept,24657
+CASP3,C26574,CASP3 Gene,Gene or Genome,24671
+indices,C50001,Indicator Device Component,Manufactured Object,24677
+tumors,C98275,Tumor Mass,Finding,24688
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,24702
+arm,C32141,Arm,Anatomical Structure,24706
+during,C25490,During,Temporal Concept,24720
+treatment,C15368,Treatment,Health Care Activity,24727
+higher,C25227,High,Qualitative Concept,24742
+tumors,C98275,Tumor Mass,Finding,24757
+placebo,C753,Placebo,Conceptual Entity,24771
+arm,C32141,Arm,Anatomical Structure,24779
+same,C64637,Same,Qualitative Concept,24792
+period,C25616,Period,Temporal Concept,24797
+magnitude,C49158,Magnitude,Quantitative Concept,24809
+difference,C46003,Difference,Qualitative Concept,24827
+decreased,C25640,Reduced,Qualitative Concept,24848
+over,C65018,Over,Qualitative Concept,24858
+time,C25207,Time,Temporal Concept,24863
+lowest,C43517,Lowest,Spatial Concept,24884
+end,C25496,End,Qualitative Concept,24898
+study,C63536,Study,Research Activity,24909
+Ki67,C123557,Ki67 Measurement,Laboratory Procedure,24934
+indices,C50001,Indicator Device Component,Manufactured Object,24939
+higher,C25227,High,Qualitative Concept,24952
+placebo,C753,Placebo,Conceptual Entity,24966
+arm,C32141,Arm,Anatomical Structure,24974
+indices,C50001,Indicator Device Component,Manufactured Object,24985
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,25001
+arm,C32141,Arm,Anatomical Structure,25005
+levels,C25554,Level,Quantitative Concept,25025
+similar,C72665,Similarity,Qualitative Concept,25032
+placebo,C753,Placebo,Conceptual Entity,25047
+arm,C32141,Arm,Anatomical Structure,25055
+day,C25301,Day,Temporal Concept,25069
+higher,C25227,High,Qualitative Concept,25087
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,25102
+arm,C32141,Arm,Anatomical Structure,25106
+past,C25609,Past,Temporal Concept,25110
+day,C25301,Day,Temporal Concept,25115
+rest,C28185,Resting,Daily or Recreational Activity,25146
+study,C63536,Study,Research Activity,25158
+CD34,C17280,Hematopoietic Progenitor Cell Antigen CD34,"Amino Acid, Peptide, or Protein, Immunologic Factor",25169
+index,C25390,Index,Intellectual Product,25174
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,25187
+arm,C32141,Arm,Anatomical Structure,25191
+during,C25490,During,Temporal Concept,25213
+early,C61589,Early,Qualitative Concept,25224
+part,C45313,Part,Physical Object,25230
+study,C63536,Study,Research Activity,25242
+decreased,C25640,Reduced,Qualitative Concept,25252
+lower,C25309,Lower,Spatial Concept,25265
+levels,C25554,Level,Quantitative Concept,25271
+placebo,C753,Placebo,Conceptual Entity,25295
+arm,C32141,Arm,Anatomical Structure,25303
+day,C25301,Day,Temporal Concept,25310
+50,C105785,Fifty,Quantitative Concept,25314
+rest,C28185,Resting,Daily or Recreational Activity,25342
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,25376
+staining,C50753,Staining,Finding,25380
+index,C25390,Index,Intellectual Product,25389
+alterations,C28344,Alteration,Conceptual Entity,25396
+over,C65018,Over,Qualitative Concept,25408
+time,C25207,Time,Temporal Concept,25413
+regression,C18243,Regression,Finding,25430
+whole,C25326,Whole,Qualitative Concept,25444
+slide,C25325,Slide,Manufactured Object,25450
+indices,C50001,Indicator Device Component,Manufactured Object,25456
+Blue,C48333,Blue,Qualitative Concept,25465
+represents,C67045,Representation,Activity,25470
+standard care,C94396,Best Practice,Health Care Activity,25481
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,25499
+red,C48326,Red,Qualitative Concept,25505
+Placebo,C753,Placebo,Conceptual Entity,25510
+Error,C43369,Error,Conceptual Entity,25519
+bars,C48475,Bar Dosing Unit,Quantitative Concept,25525
+represent,C67045,Representation,Activity,25530
+confidence interval,C53324,Confidence Interval,Quantitative Concept,25544
+CI,C112239,Coagulation Index Measurement,Laboratory Procedure,25565
+estimated,C25498,Estimate,Activity,25570
+100,C105814,One Hundred,Quantitative Concept,25586
+sample size,C53190,Sample Size,Quantitative Concept,25590
+image,C48179,Image,Entity,25641
+Vertical,C25243,Vertical,Spatial Concept,25648
+areas,C16632,Geographic Area,Geographic Area,25664
+represent,C67045,Representation,Activity,25670
+days 1 days 1 2 days 1 2,C126448,One or Two Days,Intellectual Product,25684
+treatment during Course,C127075,Smoked Cigarettes During the Course of Treatment,Intellectual Product,25692
+22,C126884,Twenty Two,Quantitative Concept,25751
+26,C126886,Twenty Six,Quantitative Concept,25757
+Alterations,C28344,Alteration,Conceptual Entity,25788
+Statistical,C17167,Statistics,Occupation or Discipline,25807
+compared,C49156,Comparison,Activity,25849
+sensitivity,C25201,Sensitivity,Quantitative Concept,25862
+inferences,C75591,Inference,Activity,25889
+both,C49636,Both,Qualitative Concept,25903
+NCI,C19202,National Cancer Institute,Health Care Related Organization,25920
+tests resulting,C36292,Laboratory Test Result,Laboratory or Test Result,25924
+inputs,C47905,Input,Conceptual Entity,25965
+three,C66834,Three,Quantitative Concept,25977
+staining,C50753,Staining,Finding,25983
+index,C25390,Index,Intellectual Product,25992
+calculation,C54125,Calculation,Activity,25998
+methods,C71460,Method,Conceptual Entity,26010
+whole,C25326,Whole,Qualitative Concept,26022
+slide,C25325,Slide,Manufactured Object,26028
+index,C25390,Index,Intellectual Product,26034
+non,C25594,Negation,Functional Concept,26044
+overlapping,C54669,Overlap,Conceptual Entity,26048
+whole,C25326,Whole,Qualitative Concept,26060
+grid,C70846,Grid,Manufactured Object,26066
+indices,C50001,Indicator Device Component,Manufactured Object,26071
+uniform,C73944,Uniform,Qualitative Concept,26110
+random sampling,C53194,Random Sampling,Activity,26118
+non,C25594,Negation,Functional Concept,26137
+overlapping,C54669,Overlap,Conceptual Entity,26141
+whole,C25326,Whole,Qualitative Concept,26153
+grid,C70846,Grid,Manufactured Object,26159
+Fig,C71971,Fig,"Plant, Food",26171
+Since,C45325,Since,Temporal Concept,26180
+temporal,C73990,Temporal,Temporal Concept,26190
+analysis,C25391,Analysis,Activity,26199
+adds,C64911,Add,Activity,26208
+third,C25260,Third,Qualitative Concept,26215
+dimension,C25483,Dimension,Spatial Concept,26221
+full,C25517,Full,Qualitative Concept,26234
+detailed,C25480,Details,Idea or Concept,26239
+comparison,C49156,Comparison,Activity,26248
+all,C64916,All,Qualitative Concept,26262
+sample sizes,C53190,Sample Size,Quantitative Concept,26288
+Fig,C71971,Fig,"Plant, Food",26304
+long,C25248,Long,Qualitative Concept,26328
+Without,C25718,Without,Qualitative Concept,26334
+loss,C25559,Loss,Quantitative Concept,26344
+focus,C25511,Focus,Spatial Concept,26367
+two,C66833,Two,Quantitative Concept,26376
+sizes,C25681,Size,Quantitative Concept,26385
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,26395
+quantification,C48937,Quantitation,Activity,26399
+representatives,C67045,Representation,Activity,26418
+local,C67263,Local,Spatial Concept,26437
+cellular,C111153,Cellularity Measurement,Laboratory Procedure,26443
+activity,C43431,Activity,Activity,26452
+50,C105785,Fifty,Quantitative Concept,26462
+tissue,C33177,Tissue,Tissue,26476
+scale,C25664,Scale,Intellectual Product,26483
+activity,C43431,Activity,Activity,26489
+500,C16876,Montserrat,Geographic Area,26499
+results,C20200,Outcome,Finding,26515
+comparison,C49156,Comparison,Activity,26531
+Fig,C71971,Fig,"Plant, Food",26545
+increased sensitivity,C63078,Increased Device Sensitivity,Event,26561
+increased sensitivity,C73503,Increased Sensitivity,Phenomenon or Process,26561
+detection,C16210,Detection,Diagnostic Procedure,26571
+test,C47891,Test,Activity,26604
+deriving,C45673,Deriving,Qualitative Concept,26609
+inputs,C47905,Input,Conceptual Entity,26618
+quantification,C48937,Quantitation,Activity,26634
+method,C71460,Method,Conceptual Entity,26649
+significance,C41130,Significant,Functional Concept,26688
+test,C47891,Test,Activity,26712
+deriving,C45673,Deriving,Qualitative Concept,26717
+inputs,C47905,Input,Conceptual Entity,26726
+whole,C25326,Whole,Qualitative Concept,26742
+slide,C25325,Slide,Manufactured Object,26748
+different,C46003,Difference,Qualitative Concept,26757
+time points,C68568,Timepoint,Temporal Concept,26767
+time points,C68568,Timepoint,Temporal Concept,26767
+general,C115727,Safety Reporting Documentation,Intellectual Product,26783
+if,C64955,If,Qualitative Concept,26792
+tests,C47891,Test,Activity,26803
+detect,C117041,Dosing Days to Detection,Quantitative Concept,26809
+significant,C41130,Significant,Functional Concept,26816
+differences,C46003,Difference,Qualitative Concept,26828
+direction,C42677,Direction,Spatial Concept,26850
+whole,C25326,Whole,Qualitative Concept,26866
+slide,C25325,Slide,Manufactured Object,26872
+indices,C50001,Indicator Device Component,Manufactured Object,26878
+input,C47905,Input,Conceptual Entity,26889
+then,C65106,Then,Qualitative Concept,26896
+both,C49636,Both,Qualitative Concept,26901
+NCI,C19202,National Cancer Institute,Health Care Related Organization,26914
+tests,C47891,Test,Activity,26918
+detect,C117041,Dosing Days to Detection,Quantitative Concept,26924
+significant,C41130,Significant,Functional Concept,26931
+differences,C46003,Difference,Qualitative Concept,26943
+same,C64637,Same,Qualitative Concept,26962
+direction,C42677,Direction,Spatial Concept,26967
+quantification,C48937,Quantitation,Activity,27000
+method,C71460,Method,Conceptual Entity,27015
+tests,C47891,Test,Activity,27037
+deriving,C45673,Deriving,Qualitative Concept,27043
+inputs,C47905,Input,Conceptual Entity,27052
+method,C71460,Method,Conceptual Entity,27068
+required,C25652,Requirement,Functional Concept,27075
+number,C25337,Number,Quantitative Concept,27092
+samples,C70699,Biospecimen,Body Substance,27102
+detect,C117041,Dosing Days to Detection,Quantitative Concept,27113
+significant statistical,C28110,Statistically Significant,Quantitative Concept,27120
+differences,C46003,Difference,Qualitative Concept,27132
+compared,C49156,Comparison,Activity,27147
+NCI,C19202,National Cancer Institute,Health Care Related Organization,27165
+tests,C47891,Test,Activity,27169
+given,C64974,Give,Activity,27181
+size,C25681,Size,Quantitative Concept,27192
+agreement,C25369,Agreement,Social Behavior,27214
+direction,C42677,Direction,Spatial Concept,27233
+whole,C25326,Whole,Qualitative Concept,27277
+slide,C25325,Slide,Manufactured Object,27283
+indices,C50001,Indicator Device Component,Manufactured Object,27289
+if,C64955,If,Qualitative Concept,27298
+present,C25626,Present,Qualitative Concept,27301
+observations,C25598,Observation,Activity,27324
+mostly true,C123359,Mostly True,Intellectual Product,27346
+comparisons,C49156,Comparison,Activity,27362
+between,C94545,Between,Qualitative Concept,27374
+directions,C42677,Direction,Spatial Concept,27386
+method,C71460,Method,Conceptual Entity,27424
+based,C48055,Base,Qualitative Concept,27431
+inputs,C47905,Input,Conceptual Entity,27440
+method,C71460,Method,Conceptual Entity,27456
+whole,C25326,Whole,Qualitative Concept,27479
+grid,C70846,Grid,Manufactured Object,27485
+few,C64942,Few,Quantitative Concept,27503
+exceptions,C54420,Exception,Qualitative Concept,27507
+detail,C25480,Details,Idea or Concept,27542
+Supplemental,C68641,Supplement,Functional Concept,27556
+map,C43433,Map,Manufactured Object,27587
+two,C66833,Two,Quantitative Concept,27611
+one,C66832,One,Quantitative Concept,27615
+Mann Whitney tests,C53247,Mann-Whitney Test,Quantitative Concept,27625
+Wilcoxon tests,C53246,Wilcoxon Signed Rank Test,Quantitative Concept,27638
+non,C25594,Negation,Functional Concept,27663
+overlapping,C54669,Overlap,Conceptual Entity,27667
+confidence interval,C53324,Confidence Interval,Quantitative Concept,27679
+NCI,C19202,National Cancer Institute,Health Care Related Organization,27700
+size,C25681,Size,Quantitative Concept,27717
+50,C105785,Fifty,Quantitative Concept,27725
+500,C16876,Montserrat,Geographic Area,27738
+significance level,C41265,Significance Level,Quantitative Concept,27756
+calculated,C54125,Calculation,Activity,27787
+significance,C41130,Significant,Functional Concept,27802
+tests,C47891,Test,Activity,27826
+data,C25474,Data,Idea or Concept,27848
+fraction,C25514,Fraction,Conceptual Entity,27860
+tests,C47891,Test,Activity,27876
+significance,C41130,Significant,Functional Concept,27895
+less than,C61585,Less Than,Functional Concept,27908
+more than,C61584,Greater Than,Quantitative Concept,27927
+repeats,C47942,Repeat Pattern,Spatial Concept,27948
+total,C25304,Total,Qualitative Concept,27957
+100,C105814,One Hundred,Quantitative Concept,27966
+entire,C25497,Entire,Qualitative Concept,27992
+grid,C70846,Grid,Manufactured Object,27999
+data,C25474,Data,Idea or Concept,28004
+without,C25718,Without,Qualitative Concept,28009
+sampling,C25662,Sampling,Activity,28017
+tests,C47891,Test,Activity,28033
+calculate,C54125,Calculation,Activity,28042
+p value,C44185,P-Value,Qualitative Concept,28054
+whole,C25326,Whole,Qualitative Concept,28066
+grid,C70846,Grid,Manufactured Object,28072
+whole,C25326,Whole,Qualitative Concept,28092
+slide,C25325,Slide,Manufactured Object,28098
+index,C25390,Index,Intellectual Product,28104
+tests,C47891,Test,Activity,28117
+calculate,C54125,Calculation,Activity,28126
+p value,C44185,P-Value,Qualitative Concept,28138
+whole,C25326,Whole,Qualitative Concept,28150
+slide,C25325,Slide,Manufactured Object,28156
+combination,C61517,Combination,Conceptual Entity,28179
+fill,C54093,Fill,Activity,28194
+border,C80507,Border,Classification,28203
+colors,C64546,Color Assessment,Laboratory Procedure,28210
+symbols,C54191,Symbol,Functional Concept,28221
+statistical significance,C61040,Statistical Significance,Qualitative Concept,28241
+Solid,C45300,Solid,Substance,28267
+white,C48325,White,Qualitative Concept,28273
+patches,C18605,Protein Patched Homolog 1,"Receptor, Amino Acid, Peptide, or Protein",28279
+gray,C48324,Gray,Qualitative Concept,28292
+border,C80507,Border,Classification,28297
+indicates,C50001,Indicator Device Component,Manufactured Object,28304
+no,C49487,No,Classification,28314
+statistically significant,C28110,Statistically Significant,Quantitative Concept,28317
+difference,C46003,Difference,Qualitative Concept,28343
+detected,C25481,Detected,Conceptual Entity,28357
+NCI,C19202,National Cancer Institute,Health Care Related Organization,28377
+tests,C47891,Test,Activity,28381
+All,C64916,All,Qualitative Concept,28388
+combinations,C61517,Combination,Conceptual Entity,28396
+fill,C54093,Fill,Activity,28412
+border,C80507,Border,Classification,28421
+colors,C64546,Color Assessment,Laboratory Procedure,28428
+symbols,C54191,Symbol,Functional Concept,28439
+have,C101282,Have,Classification,28461
+additive,C63495,Additive,Chemical Viewed Functionally,28466
+interpretations,C86557,Interpreter,Occupation or Discipline,28475
+light,C68808,Light,Qualitative Concept,28498
+blue,C48333,Blue,Qualitative Concept,28504
+fill,C54093,Fill,Activity,28509
+blue,C48333,Blue,Qualitative Concept,28524
+border,C80507,Border,Classification,28529
+means,C47955,Means,Conceptual Entity,28545
+placebo,C753,Placebo,Conceptual Entity,28551
+staining,C50753,Staining,Finding,28559
+index,C25390,Index,Intellectual Product,28568
+statistically,C17167,Statistics,Occupation or Discipline,28577
+greater than,C61584,Greater Than,Quantitative Concept,28591
+SOC,C71888,MedDRA System Organ Class,Idea or Concept,28604
+50,C105785,Fifty,Quantitative Concept,28611
+500,C16876,Montserrat,Geographic Area,28624
+sizes,C25681,Size,Quantitative Concept,28639
+both,C49636,Both,Qualitative Concept,28648
+NCI,C19202,National Cancer Institute,Health Care Related Organization,28661
+tests,C47891,Test,Activity,28665
+analysis,C25391,Analysis,Activity,28762
+tools,C84337,Scientific Equipment,Manufactured Object,28771
+field,C70773,Field,Conceptual Entity,28782
+digital,C62251,Digital,Qualitative Concept,28791
+pathology,C18189,Pathology,Biomedical Occupation or Discipline,28799
+recent,C25280,Recent,Temporal Concept,28834
+potential,C62230,Potential,Idea or Concept,28852
+solution,C70830,Solution,Substance,28862
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,28901
+quantification,C48937,Quantitation,Activity,28905
+entire,C25497,Entire,Qualitative Concept,28933
+histological,C25526,Histologic,Qualitative Concept,28940
+sections,C48956,Section,Geographic Area,28953
+established,C71155,Established,Qualitative Concept,28972
+tumors,C98275,Tumor Mass,Finding,28994
+exhibit,C96979,Exhibit,Intellectual Product,29001
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,29017
+analysis,C25391,Analysis,Activity,29045
+tools,C84337,Scientific Equipment,Manufactured Object,29054
+do,C86066,Do,Activity,29060
+not,C25594,Negation,Functional Concept,29063
+account,C88186,Financial Account,Classification,29067
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,29092
+information,C48191,Information,Conceptual Entity,29118
+lost,C25560,Lost,Qualitative Concept,29133
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,29147
+reduced,C25640,Reduced,Qualitative Concept,29164
+into,C25544,Into,Spatial Concept,29172
+single,C48440,Single,Qualitative Concept,29179
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,29186
+index,C25390,Index,Intellectual Product,29190
+method,C71460,Method,Conceptual Entity,29214
+heterogeneity,C28359,Heterogeneity,Qualitative Concept,29253
+distributions,C45273,Distribution,Activity,29290
+staining,C50753,Staining,Finding,29307
+indices,C50001,Indicator Device Component,Manufactured Object,29316
+uses,C107498,Useful,Qualitative Concept,29328
+distributions,C45273,Distribution,Activity,29339
+compare,C49156,Comparison,Activity,29365
+biological,C28226,Biological,Conceptual Entity,29373
+properties,C62498,Object Property,Conceptual Entity,29384
+tissue,C33177,Tissue,Tissue,29398
+response,C25755,Response,Phenomenon or Process,29405
+therapy,C49236,Therapeutic Procedure,Therapeutic or Preventive Procedure,29417
+use,C25340,Use,Functional Concept,29430
+weights,C48192,Importance Weight,Idea or Concept,29449
+makes,C25392,Manufacturer,Intellectual Product,29457
+method,C71460,Method,Conceptual Entity,29467
+robust,C94972,Robust,Qualitative Concept,29474
+fragmented,C124536,Fragmented,Qualitative Concept,29495
+tissues,C33177,Tissue,Tissue,29506
+viable,C25324,Viable,Qualitative Concept,29521
+tumor,C98275,Tumor Mass,Finding,29528
+regions,C41129,Region,Spatial Concept,29534
+Fig,C71971,Fig,"Plant, Food",29545
+not,C25594,Negation,Functional Concept,29567
+sensitive,C3114,Hypersensitivity,Disease or Syndrome,29571
+filled,C54093,Fill,Activity,29594
+grid,C70846,Grid,Manufactured Object,29601
+capability,C74979,Capability,Qualitative Concept,29618
+important,C115916,Important,Qualitative Concept,29632
+primary tumors,C8509,Primary Neoplasm,Neoplastic Process,29656
+tumors cells,C23852,Murine Tumor Cells,Cell,29664
+micro,C48438,Micro,Quantitative Concept,29674
+metastases,C19151,Metastasis,Pathologic Function,29680
+host,C66819,Host,Organism,29734
+tissue,C33177,Tissue,Tissue,29739
+small,C25376,Small,Qualitative Concept,29749
+using test test,C92020,Device Use Testing Evaluation Method,Functional Concept,29774
+whole,C25326,Whole,Qualitative Concept,29780
+slide,C25325,Slide,Manufactured Object,29786
+data,C25474,Data,Idea or Concept,29792
+only,C65011,Only,Qualitative Concept,29803
+single,C48440,Single,Qualitative Concept,29810
+statistical test,C53228,Statistical Test,Quantitative Concept,29817
+provide,C80514,Provide,Activity,29838
+one,C66832,One,Quantitative Concept,29846
+p value,C44185,P-Value,Qualitative Concept,29850
+single,C48440,Single,Qualitative Concept,29865
+test not,C101887,Not Tested,Qualitative Concept,29872
+does,C86066,Do,Activity,29877
+sensitive,C3114,Hypersensitivity,Disease or Syndrome,29895
+detected,C25481,Detected,Conceptual Entity,29911
+differences,C46003,Difference,Qualitative Concept,29920
+uncontrolled,C48932,Uncontrolled,Qualitative Concept,29939
+experimental,C28296,Experimental,Conceptual Entity,29952
+variations,C25713,Variation,Conceptual Entity,29965
+amount,C25417,Amount,Qualitative Concept,29987
+tissue,C33177,Tissue,Tissue,29997
+size,C25681,Size,Quantitative Concept,30017
+tissue,C33177,Tissue,Tissue,30025
+section,C48956,Section,Geographic Area,30032
+overcome,C90036,Overcome,Activity,30045
+issue,C43415,Issue,Manufactured Object,30059
+sample,C70699,Biospecimen,Body Substance,30069
+fraction,C25514,Fraction,Conceptual Entity,30078
+each,C64933,Each,Qualitative Concept,30102
+statistical test,C53228,Statistical Test,Quantitative Concept,30107
+repeat,C47886,Repeat,Activity,30129
+use tests,C92020,Device Use Testing Evaluation Method,Functional Concept,30149
+percentage,C25613,Percentage,Conceptual Entity,30153
+coverage,C68811,Cover,Activity,30164
+samples,C70699,Biospecimen,Body Substance,30176
+measure,C25209,Measurement,Quantitative Concept,30207
+use,C25340,Use,Functional Concept,30235
+errors,C43369,Error,Conceptual Entity,30239
+sample means variances,C71567,Sample Variance of Sample Mean,Quantitative Concept,30249
+sample measures,C71559,Sample Statistic,Quantitative Concept,30249
+percentage,C25613,Percentage,Conceptual Entity,30280
+coverage,C68811,Cover,Activity,30291
+quality,C25283,Quality,Conceptual Entity,30315
+larger,C49508,Large,Qualitative Concept,30346
+sample sizes,C53190,Sample Size,Quantitative Concept,30353
+have,C101282,Have,Classification,30366
+errors,C43369,Error,Conceptual Entity,30379
+sample means variances,C71567,Sample Variance of Sample Mean,Quantitative Concept,30389
+more,C128667,More,Qualitative Concept,30459
+likely,C85550,Likely,Conceptual Entity,30464
+p values,C44185,P-Value,Qualitative Concept,30499
+statistically significant,C28110,Statistically Significant,Quantitative Concept,30545
+differences,C46003,Difference,Qualitative Concept,30571
+detected,C25481,Detected,Conceptual Entity,30583
+fraction,C25514,Fraction,Conceptual Entity,30608
+tissue,C33177,Tissue,Tissue,30620
+errors,C43369,Error,Conceptual Entity,30639
+sample means sample variances,C71567,Sample Variance of Sample Mean,Quantitative Concept,30649
+means sample variances,C71567,Sample Variance of Sample Mean,Quantitative Concept,30656
+more,C128667,More,Qualitative Concept,30686
+study,C63536,Study,Research Activity,30708
+given,C64974,Give,Activity,30721
+tissue,C33177,Tissue,Tissue,30727
+percentage,C25613,Percentage,Conceptual Entity,30734
+coverage,C68811,Cover,Activity,30745
+low,C54722,Low,Qualitative Concept,30758
+choice,C48912,Choose,Activity,30774
+size,C25681,Size,Quantitative Concept,30789
+50,C105785,Fifty,Quantitative Concept,30797
+provided,C80514,Provide,Activity,30806
+lowest,C43517,Lowest,Spatial Concept,30819
+level,C25554,Level,Quantitative Concept,30826
+error,C43369,Error,Conceptual Entity,30835
+bias,C28232,Bias,Idea or Concept,30845
+tests,C47891,Test,Activity,30871
+based,C48055,Base,Qualitative Concept,30877
+whole,C25326,Whole,Qualitative Concept,30886
+slide,C25325,Slide,Manufactured Object,30892
+general,C115727,Safety Reporting Documentation,Intellectual Product,30911
+fluorescence,C16586,Fluorescence,Phenomenon or Process,30936
+based,C48055,Base,Qualitative Concept,30949
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,30956
+qualitative,C92722,Qualitative Concept,Conceptual Entity,30965
+quantitative,C70766,Quantitative Concept,Conceptual Entity,30985
+measure,C25209,Measurement,Quantitative Concept,30998
+most,C25258,Most,Qualitative Concept,31009
+applications,C50341,Applicator Device Component,Manufactured Object,31014
+al,C111127,Aluminum Measurement,Laboratory Procedure,31065
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,31076
+variability,C85443,Variability,Conceptual Entity,31080
+tissue preparation,C49337,Tissue Preparation or Processing Technique,Laboratory Procedure,31093
+staining,C50753,Staining,Finding,31113
+validation,C16237,Validation,Research Activity,31122
+interpretation,C41255,Interpretation,Mental Process,31134
+standards,C44275,Standard,Conceptual Entity,31158
+major,C45368,Major,Qualitative Concept,31202
+measure,C25209,Measurement,Quantitative Concept,31223
+quantitative,C70766,Quantitative Concept,Conceptual Entity,31243
+one,C66832,One,Quantitative Concept,31256
+use,C25340,Use,Functional Concept,31263
+image analysis,C17606,Image Processing,Activity,31270
+challenge,C78166,Challenge,Activity,31294
+development,C18732,Development,Organism Function,31312
+new,C25586,New,Qualitative Concept,31327
+biomarkers,C16342,Biomarker,Functional Concept,31331
+al,C111127,Aluminum Measurement,Laboratory Procedure,31354
+conditions,C47953,Logical Condition,Conceptual Entity,31393
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,31405
+staining intensities,C127762,Staining Intensity,Laboratory Procedure,31409
+have,C101282,Have,Classification,31430
+quantify,C48937,Quantitation,Activity,31459
+protein expressions,C18966,Protein Expression,Genetic Function,31468
+against,C64937,Against,Qualitative Concept,31502
+gold,C2392,Gold,"Element, Ion, or Isotope",31510
+techniques,C16847,Technique,Activity,31524
+al,C111127,Aluminum Measurement,Laboratory Procedure,31550
+have,C101282,Have,Classification,31567
+advancements,C25411,Advanced,Qualitative Concept,31577
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,31620
+al,C111127,Aluminum Measurement,Laboratory Procedure,31662
+al,C111127,Aluminum Measurement,Laboratory Procedure,31687
+method,C71460,Method,Conceptual Entity,31702
+can,C43180,Can,Manufactured Object,31709
+both,C49636,Both,Qualitative Concept,31726
+fluorescence,C16586,Fluorescence,Phenomenon or Process,31746
+based,C48055,Base,Qualitative Concept,31759
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,31765
+Higher,C25227,High,Qualitative Concept,31770
+detection,C16210,Detection,Diagnostic Procedure,31777
+grid,C70846,Grid,Manufactured Object,31810
+method,C71460,Method,Conceptual Entity,31815
+coupled,C61302,Couple,Activity,31823
+IHC,C23020,Immunohistochemistry Staining Method,Laboratory Procedure,31849
+may,C106184,May,Qualitative Concept,31864
+current,C25471,Current,Temporal Concept,31914
+diagnostic,C25482,Diagnostic,Qualitative Concept,31922
+prognostic,C25263,Prognostic,Qualitative Concept,31937
+assays,C16341,Bioassay,Laboratory Procedure,31948
+novel,C25586,New,Qualitative Concept,31980
