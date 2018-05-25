@@ -20,4 +20,4 @@ All the articles should be annotated to entity lists in *.csv format, and all th
 
 Have problems? Look into the code by yourself!
 
-More problems or want the training data/optimized models? Contact me througt zhengyl940425@gmail.com!
+More problems or want the training data/optimized models? Contact me through zhengyl940425@gmail.com!
