@@ -3,7 +3,7 @@ from keras.models import load_model as kload
 from keras.layers import Dense,Concatenate,Input,Dropout,BatchNormalization
 
 class BOWNN:
-	def __init__(self,input_size,hidden_size,output_size):
+	def __init__(self,input_size=0,hidden_size=0,output_size=0):
 		self.droprate=0.5
 		self.input_size=input_size
 		self.hidden_size=hidden_size
@@ -25,7 +25,7 @@ class BOWNN:
 		self.model.save(path)
 
 class BOWNN_author(BOWNN):
-	def __init__(self,input_size,author_size,hidden_size,output_size):
+	def __init__(self,input_size=0,author_size=0,hidden_size=0,output_size=0):
 		self.droprate=0.5
 		self.input_size=input_size
 		self.author_size=author_size
