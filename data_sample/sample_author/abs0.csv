@@ -1,0 +1,117 @@
+Mention,ConceptCode,ConceptName,SemanticType,Start
+study,C63536,Study,Research Activity,5
+assess,C25367,Assessment,Intellectual Product,20
+intent,C25725,Intent,Qualitative Concept,31
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,62
+Bangladesh,C16323,Bangladesh,Geographic Area,86
+preferred,C42711,Preferred,Qualitative Concept,114
+options,C25374,Options,Intellectual Product,134
+measure,C25209,Measurement,Quantitative Concept,146
+association,C25648,Relationship,Conceptual Entity,158
+intent,C25725,Intent,Qualitative Concept,176
+clinical,C25398,Clinical,Qualitative Concept,210
+competency,C99568,Competency,Conceptual Entity,219
+job,C25193,Occupation,Occupation or Discipline,234
+satisfaction,C62185,Satisfaction,Mental Process,238
+Personal,C19332,Personal Attribute,Organism Attribute,252
+professional,C97016,Health Care Professional Promotional Material,Intellectual Product,265
+aspects,C61468,Aspect,Qualitative Concept,278
+potential,C62230,Potential,Idea or Concept,289
+students,C75561,Student,Occupation or Discipline,299
+education,C16529,Education,Educational Activity,326
+needs,C41204,Need,Conceptual Entity,421
+higher,C25227,High,Qualitative Concept,431
+nursing education,C20844,Nurse Educator,Biomedical Occupation or Discipline,438
+education masters,C71369,Master of Education,Intellectual Product,446
+no,C49487,No,Classification,467
+programmes,C50123,Programmer Device Component,Manufactured Object,489
+Bangladesh,C16323,Bangladesh,Geographic Area,503
+study,C63536,Study,Research Activity,520
+descriptive,C25365,Description,Intellectual Product,533
+design,C43358,Design,Activity,559
+Nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,567
+Bangladesh,C16323,Bangladesh,Geographic Area,585
+public,C49060,Public,Qualitative Concept,596
+sector,C48955,Sector,Geographic Area,603
+self administered,C25670,Self-Administered,Functional Concept,645
+survey,C17176,Survey,Research Device,663
+260,C20105,French Southern and Antarctic Lands,Geographic Area,675
+questionnaire,C17048,Questionnaire,Intellectual Product,685
+perception,C16967,Perception,Mental Process,712
+job,C25193,Occupation,Occupation or Discipline,726
+satisfaction,C62185,Satisfaction,Mental Process,730
+clinical,C25398,Clinical,Qualitative Concept,744
+competency,C99568,Competency,Conceptual Entity,753
+need,C41204,Need,Conceptual Entity,772
+options,C25374,Options,Intellectual Product,793
+intent,C25725,Intent,Qualitative Concept,816
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,847
+preferred,C42711,Preferred,Qualitative Concept,866
+specialty,C17153,Medical Specialty,Biomedical Occupation or Discipline,876
+area content,C70772,Knowledge Field,Conceptual Entity,886
+after,C49639,Status Post,Temporal Concept,928
+graduation,C52581,Graduation,Activity,934
+Data,C25474,Data,Idea or Concept,946
+descriptive,C25365,Description,Intellectual Product,971
+statistics,C17167,Statistics,Occupation or Discipline,983
+point,C70656,Point,Spatial Concept,998
+correlation,C48834,Correlation,Conceptual Entity,1013
+Ninety,C105786,Ninety,Quantitative Concept,1026
+reported,C25375,Report,Intellectual Product,1061
+intended,C25725,Intent,Qualitative Concept,1080
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,1113
+Intention,C25725,Intent,Qualitative Concept,1132
+correlated,C48834,Correlation,Conceptual Entity,1160
+clinical,C25398,Clinical,Qualitative Concept,1176
+competency,C99568,Competency,Conceptual Entity,1185
+not,C25594,Negation,Functional Concept,1200
+job,C25193,Occupation,Occupation or Discipline,1209
+satisfaction,C62185,Satisfaction,Mental Process,1213
+most,C25258,Most,Qualitative Concept,1231
+preferred,C42711,Preferred,Qualitative Concept,1236
+specialty,C17153,Medical Specialty,Biomedical Occupation or Discipline,1246
+areas,C16632,Geographic Area,Geographic Area,1256
+nursing education,C20844,Nurse Educator,Biomedical Occupation or Discipline,1267
+management,C61372,Management,Activity,1275
+Half,C81009,Half,Conceptual Entity,1301
+nursing schools,C19023,School Health Nursing,Biomedical Occupation or Discipline,1352
+after,C49639,Status Post,Temporal Concept,1386
+graduation,C52581,Graduation,Activity,1392
+results,C20200,Outcome,Finding,1408
+needs,C41204,Need,Conceptual Entity,1423
+assessment,C25367,Assessment,Intellectual Product,1429
+unique,C45282,Unique,Qualitative Concept,1472
+interest,C60730,Interest,Conceptual Entity,1479
+priorities,C48911,Priority,Qualitative Concept,1492
+current,C25471,Current,Temporal Concept,1510
+status,C25688,Status,Qualitative Concept,1518
+Bangladesh,C16323,Bangladesh,Geographic Area,1528
+results,C20200,Outcome,Finding,1544
+strong,C14614,Strong,,1563
+motivation,C28495,Motivation,Mental Process,1570
+nursing nursing education,C20844,Nurse Educator,Biomedical Occupation or Discipline,1605
+confidence,C43367,Confidence,Conceptual Entity,1624
+clinical,C25398,Clinical,Qualitative Concept,1638
+competence,C99568,Competency,Conceptual Entity,1647
+high,C25227,High,Qualitative Concept,1662
+management,C61372,Management,Activity,1699
+findings,C61036,Investigation Finding,Finding,1731
+design,C43358,Design,Activity,1764
+order,C54092,Order,Intellectual Product,1788
+meet,C87531,Fulfill,Activity,1797
+interest,C60730,Interest,Conceptual Entity,1806
+Bangladesh,C16323,Bangladesh,Geographic Area,1818
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,1829
+needs,C41204,Need,Conceptual Entity,1849
+assessments,C25367,Assessment,Intellectual Product,1855
+take,C65105,Take,Activity,1874
+precedence,C48911,Priority,Qualitative Concept,1879
+ensure,C74452,Nutritional Supplement Drink,Pharmacologic Substance,1893
+best,C25432,Best,Qualitative Concept,1904
+possible,C82490,Possible,Qualitative Concept,1909
+outcome,C20200,Outcome,Finding,1930
+competent,C99568,Competency,Conceptual Entity,1953
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,1963
+contribute,C61412,Contribution,Activity,1979
+Development,C18732,Development,Organism Function,2018
+Bangladesh,C16323,Bangladesh,Geographic Area,2039

@@ -1,0 +1,1384 @@
+Mention,ConceptCode,ConceptName,SemanticType,Start
+nursing education,C20844,Nurse Educator,Biomedical Occupation or Discipline,17
+edge,C75923,Graph Edge,Conceptual Entity,75
+flexible,C80495,Flexible,Conceptual Entity,95
+leadership,C121297,Leadership Scale,Intellectual Product,104
+critical,C25467,Critical,Qualitative Concept,119
+action,C25404,Action,Activity,128
+allows,C41192,Authorization,Governmental or Regulatory Activity,139
+nurses promote health,C18832,Health Promotion in Nursing,Occupational Activity,146
+promote health care,C18830,Health Promotion and Care,Educational Activity,156
+complex,C47881,Complex,Qualitative Concept,195
+systems,C40568,"System, LOINC Axis 4",Intellectual Product,223
+American,C128457,American Ethnicity,Population Group,232
+Association,C25648,Relationship,Conceptual Entity,241
+Colleges,C61514,College,Organization,256
+education,C16529,Education,Educational Activity,301
+most,C25258,Most,Qualitative Concept,340
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,345
+countries,C66786,CDISC SDTM Country Terminology,Intellectual Product,366
+Bangladesh,C16323,Bangladesh,Geographic Area,377
+rapidly,C65069,Rapidly,Qualitative Concept,393
+country,C25464,Country,Geographic Area,412
+progress,C25630,Progress,Qualitative Concept,447
+country,C25464,Country,Geographic Area,522
+severe,C70667,Severe,Qualitative Concept,536
+healthcare providers,C16666,Health Care Provider,Professional or Occupational Group,555
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,587
+World Health Organization,C75419,World Health Organization,Health Care Related Organization,595
+overcome,C90036,Overcome,Activity,631
+problem,C28020,Problem,Phenomenon or Process,645
+number,C25337,Number,Quantitative Concept,658
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,668
+institutes,C41206,Institution,Organization,676
+colleges,C61514,College,Organization,691
+Bangladesh,C16323,Bangladesh,Geographic Area,703
+increased,C25533,Increase,Qualitative Concept,732
+both,C49636,Both,Qualitative Concept,758
+public,C49060,Public,Qualitative Concept,767
+private,C54104,Private,Qualitative Concept,778
+sectors,C48955,Sector,Geographic Area,786
+statistics,C17167,Statistics,Occupation or Discipline,814
+Directorate Nursing,C20859,Nurse Administrator,Biomedical Occupation or Discipline,826
+Nursing Health Family,C18790,Family Health Nursing,Biomedical Occupation or Discipline,841
+Nursing bachelor science,C71350,Bachelor of Science in Nursing,Intellectual Product,841
+Nursing schools schools schools,C19023,School Health Nursing,Biomedical Occupation or Discipline,841
+Services,C15785,Clinical Service,Health Care Activity,849
+Bangladesh,C16323,Bangladesh,Geographic Area,919
+20,C105799,Twenty,Quantitative Concept,934
+BSN,C71350,Bachelor of Science in Nursing,Intellectual Product,969
+entry,C43381,Entry,Intellectual Product,992
+seats,C62122,Sitting,Spatial Concept,998
+diploma,C71335,Diploma,Intellectual Product,1008
+entry,C43381,Entry,Intellectual Product,1034
+seats,C62122,Sitting,Spatial Concept,1040
+14,C113428,Fourteen,Quantitative Concept,1050
+post,C38008,Post,Temporal Concept,1053
+basic,C48056,Base,Chemical Viewed Functionally,1058
+seats,C62122,Sitting,Spatial Concept,1081
+public,C49060,Public,Qualitative Concept,1099
+private,C54104,Private,Qualitative Concept,1107
+armed forces,C68638,Military,Population Group,1119
+sectors,C48955,Sector,Geographic Area,1132
+Fig,C71971,Fig,"Plant, Food",1141
+pool,C68779,Pool,Activity,1163
+nurse faculty,C20844,Nurse Educator,Biomedical Occupation or Discipline,1171
+members,C25368,Member,Human,1185
+can,C43180,Can,Manufactured Object,1197
+limited,C121422,Limited Lifting Ability,Intellectual Product,1240
+most,C25258,Most,Qualitative Concept,1253
+have,C101282,Have,Classification,1268
+not,C25594,Negation,Functional Concept,1273
+prepared,C25625,Preparation,Activity,1297
+teacher,C102873,Teacher,Occupation or Discipline,1324
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,1335
+student,C75561,Student,Occupation or Discipline,1343
+ratio,C44256,Ratio,Quantitative Concept,1351
+Bangladesh,C16323,Bangladesh,Geographic Area,1360
+compared,C49156,Comparison,Activity,1380
+20,C105799,Twenty,Quantitative Concept,1400
+accepted,C62559,Accepted,Qualitative Concept,1403
+many,C78728,Many,Qualitative Concept,1415
+other,C17649,Other,Qualitative Concept,1420
+countries,C66786,CDISC SDTM Country Terminology,Intellectual Product,1426
+terms,C114093,Term Birth,Finding,1455
+qualifications,C115712,Laboratory Certification Document,Intellectual Product,1464
+proportion,C49159,Proportion,Quantitative Concept,1484
+nurses faculty,C20844,Nurse Educator,Biomedical Occupation or Discipline,1498
+nurses master science master,C71374,Master of Science in Nursing,Intellectual Product,1498
+nurses public health public health,C17040,Public Health Nursing,Biomedical Occupation or Discipline,1498
+nurses Directorate,C20859,Nurse Administrator,Biomedical Occupation or Discipline,1498
+nurses health health Family,C18790,Family Health Nursing,Biomedical Occupation or Discipline,1498
+MSN,C71374,Master of Science in Nursing,Intellectual Product,1542
+small,C25376,Small,Qualitative Concept,1561
+most,C25258,Most,Qualitative Concept,1568
+have,C101282,Have,Classification,1589
+master,C39451,Master of Public Health,Intellectual Product,1596
+Services,C15785,Clinical Service,Health Care Activity,1680
+worse,C71686,Worse,Qualitative Concept,1767
+nursing faculty,C20844,Nurse Educator,Biomedical Occupation or Discipline,1786
+PhD,C30161,Phosducin,"Amino Acid, Peptide, or Protein",1809
+degree,C25554,Level,Quantitative Concept,1813
+Only,C65011,Only,Qualitative Concept,1821
+one,C66832,One,Quantitative Concept,1826
+five,C66836,Five,Quantitative Concept,1845
+students,C75561,Student,Occupation or Discipline,1850
+doctorate,C39392,Doctorate Degree,Intellectual Product,1871
+programmes,C50123,Programmer Device Component,Manufactured Object,1881
+funded government,C93390,Government Funding,Governmental or Regulatory Activity,1896
+sector,C48955,Sector,Geographic Area,1921
+six,C66837,Six,Quantitative Concept,1933
+nurses Directorate,C20859,Nurse Administrator,Biomedical Occupation or Discipline,1937
+nurses Health Family,C18790,Family Health Nursing,Biomedical Occupation or Discipline,1937
+PhD,C30161,Phosducin,"Amino Acid, Peptide, or Protein",1949
+degrees,C25554,Level,Quantitative Concept,1953
+supported,C37902,Support,Conceptual Entity,1965
+private,C54104,Private,Qualitative Concept,1982
+sector,C48955,Sector,Geographic Area,1990
+Services,C15785,Clinical Service,Health Care Activity,2021
+addition,C64911,Add,Activity,2094
+recent,C25280,Recent,Temporal Concept,2106
+basic,C48056,Base,Chemical Viewed Functionally,2128
+nursing education,C20844,Nurse Educator,Biomedical Occupation or Discipline,2149
+Bangladesh,C16323,Bangladesh,Geographic Area,2170
+al,C111127,Aluminum Measurement,Laboratory Procedure,2253
+problems,C28020,Problem,Phenomenon or Process,2270
+point,C70656,Point,Spatial Concept,2279
+critical,C25467,Critical,Qualitative Concept,2292
+need,C41204,Need,Conceptual Entity,2301
+higher,C25227,High,Qualitative Concept,2310
+education nursing,C20844,Nurse Educator,Biomedical Occupation or Discipline,2317
+nursing faculty,C20844,Nurse Educator,Biomedical Occupation or Discipline,2330
+better,C71685,Better,Qualitative Concept,2341
+prepare,C25625,Preparation,Activity,2348
+roles,C48835,Role,Conceptual Entity,2375
+Bangladesh,C16323,Bangladesh,Geographic Area,2391
+no,C49487,No,Classification,2406
+PhD,C30161,Phosducin,"Amino Acid, Peptide, or Protein",2409
+master science nursing nursing,C71374,Master of Science in Nursing,Intellectual Product,2416
+pro,C29612,Proline,"Amino Acid, Peptide, or Protein",2434
+nursing public health nursing,C17040,Public Health Nursing,Biomedical Occupation or Discipline,2450
+programmes,C50123,Programmer Device Component,Manufactured Object,2494
+select,C48912,Choose,Activity,2512
+few,C64942,Few,Quantitative Concept,2519
+study,C63536,Study,Research Activity,2523
+degree,C25554,Level,Quantitative Concept,2555
+provides,C80514,Provide,Activity,2599
+students,C75561,Student,Occupation or Discipline,2626
+healthcare,C15363,Healthcare,Health Care Activity,2650
+systems,C40568,"System, LOINC Axis 4",Intellectual Product,2661
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,2673
+other,C17649,Other,Qualitative Concept,2694
+countries,C66786,CDISC SDTM Country Terminology,Intellectual Product,2700
+leave,C53464,Departure,Activity,2730
+students,C75561,Student,Occupation or Discipline,2753
+often,C91247,Often,Intellectual Product,2762
+experience,C54627,Experience,Organism Attribute,2768
+cultural,C16478,Culture,Idea or Concept,2779
+adjustment,C49157,Adjustment,Activity,2788
+language,C16779,Language,Language,2800
+barriers,C49838,Barrier Device Component,Manufactured Object,2809
+major,C45368,Major,Qualitative Concept,2822
+changes,C25572,Modification,Qualitative Concept,2828
+living,C37987,Life,Conceptual Entity,2847
+al,C111127,Aluminum Measurement,Laboratory Procedure,2865
+recommended,C25197,Recommendation,Idea or Concept,2891
+academic degree,C25354,Academic Degree,Intellectual Product,2912
+degree master's degree,C70556,Master's Degree Completion,Organism Attribute,2921
+nursing faculty,C20844,Nurse Educator,Biomedical Occupation or Discipline,2932
+higher,C25227,High,Qualitative Concept,2958
+dents,C63245,Dent in Medical Device Material,Event,2987
+suggests,C48313,Suggestion,Conceptual Entity,3031
+minimum,C25570,Minimum,Qualitative Concept,3049
+credential,C73925,Credential,Intellectual Product,3066
+teachers,C102873,Teacher,Occupation or Discipline,3081
+BSN,C71350,Bachelor of Science in Nursing,Intellectual Product,3093
+programmes,C50123,Programmer Device Component,Manufactured Object,3097
+context,C63325,Context,Idea or Concept,3154
+start,C25431,Begin,Temporal Concept,3183
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,3213
+able,C78209,Ability,Functional Concept,3263
+hold,C62290,Hold,Activity,3271
+leadership,C121297,Leadership Scale,Intellectual Product,3276
+roles,C48835,Role,Conceptual Entity,3287
+promote,C61391,Promotion,Activity,3297
+faculty,C53281,Faculty,Population Group,3323
+members,C25368,Member,Human,3331
+researchers,C15429,Research Activity,Research Activity,3340
+specialists,C73456,Specialist Physician,Professional or Occupational Group,3380
+Background,C45782,Background,Conceptual Entity,3394
+Nurses research,C15285,Nursing Research,Research Activity,3406
+Nurses research,C51864,Research Nurse,Professional or Occupational Group,3406
+academic,C18240,Academia,Organization,3429
+background,C45782,Background,Conceptual Entity,3438
+health professionals health,C54067,Health Professional,Occupation or Discipline,3500
+related,C53260,Definitely Related to Intervention,Qualitative Concept,3507
+al,C111127,Aluminum Measurement,Laboratory Procedure,3586
+Previous,C25627,Previous,Temporal Concept,3597
+studies,C15206,Clinical Study,Research Activity,3606
+have,C101282,Have,Classification,3614
+provided,C80514,Provide,Activity,3619
+strong,C14614,Strong,,3628
+support,C37902,Support,Conceptual Entity,3635
+contributes,C61412,Contribution,Activity,3736
+health education,C16664,Health Education,Educational Activity,3755
+business,C54131,Company,Organization,3774
+social,C62650,Social,Qualitative Concept,3798
+structure,C41186,Structure,Functional Concept,3805
+American,C128457,American Ethnicity,Population Group,3828
+Association,C25648,Relationship,Conceptual Entity,3837
+Colleges,C61514,College,Organization,3852
+factors,C84380,Mathematical Factor,Conceptual Entity,3888
+related,C53260,Definitely Related to Intervention,Qualitative Concept,3896
+personal,C19332,Personal Attribute,Organism Attribute,3907
+professional,C97016,Health Care Professional Promotional Material,Intellectual Product,3920
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,3948
+education,C16529,Education,Educational Activity,3976
+Job,C25193,Occupation,Occupation or Discipline,3987
+satisfaction,C62185,Satisfaction,Mental Process,3991
+clinical,C25398,Clinical,Qualitative Concept,4008
+competency,C99568,Competency,Conceptual Entity,4017
+have,C101282,Have,Classification,4028
+important,C115916,Important,Qualitative Concept,4050
+sonal,C640,Methaqualone,"Organic Chemical, Pharmacologic Substance",4065
+professional,C97016,Health Care Professional Promotional Material,Intellectual Product,4075
+factors,C84380,Mathematical Factor,Conceptual Entity,4088
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,4138
+RNs,C20824,Registered Nurse,Biomedical Occupation or Discipline,4146
+return,C71900,Return,Activity,4154
+school,C17118,School,Organization,4164
+al,C111127,Aluminum Measurement,Laboratory Procedure,4182
+Job,C25193,Occupation,Occupation or Discipline,4193
+defined,C42777,Definition,Intellectual Product,4213
+reported,C25375,Report,Intellectual Product,4224
+experience,C54627,Experience,Organism Attribute,4233
+satisfaction,C62185,Satisfaction,Mental Process,4247
+one's,C66832,One,Quantitative Concept,4263
+current,C25471,Current,Temporal Concept,4269
+set,C47894,Set,Conceptual Entity,4304
+attitudes,C72885,Outlook,Mental Process,4311
+aspects,C61468,Aspect,Qualitative Concept,4337
+pay work,C95551,Attend Paid Job,Daily or Recreational Activity,4362
+al,C111127,Aluminum Measurement,Laboratory Procedure,4408
+al,C111127,Aluminum Measurement,Laboratory Procedure,4429
+reported,C25375,Report,Intellectual Product,4466
+additional,C25406,Additional,Quantitative Concept,4498
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,4509
+degree,C25554,Level,Quantitative Concept,4517
+RNs,C20824,Registered Nurse,Biomedical Occupation or Discipline,4530
+predicted,C54156,Prediction,Idea or Concept,4538
+lower,C25309,Lower,Spatial Concept,4551
+job,C25193,Occupation,Occupation or Discipline,4557
+satisfaction,C62185,Satisfaction,Mental Process,4561
+Clinical,C25398,Clinical,Qualitative Concept,4575
+competency,C99568,Competency,Conceptual Entity,4584
+defined,C42777,Definition,Intellectual Product,4598
+ability,C78209,Ability,Functional Concept,4635
+perform,C38000,Performed,Qualitative Concept,4646
+interventions,C98388,Interventional Study,Research Activity,4663
+al,C111127,Aluminum Measurement,Laboratory Procedure,4701
+Members,C25368,Member,Human,4712
+other,C17649,Other,Qualitative Concept,4723
+pharmacists,C51840,Pharmacist,Professional or Occupational Group,4750
+physical therapists,C53422,Physical Therapist,Occupation or Discipline,4766
+have,C101282,Have,Classification,4787
+known,C80137,Known,Conceptual Entity,4802
+level,C25554,Level,Quantitative Concept,4830
+programmes,C50123,Programmer Device Component,Manufactured Object,4836
+enhancement,C71607,Enhance,Activity,4857
+al,C111127,Aluminum Measurement,Laboratory Procedure,4881
+study,C63536,Study,Research Activity,4912
+German,C43855,German,Population Group,4921
+RNs,C20824,Registered Nurse,Biomedical Occupation or Discipline,4940
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,4945
+MSN,C71374,Master of Science in Nursing,Intellectual Product,4977
+edge,C75923,Graph Edge,Conceptual Entity,5015
+gain,C37956,Gain,Quantitative Concept,5035
+clinical,C25398,Clinical,Qualitative Concept,5051
+competency,C99568,Competency,Conceptual Entity,5060
+date studies,C69208,Study Start Date,Intellectual Product,5076
+no,C49487,No,Classification,5082
+have,C101282,Have,Classification,5093
+found,C25626,Present,Qualitative Concept,5103
+needs,C41204,Need,Conceptual Entity,5125
+Bangladeshi,C43671,Bangladeshi,Population Group,5134
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,5146
+further,C25519,Further,Qualitative Concept,5157
+education,C16529,Education,Educational Activity,5174
+General,C115727,Safety Reporting Documentation,Intellectual Product,5185
+information personal,C90492,Personal Information,Conceptual Entity,5193
+details,C25480,Details,Idea or Concept,5216
+aspects,C61468,Aspect,Qualitative Concept,5262
+potential,C62230,Potential,Idea or Concept,5273
+future,C67527,Future,Temporal Concept,5283
+students,C75561,Student,Occupation or Discipline,5290
+advanced,C25411,Advanced,Qualitative Concept,5308
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,5317
+degrees,C25554,Level,Quantitative Concept,5325
+long term,C25322,Long-Term,Temporal Concept,5371
+educational Institute,C17118,School,Organization,5381
+Institute Medicine,C16740,Institute of Medicine,Health Care Related Organization,5405
+Aim,C60761,Aim,Conceptual Entity,5441
+purposes,C25634,Purpose,Idea or Concept,5450
+study,C63536,Study,Research Activity,5467
+assess,C25367,Assessment,Intellectual Product,5485
+intent,C25725,Intent,Qualitative Concept,5496
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,5506
+BSN,C71350,Bachelor of Science in Nursing,Intellectual Product,5520
+degree,C25554,Level,Quantitative Concept,5524
+MSN,C71374,Master of Science in Nursing,Intellectual Product,5546
+Bangladesh,C16323,Bangladesh,Geographic Area,5563
+preferred,C42711,Preferred,Qualitative Concept,5588
+options,C25374,Options,Intellectual Product,5608
+associations,C25648,Relationship,Conceptual Entity,5638
+clinical,C25398,Clinical,Qualitative Concept,5657
+competency,C99568,Competency,Conceptual Entity,5666
+job,C25193,Occupation,Occupation or Discipline,5678
+intent,C25725,Intent,Qualitative Concept,5714
+Methods,C71460,Method,Conceptual Entity,5762
+Design,C43358,Design,Activity,5773
+descriptive,C25365,Description,Intellectual Product,5792
+correlational study,C16100,Correlative Study,Research Activity,5804
+correlational cross,C68833,Cross-Correlation,Research Activity,5804
+study cross sectional,C53310,Cross-Sectional Study,Research Activity,5818
+design,C43358,Design,Activity,5847
+Setting,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,5856
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,5878
+healthcare facilities,C21541,Healthcare Facility,Health Care Related Organization,5897
+satellite,C25663,Satellite,Spatial Concept,5952
+clinics,C96111,Clinical Lot,Intellectual Product,5962
+public health,C17039,Public Health,Biomedical Occupation or Discipline,5971
+union,C80486,Union,Classification,5978
+family,C25173,Family,Family Group,5995
+planning,C25619,Plan,Activity,6002
+hospitals,C25179,Hospitalization,Health Care Activity,6036
+public health,C17039,Public Health,Biomedical Occupation or Discipline,6050
+representative,C67045,Representation,Activity,6089
+country,C25464,Country,Geographic Area,6116
+public,C49060,Public,Qualitative Concept,6138
+Population,C17005,Population Group,Population Group,6147
+sampling,C25662,Sampling,Activity,6158
+version,C25714,Version,Conceptual Entity,6196
+Germany,C16636,Germany,Geographic Area,6229
+estimated,C25498,Estimate,Activity,6242
+required,C25652,Requirement,Functional Concept,6256
+sample size,C53190,Sample Size,Quantitative Concept,6265
+al,C111127,Aluminum Measurement,Laboratory Procedure,6306
+moderate,C61376,Moderate,Qualitative Concept,6323
+effect,C25492,Effect,Phenomenon or Process,6332
+significance level,C41265,Significance Level,Quantitative Concept,6368
+target,C25702,Target,Conceptual Entity,6399
+population,C17005,Population Group,Population Group,6406
+Bangladeshi,C43671,Bangladeshi,Population Group,6421
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,6433
+BSN,C71350,Bachelor of Science in Nursing,Intellectual Product,6447
+degree,C25554,Level,Quantitative Concept,6451
+public,C49060,Public,Qualitative Concept,6478
+sectors,C48955,Sector,Geographic Area,6485
+country,C25464,Country,Geographic Area,6508
+obtained,C52349,Obtain,Activity,6520
+list,C43432,List,Intellectual Product,6531
+prospective,C15273,Longitudinal Study,Research Activity,6539
+survey,C17176,Survey,Research Device,6551
+Directorate Nursing,C20859,Nurse Administrator,Biomedical Occupation or Discipline,6579
+Services,C15785,Clinical Service,Health Care Activity,6602
+Bangladesh,C16323,Bangladesh,Geographic Area,6620
+distributed,C45273,Distribution,Activity,6635
+question,C41116,Question,Intellectual Product,6651
+received,C25639,Receive,Functional Concept,6672
+260,C20105,French Southern and Antarctic Lands,Geographic Area,6694
+questionnaires,C17048,Questionnaire,Intellectual Product,6698
+return,C71900,Return,Activity,6714
+rate,C25636,Rate,Conceptual Entity,6721
+Measures,C37894,Measurable,Idea or Concept,6735
+self administered,C25670,Self-Administered,Functional Concept,6762
+questionnaire,C17048,Questionnaire,Intellectual Product,6780
+panel,C43359,Group,Group,6809
+15,C113429,Fifteen,Quantitative Concept,6818
+nursing faculty,C20844,Nurse Educator,Biomedical Occupation or Discipline,6821
+members,C25368,Member,Human,6837
+Bangladesh,C16323,Bangladesh,Geographic Area,6848
+content validity,C78690,Content Validity,Quantitative Concept,6874
+All,C64916,All,Qualitative Concept,6892
+questions,C86071,Equivocal,Conceptual Entity,6900
+response,C25755,Response,Phenomenon or Process,6915
+alternatives,C25415,Alternative,Qualitative Concept,6924
+assessed,C25217,Assessment,Activity,6942
+relevance,C70664,Relevance,Qualitative Concept,6979
+content area,C70772,Knowledge Field,Conceptual Entity,6996
+potential,C62230,Potential,Idea or Concept,7016
+Each,C64933,Each,Qualitative Concept,7039
+item content,C99095,Content Item,Intellectual Product,7044
+content validity,C78690,Content Validity,Quantitative Concept,7056
+index,C25390,Index,Intellectual Product,7073
+greater than,C61584,Greater Than,Quantitative Concept,7079
+Translation,C17213,Translation,Genetic Function,7111
+English,C43853,English,Population Group,7128
+performed,C38000,Performed,Qualitative Concept,7151
+after,C49639,Status Post,Temporal Concept,7161
+content validity,C78690,Content Validity,Quantitative Concept,7171
+check,C86058,Check,Activity,7188
+two,C66833,Two,Quantitative Concept,7199
+English,C43853,English,Population Group,7233
+master's degree,C39453,Master's Degree,Intellectual Product,7263
+nursing public health,C17040,Public Health Nursing,Biomedical Occupation or Discipline,7289
+reviewed,C45314,Reviewed,Conceptual Entity,7314
+clarity,C96594,Clarity Measurement,Laboratory Procedure,7347
+final,C25508,Final,Conceptual Entity,7375
+questionnaire,C17048,Questionnaire,Intellectual Product,7381
+following,C53286,Next,Temporal Concept,7408
+instruments,C16742,Instrumentation,Manufactured Object,7418
+Clinical,C25398,Clinical,Qualitative Concept,7432
+competency,C99568,Competency,Conceptual Entity,7441
+instrument,C16742,Instrumentation,Manufactured Object,7470
+clinical,C25398,Clinical,Qualitative Concept,7485
+competency,C99568,Competency,Conceptual Entity,7494
+based,C48055,Base,Qualitative Concept,7505
+Outcomes,C20200,Outcome,Finding,7542
+Performance,C25361,Performance,Individual Behavior,7555
+Assessment,C25367,Assessment,Intellectual Product,7567
+model,C16866,Model,Intellectual Product,7578
+extensive,C47863,Extensive,Quantitative Concept,7591
+literature,C48471,Publication,Intellectual Product,7601
+review,C42729,Review,Activity,7612
+instrument,C16742,Instrumentation,Manufactured Object,7625
+consists,C85901,Consistent,Conceptual Entity,7636
+eight,C66839,Eight,Quantitative Concept,7648
+categories,C25372,Category,Classification,7654
+assessment,C25367,Assessment,Intellectual Product,7666
+safety,C60828,Safety,Qualitative Concept,7702
+standards,C44275,Standard,Conceptual Entity,7724
+communication,C16452,Communication,Social Behavior,7736
+group,C43359,Group,Group,7756
+discussion,C71323,Discussion,Organism Function,7762
+interaction,C54216,Interaction,Conceptual Entity,7777
+critical,C25467,Critical,Qualitative Concept,7791
+thinking,C54226,Thinking,Mental Process,7800
+data sources,C16493,Data Source,Quantitative Concept,7842
+data sources,C125442,Clinical Trial Source Data,Intellectual Product,7842
+multiple,C17648,Multiple,Qualitative Concept,7852
+human,C14225,Human,Human,7871
+relationship,C71472,Relationship,Conceptual Entity,7888
+scientific,C61397,Science,Conceptual Entity,7907
+inquiry,C88188,Inquiry,Conceptual Entity,7918
+research,C15319,Research,Research Activity,7930
+process,C29862,Process,Functional Concept,7939
+management,C61372,Management,Activity,7949
+quality assurance,C15381,Quality Assurance,Activity,7966
+improvement,C94226,Improvement,Conceptual Entity,7974
+ship,C40353,Shipping,Activity,8010
+vision,C38533,Sight,Organism Function,8033
+alternatives,C25415,Alternative,Qualitative Concept,8053
+supporting,C37902,Support,Conceptual Entity,8083
+patient,C16960,Patient,Patient or Disabled Group,8094
+family,C25173,Family,Family Group,8109
+life,C37987,Life,Conceptual Entity,8126
+wellness,C70592,Well,Spatial Concept,8135
+integration,C48038,Integration,Activity,8159
+evidence,C43583,Evidence,Idea or Concept,8177
+based patient,C52644,Patient Base,Functional Concept,8186
+patient care,C15239,Patient Care,Health Care Activity,8206
+rate,C25636,Rate,Conceptual Entity,8247
+current,C25471,Current,Temporal Concept,8258
+cal,C67193,calorie,Quantitative Concept,8273
+competency,C99568,Competency,Conceptual Entity,8277
+each,C64933,Each,Qualitative Concept,8291
+item,C51070,Entity,Entity,8296
+point,C70656,Point,Spatial Concept,8310
+scale,C25664,Scale,Intellectual Product,8316
+strongly disagree,C104476,Strongly Disagree,Intellectual Product,8330
+strongly strongly agree,C104475,Strongly Agree,Intellectual Product,8330
+calculated,C54125,Calculation,Activity,8375
+sum,C25697,Sum,Quantitative Concept,8390
+higher,C25227,High,Qualitative Concept,8400
+scores,C25338,Score,Quantitative Concept,8407
+higher,C25227,High,Qualitative Concept,8427
+level,C25554,Level,Quantitative Concept,8434
+competency,C99568,Competency,Conceptual Entity,8443
+obtained,C52349,Obtain,Activity,8458
+range,C38013,Range,Quantitative Concept,8469
+clinical,C25398,Clinical,Qualitative Concept,8514
+competency,C99568,Competency,Conceptual Entity,8523
+instrument,C16742,Instrumentation,Manufactured Object,8534
+Job,C25193,Occupation,Occupation or Discipline,8547
+satisfaction,C62185,Satisfaction,Mental Process,8551
+measured,C44473,Measured,Qualitative Concept,8568
+job,C25193,Occupation,Occupation or Discipline,8577
+satisfaction,C62185,Satisfaction,Mental Process,8581
+Ward,C71413,Ward,Human,8603
+Organizational,C19223,Other Agency or Organization,Professional or Occupational Group,8608
+Features,C70838,Image Feature,Qualitative Concept,8623
+Scale,C25664,Scale,Intellectual Product,8632
+al,C111127,Aluminum Measurement,Laboratory Procedure,8649
+item,C51070,Entity,Entity,8667
+scale,C25664,Scale,Intellectual Product,8672
+do,C86066,Do,Activity,8700
+now,C65002,Now,Temporal Concept,8703
+apply,C113519,Apply,Activity,8717
+job,C25193,Occupation,Occupation or Discipline,8732
+level,C25554,Level,Quantitative Concept,8766
+agreement,C25369,Agreement,Social Behavior,8775
+each,C64933,Each,Qualitative Concept,8790
+item,C51070,Entity,Entity,8795
+point,C70656,Point,Spatial Concept,8810
+Likert scale,C85429,Likert Scale,Intellectual Product,8816
+strongly disagree,C104476,Strongly Disagree,Intellectual Product,8837
+strongly strongly agree,C104475,Strongly Agree,Intellectual Product,8837
+possible,C82490,Possible,Qualitative Concept,8883
+score,C25338,Score,Quantitative Concept,8892
+range,C38013,Range,Quantitative Concept,8898
+higher,C25227,High,Qualitative Concept,8917
+greater,C61421,Greater,Qualitative Concept,8942
+job,C25193,Occupation,Occupation or Discipline,8950
+satisfaction,C62185,Satisfaction,Mental Process,8954
+obtained,C52349,Obtain,Activity,8971
+study,C63536,Study,Research Activity,9012
+need,C41204,Need,Conceptual Entity,9032
+MSN,C71374,Master of Science in Nursing,Intellectual Product,9041
+Based,C48055,Base,Qualitative Concept,9056
+review,C42729,Review,Activity,9067
+literature,C48471,Publication,Intellectual Product,9081
+items,C51070,Entity,Entity,9108
+assess,C25367,Assessment,Intellectual Product,9117
+level,C25554,Level,Quantitative Concept,9128
+need,C41204,Need,Conceptual Entity,9137
+MSN,C71374,Master of Science in Nursing,Intellectual Product,9149
+al,C111127,Aluminum Measurement,Laboratory Procedure,9174
+al,C111127,Aluminum Measurement,Laboratory Procedure,9239
+Wall,C64373,Wall,Qualitative Concept,9248
+al,C111127,Aluminum Measurement,Laboratory Procedure,9256
+Wells,C70592,Well,Spatial Concept,9274
+planned,C25619,Plan,Activity,9328
+apply,C113519,Apply,Activity,9339
+MSN,C71374,Master of Science in Nursing,Intellectual Product,9351
+master's degree,C39453,Master's Degree,Intellectual Product,9386
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,9405
+expected,C25501,Expected,Conceptual Entity,9426
+start time,C78441,Start Time,Temporal Concept,9435
+yes,C49488,Yes,Idea or Concept,9472
+question,C41116,Question,Intellectual Product,9484
+select,C48912,Choose,Activity,9507
+factors,C84380,Mathematical Factor,Conceptual Entity,9531
+well,C70592,Well,Spatial Concept,9556
+preferred,C42711,Preferred,Qualitative Concept,9617
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,9627
+specialty,C17153,Medical Specialty,Biomedical Occupation or Discipline,9635
+areas,C16632,Geographic Area,Geographic Area,9645
+components,C48792,Element,Qualitative Concept,9652
+preferred,C42711,Preferred,Qualitative Concept,9704
+learning,C19369,Learning,Mental Process,9723
+style,C71598,Style,Qualitative Concept,9732
+identify content,C99023,Content Identifier,Intellectual Product,9742
+rank,C48904,Rank,Qualitative Concept,9805
+perceived,C16967,Perception,Mental Process,9814
+21,C107434,Twenty One,Quantitative Concept,9838
+courses,C25379,Course,Clinical Attribute,9841
+common,C43461,Common,Qualitative Concept,9849
+MSN,C71374,Master of Science in Nursing,Intellectual Product,9859
+programmes,C50123,Programmer Device Component,Manufactured Object,9863
+point,C70656,Point,Spatial Concept,9881
+scale,C25664,Scale,Intellectual Product,9887
+not,C25594,Negation,Functional Concept,9901
+preference,C41187,Preference,Functional Concept,9957
+full time,C52658,Full Time Employment,Qualitative Concept,9972
+part time,C75562,Part Time Employment,Qualitative Concept,9980
+time studying,C69209,Study Start Time,Intellectual Product,9985
+housing,C49990,Housing Device Component,Manufactured Object,10026
+options,C25374,Options,Intellectual Product,10034
+during,C25490,During,Temporal Concept,10042
+MSN,C71374,Master of Science in Nursing,Intellectual Product,10052
+obtained,C52349,Obtain,Activity,10070
+section,C48956,Section,Geographic Area,10112
+General,C115727,Safety Reporting Documentation,Intellectual Product,10122
+characteristics,C25447,Characteristic,Conceptual Entity,10130
+information,C48191,Information,Conceptual Entity,10169
+questions,C86071,Equivocal,Conceptual Entity,10194
+geographic location,C16632,Geographic Area,Geographic Area,10210
+age,C25150,Age,Organism Attribute,10231
+sex,C38389,Sex,Organism Attribute,10236
+religion,C17085,Religion,Idea or Concept,10241
+education,C16529,Education,Educational Activity,10251
+marital status,C25188,Marital Status,Organism Attribute,10265
+occupational,C25600,Occupational,Conceptual Entity,10285
+information,C48191,Information,Conceptual Entity,10298
+type,C25284,Type,Functional Concept,10358
+workplace,C17556,Worksite,Geographic Area,10366
+current,C25471,Current,Temporal Concept,10377
+employment status,C111108,CDISC SDTM Employment Status Terminology,Intellectual Product,10397
+department,C42671,Department,Conceptual Entity,10416
+duration,C25330,Duration,Temporal Concept,10428
+clinical,C25398,Clinical,Qualitative Concept,10440
+experience,C54627,Experience,Organism Attribute,10449
+specialty,C17153,Medical Specialty,Biomedical Occupation or Discipline,10464
+certification,C43610,Certification,Activity,10474
+Data collection,C103159,Data Collection,Idea or Concept,10490
+ethical,C94315,Moral,Qualitative Concept,10510
+considerations,C113416,Consideration,Mental Process,10518
+Ethical,C94315,Moral,Qualitative Concept,10534
+approval Institutional Review Board,C70800,Institutional Review Board Approval,Regulation or Law,10542
+obtained,C52349,Obtain,Activity,10555
+University,C48647,University,Organization,10610
+College,C61514,College,Organization,10621
+Nursing,C16926,Nursing,Biomedical Occupation or Discipline,10632
+Data collection,C103159,Data Collection,Idea or Concept,10655
+performed,C38000,Performed,Qualitative Concept,10675
+survey,C17176,Survey,Research Device,10694
+July,C106186,July,Qualitative Concept,10706
+October,C106189,October,Qualitative Concept,10719
+survey,C17176,Survey,Research Device,10737
+packages,C43233,Drug Package,Manufactured Object,10744
+cover,C68811,Cover,Activity,10771
+letter,C70805,Letter,Intellectual Product,10777
+informed consent form,C54623,Form FDA 1572,Manufactured Object,10785
+questionnaire,C17048,Questionnaire,Intellectual Product,10808
+return,C71900,Return,Activity,10839
+sent,C25672,Send,Activity,10861
+public,C49060,Public,Qualitative Concept,10884
+healthcare facilities,C21541,Healthcare Facility,Health Care Related Organization,10891
+distribution,C45273,Distribution,Activity,10917
+potential,C62230,Potential,Idea or Concept,10933
+Participation,C25608,Participation,Functional Concept,10956
+voluntary,C74096,Voluntary,Qualitative Concept,10974
+informed consent obtained,C16735,Informed Consent,Health Care Activity,10997
+each,C64933,Each,Qualitative Concept,11032
+increase,C25533,Increase,Qualitative Concept,11053
+response rate,C94502,Response Rate,Conceptual Entity,11066
+sent,C25672,Send,Activity,11084
+reminder,C54270,Reminder,Conceptual Entity,11089
+letters,C70805,Letter,Intellectual Product,11098
+after,C49639,Status Post,Temporal Concept,11129
+survey,C17176,Survey,Research Device,11139
+pack,C62653,Pack Dosage Form,Biomedical or Dental Material,11146
+ages,C64553,Attogram,Quantitative Concept,11152
+distributed,C45273,Distribution,Activity,11162
+Data,C25474,Data,Idea or Concept,11176
+analysis,C25391,Analysis,Activity,11181
+descriptive,C25365,Description,Intellectual Product,11199
+statistics,C17167,Statistics,Occupation or Discipline,11211
+evaluate,C25214,Evaluation,Activity,11225
+general,C115727,Safety Reporting Documentation,Intellectual Product,11238
+tics,C116758,Tic,Disease or Syndrome,11259
+job,C25193,Occupation,Occupation or Discipline,11265
+related,C53260,Definitely Related to Intervention,Qualitative Concept,11269
+characteristics,C25447,Characteristic,Conceptual Entity,11277
+need,C41204,Need,Conceptual Entity,11309
+MSN,C71374,Master of Science in Nursing,Intellectual Product,11321
+Package,C79887,Package,Manufactured Object,11361
+Social Sciences,C17141,Social Sciences,Occupation or Discipline,11377
+version,C25714,Version,Conceptual Entity,11393
+IL,C16760,Israel,Geographic Area,11427
+USA,C17234,United States,Geographic Area,11431
+correlation,C48834,Correlation,Conceptual Entity,11453
+clinical,C25398,Clinical,Qualitative Concept,11471
+competency,C99568,Competency,Conceptual Entity,11480
+job,C25193,Occupation,Occupation or Discipline,11492
+intent,C25725,Intent,Qualitative Concept,11515
+MSN,C71374,Master of Science in Nursing,Intellectual Product,11537
+point,C70656,Point,Spatial Concept,11558
+point,C70656,Point,Spatial Concept,11599
+correlation,C48834,Correlation,Conceptual Entity,11614
+coefficient,C48922,Coefficient,Conceptual Entity,11626
+one,C66832,One,Quantitative Concept,11649
+variable,C54166,Variable,Qualitative Concept,11653
+dichotomous,C85430,Dichotomous Response Format,Qualitative Concept,11665
+applied,C113519,Apply,Activity,11684
+intent,C25725,Intent,Qualitative Concept,11699
+yes no,C38147,Yes or No Response,Classification,11716
+MSN,C71374,Master of Science in Nursing,Intellectual Product,11730
+Results,C20200,Outcome,Finding,11746
+General,C115727,Safety Reporting Documentation,Intellectual Product,11757
+characteristics,C25447,Characteristic,Conceptual Entity,11765
+all,C64916,All,Qualitative Concept,11785
+main,C25562,Main,Qualitative Concept,11855
+administrative division,C85531,Division,Professional or Occupational Group,11860
+country,C25464,Country,Geographic Area,11891
+mean,C53319,Mean,Quantitative Concept,11904
+age,C25150,Age,Organism Attribute,11909
+female,C16576,Female,Organism Attribute,11969
+More than,C61584,Greater Than,Quantitative Concept,11977
+two,C66833,Two,Quantitative Concept,11987
+thirds,C25260,Third,Qualitative Concept,11991
+bachelor's degree,C39327,Bachelor's Degree,Intellectual Product,12004
+nursing public health nursing,C17040,Public Health Nursing,Biomedical Occupation or Discipline,12032
+Only,C65011,Only,Qualitative Concept,12070
+study,C63536,Study,Research Activity,12087
+public health,C17039,Public Health,Biomedical Occupation or Discipline,12128
+Approximately,C45828,Approximate,Qualitative Concept,12144
+half,C81009,Half,Conceptual Entity,12158
+public,C49060,Public,Qualitative Concept,12194
+satellite,C25663,Satellite,Spatial Concept,12201
+clinic,C51282,Clinic,Health Care Related Organization,12211
+worked place,C17556,Worksite,Geographic Area,12247
+worked place,C17556,Worksite,Geographic Area,12247
+staff,C63612,Staff,Professional or Occupational Group,12259
+nurse,C20821,Nurse,Biomedical Occupation or Discipline,12265
+main,C25562,Main,Qualitative Concept,12276
+post,C38008,Post,Temporal Concept,12281
+original,C25604,Original,Conceptual Entity,12333
+promotion,C61391,Promotion,Activity,12356
+recruitment,C78343,Recruitment,Activity,12369
+departments,C42671,Department,Conceptual Entity,12396
+employment,C25172,Employment,Functional Concept,12411
+general,C115727,Safety Reporting Documentation,Intellectual Product,12455
+wards,C71413,Ward,Human,12463
+intensive care units,C53511,Intensive Care Unit,Health Care Related Organization,12482
+average,C37917,Average,Quantitative Concept,12545
+length,C25334,Length,Conceptual Entity,12553
+clinical,C25398,Clinical,Qualitative Concept,12563
+experience,C54627,Experience,Organism Attribute,12572
+Clinical,C25398,Clinical,Qualitative Concept,12609
+competency,C99568,Competency,Conceptual Entity,12618
+job,C25193,Occupation,Occupation or Discipline,12633
+satisfaction,C62185,Satisfaction,Mental Process,12637
+mean,C53319,Mean,Quantitative Concept,12674
+score 4 score score,C85528,4+ Score,Classification,12679
+clinical,C25398,Clinical,Qualitative Concept,12688
+competency,C99568,Competency,Conceptual Entity,12697
+out,C25650,Removed,Qualitative Concept,12725
+mean,C53319,Mean,Quantitative Concept,12739
+highest,C25525,Highest,Qualitative Concept,12754
+area,C25244,Area,Spatial Concept,12769
+management,C61372,Management,Activity,12777
+leadership,C121297,Leadership Scale,Intellectual Product,12816
+mean,C53319,Mean,Quantitative Concept,12877
+job,C25193,Occupation,Occupation or Discipline,12891
+satisfaction,C62185,Satisfaction,Mental Process,12895
+out,C25650,Removed,Qualitative Concept,12925
+need,C41204,Need,Conceptual Entity,12948
+MSN,C71374,Master of Science in Nursing,Intellectual Product,12960
+reported,C25375,Report,Intellectual Product,13009
+intention,C25725,Intent,Qualitative Concept,13021
+MSN,C71374,Master of Science in Nursing,Intellectual Product,13046
+start,C25431,Begin,Temporal Concept,13100
+next,C53286,Next,Temporal Concept,13131
+found,C25626,Present,Qualitative Concept,13148
+weak,C62224,Weak,Qualitative Concept,13156
+statistically significant,C28110,Statistically Significant,Quantitative Concept,13165
+relationship,C71472,Relationship,Conceptual Entity,13191
+between,C94545,Between,Qualitative Concept,13204
+intent,C25725,Intent,Qualitative Concept,13212
+MSN,C71374,Master of Science in Nursing,Intellectual Product,13234
+clinical,C25398,Clinical,Qualitative Concept,13252
+competency,C99568,Competency,Conceptual Entity,13261
+suggests,C48313,Suggestion,Conceptual Entity,13302
+perceived,C16967,Perception,Mental Process,13316
+higher,C25227,High,Qualitative Concept,13326
+clinical,C25398,Clinical,Qualitative Concept,13333
+competency,C99568,Competency,Conceptual Entity,13342
+higher,C25227,High,Qualitative Concept,13399
+education,C16529,Education,Educational Activity,13406
+box plot,C53326,Box Plot,Quantitative Concept,13432
+analysis,C25391,Analysis,Activity,13441
+clinical,C25398,Clinical,Qualitative Concept,13455
+competency,C99568,Competency,Conceptual Entity,13464
+positive,C25246,Positive,Qualitative Concept,13497
+intention,C25725,Intent,Qualitative Concept,13506
+higher,C25227,High,Qualitative Concept,13553
+Fig,C71971,Fig,"Plant, Food",13591
+found,C25626,Present,Qualitative Concept,13604
+no,C49487,No,Classification,13610
+significant,C41130,Significant,Functional Concept,13613
+correlation,C48834,Correlation,Conceptual Entity,13625
+between,C94545,Between,Qualitative Concept,13637
+intent,C25725,Intent,Qualitative Concept,13645
+MSN,C71374,Master of Science in Nursing,Intellectual Product,13667
+job,C25193,Occupation,Occupation or Discipline,13685
+satisfaction,C62185,Satisfaction,Mental Process,13689
+most,C25258,Most,Qualitative Concept,13730
+important,C115916,Important,Qualitative Concept,13735
+factors,C84380,Mathematical Factor,Conceptual Entity,13756
+professional,C97016,Health Care Professional Promotional Material,Intellectual Product,13806
+chances,C116077,Chance,Conceptual Entity,13897
+promotion,C61391,Promotion,Activity,13908
+More than,C61584,Greater Than,Quantitative Concept,13928
+half,C81009,Half,Conceptual Entity,13938
+college,C61514,College,Organization,13991
+institute,C41206,Institution,Organization,14002
+future,C67527,Future,Temporal Concept,14027
+PhD,C30161,Phosducin,"Amino Acid, Peptide, or Protein",14080
+after,C49639,Status Post,Temporal Concept,14094
+MSN,C71374,Master of Science in Nursing,Intellectual Product,14100
+graduation,C52581,Graduation,Activity,14104
+high,C25227,High,Qualitative Concept,14124
+most,C25258,Most,Qualitative Concept,14143
+preferred,C42711,Preferred,Qualitative Concept,14148
+specialty,C17153,Medical Specialty,Biomedical Occupation or Discipline,14158
+area,C25244,Area,Spatial Concept,14168
+man,C14366,Man,Population Group,14185
+education community health,C16455,Community Health Education,Health Care Activity,14228
+community health nursing,C16456,Community Health Nursing,Biomedical Occupation or Discipline,14251
+learning,C19369,Learning,Mental Process,14295
+methods,C71460,Method,Conceptual Entity,14304
+preferred,C42711,Preferred,Qualitative Concept,14312
+problem,C28020,Problem,Phenomenon or Process,14368
+based,C48055,Base,Qualitative Concept,14376
+learning,C19369,Learning,Mental Process,14382
+self,C25200,Self,Conceptual Entity,14436
+learning,C19369,Learning,Mental Process,14450
+chosen,C48912,Choose,Activity,14464
+less than,C61585,Less Than,Functional Concept,14474
+Table,C48441,Table,Manufactured Object,14504
+status,C25688,Status,Qualitative Concept,14537
+full time,C52658,Full Time Employment,Qualitative Concept,14579
+day,C25301,Day,Temporal Concept,14589
+addition,C64911,Add,Activity,14617
+reported,C25375,Report,Intellectual Product,14649
+live,C89279,Reside,Activity,14684
+during,C25490,During,Temporal Concept,14704
+study,C63536,Study,Research Activity,14717
+Discussion,C71323,Discussion,Organism Function,14725
+higher,C25227,High,Qualitative Concept,14752
+education nursing,C20844,Nurse Educator,Biomedical Occupation or Discipline,14759
+increased,C25533,Increase,Qualitative Concept,14784
+countries,C66786,CDISC SDTM Country Terminology,Intellectual Product,14832
+have,C101282,Have,Classification,14847
+limited,C121422,Limited Lifting Ability,Intellectual Product,14852
+first,C25509,First,Qualitative Concept,14891
+aim,C60761,Aim,Conceptual Entity,14897
+study,C63536,Study,Research Activity,14909
+assess,C25367,Assessment,Intellectual Product,14922
+need,C41204,Need,Conceptual Entity,14945
+MSN,C71374,Master of Science in Nursing,Intellectual Product,14957
+Bangladesh,C16323,Bangladesh,Geographic Area,14974
+no,C49487,No,Classification,15006
+mean,C53319,Mean,Quantitative Concept,15030
+age,C25150,Age,Organism Attribute,15035
+study,C63536,Study,Research Activity,15062
+few,C64942,Few,Quantitative Concept,15098
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,15102
+several,C107221,Several,Qualitative Concept,15140
+possible,C82490,Possible,Qualitative Concept,15148
+explanations,C86073,Explanation,Idea or Concept,15157
+All,C64916,All,Qualitative Concept,15171
+study,C63536,Study,Research Activity,15175
+obtained,C52349,Obtain,Activity,15193
+bachelor degrees,C39327,Bachelor's Degree,Intellectual Product,15208
+post,C38008,Post,Temporal Concept,15235
+basic,C48056,Base,Chemical Viewed Functionally,15240
+Nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,15257
+year,C29848,Year,Temporal Concept,15296
+college,C61514,College,Organization,15309
+not,C25594,Negation,Functional Concept,15322
+study,C63536,Study,Research Activity,15343
+not,C25594,Negation,Functional Concept,15368
+have,C101282,Have,Classification,15372
+entered,C37949,Entered,Qualitative Concept,15377
+workforce,C77921,Workforce,Population Group,15389
+until,C65136,Until,Qualitative Concept,15399
+late,C64998,Late,Qualitative Concept,15405
+addition,C64911,Add,Activity,15419
+personal,C19332,Personal Attribute,Organism Attribute,15444
+process,C29862,Process,Functional Concept,15510
+new,C25586,New,Qualitative Concept,15533
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,15537
+public,C49060,Public,Qualitative Concept,15551
+sector,C48955,Sector,Geographic Area,15558
+irregular,C63815,Irregular,Conceptual Entity,15568
+takes,C65105,Take,Activity,15582
+long,C25248,Long,Qualitative Concept,15590
+time,C25207,Time,Temporal Concept,15595
+high,C25227,High,Qualitative Concept,15634
+age,C25150,Age,Organism Attribute,15639
+level,C25554,Level,Quantitative Concept,15643
+factors,C84380,Mathematical Factor,Conceptual Entity,15656
+may,C106184,May,Qualitative Concept,15664
+reason,C25638,Reason,Idea or Concept,15675
+unusual,C77967,Unusual,Qualitative Concept,15690
+age,C25150,Age,Organism Attribute,15698
+study,C63536,Study,Research Activity,15725
+public,C49060,Public,Qualitative Concept,15736
+sector,C48955,Sector,Geographic Area,15743
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,15772
+10,C69122,Ten,Quantitative Concept,15802
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,15809
+sector,C48955,Sector,Geographic Area,15847
+not,C25594,Negation,Functional Concept,15873
+filled,C54093,Fill,Activity,15877
+managing,C61372,Management,Activity,15918
+both,C49636,Both,Qualitative Concept,15927
+public,C49060,Public,Qualitative Concept,15936
+private,C54104,Private,Qualitative Concept,15947
+sectors,C48955,Sector,Geographic Area,15955
+improvement,C94226,Improvement,Conceptual Entity,15964
+nurse,C20821,Nurse,Biomedical Occupation or Discipline,15979
+employment,C25172,Employment,Functional Concept,15985
+policy,C17735,Policy,Governmental or Regulatory Activity,15996
+path,C47922,Pathname,Intellectual Product,16014
+well,C70592,Well,Spatial Concept,16022
+regulation,C68821,Regulation,Intellectual Product,16046
+body,C13041,Body,Anatomical Structure,16057
+study,C63536,Study,Research Activity,16092
+MSN,C71374,Master of Science in Nursing,Intellectual Product,16156
+people,C95553,People,Population Group,16190
+start,C25431,Begin,Temporal Concept,16207
+next,C53286,Next,Temporal Concept,16238
+master's degree,C39453,Master's Degree,Intellectual Product,16261
+addition,C64911,Add,Activity,16281
+requirement,C38015,Requirement,Conceptual Entity,16309
+promotion,C61391,Promotion,Activity,16325
+assistant,C53428,Dental Assistant,Occupation or Discipline,16350
+professor,C69170,Professor,Conceptual Entity,16360
+Bangladeshi,C43671,Bangladeshi,Population Group,16377
+government,C78315,Government,Organization,16389
+sector,C48955,Sector,Geographic Area,16400
+Approximately,C45828,Approximate,Qualitative Concept,16408
+500,C16876,Montserrat,Geographic Area,16422
+nurses public health nurses,C17040,Public Health Nursing,Biomedical Occupation or Discipline,16426
+nurses health nurses Family,C18790,Family Health Nursing,Biomedical Occupation or Discipline,16426
+country,C25464,Country,Geographic Area,16440
+have,C101282,Have,Classification,16448
+master's public health,C39451,Master of Public Health,Intellectual Product,16453
+degrees,C25554,Level,Quantitative Concept,16462
+most,C25258,Most,Qualitative Concept,16471
+rare,C64954,Infrequent,Qualitative Concept,16500
+urgent,C100031,Urgent Procedure,Therapeutic or Preventive Procedure,16573
+need,C41204,Need,Conceptual Entity,16580
+supply,C80514,Provide,Activity,16588
+more,C128667,More,Qualitative Concept,16595
+Bangladesh,C16323,Bangladesh,Geographic Area,16610
+self,C25200,Self,Conceptual Entity,16680
+perceived,C16967,Perception,Mental Process,16685
+clinical,C25398,Clinical,Qualitative Concept,16695
+competency,C99568,Competency,Conceptual Entity,16704
+present,C25626,Present,Qualitative Concept,16737
+study,C63536,Study,Research Activity,16745
+very,C116076,Very,Qualitative Concept,16783
+high,C25227,High,Qualitative Concept,16788
+One,C66832,One,Quantitative Concept,16794
+possible,C82490,Possible,Qualitative Concept,16798
+explanation,C86073,Explanation,Idea or Concept,16807
+social,C62650,Social,Qualitative Concept,16824
+response,C25755,Response,Phenomenon or Process,16844
+bias,C28232,Bias,Idea or Concept,16853
+self reported,C21089,Patient Self-Report,Diagnostic Procedure,16861
+research,C15319,Research,Research Activity,16876
+people,C95553,People,Population Group,16903
+present,C25626,Present,Qualitative Concept,16913
+able,C78209,Ability,Functional Concept,16931
+image,C48179,Image,Entity,16936
+questionnaires,C17048,Questionnaire,Intellectual Product,16959
+responses,C50995,Disease Response,Finding,17022
+confidentiality,C16466,Confidentiality,Idea or Concept,17036
+return,C71900,Return,Activity,17081
+data collection,C103159,Data Collection,Idea or Concept,17098
+possible,C82490,Possible,Qualitative Concept,17123
+Bangladeshi,C43671,Bangladeshi,Population Group,17163
+government,C78315,Government,Organization,17175
+have,C101282,Have,Classification,17199
+participant,C29867,Participant,Population Group,17215
+responses,C50995,Disease Response,Finding,17227
+responses,C50995,Disease Response,Finding,17262
+employer,C54144,Employer,Professional or Occupational Group,17300
+Clinical,C25398,Clinical,Qualitative Concept,17310
+competency,C99568,Competency,Conceptual Entity,17319
+low,C54722,Low,Qualitative Concept,17336
+statistically,C17167,Statistics,Occupation or Discipline,17344
+cant,C82117,Cant,Finding,17367
+correlation,C48834,Correlation,Conceptual Entity,17372
+intention,C25725,Intent,Qualitative Concept,17389
+MSN,C71374,Master of Science in Nursing,Intellectual Product,17414
+may,C106184,May,Qualitative Concept,17434
+result,C20200,Outcome,Finding,17438
+extremely,C102844,Extreme,Qualitative Concept,17454
+distribution,C45273,Distribution,Activity,17471
+one,C66832,One,Quantitative Concept,17487
+variable,C54166,Variable,Qualitative Concept,17491
+computed,C61298,Computation,Activity,17507
+correlation,C48834,Correlation,Conceptual Entity,17516
+frequency,C71113,CDISC SDTM Frequency Terminology,Intellectual Product,17533
+MSN,C71374,Master of Science in Nursing,Intellectual Product,17584
+no,C49487,No,Classification,17602
+intention,C25725,Intent,Qualitative Concept,17605
+low,C54722,Low,Qualitative Concept,17639
+correlation,C48834,Correlation,Conceptual Entity,17643
+coefficient,C48922,Coefficient,Conceptual Entity,17655
+strong,C14614,Strong,,17675
+intentions,C25725,Intent,Qualitative Concept,17682
+education nursing,C20844,Nurse Educator,Biomedical Occupation or Discipline,17706
+common,C43461,Common,Qualitative Concept,17721
+finding,C3367,Finding,Finding,17728
+countries,C66786,CDISC SDTM Country Terminology,Intellectual Product,17739
+few,C64942,Few,Quantitative Concept,17754
+insufficient,C126862,Unsatisfactory,Qualitative Concept,17803
+programmes,C50123,Programmer Device Component,Manufactured Object,17816
+Sri Lanka,C17163,Sri Lanka,Geographic Area,17835
+Urgent,C100031,Urgent Procedure,Therapeutic or Preventive Procedure,17864
+measures,C37894,Measurable,Idea or Concept,17871
+balance,C73497,Balance,Organism Function,17899
+academic,C18240,Academia,Organization,17912
+high,C25227,High,Qualitative Concept,17944
+education,C16529,Education,Educational Activity,17964
+Participant,C29867,Participant,Population Group,17976
+job,C25193,Occupation,Occupation or Discipline,17988
+satisfaction,C62185,Satisfaction,Mental Process,17992
+reported,C25375,Report,Intellectual Product,18009
+high,C25227,High,Qualitative Concept,18035
+study,C63536,Study,Research Activity,18105
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,18131
+public,C49060,Public,Qualitative Concept,18153
+sector,C48955,Sector,Geographic Area,18160
+Bangladeshi,C43671,Bangladeshi,Population Group,18168
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,18180
+known,C80137,Known,Conceptual Entity,18191
+public,C49060,Public,Qualitative Concept,18222
+sector,C48955,Sector,Geographic Area,18229
+private,C54104,Private,Qualitative Concept,18252
+non,C25594,Negation,Functional Concept,18261
+government,C78315,Government,Organization,18265
+sector,C48955,Sector,Geographic Area,18276
+private,C54104,Private,Qualitative Concept,18284
+hospitals,C25179,Hospitalization,Health Care Activity,18292
+private,C54104,Private,Qualitative Concept,18323
+sector,C48955,Sector,Geographic Area,18331
+means,C47955,Means,Conceptual Entity,18338
+low,C54722,Low,Qualitative Concept,18344
+job,C25193,Occupation,Occupation or Discipline,18348
+security,C25669,Security,Conceptual Entity,18352
+being,C89327,Be,Qualitative Concept,18378
+even,C64936,Evening,Temporal Concept,18398
+minor,C45367,Minor,Qualitative Concept,18405
+not,C25594,Negation,Functional Concept,18421
+being,C89327,Be,Qualitative Concept,18425
+additional,C25406,Additional,Quantitative Concept,18440
+patient care,C15239,Patient Care,Health Care Activity,18451
+al,C111127,Aluminum Measurement,Laboratory Procedure,18476
+addition,C64911,Add,Activity,18490
+internal consistency,C78687,Internal Consistency,Quantitative Concept,18504
+ability,C78209,Ability,Functional Concept,18531
+job,C25193,Occupation,Occupation or Discipline,18542
+satisfaction,C62185,Satisfaction,Mental Process,18546
+scale,C25664,Scale,Intellectual Product,18559
+lower,C25309,Lower,Spatial Concept,18583
+accepted,C62559,Accepted,Qualitative Concept,18631
+range,C38013,Range,Quantitative Concept,18640
+issue,C43415,Issue,Manufactured Object,18660
+study,C63536,Study,Research Activity,18685
+differences,C46003,Difference,Qualitative Concept,18736
+hospital,C16696,Hospital,Health Care Related Organization,18751
+culture,C16478,Culture,Idea or Concept,18760
+between,C94545,Between,Qualitative Concept,18768
+countries,C66786,CDISC SDTM Country Terminology,Intellectual Product,18776
+some,C65099,Some,Activity,18800
+low,C54722,Low,Qualitative Concept,18812
+reliability,C73622,Reliability,Quantitative Concept,18816
+scale,C25664,Scale,Intellectual Product,18835
+found,C25626,Present,Qualitative Concept,18845
+no,C49487,No,Classification,18851
+significant,C41130,Significant,Functional Concept,18854
+correlation,C48834,Correlation,Conceptual Entity,18866
+between,C94545,Between,Qualitative Concept,18878
+job,C25193,Occupation,Occupation or Discipline,18886
+satisfaction,C62185,Satisfaction,Mental Process,18890
+intention,C25725,Intent,Qualitative Concept,18907
+MSN,C71374,Master of Science in Nursing,Intellectual Product,18932
+result,C20200,Outcome,Finding,18952
+previous,C25627,Previous,Temporal Concept,18976
+studies,C15206,Clinical Study,Research Activity,18985
+found,C25626,Present,Qualitative Concept,18998
+lower,C25309,Lower,Spatial Concept,19009
+job,C25193,Occupation,Occupation or Discipline,19015
+satisfaction,C62185,Satisfaction,Mental Process,19019
+predicted,C54156,Prediction,Idea or Concept,19032
+higher,C25227,High,Qualitative Concept,19055
+nursing education,C20844,Nurse Educator,Biomedical Occupation or Discipline,19062
+al,C111127,Aluminum Measurement,Laboratory Procedure,19092
+finding,C3367,Finding,Finding,19127
+due,C45263,Due,Qualitative Concept,19144
+higher,C25227,High,Qualitative Concept,19151
+job,C25193,Occupation,Occupation or Discipline,19158
+satisfaction,C62185,Satisfaction,Mental Process,19162
+scores,C25338,Score,Quantitative Concept,19175
+MSN,C71374,Master of Science in Nursing,Intellectual Product,19200
+pro,C29612,Proline,"Amino Acid, Peptide, or Protein",19204
+increase,C25533,Increase,Qualitative Concept,19222
+capacity,C25443,Capacity,Quantitative Concept,19231
+influence,C121660,Influence,Conceptual Entity,19255
+quality care,C17046,Quality of Care,Qualitative Concept,19269
+patient care,C15239,Patient Care,Health Care Activity,19280
+care self,C15324,Self Care,Health Care Activity,19288
+self esteem,C121289,Self-Esteem Scale,Intellectual Product,19307
+communication,C16452,Communication,Social Behavior,19330
+promoting,C61391,Promotion,Activity,19345
+professional,C97016,Health Care Professional Promotional Material,Intellectual Product,19355
+growth,C64379,Growth,Spatial Concept,19368
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,19388
+apply,C113519,Apply,Activity,19398
+all,C64916,All,Qualitative Concept,19457
+influence,C121660,Influence,Conceptual Entity,19504
+current,C25471,Current,Temporal Concept,19517
+job,C25193,Occupation,Occupation or Discipline,19525
+satisfaction,C62185,Satisfaction,Mental Process,19529
+Bangladeshi,C43671,Bangladeshi,Population Group,19548
+educational nursing nursing,C20844,Nurse Educator,Biomedical Occupation or Discipline,19587
+needs,C41204,Need,Conceptual Entity,19599
+assessment,C25367,Assessment,Intellectual Product,19605
+most,C25258,Most,Qualitative Concept,19621
+preferred,C42711,Preferred,Qualitative Concept,19626
+area,C25244,Area,Spatial Concept,19636
+specialty,C17153,Medical Specialty,Biomedical Occupation or Discipline,19644
+management,C61372,Management,Activity,19666
+result,C20200,Outcome,Finding,19714
+consistent,C85901,Consistent,Conceptual Entity,19724
+finding,C3367,Finding,Finding,19744
+work,C74299,Work,Activity,19789
+nursing fields,C16926,Nursing,Biomedical Occupation or Discipline,19797
+administrators,C48905,"Administration, Management",Activity,19829
+educators,C16529,Education,Educational Activity,19848
+study,C63536,Study,Research Activity,19900
+result,C20200,Outcome,Finding,19906
+management,C61372,Management,Activity,19918
+ship,C40353,Shipping,Activity,19941
+nursing nursing education,C20844,Nurse Educator,Biomedical Occupation or Discipline,19949
+top,C62637,Top,Spatial Concept,19993
+four,C66835,Four,Quantitative Concept,19997
+most,C25258,Most,Qualitative Concept,20002
+preferred,C42711,Preferred,Qualitative Concept,20007
+content areas,C70772,Knowledge Field,Conceptual Entity,20028
+result,C20200,Outcome,Finding,20048
+priority,C48911,Priority,Qualitative Concept,20072
+roles,C48835,Role,Conceptual Entity,20081
+education nursing,C20844,Nurse Educator,Biomedical Occupation or Discipline,20100
+Bangladesh,C16323,Bangladesh,Geographic Area,20124
+leadership,C121297,Leadership Scale,Intellectual Product,20169
+qualifications,C115712,Laboratory Certification Document,Intellectual Product,20192
+clinical,C25398,Clinical,Qualitative Concept,20211
+Nursing research,C15285,Nursing Research,Research Activity,20246
+Nursing research,C51864,Research Nurse,Professional or Occupational Group,20246
+research based,C94426,Research Base,Organization,20254
+evidence,C43583,Evidence,Idea or Concept,20267
+top,C62637,Top,Spatial Concept,20308
+four,C66835,Four,Quantitative Concept,20312
+most,C25258,Most,Qualitative Concept,20317
+preferred,C42711,Preferred,Qualitative Concept,20322
+contents,C95494,Content,Mental Process,20344
+survey,C17176,Survey,Research Device,20360
+finding,C3367,Finding,Finding,20373
+one,C66832,One,Quantitative Concept,20390
+health,C25178,Health,Idea or Concept,20401
+related,C53260,Definitely Related to Intervention,Qualitative Concept,20408
+national,C61423,National,Conceptual Entity,20416
+period,C25616,Period,Temporal Concept,20455
+function,C25518,Function,Conceptual Entity,20490
+cells,C48694,Cell,Spatial Concept,20519
+Bangladesh,C16323,Bangladesh,Geographic Area,20528
+evidence,C43583,Evidence,Idea or Concept,20543
+based,C48055,Base,Qualitative Concept,20552
+nursing research,C15285,Nursing Research,Research Activity,20595
+nursing research,C51864,Research Nurse,Professional or Occupational Group,20595
+institutes,C41206,Institution,Organization,20612
+Family,C25173,Family,Family Group,20647
+Some,C65099,Some,Activity,20678
+countries,C66786,CDISC SDTM Country Terminology,Intellectual Product,20694
+Jordan,C16765,Jordan,Geographic Area,20713
+Sri Lanka,C17163,Sri Lanka,Geographic Area,20724
+have,C101282,Have,Classification,20735
+MSN,C71374,Master of Science in Nursing,Intellectual Product,20748
+programmes,C50123,Programmer Device Component,Manufactured Object,20752
+focus,C25511,Focus,Spatial Concept,20768
+education,C16529,Education,Educational Activity,20777
+management,C61372,Management,Activity,20791
+specialty,C17153,Medical Specialty,Biomedical Occupation or Discipline,20805
+areas,C16632,Geographic Area,Geographic Area,20815
+expected,C25501,Expected,Conceptual Entity,20832
+outcomes,C20200,Outcome,Finding,20851
+have,C101282,Have,Classification,20860
+prepare,C25625,Preparation,Activity,20873
+nurses research,C15285,Nursing Research,Research Activity,20881
+nurses research,C51864,Research Nurse,Professional or Occupational Group,20881
+reason,C25638,Reason,Idea or Concept,20934
+areas,C16632,Geographic Area,Geographic Area,20963
+advanced,C25411,Advanced,Qualitative Concept,20984
+nursing clinical,C20866,Ambulatory Care Nursing,Biomedical Occupation or Discipline,20993
+nursing educators,C20844,Nurse Educator,Biomedical Occupation or Discipline,20993
+specialties,C17153,Medical Specialty,Biomedical Occupation or Discipline,21013
+most,C25258,Most,Qualitative Concept,21112
+issue,C43415,Issue,Manufactured Object,21126
+both,C49636,Both,Qualitative Concept,21135
+countries,C66786,CDISC SDTM Country Terminology,Intellectual Product,21140
+development,C18732,Development,Organism Function,21197
+MSN,C71374,Master of Science in Nursing,Intellectual Product,21215
+planned,C25619,Plan,Activity,21232
+internal,C25234,Internal,Spatial Concept,21276
+student,C75561,Student,Occupation or Discipline,21291
+characteristics,C25447,Characteristic,Conceptual Entity,21299
+external,C44280,External,Spatial Concept,21320
+needs,C41204,Need,Conceptual Entity,21329
+environment,C16551,Environment,Functional Concept,21362
+function,C25518,Function,Conceptual Entity,21402
+factors,C84380,Mathematical Factor,Conceptual Entity,21426
+influence,C121660,Influence,Conceptual Entity,21439
+based,C48055,Base,Qualitative Concept,21463
+analysis,C25391,Analysis,Activity,21495
+Study,C63536,Study,Research Activity,21525
+limitations,C121422,Limited Lifting Ability,Intellectual Product,21531
+study,C63536,Study,Research Activity,21549
+number,C25337,Number,Quantitative Concept,21561
+limitations,C121422,Limited Lifting Ability,Intellectual Product,21571
+Only,C65011,Only,Qualitative Concept,21584
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,21593
+public,C49060,Public,Qualitative Concept,21615
+sector,C48955,Sector,Geographic Area,21622
+study,C63536,Study,Research Activity,21671
+More than,C61584,Greater Than,Quantitative Concept,21678
+half,C81009,Half,Conceptual Entity,21688
+study,C63536,Study,Research Activity,21813
+results,C20200,Outcome,Finding,21819
+example,C48175,Example,Conceptual Entity,21832
+may,C106184,May,Qualitative Concept,21850
+difference,C46003,Difference,Qualitative Concept,21859
+job,C25193,Occupation,Occupation or Discipline,21873
+securities,C95498,Secure,Mental Process,21877
+between,C94545,Between,Qualitative Concept,21888
+public,C49060,Public,Qualitative Concept,21896
+private,C54104,Private,Qualitative Concept,21907
+sectors,C48955,Sector,Geographic Area,21915
+difference,C46003,Difference,Qualitative Concept,21929
+MSN,C71374,Master of Science in Nursing,Intellectual Product,21977
+regions,C41129,Region,Spatial Concept,21997
+intention,C25725,Intent,Qualitative Concept,22006
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,22019
+may,C106184,May,Qualitative Concept,22060
+have,C101282,Have,Classification,22064
+needs,C41204,Need,Conceptual Entity,22127
+assessment,C25367,Assessment,Intellectual Product,22133
+national,C61423,National,Conceptual Entity,22167
+project,C47885,Project,Conceptual Entity,22176
+MSN,C71374,Master of Science in Nursing,Intellectual Product,22200
+Bangladesh,C16323,Bangladesh,Geographic Area,22217
+may,C106184,May,Qualitative Concept,22234
+have,C101282,Have,Classification,22238
+social,C62650,Social,Qualitative Concept,22258
+bias,C28232,Bias,Idea or Concept,22278
+questionnaire,C17048,Questionnaire,Intellectual Product,22317
+questionnaires,C17048,Questionnaire,Intellectual Product,22346
+distributed,C45273,Distribution,Activity,22366
+collected,C25452,Collected,Conceptual Entity,22382
+organization,C92453,Organization,Activity,22420
+may,C106184,May,Qualitative Concept,22440
+have,C101282,Have,Classification,22444
+affected,C64917,Affected,Qualitative Concept,22449
+voluntary,C74096,Voluntary,Qualitative Concept,22503
+participation,C25608,Participation,Functional Concept,22513
+research,C15319,Research,Research Activity,22534
+assisted,C89271,Assistance,Activity,22547
+wide,C124593,Wide,Qualitative Concept,22568
+terms,C114093,Term Birth,Finding,22591
+measurement,C25209,Measurement,Quantitative Concept,22600
+questionnaire,C17048,Questionnaire,Intellectual Product,22626
+dated,C25164,Date,Temporal Concept,22650
+Bangladeshi,C43671,Bangladeshi,Population Group,22659
+nurses,C25596,Breast Feeding,Therapeutic or Preventive Procedure,22683
+may,C106184,May,Qualitative Concept,22694
+not,C25594,Negation,Functional Concept,22698
+have,C101282,Have,Classification,22702
+sensitive,C3114,Hypersensitivity,Disease or Syndrome,22725
+cultural,C16478,Culture,Idea or Concept,22738
+differences,C46003,Difference,Qualitative Concept,22747
+may,C106184,May,Qualitative Concept,22803
+have,C101282,Have,Classification,22807
+different,C46003,Difference,Qualitative Concept,22817
+intent,C25725,Intent,Qualitative Concept,22836
+questions,C86071,Equivocal,Conceptual Entity,22850
+lowering,C86568,Lower,Activity,22861
+reliability,C73622,Reliability,Quantitative Concept,22874
+job,C25193,Occupation,Occupation or Discipline,22893
+satisfaction,C62185,Satisfaction,Mental Process,22897
+scale,C25664,Scale,Intellectual Product,22910
+future,C67527,Future,Temporal Concept,22921
+study,C63536,Study,Research Activity,22928
+face,C13071,Face,Body Location or Region,22948
+face,C13071,Face,Body Location or Region,22956
+well,C70592,Well,Spatial Concept,22991
+questions,C86071,Equivocal,Conceptual Entity,22996
+fit,C70826,Fit,Activity,23029
+between,C94545,Between,Qualitative Concept,23033
+noted,C126374,Notable,Conceptual Entity,23041
+answers,C49149,Answer,Intellectual Product,23047
+being,C89327,Be,Qualitative Concept,23067
+measured,C44473,Measured,Qualitative Concept,23073
+al,C111127,Aluminum Measurement,Laboratory Procedure,23094
+testing,C15336,Testing,Occupational Activity,23113
+evaluate questionnaire,C121940,Questionnaire Evaluator,Professional or Occupational Group,23149
+different,C46003,Difference,Qualitative Concept,23202
+cultures,C17201,Tissue Culture,Laboratory Procedure,23212
+data,C25474,Data,Idea or Concept,23232
+quality,C25283,Quality,Conceptual Entity,23237
+Conclusion,C54033,Conclusion,Finding,23247
+study,C63536,Study,Research Activity,23264
+provide,C80514,Provide,Activity,23287
+baseline,C25213,Baseline,Conceptual Entity,23295
+data,C25474,Data,Idea or Concept,23304
+need,C41204,Need,Conceptual Entity,23319
+level education,C17953,Education Level,Organism Attribute,23337
+nursing education,C20844,Nurse Educator,Biomedical Occupation or Discipline,23343
+well,C70592,Well,Spatial Concept,23365
+other,C17649,Other,Qualitative Concept,23373
+factors,C84380,Mathematical Factor,Conceptual Entity,23379
+relevant,C70664,Relevance,Qualitative Concept,23387
+MSN,C71374,Master of Science in Nursing,Intellectual Product,23415
+results,C20200,Outcome,Finding,23450
+strong,C14614,Strong,,23469
+intent study,C49652,Clinical Study by Intent,Research Activity,23476
+higher,C25227,High,Qualitative Concept,23514
+educational nursing nursing,C20844,Nurse Educator,Biomedical Occupation or Discipline,23521
+confidence,C43367,Confidence,Conceptual Entity,23544
+clinical,C25398,Clinical,Qualitative Concept,23568
+competence,C99568,Competency,Conceptual Entity,23577
+high,C25227,High,Qualitative Concept,23592
+important,C115916,Important,Qualitative Concept,23665
+findings,C61036,Investigation Finding,Finding,23675
+evidence,C43583,Evidence,Idea or Concept,23700
+MSN,C71374,Master of Science in Nursing,Intellectual Product,23725
+Bangladesh,C16323,Bangladesh,Geographic Area,23742
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,23772
+health policy,C16668,Health Policy,Regulation or Law,23784
+number,C25337,Number,Quantitative Concept,23820
+countries,C66786,CDISC SDTM Country Terminology,Intellectual Product,23841
+education nurses,C20844,Nurse Educator,Biomedical Occupation or Discipline,23876
+policy,C17735,Policy,Governmental or Regulatory Activity,23924
+based,C48055,Base,Qualitative Concept,23952
+national,C61423,National,Conceptual Entity,23961
+needs,C41204,Need,Conceptual Entity,23970
+social,C62650,Social,Qualitative Concept,23995
+contexts,C41086,Application Context,Conceptual Entity,24002
+countries,C66786,CDISC SDTM Country Terminology,Intellectual Product,24068
+may,C106184,May,Qualitative Concept,24078
+not,C25594,Negation,Functional Concept,24082
+relevant,C70664,Relevance,Qualitative Concept,24089
+local,C67263,Local,Spatial Concept,24101
+needs,C41204,Need,Conceptual Entity,24107
+Results,C20200,Outcome,Finding,24114
+needs,C41204,Need,Conceptual Entity,24139
+assessments,C25367,Assessment,Intellectual Product,24145
+guidelines,C17564,Guideline,Intellectual Product,24211
+planning,C25619,Plan,Activity,24239
+needs,C41204,Need,Conceptual Entity,24272
+assessments,C25367,Assessment,Intellectual Product,24278
+take,C65105,Take,Activity,24297
+precedence,C48911,Priority,Qualitative Concept,24302
+ensure,C74452,Nutritional Supplement Drink,Pharmacologic Substance,24316
+best,C25432,Best,Qualitative Concept,24327
+possible,C82490,Possible,Qualitative Concept,24332
+outcome,C20200,Outcome,Finding,24353
+restricted,C53452,Restriction,Natural Phenomenon or Process,24369
+budgets,C60757,Budget,Intellectual Product,24380
+addition,C64911,Add,Activity,24393
+advanced practice nurses,C20825,Advanced Practice Nurse,Biomedical Occupation or Discipline,24403
+able,C78209,Ability,Functional Concept,24436
+key,C46002,Key,Conceptual Entity,24462
+healthcare delivery,C15219,Health Care Delivery,Health Care Activity,24481
+delivery health care,C15219,Health Care Delivery,Health Care Activity,24492
+system,C25700,System,Conceptual Entity,24501
+health care providing,C16666,Health Care Provider,Professional or Occupational Group,24512
+shifts,C73943,Physical Shift,Phenomenon or Process,24524
+hospital,C16696,Hospital,Health Care Related Organization,24546
+based,C48055,Base,Qualitative Concept,24555
+community,C16453,Community,Conceptual Entity,24569
+MSN,C71374,Master of Science in Nursing,Intellectual Product,24597
+based,C48055,Base,Qualitative Concept,24611
+unique,C45282,Unique,Qualitative Concept,24620
+social,C62650,Social,Qualitative Concept,24627
+properties,C62498,Object Property,Conceptual Entity,24634
+nursing,C16926,Nursing,Biomedical Occupation or Discipline,24659
+healthcare,C15363,Healthcare,Health Care Activity,24690
+sectors,C48955,Sector,Geographic Area,24701
+competent,C99568,Competency,Conceptual Entity,24714
+sensitive,C3114,Hypersensitivity,Disease or Syndrome,24736
+eyes,C22711,Mouse Eye,"Body Part, Organ, or Organ Component",24746
+health,C25178,Health,Idea or Concept,24762
+outcomes,C20200,Outcome,Finding,24769
+people,C95553,People,Population Group,24781
+Bangladesh,C16323,Bangladesh,Geographic Area,24791
+able,C78209,Ability,Functional Concept,24816
+make,C64661,Make,Activity,24824
+contributions,C61412,Contribution,Activity,24829
+Development disease,C43773,EO_Develops_Disease,Conceptual Entity,24871
+Bangladesh,C16323,Bangladesh,Geographic Area,24892
+maternal mortality,C111860,Maternal Mortality,Finding,24915
+child,C16423,Child,Age Group,24924
+health policies,C16668,Health Policy,Regulation or Law,24984
+take,C65105,Take,Activity,25004
+actions,C25404,Action,Activity,25019
+equal,C61582,Equality,Functional Concept,25034
+other,C17649,Other,Qualitative Concept,25053
+healthcare,C15363,Healthcare,Health Care Activity,25059

@@ -1,0 +1,80 @@
+Mention,ConceptCode,ConceptName,SemanticType,Start
+present,C25626,Present,Qualitative Concept,5
+study,C63536,Study,Research Activity,13
+sensitivity,C25201,Sensitivity,Quantitative Concept,36
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,76
+sensor,C28220,Sensor,Medical Device,105
+type,C25284,Type,Functional Concept,112
+patients,C53691,Veterinary Patient,Organism,120
+mesial,C81170,Midline,Spatial Concept,134
+temporal,C73990,Temporal,Temporal Concept,141
+focus,C25511,Focus,Spatial Concept,160
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,179
+patients,C53691,Veterinary Patient,Organism,188
+mesial,C81170,Midline,Spatial Concept,202
+temporal,C73990,Temporal,Temporal Concept,209
+focus,C25511,Focus,Spatial Concept,228
+two,C66833,Two,Quantitative Concept,240
+sensor,C28220,Sensor,Medical Device,244
+types,C25284,Type,Functional Concept,251
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,258
+number,C25337,Number,Quantitative Concept,308
+detected,C25481,Detected,Conceptual Entity,325
+equivalent,C48793,Equivalent,Qualitative Concept,356
+current,C25471,Current,Temporal Concept,367
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,383
+parameters,C44175,Parameter,Conceptual Entity,388
+dis,C28554,Death,Finding,400
+coordinated center,C48359,Coordinating Center,Organization,419
+head,C12419,Head,Body Location or Region,431
+radius,C63921,Radius,Spatial Concept,444
+evaluated,C25214,Evaluation,Activity,477
+sensor,C28220,Sensor,Medical Device,503
+type,C25284,Type,Functional Concept,510
+426,C16787,Lesotho,Geographic Area,522
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,526
+reviewers,C45314,Reviewed,Conceptual Entity,565
+satisfied,C125072,Satisfied,Intellectual Product,587
+criteria,C25466,Criterion,Idea or Concept,615
+source,C25683,Source,Qualitative Concept,628
+localization,C28264,Localization,Conceptual Entity,635
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,659
+parameters,C44175,Parameter,Conceptual Entity,663
+detected,C25481,Detected,Conceptual Entity,682
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,694
+alone,C48440,Single,Qualitative Concept,707
+radius,C63921,Radius,Spatial Concept,733
+larger,C49508,Large,Qualitative Concept,744
+detected,C25481,Detected,Conceptual Entity,776
+estimated,C25498,Estimate,Activity,814
+mesial,C81170,Midline,Spatial Concept,831
+temporal,C73990,Temporal,Temporal Concept,838
+area,C25244,Area,Spatial Concept,847
+more,C128667,More,Qualitative Concept,857
+frequently,C64649,Frequently,Qualitative Concept,862
+detected,C25481,Detected,Conceptual Entity,873
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,885
+alone,C48440,Single,Qualitative Concept,898
+alone,C48440,Single,Qualitative Concept,932
+lateral,C25230,Lateral,Spatial Concept,969
+temporal,C73990,Temporal,Temporal Concept,977
+area,C25244,Area,Spatial Concept,986
+detected,C25481,Detected,Conceptual Entity,996
+less,C61422,Lesser,Qualitative Concept,1005
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,1013
+alone,C48440,Single,Qualitative Concept,1026
+alone,C48440,Single,Qualitative Concept,1059
+present,C25626,Present,Qualitative Concept,1078
+results,C20200,Outcome,Finding,1086
+suggest,C48313,Suggestion,Conceptual Entity,1094
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,1109
+detection,C16210,Detection,Diagnostic Procedure,1148
+patients,C53691,Veterinary Patient,Organism,1161
+mesial,C81170,Midline,Spatial Concept,1175
+temporal,C73990,Temporal,Temporal Concept,1182
+focus,C25511,Focus,Spatial Concept,1201
+higher,C25227,High,Qualitative Concept,1230
+sensitivity,C25201,Sensitivity,Quantitative Concept,1237
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,1252
+deep,C25240,Deep,Spatial Concept,1269
+sources,C25683,Source,Qualitative Concept,1274

@@ -1,0 +1,2293 @@
+Mention,ConceptCode,ConceptName,SemanticType,Start
+Magnetoencephalography,C16811,Magnetoencephalography,Diagnostic Procedure,14
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,38
+effective,C49287,Effective,Qualitative Concept,49
+non,C25594,Negation,Functional Concept,60
+invasive,C14159,Invasive,Qualitative Concept,64
+method,C71460,Method,Conceptual Entity,73
+zones,C43428,Zone,Spatial Concept,109
+evaluation,C25214,Evaluation,Activity,163
+Many,C78728,Many,Qualitative Concept,175
+studies,C15206,Clinical Study,Research Activity,180
+have,C101282,Have,Classification,188
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,220
+evaluation,C25214,Evaluation,Activity,224
+invasive,C14159,Invasive,Qualitative Concept,247
+intracranial,C84351,Intracranial,Classification,256
+EEG,C38054,Electroencephalography,Diagnostic Procedure,295
+zones,C43428,Zone,Spatial Concept,340
+al,C111127,Aluminum Measurement,Laboratory Procedure,360
+al,C111127,Aluminum Measurement,Laboratory Procedure,381
+al,C111127,Aluminum Measurement,Laboratory Procedure,407
+al,C111127,Aluminum Measurement,Laboratory Procedure,430
+al,C111127,Aluminum Measurement,Laboratory Procedure,450
+al al,C111127,Aluminum Measurement,Laboratory Procedure,485
+al al,C111127,Aluminum Measurement,Laboratory Procedure,582
+al al al,C111127,Aluminum Measurement,Laboratory Procedure,582
+al al,C111127,Aluminum Measurement,Laboratory Procedure,604
+al,C111127,Aluminum Measurement,Laboratory Procedure,624
+Most,C25258,Most,Qualitative Concept,657
+studies,C15206,Clinical Study,Research Activity,671
+have,C101282,Have,Classification,679
+benefits,C25387,Benefits,Idea or Concept,697
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,709
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,728
+little,C76350,Little,Qualitative Concept,742
+reported,C25375,Report,Intellectual Product,758
+usefulness,C107498,Useful,Qualitative Concept,781
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,795
+patients,C53691,Veterinary Patient,Organism,802
+mesial,C81170,Midline,Spatial Concept,816
+temporal lobe,C12353,Temporal Lobe,"Body Part, Organ, or Organ Component",823
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,837
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,856
+surgery,C17173,Surgery,Biomedical Occupation or Discipline,865
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,882
+detects,C111567,Detectable,Clinical Attribute,900
+discharges,C26416,Mouse Discharge,Tissue,921
+superficial,C25239,Superficial,Spatial Concept,945
+areas,C16632,Geographic Area,Geographic Area,957
+lateral,C25230,Lateral,Spatial Concept,971
+al,C111127,Aluminum Measurement,Laboratory Procedure,1006
+Park,C53542,Park,Geographic Area,1040
+al,C111127,Aluminum Measurement,Laboratory Procedure,1048
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,1060
+specify,C25685,Specify,Conceptual Entity,1067
+regions,C41129,Region,Spatial Concept,1089
+sitting,C62122,Sitting,Spatial Concept,1097
+deep,C25240,Deep,Spatial Concept,1105
+brain,C12439,Brain,"Body Part, Organ, or Organ Component",1117
+difficult,C62189,Difficulty,Conceptual Entity,1144
+may,C106184,May,Qualitative Concept,1160
+due,C45263,Due,Qualitative Concept,1167
+reduction,C25640,Reduced,Qualitative Concept,1174
+signal,C43382,Signal,Conceptual Entity,1200
+detected,C25481,Detected,Conceptual Entity,1217
+long,C25248,Long,Qualitative Concept,1231
+distance,C25167,Distance,Quantitative Concept,1236
+al,C111127,Aluminum Measurement,Laboratory Procedure,1273
+al,C111127,Aluminum Measurement,Laboratory Procedure,1322
+al,C111127,Aluminum Measurement,Laboratory Procedure,1346
+al,C111127,Aluminum Measurement,Laboratory Procedure,1407
+al,C111127,Aluminum Measurement,Laboratory Procedure,1456
+al,C111127,Aluminum Measurement,Laboratory Procedure,1491
+al,C111127,Aluminum Measurement,Laboratory Procedure,1513
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,1582
+electrocorticography,C116664,Electrocorticography,Diagnostic Procedure,1590
+implanted,C41075,Implant,Medical Device,1616
+subdural,C127831,Subdural,Spatial Concept,1626
+electrodes,C49936,Electrode Device Component,Manufactured Object,1635
+reported,C25375,Report,Intellectual Product,1652
+discharges,C26416,Mouse Discharge,Tissue,1679
+lateral,C25230,Lateral,Spatial Concept,1725
+temporal lobe,C12353,Temporal Lobe,"Body Part, Organ, or Organ Component",1733
+cortical,C12443,Cerebral Cortex,"Body Part, Organ, or Organ Component",1761
+areas,C16632,Geographic Area,Geographic Area,1770
+cm,C49668,Centimeter,Quantitative Concept,1790
+detected,C25481,Detected,Conceptual Entity,1800
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,1812
+al,C111127,Aluminum Measurement,Laboratory Procedure,1828
+result,C20200,Outcome,Finding,1845
+contrasts,C390,Contrast Agent,"Indicator, Reagent, or Diagnostic Aid",1852
+findings,C61036,Investigation Finding,Finding,1871
+al,C111127,Aluminum Measurement,Laboratory Procedure,1892
+source,C25683,Source,Qualitative Concept,1908
+estimation,C53327,Statistical Estimation,Research Activity,1915
+not,C25594,Negation,Functional Concept,1932
+fulfill,C87531,Fulfill,Activity,1936
+criteria,C25466,Criterion,Idea or Concept,1962
+even,C64936,Evening,Temporal Concept,1971
+discharges,C26416,Mouse Discharge,Tissue,1994
+extended,C25270,Extend,Activity,2005
+over,C65018,Over,Qualitative Concept,2014
+cm,C49668,Centimeter,Quantitative Concept,2021
+patients,C53691,Veterinary Patient,Organism,2029
+Application,C70867,Application,Intellectual Product,2049
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,2064
+have,C101282,Have,Classification,2096
+limitations,C121422,Limited Lifting Ability,Intellectual Product,2101
+measurement,C25209,Measurement,Quantitative Concept,2120
+back,C13062,Back,Body Location or Region,2150
+previous,C25627,Previous,Temporal Concept,2164
+studies,C15206,Clinical Study,Research Activity,2173
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,2231
+pick,C48912,Choose,Activity,2235
+coil,C49877,Coil Device Component,Manufactured Object,2243
+not,C25594,Negation,Functional Concept,2255
+al,C111127,Aluminum Measurement,Laboratory Procedure,2287
+al,C111127,Aluminum Measurement,Laboratory Procedure,2336
+al,C111127,Aluminum Measurement,Laboratory Procedure,2360
+al,C111127,Aluminum Measurement,Laboratory Procedure,2397
+al,C111127,Aluminum Measurement,Laboratory Procedure,2446
+al,C111127,Aluminum Measurement,Laboratory Procedure,2481
+two,C66833,Two,Quantitative Concept,2512
+gradient,C70693,Gradient,Phenomenon or Process,2521
+coil,C49877,Coil Device Component,Manufactured Object,2530
+cancel,C63471,Cancel,Activity,2547
+environmental,C16551,Environment,Functional Concept,2554
+noises,C45783,Noise,Phenomenon or Process,2577
+detect,C117041,Dosing Days to Detection,Quantitative Concept,2596
+signals,C17133,Signal Transduction,Molecular Function,2603
+sources,C25683,Source,Qualitative Concept,2623
+different,C46003,Difference,Qualitative Concept,2634
+type,C25284,Type,Functional Concept,2644
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,2652
+pick,C48912,Choose,Activity,2656
+coil,C49877,Coil Device Component,Manufactured Object,2664
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,2672
+comprises,C79873,Contain,Activity,2686
+single,C48440,Single,Qualitative Concept,2698
+coil,C49877,Coil Device Component,Manufactured Object,2710
+detect,C117041,Dosing Days to Detection,Quantitative Concept,2734
+signals,C17133,Signal Transduction,Molecular Function,2741
+regions,C41129,Region,Spatial Concept,2769
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,2782
+theoretical,C84379,Theory,Classification,2802
+sources,C25683,Source,Qualitative Concept,2845
+rarely,C73116,Rarely,Qualitative Concept,2862
+recent,C25280,Recent,Temporal Concept,2882
+due,C45263,Due,Qualitative Concept,2896
+susceptibility,C16505,Susceptibility,Qualitative Concept,2903
+interference,C72886,Interference,Activity,2921
+external,C44280,External,Spatial Concept,2939
+noise,C45783,Noise,Phenomenon or Process,2957
+al,C111127,Aluminum Measurement,Laboratory Procedure,3003
+Recent,C25280,Recent,Temporal Concept,3028
+advances,C25411,Advanced,Qualitative Concept,3035
+technology,C17187,Technology,Occupation or Discipline,3047
+quality,C25283,Quality,Conceptual Entity,3071
+rooms,C69074,Room,Geographic Area,3104
+coil,C49877,Coil Device Component,Manufactured Object,3118
+have,C101282,Have,Classification,3131
+magnetometers,C50053,Magnetometer Device Component,Manufactured Object,3144
+clinical,C25398,Clinical,Qualitative Concept,3173
+purposes,C25634,Purpose,Idea or Concept,3182
+theoretical,C84379,Theory,Classification,3200
+almost,C107222,Nearly,Qualitative Concept,3225
+no,C49487,No,Classification,3232
+reports,C41191,Reporter,Professional or Occupational Group,3235
+have,C101282,Have,Classification,3243
+discharges,C26416,Mouse Discharge,Tissue,3298
+sources,C25683,Source,Qualitative Concept,3341
+clinical study,C15206,Clinical Study,Research Activity,3354
+most,C25258,Most,Qualitative Concept,3383
+common,C43461,Common,Qualitative Concept,3388
+intractable epilepsy,C9487,Intractable Epilepsy,Disease or Syndrome,3405
+partial epilepsy,C122812,Partial Epilepsy,Disease or Syndrome,3417
+Several,C107221,Several,Qualitative Concept,3435
+non,C25594,Negation,Functional Concept,3443
+invasive,C14159,Invasive,Qualitative Concept,3447
+methods,C71460,Method,Conceptual Entity,3456
+have,C101282,Have,Classification,3464
+established,C71155,Established,Qualitative Concept,3474
+work up,C85833,Work-up,Diagnostic Procedure,3502
+al,C111127,Aluminum Measurement,Laboratory Procedure,3532
+have,C101282,Have,Classification,3556
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,3566
+clinical evaluation,C124351,Clinical Evaluation,Activity,3574
+many,C78728,Many,Qualitative Concept,3597
+types,C25284,Type,Functional Concept,3602
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,3611
+have,C101282,Have,Classification,3624
+not obtained,C67325,Not Obtained,Qualitative Concept,3629
+favorable,C102560,Favorable,Qualitative Concept,3642
+results,C20200,Outcome,Finding,3652
+poor,C77959,Poor,Qualitative Concept,3694
+sensitivity,C25201,Sensitivity,Quantitative Concept,3699
+sources,C25683,Source,Qualitative Concept,3741
+evaluate,C25214,Evaluation,Activity,3778
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,3805
+available,C25429,Availability,Conceptual Entity,3870
+sensitive,C3114,Hypersensitivity,Disease or Syndrome,3910
+sources,C25683,Source,Qualitative Concept,3931
+mesial,C81170,Midline,Spatial Concept,3954
+temporal,C73990,Temporal,Temporal Concept,3961
+foci,C25511,Focus,Spatial Concept,3980
+aim,C60761,Aim,Conceptual Entity,4042
+two,C66833,Two,Quantitative Concept,4066
+different,C46003,Difference,Qualitative Concept,4070
+problems,C28020,Problem,Phenomenon or Process,4091
+criteria,C25466,Criterion,Idea or Concept,4101
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,4114
+discharges,C26416,Mouse Discharge,Tissue,4131
+variability,C85443,Variability,Conceptual Entity,4147
+detection,C16210,Detection,Diagnostic Procedure,4162
+EEG,C38054,Electroencephalography,Diagnostic Procedure,4178
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,4182
+reviewers,C45314,Reviewed,Conceptual Entity,4186
+several criteria,C117962,Severity Criteria,Idea or Concept,4207
+have,C101282,Have,Classification,4224
+defined,C42777,Definition,Intellectual Product,4234
+EEG,C38054,Electroencephalography,Diagnostic Procedure,4246
+discharges,C26416,Mouse Discharge,Tissue,4263
+can,C43180,Can,Manufactured Object,4298
+applied,C113519,Apply,Activity,4305
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,4316
+uncertain,C47944,Uncertain,Qualitative Concept,4346
+morphologies,C17943,Morphology,Biomedical Occupation or Discipline,4364
+al,C111127,Aluminum Measurement,Laboratory Procedure,4403
+al,C111127,Aluminum Measurement,Laboratory Procedure,4426
+signal,C43382,Signal,Conceptual Entity,4454
+between,C94545,Between,Qualitative Concept,4479
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,4487
+EEG,C38054,Electroencephalography,Diagnostic Procedure,4495
+can,C43180,Can,Manufactured Object,4499
+readers,C50132,Reader Device Component,Manufactured Object,4511
+detect,C117041,Dosing Days to Detection,Quantitative Concept,4533
+discharges,C26416,Mouse Discharge,Tissue,4553
+reason,C25638,Reason,Idea or Concept,4594
+able,C78209,Ability,Functional Concept,4602
+criterion,C25466,Criterion,Idea or Concept,4607
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,4621
+discharge,C26416,Mouse Discharge,Tissue,4638
+two,C66833,Two,Quantitative Concept,4664
+step,C48176,Step,Temporal Concept,4669
+procedure,C79751,Procedure,Activity,4674
+criterion,C25466,Criterion,Idea or Concept,4714
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,4728
+epi,C473,Therapeutic Epinephrine,"Organic Chemical, Pharmacologic Substance",4732
+discharge,C26416,Mouse Discharge,Tissue,4747
+evaluation,C25214,Evaluation,Activity,4762
+data set,C47824,Data Set,Idea or Concept,4787
+test,C47891,Test,Activity,4815
+issue,C43415,Issue,Manufactured Object,4835
+reviewer,C54634,Reviewer,Population Group,4848
+factor,C25506,Factor,Functional Concept,4857
+detection,C16210,Detection,Diagnostic Procedure,4867
+discharges,C26416,Mouse Discharge,Tissue,4893
+discharges,C26416,Mouse Discharge,Tissue,4928
+not,C25594,Negation,Functional Concept,4939
+only,C65011,Only,Qualitative Concept,4943
+depends,C45996,Dependency,Qualitative Concept,4948
+upon,C65137,Upon,Qualitative Concept,4956
+morphology,C17943,Morphology,Biomedical Occupation or Discipline,4971
+signal noise ratio,C94983,Signal to Noise Ratio,Quantitative Concept,4986
+upon,C65137,Upon,Qualitative Concept,5018
+training,C17705,Training,Educational Activity,5027
+experience,C54627,Experience,Organism Attribute,5040
+reviewer,C54634,Reviewer,Population Group,5058
+al,C111127,Aluminum Measurement,Laboratory Procedure,5081
+Even,C64936,Evening,Temporal Concept,5093
+same,C64637,Same,Qualitative Concept,5113
+criteria,C25466,Criterion,Idea or Concept,5118
+reviewer,C54634,Reviewer,Population Group,5132
+factor,C25506,Factor,Functional Concept,5141
+excluded,C82931,Exclusion,Activity,5171
+neurologists,C17721,Neurologist,Biomedical Occupation or Discipline,5212
+review,C42729,Review,Activity,5225
+data,C25474,Data,Idea or Concept,5232
+after,C49639,Status Post,Temporal Concept,5237
+blinding,C49068,Blinded,Functional Concept,5243
+sensor,C28220,Sensor,Medical Device,5255
+type,C25284,Type,Functional Concept,5262
+patient,C16960,Patient,Patient or Disabled Group,5271
+information,C48191,Information,Conceptual Entity,5279
+detected,C25481,Detected,Conceptual Entity,5320
+each,C64933,Each,Qualitative Concept,5332
+reviewer,C54634,Reviewer,Population Group,5337
+based,C48055,Base,Qualitative Concept,5346
+criterion,C25466,Criterion,Idea or Concept,5359
+discharge,C26416,Mouse Discharge,Tissue,5385
+detected,C25481,Detected,Conceptual Entity,5403
+accepted,C62559,Accepted,Qualitative Concept,5434
+al,C111127,Aluminum Measurement,Laboratory Procedure,5493
+al,C111127,Aluminum Measurement,Laboratory Procedure,5520
+present,C25626,Present,Qualitative Concept,5537
+study,C63536,Study,Research Activity,5545
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,5559
+two,C66833,Two,Quantitative Concept,5576
+types,C25284,Type,Functional Concept,5580
+pick,C48912,Choose,Activity,5589
+coils,C61301,Convolution,Spatial Concept,5598
+detect,C117041,Dosing Days to Detection,Quantitative Concept,5607
+discharges,C26416,Mouse Discharge,Tissue,5627
+sensor,C28220,Sensor,Medical Device,5666
+able,C78209,Ability,Functional Concept,5673
+detect,C117041,Dosing Days to Detection,Quantitative Concept,5681
+larger,C49508,Large,Qualitative Concept,5692
+number,C25337,Number,Quantitative Concept,5699
+source,C25683,Source,Qualitative Concept,5730
+location,C25341,Location,Spatial Concept,5737
+Simultaneous,C25456,Concurrent,Qualitative Concept,5747
+EEG,C38054,Electroencephalography,Diagnostic Procedure,5773
+adopted,C25290,Adopted,Qualitative Concept,5786
+reference,C25641,Reference,Idea or Concept,5798
+Methods,C71460,Method,Conceptual Entity,5810
+Patients,C53691,Veterinary Patient,Organism,5821
+Six,C66837,Six,Quantitative Concept,5831
+patients,C53691,Veterinary Patient,Organism,5835
+refractory,C38014,Refractory,Qualitative Concept,5869
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,5880
+mesial,C81170,Midline,Spatial Concept,5894
+focus,C25511,Focus,Spatial Concept,5920
+Cases,C99269,True Case Status,Qualitative Concept,5927
+lateral,C25230,Lateral,Spatial Concept,5957
+temporal lobe,C12353,Temporal Lobe,"Body Part, Organ, or Organ Component",5965
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,5979
+patients,C53691,Veterinary Patient,Organism,6023
+treated,C25705,Treating,Occupational Activity,6032
+Departments,C42671,Department,Conceptual Entity,6047
+Neurosurgery,C105687,Neurosurgery,Biomedical Occupation or Discipline,6062
+Neurology,C16908,Neurology,Biomedical Occupation or Discipline,6079
+University,C48647,University,Organization,6098
+Hospital,C16696,Hospital,Health Care Related Organization,6109
+Japan,C16764,Japan,Geographic Area,6119
+between,C94545,Between,Qualitative Concept,6126
+July,C106186,July,Qualitative Concept,6134
+May,C106184,May,Qualitative Concept,6148
+Table,C48441,Table,Manufactured Object,6159
+patients,C53691,Veterinary Patient,Organism,6176
+men,C97517,ELL wt Allele,Gene or Genome,6188
+mesial,C81170,Midline,Spatial Concept,6207
+focus,C25511,Focus,Spatial Concept,6233
+selected,C48912,Choose,Activity,6244
+structural,C41186,Structure,Functional Concept,6264
+abnormalities,C9440,Abnormality,Finding,6275
+mesial,C81170,Midline,Spatial Concept,6296
+temporal lobe,C12353,Temporal Lobe,"Body Part, Organ, or Organ Component",6303
+magnetic resonance imaging,C16809,Magnetic Resonance Imaging,Diagnostic Procedure,6320
+MRI,C16809,Magnetic Resonance Imaging,Diagnostic Procedure,6348
+Fig,C71971,Fig,"Plant, Food",6354
+frequent,C64649,Frequently,Qualitative Concept,6366
+clear,C48621,Negative Surgical Margin,Finding,6375
+EEG,C38054,Electroencephalography,Diagnostic Procedure,6381
+his,C29597,Histidine,"Amino Acid, Peptide, or Protein",6427
+Mean,C53319,Mean,Quantitative Concept,6438
+age,C25150,Age,Organism Attribute,6443
+patients,C53691,Veterinary Patient,Organism,6456
+range,C38013,Range,Quantitative Concept,6481
+14,C113428,Fourteen,Quantitative Concept,6488
+patient,C16960,Patient,Patient or Disabled Group,6506
+lateral,C25230,Lateral,Spatial Concept,6519
+year,C29848,Year,Temporal Concept,6540
+old,C65010,Old,Qualitative Concept,6545
+woman,C14284,Woman,Population Group,6549
+selected,C48912,Choose,Activity,6576
+frequent,C64649,Frequently,Qualitative Concept,6613
+EEG,C38054,Electroencephalography,Diagnostic Procedure,6622
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,6630
+All,C64916,All,Qualitative Concept,6642
+patients,C53691,Veterinary Patient,Organism,6646
+MRI,C16809,Magnetic Resonance Imaging,Diagnostic Procedure,6665
+positron emission tomography,C17007,Positron Emission Tomography,Diagnostic Procedure,6684
+emission,C17203,Single Photon Emission Computed Tomography,Diagnostic Procedure,6693
+emission,C17203,Single Photon Emission Computed Tomography,Diagnostic Procedure,6693
+tomography single photon emission computed tomography,C17203,Single Photon Emission Computed Tomography,Diagnostic Procedure,6702
+tomography single photon emission computed tomography,C17203,Single Photon Emission Computed Tomography,Diagnostic Procedure,6702
+PET,C17007,Positron Emission Tomography,Diagnostic Procedure,6714
+single photon emission computed tomography,C17203,Single Photon Emission Computed Tomography,Diagnostic Procedure,6726
+single photon emission computed tomography,C17203,Single Photon Emission Computed Tomography,Diagnostic Procedure,6726
+SPECT,C17203,Single Photon Emission Computed Tomography,Diagnostic Procedure,6770
+Continuous,C53279,Continue,Qualitative Concept,6778
+video,C96985,Video,Intellectual Product,6789
+EEG,C38054,Electroencephalography,Diagnostic Procedure,6795
+monitor,C61256,Monitoring,Activity,6799
+21,C107434,Twenty One,Quantitative Concept,6817
+electrodes,C49936,Electrode Device Component,Manufactured Object,6820
+19,C105801,Nineteen,Quantitative Concept,6832
+electrodes,C49936,Electrode Device Component,Manufactured Object,6835
+10,C69122,Ten,Quantitative Concept,6849
+20,C105799,Twenty,Quantitative Concept,6852
+system,C25700,System,Conceptual Entity,6855
+added,C45330,Added,Qualitative Concept,6862
+T1,C73122,CD5 wt Allele,Gene or Genome,6868
+T2,C37301,ADP/ATP Translocase 2,"Amino Acid, Peptide, or Protein",6875
+electrodes,C49936,Electrode Device Component,Manufactured Object,6878
+10 10,C69122,Ten,Quantitative Concept,6892
+system,C25700,System,Conceptual Entity,6898
+performed,C38000,Performed,Qualitative Concept,6910
+all,C64916,All,Qualitative Concept,6940
+patients,C53691,Veterinary Patient,Organism,6944
+Case,C49152,Case,Qualitative Concept,6960
+time,C25207,Time,Temporal Concept,6975
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,6983
+measurements,C37894,Measurable,Idea or Concept,6987
+only Case,C15362,Case Study,Research Activity,7001
+history,C54625,History,Conceptual Entity,7019
+previous,C25627,Previous,Temporal Concept,7030
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,7039
+surgery,C17173,Surgery,Biomedical Occupation or Discipline,7048
+frequent,C64649,Frequently,Qualitative Concept,7068
+complex,C47881,Complex,Qualitative Concept,7077
+partial seizures,C50689,Partial Seizure,Finding,7085
+right,C25228,Right,Spatial Concept,7108
+hippocampus,C12444,Hippocampus,"Body Part, Organ, or Organ Component",7114
+resected,C25654,Resected,Qualitative Concept,7143
+basis,C25430,Basis,Qualitative Concept,7159
+data,C25474,Data,Idea or Concept,7178
+scalp,C89807,Scalp,Anatomical Structure,7190
+EEG,C38054,Electroencephalography,Diagnostic Procedure,7196
+EEG,C38054,Electroencephalography,Diagnostic Procedure,7207
+bilateral,C13332,Bilateral,Spatial Concept,7216
+depth,C25333,Depth,Spatial Concept,7226
+EEG,C38054,Electroencephalography,Diagnostic Procedure,7232
+SPECT,C17203,Single Photon Emission Computed Tomography,Diagnostic Procedure,7271
+FDG PET,C103400,FDG-Positron Emission Tomography,Diagnostic Procedure,7299
+patient,C16960,Patient,Patient or Disabled Group,7313
+seizure,C2962,Seizure,Finding,7330
+free,C63628,Empty,Qualitative Concept,7338
+more than 1 year,C127046,Stayed Off Cigarettes More than One Year Since Diagnosis,Intellectual Product,7347
+following,C53286,Next,Temporal Concept,7364
+resection,C15232,Excision,Health Care Activity,7374
+right,C25228,Right,Spatial Concept,7391
+hippocampus,C12444,Hippocampus,"Body Part, Organ, or Organ Component",7397
+EEG,C38054,Electroencephalography,Diagnostic Procedure,7410
+frequent,C64649,Frequently,Qualitative Concept,7420
+left,C25229,Left,Spatial Concept,7445
+lobe,C13393,Lobe,"Body Part, Organ, or Organ Component",7461
+observed,C25599,Observed,Conceptual Entity,7471
+Five,C66836,Five,Quantitative Concept,7481
+cases,C99269,True Case Status,Qualitative Concept,7486
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,7528
+surgery,C17173,Surgery,Biomedical Occupation or Discipline,7537
+after,C49639,Status Post,Temporal Concept,7545
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,7551
+measurement,C25209,Measurement,Quantitative Concept,7555
+seizure,C2962,Seizure,Finding,7579
+free,C63628,Empty,Qualitative Concept,7587
+class I,C77265,Canadian Cardiovascular Society Grading Scale Class I,Finding,7618
+al,C111127,Aluminum Measurement,Laboratory Procedure,7638
+Intraoperative,C84355,Intraoperative,Conceptual Entity,7650
+Cases,C99269,True Case Status,Qualitative Concept,7704
+procedure,C79751,Procedure,Activity,7730
+both,C49636,Both,Qualitative Concept,7787
+mesial,C81170,Midline,Spatial Concept,7796
+lateral,C25230,Lateral,Spatial Concept,7807
+cortices,C12443,Cerebral Cortex,"Body Part, Organ, or Organ Component",7824
+cases,C99269,True Case Status,Qualitative Concept,7844
+zones,C43428,Zone,Spatial Concept,7874
+mesial,C81170,Midline,Spatial Concept,7900
+temporal lobes,C12353,Temporal Lobe,"Body Part, Organ, or Organ Component",7907
+Fig,C71971,Fig,"Plant, Food",7923
+Data,C25474,Data,Idea or Concept,7933
+acquisition,C43384,Acquisition,Activity,7938
+All,C64916,All,Qualitative Concept,7951
+measurements,C37894,Measurable,Idea or Concept,7955
+performed,C38000,Performed,Qualitative Concept,7973
+room,C69074,Room,Geographic Area,8014
+shaped shaped square,C48350,Square Shape,Qualitative Concept,8034
+whole,C25326,Whole,Qualitative Concept,8041
+head,C12419,Head,Body Location or Region,8047
+coverage,C68811,Cover,Activity,8052
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,8061
+system,C25700,System,Conceptual Entity,8065
+102,C14568,102 Mouse,Mammal,8083
+identical,C49034,Identical,Qualitative Concept,8087
+units,C64778,Enzyme Unit,Quantitative Concept,8097
+each,C64933,Each,Qualitative Concept,8104
+housing,C49990,Housing Device Component,Manufactured Object,8109
+two,C66833,Two,Quantitative Concept,8117
+placed,C126366,Placement,Activity,8136
+eight,C66839,Eight,Quantitative Concept,8160
+one,C66832,One,Quantitative Concept,8190
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,8194
+channels,C44170,Channel,Conceptual Entity,8225
+total,C25304,Total,Qualitative Concept,8237
+Finland,C16584,Finland,Geographic Area,8283
+sensor,C28220,Sensor,Medical Device,8305
+detector,C41276,Detector,Manufactured Object,8312
+28 28,C126888,Twenty Eight,Quantitative Concept,8332
+28 28,C126888,Twenty Eight,Quantitative Concept,8332
+mm mm,C28251,Millimeter,Quantitative Concept,8335
+mm mm,C28251,Millimeter,Quantitative Concept,8335
+mean,C53319,Mean,Quantitative Concept,8370
+distance,C25167,Distance,Quantitative Concept,8375
+between,C94545,Between,Qualitative Concept,8384
+sensor,C28220,Sensor,Medical Device,8392
+elements,C1940,Element,"Element, Ion, or Isotope",8399
+EEG,C38054,Electroencephalography,Diagnostic Procedure,8421
+during,C25490,During,Temporal Concept,8453
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,8460
+measurement,C25209,Measurement,Quantitative Concept,8464
+Based,C48055,Base,Qualitative Concept,8477
+International,C25541,International,Conceptual Entity,8490
+10,C69122,Ten,Quantitative Concept,8504
+20,C105799,Twenty,Quantitative Concept,8507
+10,C69122,Ten,Quantitative Concept,8516
+Systems,C40568,"System, LOINC Axis 4",Intellectual Product,8519
+12,C113426,Twelve,Quantitative Concept,8530
+bilateral,C13332,Bilateral,Spatial Concept,8533
+temporal,C73990,Temporal,Temporal Concept,8550
+EEG,C38054,Electroencephalography,Diagnostic Procedure,8559
+electrodes,C49936,Electrode Device Component,Manufactured Object,8563
+present,C25626,Present,Qualitative Concept,8595
+during,C25490,During,Temporal Concept,8603
+previous,C25627,Previous,Temporal Concept,8610
+video,C96985,Video,Intellectual Product,8619
+EEG,C38054,Electroencephalography,Diagnostic Procedure,8625
+monitoring,C61256,Monitoring,Activity,8629
+routine,C47893,Routine,Activity,8643
+EEG,C38054,Electroencephalography,Diagnostic Procedure,8651
+patients,C53691,Veterinary Patient,Organism,8671
+mesial,C81170,Midline,Spatial Concept,8685
+temporal,C73990,Temporal,Temporal Concept,8692
+focus,C25511,Focus,Spatial Concept,8711
+Cases,C99269,True Case Status,Qualitative Concept,8718
+19,C105801,Nineteen,Quantitative Concept,8733
+electrodes,C49936,Electrode Device Component,Manufactured Object,8736
+lateral,C25230,Lateral,Spatial Concept,8755
+aim,C60761,Aim,Conceptual Entity,8789
+monitor,C61256,Monitoring,Activity,8800
+discharges,C26416,Mouse Discharge,Tissue,8825
+found,C25626,Present,Qualitative Concept,8836
+previous,C25627,Previous,Temporal Concept,8845
+video,C96985,Video,Intellectual Product,8854
+EEG,C38054,Electroencephalography,Diagnostic Procedure,8860
+routine,C47893,Routine,Activity,8878
+All,C64916,All,Qualitative Concept,8891
+EEG,C38054,Electroencephalography,Diagnostic Procedure,8895
+recordings,C25198,Record,Intellectual Product,8899
+ear,C12394,Ear,"Body Part, Organ, or Organ Component",8931
+electrode,C49936,Electrode Device Component,Manufactured Object,8935
+ipsilateral,C25308,Ipsilateral,Spatial Concept,8945
+side,C80158,Side,Spatial Concept,8974
+Obtained,C52349,Obtain,Activity,8980
+EEGs,C38054,Electroencephalography,Diagnostic Procedure,8989
+calculated,C54125,Calculation,Activity,9025
+ear,C12394,Ear,"Body Part, Organ, or Organ Component",9043
+reference,C25641,Reference,Idea or Concept,9047
+analysis,C25391,Analysis,Activity,9066
+during,C25490,During,Temporal Concept,9128
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,9135
+acquisition,C43384,Acquisition,Activity,9139
+Contamination,C68768,Contamination,Conceptual Entity,9152
+artifacts,C75603,Artifact,Conceptual Entity,9178
+heart monitored,C98935,Cardiac Monitoring,Diagnostic Procedure,9207
+electrocardiography,C38053,Electrocardiography,Diagnostic Procedure,9230
+Cases,C99269,True Case Status,Qualitative Concept,9253
+Continuous,C53279,Continue,Qualitative Concept,9264
+data,C25474,Data,Idea or Concept,9275
+acquired,C85869,Acquired,Classification,9285
+sampling,C25662,Sampling,Activity,9299
+rate,C25636,Rate,Conceptual Entity,9308
+Hz,C42545,Hertz,Quantitative Concept,9320
+all,C64916,All,Qualitative Concept,9327
+signals,C17133,Signal Transduction,Molecular Function,9331
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,9342
+EEG,C38054,Electroencephalography,Diagnostic Procedure,9350
+band,C13432,Chromosome Band,"Gene or Genome, Cell Component",9362
+pass,C81275,Pass,Qualitative Concept,9367
+filter,C41199,Filter,Manufactured Object,9372
+Hz,C42545,Hertz,Quantitative Concept,9390
+Each,C64933,Each,Qualitative Concept,9394
+session,C67447,Session,Event,9409
+30 min,C69108,Half Hour,Temporal Concept,9432
+60,C105792,Sixty,Quantitative Concept,9435
+10,C69122,Ten,Quantitative Concept,9459
+30 min,C69108,Half Hour,Temporal Concept,9465
+breaks,C62973,Medical Device Break,Event,9486
+between,C94545,Between,Qualitative Concept,9496
+Patients,C53691,Veterinary Patient,Organism,9505
+supine position,C62167,Supine Position,Spatial Concept,9533
+rest,C28185,Resting,Daily or Recreational Activity,9567
+sleep,C73425,Sleep,Organism Function,9575
+Four,C66835,Four,Quantitative Concept,9583
+head,C12419,Head,Body Location or Region,9588
+position,C25339,Position,Spatial Concept,9593
+indicator,C25180,Indicator,Conceptual Entity,9602
+coils,C61301,Convolution,Spatial Concept,9612
+placed,C126366,Placement,Activity,9623
+scalp,C89807,Scalp,Anatomical Structure,9637
+location,C25341,Location,Spatial Concept,9653
+based,C48055,Base,Qualitative Concept,9673
+anatomical,C25421,Anatomic,Conceptual Entity,9682
+fiducial,C44467,Fiducial,Qualitative Concept,9693
+points,C70656,Point,Spatial Concept,9702
+bilateral,C13332,Bilateral,Spatial Concept,9718
+preauricular,C103848,Preauricular,Spatial Concept,9728
+points,C70656,Point,Spatial Concept,9741
+three,C66834,Three,Quantitative Concept,9757
+digitizer,C49921,Digitizer Device Component,Manufactured Object,9775
+VT,C17249,Holy See (Vatican City State),Geographic Area,9808
+USA,C17234,United States,Geographic Area,9812
+head,C12419,Head,Body Location or Region,9822
+shape,C25677,Shape,Spatial Concept,9827
+each,C64933,Each,Qualitative Concept,9836
+patient,C16960,Patient,Patient or Disabled Group,9841
+checking,C86058,Check,Activity,9880
+distributed,C45273,Distribution,Activity,9896
+points,C70656,Point,Spatial Concept,9908
+whole,C25326,Whole,Qualitative Concept,9928
+scalp,C89807,Scalp,Anatomical Structure,9934
+digitizer,C49921,Digitizer Device Component,Manufactured Object,9950
+exact,C86021,Exact,Conceptual Entity,9973
+head,C12419,Head,Body Location or Region,9979
+position,C25339,Position,Spatial Concept,9984
+sensors,C28220,Sensor,Medical Device,10009
+weak,C62224,Weak,Qualitative Concept,10018
+electrical current,C48434,Electrical Current,Natural Phenomenon or Process,10023
+coils,C61301,Convolution,Spatial Concept,10057
+signals,C17133,Signal Transduction,Molecular Function,10090
+measured,C44473,Measured,Qualitative Concept,10103
+before,C25629,Prior,Temporal Concept,10117
+each,C64933,Each,Qualitative Concept,10124
+epoch,C25616,Period,Temporal Concept,10141
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,10154
+information,C48191,Information,Conceptual Entity,10162
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,10188
+MRI,C16809,Magnetic Resonance Imaging,Diagnostic Procedure,10192
+co,C382,Cobalt,"Element, Ion, or Isotope",10196
+registration,C25646,Registration,Activity,10199
+Criteria,C25466,Criterion,Idea or Concept,10214
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,10227
+discharge,C26416,Mouse Discharge,Tissue,10244
+adopted,C25290,Adopted,Qualitative Concept,10258
+criteria,C25466,Criterion,Idea or Concept,10268
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,10311
+recommended,C25197,Recommendation,Idea or Concept,10344
+International,C25541,International,Conceptual Entity,10363
+Clinical,C25398,Clinical,Qualitative Concept,10393
+Neurophysiology,C16910,Neurophysiology,Biomedical Occupation or Discipline,10402
+EEG,C38054,Electroencephalography,Diagnostic Procedure,10429
+discharge,C26416,Mouse Discharge,Tissue,10446
+Table,C48441,Table,Manufactured Object,10470
+peak,C48054,Peak,Qualitative Concept,10490
+duration,C25330,Duration,Temporal Concept,10498
+20,C105799,Twenty,Quantitative Concept,10507
+ms,C69169,Ms,Conceptual Entity,10514
+outstanding,C115309,Outstanding,Qualitative Concept,10520
+ongoing,C53279,Continue,Qualitative Concept,10537
+background,C45782,Background,Conceptual Entity,10545
+activity,C43431,Activity,Activity,10556
+involvement,C25548,Involvement,Qualitative Concept,10568
+more than,C61584,Greater Than,Quantitative Concept,10583
+two,C66833,Two,Quantitative Concept,10593
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,10597
+channels,C44170,Channel,Conceptual Entity,10601
+term,C25703,Term,Temporal Concept,10616
+criterion,C25466,Criterion,Idea or Concept,10643
+applied,C113519,Apply,Activity,10660
+if,C64955,If,Qualitative Concept,10668
+signals,C17133,Signal Transduction,Molecular Function,10671
+one,C66832,One,Quantitative Concept,10692
+following,C53286,Next,Temporal Concept,10703
+features,C70838,Image Feature,Qualitative Concept,10715
+high,C25227,High,Qualitative Concept,10725
+amplitude,C70831,Amplitude,Spatial Concept,10730
+dependence,C35458,Dependence,Mental or Behavioral Dysfunction,10745
+background,C45782,Background,Conceptual Entity,10761
+being,C89327,Be,Qualitative Concept,10783
+slow,C64655,Slow,Qualitative Concept,10803
+Criterion,C25466,Criterion,Idea or Concept,10814
+employed,C25172,Employment,Functional Concept,10831
+exclude,C82931,Exclusion,Activity,10843
+noise,C45783,Noise,Phenomenon or Process,10857
+unstable,C62809,Unstable Medical Device Problem,Event,10873
+signals,C17133,Signal Transduction,Molecular Function,10882
+channels,C44170,Channel,Conceptual Entity,10899
+validity,C73623,Validity,Quantitative Concept,10925
+criteria,C25466,Criterion,Idea or Concept,10943
+form,C19464,Form,Intellectual Product,10975
+discharges,C26416,Mouse Discharge,Tissue,10980
+two,C66833,Two,Quantitative Concept,11003
+other experienced,C92653,Other Experiencer,Finding,11007
+reviewed,C45314,Reviewed,Conceptual Entity,11057
+min,C48154,Minute,Temporal Concept,11068
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,11072
+EEG,C38054,Electroencephalography,Diagnostic Procedure,11102
+datasets,C54175,Silo,Idea or Concept,11106
+obtained,C52349,Obtain,Activity,11115
+patient,C16960,Patient,Patient or Disabled Group,11133
+left,C25229,Left,Spatial Concept,11146
+lateral,C25230,Lateral,Spatial Concept,11151
+temporal lobe,C12353,Temporal Lobe,"Body Part, Organ, or Organ Component",11159
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,11173
+Case,C49152,Case,Qualitative Concept,11183
+40,C105795,Forty,Quantitative Concept,11196
+Hz,C42545,Hertz,Quantitative Concept,11199
+band,C13432,Chromosome Band,"Gene or Genome, Cell Component",11202
+pass,C81275,Pass,Qualitative Concept,11207
+filter,C41199,Filter,Manufactured Object,11212
+applied,C113519,Apply,Activity,11223
+sake,C66825,Sake,Food,11240
+simple,C47880,Simple,Qualitative Concept,11248
+detection,C16210,Detection,Diagnostic Procedure,11255
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,11268
+numbers,C25337,Number,Quantitative Concept,11292
+locations,C127336,Location of Pharyngeal Residue Following Swallowing,Finding,11304
+channels,C44170,Channel,Conceptual Entity,11317
+selected,C48912,Choose,Activity,11331
+type,C25284,Type,Functional Concept,11357
+sensor,C28220,Sensor,Medical Device,11365
+following,C53286,Next,Temporal Concept,11379
+into,C25544,Into,Spatial Concept,11401
+consideration,C113416,Consideration,Mental Process,11406
+signal,C43382,Signal,Conceptual Entity,11424
+distribution,C45273,Distribution,Activity,11431
+signal,C43382,Signal,Conceptual Entity,11449
+distribution,C45273,Distribution,Activity,11456
+detected,C25481,Detected,Conceptual Entity,11469
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,11485
+forms,C19464,Form,Intellectual Product,11498
+two,C66833,Two,Quantitative Concept,11504
+peaks,C48054,Peak,Qualitative Concept,11508
+location,C25341,Location,Spatial Concept,11550
+generator,C42770,Generator,Manufactured Object,11566
+source,C25683,Source,Qualitative Concept,11576
+detected,C25481,Detected,Conceptual Entity,11597
+maximum,C25564,Maximum,Qualitative Concept,11638
+amplitude,C70831,Amplitude,Spatial Concept,11646
+above,C75329,Above,Qualitative Concept,11661
+generator,C42770,Generator,Manufactured Object,11671
+source,C25683,Source,Qualitative Concept,11681
+al,C111127,Aluminum Measurement,Laboratory Procedure,11703
+result,C20200,Outcome,Finding,11720
+13,C113427,Thirteen,Quantitative Concept,11728
+pairs,C48046,Pair,Qualitative Concept,11731
+13,C113427,Thirteen,Quantitative Concept,11740
+locations,C127336,Location of Pharyngeal Residue Following Swallowing,Finding,11743
+over,C65018,Over,Qualitative Concept,11753
+left,C25229,Left,Spatial Concept,11762
+temporal,C73990,Temporal,Temporal Concept,11767
+area,C25244,Area,Spatial Concept,11776
+selected,C48912,Choose,Activity,11786
+traces,C63580,Sequence Chromatogram,Functional Concept,11818
+intention,C25725,Intent,Qualitative Concept,11835
+maximum,C25564,Maximum,Qualitative Concept,11861
+signal,C43382,Signal,Conceptual Entity,11869
+center,C25445,Center,Spatial Concept,11883
+contrast,C70754,Contrast,Conceptual Entity,11907
+26,C126886,Twenty Six,Quantitative Concept,11917
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,11920
+channels,C44170,Channel,Conceptual Entity,11933
+taken,C25701,Taken,Conceptual Entity,11942
+26,C126886,Twenty Six,Quantitative Concept,11953
+locations,C127336,Location of Pharyngeal Residue Following Swallowing,Finding,11956
+over,C65018,Over,Qualitative Concept,11966
+left,C25229,Left,Spatial Concept,11975
+temporal,C73990,Temporal,Temporal Concept,11987
+area,C25244,Area,Spatial Concept,11996
+chosen,C48912,Choose,Activity,12006
+include,C74521,Include,Activity,12016
+both,C49636,Both,Qualitative Concept,12024
+observed,C25599,Observed,Conceptual Entity,12061
+above,C75329,Above,Qualitative Concept,12085
+generator,C42770,Generator,Manufactured Object,12095
+source,C25683,Source,Qualitative Concept,12105
+EEG,C38054,Electroencephalography,Diagnostic Procedure,12117
+data,C25474,Data,Idea or Concept,12121
+all,C64916,All,Qualitative Concept,12127
+19,C105801,Nineteen,Quantitative Concept,12131
+electrodes,C49936,Electrode Device Component,Manufactured Object,12134
+selected,C48912,Choose,Activity,12150
+patient,C16960,Patient,Patient or Disabled Group,12167
+Case,C49152,Case,Qualitative Concept,12176
+reviewers,C45314,Reviewed,Conceptual Entity,12189
+given,C64974,Give,Activity,12204
+26,C126886,Twenty Six,Quantitative Concept,12210
+traces,C63580,Sequence Chromatogram,Functional Concept,12213
+sensor,C28220,Sensor,Medical Device,12230
+type,C25284,Type,Functional Concept,12237
+detect,C117041,Dosing Days to Detection,Quantitative Concept,12260
+discharges,C26416,Mouse Discharge,Tissue,12280
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,12328
+criteria,C25466,Criterion,Idea or Concept,12355
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,12368
+data,C25474,Data,Idea or Concept,12372
+All,C64916,All,Qualitative Concept,12378
+reviewers,C45314,Reviewed,Conceptual Entity,12382
+blinded,C49068,Blinded,Functional Concept,12397
+type,C25284,Type,Functional Concept,12412
+sensor,C28220,Sensor,Medical Device,12420
+reviewers,C45314,Reviewed,Conceptual Entity,12432
+checked,C86058,Check,Activity,12442
+19,C105801,Nineteen,Quantitative Concept,12450
+traces,C63580,Sequence Chromatogram,Functional Concept,12453
+EEG,C38054,Electroencephalography,Diagnostic Procedure,12463
+data,C25474,Data,Idea or Concept,12467
+following,C53286,Next,Temporal Concept,12473
+recommendations,C25197,Recommendation,Idea or Concept,12487
+EEG,C38054,Electroencephalography,Diagnostic Procedure,12519
+data,C25474,Data,Idea or Concept,12523
+number,C25337,Number,Quantitative Concept,12546
+detected,C25481,Detected,Conceptual Entity,12574
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,12586
+EEG,C38054,Electroencephalography,Diagnostic Procedure,12616
+first,C25509,First,Qualitative Concept,12651
+reviewer,C54634,Reviewer,Population Group,12657
+second,C49463,Second,Qualitative Concept,12696
+rate,C25636,Rate,Conceptual Entity,12729
+detection,C16210,Detection,Diagnostic Procedure,12743
+between,C94545,Between,Qualitative Concept,12753
+two,C66833,Two,Quantitative Concept,12765
+reviewers,C45314,Reviewed,Conceptual Entity,12769
+evaluated method,C81265,Evaluation Method,Conceptual Entity,12783
+based,C48055,Base,Qualitative Concept,12793
+al,C111127,Aluminum Measurement,Laboratory Procedure,12828
+Datasets,C54175,Silo,Idea or Concept,12840
+into,C25544,Into,Spatial Concept,12862
+epochs,C25616,Period,Temporal Concept,12875
+500,C16876,Montserrat,Geographic Area,12885
+ms,C69169,Ms,Conceptual Entity,12889
+duration,C25330,Duration,Temporal Concept,12892
+peaks,C48054,Peak,Qualitative Concept,12922
+detected,C25481,Detected,Conceptual Entity,12949
+two,C66833,Two,Quantitative Concept,12965
+reviewers,C45314,Reviewed,Conceptual Entity,12969
+occurred,C54069,Occur,Conceptual Entity,12979
+same,C64637,Same,Qualitative Concept,12995
+reviewer,C54634,Reviewer,Population Group,13013
+values,C25712,Value,Conceptual Entity,13028
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,13049
+EEG,C38054,Electroencephalography,Diagnostic Procedure,13101
+reviewer,C54634,Reviewer,Population Group,13150
+values,C25712,Value,Conceptual Entity,13165
+can,C43180,Can,Manufactured Object,13187
+almost,C107222,Nearly,Qualitative Concept,13207
+validating criterion,C78692,Criterion Validity,Quantitative Concept,13224
+application,C70867,Application,Intellectual Product,13264
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,13289
+discharges,C26416,Mouse Discharge,Tissue,13306
+identification,C25737,Identification,Qualitative Concept,13325
+configuration,C61532,Arrangement,Spatial Concept,13360
+40,C105795,Forty,Quantitative Concept,13379
+Hz,C42545,Hertz,Quantitative Concept,13382
+band,C13432,Chromosome Band,"Gene or Genome, Cell Component",13385
+pass,C81275,Pass,Qualitative Concept,13390
+filter,C41199,Filter,Manufactured Object,13395
+first,C25509,First,Qualitative Concept,13406
+applied,C113519,Apply,Activity,13412
+all,C64916,All,Qualitative Concept,13423
+traces,C63580,Sequence Chromatogram,Functional Concept,13427
+taken,C25701,Taken,Conceptual Entity,13434
+patients,C53691,Veterinary Patient,Organism,13451
+typical,C102843,Usual,Qualitative Concept,13463
+Fig,C71971,Fig,"Plant, Food",13471
+Schematic study,C93682,Study Schematic,Intellectual Product,13479
+study protocol,C70817,Study Protocol,Intellectual Product,13506
+identified,C25737,Identification,Qualitative Concept,13545
+simultaneous,C25456,Concurrent,Qualitative Concept,13561
+EEG,C38054,Electroencephalography,Diagnostic Procedure,13574
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,13595
+recordings,C25198,Record,Intellectual Product,13608
+reviewed,C45314,Reviewed,Conceptual Entity,13629
+detected,C25481,Detected,Conceptual Entity,13686
+two,C66833,Two,Quantitative Concept,13698
+more,C128667,More,Qualitative Concept,13705
+reviewers,C45314,Reviewed,Conceptual Entity,13710
+accepted,C62559,Accepted,Qualitative Concept,13725
+further,C25519,Further,Qualitative Concept,13760
+analysis,C25391,Analysis,Activity,13768
+compared,C49156,Comparison,Activity,13781
+following,C53286,Next,Temporal Concept,13794
+number number type number,C62438,Number Type,Conceptual Entity,13814
+combination,C61517,Combination,Conceptual Entity,13851
+detection,C16210,Detection,Diagnostic Procedure,13866
+modality,C41147,Modality,Functional Concept,13876
+EEG,C38054,Electroencephalography,Diagnostic Procedure,13886
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,13894
+each,C64933,Each,Qualitative Concept,13930
+sensor,C28220,Sensor,Medical Device,13935
+type 2 2,C125395,Bristol Stool Type 2,Intellectual Product,13942
+type 3,C125396,Bristol Stool Type 3,Intellectual Product,13942
+combination,C61517,Combination,Conceptual Entity,13967
+sensor,C28220,Sensor,Medical Device,13991
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,14010
+parameters,C44175,Parameter,Conceptual Entity,14014
+radius,C63921,Radius,Spatial Concept,14026
+between,C94545,Between,Qualitative Concept,14049
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,14057
+EEG,C38054,Electroencephalography,Diagnostic Procedure,14063
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,14078
+only,C65011,Only,Qualitative Concept,14082
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,14100
+parameters,C44175,Parameter,Conceptual Entity,14104
+radius,C63921,Radius,Spatial Concept,14116
+between,C94545,Between,Qualitative Concept,14139
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,14147
+sensor,C28220,Sensor,Medical Device,14151
+location,C25341,Location,Spatial Concept,14213
+mesial,C81170,Midline,Spatial Concept,14223
+lateral,C25230,Lateral,Spatial Concept,14234
+EEG,C38054,Electroencephalography,Diagnostic Procedure,14251
+detected,C25481,Detected,Conceptual Entity,14268
+EEG,C38054,Electroencephalography,Diagnostic Procedure,14280
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,14285
+detected,C25481,Detected,Conceptual Entity,14302
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,14314
+EEG,C38054,Electroencephalography,Diagnostic Procedure,14319
+only,C65011,Only,Qualitative Concept,14323
+detected,C25481,Detected,Conceptual Entity,14341
+EEG,C38054,Electroencephalography,Diagnostic Procedure,14353
+only,C65011,Only,Qualitative Concept,14357
+only,C65011,Only,Qualitative Concept,14367
+detected,C25481,Detected,Conceptual Entity,14385
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,14397
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,14407
+EEG,C38054,Electroencephalography,Diagnostic Procedure,14413
+detected,C25481,Detected,Conceptual Entity,14430
+both,C49636,Both,Qualitative Concept,14442
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,14447
+only,C65011,Only,Qualitative Concept,14462
+detected,C25481,Detected,Conceptual Entity,14480
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,14492
+only,C65011,Only,Qualitative Concept,14505
+MG,C70453,Gram per Gram,Quantitative Concept,14511
+detected,C25481,Detected,Conceptual Entity,14527
+both,C49636,Both,Qualitative Concept,14539
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,14544
+only,C65011,Only,Qualitative Concept,14576
+detected,C25481,Detected,Conceptual Entity,14594
+15,C113429,Fifteen,Quantitative Concept,14625
+section,C48956,Section,Geographic Area,14632
+continuous,C53279,Continue,Qualitative Concept,14643
+contained,C79873,Contain,Activity,14669
+frequent,C64649,Frequently,Qualitative Concept,14679
+discharges,C26416,Mouse Discharge,Tissue,14701
+then,C65106,Then,Qualitative Concept,14716
+selected,C48912,Choose,Activity,14721
+30 min,C69108,Half Hour,Temporal Concept,14739
+60,C105792,Sixty,Quantitative Concept,14742
+each,C64933,Each,Qualitative Concept,14763
+patient,C16960,Patient,Patient or Disabled Group,14768
+convenience,C107497,Convenient,Qualitative Concept,14781
+detection,C16210,Detection,Diagnostic Procedure,14796
+channels,C44170,Channel,Conceptual Entity,14824
+selected,C48912,Choose,Activity,14838
+employed,C25172,Employment,Functional Concept,14850
+test,C47891,Test,Activity,14866
+data,C25474,Data,Idea or Concept,14871
+selected,C48912,Choose,Activity,14890
+13,C113427,Thirteen,Quantitative Concept,14899
+pairs,C48046,Pair,Qualitative Concept,14902
+13,C113427,Thirteen,Quantitative Concept,14958
+locations,C127336,Location of Pharyngeal Residue Following Swallowing,Finding,14961
+temporal,C73990,Temporal,Temporal Concept,14978
+areas,C16632,Geographic Area,Geographic Area,14987
+26,C126886,Twenty Six,Quantitative Concept,14997
+channels,C44170,Channel,Conceptual Entity,15015
+26,C126886,Twenty Six,Quantitative Concept,15027
+locations,C127336,Location of Pharyngeal Residue Following Swallowing,Finding,15030
+temporal,C73990,Temporal,Temporal Concept,15054
+EEG,C38054,Electroencephalography,Diagnostic Procedure,15074
+all,C64916,All,Qualitative Concept,15079
+12,C113426,Twelve,Quantitative Concept,15092
+electrodes,C49936,Electrode Device Component,Manufactured Object,15095
+bilateral,C13332,Bilateral,Spatial Concept,15109
+temporal,C73990,Temporal,Temporal Concept,15126
+areas,C16632,Geographic Area,Geographic Area,15135
+selected,C48912,Choose,Activity,15146
+Fig,C71971,Fig,"Plant, Food",15156
+each,C64933,Each,Qualitative Concept,15170
+patient,C16960,Patient,Patient or Disabled Group,15175
+section,C48956,Section,Geographic Area,15188
+15,C113429,Fifteen,Quantitative Concept,15199
+min,C48154,Minute,Temporal Concept,15202
+recordings,C25198,Record,Intellectual Product,15206
+into,C25544,Into,Spatial Concept,15229
+90,C105786,Ninety,Quantitative Concept,15234
+contiguous,C28019,Contiguous,Qualitative Concept,15237
+segments,C80146,Image Segmentation,Activity,15248
+10,C69122,Ten,Quantitative Concept,15260
+One,C66832,One,Quantitative Concept,15271
+segment,C45312,Segment,Physical Object,15275
+each,C64933,Each,Qualitative Concept,15287
+set,C47894,Set,Conceptual Entity,15292
+channel,C44170,Channel,Conceptual Entity,15299
+selections,C48912,Choose,Activity,15307
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,15332
+EEG,C38054,Electroencephalography,Diagnostic Procedure,15349
+90,C105786,Ninety,Quantitative Concept,15384
+same,C64637,Same,Qualitative Concept,15405
+set,C47894,Set,Conceptual Entity,15410
+channel,C44170,Channel,Conceptual Entity,15417
+selections,C48912,Choose,Activity,15425
+sorted,C62803,Sorting,Activity,15454
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,15491
+10,C69122,Ten,Quantitative Concept,15507
+background,C45782,Background,Conceptual Entity,15525
+activity,C43431,Activity,Activity,15536
+taken,C25701,Taken,Conceptual Entity,15545
+26,C126886,Twenty Six,Quantitative Concept,15556
+channels,C44170,Channel,Conceptual Entity,15559
+area,C25244,Area,Spatial Concept,15585
+piece,C89446,Piece Unit,Quantitative Concept,15612
+paper,C82484,Paper Dosing Unit,Quantitative Concept,15621
+same,C64637,Same,Qualitative Concept,15634
+scale,C25664,Scale,Intellectual Product,15639
+reference,C25641,Reference,Idea or Concept,15650
+90,C105786,Ninety,Quantitative Concept,15684
+data,C25474,Data,Idea or Concept,15687
+reference,C25641,Reference,Idea or Concept,15705
+prepared,C25625,Preparation,Activity,15726
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,15759
+90,C105786,Ninety,Quantitative Concept,15791
+data,C25474,Data,Idea or Concept,15794
+prepared,C25625,Preparation,Activity,15810
+EEG,C38054,Electroencephalography,Diagnostic Procedure,15823
+discharges,C26416,Mouse Discharge,Tissue,15844
+detected,C25481,Detected,Conceptual Entity,15860
+bilateral,C13332,Bilateral,Spatial Concept,15872
+temporal,C73990,Temporal,Temporal Concept,15882
+areas,C16632,Geographic Area,Geographic Area,15891
+Cases,C99269,True Case Status,Qualitative Concept,15914
+channels,C44170,Channel,Conceptual Entity,15929
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,15946
+selected,C48912,Choose,Activity,15980
+both,C49636,Both,Qualitative Concept,15993
+sides,C80158,Side,Spatial Concept,15998
+remaining,C25649,Remaining,Qualitative Concept,16028
+cases,C99269,True Case Status,Qualitative Concept,16038
+channels,C44170,Channel,Conceptual Entity,16057
+selected,C48912,Choose,Activity,16071
+only,C65011,Only,Qualitative Concept,16080
+right,C25228,Right,Spatial Concept,16094
+temporal,C73990,Temporal,Temporal Concept,16100
+area,C25244,Area,Spatial Concept,16109
+EEG,C38054,Electroencephalography,Diagnostic Procedure,16120
+detected,C25481,Detected,Conceptual Entity,16151
+result,C20200,Outcome,Finding,16166
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,16176
+prepared,C25625,Preparation,Activity,16186
+total,C25304,Total,Qualitative Concept,16198
+each,C64933,Each,Qualitative Concept,16208
+Cases,C99269,True Case Status,Qualitative Concept,16216
+EEG,C38054,Electroencephalography,Diagnostic Procedure,16240
+channels,C44170,Channel,Conceptual Entity,16244
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,16256
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,16264
+channels,C44170,Channel,Conceptual Entity,16277
+selected,C48912,Choose,Activity,16286
+right left,C13332,Bilateral,Spatial Concept,16304
+temporal,C73990,Temporal,Temporal Concept,16326
+areas,C16632,Geographic Area,Geographic Area,16335
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,16348
+channels,C44170,Channel,Conceptual Entity,16368
+selected,C48912,Choose,Activity,16377
+right left,C13332,Bilateral,Spatial Concept,16395
+temporal,C73990,Temporal,Temporal Concept,16410
+Three,C66834,Three,Quantitative Concept,16426
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,16432
+prepared,C25625,Preparation,Activity,16442
+each,C64933,Each,Qualitative Concept,16455
+Cases,C99269,True Case Status,Qualitative Concept,16463
+EEG,C38054,Electroencephalography,Diagnostic Procedure,16483
+channels,C44170,Channel,Conceptual Entity,16487
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,16506
+channels,C44170,Channel,Conceptual Entity,16519
+right,C25228,Right,Spatial Concept,16537
+temporal,C73990,Temporal,Temporal Concept,16550
+area,C25244,Area,Spatial Concept,16559
+channels,C44170,Channel,Conceptual Entity,16590
+right,C25228,Right,Spatial Concept,16608
+temporal,C73990,Temporal,Temporal Concept,16614
+total,C25304,Total,Qualitative Concept,16632
+22,C126884,Twenty Two,Quantitative Concept,16639
+channel,C44170,Channel,Conceptual Entity,16642
+selection,C48912,Choose,Activity,16650
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,16660
+prepared,C25625,Preparation,Activity,16670
+Cases,C99269,True Case Status,Qualitative Concept,16683
+total,C25304,Total,Qualitative Concept,16697
+22,C126884,Twenty Two,Quantitative Concept,16706
+subject,C48910,Subject,Functional Concept,16763
+channel,C44170,Channel,Conceptual Entity,16775
+selection,C48912,Choose,Activity,16783
+set,C47894,Set,Conceptual Entity,16793
+preparations,C113500,Prepared Material,Quantitative Concept,16804
+first,C25509,First,Qualitative Concept,16841
+author,C42781,Author,Human,16847
+22,C126884,Twenty Two,Quantitative Concept,16865
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,16879
+Cases,C99269,True Case Status,Qualitative Concept,16888
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,16905
+Cases,C99269,True Case Status,Qualitative Concept,16914
+90,C105786,Ninety,Quantitative Concept,16935
+reviewers,C45314,Reviewed,Conceptual Entity,16985
+blinded,C49068,Blinded,Functional Concept,17004
+channel,C44170,Channel,Conceptual Entity,17015
+patient,C16960,Patient,Patient or Disabled Group,17040
+information,C48191,Information,Conceptual Entity,17048
+reviewers,C45314,Reviewed,Conceptual Entity,17068
+medical,C25261,Medical,Qualitative Concept,17083
+doctors,C25741,Physician,Professional or Occupational Group,17091
+more than,C61584,Greater Than,Quantitative Concept,17120
+experience,C54627,Experience,Organism Attribute,17141
+reading,C48356,Reading,Idea or Concept,17155
+EEG,C38054,Electroencephalography,Diagnostic Procedure,17163
+authors,C79889,Authority,Classification,17201
+reviewers,C45314,Reviewed,Conceptual Entity,17214
+mark,C45787,Mark,Entity,17243
+following,C53286,Next,Temporal Concept,17266
+above,C75329,Above,Qualitative Concept,17280
+criteria,C25466,Criterion,Idea or Concept,17296
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,17309
+criteria,C25466,Criterion,Idea or Concept,17323
+EEG,C38054,Electroencephalography,Diagnostic Procedure,17336
+detected,C25481,Detected,Conceptual Entity,17360
+two,C66833,Two,Quantitative Concept,17381
+reviewers,C45314,Reviewed,Conceptual Entity,17394
+each,C64933,Each,Qualitative Concept,17407
+sensor,C28220,Sensor,Medical Device,17412
+type,C25284,Type,Functional Concept,17419
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,17427
+EEG,C38054,Electroencephalography,Diagnostic Procedure,17434
+defined,C42777,Definition,Intellectual Product,17442
+category,C25372,Category,Classification,17481
+al,C111127,Aluminum Measurement,Laboratory Procedure,17503
+al,C111127,Aluminum Measurement,Laboratory Procedure,17525
+Estimation,C53327,Statistical Estimation,Research Activity,17538
+generator,C42770,Generator,Manufactured Object,17552
+sources,C25683,Source,Qualitative Concept,17562
+estimated,C25498,Estimate,Activity,17585
+generator,C42770,Generator,Manufactured Object,17595
+sources,C25683,Source,Qualitative Concept,17605
+detected,C25481,Detected,Conceptual Entity,17636
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,17648
+equivalent,C48793,Equivalent,Qualitative Concept,17661
+current,C25471,Current,Temporal Concept,17672
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,17689
+head,C12419,Head,Body Location or Region,17710
+model,C16866,Model,Intellectual Product,17715
+element,C1940,Element,"Element, Ion, or Isotope",17731
+field,C70773,Field,Conceptual Entity,17768
+maps,C43434,Functional Map,Conceptual Entity,17774
+estimated,C25498,Estimate,Activity,17784
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,17819
+signals,C17133,Signal Transduction,Molecular Function,17832
+peak,C48054,Peak,Qualitative Concept,17847
+isocontour,C70749,Contour,Conceptual Entity,17878
+map,C43433,Map,Manufactured Object,17889
+then,C65106,Then,Qualitative Concept,17897
+calculated,C54125,Calculation,Activity,17902
+minimum,C25570,Minimum,Qualitative Concept,17948
+current,C25471,Current,Temporal Concept,17961
+estimate,C25498,Estimate,Activity,17969
+MNE,C64378,Montenegro,Geographic Area,17979
+measured,C44473,Measured,Qualitative Concept,17994
+signals,C17133,Signal Transduction,Molecular Function,18003
+both,C49636,Both,Qualitative Concept,18014
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,18019
+contour,C70749,Contour,Conceptual Entity,18060
+map,C43433,Map,Manufactured Object,18068
+pattern,C25336,Pattern,Spatial Concept,18089
+peak,C48054,Peak,Qualitative Concept,18104
+source,C25683,Source,Qualitative Concept,18132
+estimation,C53327,Statistical Estimation,Research Activity,18139
+sets,C127262,CDISC SDTM Environmental Setting Terminology,Intellectual Product,18180
+channels,C44170,Channel,Conceptual Entity,18188
+maximum,C25564,Maximum,Qualitative Concept,18208
+local,C67263,Local,Spatial Concept,18216
+signal,C43382,Signal,Conceptual Entity,18222
+center,C25445,Center,Spatial Concept,18236
+selected,C48912,Choose,Activity,18246
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,18269
+best,C25432,Best,Qualitative Concept,18279
+most,C25258,Most,Qualitative Concept,18298
+dominant,C25487,Dominant,Qualitative Concept,18303
+signals,C17133,Signal Transduction,Molecular Function,18312
+MNE,C64378,Montenegro,Geographic Area,18346
+method,C71460,Method,Conceptual Entity,18350
+al,C111127,Aluminum Measurement,Laboratory Procedure,18372
+accepted,C62559,Accepted,Qualitative Concept,18387
+calculated,C54125,Calculation,Activity,18396
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,18407
+if,C64955,If,Qualitative Concept,18412
+goodness,C64975,Good,Qualitative Concept,18415
+fit,C70826,Fit,Activity,18427
+estimated,C25498,Estimate,Activity,18456
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,18466
+MRI,C16809,Magnetic Resonance Imaging,Diagnostic Procedure,18496
+subject,C48910,Subject,Functional Concept,18507
+after,C49639,Status Post,Temporal Concept,18515
+co,C382,Cobalt,"Element, Ion, or Isotope",18521
+registration,C25646,Registration,Activity,18524
+MRI,C16809,Magnetic Resonance Imaging,Diagnostic Procedure,18540
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,18548
+coordinates,C45284,Coordinator,Human,18552
+matching,C54116,Match,Qualitative Concept,18567
+positions,C25246,Positive,Qualitative Concept,18580
+anatomical,C25421,Anatomic,Conceptual Entity,18593
+fiducial,C44467,Fiducial,Qualitative Concept,18604
+points,C70656,Point,Spatial Concept,18613
+preauricular,C103848,Preauricular,Spatial Concept,18632
+characteristics,C25447,Characteristic,Conceptual Entity,18672
+deep,C25240,Deep,Spatial Concept,18691
+superficial,C25239,Superficial,Spatial Concept,18700
+sources,C25683,Source,Qualitative Concept,18712
+selected,C48912,Choose,Activity,18724
+derived,C81197,Derived Flag,Conceptual Entity,18740
+mesial,C81170,Midline,Spatial Concept,18757
+lateral,C25230,Lateral,Spatial Concept,18768
+temporal,C73990,Temporal,Temporal Concept,18776
+areas,C16632,Geographic Area,Geographic Area,18785
+following,C53286,Next,Temporal Concept,18801
+procedures,C79751,Procedure,Activity,18811
+base,C48056,Base,Chemical Viewed Functionally,18830
+temporal lobe,C12353,Temporal Lobe,"Body Part, Organ, or Organ Component",18842
+MRI,C16809,Magnetic Resonance Imaging,Diagnostic Procedure,18859
+coronal plane,C94876,Coronal Plane,Spatial Concept,18870
+hippocampus,C12444,Hippocampus,"Body Part, Organ, or Organ Component",18902
+applied,C113519,Apply,Activity,18918
+two,C66833,Two,Quantitative Concept,18926
+vertical,C25243,Vertical,Spatial Concept,18953
+lines,C71221,Line Unit of Length,Quantitative Concept,18962
+levels,C25554,Level,Quantitative Concept,18975
+lateral sulci,C127218,Residue on Lateral Sulci,Finding,18994
+estimated,C25498,Estimate,Activity,19040
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,19050
+accepted,C62559,Accepted,Qualitative Concept,19060
+temporal lobe,C12353,Temporal Lobe,"Body Part, Organ, or Organ Component",19103
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,19130
+mesial,C81170,Midline,Spatial Concept,19143
+vertical,C25243,Vertical,Spatial Concept,19157
+line,C71604,Line,Spatial Concept,19166
+collateral sulcus,C32342,Collateral Sulcus,Anatomical Structure,19178
+classified,C25373,Classified,Qualitative Concept,19201
+mesial,C81170,Midline,Spatial Concept,19215
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,19251
+lateral,C25230,Lateral,Spatial Concept,19264
+vertical,C25243,Vertical,Spatial Concept,19279
+line,C71604,Line,Spatial Concept,19288
+lateral,C25230,Lateral,Spatial Concept,19341
+temporal,C73990,Temporal,Temporal Concept,19349
+Statistical,C17167,Statistics,Occupation or Discipline,19367
+analysis,C25391,Analysis,Activity,19379
+number,C25337,Number,Quantitative Concept,19393
+detected,C25481,Detected,Conceptual Entity,19403
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,19423
+parameters,C44175,Parameter,Conceptual Entity,19427
+evaluated,C25214,Evaluation,Activity,19443
+combination,C61517,Combination,Conceptual Entity,19470
+EEG,C38054,Electroencephalography,Diagnostic Procedure,19485
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,19493
+sensor,C28220,Sensor,Medical Device,19509
+types 3,C125396,Bristol Stool Type 3,Intellectual Product,19516
+Fig,C71971,Fig,"Plant, Food",19523
+compared,C49156,Comparison,Activity,19535
+two,C66833,Two,Quantitative Concept,19544
+parameters,C44175,Parameter,Conceptual Entity,19548
+estimated,C25498,Estimate,Activity,19566
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,19576
+radius,C63921,Radius,Spatial Concept,19581
+Radius,C63921,Radius,Spatial Concept,19608
+indicates,C50001,Indicator Device Component,Manufactured Object,19615
+distance,C25167,Distance,Quantitative Concept,19629
+coordinated center,C48359,Coordinating Center,Organization,19647
+head,C12419,Head,Body Location or Region,19659
+describes,C43443,Describable Class,Conceptual Entity,19686
+current,C25471,Current,Temporal Concept,19700
+estimated,C25498,Estimate,Activity,19722
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,19732
+al,C111127,Aluminum Measurement,Laboratory Procedure,19752
+Wilcoxon's signed rank test,C53246,Wilcoxon Signed Rank Test,Quantitative Concept,19764
+test used,C92020,Device Use Testing Evaluation Method,Functional Concept,19787
+evaluate,C25214,Evaluation,Activity,19804
+differences,C46003,Difference,Qualitative Concept,19813
+two,C66833,Two,Quantitative Concept,19835
+sets data sets data,C47824,Data Set,Idea or Concept,19839
+paired data,C81019,Paired Data,Idea or Concept,19847
+data unpaired data,C81020,Unpaired Data,Idea or Concept,19854
+Mann Whitney test,C53247,Mann-Whitney Test,Quantitative Concept,19870
+test used,C92020,Device Use Testing Evaluation Method,Functional Concept,19885
+evaluate,C25214,Evaluation,Activity,19902
+differences,C46003,Difference,Qualitative Concept,19911
+between,C94545,Between,Qualitative Concept,19923
+two,C66833,Two,Quantitative Concept,19931
+Kruskal Wallis test,C53248,Kruskal-Wallis Test,Quantitative Concept,19962
+correction,C54657,Correction,Qualitative Concept,19998
+evaluate,C25214,Evaluation,Activity,20021
+differences,C46003,Difference,Qualitative Concept,20030
+three,C66834,Three,Quantitative Concept,20048
+sets data sets data,C47824,Data Set,Idea or Concept,20054
+unpaired data,C81020,Unpaired Data,Idea or Concept,20062
+data paired data,C81019,Paired Data,Idea or Concept,20071
+correction,C54657,Correction,Qualitative Concept,20115
+evaluate,C25214,Evaluation,Activity,20138
+differences,C46003,Difference,Qualitative Concept,20151
+three,C66834,Three,Quantitative Concept,20169
+Results,C20200,Outcome,Finding,20199
+Number,C25337,Number,Quantitative Concept,20210
+detected,C25481,Detected,Conceptual Entity,20220
+Comparison,C49156,Comparison,Activity,20237
+between,C94545,Between,Qualitative Concept,20248
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20256
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20264
+total,C25304,Total,Qualitative Concept,20270
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20283
+426,C16787,Lesotho,Geographic Area,20291
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20295
+accepted,C62559,Accepted,Qualitative Concept,20323
+patients,C53691,Veterinary Patient,Organism,20343
+mesial,C81170,Midline,Spatial Concept,20359
+temporal,C73990,Temporal,Temporal Concept,20366
+focus,C25511,Focus,Spatial Concept,20385
+40,C105795,Forty,Quantitative Concept,20413
+detected,C25481,Detected,Conceptual Entity,20421
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20433
+only,C65011,Only,Qualitative Concept,20437
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20443
+only,C65011,Only,Qualitative Concept,20447
+range,C38013,Range,Quantitative Concept,20460
+19,C105801,Nineteen,Quantitative Concept,20469
+each,C64933,Each,Qualitative Concept,20475
+case,C49152,Case,Qualitative Concept,20480
+120,C16379,Cameroon,Geographic Area,20487
+both,C49636,Both,Qualitative Concept,20494
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20499
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20507
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20512
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20518
+range,C38013,Range,Quantitative Concept,20530
+MEG MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20555
+MEG MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20555
+only only,C65011,Only,Qualitative Concept,20559
+range,C38013,Range,Quantitative Concept,20582
+Table,C48441,Table,Manufactured Object,20598
+Percentages,C25613,Percentage,Conceptual Entity,20608
+each,C64933,Each,Qualitative Concept,20623
+type,C25284,Type,Functional Concept,20634
+each,C64933,Each,Qualitative Concept,20642
+patient,C16960,Patient,Patient or Disabled Group,20647
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20672
+only,C65011,Only,Qualitative Concept,20676
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20701
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20707
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20738
+only,C65011,Only,Qualitative Concept,20742
+number,C25337,Number,Quantitative Concept,20759
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20769
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20781
+only,C65011,Only,Qualitative Concept,20785
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20794
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20800
+greater than,C61584,Greater Than,Quantitative Concept,20830
+number,C25337,Number,Quantitative Concept,20847
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20857
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20869
+only,C65011,Only,Qualitative Concept,20873
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20882
+EEG,C38054,Electroencephalography,Diagnostic Procedure,20888
+Wilcoxon's signed rank test,C53246,Wilcoxon Signed Rank Test,Quantitative Concept,20908
+Comparison,C49156,Comparison,Activity,20950
+combinations,C61517,Combination,Conceptual Entity,20971
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,20987
+sensor,C28220,Sensor,Medical Device,20991
+types,C25284,Type,Functional Concept,20998
+426,C16787,Lesotho,Geographic Area,21015
+detected,C25481,Detected,Conceptual Entity,21026
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,21038
+sensors,C28220,Sensor,Medical Device,21042
+180,C17266,"Congo, the Democratic Republic of the",Geographic Area,21051
+detected,C25481,Detected,Conceptual Entity,21060
+only,C65011,Only,Qualitative Concept,21084
+G MG MG G MG,C69104,Gram per Kilogram,Quantitative Concept,21090
+only,C65011,Only,Qualitative Concept,21092
+range,C38013,Range,Quantitative Concept,21105
+each,C64933,Each,Qualitative Concept,21128
+case,C49152,Case,Qualitative Concept,21133
+detected,C25481,Detected,Conceptual Entity,21149
+both,C49636,Both,Qualitative Concept,21161
+types,C25284,Type,Functional Concept,21173
+range,C38013,Range,Quantitative Concept,21191
+144,C17163,Sri Lanka,Geographic Area,21200
+detected,C25481,Detected,Conceptual Entity,21218
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,21230
+only only,C65011,Only,Qualitative Concept,21243
+only only,C65011,Only,Qualitative Concept,21243
+range,C38013,Range,Quantitative Concept,21264
+22,C126884,Twenty Two,Quantitative Concept,21273
+Table,C48441,Table,Manufactured Object,21278
+No,C49487,No,Classification,21288
+significant,C41130,Significant,Functional Concept,21291
+differences,C46003,Difference,Qualitative Concept,21303
+number,C25337,Number,Quantitative Concept,21332
+detected,C25481,Detected,Conceptual Entity,21342
+between,C94545,Between,Qualitative Concept,21358
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,21366
+only,C65011,Only,Qualitative Concept,21382
+only,C65011,Only,Qualitative Concept,21412
+Wilcoxon's signed rank test,C53246,Wilcoxon Signed Rank Test,Quantitative Concept,21431
+Typical,C102843,Usual,Qualitative Concept,21472
+examples,C48175,Example,Conceptual Entity,21480
+kinds,C25284,Type,Functional Concept,21500
+contour,C70749,Contour,Conceptual Entity,21524
+maps,C43434,Functional Map,Conceptual Entity,21532
+simultaneous,C25456,Concurrent,Qualitative Concept,21542
+EEG,C38054,Electroencephalography,Diagnostic Procedure,21555
+recordings,C25198,Record,Intellectual Product,21559
+Fig,C71971,Fig,"Plant, Food",21583
+visual inspection,C92023,Device Visual Inspection Evaluation Method,Functional Concept,21598
+contour,C70749,Contour,Conceptual Entity,21623
+maps,C43434,Functional Map,Conceptual Entity,21631
+flux,C72076,Flux,Natural Phenomenon or Process,21681
+peak,C48054,Peak,Qualitative Concept,21686
+distance,C25167,Distance,Quantitative Concept,21691
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,21721
+parameters,C44175,Parameter,Conceptual Entity,21725
+Comparison,C49156,Comparison,Activity,21737
+between,C94545,Between,Qualitative Concept,21748
+EEG,C38054,Electroencephalography,Diagnostic Procedure,21756
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,21764
+426,C16787,Lesotho,Geographic Area,21771
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,21775
+satisfied,C125072,Satisfied,Intellectual Product,21791
+criteria,C25466,Criterion,Idea or Concept,21805
+source,C25683,Source,Qualitative Concept,21818
+localization,C28264,Localization,Conceptual Entity,21825
+275,C20110,"Palestinian Territory, Occupied",Geographic Area,21865
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,21869
+only Cases,C15362,Case Study,Research Activity,21873
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,21905
+EEG,C38054,Electroencephalography,Diagnostic Procedure,21911
+compared,C49156,Comparison,Activity,21946
+radius,C63921,Radius,Spatial Concept,21959
+estimated,C25498,Estimate,Activity,21985
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,21995
+between,C94545,Between,Qualitative Concept,21999
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22007
+only,C65011,Only,Qualitative Concept,22011
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22027
+EEG,C38054,Electroencephalography,Diagnostic Procedure,22033
+Cases,C99269,True Case Status,Qualitative Concept,22047
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,22081
+radius,C63921,Radius,Spatial Concept,22085
+range,C38013,Range,Quantitative Concept,22097
+median,C28007,Median,Qualitative Concept,22106
+values,C25712,Value,Conceptual Entity,22113
+each,C64933,Each,Qualitative Concept,22123
+patient,C16960,Patient,Patient or Disabled Group,22128
+49,C105796,Forty Nine,Quantitative Concept,22140
+mm,C28251,Millimeter,Quantitative Concept,22146
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22153
+only,C65011,Only,Qualitative Concept,22157
+59,C105794,Fifty Nine,Quantitative Concept,22176
+mm,C28251,Millimeter,Quantitative Concept,22179
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22186
+EEG,C38054,Electroencephalography,Diagnostic Procedure,22192
+Fig,C71971,Fig,"Plant, Food",22204
+cases,C99269,True Case Status,Qualitative Concept,22226
+larger,C49508,Large,Qualitative Concept,22268
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22285
+only,C65011,Only,Qualitative Concept,22289
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22310
+EEG,C38054,Electroencephalography,Diagnostic Procedure,22316
+Mann Whitney test,C53247,Mann-Whitney Test,Quantitative Concept,22328
+Ranges,C71565,Sample Range,Quantitative Concept,22388
+median,C28007,Median,Qualitative Concept,22398
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,22405
+each,C64933,Each,Qualitative Concept,22420
+case,C49152,Case,Qualitative Concept,22425
+nAm,C16891,Namibia,Geographic Area,22442
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22450
+only,C65011,Only,Qualitative Concept,22454
+417,C16771,Kyrgyzstan,Geographic Area,22470
+nAm,C16891,Namibia,Geographic Area,22478
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22486
+EEG,C38054,Electroencephalography,Diagnostic Procedure,22492
+Fig,C71971,Fig,"Plant, Food",22504
+Evaluation,C25214,Evaluation,Activity,22514
+Cases,C99269,True Case Status,Qualitative Concept,22528
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22572
+EEG,C38054,Electroencephalography,Diagnostic Procedure,22578
+larger,C49508,Large,Qualitative Concept,22608
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22629
+only,C65011,Only,Qualitative Concept,22633
+Mann Whitney test,C53247,Mann-Whitney Test,Quantitative Concept,22646
+Case,C49152,Case,Qualitative Concept,22716
+both,C49636,Both,Qualitative Concept,22724
+radius,C63921,Radius,Spatial Concept,22733
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,22744
+no,C49487,No,Classification,22762
+significant,C41130,Significant,Functional Concept,22765
+difference,C46003,Difference,Qualitative Concept,22777
+between,C94545,Between,Qualitative Concept,22788
+two,C66833,Two,Quantitative Concept,22800
+groups,C42684,User Group,Population Group,22810
+correlation,C48834,Correlation,Conceptual Entity,22833
+between,C94545,Between,Qualitative Concept,22845
+radius,C63921,Radius,Spatial Concept,22853
+mo,C29846,Month,Temporal Concept,22871
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22881
+only,C65011,Only,Qualitative Concept,22885
+have,C101282,Have,Classification,22907
+larger,C49508,Large,Qualitative Concept,22914
+radius,C63921,Radius,Spatial Concept,22921
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,22958
+EEG,C38054,Electroencephalography,Diagnostic Procedure,22964
+radius,C63921,Radius,Spatial Concept,22989
+larger,C49508,Large,Qualitative Concept,23000
+correlations,C16100,Correlative Study,Research Activity,23028
+significant,C41130,Significant,Functional Concept,23046
+man's,C14366,Man,Population Group,23066
+Rank,C48904,Rank,Qualitative Concept,23072
+Coefficient,C48922,Coefficient,Conceptual Entity,23089
+between,C94545,Between,Qualitative Concept,23101
+radius,C63921,Radius,Spatial Concept,23109
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,23135
+only,C65011,Only,Qualitative Concept,23139
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,23170
+EEG,C38054,Electroencephalography,Diagnostic Procedure,23176
+Fig,C71971,Fig,"Plant, Food",23207
+Comparison,C49156,Comparison,Activity,23218
+combination,C61517,Combination,Conceptual Entity,23239
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,23254
+sensor,C28220,Sensor,Medical Device,23258
+types,C25284,Type,Functional Concept,23265
+parameters,C44175,Parameter,Conceptual Entity,23290
+estimated,C25498,Estimate,Activity,23308
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,23318
+compared,C49156,Comparison,Activity,23327
+combination,C61517,Combination,Conceptual Entity,23356
+sensor,C28220,Sensor,Medical Device,23371
+types,C25284,Type,Functional Concept,23378
+detected,C25481,Detected,Conceptual Entity,23413
+radius,C63921,Radius,Spatial Concept,23439
+range,C38013,Range,Quantitative Concept,23451
+median,C28007,Median,Qualitative Concept,23460
+values,C25712,Value,Conceptual Entity,23467
+43,C52611,TAF8 wt Allele,Gene or Genome,23478
+59,C105794,Fifty Nine,Quantitative Concept,23481
+mm,C28251,Millimeter,Quantitative Concept,23484
+only,C65011,Only,Qualitative Concept,23493
+mm,C28251,Millimeter,Quantitative Concept,23512
+MG,C70453,Gram per Gram,Quantitative Concept,23519
+mm,C28251,Millimeter,Quantitative Concept,23539
+only,C65011,Only,Qualitative Concept,23548
+Fig,C71971,Fig,"Plant, Food",23561
+Cases only only only,C15362,Case Study,Research Activity,23571
+common,C43461,Common,Qualitative Concept,23587
+radius,C63921,Radius,Spatial Concept,23615
+MG,C70453,Gram per Gram,Quantitative Concept,23625
+larger,C49508,Large,Qualitative Concept,23639
+no,C49487,No,Classification,23725
+Comparison,C49156,Comparison,Activity,23743
+individual,C17719,Individual,Human,23760
+basis,C25430,Basis,Qualitative Concept,23771
+only only Cases,C15362,Case Study,Research Activity,23793
+larger,C49508,Large,Qualitative Concept,23828
+radius,C63921,Radius,Spatial Concept,23835
+Kruskal Wallis test,C53248,Kruskal-Wallis Test,Quantitative Concept,23879
+correction,C54657,Correction,Qualitative Concept,23934
+remaining,C25649,Remaining,Qualitative Concept,23997
+cases,C99269,True Case Status,Qualitative Concept,24007
+no,C49487,No,Classification,24042
+significant,C41130,Significant,Functional Concept,24045
+differences,C46003,Difference,Qualitative Concept,24057
+due,C45263,Due,Qualitative Concept,24079
+small,C25376,Small,Qualitative Concept,24090
+number,C25337,Number,Quantitative Concept,24096
+range,C38013,Range,Quantitative Concept,24119
+median,C28007,Median,Qualitative Concept,24128
+values,C25712,Value,Conceptual Entity,24149
+each,C64933,Each,Qualitative Concept,24160
+case only only only only only only only only,C15362,Case Study,Research Activity,24165
+nAm,C16891,Namibia,Geographic Area,24182
+nAm,C16891,Namibia,Geographic Area,24213
+MG,C70453,Gram per Gram,Quantitative Concept,24221
+340,C16694,Honduras,Geographic Area,24238
+nAm,C16891,Namibia,Geographic Area,24242
+Fig,C71971,Fig,"Plant, Food",24265
+common,C43461,Common,Qualitative Concept,24303
+larger,C49508,Large,Qualitative Concept,24366
+excluded,C82931,Exclusion,Activity,24412
+evaluation,C25214,Evaluation,Activity,24431
+due,C45263,Due,Qualitative Concept,24442
+larger,C49508,Large,Qualitative Concept,24516
+Kruskal Wallis test,C53248,Kruskal-Wallis Test,Quantitative Concept,24579
+correction,C54657,Correction,Qualitative Concept,24626
+correlation,C48834,Correlation,Conceptual Entity,24659
+between,C94545,Between,Qualitative Concept,24671
+radius,C63921,Radius,Spatial Concept,24679
+mo,C29846,Month,Temporal Concept,24697
+only,C65011,Only,Qualitative Concept,24709
+have,C101282,Have,Classification,24731
+radius,C63921,Radius,Spatial Concept,24746
+larger,C49508,Large,Qualitative Concept,24769
+only,C65011,Only,Qualitative Concept,24799
+larger,C49508,Large,Qualitative Concept,24817
+radius,C63921,Radius,Spatial Concept,24824
+correlations Spearman's,C53249,Spearman Correlation Test,Quantitative Concept,24864
+significant,C41130,Significant,Functional Concept,24882
+Rank,C48904,Rank,Qualitative Concept,24906
+Coefficient,C48922,Coefficient,Conceptual Entity,24923
+between,C94545,Between,Qualitative Concept,24935
+radius,C63921,Radius,Spatial Concept,24943
+only,C65011,Only,Qualitative Concept,24971
+only,C65011,Only,Qualitative Concept,25004
+Fig,C71971,Fig,"Plant, Food",25035
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,25065
+MRI,C16809,Magnetic Resonance Imaging,Diagnostic Procedure,25075
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,25110
+only,C65011,Only,Qualitative Concept,25120
+mesial,C81170,Midline,Spatial Concept,25159
+temporal,C73990,Temporal,Temporal Concept,25166
+area,C25244,Area,Spatial Concept,25175
+only,C65011,Only,Qualitative Concept,25198
+lateral,C25230,Lateral,Spatial Concept,25229
+temporal,C73990,Temporal,Temporal Concept,25237
+area,C25244,Area,Spatial Concept,25246
+Fig,C71971,Fig,"Plant, Food",25252
+Comparison,C49156,Comparison,Activity,25262
+between,C94545,Between,Qualitative Concept,25273
+mesial,C81170,Midline,Spatial Concept,25281
+lateral,C25230,Lateral,Spatial Concept,25292
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,25339
+available,C25429,Availability,Conceptual Entity,25349
+selected,C48912,Choose,Activity,25383
+mesial,C81170,Midline,Spatial Concept,25395
+lateral,C25230,Lateral,Spatial Concept,25406
+anatomical locations,C74456,CDISC SDTM Anatomical Location Terminology,Intellectual Product,25449
+MRI,C16809,Magnetic Resonance Imaging,Diagnostic Procedure,25473
+Figs,C71971,Fig,"Plant, Food",25478
+mesial,C81170,Midline,Spatial Concept,25503
+detected,C25481,Detected,Conceptual Entity,25532
+only,C65011,Only,Qualitative Concept,25558
+range,C38013,Range,Quantitative Concept,25564
+each,C64933,Each,Qualitative Concept,25579
+case,C49152,Case,Qualitative Concept,25584
+detected,C25481,Detected,Conceptual Entity,25606
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,25618
+only,C65011,Only,Qualitative Concept,25631
+range,C38013,Range,Quantitative Concept,25637
+11,C113425,Eleven,Quantitative Concept,25646
+49,C105796,Forty Nine,Quantitative Concept,25655
+detected,C25481,Detected,Conceptual Entity,25670
+both,C49636,Both,Qualitative Concept,25682
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,25687
+range,C38013,Range,Quantitative Concept,25717
+number,C25337,Number,Quantitative Concept,25735
+detected,C25481,Detected,Conceptual Entity,25752
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,25764
+only,C65011,Only,Qualitative Concept,25780
+MG G MG,C69104,Gram per Kilogram,Quantitative Concept,25787
+larger,C49508,Large,Qualitative Concept,25818
+number,C25337,Number,Quantitative Concept,25834
+detected,C25481,Detected,Conceptual Entity,25841
+only,C65011,Only,Qualitative Concept,25868
+Wilcoxon signed rank test,C53246,Wilcoxon Signed Rank Test,Quantitative Concept,25894
+contrast,C70754,Contrast,Conceptual Entity,25937
+lateral,C25230,Lateral,Spatial Concept,25953
+detected,C25481,Detected,Conceptual Entity,25985
+only,C65011,Only,Qualitative Concept,26009
+range,C38013,Range,Quantitative Concept,26015
+each,C64933,Each,Qualitative Concept,26032
+case,C49152,Case,Qualitative Concept,26037
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,26072
+only,C65011,Only,Qualitative Concept,26085
+range,C38013,Range,Quantitative Concept,26091
+99,C105787,Ninety Nine,Quantitative Concept,26108
+detected,C25481,Detected,Conceptual Entity,26123
+both,C49636,Both,Qualitative Concept,26135
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,26140
+range,C38013,Range,Quantitative Concept,26170
+number,C25337,Number,Quantitative Concept,26188
+detected,C25481,Detected,Conceptual Entity,26205
+G MG MG,C69104,Gram per Kilogram,Quantitative Concept,26230
+only,C65011,Only,Qualitative Concept,26232
+larger,C49508,Large,Qualitative Concept,26268
+number,C25337,Number,Quantitative Concept,26284
+detected,C25481,Detected,Conceptual Entity,26291
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,26303
+only,C65011,Only,Qualitative Concept,26319
+Wilcoxon signed rank test,C53246,Wilcoxon Signed Rank Test,Quantitative Concept,26345
+mesial,C81170,Midline,Spatial Concept,26391
+each,C64933,Each,Qualitative Concept,26417
+case,C49152,Case,Qualitative Concept,26422
+only,C65011,Only,Qualitative Concept,26434
+only,C65011,Only,Qualitative Concept,26465
+lateral,C25230,Lateral,Spatial Concept,26488
+only,C65011,Only,Qualitative Concept,26517
+100% G,C48528,Percent Mass per Mass,Quantitative Concept,26538
+only,C65011,Only,Qualitative Concept,26550
+summary,C42581,Summary,Intellectual Product,26567
+mesial,C81170,Midline,Spatial Concept,26590
+temporal,C73990,Temporal,Temporal Concept,26597
+area,C25244,Area,Spatial Concept,26606
+more,C128667,More,Qualitative Concept,26616
+often,C91247,Often,Intellectual Product,26621
+detected,C25481,Detected,Conceptual Entity,26627
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,26639
+alone,C48440,Single,Qualitative Concept,26652
+alone,C48440,Single,Qualitative Concept,26686
+lateral,C25230,Lateral,Spatial Concept,26723
+temporal,C73990,Temporal,Temporal Concept,26731
+area,C25244,Area,Spatial Concept,26740
+less,C61422,Lesser,Qualitative Concept,26750
+often,C91247,Often,Intellectual Product,26755
+detected,C25481,Detected,Conceptual Entity,26761
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,26773
+alone,C48440,Single,Qualitative Concept,26786
+alone,C48440,Single,Qualitative Concept,26819
+total,C25304,Total,Qualitative Concept,26836
+Discussion,C71323,Discussion,Organism Function,26844
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,26884
+more,C128667,More,Qualitative Concept,26915
+signal,C43382,Signal,Conceptual Entity,26936
+detection,C16210,Detection,Diagnostic Procedure,26943
+deep,C25240,Deep,Spatial Concept,26957
+sources,C25683,Source,Qualitative Concept,26962
+purpose,C25634,Purpose,Idea or Concept,26980
+chose,C48912,Choose,Activity,26992
+mesial,C81170,Midline,Spatial Concept,27022
+temporal,C73990,Temporal,Temporal Concept,27029
+structure,C41186,Structure,Functional Concept,27038
+patients,C53691,Veterinary Patient,Organism,27051
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,27065
+samples,C70699,Biospecimen,Body Substance,27077
+deep,C25240,Deep,Spatial Concept,27088
+sources,C25683,Source,Qualitative Concept,27093
+Simultaneous,C25456,Concurrent,Qualitative Concept,27102
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,27128
+EEG,C38054,Electroencephalography,Diagnostic Procedure,27145
+recordings,C25198,Record,Intellectual Product,27149
+performed,C38000,Performed,Qualitative Concept,27165
+patients,C53691,Veterinary Patient,Organism,27184
+degree,C25554,Level,Quantitative Concept,27202
+detection,C16210,Detection,Diagnostic Procedure,27218
+rated,C77538,Rating,Activity,27232
+each,C64933,Each,Qualitative Concept,27242
+sensor,C28220,Sensor,Medical Device,27247
+blinded,C49068,Blinded,Functional Concept,27257
+reviewers,C45314,Reviewed,Conceptual Entity,27265
+results,C20200,Outcome,Finding,27280
+sensors,C28220,Sensor,Medical Device,27312
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,27325
+most,C25258,Most,Qualitative Concept,27345
+useful,C107498,Useful,Qualitative Concept,27350
+mesial,C81170,Midline,Spatial Concept,27371
+EEG,C38054,Electroencephalography,Diagnostic Procedure,27397
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,27405
+detection,C16210,Detection,Diagnostic Procedure,27419
+Table,C48441,Table,Manufactured Object,27430
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,27440
+larger,C49508,Large,Qualitative Concept,27455
+number,C25337,Number,Quantitative Concept,27462
+EEG,C38054,Electroencephalography,Diagnostic Procedure,27484
+all,C64916,All,Qualitative Concept,27491
+Case,C49152,Case,Qualitative Concept,27502
+number,C25337,Number,Quantitative Concept,27522
+EEG,C38054,Electroencephalography,Diagnostic Procedure,27551
+larger,C49508,Large,Qualitative Concept,27559
+result,C20200,Outcome,Finding,27598
+indicates,C50001,Indicator Device Component,Manufactured Object,27605
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,27620
+superior,C25235,Superior,Spatial Concept,27627
+EEG,C38054,Electroencephalography,Diagnostic Procedure,27639
+may,C106184,May,Qualitative Concept,27649
+due,C45263,Due,Qualitative Concept,27656
+reduction,C25640,Reduced,Qualitative Concept,27675
+field,C70773,Field,Conceptual Entity,27697
+skull,C12789,Skull,"Body Part, Organ, or Organ Component",27710
+different,C46003,Difference,Qualitative Concept,27734
+detection,C16210,Detection,Diagnostic Procedure,27753
+current,C25471,Current,Temporal Concept,27766
+orientation,C77821,Orientation,Mental Process,27793
+distribution,C45273,Distribution,Activity,27809
+may,C106184,May,Qualitative Concept,27832
+sensitivity,C25201,Sensitivity,Quantitative Concept,27861
+not,C25594,Negation,Functional Concept,27901
+present,C25626,Present,Qualitative Concept,27927
+study,C63536,Study,Research Activity,27935
+finding,C3367,Finding,Finding,27947
+studies,C15206,Clinical Study,Research Activity,27981
+have,C101282,Have,Classification,27994
+similar,C72665,Similarity,Qualitative Concept,28009
+experiments,C42790,Experiment,Research Activity,28017
+patients,C53691,Veterinary Patient,Organism,28032
+focal,C28224,Focal,Spatial Concept,28046
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,28052
+al,C111127,Aluminum Measurement,Laboratory Procedure,28072
+al,C111127,Aluminum Measurement,Laboratory Procedure,28091
+al,C111127,Aluminum Measurement,Laboratory Procedure,28114
+al,C111127,Aluminum Measurement,Laboratory Procedure,28136
+al,C111127,Aluminum Measurement,Laboratory Procedure,28157
+al,C111127,Aluminum Measurement,Laboratory Procedure,28179
+cases,C99269,True Case Status,Qualitative Concept,28200
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,28215
+obtained,C52349,Obtain,Activity,28225
+both,C49636,Both,Qualitative Concept,28238
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,28243
+only,C65011,Only,Qualitative Concept,28247
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,28263
+EEG,C38054,Electroencephalography,Diagnostic Procedure,28269
+cases,C99269,True Case Status,Qualitative Concept,28283
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,28317
+only,C65011,Only,Qualitative Concept,28321
+have,C101282,Have,Classification,28336
+larger,C49508,Large,Qualitative Concept,28343
+radius,C63921,Radius,Spatial Concept,28350
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,28388
+EEG,C38054,Electroencephalography,Diagnostic Procedure,28394
+Fig,C71971,Fig,"Plant, Food",28406
+result,C20200,Outcome,Finding,28421
+suggests,C48313,Suggestion,Conceptual Entity,28428
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,28442
+superior,C25235,Superior,Spatial Concept,28449
+EEG,C38054,Electroencephalography,Diagnostic Procedure,28461
+superficial,C25239,Superficial,Spatial Concept,28469
+even,C64936,Evening,Temporal Concept,28488
+if,C64955,If,Qualitative Concept,28493
+small,C25376,Small,Qualitative Concept,28517
+finding,C3367,Finding,Finding,28529
+agrees,C104478,Agree,Intellectual Product,28537
+previous,C25627,Previous,Temporal Concept,28549
+reports,C41191,Reporter,Professional or Occupational Group,28558
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,28587
+over,C65018,Over,Qualitative Concept,28591
+EEG,C38054,Electroencephalography,Diagnostic Procedure,28596
+detection,C16210,Detection,Diagnostic Procedure,28609
+patients,C53691,Veterinary Patient,Organism,28637
+lateral,C25230,Lateral,Spatial Concept,28651
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,28671
+al,C111127,Aluminum Measurement,Laboratory Procedure,28697
+b et,C105929,EDNRB wt Allele,Gene or Genome,28708
+al,C111127,Aluminum Measurement,Laboratory Procedure,28719
+al,C111127,Aluminum Measurement,Laboratory Procedure,28736
+If,C64955,If,Qualitative Concept,28748
+superficial,C25239,Superficial,Spatial Concept,28778
+area,C25244,Area,Spatial Concept,28790
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,28796
+detect,C117041,Dosing Days to Detection,Quantitative Concept,28806
+activity,C43431,Activity,Activity,28819
+spreading,C61404,Spread,Activity,28828
+over,C65018,Over,Qualitative Concept,28838
+area,C25244,Area,Spatial Concept,28846
+small,C25376,Small,Qualitative Concept,28854
+cm,C49668,Centimeter,Quantitative Concept,28865
+al,C111127,Aluminum Measurement,Laboratory Procedure,28882
+EEG,C38054,Electroencephalography,Diagnostic Procedure,28902
+picks,C48912,Choose,Activity,28906
+10,C69122,Ten,Quantitative Concept,28936
+cm,C49668,Centimeter,Quantitative Concept,28939
+Tao,C66643,Troleandomycin,Pharmacologic Substance,28946
+al,C111127,Aluminum Measurement,Laboratory Procedure,28953
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,28976
+parameters,C44175,Parameter,Conceptual Entity,28980
+between,C94545,Between,Qualitative Concept,28991
+each,C64933,Each,Qualitative Concept,28999
+type,C25284,Type,Functional Concept,29004
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,29012
+sensor,C28220,Sensor,Medical Device,29016
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,29028
+have,C101282,Have,Classification,29083
+radius,C63921,Radius,Spatial Concept,29098
+larger,C49508,Large,Qualitative Concept,29109
+larger,C49508,Large,Qualitative Concept,29187
+radius,C63921,Radius,Spatial Concept,29194
+Fig,C71971,Fig,"Plant, Food",29228
+result,C20200,Outcome,Finding,29242
+suggests,C48313,Suggestion,Conceptual Entity,29249
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,29267
+superior,C25235,Superior,Spatial Concept,29283
+sources,C25683,Source,Qualitative Concept,29303
+superior,C25235,Superior,Spatial Concept,29334
+superficial,C25239,Superficial,Spatial Concept,29347
+proposal,C60762,Proposal,Intellectual Product,29373
+agreement,C25369,Agreement,Social Behavior,29388
+study,C63536,Study,Research Activity,29421
+found,C25626,Present,Qualitative Concept,29451
+sensitivity,C25201,Sensitivity,Quantitative Concept,29462
+decays,C75947,Decay,Phenomenon or Process,29493
+more,C128667,More,Qualitative Concept,29500
+rapidly,C65069,Rapidly,Qualitative Concept,29505
+over,C65018,Over,Qualitative Concept,29513
+distance,C25167,Distance,Quantitative Concept,29518
+sensitivity,C25201,Sensitivity,Quantitative Concept,29532
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,29551
+characteristic,C25447,Characteristic,Conceptual Entity,29589
+out,C25650,Removed,Qualitative Concept,29617
+signals,C17133,Signal Transduction,Molecular Function,29621
+distant,C25321,Distant,Spatial Concept,29645
+areas,C16632,Geographic Area,Geographic Area,29653
+noise,C45783,Noise,Phenomenon or Process,29686
+characteristic,C25447,Characteristic,Conceptual Entity,29720
+sources,C25683,Source,Qualitative Concept,29803
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,29828
+appears,C124197,Appearance Distress,Intellectual Product,29841
+display,C25485,Display,Activity,29852
+better,C71685,Better,Qualitative Concept,29860
+sensitivity,C25201,Sensitivity,Quantitative Concept,29867
+deep,C25240,Deep,Spatial Concept,29883
+sources,C25683,Source,Qualitative Concept,29888
+less,C61422,Lesser,Qualitative Concept,29900
+superficial,C25239,Superficial,Spatial Concept,29919
+sources,C25683,Source,Qualitative Concept,29931
+compared,C49156,Comparison,Activity,29939
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,29973
+recordings,C25198,Record,Intellectual Product,29986
+susceptible,C85563,Antimicrobial Susceptibility Result,Laboratory or Test Result,30001
+interference,C72886,Interference,Activity,30016
+environmental,C16551,Environment,Functional Concept,30034
+noise,C45783,Noise,Phenomenon or Process,30048
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,30081
+requires,C38015,Requirement,Conceptual Entity,30094
+large,C49508,Large,Qualitative Concept,30114
+mo,C29846,Month,Temporal Concept,30127
+overcome,C90036,Overcome,Activity,30139
+background,C45782,Background,Conceptual Entity,30148
+noise,C45783,Noise,Phenomenon or Process,30159
+even,C64936,Evening,Temporal Concept,30165
+superficial,C25239,Superficial,Spatial Concept,30174
+lateral,C25230,Lateral,Spatial Concept,30208
+area,C25244,Area,Spatial Concept,30216
+addition,C64911,Add,Activity,30225
+since,C45325,Since,Temporal Concept,30235
+pattern,C25336,Pattern,Spatial Concept,30253
+generated,C48151,Generation,Conceptual Entity,30261
+superficial,C25239,Superficial,Spatial Concept,30274
+condensed,C19395,Chromosome Condensation,Cell Function,30296
+space,C63629,Space,Spatial Concept,30309
+size,C25681,Size,Quantitative Concept,30320
+sensor,C28220,Sensor,Medical Device,30332
+unit distance,C42578,Unit of Length,Quantitative Concept,30339
+between,C94545,Between,Qualitative Concept,30361
+sensor,C28220,Sensor,Medical Device,30369
+elements,C1940,Element,"Element, Ion, or Isotope",30376
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,30388
+not,C25594,Negation,Functional Concept,30407
+small,C25376,Small,Qualitative Concept,30414
+features,C70838,Image Feature,Qualitative Concept,30483
+higher,C25227,High,Qualitative Concept,30503
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,30529
+deep,C25240,Deep,Spatial Concept,30567
+sources,C25683,Source,Qualitative Concept,30572
+large,C49508,Large,Qualitative Concept,30600
+lower,C25309,Lower,Spatial Concept,30629
+sensitivity signals,C68816,Sensitivity,Qualitative Concept,30635
+superficial,C25239,Superficial,Spatial Concept,30673
+area,C25244,Area,Spatial Concept,30685
+compare,C49156,Comparison,Activity,30695
+sensitivity,C25201,Sensitivity,Quantitative Concept,30703
+between,C94545,Between,Qualitative Concept,30715
+sensor,C28220,Sensor,Medical Device,30723
+types,C25284,Type,Functional Concept,30730
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,30752
+locations,C127336,Location of Pharyngeal Residue Following Swallowing,Finding,30756
+classified,C25373,Classified,Qualitative Concept,30779
+lateral,C25230,Lateral,Spatial Concept,30793
+mesial,C81170,Midline,Spatial Concept,30804
+basis,C25430,Basis,Qualitative Concept,30825
+each,C64933,Each,Qualitative Concept,30858
+MRI,C16809,Magnetic Resonance Imaging,Diagnostic Procedure,30867
+each,C64933,Each,Qualitative Concept,30874
+patient,C16960,Patient,Patient or Disabled Group,30879
+mesial,C81170,Midline,Spatial Concept,30894
+range,C38013,Range,Quantitative Concept,30913
+only,C65011,Only,Qualitative Concept,30924
+Case,C49152,Case,Qualitative Concept,30948
+greater than,C61584,Greater Than,Quantitative Concept,30972
+range,C38013,Range,Quantitative Concept,30989
+only,C65011,Only,Qualitative Concept,31001
+Fig,C71971,Fig,"Plant, Food",31014
+contrast,C70754,Contrast,Conceptual Entity,31026
+lateral,C25230,Lateral,Spatial Concept,31042
+range,C38013,Range,Quantitative Concept,31062
+percentages,C25613,Percentage,Conceptual Entity,31071
+only,C65011,Only,Qualitative Concept,31089
+larger,C49508,Large,Qualitative Concept,31143
+number,C25337,Number,Quantitative Concept,31150
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,31200
+Fig,C71971,Fig,"Plant, Food",31214
+suggests,C48313,Suggestion,Conceptual Entity,31228
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,31246
+more,C128667,More,Qualitative Concept,31262
+mesial,C81170,Midline,Spatial Concept,31284
+lateral,C25230,Lateral,Spatial Concept,31341
+Related,C53260,Definitely Related to Intervention,Qualitative Concept,31358
+issue,C43415,Issue,Manufactured Object,31374
+lateral,C25230,Lateral,Spatial Concept,31403
+mesial,C81170,Midline,Spatial Concept,31444
+Figs,C71971,Fig,"Plant, Food",31459
+derived,C81197,Derived Flag,Conceptual Entity,31497
+selection bias,C28186,Selection Bias,Quantitative Concept,31531
+given,C64974,Give,Activity,31547
+small,C25376,Small,Qualitative Concept,31557
+number,C25337,Number,Quantitative Concept,31563
+patients,C53691,Veterinary Patient,Organism,31573
+patients,C53691,Veterinary Patient,Organism,31621
+mesial,C81170,Midline,Spatial Concept,31635
+temporal,C73990,Temporal,Temporal Concept,31642
+foci,C25511,Focus,Spatial Concept,31661
+have,C101282,Have,Classification,31672
+Fig,C71971,Fig,"Plant, Food",31698
+Anatomical locations,C74456,CDISC SDTM Anatomical Location Terminology,Intellectual Product,31706
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,31717
+only,C65011,Only,Qualitative Concept,31736
+only,C65011,Only,Qualitative Concept,31747
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,31760
+classified,C25373,Classified,Qualitative Concept,31770
+terms,C114093,Term Birth,Finding,31784
+mesial,C81170,Midline,Spatial Concept,31793
+lateral,C25230,Lateral,Spatial Concept,31804
+groups,C42684,User Group,Population Group,31812
+vertical,C25243,Vertical,Spatial Concept,31835
+lines,C71221,Line Unit of Length,Quantitative Concept,31844
+collateral sulcus,C32342,Collateral Sulcus,Anatomical Structure,31859
+Mesial,C81170,Midline,Spatial Concept,31919
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,31955
+collateral sulcus,C32342,Collateral Sulcus,Anatomical Structure,31982
+sulcus temporal,C33744,Temporal Sulcus,Anatomical Structure,31993
+Lateral,C25230,Lateral,Spatial Concept,32001
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,32038
+Fig,C71971,Fig,"Plant, Food",32091
+Populations,C17005,Population Group,Population Group,32099
+detected,C25481,Detected,Conceptual Entity,32131
+only,C65011,Only,Qualitative Concept,32155
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,32164
+only,C65011,Only,Qualitative Concept,32177
+both,C49636,Both,Qualitative Concept,32190
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,32211
+mesial,C81170,Midline,Spatial Concept,32228
+lateral,C25230,Lateral,Spatial Concept,32239
+percentage,C25613,Percentage,Conceptual Entity,32269
+scale,C25664,Scale,Intellectual Product,32280
+patients,C53691,Veterinary Patient,Organism,32292
+mesial,C81170,Midline,Spatial Concept,32337
+temporal,C73990,Temporal,Temporal Concept,32344
+area,C25244,Area,Spatial Concept,32353
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,32359
+detected,C25481,Detected,Conceptual Entity,32372
+larger,C49508,Large,Qualitative Concept,32397
+number,C25337,Number,Quantitative Concept,32404
+Wilcoxon signed rank test,C53246,Wilcoxon Signed Rank Test,Quantitative Concept,32446
+lateral,C25230,Lateral,Spatial Concept,32521
+temporal,C73990,Temporal,Temporal Concept,32529
+area,C25244,Area,Spatial Concept,32538
+detected,C25481,Detected,Conceptual Entity,32556
+larger,C49508,Large,Qualitative Concept,32581
+number,C25337,Number,Quantitative Concept,32588
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,32610
+Wilcoxon signed rank test,C53246,Wilcoxon Signed Rank Test,Quantitative Concept,32631
+discharges,C26416,Mouse Discharge,Tissue,32671
+lateral,C25230,Lateral,Spatial Concept,32699
+compared,C49156,Comparison,Activity,32717
+mesial,C81170,Midline,Spatial Concept,32754
+temporal,C73990,Temporal,Temporal Concept,32761
+structure,C41186,Structure,Functional Concept,32770
+have,C101282,Have,Classification,32789
+other,C17649,Other,Qualitative Concept,32810
+trend,C17216,Trends,Qualitative Concept,32838
+affected,C64917,Affected,Qualitative Concept,32847
+properties,C62498,Object Property,Conceptual Entity,32863
+least square,C94919,Least Square,Quantitative Concept,32877
+fit,C70826,Fit,Activity,32890
+estimate,C25498,Estimate,Activity,32908
+source,C25683,Source,Qualitative Concept,32919
+location,C25341,Location,Spatial Concept,32936
+source,C25683,Source,Qualitative Concept,32950
+larger,C49508,Large,Qualitative Concept,32962
+strength,C87802,Physical Strength,Conceptual Entity,32969
+larger,C49508,Large,Qualitative Concept,33023
+variation,C25713,Variation,Conceptual Entity,33030
+source,C25683,Source,Qualitative Concept,33043
+strength,C87802,Physical Strength,Conceptual Entity,33050
+medial,C25232,Medial,Spatial Concept,33062
+compared,C49156,Comparison,Activity,33076
+lateral,C25230,Lateral,Spatial Concept,33096
+effect,C25492,Effect,Phenomenon or Process,33117
+not,C25594,Negation,Functional Concept,33129
+large,C49508,Large,Qualitative Concept,33136
+over,C65018,Over,Qualitative Concept,33199
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,33204
+lateral,C25230,Lateral,Spatial Concept,33230
+true,C68850,True,Conceptual Entity,33253
+large,C49508,Large,Qualitative Concept,33276
+area,C25244,Area,Spatial Concept,33304
+uncertain,C47944,Uncertain,Qualitative Concept,33312
+Further,C25519,Further,Qualitative Concept,33323
+studies,C15206,Clinical Study,Research Activity,33331
+increased,C25533,Increase,Qualitative Concept,33347
+number,C25337,Number,Quantitative Concept,33357
+patients,C53691,Veterinary Patient,Organism,33367
+other,C17649,Other,Qualitative Concept,33380
+types,C25284,Type,Functional Concept,33386
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,33395
+lateral,C25230,Lateral,Spatial Concept,33433
+can,C43180,Can,Manufactured Object,33453
+have,C101282,Have,Classification,33457
+large,C49508,Large,Qualitative Concept,33462
+results,C20200,Outcome,Finding,33502
+present,C25626,Present,Qualitative Concept,33517
+study,C63536,Study,Research Activity,33525
+magnetometers,C50053,Magnetometer Device Component,Manufactured Object,33565
+mesial,C81170,Midline,Spatial Concept,33583
+even,C64936,Evening,Temporal Concept,33598
+limitations,C121422,Limited Lifting Ability,Intellectual Product,33619
+patient,C16960,Patient,Patient or Disabled Group,33634
+number type,C62438,Number Type,Conceptual Entity,33642
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,33653
+relation,C21480,Relative,Human,33689
+orientation,C77821,Orientation,Mental Process,33701
+location,C25341,Location,Spatial Concept,33717
+presented,C61388,Presentation,Activity,33743
+anterior,C25231,Anterior,Spatial Concept,33758
+horizontal,C25241,Horizontal,Spatial Concept,33776
+correlated,C48834,Correlation,Conceptual Entity,33794
+mesial,C81170,Midline,Spatial Concept,33810
+temporal lobe,C12353,Temporal Lobe,"Body Part, Organ, or Organ Component",33817
+onset,C25279,Onset,Temporal Concept,33831
+anterior,C25231,Anterior,Spatial Concept,33842
+vertical,C25243,Vertical,Spatial Concept,33860
+anterior,C25231,Anterior,Spatial Concept,33881
+mesial,C81170,Midline,Spatial Concept,33902
+temporal lobe,C12353,Temporal Lobe,"Body Part, Organ, or Organ Component",33909
+onset,C25279,Onset,Temporal Concept,33923
+posterior,C25622,Posterior,Spatial Concept,33938
+vertical,C25243,Vertical,Spatial Concept,33957
+lateral,C25230,Lateral,Spatial Concept,33978
+onset,C25279,Onset,Temporal Concept,34002
+not,C25594,Negation,Functional Concept,34062
+difference,C46003,Difference,Qualitative Concept,34077
+orientation,C77821,Orientation,Mental Process,34095
+between,C94545,Between,Qualitative Concept,34107
+mesial,C81170,Midline,Spatial Concept,34115
+lateral,C25230,Lateral,Spatial Concept,34126
+present,C25626,Present,Qualitative Concept,34170
+study,C63536,Study,Research Activity,34178
+ECDs,C52268,SHFM1 wt Allele,Gene or Genome,34197
+mesial,C81170,Midline,Spatial Concept,34210
+vertical,C25243,Vertical,Spatial Concept,34224
+line,C71604,Line,Spatial Concept,34233
+collateral sulcus,C32342,Collateral Sulcus,Anatomical Structure,34245
+sulcus temporal sulcus temporal,C33744,Temporal Sulcus,Anatomical Structure,34256
+classified,C25373,Classified,Qualitative Concept,34268
+mesial,C81170,Midline,Spatial Concept,34282
+lateral,C25230,Lateral,Spatial Concept,34308
+vertical,C25243,Vertical,Spatial Concept,34323
+line,C71604,Line,Spatial Concept,34332
+lateral,C25230,Lateral,Spatial Concept,34371
+not,C25594,Negation,Functional Concept,34422
+correlated,C48834,Correlation,Conceptual Entity,34426
+classification,C25161,Classification,Intellectual Product,34451
+important,C115916,Important,Qualitative Concept,34497
+ECD,C52268,SHFM1 wt Allele,Gene or Genome,34512
+representation,C67045,Representation,Activity,34526
+certain,C107561,Certain,Qualitative Concept,34546
+extent,C25332,Extent,Quantitative Concept,34554
+activated,C64382,Activation,Activity,34568
+area,C25244,Area,Spatial Concept,34578
+may,C106184,May,Qualitative Concept,34589
+reason,C25638,Reason,Idea or Concept,34600
+result,C20200,Outcome,Finding,34615
+previous,C25627,Previous,Temporal Concept,34640
+study,C63536,Study,Research Activity,34649
+number,C25337,Number,Quantitative Concept,34661
+channels,C44170,Channel,Conceptual Entity,34671
+can,C43180,Can,Manufactured Object,34695
+important,C115916,Important,Qualitative Concept,34710
+factor,C25506,Factor,Functional Concept,34720
+visual inspection,C92023,Device Visual Inspection Evaluation Method,Functional Concept,34730
+present,C25626,Present,Qualitative Concept,34753
+study,C63536,Study,Research Activity,34761
+employed,C25172,Employment,Functional Concept,34767
+visual,C38059,Visual,Conceptual Entity,34776
+criteria,C25466,Criterion,Idea or Concept,34828
+most,C25258,Most,Qualitative Concept,34837
+frequently,C64649,Frequently,Qualitative Concept,34842
+detection,C16210,Detection,Diagnostic Procedure,34868
+configuration,C61532,Arrangement,Spatial Concept,34888
+important,C115916,Important,Qualitative Concept,34905
+visual inspection,C92023,Device Visual Inspection Evaluation Method,Functional Concept,34918
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,34992
+only,C65011,Only,Qualitative Concept,35010
+only,C65011,Only,Qualitative Concept,35073
+Fig,C71971,Fig,"Plant, Food",35086
+only,C65011,Only,Qualitative Concept,35098
+larger,C49508,Large,Qualitative Concept,35119
+number,C25337,Number,Quantitative Concept,35126
+channels,C44170,Channel,Conceptual Entity,35136
+distribution,C45273,Distribution,Activity,35157
+may,C106184,May,Qualitative Concept,35177
+impression,C122081,Radiologic Impression,Finding,35196
+magnetometers,C50053,Magnetometer Device Component,Manufactured Object,35235
+detection,C16210,Detection,Diagnostic Procedure,35259
+can,C43180,Can,Manufactured Object,35269
+broad,C61485,Broad,Qualitative Concept,35299
+distribution,C45273,Distribution,Activity,35305
+addition,C64911,Add,Activity,35322
+signal noise ratio,C94983,Signal to Noise Ratio,Quantitative Concept,35338
+point,C70656,Point,Spatial Concept,35377
+number,C25337,Number,Quantitative Concept,35391
+channels,C44170,Channel,Conceptual Entity,35401
+present,C25626,Present,Qualitative Concept,35417
+study,C63536,Study,Research Activity,35425
+26,C126886,Twenty Six,Quantitative Concept,35447
+both,C49636,Both,Qualitative Concept,35454
+some,C65099,Some,Activity,35491
+not,C25594,Negation,Functional Concept,35509
+have,C101282,Have,Classification,35513
+detected,C25481,Detected,Conceptual Entity,35523
+small,C25376,Small,Qualitative Concept,35543
+coverage,C68811,Cover,Activity,35549
+magnetometers,C50053,Magnetometer Device Component,Manufactured Object,35561
+magnetometers,C50053,Magnetometer Device Component,Manufactured Object,35597
+have,C101282,Have,Classification,35617
+some,C65099,Some,Activity,35645
+result,C20200,Outcome,Finding,35667
+some,C65099,Some,Activity,35675
+detected,C25481,Detected,Conceptual Entity,35692
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,35704
+only,C65011,Only,Qualitative Concept,35717
+other,C17649,Other,Qualitative Concept,35726
+detected,C25481,Detected,Conceptual Entity,35744
+use,C25340,Use,Functional Concept,35801
+both,C49636,Both,Qualitative Concept,35808
+sensors,C28220,Sensor,Medical Device,35813
+ideal,C28741,Ideal,Qualitative Concept,35830
+mesial,C81170,Midline,Spatial Concept,35849
+couple,C61302,Couple,Activity,35867
+issues,C28020,Problem,Phenomenon or Process,35887
+present,C25626,Present,Qualitative Concept,35908
+study,C63536,Study,Research Activity,35916
+One,C66832,One,Quantitative Concept,35923
+type,C25284,Type,Functional Concept,35934
+theoretical,C84379,Theory,Classification,35962
+axial,C73439,Axial,Spatial Concept,35987
+likely,C85550,Likely,Conceptual Entity,36019
+perform,C38000,Performed,Qualitative Concept,36029
+worse,C71686,Worse,Qualitative Concept,36037
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,36050
+better,C71685,Better,Qualitative Concept,36068
+deep,C25240,Deep,Spatial Concept,36105
+sources,C25683,Source,Qualitative Concept,36110
+al,C111127,Aluminum Measurement,Laboratory Procedure,36133
+Since,C45325,Since,Temporal Concept,36145
+current employed,C123286,Currently Employed,Intellectual Product,36155
+study,C63536,Study,Research Activity,36163
+type,C25284,Type,Functional Concept,36185
+axial,C73439,Axial,Spatial Concept,36239
+type,C25284,Type,Functional Concept,36245
+important,C115916,Important,Qualitative Concept,36272
+point,C70656,Point,Spatial Concept,36282
+accuracy,C49145,Accuracy,Qualitative Concept,36300
+source,C25683,Source,Qualitative Concept,36312
+estimation,C53327,Statistical Estimation,Research Activity,36319
+not evaluated,C62222,Unevaluable,Quantitative Concept,36334
+not present,C48190,Absent,Qualitative Concept,36334
+study,C63536,Study,Research Activity,36363
+factor,C25506,Factor,Functional Concept,36375
+can,C43180,Can,Manufactured Object,36382
+only,C65011,Only,Qualitative Concept,36386
+simultaneous,C25456,Concurrent,Qualitative Concept,36408
+invasive,C14159,Invasive,Qualitative Concept,36434
+electrocorticography,C116664,Electrocorticography,Diagnostic Procedure,36443
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,36468
+conclusion,C54033,Conclusion,Finding,36477
+present,C25626,Present,Qualitative Concept,36493
+study clinical,C15206,Clinical Study,Research Activity,36501
+confirmed,C25458,Confirmation,Conceptual Entity,36507
+usefulness,C107498,Useful,Qualitative Concept,36530
+magnetometers,C50053,Magnetometer Device Component,Manufactured Object,36544
+discharges,C26416,Mouse Discharge,Tissue,36584
+deep,C25240,Deep,Spatial Concept,36608
+sources,C25683,Source,Qualitative Concept,36613
+Application,C70867,Application,Intellectual Product,36622
+magnetometer,C50053,Magnetometer Device Component,Manufactured Object,36641
+usefulness,C107498,Useful,Qualitative Concept,36674
+MEG,C16811,Magnetoencephalography,Diagnostic Procedure,36688
+detection,C16210,Detection,Diagnostic Procedure,36702
+use,C25340,Use,Functional Concept,36727
+both,C49636,Both,Qualitative Concept,36734
+sensors,C28220,Sensor,Medical Device,36739
+ideal,C28741,Ideal,Qualitative Concept,36756
+medial,C25232,Medial,Spatial Concept,36775
+results,C20200,Outcome,Finding,36797
+suggest,C48313,Suggestion,Conceptual Entity,36805
+deep,C25240,Deep,Spatial Concept,36851
+sources,C25683,Source,Qualitative Concept,36856
+other,C17649,Other,Qualitative Concept,36864
+mesial,C81170,Midline,Spatial Concept,36875
+epilepsy,C3020,Seizure Disorder,Disease or Syndrome,36892
+activities,C123268,FDA Establishment Activity Terminology,Intellectual Product,36908
+hippocampus,C12444,Hippocampus,"Body Part, Organ, or Organ Component",36926
