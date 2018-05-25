@@ -14,8 +14,10 @@ from models.bownn import BOWNN
 sys.stderr=stderr
 
 parser=argparse.ArgumentParser(description='train.py')
-parser.add_argument('-config',default='40',type=str,help="config file")
-parser.add_argument('-fff',default='hey',type=str,help="fff")
+parser.add_argument('-input',default='cc2vid.json',type=str,help="input dictionary")
+parser.add_argument('-output',default='cc2vid.json',type=str,help="output dictionary")
+parser.add_argument('-data',default='data',type=str,help="training data folder")
+parser.add_argument('-volume',default=1024,type=int,help="training data size")
 opt=parser.parse_args()
 
 def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
@@ -75,8 +77,10 @@ def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
 		model.model.fit(X_train,Y_train,batch_size=batch_size,verbose=0,epochs=epochs)
 
 def main():
-	print(opt.config)
-	print(opt.fff)
+	print(opt.input)
+	print(opt.output)
+	print(opt.data)
+	print(opt.volume)
 	"""get arguments"""
 	"""intialize model"""
 	# train()
