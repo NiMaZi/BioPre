@@ -59,8 +59,47 @@ def print_vec(prediction,entity_dict,threshold=0.0):
 		if v>threshold:
 			print(entity_dict[i],end=',')
 
-def eval_prediction(prediction,body_path,out_dict):
-	pass
+def eval_prediction(prediction,body_path,out_dict,threshold=0.0):
+	cc2vid_output=out_dict
+	body_vec=[0.0 for i in range(0,len(cc2vid_output))]
+
+	with open(body_path,'r',encoding='utf-8') as cf:
+		rd=csv.reader(cf)
+		for item in rd:
+			if item[0]=="Mention":
+				continue
+			try:
+				body_vec[cc2vid_input[item[1]]]=1.0
+			except:
+				pass
+
+	tp=0.0
+	fp=0.0
+	fn=0.0
+	for i in range(0,len(prediction)):
+		if body_vec[i]:
+			if prediction[i]>threshold:
+				tp+=1.0
+			else:
+				fn+=1.0
+		else:
+			if prediction[i]>threshold:
+				fp+=1.0
+
+	try:
+		P=tp/(tp+fp)
+	except:
+		P=0.0
+	try:
+		R=tp/(tp+fn)
+	except:
+		R=0.0
+	try:
+		F=2*P*R/(P+R)
+	except:
+		F=0.0
+	return P,R,F
+
 
 def main():
 	in_path=opt.input
@@ -92,7 +131,8 @@ def main():
 
 	if evaluate:
 		body_path=opt.body
-		eval_prediction(prediction,body_path,out_dict)
+		P,R,F=eval_prediction(prediction,body_path,out_dict,threshold)
+		print("Threshold: %.3f, Precision: %.3f, Recall: %.3f, F1: %.3f."%(threshold,P,R,F))
 
 if __name__=='__main__':
 	main()
