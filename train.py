@@ -5,7 +5,8 @@ from utils import util
 from models.bownn import BOWNN
 
 parser=argparse.ArgumentParser(description='train.py')
-parser.add_argument('-config',default=40,type=str,help="config file")
+parser.add_argument('-config',default='40',type=str,help="config file")
+parser.add_argument('-fff',default='hey',type=str,help="fff")
 opt=parser.parse_args()
 
 def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
@@ -66,6 +67,7 @@ def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
 
 def main():
 	print(opt.config)
+	print(opt.fff)
 	"""get arguments"""
 	"""intialize model"""
 	# train()
