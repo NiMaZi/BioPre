@@ -30,7 +30,7 @@ def get_prediction(model,abs_path,in_dict):
 	abs_vec=[0.0 for i in range(0,len(cc2vid_input))]
 	abs_count=0.0
 
-	with open(folder+"/abs"+str(i)+".csv",'r',encoding='utf-8') as cf:
+	with open(abs_path,'r',encoding='utf-8') as cf:
 		rd=csv.reader(cf)
 		for item in rd:
 			if item[0]=="Mention":
