@@ -1,11 +1,17 @@
 import warnings
 warnings.filterwarnings("ignore")
 
+import os
+import sys
+
+stderr=sys.stderr
+sys.stderr=open(os.devnull, 'w')
 import csv
 import argparse
 import numpy as np
 from utils import util
 from models.bownn import BOWNN
+sys.stderr=stderr
 
 parser=argparse.ArgumentParser(description='train.py')
 parser.add_argument('-config',default='40',type=str,help="config file")
