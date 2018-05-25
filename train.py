@@ -106,10 +106,7 @@ def train_author(model,folder,in_dict,author_dict,out_dict,volume,batch_size=102
 		abs_vec=list(np.array(abs_vec)/abs_count)
 
 		author_vec=[0.0 for i in range(0,len(fa2vid))]
-
-		tmpf=open(folder+"/authors"+str(i)+".json",'r',encoding='utf-8')
-		authors=json.load(tmpf)
-		tmpf.close()
+		authors=util.load_sups(folder+"/authors"+str(i)+".json")
 		for author in authors:
 			try:
 				author_vec[fa2vid[author]]=1.0
