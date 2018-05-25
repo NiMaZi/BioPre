@@ -80,7 +80,6 @@ def train(model,folder,in_dict,out_dict,volume,batch_size=1024,epochs=5):
 
 def main():
 
-
 	in_path=opt.input
 	out_path=opt.output
 	in_dict=util.load_sups(in_path)
