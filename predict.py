@@ -24,6 +24,7 @@ parser.add_argument('-E',default=False,type=bool,help="evaluate with real body")
 parser.add_argument('-abstract',default='data_sample/sample/abs0.csv',type=str,help="abstract to predict")
 parser.add_argument('-body',default='data_sample/sample/body0.csv',type=str,help="body to evaluate")
 parser.add_argument('-path',default='model.h5',type=str,help="path for loading the model")
+parser.add_argument('-threshold',default=0.0,type=float,help="threshold of prediction, 0.0~1.0")
 opt=parser.parse_args()
 
 def get_prediction(model,abs_path,in_dict):
@@ -70,7 +71,7 @@ def main():
 	entity_dict=util.load_sups(entity_path)
 	abs_path=opt.abstract
 	load_path=opt.path
-
+	threshold=opt.threshold
 
 	author=opt.A
 	evaluate=opt.E
@@ -86,7 +87,7 @@ def main():
 	print_vec(abs_vec,entity_dict)
 	print("\n")
 	print("Entity mentions predicted:")
-	print_vec(prediction,entity_dict,0.2)
+	print_vec(prediction,entity_dict,threshold)
 	print("\n")
 
 	if evaluate:
